@@ -1,0 +1,1501 @@
+\chapterimage{chap11.jpg}
+
+\chapter{行列式}
+\section{定义}
+\begin{definition}
+	行列式的定义:  
+	$$D_{2}=\left|\begin{array}{ll}
+		a_{11}&a_{12}\\a_{21}&a_{22}
+	\end{array} \right| $$
+\end{definition}
+(i). 几何定义
+
+$n$ 阶行列式 $D_{n}$ 的几何意义是$n$ 维空间中由$n$ 阶行列式中的$n$ 个向量围成的$n$ 维空间体的体积.比较特别的有:  
+
+$$D_{2}=\left|\begin{array}{ll}
+	a_{11}&a_{12}\\a_{21}&a_{22}
+\end{array} \right|=a_{11}a_{22}-a_{12}a_{21}=S$$
+$$D_{3}=\left|\begin{array}{lll}
+	a_{11}&a_{12}&a_{13}\\a_{21}&a_{22}&a_{23}\\a_{31}&a_{32}&a_{33}
+\end{array} \right|=V$$
+
+(ii). 逆序数法定义
+
+$n$阶行列式
+
+$$\left|\begin{matrix}
+	a_{11}&a_{12}&\dots&a_{1n}\\
+	a_{21}&a_{22}&\dots&a_{2n}\\
+	\vdots&\vdots&\quad&\vdots\\
+	a_{n1}&a_{n2}&\dots&a_{nn}
+\end{matrix} \right|=\sum\limits_{j_{1}j_{2}\dots j_{n}}(-1)^{\tau(j_{1}j_{2}\dots j_{n})}a_{1j_{1}}a_{2j_{2}}\dots a_{n j_{n}}$$
+
+(iii). 行列式展开定理
+
+\textbf{余子式和代数余子式}
+
+行列式中任意一项$a_{ij}$ 所在行和列去掉后的$n-1$阶行列式称为$a_{ij}$的余子式 $M_{ij}$
+
+行列式中任意一项$a_{ij}$的代数余子式$A_{ij}=(-1)^{i+j}M_{ij}$
+
+行列式按照某一行或者某一列展开:  
+$$\left|\begin{matrix}
+	a_{11}&a_{12}&\dots&a_{1n}\\
+	a_{21}&a_{22}&\dots&a_{2n}\\
+	\vdots&\vdots&\quad&\vdots\\
+	a_{n1}&a_{n2}&\dots&a_{nn}
+\end{matrix} \right|=\left\lbrace
+\begin{array}{l}
+	\sum\limits_{k=1}^{n}a_{ik}A_{ik}\\\sum\limits_{k=1}^{n}a_{kj}A_{kj}
+\end{array} \right. $$
+
+\section{性质}
+\begin{corollary}
+	行列式的性质:  
+	
+	\textbf{性质 1} 行列互换,行列式的值不变,即\textbf{行列等价},我们有$|A|=|A^{T}|$
+	
+	\textbf{性质 2} 行列式中某行或者某列元素全为0,行列式的值为0,我们有$|A|=0$
+	
+	\textbf{性质 3} 
+	行列式某行或者某列有公因子$k(k\neq 0)$,我们得到下面的式子:  
+	$$\left|\begin{matrix}
+		a_{11}&a_{12}&\dots&a_{1n}\\
+		\vdots&\vdots&\quad &\vdots\\
+		ka_{i1}&ka_{i2}&\dots&ka_{in}\\
+		\vdots&\vdots&\quad &\vdots\\
+		a_{n1}&a_{n2}&\dots&a_{nn}
+	\end{matrix} \right|=k\left|\begin{matrix}
+		a_{11}&a_{12}&\dots&a_{1n}\\
+		\vdots&\vdots&\quad&\vdots\\
+		a_{i1}&a_{i2}&\dots&a_{in}\\
+		\vdots&\vdots&\quad&\vdots\\
+		a_{n1}&a_{n2}&\dots&a_{nn}
+	\end{matrix} \right|$$
+	
+	\textbf{性质 4} 
+	行列式某一行或者某一列元素均为两个元素之和,我们可以拆成两个行列式之和,我们得到:  
+	$$\left|\begin{matrix}
+		a_{11}&a_{12}&\dots&a_{1n}\\
+		\vdots&\vdots&\quad &\vdots\\
+		a_{i1}+b_{i1}&a_{i2}+b_{i2}&\dots&a_{in}+b_{in}\\
+		\vdots&\vdots&\quad &\vdots\\
+		a_{n1}&a_{n2}&\dots&a_{nn}
+	\end{matrix} \right|=\left|\begin{matrix}
+		a_{11}&a_{12}&\dots&a_{1n}\\
+		\vdots&\vdots&\quad &\vdots\\
+		a_{i1}&a_{i2}&\dots&a_{in}\\
+		\vdots&\vdots&\quad &\vdots\\
+		a_{n1}&a_{n2}&\dots&a_{nn}
+	\end{matrix} \right|+\left|\begin{matrix}
+		a_{11}&a_{12}&\dots&a_{1n}\\
+		\vdots&\vdots&\quad &\vdots\\
+		b_{i1}&b_{i2}&\dots&b_{in}\\
+		\vdots&\vdots&\quad &\vdots\\
+		a_{n1}&a_{n2}&\dots&a_{nn}
+	\end{matrix} \right|$$
+	
+	\textbf{性质 5}
+	行列式两行或者两列互换,行列式的值相反.
+	
+	\textbf{性质 6}
+	行列式中两行或者两列成比例,行列式的值为0.
+	
+	\textbf{性质 7}
+	行列式中某一行加上另一行的$k$倍,行列式的值不变.   
+\end{corollary}
+\section{几类特殊的行列式}
+\begin{definition}
+	(i).上三角行列式和下三角行列式
+	
+	$$\left|\begin{matrix}
+		a_{11}&a_{12}&\dots&a_{1n}\\
+		0&a_{22}&\dots&a_{2n}\\
+		\vdots&\vdots&\quad&\vdots\\
+		0&0&\dots&a_{nn}
+	\end{matrix} \right|=\left|\begin{matrix}
+		a_{11}&0&\dots&0\\
+		a_{21}&a_{22}&\dots&0\\
+		\vdots&\vdots&\quad&\vdots\\
+		a_{n1}&a_{n2}&\dots&a_{nn}
+	\end{matrix} \right|=\left|\begin{matrix}
+		a_{11}&0&\dots&0\\
+		0&a_{22}&\dots&0\\
+		\vdots&\vdots&\quad&\vdots\\
+		0&0&\dots&a_{nn}
+	\end{matrix} \right|=\prod\limits_{i=1}^{n}a_{ii}$$
+	
+	(ii). 副三角行列式
+	$$A=\left|\begin{matrix}
+		a_{11}&\dots&a_{1,n-1}&a_{1n}\\
+		a_{21}&\dots&a_{2,n-1}&0\\
+		\vdots&\quad&\vdots&\vdots\\
+		a_{n1}&\dots&0&0
+	\end{matrix} \right|=\left|\begin{matrix}
+		0&\dots&0&a_{1n}\\
+		0&\dots&a_{2,n-1}&a_{2n}\\
+		\vdots&\quad&\vdots&\vdots\\
+		a_{n1}&\dots&a_{n,n-1}&a_{nn}
+	\end{matrix} \right|=\left|\begin{matrix}
+		0&\dots&0&a_{1n}\\
+		0&\dots&a_{2,n-1}&0\\
+		\vdots&\vdots&\quad&\vdots\\
+		a_{n1}&\dots&0&0
+	\end{matrix} \right|$$
+	$$A=(-1)^{\frac{n(n-1)}{2}}a_{1n}a_{2,n-1}\dots a_{n1}$$
+	
+	(iii). 拉普拉斯展开式
+	
+	设 $A$为 $m$阶矩阵,$B$ 为 $n$阶矩阵,则:  
+	$$\left| 
+	\begin{matrix}
+		A&O\\
+		O&B
+	\end{matrix}\right| =\left| 
+	\begin{matrix}
+		A&C\\
+		O&B
+	\end{matrix}\right|=\left| 
+	\begin{matrix}
+		A&O\\
+		C&B
+	\end{matrix}\right|=|A||B|$$
+	$$\left| 
+	\begin{matrix}
+		O&A\\
+		B&O
+	\end{matrix}\right| =\left| 
+	\begin{matrix}
+		C&A\\
+		B&O
+	\end{matrix}\right|=\left| 
+	\begin{matrix}
+		O&A\\
+		B&C
+	\end{matrix}\right|=(-1)^{mn}|A||B|$$
+	
+	(iiii). 范德蒙行列式
+	$$\left|\begin{matrix}
+		1&1&\dots&1\\
+		x_{1}&x_{2}&\dots&x_{n}\\
+		x_{1}^{2}&x_{2}^{2}&\dots&x_{n}^{2}\\
+		\vdots&\vdots&\quad &\vdots\\
+		x_{1}^{n-1}&x_{2}^{n-1}&\dots&x_{n}^{n-1}
+	\end{matrix} \right|=\prod\limits_{1\leq i<j\leq n}(x_{j}-x_{i})$$
+\end{definition}
+\section{常见行列式计算技巧}
+
+\begin{theorem}
+	技巧方法
+	
+	1. 所有行或者所有列之和相等
+	
+	$$\left|\begin{matrix}
+		a&b&b&\dots&b\\
+		b&a&b&\dots&b\\
+		b&b&a&\dots&b\\
+		\vdots&\vdots&\vdots&\quad &\vdots\\
+		b&b&b&\dots&a
+	\end{matrix} \right|
+	\underset{[1]+\sum\limits_{i=2}^{n}[i]}{\longrightarrow}
+	[a+(n-1)b]\left|\begin{matrix}
+		1&b&b&\dots&b\\
+		1&a&b&\dots&b\\
+		1&b&a&\dots&b\\
+		\vdots&\vdots&\vdots&\quad &\vdots\\
+		1&b&b&\dots&a
+	\end{matrix} \right|\xrightarrow[i=2,3,\dots n]{\circled{n}-\circled{1}}$$ $$[a+(n-1)b]\left|\begin{matrix}
+		1&b&b&\dots&b\\
+		0&a-b&0&\dots&0\\
+		0&0&a-b&\dots&0\\
+		\vdots&\vdots&\vdots&\quad &\vdots\\
+		0&0&0&\dots&a-b
+	\end{matrix} \right|=[a+(n-1)b](a-b)^{n-1}$$
+	
+	有几个特别的例子:  
+	\myspace{1}
+	$$\left|\begin{matrix}
+		b&b&\dots&b&a\\
+		b&b&\dots&a&b\\
+		\vdots&\vdots&\quad&\vdots &\vdots\\
+		b&a&\dots&b&b\\
+		a&b&\dots&b&b
+	\end{matrix} \right|=(-1)^{\frac{n(n-1)}{2}}[a+(n-1)b](a-b)^{n-1}$$
+	\myspace{1}
+	(i). 当$a=0,b=1$时,
+	$$\left|\begin{matrix}
+		0&1&1&\dots&1\\
+		1&0&1&\dots&1\\
+		1&1&0&\dots&1\\
+		\vdots&\vdots&\vdots&\quad &\vdots\\
+		1&1&1&\dots&0
+	\end{matrix} \right|=(-1)^{n-1}(n-1)$$
+	
+	(ii).当$a=2,b=1$时,
+	$$\left|\begin{matrix}
+		2&1&1&\dots&1\\
+		1&2&1&\dots&1\\
+		1&1&2&\dots&1\\
+		\vdots&\vdots&\vdots&\quad &\vdots\\
+		1&1&1&\dots&2
+	\end{matrix} \right|=n+1$$
+	
+	(ii).当$a=x$时,
+	$$\left|\begin{matrix}
+		x&b&b&\dots&b\\
+		b&x&b&\dots&b\\
+		b&b&x&\dots&b\\
+		\vdots&\vdots&\vdots&\quad &\vdots\\
+		b&b&b&\dots&x
+	\end{matrix} \right|=[x+(n-1)b](x-b)^{n-1}$$
+	
+	2. 递推式
+	
+	 简单来说,就是$n$阶行列式按照某行或者某列一次展开得到的$n-1$阶行列式和原来有相同的结构,我们可以利用上下阶行列式的关系找出递推公式.
+	 
+	 $$D=\left|
+	 \begin{matrix}
+	 	1-a&a&0&0\\
+	 	-1&1-a&a&0\\
+	 	0&-1&1-a&a\\
+	 	0&0&-1&1-a
+	 \end{matrix}
+	 \right|$$
+	 
+	 (i).归纳法
+	 
+	 $D_{1}=1-a$
+	 
+	 $D_{2}=(-1)^{2+1}(-a)a+D_{1}$
+	 
+	 $D_{3}=(-1)^{3+1}(-a)a^2+D_{2}$
+	 
+	 $D_{4}=(-1)^{4+1}(-a)a^3+D_{3}$
+	
+	 $D_{4}=a^4-a^3+a^2-a+1$
+	 
+	 (ii). 递推法
+	 
+	 $D_{4}=(-1)^{4+1}(-a)a^3+D_{3}$
+	 
+	 $D_{3}=(-1)^{3+1}(-a)a^2+D_{2}$
+	 
+	 $D_{2}=(-1)^{2+1}(-a)a+D_{1}$
+	  
+	 $D_{1}=1-a$
+	 
+	 $D_{4}=a^4-a^3+a^2-a+1$
+	  
+\end{theorem}
+\chapterimage{chap12.jpg}
+\chapter{矩阵}
+\section{矩阵的定义和运算}
+\begin{definition}[矩阵的定义和运算]
+	1.矩阵的定义
+	
+	由$m\times n$个数$a_{ij}\ (i=1,2,\cdots,m;j=1,2,\cdots,n)$排成的$m$行$n$列的矩形表格
+	$$\left[
+	\begin{matrix}
+		a_{11}&a_{12}&\cdots&a_{1n}\\
+		a_{21}&a_{22}&\cdots&a_{2n}\\
+		\vdots&\vdots& &\vdots\\
+		a_{m1}&a_{m2}&\cdots&a_{mn}
+	\end{matrix}
+		\right]$$
+		
+		称为一个$m\times n$矩阵,简记作$A$或者$(a_{ij})_{m\times n} (i=1,2,\cdots,m;j=1,2,\cdots,n)$,当$m=n$时,称$A$为$n$阶方阵或者$n$阶矩阵.
+		
+	2. 矩阵的运算
+	
+	(i). 加减
+	$$C=A\pm B=(a_{ij})_{m\times n}\pm (b_{ij})_{m\times n}=(c_{ij})_{m\times n}$$
+	
+	其中,$c_{ij}=a_{ij}\pm b_{ij}$
+	
+	(ii).数乘
+	$$kA=k(a_{ij})_{m\times n}=(ka_{ij})_{m\times n}$$
+	
+	特别的,我们有:  $\mathcolorbox{yellow}{|kA|=k^{n}|A|},k\geq 2$
+	
+	(iii). 矩阵乘法
+	
+	设$A$是$m\times s$矩阵,$B$是$s\times n$矩阵,矩阵$A,B$可以相乘(必须满足左乘矩阵的列数和右乘矩阵的行数相等),乘积$AB$是$m\times n$矩阵,记$C=AB=(c_{ij})_{m\times n}$,我们有:  
+	$$c_{ij}=\sum\limits_{k=1}^{s}a_{ik}b_{kj}=a_{i1}b_{1j}+a_{i2}b_{2j}+\cdots+a_{is}b_{sj},(i=1,2,\cdots,m;j=1,2,\cdots,n)$$
+	
+	(iiii). 矩阵转置
+	
+	将$m\times n$矩阵$A=(a_{ij})_{m\times n}$的行列互换得到的$n\times m$矩阵称为$A$的转置矩阵,记作$A_{T}$,我们有:  
+	$$A^{T}=\left[
+	\begin{matrix}
+		a_{11}&a_{12}&\cdots&a_{m1}\\
+		a_{12}&a_{22}&\cdots&a_{m2}\\
+		\vdots&\vdots& &\vdots\\
+		a_{1n}&a_{2n}&\cdots&a_{mn}
+	\end{matrix}
+	\right]$$
+	
+	关于矩阵转置,我们有几个常用的结论:  
+	\begin{itemize}
+		\item $(A^{T})^{T}=A$
+		\item $(kA)^{T}=k(A)^{T}$
+		\item $(A+B)^{T}=A^{T}+B^{T}$
+		\item $(AB)^{T}=B^{T}A^{T}$
+		\item 当 $m=n$ 时,$|A^{T}|=|A|$
+	\end{itemize}
+	
+	(iv). 矩阵的幂
+	
+	$A$是$n$阶方阵,$A^{m}=\overbrace{AA\cdots A}^{m\text{个}}$称为$A$的$m$次幂
+	
+	关于矩阵的幂,我们需要注意:  
+	\begin{itemize}
+		\item $(A\pm B)^2=A^2+b^2\pm AB \pm BA$
+		\item $(A+B)(A-B)=A^2-AB+BA-B^2$
+		\item $(AB)^m=\overbrace{(AB)(AB)\cdots(AB)}^{m\text{个}}$
+		\item 当 $f(x)=a_{0}+a_{1}x+a_{2}x^2+\cdots+a_{n}x^{n}$ 时,$f(A)=a_{0}E+a_{1}A+a_{2}A^2+\cdots+a_{n}A^n$
+	\end{itemize}
+	
+	(v).方阵乘积行列式
+	
+	$A,B$是同阶方阵,我们有$|AB|=|A||B|$
+\end{definition}
+
+\begin{definition}[向量的内积和正交]
+	1. 内积和模
+	
+	设$\alpha=[a_{1},a_{2},\cdots,a_{n}]^{T},\beta=[b_{1},b_{2},\cdots,b_{n}]^{T}$,则称:  
+	$$\alpha^{T}\beta=\sum\limits_{i=1}^{n}a_{i}b_{i}=a_{1}b_{1}+a_{2}b_{2}+\cdots+a_{n}B_{n}$$
+	为向量\textbf{$\alpha,\beta$}的内积,记作$(\alpha,
+	\beta)\Rightarrow (\alpha,
+	\beta)=\alpha^{T}\beta$
+	
+	||$\alpha$||=$\sqrt{\sum\limits_{i=1}^{n}a_{i}^2}$称为向量$\alpha$的模,特别的当||$\alpha$||=1时,称$\alpha$为单位向量.
+	
+	2. 正交
+	
+	当$\alpha^{T}\beta=0$时,称向量$\alpha,\beta$是正交向量
+	
+	3. 标准正交向量组
+	
+	向量组$\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$满足:  
+	$$\alpha_{i}^{T}\alpha_{j}=\left\lbrace 
+	\begin{array}{l}
+		0,\quad i\neq j\\
+		1,\quad i= j
+	\end{array}
+	\right. $$
+	
+	则称 $\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$ 是标准或单位正交向量.
+	
+	4. 施密特正交化
+	
+	线性无关的向量组$\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$的标准正交化公式:  
+	$$\beta_{1}=\alpha_{1}$$
+	$$\beta_{2}=\alpha_{2}-\frac{(\alpha_{2},\beta_{1})}{(\beta_{1},\beta_{1})}\beta_{1}$$
+	$$\cdots\cdots$$
+	$$\beta_{n}=\alpha_{n}-\frac{(\alpha_{n},\beta_{1})}{(\beta_{1},\beta_{1})}\beta_{1}-\frac{(\alpha_{n},\beta_{2})}{(\beta_{2},\beta_{2})}\beta_{2}-\cdots-\frac{(\alpha_{n},\beta_{n-1})}{(\beta_{n-1},\beta_{n-1})}\beta_{n-1}$$
+	
+	得到的$\beta_{1},\beta_{2},\cdots,\beta_{n}$是正交向量组,我们将$\beta_{1},\beta_{2},\cdots,\beta_{n}$单位化得到:  
+	$$\eta_{1}=\frac{\beta_{1}}{||\beta_{1}||},\ \eta_{2}=\frac{\beta_{2}}{||\beta_{2}||},\ \cdots,\ \eta_{n}=\frac{\beta_{n}}{||\beta_{n}||}$$
+	
+	则$\eta_{1},\eta_{2},\cdots,\eta_{n}$是一个标准正交向量组.
+\end{definition}
+\begin{definition}[重要矩阵]
+	\sethlcolor{yellow}
+	(1). 零矩阵
+	
+	所有元素均为$0$的矩阵,记作$O$
+	
+	(2). 单位矩阵
+	
+	主对角线元素均为$1$,其余元素全为$0$的$n$阶方阵,称为$n$阶单位矩阵,记作$E$ 或 $I$
+	
+	(3). 数量矩阵
+	
+	数$k$和单位矩阵乘积得到的矩阵被称为数量矩阵
+	
+	(4). 对角矩阵
+	
+	非主对角线元素均为$0$的矩阵称为对角矩阵
+	
+	(5). 上(下)三角矩阵
+	
+	当$i>(<)j$时,$a_{ij}=0$的矩阵称为上(下)三角矩阵
+	
+	(6). 对称矩阵
+	
+	满足条件$A^{T}=A$的矩阵称为对称矩阵,\ $A^{T}=A\Leftrightarrow a_{ij}=a_{ji}$
+	
+	(7). 反对称矩阵
+	
+	满足条件$A^{T}=-A$的矩阵称为对称矩阵,\ $A^{T}=A\Leftrightarrow \left\lbrace 
+	\begin{array}{l}
+		a_{ij}=-a_{ji},i\neq j\\
+		a_{ii}=0
+	\end{array}
+	\right. $
+	
+	(8). 正交矩阵
+	
+	设$A$是$n$阶方阵,满足$A^{T}A=E$,我们称$A$是正交矩阵.
+	
+	$A$ 是正交矩阵 $\Leftrightarrow A^{T}A=E\Leftrightarrow A^{T}=A^{-1}\Leftrightarrow A $的行(列)向量组是标准正交向量组
+	
+	(9). 分块矩阵
+	
+	$$A=\left[
+	\begin{matrix}
+		A_{1}\\A_{2}\\ \vdots \\A_{m}
+	\end{matrix}
+	\right],B=\left[
+	\begin{matrix}
+		B_{1},&B_{2},&\cdots ,&B_{n}
+	\end{matrix}
+	\right]$$
+	
+	特别的,我们有:  $\left[ \begin{array}{ll}
+		A&O\\O&B
+	\end{array}\right]^{n}=\left[ \begin{array}{ll}
+	A^n&O\\O&B^n
+	\end{array}\right] $
+\end{definition}
+\section{矩阵的逆和伴随矩阵}
+\begin{definition}[矩阵的逆和伴随矩阵]
+	1. 逆矩阵
+	
+	$A,B$是$n$阶方阵,$E$是$n$阶单位矩阵,若$AB=BA=E$,则称$A$是可逆矩阵,并称$B$是$A$的逆矩阵,且逆矩阵唯一,我们将$A$的逆矩阵记作$A^{-1}$
+	
+	矩阵$A$可逆的充要条件为:  $|A|\neq 0$,且当$|A|\neq 0$时,我们有:  
+	$$A^{-1}=\frac{1}{|A|}A^{*}$$
+	
+	(i). 逆矩阵的性质和公式
+	\begin{itemize}
+		\item $(A^{-1})^{-1}=A$
+		\item $AB\text{可逆},(AB)^{-1}=B^{-1}A_{-1}$
+		\item $\text{当}k\neq 0,(kA)^{-1}=\frac{1}{k}A^{-1}$
+		\item $|A^{-1}|=\dfrac{1}{|A|}$
+		\item $A^{T}\text{可逆},(A^{T})^{-1}=(A^{-1})^{T}$
+	\end{itemize}
+	
+	2. 伴随矩阵
+	
+	将行列式$|A|$的$n^2$个元素的代数余子式按照如下的形式排列成的矩阵称为$A$的伴随矩阵,记作$A^{*}$.
+	$$A^{*}=\left[
+	\begin{matrix}
+		A_{11}&A_{21}&\cdots&A_{n1}\\
+		A_{12}&A_{22}&\cdots&A_{n2}\\
+		\vdots&\vdots& &\vdots\\
+		A_{1n}&A_{2n}&\cdots&A_{nn}
+	\end{matrix}
+	\right]$$
+	我们有
+	$$AA^{*}=A^{*}A=|A|E\Rightarrow A^{-1}=\frac{1}{|A|}A^{*}$$
+	
+	(i). \mathcolorbox{yellow}{\text{伴随矩阵的性质和公式}}
+	\begin{itemize}
+		\item $\text{对于任意}n\text{阶方阵,我们有}|A^{*}|=|A|^{n-1}$
+		\item $\text{当}|A|\neq 0, A^{*}=|A|A^{-1},\ A=|A|(A^{*})^{-1}$
+		\item $\text{我们已知}AA^{*}=A^{*}A=|A|E,\text{将}A\text{替换为}A^{*},A^{T},A^{-1}\text{仍然成立}$
+	\end{itemize}
+\end{definition}
+\section{初等变换和初等矩阵}
+\begin{definition}[初等变换和初等矩阵]
+	1. \mathcolorbox{yellow}{\text{初等变换}}
+	
+	(1). 用一个非零常数乘以矩阵的某一行(列)
+	
+	(2). 互换矩阵中的某两行(列)的位置
+	
+	(3). 将矩阵的某一行(列)的$k$倍加到另一行(列)
+	
+	2. \mathcolorbox{yellow}{\text{初等矩阵}}
+	
+	由单位矩阵经过一次初等变换后得到的矩阵被称为初等矩阵.
+	
+	(1).$E_{i}(k)$ 表示$E$的第$i$行(列)乘$k$倍
+	
+	(2).$E_{ij}$ 表示$E$的第$i$行(列)与第$j$行(列)互换位置
+	
+	(3).$E_{ij}(k)$ 表示 $E$的第$j$行(列)的$k$倍加到第$i$行(列)
+	
+	3.  \mathcolorbox{yellow}{\text{初等矩阵的性质和公式}}
+	
+	(1). 对任意一个矩阵进行初等变换,我们可以理解为用对应的初等矩阵左乘或者右乘原矩阵(行变换为左乘,列变换为右乘)
+	
+	(2). 初等矩阵都是可逆矩阵
+	
+	(3).$\text{可逆矩阵可以表示为有限个初等矩阵的乘积,若}A\text{为可逆矩阵,存在}$ $\text{初等矩阵} P_{1},P_{2},\cdots,P_{s},\text{s.t.} A=P_{1}P_{2}\cdots P_{s}$
+	
+	(4). 初等变换不会改变矩阵的秩
+	
+	设$A$是$m\times n$矩阵,$P,Q$分别是$m,n$阶可逆矩阵,我们有
+	$$r(A)=r(PA)=r(AQ)=r(PAQ)$$
+\end{definition}
+\begin{anymark}[总结]
+	求解逆矩阵的方法:  
+	
+	1. 利用伴随矩阵和原矩阵的关系:  $AA^{*}=A^{*}A=|A|E$,求解$A^{-1}=\dfrac{A^{*}}{|A|}$
+	
+	2. 利用高斯-若尔当型解法,利用初等行(列)变换,来求解逆矩阵:  
+	$$\left[
+	\begin{matrix}
+		A&E
+	\end{matrix}
+	\right]\xrightarrow{\text{初等行变换}}\left[
+	\begin{matrix}
+		E&A^{-1}
+	\end{matrix}
+	\right]$$
+	$$\left[
+	\begin{matrix}
+		A\\E
+	\end{matrix}
+	\right]\xrightarrow{\text{初等列变换}}\left[
+	\begin{matrix}
+		E\\A^{-1}
+	\end{matrix}
+	\right]$$
+	
+\end{anymark}
+\section{等价矩阵和矩阵的秩}
+\begin{definition}[等价矩阵和矩阵的秩]
+	1. \mathcolorbox{yellow}{\text{等价矩阵}}
+	
+	设$A,B$均为$m\times n$矩阵,若存在可逆矩阵$P_{m\times m},Q_{n\times n}$,使得$PAQ=B$,则称$A,B$是等价矩阵,我们记作$A\cong B$
+	
+	我们不难发现,矩阵$A,B$等价的充要条件为:  $rank(A)=rank(B)$,对于任意矩阵$A_{m\times n}$,存在可逆矩阵$P,Q$,使得:  $PAQ=\left[
+	\begin{matrix}
+		E_{r}&O\\
+		O&O
+	\end{matrix}
+	\right]$,后者称为$A$的等价标准型,且$r=rank(A)$
+	
+	
+	2.\mathcolorbox{yellow}{\text{矩阵的秩}}
+	
+	设$A$是$m\times n$矩阵,$A$中最高阶非零子式的阶数称为矩阵$A$的秩,记作$r(A)$.
+	
+	这也等价于存在$k$阶子式子不为零,任意$k+1$阶子式子全为零,我们记$r(A)=k$.
+	
+	特别的,对于方阵而言:  
+	$$r(A_{n\times n})=n\Leftrightarrow |A|\neq 0\Leftrightarrow A\text{可逆}$$
+	
+	3. \mathcolorbox{yellow}{\text{有关秩的重要结论}}
+	
+	设$A$是$m\times n$矩阵,$B$是满足有关矩阵运算要求的矩阵,我们有
+	\begin{itemize}
+		\item $0\leq r(A) \leq \text{min}\left\lbrace m,n \right\rbrace$
+		\item $r(kA)=r(A),k\neq 0$
+		\item $r(AB)\leq \text{min}\{r(A),r(B)\}$
+		\item $r(A+B)\leq r(A)+r(B)$
+		\item $r(A^{*})=\left\lbrace 
+		\begin{array}{l}
+			n,r(A)=n\\
+			1,r(A)=n-1\\
+			0,r(A)<n-1
+		\end{array}
+		\right. \text{其中}A\text{为}n\text{阶方阵}.$
+	\end{itemize}
+	
+\end{definition}
+\begin{anymark}[证明]
+(1). $r(AB)\leq \text{min}\{r(A),r(B)\}$
+
+我们假设$A_{m\times n},\ B_{n\times s}$
+
+我们不妨将$B,C$按行写成行向量形式:  
+$$A=\left[
+\begin{matrix}
+	a_{11}&a_{12}&\cdots&a_{1n}\\
+	a_{21}&a_{22}&\cdots&a_{2n}\\
+	\vdots&\vdots& &\vdots\\
+	a_{m1}&a_{m2}&\cdots&a_{mn}
+\end{matrix}
+\right],\ B=\left[
+\begin{matrix}
+	\beta_{1}\\
+	\beta_{2}\\
+	\vdots\\
+	\beta_{n}
+\end{matrix}
+\right],\ C=AB=\left[
+\begin{matrix}
+	\gamma_{1}\\
+	\gamma_{2}\\
+	\vdots\\
+	\gamma_{n}
+\end{matrix}
+\right]$$
+$$AB=\left[
+\begin{matrix}
+	a_{11}&a_{12}&\cdots&a_{1n}\\
+	a_{21}&a_{22}&\cdots&a_{2n}\\
+	\vdots&\vdots& &\vdots\\
+	a_{m1}&a_{m2}&\cdots&a_{mn}
+\end{matrix}
+\right]\left[
+\begin{matrix}
+	\beta_{1}\\
+	\beta_{2}\\
+	\vdots\\
+	\beta_{n}
+\end{matrix}
+\right]=\left[
+\begin{matrix}
+	a_{11}\beta_{1}+a_{12}\beta_{2}+\cdots+a_{1n}\beta_{n}\\
+	a_{21}\beta_{1}+a_{22}\beta_{2}+\cdots+a_{2n}\beta_{n}\\
+	\vdots\\
+	a_{m1}\beta_{1}+a_{m2}\beta_{2}+\cdots+a_{mn}\beta_{n}
+\end{matrix}
+\right]=\left[
+\begin{matrix}
+	\gamma_{1}\\
+	\gamma_{2}\\
+	\vdots\\
+	\gamma_{n}
+\end{matrix}
+\right]$$
+我们可以得到:  $AB\text{的行向量都可以由}B\text{的行向量线性表出}.$
+$$r(AB)\leq r(B)$$
+同理,我们不妨将$A,C$按列写成列向量形式$$A=\left[
+\begin{matrix}
+	\alpha_{1},&\alpha_{2},&\cdots,&\alpha_{n}
+\end{matrix}
+\right],\ B=\left[
+\begin{matrix}
+	b_{11}&b_{12}&\cdots&b_{1s}\\
+	b_{21}&b_{22}&\cdots&b_{2s}\\
+	\vdots&\vdots& &\vdots\\
+	b_{n1}&b_{n2}&\cdots&b_{ns}
+\end{matrix}
+\right],\ C=AB=\left[
+\begin{matrix}
+	\gamma_{1},&\gamma_{2},&\cdots,&\gamma_{s}
+\end{matrix}
+\right]$$
+
+\begin{eqnarray*}
+	AB&=&\left[
+\begin{matrix}
+	\alpha_{1},&\alpha_{2},&\cdots,&\alpha_{n}
+\end{matrix}
+\right]\left[
+\begin{matrix}
+	b_{11}&b_{12}&\cdots&b_{1s}\\
+	b_{21}&b_{22}&\cdots&b_{2s}\\
+	\vdots&\vdots& &\vdots\\
+	b_{n1}&b_{n2}&\cdots&b_{ns}
+\end{matrix}
+\right]\\
+	&=&\left[
+\begin{matrix}
+	b_{11}\alpha_{1}+b_{21}\alpha_{2}+\cdots+b_{n1}\alpha_{n}\\
+	b_{12}\alpha_{1}+b_{22}\alpha_{2}+\cdots+b_{n2}\alpha_{n}\\
+	\vdots\\
+	b_{1s}\alpha_{1}+a_{2s}\alpha_{2}+\cdots+a_{ns}\alpha_{n}
+\end{matrix}
+\right]^{T}\\
+&=&\left[
+\begin{matrix}
+	\gamma_{1},&\gamma_{2},&\cdots,&\gamma_{s}
+\end{matrix}\right]
+\end{eqnarray*}
+
+我们可以得到:  $AB\text{的列向量都可以由}A\text{的列向量线性表出}.$
+$$r(AB)\leq r(A)$$
+$$\text{由}r(AB)\leq r(A),\ r(AB)\leq r(B)\Rightarrow r(AB)\leq min\{r(A),r(B)\}$$
+(2).$r(A+B)\leq r(A)+r(B)$
+
+我们假设
+$$A=[\alpha_{1},\alpha_{2},\cdots,\alpha_{s}],B=[\beta_{1},\beta_{2},\cdots,\beta_{s}],[A,B]=[\alpha_{1},\alpha_{2},\cdots,\alpha_{s},\beta_{1},\beta_{2},\cdots,\beta_{s}]$$
+$$A+B=[\alpha_{1}+\beta_{1},\alpha_{2}+\beta_{2},\cdots,\alpha_{s}+\beta_{s}]
+$$
+$$\text{可以由}[A,B]\text{的列向量线性表出}\Rightarrow r(A+B)\leq r([A,B])\Rightarrow r(A+B)\leq r(A)+r(B)$$
+
+(3).$A_{m\times k},B_{k\times n}$, 我们有 $r(A)+r(B)-k\leq r(AB)$
+
+我们设$A_{m\times k},B_{k\times n}$,我们有:  
+$$\left[
+\begin{matrix}
+	E_{m}&-A\\
+	O&E_{k}
+\end{matrix}
+\right]\left[
+\begin{matrix}
+	A&O\\
+	E_{k}&B
+\end{matrix}
+\right]\left[
+\begin{matrix}
+	E_{k}&-B\\
+	O&E_{n}
+\end{matrix}
+\right]=\left[
+\begin{matrix}
+	O&-AB\\
+	E_{k}&O
+\end{matrix}
+\right]$$
+
+$$r(Left)\geq r(A)+r(B),\ r(Right)=r(AB)+k\Rightarrow r(A)+r(B)-k\leq r(AB)$$
+
+(4).$r(A^{*})=\left\lbrace 
+\begin{array}{l}
+	n,r(A)=n\\
+	1,r(A)=n-1\\
+	0,r(A)<n-1
+\end{array}
+\right. \text{其中}A\text{为}n\text{阶方阵}.$
+我们有:  $AA^{*}=|A|E$
+
+(i). $\text{当}r(A)=n,\ A\text{是可逆矩阵}\Rightarrow |A|\neq 0$
+
+$$AA^{*}=|A|E\Rightarrow |A^{*}|=|A|^{n-1}\neq 0\Rightarrow A^{*}\text{是可逆矩阵},r(A^{*})=n$$
+
+(ii). $\text{当}r(A)=n-1$
+
+$\text{存在}n-1\text{阶子式行列式不为}0,\text{我们得到}A^{*}\text{中至少有一个元素不为}0,r(A^{*})\geq 1$
+
+$AA^{*}=|A|E=O\Rightarrow r(A)+r(A^{*})\leq n\Rightarrow r(A^{*})\leq 1$
+$$r(A^{*})\geq 1,\ r(A^{*})\leq 1\Rightarrow r(A^{*})=1$$
+
+(iii). $\text{当}r(A)<n-1,\text{我们得到}A\text{的任意}n-1\text{阶子式行列式值为}0,A^{*}=O$
+
+$$A^{*}=O\Rightarrow r(A^{*})=0$$
+
+\end{anymark}
+\begin{anymark}[总结]
+	1. 计算仔细小心,稳步前进
+	
+	2. \mathcolorbox{yellow}{AA^{*}=|A|E\quad  \text{!!!!}}
+	
+	3. 注意:  $(AB)^{T}=B^{T}A^{T},\quad (AB)^{-1}=B^{-1}A^{-1}$
+	
+	4. 如果某一个矩阵的列向量均为某一个固定列向量的倍数,则这个矩阵可以写为$A=\alpha\beta^{T}$,$\alpha,\ \beta$均为列向量,方便计算$A^{n}$.
+	
+\end{anymark}
+\chapterimage{chap13.jpg}
+\chapter{向量组}
+\section{向量和向量组的线性相关性}
+\begin{definition}[向量的定义和运算]
+	1. $n$维向量,$n$个数构成的有序数组$[a_{1},a_{2},\cdots,a_{n}]$称为一个$n$维向量,记作$\alpha=[a_{1},a_{2},\cdots,a_{n}]$,$\alpha$称为$n$维行向量,$\alpha^{T}$称为$n$维列向量,其中$a_{i}$称为向量的第$i$个分量.
+	
+	2. 向量间运算
+	
+	(i). 加法
+	
+	$$\alpha+\beta\overset{\text{def}}{\Longrightarrow}[a_{1}+b_{1},a_{2}+b_{2},\cdots,a_{n}+b_{n}]$$
+	
+	(ii). 数乘
+	$$k\alpha\overset{\text{def}}{\Longrightarrow}[ka_{1},ka_{2},\cdots,ka_{n}]$$
+	(iii). 内积和叉积
+	
+	$\text{内积}$
+	$$\ \alpha \dot\beta\overset{\text{def}}{\Longrightarrow}\sum\limits_{i=1}^{n}a_{i}b_{1}$$
+	$\text{叉积}:\ \alpha=[a_{1},a_{2},a_{3}],\ \beta=[b_{1},b_{2},b_{3}]$
+	$$\alpha \dot\beta\overset{\text{def}}{\Longrightarrow}\left|
+	\begin{array}{lll}
+		 i&j&k\\
+		 a_{1}&a_{2}&a_{3}\\
+		 b_{1}&b_{2}&b_{3}
+	\end{array}
+	\right|  $$
+\end{definition}
+\begin{definition}[线性相关和线性表出]
+	1. \mathcolorbox{yellow}{\text{线性组合}}
+	
+	设有$m$个$n$维向量$\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$和$m$个数$k_{1},k_{2},\cdots,k_{m}$,向量
+	$$k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{m}\alpha_{m}$$
+	称作向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$的线性组合.
+	
+	2. \mathcolorbox{yellow}{\text{线性表出}}
+	
+	如果向量$\beta$可以表示为向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$的线性组合,即存在$m$个数$k_{1},k_{2},\cdots,k_{m}$,使得
+	$$\beta=k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{m}\alpha_{m}$$
+	我们称向量$\beta$可以由向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$线性表出.
+	
+	3. \mathcolorbox{yellow}{\text{线性相关}}
+	
+	对于向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$,如果存在$m$个不全为0的数$k_{1},k_{2},\cdots,k_{m}$,使得
+	$$k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{m}\alpha_{m}=0$$
+	我们称向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$线性相关线性相关.
+	
+	4. \mathcolorbox{yellow}{\text{线性无关}}
+	
+	对于向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$,如果不存在$m$个不全为0的数$k_{1},k_{2},\cdots,k_{m}$,使得
+	$$k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{m}\alpha_{m}=0$$
+	当且仅当$k_{1}=k_{2}=\cdots=k_{m}=0$时上式成立,我们称向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$线性相关线性无关.
+\end{definition}
+\begin{theorem}[判别线性相关性的七大定理]
+	\mathcolorbox{yellow}{\text{定理\ 一}}
+	
+	 向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$线性相关的充要条件为:  至少有一个向量可以由其余的$n-1$个向量线性表出.
+	 
+	 逆否命题:  
+	 
+	 向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$线性无关的充要条件为:  任意一个向量都不可以由其余的$n-1$个向量线性表出.
+	 \begin{anymark}[证明]
+	 	(i).必要性
+	 	
+	 	向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$线性相关,我们得到存在不全为$0$的数$k_{1},k_{2},\cdots,k_{n}$,使得:  
+	 	$$k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{n}\alpha_{n}=0$$
+	 	我们不妨假设$k_{1}\neq 0$,我们可以得到:  
+	 	$$\alpha_{1}=-\frac{k_{1}}{k_{1}}\alpha_{2}-\cdots-\frac{k_{n}}{k_{1}}\alpha_{n}$$
+	 	至少有一个向量可以由其余的$n-1$个向量线性表出
+	 	
+	 	(ii).充分性
+	 	
+	 	如果有一个向量可以由其余的$n-1$个向量线性表出,我们不妨假设$\alpha_{1}$可以由其余的$n-1$个向量线性表出,我们得到:  
+	 	$$\alpha_{1}=k_{2}\alpha_{2}+k_{2}\alpha_{3}+\cdots+k_{n}\alpha_{n}\Rightarrow 1\alpha_{1}-k_{2}\alpha_{2}+\cdots+k_{n}\alpha_{n}=0$$
+	 	存在不全为$0$的数$k_{1},k_{2},\cdots,k_{n}(k_{1}=1)$,使得:  
+	 	$$k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{n}\alpha_{n}=0$$
+	 	向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$线性相关
+	 \end{anymark}
+	\mathcolorbox{yellow}{\text{定理\ 二}}
+	
+	若向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$线性无关,$\beta,\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$线性相关,则$\beta$可以由$\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$线性表出,且表示法唯一.
+	\begin{anymark}[证明]
+		(i).证明存在性
+		
+		$\beta,\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$线性相关,存在不全为$0$的数$k_{\beta},k_{1},k_{2},\cdots,k_{n}$,使得:  
+		$$k_{\beta}\beta+k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{n}\alpha_{n}=0$$
+		假设$k_{\beta}=0$,我们得到:  
+		$$k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{n}\alpha_{n}=0$$
+		此时得到不全为$0$的数$k_{1},k_{2},\cdots,k_{n}$使得:  $k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{n}\alpha_{n}=0$,向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$线性无关,矛盾!!!
+		
+		我们得到$k_{\beta}\neq 0$,我们可以得到:  
+		$$\beta=-\frac{k_{1}}{k_{\beta}}\alpha_{1}-\frac{k_{2}}{k_{\beta}}\alpha_{2}-\cdots-\frac{k_{n}}{k_{\beta}}\alpha_{n}$$
+		向量$\beta$可以由$\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$线性表出,证毕
+		
+		(ii). 证明唯一性(反证法)
+		
+		假设向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$对$\beta$存在两种不同的线性表出,我们可以得到:  
+		$$\left\lbrace 
+		\begin{array}{l}
+			\beta=l_{1}\alpha_{1}+l_{2}\alpha_{2}+\cdots+l_{n}\alpha_{n}\\
+			\beta=h_{1}\alpha_{1}+h_{2}\alpha_{2}+\cdots+h_{n}\alpha_{n}
+		\end{array}
+		\right. $$
+		两式相减,得到:  
+		$$(l_{1}-h_{1})\alpha_{1}+(l_{2}-h_{2})\alpha_{2}+\cdots+(l_{n}-h_{n})\alpha_{n}=0$$
+		至少存在$l_{i}-h_{i}\neq 0,i\in(1,n)$,这说明向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$线性相关,矛盾!!!
+		
+		我们证明了$\beta$的线性表出的唯一性.
+	\end{anymark}
+	\mathcolorbox{yellow}{\text{定理\ 三}}
+	
+	如果向量组$\beta_{1},\beta_{2},\cdots,\beta_{t}$可以由$\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$线性表出,且$t>s$,则$\beta_{1},\beta_{2},\cdots,\beta_{t}$线性相关.
+	
+	如果向量组$\beta_{1},\beta_{2},\cdots,\beta_{t}$可以由$\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$线性表出,且$\beta_{1},\beta_{2},\cdots,\beta_{t}$线性相关,则$t\leq s$.
+	\begin{anymark}[证明]
+		向量组$\beta_{1},\beta_{2},\cdots,\beta_{t}$可以由$\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$线性表出,我们得到:  
+		$$\left\lbrace 
+		\begin{array}{l}
+			\beta_{1}=l_{11}\alpha_{1}+l_{12}\alpha_{2}+\cdots+l_{1s}\alpha_{s}\\
+			\beta_{2}=l_{21}\alpha_{1}+l_{22}\alpha_{2}+\cdots+l_{2s}\alpha_{s}\\
+			\cdots\cdots\\
+			\beta_{t}=l_{t1}\alpha_{1}+l_{t2}\alpha_{2}+\cdots+l_{ts}\alpha_{s}
+		\end{array}
+		\right. $$
+		我们要证明是否存在不全为$0$的数$k_{1},k_{2},\cdots,k_{t}$,使得:  
+		\begin{eqnarray*}
+			k_{1}\beta_{1}+k_{2}\beta_{2}+\cdots+k_{t}\beta_{t}&=&0\\
+			k_{1}(l_{11}\alpha_{1}+l_{12}\alpha_{2}+\cdots+l_{1s}\alpha_{s})&+&\\
+			k_{2}(l_{21}\alpha_{1}+l_{22}\alpha_{2}+\cdots+l_{2s}\alpha_{s})&+&\\
+			\cdots+k_{t}(l_{t1}\alpha_{1}+l_{t2}\alpha_{2}+\cdots+l_{ts}\alpha_{s})&=&0
+		\end{eqnarray*}
+
+		即:  
+		$$(\sum\limits_{i=1}^{t}k_{i}l_{i1})\alpha_{1}+(\sum\limits_{i=1}^{t}k_{i}l_{i2})\alpha_{2}+\cdots+(\sum\limits_{i=1}^{t}k_{i}l_{is})\alpha_{s}=0$$
+		当$\sum\limits_{i=1}^{t}k_{i}l_{i1}=\sum\limits_{i=1}^{t}k_{i}l_{i2}=\cdots=\sum\limits_{i=1}^{t}k_{i}l_{is}=0$显然满足,此时我们得到一个关于$k_{1},k_{2},\cdots,k_{t}$的$t$元方程组,一共有$s$个方程,$t>s$时,未知数个数大于方程数量,原方程组一定存在非零解.
+		
+		我们得到存在不全为$0$的数$k_{1},k_{2},\cdots,k_{t}$,使得:  
+		$$k_{1}\beta_{1}+k_{2}\beta_{2}+\cdots+k_{t}\beta_{t}=0$$
+		我们得到:  $\beta_{1},\beta_{2},\cdots,\beta_{t}$线性相关,证毕.
+	\end{anymark}
+	\mathcolorbox{yellow}{\text{定理\ 四}}
+	
+	设$m$个$n$维向量$\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$,其中
+	$$
+	\begin{array}{l}
+		\alpha_{1}=[a_{11},a_{21},\cdots,a_{n1}]^{T}\\
+		\alpha_{2}=[a_{12},a_{22},\cdots,a_{n2}]^{T}\\
+		\cdots\cdots\\
+		\alpha_{m}=[a_{1m},a_{2m},\cdots,a_{nm}]^{T}\\
+	\end{array}
+	$$
+	向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$线性相关的充要条件时齐次线性方程组
+	$$AX=0$$
+	有非零解,也等价于零空间非零.
+	$$A=[\alpha_{1},\alpha_{2}\cdots,\alpha_{m}]=\left[ \begin{matrix}
+		a_{11}&a_{12}&\cdots&a_{1m}\\
+		a_{21}&a_{22}&\cdots&a_{2m}\\
+		\vdots&\vdots& &\vdots\\
+		a_{n1}&a_{n2}&\cdots&a_{nm}
+	\end{matrix}\right],\ X=[x_{1},x_{2},\cdots,x_{m}]^{T}$$
+	逆否命题:  
+	
+	向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$线性无关的充要条件时齐次线性方程组
+	$$AX=0$$
+	只有零解,也等价于零空间为零.
+	\begin{anymark}[证明]
+		(i). 必要性
+		
+		向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$线性无关,我们得到存在不全为$0$的数$x_{1},x_{2},\cdots,x_{m}$,使得:  
+		$$x_{1}\alpha_{1}+x_{2}\alpha_{2}+\cdots+x_{m}\alpha_{m}=0$$
+		$$x_{1}[a_{11},a_{21},\cdots,a_{n1}]^{T}+x_{2}[a_{12},a_{22},\cdots,a_{n2}]^{T}+\cdots+x_{m}[a_{1m},a_{2m},\cdots,a_{nm}]^{T}=0$$
+		存在不全为$0$的数$x_{1},x_{2},\cdots,x_{m}$是方程组:  
+		$$\left\lbrace 
+		\begin{array}{l}
+			a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1m}x_{m}=0\\
+			a_{21}x_{1}+a_{22}x_{2}+\cdots+a_{2m}x_{m}=0\\
+			\cdots\cdots\\
+			a_{n1}x_{1}+a_{n2}x_{2}+\cdots+a_{nm}x_{m}=0\\
+		\end{array}
+		\right. $$
+		有非零解,证毕
+		
+		(ii). 充分性
+		
+		方程组$AX=0$有非零解,我们得到存在不全为$0$的数$x_{1},x_{2},\cdots,x_{m}$使得:  
+		$$x_{1}\alpha_{1}+x_{2}\alpha_{2}+\cdots+x_{m}\alpha_{m}=0$$
+		
+		此时向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$线性相关,证毕.
+	\end{anymark}
+	
+	\mathcolorbox{yellow}{\text{定理\ 五}}
+	
+	如果向量$\beta$可以由向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$线性表出,等价于非齐次方程组方程$AX=\beta$有解;如果向量$\beta$不能由向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$线性表出,等价于非齐次方程组方程$AX=\beta$无解.
+	\begin{anymark}[证明]
+		向量$\beta$可以由向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$线性表出,我们可以得到存在不全为$0$的数$x_{1},x_{2},\cdots,x_{s}$使得:  
+		$$x_{1}\alpha_{1}+x_{2}\alpha_{2}+\cdots+x_{s}\alpha_{s}=0\Rightarrow [\alpha_{1},\alpha_{2}\cdots,\alpha_{s}]\left[\begin{matrix}
+			x_{1}\\
+			x_{2}\\
+			\cdots\\
+			x_{s}
+		\end{matrix} \right] =\beta$$
+		方程组$AX=\beta$有非零解. 
+	\end{anymark}
+	
+	\mathcolorbox{yellow}{\text{定理\ 六}}
+	
+	如果向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$,一部分向量线性相关,那么整个向量组也线性相关.
+	
+	逆否命题:  
+	
+	如果向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$线性无关,其任意部分向量组也线性无关.
+	\begin{anymark}[证明]
+		 我们不妨设$\alpha_{1},\alpha_{2}\cdots,\alpha_{j}\ (j< n)$线性相关,我们得到存在不全为$0$的数$k_{1},k_{2},\cdots,k_{j}$使得:  
+		 $$k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{j}\alpha_{j}=0$$
+		 
+		我们取$k_{1},k_{2},\cdots,k_{j},k_{j+1}=k_{j+2}=\cdots=k_{n}=0$,我们得到:  
+		$$k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{j}\alpha_{j}+0\alpha_{j+1}+\cdots+0\alpha_{n}=0$$
+		$k_{1},k_{2},\cdots,k_{j},k_{j+1}=k_{j+2}=\cdots=k_{n}=0$不全为$0$,整个向量组也线性相关.
+	\end{anymark}
+	
+	\mathcolorbox{yellow}{\text{定理\ 七}}
+	
+	如果一组$n$维向量$\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$线性无关,那么把这些向量各任意添加$m$个分量得到的新向量组$(n+m)\text{维}$$\alpha_{1}^{*},\alpha_{2}^{*}\cdots,\alpha_{n}^{*}$线性无关;如果向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$线性相关,那他们各去掉相同的若干个分量所得到的新向量组也是线性相关.
+	
+\end{theorem}
+\section{极大线性无关组和向量组的秩}
+\begin{definition}[极大线性无关组]
+	在向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$,如果存在部分向量组$\alpha_{i_{1}},\alpha_{i_{2}}\cdots,\alpha_{i_{r}}$满足:  
+	\begin{itemize}
+		\item $\alpha_{i_{1}},\alpha_{i_{2}}\cdots,\alpha_{i_{r}}\text{线性无关.}$
+		\item $\text{向量组中任意向量}\alpha_{i},\ (i=1,2,\cdots,s)\text{都可以被向量组}\alpha_{i_{1}},\alpha_{i_{2}}\cdots,\alpha_{i_{r}}\text{线性表出.}$
+	\end{itemize}
+	则称向量组$\alpha_{i_{1}},\alpha_{i_{2}}\cdots,\alpha_{i_{r}}$是原向量组的一个极大线性无关组.
+	
+	我们注意到:  一个向量组的极大线性无关组不唯一,对于线性无关的向量组,它的极大线性无关组是自身.
+\end{definition}
+
+\begin{definition}[向量组的秩]
+	向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$的极大线性无关组$\alpha_{i_{1}},\alpha_{i_{2}}\cdots,\alpha_{i_{r}}$中所含向量的个数$r$称为向量组的秩,记作:  
+	$$rank(\alpha_{1},\alpha_{2}\cdots,\alpha_{s})=r\ \text{或}\ r=(\alpha_{1},\alpha_{2}\cdots,\alpha_{s})=r$$
+	\begin{property}
+		\begin{itemize}
+			\item $r(A)(\text{矩阵的秩})=r(A\text{列向量})(\text{列秩})=r(A\text{行向量})(\text{行秩})$
+			\item $\text{初等行变换和列变换不改变矩阵的秩}$
+			\item $A\overset{\text{初等行变换}}{\longrightarrow}B,A\text{的行向量与}B\text{的行向量是等价向量组}$
+			\item $\text{设向量组}\alpha_{1},\alpha_{2}\cdots,\alpha_{s}\text{及}\beta_{1},\beta_{2}\cdots,\beta_{t}$,$\text{若}\beta_{i}(i=1,2,\cdots,t)\text{均可由}\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$线性表出,则:  
+			$$r(\alpha_{1},\alpha_{2}\cdots,\alpha_{s})\leq r(\beta_{1},\beta_{2}\cdots,\beta_{t})$$
+		\end{itemize}
+	\end{property}
+\end{definition}
+\section{等价向量组}
+\begin{definition}[等价向量组]
+	设两个向量组:  $\ (\rm\Rmnum{1})\ \alpha_{1},\alpha_{2}\cdots,\alpha_{s}$,$\ (\rm\Rmnum{2})\ \beta_{1},\beta_{2}\cdots,\beta_{t}$,若\ $(\rm\Rmnum{1})$\ 中向量$\alpha_{i},\ (i=1,2,\cdots,s)$均可由\ $(\rm\Rmnum{2})$\ 中向量线性表出,则称向量组$(\rm\Rmnum{1})$可由向量组$(\rm\Rmnum{2})$线性表出;若向量组$(\rm\Rmnum{1})$和向量组$(\rm\Rmnum{2})$互相线性表出,称向量组$(\rm\Rmnum{1})$与向量组$(\rm\Rmnum{2})$是等价向量组,记作$(\rm\Rmnum{1})\cong (\rm\Rmnum{2})$.
+	
+	\begin{property}
+		\begin{itemize}
+			\item $(\rm\Rmnum{1})\cong (\rm\Rmnum{1})$
+			\item $\text{如果} (\rm\Rmnum{1})\cong (\rm\Rmnum{2}),\text{则} (\rm\Rmnum{2})\cong (\rm\Rmnum{1})$
+			\item $\text{如果} (\rm\Rmnum{1})\cong (\rm\Rmnum{2}),(\rm\Rmnum{2})\cong (\rm\Rmnum{3}),\text{则} (\rm\Rmnum{1})\cong (\rm\Rmnum{3})$
+			\item $\text{向量组和它的极大线性无关组是等价向量组}$
+		\end{itemize}
+	\end{property}
+\end{definition}
+\section{向量空间}
+\begin{definition}[向量空间]
+	设$\xi_{1},\xi_{2},\cdots,\xi_{n}$是$n$维向量空间$\mathbb{R}^{n}$中线性无关的有序向量,对于任意向量$\alpha\in \mathbb{R}^{n}$均可由向量组$\xi_{1},\xi_{2},\cdots,\xi_{n}$线性表出,我们将表出式记:  
+	$$\alpha=a_{1}\xi_{1}+a_{2}\xi_{2}+\cdots+a_{n}\xi_{n}$$
+	我们称$\xi_{1},\xi_{2},\cdots,\xi_{n}$是$n$维向量空间$\mathbb{R}^{n}$的一组基,基向量的个数$n$称为向量空间的维度,$[a_{1},a_{2},\cdots,a_{n}]^{T}$是向量$\alpha$在基向量$\xi_{1},\xi_{2},\cdots,\xi_{n}$的坐标.
+\end{definition}
+
+\begin{definition}[基变换]
+	如果$\xi_{1},\xi_{2},\cdots,\xi_{n}$和$\eta_{1},\eta_{2},\cdots,\eta_{n}$是向量空间$\mathbb{R}^{n}$中的两个基,其有关系:  
+	$$[\eta_{1},\eta_{2},\cdots,\eta_{n}]=[\xi_{1},\xi_{2},\cdots,\xi_{n}]\left[ \begin{matrix}
+		c_{11}&c_{12}&\cdots&c_{1n}\\
+		c_{21}&c_{22}&\cdots&c_{2n}\\
+		\vdots&\vdots& &\vdots\\
+		c_{n1}&c_{n2}&\cdots&c_{nn}
+	\end{matrix}\right]=[\xi_{1},\xi_{2},\cdots,\xi_{n}]C$$
+	上式是由基$\xi_{1},\xi_{2},\cdots,\xi_{n}$到基$\eta_{1},\eta_{2},\cdots,\eta_{n}$的基变换公式,矩阵$C$是由基$\xi_{1},\xi_{2},\cdots,\xi_{n}$到基$\eta_{1},\eta_{2},\cdots,\eta_{n}$的过渡矩阵,$C$的第$i$列即是$\eta_{i}$在基$\xi_{1},\xi_{2},\cdots,\xi_{n}$下的坐标,过渡矩阵$C$为可逆矩阵.
+\end{definition}
+\begin{definition}[坐标变换]
+	设向量$\alpha$在基$\xi_{1},\xi_{2},\cdots,\xi_{n}$和基$\eta_{1},\eta_{2},\cdots,\eta_{n}$下的坐标为别是$\textbf{x}=[x_{1},x_{2},\cdots,x_{n}]^{T},\textbf{y}=[y_{1},y_{2},\cdots,y_{n}]^{T}$
+	$$\alpha=[\xi_{1},\xi_{2},\cdots,\xi_{n}]\textbf{x}=[\eta_{1},\eta_{2},\cdots,\eta_{n}]\textbf{y}$$
+	不妨假设由基$\xi_{1},\xi_{2},\cdots,\xi_{n}$到基$\eta_{1},\eta_{2},\cdots,\eta_{n}$的过渡矩阵$C$,我们有:  
+	$$[\xi_{1},\xi_{2},\cdots,\xi_{n}]=[\eta_{1},\eta_{2},\cdots,\eta_{n}]C$$
+	
+	我们得到:  
+	$$\textbf{x}=C\textbf{y}\Leftrightarrow \textbf{y}=C^{-1}\textbf{x}$$
+\end{definition}
+\chapterimage{chap14.jpg}
+\chapter{线性方程组}
+\section{具体型方程组}
+\subsection{齐次方程组}
+\begin{definition}[齐次方程组]
+	1. 形式
+	
+	方程组
+	$$\left\lbrace 
+	\begin{array}{l}
+		a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1n}x_{n}=0\\
+		a_{21}x_{1}+a_{22}x_{2}+\cdots+a_{2n}x_{n}=0\\
+		\cdots\cdots\\
+		a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n}=0\\
+	\end{array}
+	\right. $$
+	称为$m$个方程,$n$个未知数的齐次方程组.
+	
+	其向量形式为:  
+	$$x_{1}\alpha_{1}+x_{2}\alpha_{2}+\cdots+x_{n}\alpha_{n}=0$$
+	其中:  
+	$$\alpha_{i}=\left[ \begin{matrix}
+		a_{1j}\\
+		a_{2j}\\
+		\vdots\\
+		a_{mj}\\
+	\end{matrix}\right](j=1,2,\cdots,n) $$
+	
+	方程组的矩阵形式为:  
+	$$A_{m\times n}X=0$$
+	$$A=\left[
+	\begin{matrix}
+		a_{11}&a_{12}&\cdots&a_{1n}\\
+		a_{21}&a_{22}&\cdots&a_{2n}\\
+		\vdots&\vdots& &\vdots\\
+		a_{m1}&a_{m2}&\cdots&a_{mn}
+	\end{matrix}
+	\right],\quad X=\left[ \begin{matrix}
+		x_{1}\\
+		x_{2}\\
+		\vdots\\
+		x_{n}\\
+	\end{matrix}\right]$$
+	
+	2. 有解的条件
+	
+	(i).当$r(A)=n\text{时},(\alpha_{1},\alpha_{2},\cdots,\alpha_{n}\text{线性无关})$,方程组只有零解.
+	
+	(ii). 当$r(A)=r<n\text{时},(\alpha_{1},\alpha_{2},\cdots,\alpha_{n}\text{线性相关})$,方程组有非零解,且有$n-r$个线性无关解.
+	
+	3. 解的性质
+	
+	如果$A\xi_{1}=0,\ A\xi_{2}=0, \forall k_{1},k_{2}\in \mathbb{R},\ A(k_{1}\xi_{1}+k_{2}\xi_{2})=0 $
+	
+	4. 基础解系和解的结构
+	
+	(1). 基础解系
+	
+	设$\xi_{1},\xi_{2},\cdots,\xi_{n-r}$满足:  
+	\begin{itemize}
+		\item $\xi_{1},\xi_{2},\cdots,\xi_{n-r}\text{是方程组的解}$
+		\item $\xi_{1},\xi_{2},\cdots,\xi_{n-r}\text{线性无关}$
+		\item $\text{方程组}AX=0\text{的任意一个解均可以由}\xi_{1},\xi_{2},\cdots,\xi_{n-r}\text{线性表出}$
+	\end{itemize}
+	
+	我们称$\xi_{1},\xi_{2},\cdots,\xi_{n-r}$为方程组$AX=0$的基础解系.
+	
+	(2). 通解
+	
+	设$\xi_{1},\xi_{2},\cdots,\xi_{n-r}$为方程组$AX=0$的基础解系,则$k_{1}\xi_{1}+k_{2}\xi_{2}+\cdots+k_{n-r}\xi_{n-r}$是方程组$AX=0$的通解,其中$k_{1},k_{2},\cdots,k_{n-r}\in \mathbb{R}$
+\end{definition}
+\subsection{非齐次方程组}
+\begin{definition}[非齐次方程组]
+	1. 形式
+	
+	方程组
+	$$\left\lbrace 
+	\begin{array}{l}
+		a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1n}x_{n}=b_{1}\\
+		a_{21}x_{1}+a_{22}x_{2}+\cdots+a_{2n}x_{n}=b_{2}\\
+		\cdots\cdots\\
+		a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n}=b_{m}\\
+	\end{array}
+	\right. $$
+	称为$m$个方程,$n$个未知数的非齐次方程组.
+	
+	其向量形式为:  
+	$$x_{1}\alpha_{1}+x_{2}\alpha_{2}+\cdots+x_{n}\alpha_{n}=\beta$$
+	其中:  
+	$$\alpha_{i}=\left[ \begin{matrix}
+		a_{1j}\\
+		a_{2j}\\
+		\vdots\\
+		a_{mj}
+	\end{matrix}\right](j=1,2,\cdots,n) ,\ \beta=\left[ \begin{matrix}
+	b_{1j}\\
+	b_{2j}\\
+	\vdots\\
+	b_{mj}
+	\end{matrix}\right]$$
+	
+	方程组的矩阵形式为:  
+	$$A_{m\times n}X=\beta$$
+	$$A=\left[
+	\begin{matrix}
+		a_{11}&a_{12}&\cdots&a_{1n}\\
+		a_{21}&a_{22}&\cdots&a_{2n}\\
+		\vdots&\vdots& &\vdots\\
+		a_{m1}&a_{m2}&\cdots&a_{mn}
+	\end{matrix}
+	\right],\quad X=\left[ \begin{matrix}
+		x_{1}\\
+		x_{2}\\
+		\vdots\\
+		x_{n}\\
+	\end{matrix}\right]$$
+	矩阵$\left[ {\begin{array}{c:c}
+			\begin{matrix}
+				a_{11}&a_{12}&\cdots&a_{1n}\\
+				a_{21}&a_{22}&\cdots&a_{2n}\\
+				\vdots&\vdots& &\vdots\\
+				a_{m1}&a_{m2}&\cdots&a_{mn}
+			\end{matrix}&
+			\begin{matrix}
+				b_{1j}\\
+				b_{2j}\\
+				\vdots\\
+				b_{mj}
+			\end{matrix}
+	\end{array}} \right]$记作为矩阵$A$的增广矩阵,简记为$\left[ {\begin{array}{c:c}
+	\begin{matrix}
+		A
+	\end{matrix}&
+	\begin{matrix}
+	\beta
+	\end{matrix}
+\end{array}} \right]$
+
+	2. 有解的条件
+	
+	(i).$r(A)\neq r([A,\beta]),\text{方程组无解}.(\beta\text{不能由}\alpha_{1},\alpha_{2},\cdots,\alpha_{n}\text{线性表出})$
+	
+	(ii). $r(A)=r([A,\beta])=n,\text{方程组有唯一解}$ 
+	$$\alpha_{1},\alpha_{2},\cdots,\alpha_{n}\text{线性无关},\beta,\alpha_{1},\alpha_{2},\cdots,\alpha_{n}\text{线性相关}$$
+	
+	(iii).$r(A)=r([A,\beta])<n,\text{方程组有无穷多组解}.$
+	
+	3. 解的性质
+	
+	设$\eta_{1},\eta_{2},\eta_{3}$是非齐次方程组$AX=\beta$的解,$\xi$是对应齐次方程组$AX=0$的解,我们有:  
+	\begin{itemize}
+		\item $\eta_{1}-\eta_{2}\text{是}AX=0\text{的解}$
+		\item $k\xi+\eta\text{是方程组}AX=\beta\text{的解}$
+	\end{itemize}
+	
+	4. 解的结构
+	
+	(1). 特解
+	
+	$\eta\text{是非齐次性方程组}AX=\beta\text{的一个特解}$
+	
+	(2). 通解
+	
+	设$k_{1}\xi_{1}+k_{2}\xi_{2}+\cdots+k_{n-r}\xi_{n-r}$是方程组$AX=0$的通解,其中$k_{1},k_{2},\cdots,k_{n-r}\in \mathbb{R}$,我们可以得到非齐次性方程组的通解:  
+	$$k_{1}\xi_{1}+k_{2}\xi_{2}+\cdots+k_{n-r}\xi_{n-r}+\eta$$
+\end{definition}
+\section{两个方程组的公共解}
+\begin{definition}[两个方程组的公共解]
+	(1).齐次性线性方程组$A_{m\times n}X=0$和$B_{m\times n}X=0$的公共解是满足方程组$\left[
+	\begin{matrix}
+		A\\B
+	\end{matrix}
+	\right]X=0$的解.
+	
+	(2). 非齐次性性线性方程组$A_{m\times n}X=\alpha$和$B_{m\times n}X=\beta$的公共解是满足方程组$\left[
+	\begin{matrix}
+		A\\B
+	\end{matrix}
+	\right]X=\left[
+	\begin{matrix}
+		\alpha\\\beta
+	\end{matrix}
+	\right]$的解.
+	
+	(3).给出方程组$A_{m\times n}X=0$的通解$k_{1}\xi_{1}+k_{2}\xi_{2}+\cdots+k_{s}\xi_{s}$,代入第二个方程组$B_{m\times n}X=0$得到$k_{i}(i=1,2,\cdots,s)$之间的关系,代回方程$A_{m\times n}X=0$
+	
+	(4).给出方程组$A_{m\times n}X=0$的基础解系$\xi_{1},\xi_{2},\cdots,\xi_{s}$和方程组$B_{m\times n}X=0$的基础解系$\eta_{1},\eta_{2},\cdots,\eta_{t}$,公共解为:  
+	$$k_{1}\xi_{1}+k_{2}\xi_{2}+\cdots+k_{s}\xi_{s}=l_{1}\eta_{1}+l_{2}\eta_{2}+\cdots+l_{t}\eta_{t}$$
+\end{definition}
+\section{同解方程组}
+\begin{definition}[同解方程组]
+	如果两个方程组$A_{m\times n}X=0$和$B_{m\times n}X=0$有完全相同的解,则称它们为同解方程组.
+	\begin{itemize}
+		\item $AX=0\text{的解满足}BX=0\text{并且} BX=0\text{的解满足}AX=0$
+		\item $r(A)=r(B)\text{并且}AX=0\text{的解满足}BX=0(BX=0\text{的解满足}AX=0)$
+		\item $r(A)=r(B)=r(\left[
+		\begin{matrix}
+			A\\B
+		\end{matrix}
+		\right])$
+	\end{itemize}
+\end{definition}
+\chapterimage{chap15.jpg}
+\chapter{特征值和特征向量}
+\section{特征值和特征向量定义}
+\begin{definition}[特征值和特征向量]
+	设$A$是$n$阶矩阵,$\lambda$为常数,存在非零列向量$\xi$,满足:  
+	$$A\xi=\lambda\xi$$
+	则称$\lambda$为$A$的特征值,$\xi$是$A$对应于特征值$\lambda$的特征向量
+	\begin{anymark}[注]
+		$$(\lambda E-A)\xi=O\Rightarrow |\lambda E-A|=0$$
+		$$\left|
+		\begin{matrix}
+			\lambda-a_{11}&-a_{12}&\cdots&-a_{1n}\\
+			-a_{21}&\lambda-a_{22}&\cdots&-a_{2n}\\
+			\vdots&	\vdots& &	\vdots\\
+			-a_{n1}&-a_{n2}&\cdots&\lambda-a_{nn}
+		\end{matrix}
+		\right|=(\lambda-\lambda_{1})(\lambda-\lambda_{2})\cdots(\lambda-\lambda_{n})=0$$
+		上面右边是关于$\lambda$的特征多项式,也是$A$的特征方程:  
+		$$\lambda^{n}-(\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n})\lambda^{n-1}+\cdots+(-1)^{n}\prod\limits_{i=1}^{n}\lambda_{i}=0$$
+		我们得到:  
+		$$\left\lbrace 
+		\begin{array}{l}
+			\sum\limits_{i=1}^{n}\lambda_{i}=\sum\limits_{i=1}^{n}a_{ii}\\
+			\prod\limits_{i=1}^{n}\lambda_{i}=|A|
+		\end{array}
+		\right. $$
+	\end{anymark}
+	\begin{corollary}[特征向量]
+		\begin{itemize}
+			\item $k\text{重特征值至多只有}k\text{个线性无关的特征向量}$
+			\item $\text{若}\xi_{1},\xi_{2}\text{是}A\text{的属于不同特征值}\lambda_{1},\lambda_{2}\text{的特征向量},\lambda_{1},\lambda_{2}\text{线性无关}$
+			\item $\text{若}\xi_{1},\xi_{2}\text{是}A\text{的属于同一特征值}\lambda\text{的特征向量}$
+			
+			$k_{1}\lambda_{1}+k_{2}\lambda_{2}(k_{1},k_{2}\text{不同时为}0)\text{仍然是}A\text{属于特征值}\lambda\text{的特征向量}$
+		\end{itemize}
+	\end{corollary}
+\end{definition}
+\begin{table}[h]
+	\centering
+	\caption{常用特征值和特征向量}
+	\begin{tblr}{
+			hline{1,Z}={0.08em},
+			hline{2}={0.04em},
+			vline{2}={0.05em},
+			cells={c}}
+		矩阵     & $A$       & $kA$       & $A^{k}$       & $f(A)$       & $A^{-1}$           & $ A^{*}$                      & $P^{-1}AP$\\
+		特征值   & $\lambda$ & $k\lambda$ & $\lambda^{k}$ & $f(\lambda)$ & $\frac{1}{\lambda}$ & $\frac{|A|}{\lambda}$ & $\lambda$\\
+		特征向量 & $\xi$      & $\xi$      & $\xi$         & $\xi$        & $\xi$               & $ \xi$           & $P^{-1}\xi$\\
+	\end{tblr}
+\end{table}
+\section{相似}
+\begin{definition}[矩阵的相似]
+	设$A,B$是两个$n$阶方阵,若存在$n$阶可逆矩阵$P$,使得$P^{-1}AP=B$,则称$A$相似于$B$,记作$A\sim B$
+	\begin{anymark}[注]
+		(1). $A\sim A\quad \text{反身性}$
+		
+		(2). $A\sim B\Rightarrow B\sim A\quad \text{对称性}$
+		
+		(3). $A\sim B,\ B\sim C\Rightarrow A\sim C\quad \text{传递性}$
+	\end{anymark}
+	\begin{corollary}[相似矩阵]
+		(1).$A\sim B$,我们得到:  
+		\begin{itemize}
+			\item $r(A)=r(B)$
+			\item $|A|=|B|$
+			\item $|\lambda A-E|=|\lambda B-E|$
+			\item $A,B\text{具有相同的特征值}$
+		\end{itemize}
+		
+		(2).$A\sim B$,我们得到:  
+		\begin{itemize}
+			\item $A^{m}\sim B^{m}$
+			\item $f(A)\sim f(B)$
+		\end{itemize}
+		
+		(3).$A\sim B\text{且}A\text{可逆}$,我们得到:  
+		\begin{itemize}
+			\item $A^{-1}\sim B^{-1}$
+			\item $f(A^{-1})\sim f(B^{-1})$
+		\end{itemize}
+		
+		(4).$A\sim B$,我们得到:  
+		\begin{itemize}
+			\item $A^{T}\sim B^{T}$
+			\item $A^{*}\sim B^{*}$
+		\end{itemize}
+	\end{corollary}
+\end{definition}
+\subsection{矩阵的相似对角化}
+\begin{definition}[相似对角化]
+	设$A$是$n$阶方阵,若存在$n$阶可逆矩阵$P$,使得$P^{-1}AP=\varLambda$,其中$\varLambda$是对角矩阵,则称$A$可相似对角化,记作$A\sim \varLambda$,称$\varLambda$为$A$的相似标准型
+	
+	\begin{anymark}[注]
+		$$P=[\xi_{1},\xi_{2},\cdots,\xi_{n}],\varLambda=\left[
+		\begin{matrix}
+			\lambda_{1}& & & \\
+			&\lambda_{2}& & \\
+			& &\ddots &\\
+			& & &\lambda_{n}
+		\end{matrix}
+		\right]$$
+		$$P^{-1}AP=\varLambda\Rightarrow AP=P\varLambda$$
+		$$A[\xi_{1},\xi_{2},\cdots,\xi_{n}]=[\lambda_{1}\xi_{1},\lambda_{2}\xi_{2},\cdots,\lambda_{n}\xi_{n}]\Rightarrow A\xi_{i}=\lambda_{i}\xi_{i}(i=1,2,\cdots,n)$$
+	\end{anymark}
+	\begin{corollary}[对角化]
+		\begin{itemize}
+			\item $n\text{阶矩阵}A\text{可相似对角化}\Leftrightarrow A\text{有}n\text{个线性无关的特征向量}$
+			\item $n\text{阶矩阵}A\text{可相似对角化}\Leftrightarrow \text{对于每个}k_{i}\text{重特征值都有}k_{i}\text{个特征向量}$
+			\item $A\text{有}n\text{个特征值}\Rightarrow n\text{阶矩阵}A\text{可相似对角化}$
+			\item $n\text{阶矩阵}A\text{为实对称矩阵}\Rightarrow A\text{可相似对角化}$
+		\end{itemize}
+	\end{corollary}
+\end{definition}
+\subsection{实对称矩阵的相似对角化}
+\begin{definition}[实对称矩阵相似对角化]
+	$A^{T}=A\text{且}A\text{中元素全为实数,我们把}A\text{称作实对称矩阵}$
+	
+	\begin{anymark}[性质]
+		\begin{itemize}
+			\item $\text{实对称矩阵必可相似对角化,特征值为实数,特征向量为实向量}$
+			\item $\text{实对称矩阵属于不同特征值的特征向量互相正交}$
+			\item $\exists \text{正交矩阵} Q,\text{s.t.}\ Q^{-1}AQ=Q^{T}AQ=\varLambda$
+		\end{itemize}
+	\end{anymark}
+\end{definition}
+\chapterimage{chap16.jpg}
+\chapter{二次型}
+\section{二次型定义}
+\begin{definition}[二次型]
+	$n$元变量$x_{1},x_{2},\cdots,x_{n}$的二次齐次多项式
+	\begin{eqnarray*}
+		f(x_{1},x_{2},\cdots,x_{n})=a_{11}x_{1}^{2}+2a_{12}x_{1}x_{2}+&\cdots&+2a_{1n}x_{1}x_{n}\\
+		+a_{22}x_{2}^2+&\cdots&+2a_{2n}x_{2}x_{n}\\
+		+&\cdots&\quad \\
+		& &+a_{nn}x_{n}^{2}
+	\end{eqnarray*}
+	称为$n$元二次型,简称为二次型.
+	
+	我们令$a_{ij}=a_{ji}$,我们可以得到:  
+	$$f(x_{1},x_{2},\cdots,x_{n})=a_{11}x_{1}^{2}+\cdots+a_{1n}x_{1}x_{n}+a_{21}x_{2}x_{1}+a_{22}x_{2}^2+\cdots+a_{2n}x_{2}x_{n}
+	+\cdots+a_{n1}x_{n}x_{1}+\cdots+a_{nn}x_{n}^{2}$$
+	$$f(x_{1},x_{2},\cdots,x_{n})=\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{n}a_{ij}x_{i}x_{j}$$
+	
+	我们令$$A=\left[\begin{matrix}
+		a_{11}&a_{12}&\dots&a_{1n}\\
+		a_{21}&a_{22}&\dots&a_{2n}\\
+		\vdots&\vdots&\quad&\vdots\\
+		a_{n1}&a_{n2}&\dots&a_{nn}
+	\end{matrix} \right],\ \mathtt{x}=\left[\begin{matrix}
+	x_{1}\\x_{2}\\\vdots\\x_{n}
+	\end{matrix} \right]$$
+	$$\text{二次型可表示为:  }f(\mathtt{x})=\mathtt{x}^{T}A\mathtt{x},A\text{为二次型}f(\mathtt{x})\text{的矩阵}$$
+\end{definition}
+\section{二次型的标准型和规范型}
+\begin{definition}[线性变换]
+	对于$n$元二次型$f(x_{1},x_{2},\cdots,x_{n})$,令:  
+	$$\left\lbrace 
+	\begin{matrix}
+		x_{1}=c_{11}y_{1}+c_{12}y_{2}+\cdots+c_{1n}y_{n}\\
+		x_{2}=c_{21}y_{1}+c_{22}y_{2}+\cdots+c_{2n}y_{n}\\
+		\cdots\cdots\\
+		x_{n}=c_{n1}y_{1}+c_{n2}y_{2}+\cdots+c_{nn}y_{n}
+	\end{matrix}
+	\right. $$
+	记$$\mathtt{x}=\left[\begin{matrix}
+		x_{1}\\x_{2}\\\vdots\\x_{n}
+	\end{matrix} \right],\ C=\left[ \begin{matrix}
+	c_{11}&c_{12}&\cdots&c_{1n}\\
+	c_{21}&c_{22}&\cdots&c_{2n}\\
+	\vdots&\vdots& &\vdots\\
+	c_{n1}&c_{n2}&\cdots&c_{nn}
+	\end{matrix}\right],\ \mathtt{y}=\left[\begin{matrix}
+	y_{1}\\y_{2}\\\vdots\\y_{n}
+	\end{matrix} \right]$$
+	上面的线性变化可写作:  $$\mathtt{x}=C\mathtt{y}$$
+	我们把这种变换称为$x_{1},x_{2},\cdots,x_{n}$到$y_{1},y_{2},\cdots,y_{n}$的\textbf{线性变换},如果线性变换矩阵$C$可逆,$|C|\neq 0$,则称为\textbf{可逆线性变换}.
+	
+	我们有:  $$f(\mathtt{x})=\mathtt{x}^{T}A\mathtt{x},\ \mathtt{x}=C\mathtt{y}\Rightarrow f(\mathtt{x})=(C\mathtt{y})^{T}A(C\mathtt{y})=\mathtt{y}^{T}(C^{T}AC)\mathtt{y}$$
+	如果我们记$B=C^{T}AC$,我们得到$$f(\mathtt{x})=y^{T}By=g(\mathtt{y})$$
+	二次型$f(\mathtt{x})=\mathtt{x}^{T}A\mathtt{x}$通过线性变换$\mathtt{x}=C\mathtt{y}$得到了一个新二次型$g(\mathtt{y})=y^{T}By$
+\end{definition}
+\begin{definition}[矩阵合同]
+	设$A,B$为$n$阶矩阵,若存在可逆矩阵$C$,使得:  
+	$$B=C^{T}AC$$
+	则称$A,B$合同,记作$A\simeq B$,其对应的二次型$f(\mathtt{x})$与$g(\mathtt{y})$为合同二次型.
+	\begin{anymark}[注]
+		(1). $A\simeq A\quad \text{反身性}$
+		
+		(2). $A\simeq B\Rightarrow B\simeq A\quad \text{对称性}$
+		
+		(3). $A\simeq B,\ B\simeq C\Rightarrow A\simeq C\quad \text{传递性}$
+	\end{anymark}
+\end{definition}
+\begin{definition}[标准型和规范型]
+	1. 二次型中只有平方项,而没有交叉项(所有交叉项系数全为0),形如:  
+	$$d_{1}x_{1}^2+d_{2}x_{2}^2+\cdots+d_{n}x_{n}^2$$
+	的二次型为标准二次型.
+	
+	2. 在标准二次型中,如果二次型的系数$d_{i}=\{0,1,-1\}$,这样的二次型称为规范型二次型.
+	
+	3. 二次型$f(\mathtt{x})=\mathtt{x}^{T}A\mathtt{x}$合同于标准型$d_{1}x_{1}^2+d_{2}x_{2}^2+\cdots+d_{n}x_{n}^2$,则称$d_{1}x_{1}^2+d_{2}x_{2}^2+\cdots+d_{n}x_{n}^2$为二次型$f(\mathtt{x})=\mathtt{x}^{T}A\mathtt{x}$的合同标准型.
+	
+	4. 二次型$f(\mathtt{x})=\mathtt{x}^{T}A\mathtt{x}$合同于规范型$x_{1}^2+\cdots++x_{p}^2-x_{p+1}^2-x_{q}^2$,则称$x_{1}^2+\cdots++x_{p}^2-x_{p+1}^2-x_{q}^2$为二次型$f(\mathtt{x})=\mathtt{x}^{T}A\mathtt{x}$的合同规范型.
+	
+	5. 任何二次型都可以通过可逆线性变换化为标准型或者规范型,对任意实对称矩阵$A$,必存在可逆矩阵$C$,使得$C^{T}AC=\varLambda$
+	
+	6. 任何二次型都可以通过正交变换化为标准型,对任意实对称矩阵$A$,必存在正交矩阵$Q$,使得$Q^{-1}AC=Q^{T}AQ=\varLambda$
+\end{definition}
+\begin{definition}[惯性定理]
+	无论用什么样的可逆线性变换得到的二次型标准型或者规范型,标准型或者规范型中正项个数$p$,负项个数$q$都是不变的,$p$被称为正惯性指数,$q$被称为负惯性指数.
+\end{definition}
+\begin{anymark}[注]
+	(1). $\text{二次型的秩为}r,r=p+q$
+	
+	(2). 两个二次型合同的充要条件为有相同的正、负惯性指数,或者相同的秩及正(负)惯性指数
+\end{anymark}
+\section{正定二次型}
+\begin{definition}[正定矩阵]
+	$n$元二次型$f(x_{1},x_{2},\cdots,x_{n})=\mathtt{x}^{T}A\mathtt{x}$,对于任意$\mathtt{x}=[x_{1},x_{2},\cdots,x_{n}]^{T}\neq 0$,都有$\mathtt{x}^{T}A\mathtt{x}>0$,则称$f$为正定二次型,二次型对应的矩阵$A$为正定矩阵.
+	\begin{corollary}[二次型正定充要]
+		\begin{itemize}
+			\item $f\text{正定}\Leftrightarrow f\text{正惯性指数}p=n$
+			\item $f\text{正定}\Leftrightarrow \exists \text{可逆矩阵}D,\text{s.t.}\ A=D^{T}D$
+			\item $f\text{正定}\Leftrightarrow A\simeq E$
+			\item $f\text{正定}\Leftrightarrow A\text{的所有特征值}\lambda_{i}>0$
+			\item $f\text{正定}\Leftrightarrow A\text{的全部顺序主子式大于}0$
+		\end{itemize}
+	\end{corollary}
+	\begin{corollary}[二次型正定必要]
+		\begin{itemize}
+			\item $f\text{正定}\Rightarrow a_{ii}>0$
+			\item $f\text{正定}\Rightarrow |A|>0$
+		\end{itemize}
+	\end{corollary}
+\end{definition}

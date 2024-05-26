@@ -1,0 +1,460 @@
+\chapterimage{chap26.jpg}
+\chapter{April}
+\section{Week \Rmnum{1}}
+
+\section{Week \Rmnum{2}}
+
+\section{Week \Rmnum{3}}
+
+\section{Week \Rmnum{4}}
+\hl{\textbf{\textit{April 21}}}
+
+1. $ \lim\limits_{x\rightarrow +\infty}x^2(\arctan \dfrac{a}{x}-\arctan \dfrac{a}{x+1})$
+\myspace{1}
+\begin{solution}
+	
+	令 $f(x)=\arctan x$,由拉格朗日中值定理得: 
+	$$\arctan \frac{a}{x}-\arctan \frac{a}{x+1}=f'(\varepsilon)(\frac{a}{x}-\frac{a}{x+1}),\varepsilon\in (\frac{a}{x+1},\frac{a}{x})$$
+	
+	原极限等价于: 
+	$$\lim\limits_{x\rightarrow +\infty}\frac{1}{1+\varepsilon^2}\frac{ax^2}{x(x+1)}=\lim\limits_{x\rightarrow +\infty}\frac{1}{1+\varepsilon^2}\lim\limits_{x\rightarrow +\infty}\frac{ax^2}{x(x+1)}$$
+	
+	$\lim\limits_{x\rightarrow +\infty}\dfrac{a}{x+1}=0$;
+	$\lim\limits_{x\rightarrow +\infty}\dfrac{a}{x}=0$,夹逼准则得到: 
+	$\lim\limits_{x\rightarrow +\infty}\dfrac{1}{1+\varepsilon^2}=1$
+	
+	原极限:  $ \lim\limits_{x\rightarrow +\infty}x^2(\arctan \dfrac{a}{x}-\arctan \dfrac{a}{x+1})=2$
+\end{solution}
+
+\myspace{1}
+
+2. $\int_{0}^{1}dy\int_{y}^{1}\sqrt{x^2-y^2}dx$
+\myspace{1}
+\begin{solution}
+	
+	积分区域是由直线 $x=1,y=0,y=x$ 围成的一个三角形,采用极坐标方法计算二重积分: 
+	$$\theta\in[0,\dfrac{\pi}{4}],r\in[0,\dfrac{1}{\cos x}]$$
+	
+	原二重积分等价于: 
+	$$\int_{0}^{\frac{\pi}{4}}d\theta\int_{0}^{\frac{1}{\cos \theta}}r^2\sqrt{\cos^{2}\theta-\sin^{2}\theta}dr$$
+	
+	化简得到: 
+	$$\frac{1}{3}\int_{0}^{\frac{\pi}{4}}\sqrt{\cos^{2}\theta-\sin^{2}\theta}\frac{1}{\cos^{3}\theta}d\theta=\frac{1}{3}\int_{0}{\frac{\pi}{4}}\sqrt{1-\tan^{2}\theta}d\tan \theta$$
+	
+	我们有: $\int\sqrt{1-x^2}dx=\dfrac{x\sqrt{1-x^2}}{2}+\dfrac{\arcsin x}{2}+C$
+	
+	因此,原二重积分: $$\dfrac{1}{3}\int_{0}^{\frac{\pi}{4}}\sqrt{1-\tan^{2}\theta}d\tan \theta=\dfrac{1}{3}(\dfrac{\tan \theta\sqrt{1-\tan^{2}\theta}}{2}+\dfrac{\arcsin \theta}{2} )|_{0}^{\frac{\pi}{4}} =\dfrac{\pi}{12}$$
+\end{solution}
+
+\myspace{1}
+
+3. $\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}\dfrac{nx^n}{1+e^x}dx$
+\myspace{1}
+\begin{lemma}[第一积分中值定理]\label{lem: 第一积分中值定理}
+	
+	$$\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}x^nf(x)dx$$
+	
+	其中$f(x)$在$[0,1]$上连续可导,则: $\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}x^nf(x)dx=0$
+	$f(x)$在$[0,1]$上连续可导,$|f(x)|\leq M$
+	因此: 
+	$$0\leq\int_{0}^{1}x^nf(x)dx\leq\int_{0}^{1}Mx^ndx=\frac{M}{n+1}$$
+	
+	由夹逼准则得到: 
+	$$\lim\limits_{n\rightarrow +\infty}0=0\quad\quad \lim\limits_{n\rightarrow +\infty}\frac{M}{n+1}=0$$
+	$$\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}x^nf(x)dx=0$$
+	
+	利用不等式: $x>\sin x;x>\ln(1+x)$,可以将上面的式子进行一些变换
+	
+\end{lemma}
+\begin{lemma}
+	
+	$$\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}nx^nf(x)dx$$
+	
+	利用引理 \ref{lem: 第一积分中值定理},原极限可以化为: 
+	$$\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}(n+1)x^nf(x)dx=\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}f(x)dx^n=\lim\limits_{n\rightarrow+\infty}[(f(x)x^n)|_{0}^{1}-\int_{0}^{1}f'(x)x^ndx]=f(1)$$
+\end{lemma}
+\begin{solution}
+	
+	令: $f(x)=\dfrac{1}{1+e^x}$
+	
+	利用引理,我们得到: $$\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}\dfrac{nx^n}{1+e^x}dx=f(1)=\dfrac{1}{1+e}$$
+\end{solution}
+
+\myspace{1}
+
+\hl{\textbf{\textit{April 22}}}
+
+1. $\int_{0}^{1}dy\int_{y}^{1}(\dfrac{e^{x^2}}{x}-e^{y^2})dx$
+\myspace{1}
+\begin{solution}
+	
+	积分区域是由直线 $y=0,y=1,x=1$ 围成的三角形,交换积分次序,原二重积分等价于: 
+	$$\int_{0}^{1}dx\int_{0}^{x}(\dfrac{e^{x^2}}{x}-e^{y^2})dy=\int_{0}^{1}e^{x^2}dx-\int_{0}^{1}dx\int_{0}^{x}e^{y^2}dy$$
+	
+	后面的二重积分再次交换积分次序: 
+	$$\int_{0}^{1}dy\int_{y}^{1}e^{y^2}dx=\int_{0}^{1}(e^{y^2}-ye^{y^2})dy$$
+	
+	原二重积分化为: 
+	$$\int_{0}^{1}e^{x^2}dx-\int_{0}^{1}(e^{y^2}-ye^{y^2})dy=\int_{0}^{1}xe^{x^2}dx=(\frac{1}{2}e^{y^2})|_{x=0}^{x=1}=\dfrac{e-1}{2}$$
+\end{solution}
+
+\myspace{1}
+
+2. $\lim\limits_{x\rightarrow 0}\left[ \dfrac{1}{\ln(x+\sqrt{1+x^2})}-\dfrac{1}{\ln(1+x)}\right] $
+\myspace{1}
+\begin{solution}
+	
+	两个等价无穷小:  $$x\rightarrow 0,\sqrt{1+x^{2}}-1\sim \dfrac{1}{2}x^{2}, x\sim \ln(x+\sqrt{1+x^2})$$
+	
+	设 $f(x)=\ln x,f'(x)=\frac{1}{x}$
+	
+	原极限可以化为: 
+	$$\lim\limits_{x\rightarrow 0}-\frac{\ln(x+\sqrt{1+x^2})-\ln(1+x)}{\ln(x+\sqrt{1+x^2})\ln(1+x)}\stackrel{Lagrange}{\longrightarrow}\lim\limits_{x\rightarrow 0}-\frac{f'(\varphi)(\sqrt{1+x^2}-1)}{x^2}=\lim\limits_{x\rightarrow 0}-\frac{1}{2}f'(\varphi)$$
+	$$1+x<\varphi<x+\sqrt{1+x^2},\lim\limits_{x\rightarrow 0}(x+1)=\lim\limits_{x\rightarrow 0}\sqrt{1+x^2}=1\stackrel{squeeze theorem}{\longrightarrow} f'(\varphi)=1$$
+	
+	原极限: $\lim\limits_{x\rightarrow 0}\left[ \dfrac{1}{\ln(x+\sqrt{1+x^2})}-\dfrac{1}{\ln(1+x)}\right] =-\dfrac{1}{2}$
+	
+\end{solution}
+
+\myspace{1}
+
+3. $\int\dfrac{\sin x}{\sqrt{2+\sin 2x}}dx$\label{problem: 组合积分法}
+
+\myspace{1}
+\begin{solution}
+	
+	我们有: $2+\sin 2x=1+(\sin x+\cos x)^2$
+	
+	不妨设 $I=A(\sin x+\cos x),J=B(\cos x-\sin x)$ 
+	
+	$ I+J=\sin x\Rightarrow A=\dfrac{1}{2},B=-\dfrac{1}{2}$
+	
+	原不定积分化为: 
+	$$\int\frac{I+J}{\sqrt{1+(\sin x+\cos x)^2}}dx=\frac{1}{2}\left( \int\frac{\sin x+\cos x}{\sqrt{3-(\sin x-\cos x)^2}}dx-\int\frac{\cos x-\sin x}{\sqrt{1+(\sin x+\cos x)^2}}dx\right)$$
+	
+	原不定积分为: 
+	$$\dfrac{1}{2}\left[ \arcsin \frac{\sin x-\cos x}{\sqrt{3}}-\ln(\sin x+\cos x+\sqrt{1+(\sin x+\cos x)^2} )\right] +C$$
+\end{solution}
+
+\myspace{1}
+
+\hl{\textbf{\textit{April 23}}}
+
+1. 区域 $D$ 是由曲线 $y=\sin x,x=\pm\dfrac{\pi}{2},y=1$ 围成,求 $\iint\limits_{D}(xy^{5}-1)dxdy$
+
+\myspace{1}
+\begin{solution}
+	
+	$$\iint\limits_{D}(xy^{5}-1)dxdy=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}dx\int_{\sin x}^{1}(xy^5-1)dy=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\left( \dfrac{x}{6}-\dfrac{x\sin^{6}}{6}+\sin x-1\right) dx=-\pi$$
+\end{solution}
+
+\myspace{1}
+
+2. 	$\int_{\frac{1}{6}}^{+\infty}\dfrac{1}{x}\left[ \dfrac{1}{\sqrt{x}}\right]dx$
+\myspace{1}
+\begin{solution}
+	
+	$$\left\lbrace
+	\begin{array}{l}
+		\left[ \dfrac{1}{\sqrt{x}}\right]=0,x\geq 1\\
+		\left[ \dfrac{1}{\sqrt{x}}\right]=1,\dfrac{1}{4}\leq x\leq 1\\
+		\left[ \dfrac{1}{\sqrt{x}}\right]=2,\dfrac{1}{6}\leq x\leq \dfrac{1}{4}
+	\end{array}\right. $$
+	
+	原积分为: 
+	$$\int_{\frac{1}{6}}^{\frac{1}{4}}\dfrac{2}{x}dx+\int_{\frac{1}{4}}^{1}\dfrac{1}{x}dx=2\ln 3$$
+\end{solution}
+
+\myspace{1}
+
+3. 已知函数 $f(x,y)=\left\lbrace \begin{array}{l}
+	\dfrac{\sin x^2\cos y^2}{\sqrt{x^2+y^2}},(x,y)\neq (0,0)\\
+	0,(x,y)=(0,0)
+\end{array}\right. $ 求 $f'_{x}(0,0),f'_{y}(0,0)$
+\myspace{1}
+\begin{solution}
+	
+	$$\lim\limits_{\Delta x\rightarrow 0}\frac{f(\Delta x,0)}{\Delta x}=\lim\limits_{\Delta x\rightarrow 0}\frac{\sin (\Delta x)^2}{(\Delta x)^2}|\Delta x|$$
+	$$\lim\limits_{\Delta y\rightarrow 0}\frac{f(0,\Delta y)}{\Delta y}=0$$
+	
+	$f'_{x}(0,0)$ 不存在, $f'_{y}(0,0)=0$
+\end{solution}
+
+\myspace{1}
+
+\hl{\textbf{\textit{April 24}}}
+
+1. $\iint\limits_{D}x^2ydxdy$,区域 $D$ 是由曲线 $x^2-y^2=1$ 以及直线 $y=0,y=1$ 围成的平面区域的面积
+\myspace{1}
+\begin{solution}
+	
+	原二重积分等价于: 
+	$$\int_{0}^{1}dy\int_{-\sqrt{1+y^2}}^{\sqrt{1+y^2}}x^2ydx=\int_{0}^{1}\dfrac{2}{3}y(1+y^2)^{\frac{3}{2}}dy=\dfrac{8\sqrt{2}-2}{15}$$
+\end{solution}
+
+\myspace{1}
+
+2. 设 $z=e^{xy}+f(x+y,xy)$, 求 $\dfrac{\partial^2 z}{\partial x\partial y}$,其中 $f(u,v)$ 有二阶连续偏导数
+\myspace{1}
+\begin{solution}
+	
+	$$\frac{\partial z}{\partial x}=ye^{xy}+f_{1}'(x+y,xy)+yf_{2}'(x+y,xy)$$
+	$$\frac{\partial^{2} z}{\partial x\partial y}=(1+xy)e^{xy}+f_{11}'(x+y,xy)+xf_{12}''(x+y,xy)+f_{2}'(x+y,xy)+y(f_{21}''(x+y,xy)+xf_{22}''(x+y,xy))$$
+	$$\frac{\partial^{2} z}{\partial x\partial y}=(1+xy)e^{xy}+f_{11}''(x+y,xy)+xyf_{22}''(x+y,xy)+(x+y)f_{12}''(x+y,xy)+f_{2}'(x+y,xy)$$
+\end{solution}
+
+\myspace{1}
+
+3. $\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n^4}\prod\limits_{k=1}^{2n}(n^2+k^2)^{\frac{1}{n}}$
+\myspace{1}
+\begin{solution}
+	
+	原极限等价于: 
+	$$\lim\limits_{n\rightarrow +\infty}e^{\frac{1}{n}\ln(\prod\limits_{k=1}^{2n}(n^2+k^2))-4\ln n} $$
+	$$\lim\limits_{n\rightarrow +\infty}e^{\frac{1}{n}\ln(\prod\limits_{k=1}^{2n}(1+(\frac{k}{n})^2))}=e^{\int_{0}^{2}\ln(1+x^2)dx}$$
+	$$\int_{0}^{2}\ln(1+x^2)dx=x\ln(1+x^2)|_{x=0}^{x=2}-\int_{0}^{2}\dfrac{x^2}{1+x^2}dx=2\ln5 -2+\arctan 2$$
+	
+	原极限: $\lim\limits_{n\rightarrow
+		+\infty}\dfrac{1}{n^4}\prod\limits_{k=1}^{2n}(n^2+k^2)^{\frac{1}{n}}=25e^{\arctan 2-2}$
+\end{solution}
+
+\hl{\textbf{\textit{April 25}}}
+
+1. $\iint\limits_{D}\sqrt{x^2+y^2}dxdy$,其中 $D=\left\lbrace (x,y)|0\leq y\leq x,\ x^2+y^2\leq 2x \right\rbrace $
+\myspace{1}
+\begin{solution}
+	
+	采用极坐标积分方法: 
+	$$\int_{0}^{\frac{\pi}{4}}d\theta \int_{0}^{2\cos \theta}r^2dr=\frac{8}{3}\int_{0}^{\frac{\pi}{4}}\cos^3\theta d\theta=\dfrac{10\sqrt{2}}{9}$$
+\end{solution}
+
+\myspace{1}
+
+2. 设连续函数 $z=f(x,y)$ 满足$\lim\limits_{x\rightarrow 0,y\rightarrow 1}\dfrac{f(x,y)-2x+y-2}{\sqrt{x^2+(y-1)^2}}=0$,求 $dz|_{(0,1)}$
+\myspace{1}
+\begin{solution}
+	
+	$$dz|_{(0,1)}=2dx-dy$$
+\end{solution}
+
+\myspace{1}
+
+\hl{\textbf{\textit{April 26}}}
+
+1. 计算二重积分 $I=\iint\limits_{D}r^2\sin\theta\sqrt{1-r^2\cos 2\theta}drd\theta$,其中 $D=\left\lbrace(r,\theta)|0\leq r\leq \sec \theta,0\leq \theta\leq\dfrac{\pi}{4} \right\rbrace $
+\myspace{1}
+\begin{solution}
+	
+	原二重积分化为直角坐标形式: 
+	$$I=\iint\limits_{D'}y\sqrt{1+y^2-x^2}dxdy$$
+	
+	其中 $D=\left\lbrace(x,y)|0\leq x\leq 1,0\leq y\leq x \right\rbrace $
+	
+	$$I=\int_{0}^{1}dx\int_{0}^{x}y\sqrt{1+y^2-x^2}dy=\frac{1}{3}\left[ \int_{0}^{1}(1-(1-x^2)^{\frac{3}{2}})dx\right]=\frac{1}{3}-\frac{1}{3}\int_{0}^{\frac{\pi}{2}}\cos^4 \theta d\theta=\frac{1}{3}-\frac{\pi}{16} $$
+\end{solution}
+
+\myspace{1}
+
+2. $\int_{0}^{1}x^{a}(1-x)^{b}\ln xdx$
+\myspace{1}
+\begin{lemma}[特殊反常积分]\label{lem: 特殊反常积分}
+	
+	$$\int_{1}^{+\infty}\dfrac{1}{x^p}dx\left\lbrace 
+	\begin{array}{l}
+		p>1,\ \text{收敛}\\
+		p\leq 1,\ \text{发散}
+	\end{array}
+	\right. $$
+	$$\int_{0}^{1}\dfrac{1}{x^p}dx\left\lbrace 
+	\begin{array}{l}
+		0<p<1,\ \text{收敛}\\
+		p\geq 1,\ \text{发散}
+	\end{array}
+	\right. $$
+	$$\int_{0}^{1}\dfrac{\ln x}{x^p}dx\left\lbrace 
+	\begin{array}{l}
+		0<p<1,\ \text{收敛}\\
+		p\geq 1,\ \text{发散}
+	\end{array}
+	\right. $$
+\end{lemma}
+\begin{solution}
+	
+	我们发现这个题可能的瑕点为$x=0,\ x=1$
+	
+	$$x\rightarrow 1^{-},f(x)=x^a(1-x)^b\ln x\sim -(1-x)^{b+1}\Rightarrow 0<-(b+1)<1\Rightarrow -2<b<-1$$
+	$$x\rightarrow 0^{+},f(x)=x^a(1-x)^b\ln x\sim x^a\ln x=\dfrac{\ln x}{x^{-a}}\Rightarrow 0<-a<1\Rightarrow -1<a<0$$
+	
+	(1).$x=1,x=0$均为瑕点,我们得到: 
+	$$\left\lbrace 
+	\begin{array}{l}
+		-2<b<-1\\
+		-1<a<0
+	\end{array}
+	\right. $$
+	
+	(2).$x=1$是瑕点,$x=0$不是瑕点,我们有: 
+	$$\left\lbrace 
+	\begin{array}{l}
+		a>0\\-2<b<-1
+	\end{array}
+	\right. $$
+	
+	(3).$x=0$是瑕点,$x=1$不是瑕点,我们有: 
+	$$\left\lbrace 
+	\begin{array}{l}
+		-1<a<0\\b>-1
+	\end{array}
+	\right. $$
+\end{solution}
+
+\myspace{1}
+
+3. $\int\dfrac{x^2}{(x\cos x-\sin x)(x\sin x+\cos x)}dx$
+\myspace{1}
+\begin{solution}
+	
+	$$\int\frac{x(x\cos x-x\sin x)+x\sin x(x\sin x+\cos x)}{(x\cos x-\sin x)(x\sin x+\cos x)}dx=\int\frac{x\cos x}{x\sin x+\cos x}dx+\int\frac{x\sin x}{x\cos x-\sin x}dx$$
+	$$\int\frac{x\cos x}{x\sin x+\cos x}dx=\ln(x\sin x+\cos x)+C$$
+	$$\int\frac{x\sin x}{x\cos x-\sin x}dx=\ln(x\cos x+\sin x)+C$$
+	
+	原不定积分为: 
+	$$\int\frac{x^2}{(x\cos x-\sin x)(x\sin x+\cos x)}dx=\ln(x\sin x+\cos x)+\ln(x\cos x+\sin x)+C$$
+\end{solution}
+
+\myspace{1}
+
+4. $\int_{0}^{+\infty}\dfrac{e^{-x^2}}{(x^2+\frac{1}{2})^2}dx$
+\myspace{1}
+\begin{lemma}[特殊积分]\label{lem: 特殊积分}
+	
+	$$I=\int_{0}^{+\infty}e^{-x^2}dx=\frac{\sqrt{\pi}}{2}$$
+	$$I^2=\int_{0}^{+\infty}e^{-x^2}dx\int_{0}^{+\infty}e^{-y^2}dy=\iint_{D}e^{-x^2-y^2}dxdy$$
+	$$I^2=\int_{0}^{\frac{\pi}{2}}d\theta\int_{0}^{+\infty}re^{-r^2}dr=\frac{\pi}{2}(-\frac{1}{2}e^{-r^2})|_{r=0}^{r=+\infty}=\frac{\pi}{4}$$
+	$$I=\frac{\sqrt{\pi}}{2}$$
+\end{lemma}
+
+\begin{solution}
+	$$\int_{0}^{+\infty}\frac{e^{-x^2}}{(x^2+\frac{1}{2})^2}dx=\int_{0}^{+\infty}\frac{e^{-x^2}}{2x}d(\frac{4x^2}{2x^2+1})=\frac{e^{-x^2}}{2x}\frac{4x^2}{2x^2+1}|_{x=0}^{x=+\infty}-\int_{0}^{+\infty}\frac{4x^2}{2x^2+1}\frac{e^{-x^2}(-4x^2-2)}{4x^2}dx$$
+	$$\downdownarrows$$
+	$$I=\frac{2xe^{-x^2}}{2x^2+1}|_{x=0}^{x=+\infty}+2\int_{0}^{+\infty}e^{-x^2}dx$$
+	$$\lim\limits_{x\rightarrow +\infty}\frac{2xe^{-x^2}}{2x^2+1}=\frac{2e^{-x^2}}{2x+\frac{1}{x}}=0 \quad \lim\limits_{x\rightarrow 0}\frac{2xe^{-x^2}}{2x^2+1}=0$$
+	
+	因此,我们得到原定积分为: 
+	$$I=2\int_{0}^{+\infty}e^{-x^2}dx=\sqrt{\pi}$$
+\end{solution}
+
+\myspace{1}
+\hl{\textbf{\textit{April 27}}}
+
+1. $\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\dfrac{\cos^3 x}{1+\cos x-\sin x}dx$
+
+\myspace{1}
+\begin{lemma}[对称积分变换]\label{lem: 对称积分变换}
+	
+	$$\int_{-a}^{a}f(x)dx=\int_{0}^{a}(f(x)+f(-x))dx$$
+\end{lemma}
+\begin{solution}
+	
+	由引理 \ref{lem: 对称积分变换} ,我们得到 : 
+	$$f(x)=\frac{\cos^3 x}{1+\cos x-\sin x},f(-x)=\frac{\cos^3 x}{1+\cos x+\sin x}$$
+	
+	原定积分等价于: 
+	$$\int_{0}^{\frac{\pi}{2}}(\frac{\cos^3 x}{1+\cos x-\sin x}+\frac{\cos^3 x}{1+\cos x+\sin x})dx=\int_{0}^{\frac{\pi}{2}}\frac{2(1+\cos x)\cos^3x}{2\cos x(1+\cos x)}dx=\int_{0}^{\frac{\pi}{2}}\cos^2 xdx=\frac{\pi}{4}$$
+\end{solution}
+
+\myspace{1}
+
+\hl{\textbf{\textit{April 28}}}
+
+1. 已知级数 $\sum\limits_{n=1}^{\infty}(-1)^{n-1}a_{n}=2,\ \sum\limits_{n=1}^{\infty}a_{2n-1}=5$,则级数 $\sum\limits_{n=1}^{\infty}a_{n}=8$
+
+\myspace{1}
+\begin{solution}
+	
+	$$\sum\limits_{n=1}^{\infty}(-1)^{n-1}a_{n}=2,\sum\limits_{n=1}^{\infty}a_{2n-1}=5\Rightarrow \sum\limits_{n=1}^{\infty}a_{2n}=3$$
+	$$\sum\limits_{n=1}^{\infty}a_{n}=\sum\limits_{n=1}^{\infty}a_{2n}+\sum\limits_{n=1}^{\infty}a_{2n-1}=8$$
+\end{solution}
+
+\myspace{1}
+
+2. $\int_{0}^{+\infty}\dfrac{\arctan x}{x(1+\ln^2 x)}dx$
+\myspace{1}
+\begin{solution}
+	
+	令 $t=\dfrac{1}{x},x=\dfrac{1}{t},dx=-\dfrac{1}{t^2}dt$
+	
+	原反常积分等价于: 
+	$$\int_{0}^{+\infty}\frac{t\arctan \frac{1}{t}}{1+\ln^2 t}\frac{1}{t^2}dt=\int_{0}^{+\infty}\frac{\arctan \frac{1}{x}}{x(1+\ln^2 x)}dx$$
+	
+	两式相加得到: 
+	$$2I=\int_{0}^{+\infty}\frac{\frac{\pi}{2}}{x(1+\ln^2 x)}dx=\frac{\pi}{2}\arctan \ln x|_{0}^{+\infty}=\frac{\pi^2}{2}$$
+	$$I=\frac{\pi^2}{4}$$
+\end{solution}
+
+\myspace{1}
+
+3. $\int\dfrac{2x^4}{1+x^6}dx$
+\myspace{1}
+\begin{solution}
+	
+	$$\int\frac{2x^4}{1+x^6}dx=\int\frac{x^4-1}{1+x^6}dx+\int\frac{x^4+1}{1+x^6}dx=\int\frac{x^2+1}{1+x^4-x^2}dx+\int\frac{x^4-x^2+1+x^2}{1+x^6}dx$$
+	$$\int\frac{x^2-1}{1+x^4-x^2}dx=\frac{1}{2\sqrt{3}}\ln|\frac{x+\frac{1}{x}-\sqrt{3}}{x+\frac{1}{x}+\sqrt{3}}|+C$$
+	$$\int\frac{x^4-x^2+1+x^2}{1+x^6}dx=\arctan x+\frac{1}{3}\arctan x^3+C$$
+\end{solution}
+
+\myspace{1}
+
+\hl{\textbf{\textit{April 29}}}
+
+1. 级数 $\sum\limits_{n=1}^{+\infty}(-1)^n(1-\cos \frac{\alpha}{n}),\quad \alpha >0$ 绝对收敛
+
+\myspace{1}
+\begin{solution}
+	
+	$$n\rightarrow +\infty,1-\cos \frac{\alpha}{n}\sim \frac{\alpha^2}{2n^2}$$
+	
+	原级数和 $\sum\limits_{n=1}^{+\infty}(-1)^n\dfrac{\alpha^2}{2n^2}$ 同敛散性,后者绝对收敛.
+\end{solution}
+
+\myspace{1}
+
+\hl{\textbf{\textit{April 30}}}
+
+1. 设 $u_{n}=(-1)^{n}\ln(1+\dfrac{1}{\sqrt{n}})$,判断级数 $\sum\limits_{n=1}^{+\infty}u_{n}$和级数$\sum\limits_{n=1}^{+\infty}u^{2}_{n}$ 的敛散性
+\myspace{1}
+\begin{solution}
+	
+	比较判别法的极限形式: 
+	$$\lim\limits_{n\rightarrow +\infty}\frac{\ln(1+\frac{1}{\sqrt{n}})}{\frac{1}{\sqrt{n}}}=1$$
+	
+	级数 $\sum\limits_{n=1}^{+\infty}\ln(1+\dfrac{1}{\sqrt{n}})$和级数 $\sum\limits_{n=1}^{+\infty}\dfrac{1}{\sqrt{n}}$同敛散性.
+	
+	判断交错级数 $u_{n}$ 敛散性,我们有: $\ln(1+\dfrac{1}{\sqrt{n}})$ 单调递减,且 $\lim\limits_{n\rightarrow+\infty}\ln(1+\dfrac{1}{\sqrt{n}})=0$
+	
+	我们有级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛,级数 $\sum\limits_{n=1}^{+\infty}|u_{n}|$ 发散,级数 $\sum\limits_{n=1}^{+\infty}u_{n}$条件收敛.
+	
+	比较判别法的极限形式: 
+	$$\lim\limits_{n\rightarrow +\infty}\frac{\ln^{2}(1+\frac{1}{\sqrt{n}})}{\frac{1}{n}}=1$$
+	
+	级数$\sum\limits_{n=1}^{+\infty}u^{2}_{n}$ 发散.
+\end{solution}
+
+\myspace{1}
+
+2. 已知 $y^{2}(x-y)=x^2$,求 $\int\dfrac{1}{y^2}dx$ \label{problem: 隐函数转为参数方程}
+\myspace{1}
+\begin{solution}
+	
+	隐函数转为参数方程
+	
+	令 $\dfrac{y}{x}=t$,我们有 $xt^2(1-t)=1$,我们得到参数方程: 
+	$$\left\lbrace\begin{array}{l}
+		x=\dfrac{1}{t^2(1-t)}\\y=\dfrac{1}{t(1-t)}
+	\end{array} \right. $$
+	
+	原不定积分:  
+	$$ \int t^2(t-1)^2\frac{t(3t-2)}{t^4(1-t)^2}dt=\int(3-\frac{2}{t})dt=3t-2\ln t+C$$
+\end{solution}
+
+\myspace{1}

@@ -1,0 +1,42 @@
+\documentclass[lang=cn,12pt,math=newtx,thmcnt=section,chinesefont=founder]{vavidbook}
+% 环境设置
+\input{config/config}
+
+\begin{document}
+	% 封面
+	\maketitle
+	% 目录
+	\chapterimage{目录.jpg}
+	\tableofcontents
+	\mainmatter
+	
+	\partsimage{part.png}
+	\part{高数(上)}
+	\input{chap/Single Variable Calculus.tex}
+	\partsimage{part.png}
+	\part{高数(下)}
+	\input{chap/Multivariable Calculus.tex}
+	\partsimage{part.png}
+	\part{线代}
+	\input{chap/Linear Algebra.tex}
+	\partsimage{part.png}
+	\part{概率论}
+	\input{chap/Probability Theory.tex}
+	\partsimage{part.png}
+	\part{每日一题\Rmnum{1}}
+	\input{chap/Daily/January.tex}
+	\input{chap/Daily/February.tex}
+	\input{chap/Daily/March.tex}
+	\input{chap/Daily/April.tex}
+	\input{chap/Daily/May.tex}
+	\input{chap/Daily/June.tex}
+	\partsimage{part.png}
+	\part{每日一题\Rmnum{2}}
+	\input{chap/Daily/July.tex}
+	\input{chap/Daily/August.tex}
+	\input{chap/Daily/September.tex}
+	\input{chap/Daily/October.tex}
+	\input{chap/Daily/November.tex}
+	\input{chap/Daily/December.tex}
+    \input{chap/Summary.tex}
+\end{document}
