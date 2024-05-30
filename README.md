@@ -9,7 +9,8 @@
 ├── .git
 ├── chap
 ├── config
-├── fogure
+├── figure
+├── mindmap
 ├── .gitignore
 ├── main.pdf
 ├── main.synctex.gz
@@ -21,6 +22,7 @@
 > 2. `chap` 是内容文件夹, `figure` 是图片文件夹
 > 3. `main.pdf` 是编译好的 `pdf` 文件
 > 4. `chap` 内部包含各个章节的内容, 在 `main.tex` 内采用 `input{../xx.tex}` 联合编译
+> 5. `mindmap` 是思维导图, 是 `md` 文件, 使用 `VSCode` 插件 `MarkMap` 即可查看, 转为 `html` 可在浏览器查看思维导图
 
 ## 编译环境
 1. 使用 `texlive 2023` 编译, 请确保安装了 `texlive` 环境
