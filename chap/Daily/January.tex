@@ -7,35 +7,103 @@
 1. 已知 $f(x+1)$ 的定义域为$[0,a]$,($a>0$),求 $f(x)$ 定义域
 \myspace{1}
 \begin{solution}
+	
 	$f(x+1)$ 的定义域为$[0,a]$,则 $f(x)$ 的定义域为$[-1,a-1]$
 \end{solution}
+\myspace{1}
+
 2. 已知 $f(x)=e^{x^{2}},f[\varphi(x)]=1-x$ 且 $\varphi(x)\geq 0$,求 $\varphi(x)$ 并求出定义域
 \myspace{1}
-
-3. 设 $g(x)=\left\lbrace
-\begin{aligned}
-	2-x,x\leq 0\\ x+2,x>0
-\end{aligned}
-\right. $,$f(x)=\left\lbrace
-\begin{aligned}
-	 x^{2},x< 0\\ -x,x\geq 0
-\end{aligned}
-\right.$,求 $g[f(x)]$
+\begin{solution}
+	
+	由题意得: $f[\varphi(x)]=1-x\Rightarrow e^{\varphi^{2}(x)}=1-x$, 因此: $\varphi(x)=\sqrt{\ln (1-x)}, x\ge 1$
+\end{solution}
 \myspace{1}
 
-4. 设函数 $f(x)=\left\lbrace
-\begin{aligned}
+3. 设 
+	$$g(x)=
+	\begin{cases}
+		2-x,x\leq 0\\ x+2,x>0
+	\end{cases}$$,$$f(x)=
+	\begin{cases}
+		x^{2},x< 0\\ -x,x\geq 0
+	\end{cases}
+	$$
+求 $g[f(x)]$
+\myspace{1}
+\begin{solution}
+
+	由题意得:
+	$$
+	g[f(x)] = 
+	\begin{cases}
+		2+x^{2}, & x<0\\
+		x+2, & x\geq 0
+	\end{cases}
+	$$
+\end{solution}
+\myspace{1}
+
+4. 设函数 $$f(x)=
+\begin{cases}
 	1-2x^{2},x<-1\\
 	x^{3},-1\leq x\leq 2\\
 	12x-16,x>2
-\end{aligned}
-\right. $,求 $f(x)$ 的反函数 $g(x)$ 的表达式
+\end{cases}
+$$
+求 $f(x)$ 的反函数 $g(x)$ 的表达式
+\myspace{1}
+\begin{solution}
+	$$
+	g(x) = 
+	\begin{cases}
+		-\sqrt{\frac{1-x}{2}}, & x\in(-\infty,-1)\\
+		\sqrt[3]{x}, & x\in[-1,8]\\
+		\frac{x+16}{12}, & x\in(8,+\infty)
+	\end{cases}
+	$$
+\end{solution}
 \myspace{1}
 
 5. 证明:定义在 $[-a,a]$ 上的任意一个函数 $f(x)$ 都可以表示为一个奇函数和一个偶函数之和
 \myspace{1}
+\begin{solution}
+
+	令 $g(x)= \dfrac{f(x)+f(-x)}{2},\quad h(x)=\dfrac{f(x)-f(-x)}{2}$, 我们有:
+	$$
+	\begin{cases}
+		g(-x)=\dfrac{f(-x)+f(x)}{2}=\dfrac{f(x)+f(-x)}{2}=g(x)\\
+		h(-x)=\dfrac{f(-x)-f(x)}{2}=\dfrac{f(x)-f(-x)}{2}=-h(x)\\
+		f(x) = g(x)+h(x)
+	\end{cases}
+	$$
+	
+	其中 $g(x)$ 是偶函数, $h(x)$ 是奇函数
+\end{solution}
+\myspace{1}
 
 6. 判断函数 $f(x)=x\tan x\cdot e^{\sin x}$的奇偶性、单调性、周期性和有界性
+\myspace{1}
+\begin{solution}
+
+	$f(x)$ 定义域为 $(-\frac{\pi}{2}+k\pi,\frac{\pi}{2}+k\pi),k\in \mathbb{Z}$, 关于原点对称
+	
+	(1). 奇偶性: $f(-x) = x\tan x\cdot e^{-\sin x}\neq -f(x),\quad f(-x)\neq f(x)$
+
+	$f(x)$ 是非奇非偶函数
+
+	(2). 单调性: $f'(x) = \tan x\cdot e^{\sin x}+x\sec^{2}x\cdot e^{\sin x}+x\tan x\cos x\cdot e^{\sin x}=e^{\sin x}\left[\tan x+x\sin x+x\sec^{2}x\right]$
+
+	$f(x)$ 不是单调函数
+
+	(3). 有界性: $x\in(-\frac{\pi}{2},\frac{\pi}{2})$ 时, $f(x) > \frac{x\tan x}{e}$, 函数 $g(x)=\frac{x\tan x}{e}$ 为无界函数
+
+	$f(x)$ 是无界函数
+
+	(4). 周期性: $f(x+2\pi) = (x+2\pi)\tan(x+2\pi)\cdot e^{\sin(x+2\pi)} = (x+2\pi)\tan x\cdot e^{\sin x} \neq f(x)$
+
+	$f(x)$ 不是周期函数
+\end{solution}
 \myspace{1}
 
 7. 函数 $f(x)=\dfrac{|x|\sin(x-2)}{x(x-1)(x-2)^{2}}$ 在下列哪个区间内有界
@@ -47,25 +115,109 @@
 	\item D. $(2,3)$
 \end{itemize}
 \myspace{1}
+\begin{solution}
+
+	(1). $x\to 0^{-}, f(x)\to -\frac{\sin 2}{4}, x\to 0^{+}, f(x)\to \frac{\sin 2}{4}$
+
+	(2). $x\to 1^{-}, f(x)\to +\infty, x\to 1^{+}, f(x)\to -\infty$
+
+	(3). $x\to 2^{-}, f(x)\to -\infty, x\to 2^{+}, f(x)\to \infty$
+
+	$f(x)$ 在区间 $(-1,0)$ 有界
+\end{solution}
+\myspace{1}
 
 8. 求$\lim\limits_{n\to\infty}\left[\sqrt{1+2+\cdots+n}-\sqrt{1+2+\cdots+(n-1)}\right]$
+\myspace{1}
+\begin{solution}
+
+	原极限等价于: 
+	\begin{align*}
+		I = & \lim\limits_{n\to\infty}\left[\sqrt{1+2+\cdots+n}-\sqrt{1+2+\cdots+(n-1)}\right]\\
+		= & \lim\limits_{n\to\infty}\left[\sqrt{\dfrac{n(n+1)}{2}}-\sqrt{\dfrac{(n-1)n}{2}}\right]\\
+		= & \lim\limits_{n\to\infty}\dfrac{\left[\dfrac{n(n+1)}{2}-\dfrac{n(n-1)}{2}\right]}{\sqrt{\dfrac{n(n+1)}{2}}+\sqrt{\dfrac{(n-1)n}{2}}}\\
+		= & \lim\limits_{n\to\infty}\dfrac{n}{\sqrt{2}n}\\
+		= & \dfrac{1}{\sqrt{2}} 
+	\end{align*}
+\end{solution}
 \myspace{1}
 
 9. 求极限 $\lim\limits_{x\to-\infty}\dfrac{\sqrt{4x^{2}+x-1}+x+1}{\sqrt{x^{2}+\sin x}}$
 \myspace{1}
+\begin{solution}
+
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to-\infty}\dfrac{\sqrt{4x^{2}+x-1}+x+1}{\sqrt{x^{2}+\sin x}}\\
+		= & \lim\limits_{x\to-\infty}\dfrac{\sqrt{x^{2}(4+\dfrac{1}{x}-\dfrac{1}{x^{2}})}+x(1+\dfrac{1}{x})}{\sqrt{x^{2}(1+\dfrac{\sin x}{x^{2}})}}\\
+		= & \lim\limits_{x\to-\infty}\dfrac{\sqrt{4+\dfrac{1}{x}-\dfrac{1}{x^{2}}}-(1+\dfrac{1}{x})}{\sqrt{1+\dfrac{\sin x}{x^{2}}}}\\
+		= & 1
+	\end{align*}
+\end{solution}
+\myspace{1}
 
 10. 求极限 $\lim\limits_{x\to 0}\left(\dfrac{2+e^{\frac{1}{x}}}{1+e^{\frac{4}{x}}}+\dfrac{\sin x}{|x|}\right)$
 \myspace{1}
+\begin{solution}
 
+	原极限等价于:
+	\begin{align*}
+		I^{+} = & \lim\limits_{x\to 0^{+}}\left(\dfrac{2+e^{\frac{1}{x}}}{1+e^{\frac{4}{x}}}+\dfrac{\sin x}{|x|}\right)\\
+		      = & \lim\limits_{x\to 0^{+}}\dfrac{2+e^{\frac{1}{x}}}{1+e^{\frac{4}{x}}}+\lim\limits_{x\to 0^{+}}\dfrac{\sin x}{x}\\
+			  = & 0+1 = 1\\
+		I^{-} = & \lim\limits_{x\to 0^{-}}\left(\dfrac{2+e^{\frac{1}{x}}}{1+e^{\frac{4}{x}}}+\dfrac{\sin x}{|x|}\right)\\
+			  = & \lim\limits_{x\to 0^{-}}\dfrac{2+e^{\frac{1}{x}}}{1+e^{\frac{4}{x}}}-\lim\limits_{x\to 0^{-}}\dfrac{\sin x}{x}\\
+			  = & 2-1 = 1\\
+	\end{align*}
+	综上所述, 原极限 $I =1$
+\end{solution}
+\myspace{1}
 \hl{\textbf{\textit{January 2}}}
 
 1. 求极限 $\lim\limits_{x\to+\infty}(\sqrt{x^{2}+x}-\sqrt{x^{2}-x})$
 \myspace{1}
+\begin{solution}
+
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to+\infty}(\sqrt{x^{2}+x}-\sqrt{x^{2}-x})\\
+		  = & \lim\limits_{x\to+\infty}\dfrac{(\sqrt{x^{2}+x}-\sqrt{x^{2}-x})(\sqrt{x^{2}+x}+\sqrt{x^{2}-x})}{\sqrt{x^{2}+x}+\sqrt{x^{2}-x}}\\
+		  = & \lim\limits_{x\to+\infty}\dfrac{x^{2}+x-(x^{2}-x)}{\sqrt{x^{2}+x}+\sqrt{x^{2}-x}}\\
+		  = & \lim\limits_{x\to+\infty}\dfrac{2x}{\sqrt{x^{2}+x}+\sqrt{x^{2}-x}}\\
+		  = & \lim\limits_{x\to+\infty}\dfrac{2}{\sqrt{1+\dfrac{1}{x}}+\sqrt{1-\dfrac{1}{x}}}\\
+		  = & 1
+	\end{align*}
+\end{solution}
+\myspace{1}
 
 2. 求极限 $\lim\limits_{x\to 0}\dfrac{\sqrt{1+\tan x}-\sqrt{1+\sin x}}{x(1-\cos x)}$
 \myspace{1}
+\begin{solution}
+
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to 0}\dfrac{\sqrt{1+\tan x}-\sqrt{1+\sin x}}{x(1-\cos x)}\\
+		  = & \lim\limits_{x\to 0}\dfrac{\sqrt{1+\tan x}-\sqrt{1+\sin x}}{x(1-\cos x)}\cdot \dfrac{\sqrt{1+\tan x}+\sqrt{1+\sin x}}{\sqrt{1+\tan x}+\sqrt{1+\sin x}}\\
+		  = & \lim\limits_{x\to 0}\dfrac{1+\tan x-1-\sin x}{x(1-\cos x)(\sqrt{1+\tan x}+\sqrt{1+\sin x})}\\
+		  = & \lim\limits_{x\to 0}\dfrac{\tan x-\sin x}{x(1-\cos x)(\sqrt{1+\tan x}+\sqrt{1+\sin x})}\\
+		  = & \lim\limits_{x\to 0}\dfrac{\frac{1}{2}x^{3}}{\frac{1}{2}x^{3}(\sqrt{1+\tan x}+\sqrt{1+\sin x})}\\
+		  = & \frac{1}{2}
+	\end{align*}
+\end{solution}
+\myspace{1}
 
 3. 已知 $\lim\limits_{x\to 0}\dfrac{e^{x^{2}}-\cos 2x}{ax^{b}}=1$,求 $a,b$
+\myspace{1}
+\begin{solution}
+	利用泰勒展开式:
+	\begin{align*}
+		I = & \lim\limits_{x\to 0}\dfrac{e^{x^{2}}-\cos 2x}{ax^{b}}\\
+		  = & \lim\limits_{x\to 0}\dfrac{1+x^{2}+\dfrac{x^{4}}{2}-1+\dfrac{4x^{2}}{2!}-\dfrac{8x^{4}}{4!}}{ax^{b}}\\
+		  = & \lim\limits_{x\to 0}\dfrac{3x^{2}-\dfrac{x^{4}}{6}}{ax^{b}}\\
+		  = & \lim\limits_{x\to 0}\dfrac{3}{a} = 1
+	\end{align*}
+	因此我们有: $a = 3, b = 2$
+\end{solution}
 \myspace{1}
 
 4. 已知 $\lim\limits_{x\to x_{0}}\varphi(x)=0$,下列结论正确的个数为
@@ -76,88 +228,354 @@
 	\item D. 若$\lim\limits_{u\to 0}f(u)=A$,则 $\lim\limits_{x\to x_{0}}f[\varphi(x)]=A$
 \end{itemize}
 \myspace{1}
+\begin{solution}
+
+	正确的个数: $0$, 令 $\varphi(x) = 0,x\in \mathring{U}(x_{0},\delta)$, $A,B,C,D$ 四个选项均不正确
+\end{solution}
+\myspace{1}
 
 5. 求极限 $\lim\limits_{x\to 0}\dfrac{\arcsin x-\arctan x}{\sin x-\tan x}$
+\myspace{1}
+\begin{solution}
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to 0}\dfrac{\arcsin x-\arctan x}{\sin x-\tan x}\\
+		  = & \lim\limits_{x\to 0}\dfrac{\frac{1}{2}x^{3}}{-\frac{1}{2}x^{3}}\\
+		  = & -1 
+	\end{align*}
+\end{solution}
 \myspace{1}
 
 6. 求极限 $\lim\limits_{x\to 0}\dfrac{\ln\frac{x}{\ln(1+x)}}{x}$
 \myspace{1}
+\begin{solution}
+
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to 0}\dfrac{\ln\frac{x}{\ln(1+x)}}{x}\\
+		  = & \lim\limits_{x\to 0}\dfrac{x-\ln(1+x)}{x\ln (1+x)}\\
+		  = & \lim\limits_{x\to 0}\dfrac{\frac{1}{2}x^{2}}{x^{2}}\\
+		  = & \dfrac{1}{2}
+	\end{align*}
+\end{solution}
+\myspace{1}
 
 7. 求极限 $\lim\limits_{x\to +\infty}\dfrac{e^{x}}{(1+\frac{1}{x})^{x^{2}}}$
+\myspace{1}
+\begin{solution}
+	
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to +\infty}\dfrac{e^{x}}{(1+\frac{1}{x})^{x^{2}}}\\
+		  = & \lim\limits_{x\to +\infty}\dfrac{e^{x}}{e^{x^{2}\ln(1+\frac{1}{x})}}\\
+		  = & \lim\limits_{x\to +\infty}e^{x-x^{2}\ln(1+\frac{1}{x})}\\
+		  = & \lim\limits_{x\to +\infty}e^{x-x^{2}(\frac{1}{x}-\frac{1}{2x^{2}})}\\
+		  = & \lim\limits_{x\to +\infty}e^{\frac{1}{2}}\\
+		  = & e^{\frac{1}{2}}
+	\end{align*}
+\end{solution}
 \myspace{1}
 
 8. 求极限 $\lim\limits_{x\to 0}\dfrac{\cos x-\cos(\sin x)}{x^{4}}$
 \myspace{1}
+\begin{solution}
+	
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to 0}\dfrac{\cos x-\cos(\sin x)}{x^{4}} (\text{Lagrange's Mean Value Theorem})\\
+		  = & \lim\limits_{x\to 0}\dfrac{-\sin \xi(x-\sin x)}{x^{4}}, \xi\in (\sin x\sim x)\\
+		  = & \lim\limits_{x\to 0}\dfrac{-\sin \xi}{6x}\\
+		  = & -\frac{1}{6}
+	\end{align*}
+
+	我们由夹逼定理: $\sin \xi \in (\sin x\sim x)\to \lim\limits_{x\to 0}\dfrac{\sin x}{x} = \lim\limits_{x\to 0}\dfrac{x}{x}=1\Rightarrow \lim\limits_{x\to 0}\dfrac{\sin \xi}{x} = 1$
+
+\end{solution}
+\myspace{1}
 
 9. 求极限 $\lim\limits_{x\to +\infty}x^{2}[\arctan(x+1)-\arctan x]$
 \myspace{1}
+\begin{solution}
+	
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to +\infty}x^{2}[\arctan(x+1)-\arctan x](\text{Lagrange's Mean Value Theorem})\\
+		  = & \lim\limits_{x\to +\infty}x^{2}\dfrac{1}{1+\xi^{2}},\xi\in(x,x+1)\\
+		  = & 1
+	\end{align*}
+
+	我们由夹逼定理: $\xi\in (x, x+1)\to \lim\limits_{x\to +\infty}\frac{x^{2}}{1+(x^{2})} = \lim\limits_{x\to +\infty}\frac{x^{2}}{1+(x+1)^{2}}=1\Rightarrow \lim\limits_{x\to +\infty}\frac{x^{2}}{1+\xi^{2}} = 1$
+\end{solution}
+\myspace{1}
 
 10. 求极限 $\lim\limits_{n\to \infty}n^{2}[\arctan\dfrac{a}{n}-\arctan \dfrac{a}{n+1}]$
+\myspace{1}
+\begin{solution}
+	
+	由归结原理,原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to \infty}x^{2}[\arctan\dfrac{a}{x}-\arctan \dfrac{a}{x+1}](\text{Lagrange's Mean Value Theorem})\\
+		  = & \lim\limits_{x\to \infty}\dfrac{ax^{2}}{x(x+1)}\dfrac{1}{1+\xi^{2}},\xi\in(\dfrac{a}{x},\dfrac{a}{x+1})\\
+		  = & a
+	\end{align*}
+
+	我们由夹逼定理: $\xi\in (\dfrac{a}{x},\dfrac{a}{x+1})\to \lim\limits_{x\to \infty}\dfrac{a}{x} = \lim\limits_{x\to \infty}\dfrac{a}{x+1}=0\Rightarrow \lim\limits_{x\to \infty}\xi = 0$
+\end{solution}
 \myspace{1}
 
 \hl{\textbf{\textit{January 3}}}
 
 1. 求极限 $\lim\limits_{x\to +\infty}[\sin\sqrt{x+1}-\sin\sqrt{x}]$
 \myspace{1}
+\begin{solution}
+	
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to +\infty}[\sin\sqrt{x+1}-\sin\sqrt{x}](\text{Lagrange's Mean Value Theorem})\\
+		  = & \lim\limits_{x\to +\infty}\cos \xi(\sqrt{x+1}-\sqrt{x}),\xi\in(\sqrt{x},\sqrt{x+1})\\
+		  = & \lim\limits_{x\to +\infty}\cos \xi(\dfrac{1}{\sqrt{x+1}+\sqrt{x}})\\
+		  = & 0
+	\end{align*}
+\end{solution}
+\myspace{1}
 
 2. 求极限 $\lim\limits_{x\to 0}[\dfrac{1}{\ln(1+x^{2})}-\dfrac{1}{\ln(1+\tan^{2}x)}]$
 \myspace{1}
+\begin{solution}
+	
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to 0}[\dfrac{1}{\ln(1+x^{2})}-\dfrac{1}{\ln(1+\tan^{2}x)}]\\
+		  = & \lim\limits_{x\to 0}[\dfrac{\ln(1+\tan^{2}x)-\ln(1+x^{2})}{\ln(1+x^{2})\ln(1+\tan^{2}x)}] (\text{Lagrange's Mean Value Theorem})\\
+		  = & \lim\limits_{x\to 0}[\dfrac{(\tan x+x)(\tan x-x)}{x^{4}\xi}], \xi\in(1+x^{2},1+\tan^{2}x)\\
+		  = & \lim\limits_{x\to 0}[\dfrac{2x\cdot \frac{x^{3}}{3}}{x^{4}}]\\
+		  = & \dfrac{2}{3}
+	\end{align*}
 
-3. 求极限 $\lim\limits_{x\to 0}[\dfrac{1}{\ln(1+x^{2})}-\dfrac{1}{\ln(1+\sin^{2}x)}]$
+	我们由夹逼定理: $\xi\in(1+x^{2},1+\tan^{2}x)\to \lim\limits_{x\to 0}(1+x^{2}) = \lim\limits_{x\to 0} (1+\tan^{2}x) = 1\Rightarrow \lim\limits_{x\to 0}\xi = 1$
+\end{solution}
+\myspace{1}
+
+3. 求极限 $\lim\limits_{x\to 0}[\dfrac{1}{\ln(1+x^{2})}-\dfrac{1}{\sin^{2}x}]$
+\myspace{1}
+\begin{solution}
+
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to 0}[\dfrac{1}{\ln(1+x^{2})}-\dfrac{1}{\sin^{2}x}]\\
+		  = & \lim\limits_{x\to 0}[\dfrac{\sin^{2}x-\ln(1+x^{2})}{\ln(1+x^{2})\sin^{2}x}]\\
+		  = & \lim\limits_{x\to 0}[\dfrac{\sin^{2}x-x^{2}+x^{2}-\ln(1+x^{2})}{x^{4}}]\\
+		  = & \lim\limits_{x\to 0}[\dfrac{\sin^{2}x-x^{2}}{x^{4}}]+\lim\limits_{x\to 0}[\dfrac{x^{2}-\ln(1+x^{2})}{x^{4}}]\\
+		  = & \lim\limits_{x\to 0}[\dfrac{(\sin x+x)(\sin x-x)}{x^{4}}]+\lim\limits_{x\to 0}[\dfrac{\frac{1}{2}x^{4}}{x^{4}}]\\
+		  = & \dfrac{1}{2}+\lim\limits_{x\to 0}[\dfrac{-2x\cdot\frac{1}{6}x^{3}}{x^{4}}]\\ 
+		  = & \dfrac{1}{6}
+	\end{align*}
+	
+	我们由夹逼定理: $\xi\in(1+\sin^{2}x,1+x^{2})\to \lim\limits_{x\to 0}(1+\sin^{2}x) = \lim\limits_{x\to 0} (1+x^{2}) = 1\Rightarrow \lim\limits_{x\to 0}\xi = 1$
+\end{solution}
 \myspace{1}
 
 4. 求极限 $\lim\limits_{x\to 0}(x+2^{x})^{\frac{2}{x}}$
 \myspace{1}
+\begin{solution}
+	
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to 0}(x+2^{x})^{\frac{2}{x}}\\
+		  = & \lim\limits_{x\to 0}e^{\dfrac{2\ln(x+2^{x})}{x}}\\
+		  = & e^{\lim\limits_{x\to 0}\dfrac{2\ln(x+2^{x})}{x}}\\
+		  = & e^{\lim\limits_{x\to 0}\dfrac{2(x+2^{x}-1)}{x}}\\
+		  = & e^{\lim\limits_{x\to 0}\dfrac{2x}{x}+\lim\limits_{x\to 0}\dfrac{2\ln 2x}{x}}\\
+		  = & e^{2+2\ln 2}\\
+		  = & 4e^{2}
+	\end{align*}
+\end{solution}
+\myspace{1}
 
-5. 若 $\lim\limits_{x\to 0}\left(\dfrac{1-\tan x}{1+\tan x}^{\frac{1}{\sin kx}} \right)=e$,求 $k$
+5. 若 $\lim\limits_{x\to 0}\left(\dfrac{1-\tan x}{1+\tan x}\right)^{\frac{1}{\sin kx}}=e$,求 $k$
+\myspace{1}
+\begin{solution}
+	
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to 0}\left(\dfrac{1-\tan x}{1+\tan x} \right)^{\frac{1}{\sin kx}} \\
+		  = & \lim\limits_{x\to 0}e^{\frac{1}{\sin kx}\ln\frac{1-\tan x}{1+\tan x}}\\
+		  = & e^{\lim\limits_{x\to 0}\frac{1}{\sin kx}\ln(1-\frac{2\tan x}{1+\tan x})}\\
+		  = & e^{\lim\limits_{x\to 0}-\frac{2\tan x}{(1+\tan x)sin kx}}\\
+		  = & e^{\lim\limits_{x\to 0}-\frac{2x}{kx}}\\
+		  = & e^{-\frac{2}{k}} = e
+	\end{align*}
+
+	综上所述, $k = -2$
+\end{solution}
 \myspace{1}
 
 6.  若 $\lim\limits_{x\to 0}(e^{x}+ax^{2}+bx)^{\frac{1}{x^{2}}}=1$,求 $a,b$
 \myspace{1}
+\begin{solution}
+	
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to 0}(e^{x}+ax^{2}+bx)^{\frac{1}{x^{2}}}\\
+		  = & \lim\limits_{x\to 0}e^{\frac{1}{x^{2}}\ln(e^{x}+ax^{2}+bx)}\\
+		  = & e^{\lim\limits_{x\to 0}\frac{e^{x}+ax^{2}+bx-1}{x^{2}}}\quad (\text{Taylor's Formula})\\
+		  = & e^{\lim\limits_{x\to 0}\frac{(a+\frac{1}{2})x^{2}+(b+1)x+o(x^{2})}{x^{2}}}\\
+		  = & 1
+	\end{align*}
+
+	综上所述, $a = -\dfrac{1}{2}, b = -1$
+\end{solution}
+\myspace{1}
 
 7. 求极限 $\lim\limits_{x\to 0}\left(\dfrac{\arctan x}{x}\right)^{\frac{1}{1-\cos x}}$
+\myspace{1}
+\begin{solution}
+	
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to 0}\left(\dfrac{\arctan x}{x}\right)^{\frac{1}{1-\cos x}}\\
+		  = & \lim\limits_{x\to 0}e^{\frac{1}{1-\cos x}\ln\frac{\arctan x}{x}}\\
+		  = & e^{\lim\limits_{x\to 0}\frac{1}{1-\cos x}\ln\frac{\arctan x}{x}}\\
+		  = & e^{\lim\limits_{x\to 0}\frac{1}{1-\cos x}\ln(1+\frac{\arctan x-x}{x})}\\
+		  = & e^{\lim\limits_{x\to 0}\frac{1}{1-\cos x}\frac{\arctan x-x}{x}}\\
+		  = & e^{\lim\limits_{x\to 0}-\frac{2x^{3}}{3x^{3}}}\\
+		  = & e^{-\frac{2}{3}}
+	\end{align*}
+\end{solution}
 \myspace{1}
 
 8. 求极限 $\lim\limits_{n\to \infty}(n\tan\frac{1}{n})^{n^{2}}$
 \myspace{1}
+\begin{solution}
+	
+	由归结原理,原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to \infty}(x\tan\frac{1}{x})^{x^{2}}\\
+		  = & \lim\limits_{x\to \infty}e^{x^{2}\ln(x\tan\frac{1}{x})}\\
+		  = & e^{\lim\limits_{x\to \infty}x^{2}\ln(x\tan\frac{1}{x})}\\
+		  = & e^{\lim\limits_{t\to 0}\frac{\ln(\frac{\tan t}{t})}{t^{2}}}\\
+		  = & e^{\lim\limits_{t\to 0}\frac{2\tan t}{(1-\tan t)t}}\\
+		  = & e^{2}
+	\end{align*}
+\end{solution}
+\myspace{1}
 
 9. 求极限 $\lim\limits_{n\to \infty}\tan^{n}\left( \dfrac{\pi}{4}+\dfrac{1}{n}\right)$
 \myspace{1}
+\begin{solution}
+	
+	由归结原理,原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to \infty}e^{x\ln(\tan(\frac{\pi}{4}+\frac{1}{x}))}\\
+		  = & \lim\limits_{x\to \infty}e^{x\ln(\frac{1+\tan(\frac{1}{x})}{1-\tan(\frac{1}{x})})}\\
+		  = & \lim\limits_{t\to 0}e^{\frac{1+\tan t}{t(1-\tan t)}}\\
+		  = & e^{2}
+	\end{align*}
+\end{solution}
+\myspace{1}
 
 10. 求极限 $\lim\limits_{x\to 0}\left( \dfrac{\ln(1+x)}{x}\right)^{\frac{1}{e^{x}-1}}$
+\myspace{1}
+\begin{solution}
+	
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to 0}e^{\dfrac{\ln(1+x)-x}{x(e^{x}-1)}}\\
+		  = & e^{\lim\limits_{x\to 0}\dfrac{\ln(1+x)-x}{x^{2}}}\\
+		  = & e^{\frac{1}{2}}
+	\end{align*}
+\end{solution}
 \myspace{1}
 
 \hl{\textbf{\textit{January 4}}}
 
 1. 求极限 $\lim\limits_{x\to 0}\left( \dfrac{(1+x)^{\frac{1}{x}}}{e}\right)^{\frac{1}{x}}$
 \myspace{1}
+\begin{solution}
+
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to 0}e^{\dfrac{\ln(1+x)-x}{x^{2}}}\\
+		  = & e^{\frac{1}{2}}
+	\end{align*}
+\end{solution}
+\myspace{1}
 
 2. 求极限 $\lim\limits_{x\to 0}(\cos 2x+2x\sin x)^{\frac{1}{x^{4}}}$
+\myspace{1}
+\begin{solution}
+
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to 0}e^{\dfrac{2x\sin x+\cos 2x-1}{x^{4}}}\quad (\text{Taylor's Formula})\\
+		  = & e^{\lim\limits_{x\to 0}\dfrac{2x(x-\frac{x^{3}}{6})-2x^{2}+\frac{2}{3}x^{4}}{x^{4}}}\\
+		  = & e^{\frac{1}{3}}
+	\end{align*}
+\end{solution}
 \myspace{1}
 
 3. 求极限 $\lim\limits_{x\to \frac{\pi}{4}}\left( \tan x\right) ^{\frac{1}{\cos x-\sin x}}$
 \myspace{1}
+\begin{solution}
+
+	原极限等价于:
+	\begin{align*}
+		I = & \lim\limits_{x\to \frac{\pi}{4}}e^{\dfrac{\tan x-1}{\cos x-\sin x}}\\
+		  = & e^{\lim\limits_{x\to \frac{\pi}{4}}\dfrac{\tan x-1}{\cos x(1-\tan x)}}\\
+		  = & e^{\lim\limits_{x\to \frac{\pi}{4}}-\frac{1}{\cos x}}\\
+		  = & e^{-\sqrt{2}}
+	\end{align*}
+\end{solution}
+\myspace{1}
 
 4. 求极限 $\lim\limits_{x\to 0}\left(\dfrac{(e^{x}+e^{2x}+\cdots +e^{nx})}{n} \right)^{\frac{1}{x}} $
+\myspace{1}
+\begin{solution}
+	
+\end{solution}
 \myspace{1}
 
 5. 求极限 $\lim\limits_{x\to \infty}\left(\dfrac{x^{n}}{(x+1)(x+2)\cdots(x+n)} \right)^{x} $
 \myspace{1}
+\begin{solution}
+	
+\end{solution}
+\myspace{1}
 
 6. 求极限 $\lim\limits_{x\to \infty}\left(\sin\frac{1}{x}+\cos\frac{1}{x} \right)^{x} $
+\myspace{1}
+\begin{solution}
+	
+\end{solution}
 \myspace{1}
 
 7. 求极限 $\lim\limits_{n\to \infty}n\left[e\left(1+\dfrac{1}{n} \right)^{-n}-1 \right]$
 \myspace{1}
+\begin{solution}
+	
+\end{solution}
+\myspace{1}
 
 8. 设 $a>0,a\neq 1$,且 $\lim\limits_{x\to +\infty}x^{p}(a^{\frac{1}{x}}-a^{\frac{1}{x+1}})=\ln a$,求 $p$
+\myspace{1}
+\begin{solution}
+	
+\end{solution}
 \myspace{1}
 
 9. 求极限 $\lim\limits_{x\to 0}\dfrac{(1-\sqrt{\cos x})(1-\sqrt[3]{\cos x})\cdots(1-\sqrt[n]{\cos x})}{(1-\cos x)^{n-1}}$
 \myspace{1} 
+\begin{solution}
+	
+\end{solution}
+\myspace{1}
 
 10. 求极限 $\lim\limits_{x\to 0}\dfrac{\ln(\sin^{2}x+e^{x})-x}{\ln(x^{2}+e^{2x})-2x}$
 \myspace{1} 
+\begin{solution}
+	
+\end{solution}
+\myspace{1}
 
 \hl{\textbf{\textit{January 5}}}
 
@@ -852,21 +1270,21 @@
 \myspace{1}
 
 2. 设 $f(x)$ 是连续函数, 则 $\int_{0}^{1}dy\int_{-\sqrt{1-y^{2}}}^{1-y}f(x,y)dx$ 等价于:
-\begin{enumerate}
+\begin{itemize}
 	\item A. $\int_{0}^{1}dx\int_{0}^{x-1}f(x,y)dy+\int_{-1}^{0}dx\int_{0}^{\sqrt{1-x^{2}}}f(x,y)dy$
 	\item B. $\int_{0}^{1}dx\int_{0}^{1-x}f(x,y)dy+\int_{-1}^{0}dx\int_{-\sqrt{1-x^{2}}}^{0}f(x,y)dy$
 	\item C. $\int_{0}^{\frac{\pi}{2}}d\theta\int_{0}^{\frac{1}{\cos\theta+\sin\theta}}f(r\cos\theta,r\sin\theta)dr-\int_{\frac{\pi}{2}}^{\pi}d\theta\int_{0}^{1}f(r\cos\theta,r\sin\theta)dr$
 	\item D. $\int_{0}^{\frac{\pi}{2}}d\theta\int_{0}^{\frac{1}{\cos\theta+\sin\theta}}f(r\cos\theta,r\sin\theta)rdr-\int_{\frac{\pi}{2}}^{\pi}d\theta\int_{0}^{1}f(r\cos\theta,r\sin\theta)rdr$
-\end{enumerate}
+\end{itemize}
 \myspace{1}
 
 3. 设函数 $f(t)$ 连续,则二次积分 $\int_{0}^{\frac{\pi}{2}}d\theta\int_{2\cos\theta}^{2}f(r^{2})rdr$
-\begin{enumerate}
+\begin{itemize}
 	\item A. $\int_{0}^{2}dx\int_{\sqrt{2x-x^{2}}}^{\sqrt{4-x^{2}}}\sqrt{x^{2}+y^{2}}f(x^{2}+y^{2})dy$
 	\item B. $\int_{0}^{2}dx\int_{\sqrt{2x-x^{2}}}^{\sqrt{4-x^{2}}}f(x^{2}+y^{2})dy$
 	\item C. $\int_{0}^{2}dy\int_{1+\sqrt{1-y^{2}}}^{\sqrt{4-y^{2}}}\sqrt{x^{2}+y^{2}}f(x^{2}+y^{2})dx$
 	\item D. $\int_{0}^{2}dy\int_{1+\sqrt{1-y^{2}}}^{\sqrt{4-y^{2}}}f(x^{2}+y^{2})dx$
-\end{enumerate}
+\end{itemize}
 \myspace{1}
 
 4. 计算二重积分
