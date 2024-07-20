@@ -146,18 +146,20 @@
 	\end{itemize}
 \end{definition}
 \section{一维离散型随机变量}
-\begin{definition}[定义]
+\begin{definition}[一维离散型随机变量]
 	随机变量$X$只能取有限个值$x_{1},x_{2},\cdots$,则称$X$为离散型随机变量,我们有: 
 	$$P\{X=x_{i}\}=p_{i},i=1,2,\cdots$$
 	
 	我们将上面的式子称为随机变量$X$的分布列、分布律或者概率分布,记作$X\sim p_{i}$,概率分布通常用表格或者矩阵形式表示.
-	$$\begin{tabular}{c|ccc}
-		\hline
-		$X$ & $x_{1}$ & $x_{2}$ & $\cdots$\\
-		\hline
-		$P$ & $p_{1}$ & $p_{2}$ & $\cdots$\\
-		\hline
-	\end{tabular}\text{或}X\sim \left(
+	$$\begin{tblr}{
+		hline{1,2,Z},
+		vline{2},
+		cells = {$}
+	}
+		X & x_{1} & x_{2} & \cdots\\
+		P & p_{1} & p_{2} & \cdots\\
+	\end{tblr}
+	\text{或}X\sim \left(
 	\begin{matrix}
 	x_{1}&x_{2}&\cdots\\
 	p_{1}&p_{2}&\cdots
@@ -179,22 +181,22 @@
 	$X\sim B(1,p)$
 	$$P(X=1)=p,P(X=0)=1-p$$
 	
-	\mathcolorbox{yellow}{(2).\text{二项分布}}
+	\mathcolorbox{yellow}{(2). \text{二项分布}}
 	
 	$X\sim B(n,p)$,试验次数为$n$,成功概率为$p$,随机变量$X$为成功次数
 	$$P(X=k)=C_{k}^{n}p^k(1-p)^{n-k},(k=0,1,2,\cdots,n),0<p<1$$
 	
-	\mathcolorbox{yellow}{(3).\text{泊松分布}}
+	\mathcolorbox{yellow}{(3). \text{泊松分布}}
 	
 	$X\sim P(\lambda)$
 	$$P(X=k)=\dfrac{\lambda^{k}}{k!}e^{-\lambda},(k=0,1,2,\cdots),0<p<1$$
 	
-	\mathcolorbox{yellow}{(4).\text{几何分布}}
+	\mathcolorbox{yellow}{(4). \text{几何分布}}
 	
 	$X\sim G(p)$
 	$$P(X=k)=(1-p)^{k-1}p,(k=1,2,\cdots),0<p<1$$
 	
-	\mathcolorbox{yellow}{(5).\text{超几何分布}}
+	\mathcolorbox{yellow}{(5). \text{超几何分布}}
 	
 	$X\sim H(n,N,M)$
 	$$P(X=k)=\dfrac{C_{M}^{k}C_{N-M}^{n-k}}{C_{N}^{n}},(max\{0,n-M+N\}\leq k\leq min\{M,n\})$$
@@ -236,7 +238,7 @@
 		\subfigure[分布函数]{
 			\includegraphics[width=0.45\textwidth]{"figure/Note/均匀分布2.jpg"}}
 	\end{figure}
-	\mathcolorbox{yellow}{(2).\text{指数分布}}
+	\mathcolorbox{yellow}{(2). \text{指数分布}}
 	
 	$X\sim E(\lambda)$$X$的概率密度函数$f(x)$和分布函数$F(x)$: 
 	$$f(x)=\left\lbrace 
@@ -257,7 +259,7 @@
 		\subfigure[分布函数]{
 			\includegraphics[width=0.45\textwidth]{"figure/Note/指数分布2.jpg"}}
 	\end{figure}
-	\mathcolorbox{yellow}{(3).\text{正态分布}}
+	\mathcolorbox{yellow}{(3). \text{正态分布}}
 	
 	$X\sim N(\mu,\sigma^2)$,$X$的概率密度$f(x)$: 
 	$$f(x)=\dfrac{1}{\sqrt{2\pi\sigma}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2},(-\infty<x<+\infty) $$
@@ -319,24 +321,26 @@
 	\end{anymark}
 	
 \end{definition}
+
 \section{二维离散型随机变量}
-\begin{table}[h]
+\begin{table}[ht]
 	\centering
-	\setlength{\tabcolsep}{10pt}
-	\begin{tabular}[h]{c|cccc|c}
-		\hline
-		\diagbox{$X$}{$Y$} & $y_{1}$ & $\cdots$ & $y_{j}$ & $\cdots$ & $P\left\lbrace X=x_{i}\right\rbrace $ \\
-		\hline
-		$x_{1}$ & $p_{11}$ & $\cdots$ & $p_{1j}$ & $\cdots$ & $p_{1*}$ \\
-		$\vdots$ & $\vdots$ &  & $\vdots$ &  & $\vdots$ \\
-		$x_{i}$ & $p_{i1}$ & $\cdots$ & $p_{ij}$ & $\cdots$ & $p_{i*}$\\
-		$\vdots$ & $\vdots$ &  & $\vdots$ &  & $\vdots$ \\
-		\hline
-		$P\left\lbrace Y=y_{j}\right\rbrace $ & $p_{*1}$ & $\cdots$ & $p_{*j}$ & $\cdots$ & $1$\\
-		\hline
-	\end{tabular}
 	\caption{离散型二维随机变量概率分布}
-	\label{table: "离散型二维随机变量概率分布"}
+	\label{table: 离散型二维随机变量概率分布}
+	\begin{tblr}{
+			hline{1,Z} = {2pt},
+			hline{2,Y} = {1pt},
+			vline{2,Y} = {1pt},
+			cells = {$},
+			cell{1}{1} = {mode = text}
+	}
+		\diagbox{$X$}{$Y$}                     & y_{1}  & \cdots & y_{j}  & \cdots & P\left\lbrace X=x_{i}\right\rbrace \\
+		x_{1}                                  & p_{11} & \cdots & p_{1j} & \cdots & p_{1*}                             \\
+		\vdots                                 & \vdots &        & \vdots &        & \vdots                             \\
+		x_{i}                                  & p_{i1} & \cdots & p_{ij} & \cdots & p_{i*}                             \\
+		\vdots                                 & \vdots &        & \vdots &        & \vdots                             \\
+		P\left\lbrace Y=y_{j}\right\rbrace     & p_{*1} & \cdots & p_{*j} & \cdots & 1                                  \\
+	\end{tblr}
 \end{table}
 \begin{definition}[二维离散型随机变量]
 	\mathcolorbox{yellow}{\text{1.概率分布}}
@@ -344,7 +348,7 @@
 	二维随机变量$(X,Y)$只能取有限对值或可列对值$(x_{1},y_{1}),(x_{2},y_{2}),\cdots,(x_{n},y_{n}),\cdots$,则称$(X,Y)$为离散型随机变量,$(X,Y)$满足概率分布: 
 	$$p_{ij}=P\{X=x_{i},Y=y_{j}\},i,j=1,2,\cdots$$
 	
-	上面的式子称为$(X,Y)$的联合分布律,记作$(X,Y)\sim p_{ij}$,如表格 \ref{table: "离散型二维随机变量概率分布"}所示
+	上面的式子称为$(X,Y)$的联合分布律,记作$(X,Y)\sim p_{ij}$,如表格 \ref{table: 离散型二维随机变量概率分布}所示
 	
 	$\text{数列}\{p_{ij}\},i,j=1,2,\cdots\text{是某一二维随机变量的概率分布的充要条件: }$
 	$$ p_{ij}\geq 0,\ \sum\limits_{i=1}^{\infty}\sum\limits_{j=1}^{\infty}p_{ij}=1$$
@@ -610,22 +614,19 @@
 \end{definition}
 \begin{table}[ht]
 	\centering
-	\setlength{\tabcolsep}{10pt}
-	\begin{tabular}[h]{c|c|c}
-		\hline
-		$X$ & $Y$ & $X+Y$\\
-		\hline
-		$B(n,p)$ & $B(m,p)$ & $B(n+m,p)$\\
-		\hline
-		$P(\lambda_{1})$ & $P(\lambda_{2})$ & $P(\lambda_{1}+\lambda_{2})$\\
-		\hline
-		$N(\mu_{1},\sigma_{1}^2)$ & $N(\mu_{2},\sigma_{2}^2)$ & $N(\mu_{1}+\mu_{2},\sigma_{1}^2+\sigma_{2}^2)$\\
-		\hline
-		$\chi^2(n)$ & $\chi^2(m)$ & $\chi^2(n+m)$\\
- 		\hline
-	\end{tabular}
 	\caption{常见分布可加性}
-	\label{table: "常见分布可加性"}
+	\label{table: 常见分布可加性}
+	\begin{tblr}{
+		hlines,
+		vline{2,3},
+		cells = {c,$}
+	}
+		X                       & Y                       & X+Y                                         \\
+		B(n,p)                  & B(m,p)                  & B(n+m,p)                                    \\
+		P(\lambda_{1})          & P(\lambda_{2})          & P(\lambda_{1}+\lambda_{2})                  \\
+		N(\mu_{1},\sigma_{1}^2) & N(\mu_{2},\sigma_{2}^2) & N(\mu_{1}+\mu_{2},\sigma_{1}^2+\sigma_{2}^2)\\
+		\chi^2(n)               & \chi^2(m)               & \chi^2(n+m)                                 \\
+	\end{tblr}
 \end{table}
 \chapterimage{chap20.jpg}
 \chapter{随机变量的数字特征}
@@ -704,35 +705,28 @@ $$E(XY)=\left\lbrace
 	\item $\text{线性} \ Cov(aX+b,Y)=aCov(X,Y),\ Cov(X_{1}+X_{2},Y)=Cov(X_{1},Y)+Cov(X_{2},Y)$
 \end{itemize}
 \end{definition}
+
 \begin{table}[ht]
 	\centering
-	\setlength{\tabcolsep}{12pt}
 	\caption{常用分布表}
-	\begin{tabular}[h]{c|c|c|c|c}
-		\specialrule{3pt}{0pt}{0pt}
-		名称 & 概率分布 & 均值 & 方差 & 参数范围\\
-		\hline
-		两点分布 & \thead{$P(X=k)=p^kq^{1-k}$\\$(k=0,1)$} & $p$ & $pq$ &\thead{$0<p<1$\\ $q=1-p$} \\
-		\hline
-		\thead{二项分布\\$B(n,p)$} & \thead{$P(X=k)=C_{n}^{k}p^xq^{n-k}$\\$(x=0,1,\cdots,n)$} & $np$ & $npq$ &\thead{$0<p<1$\\ $q=1-p$\\ $n\in N$} \\
-		\hline
-		\thead{泊松分布\\$P(\lambda)$} & \thead{$P(X=k)=\dfrac{\lambda^k}{k!}e^{-\lambda}$\\$(k=0,1,2,\cdots)$} & $\lambda$ & $\lambda$ &$\lambda>0$\\
-		\hline
-		\thead{超几何分布\\$H(n,N,M)$} & \thead{$P(X=k)=\dfrac{C_{N-M}^{n-k}C_{M}^{k}}{C_{N}^{n}}$\\$(k=0,1,\cdots,min\{M,n\})$} & $\dfrac{nM}{N}$ & $\dfrac{n(N-n)(N-M)M}{N^2(N-1)}$ &\thead{$n,N,M\in N$\\$n\leq N,M\leq N$} \\
-		\hline
-		\thead{几何分布\\$G(p)$} & \thead{$P(X=k)=(1-p)^{k-1}p$\\$(k=0,1,\cdots)$} & $\dfrac{1}{p}$ & $\dfrac{1-p}{p^2}$ &\thead{$0<p<1$\\$q=1-p$} \\
-		\hline
-		\thead{均匀分布\\$U(a,b)$} & $p(x)=\frac{1}{b-a}(a\leq x\leq b)$ & $\dfrac{a+b}{2}$ & $\dfrac{(b-a)^3}{12}$ &\thead{$0<p<1$\\ $q=1-p$\\$r\in R$} \\
-		\hline
-		\thead{指数分布\\$E(\lambda)$} & $p(x)=\lambda e^{-\lambda x}(x>0)$ & $\dfrac{1}{\lambda}$ & $\dfrac{1}{\lambda^2}$ &$\lambda>0$ \\
-		\hline
-		\thead{正态分布\\$N(\mu,\sigma^2)$} & $p(x)=\dfrac{1}{\sqrt{2\pi\sigma}}e^{-\dfrac{(x-\mu)^2}{2\sigma^2}}$ & $\mu$ & $\sigma^2$ &$\sigma>0$ \\
-		\hline
-		\thead{$\Gamma\text{分布}$\\$\Gamma(\alpha,\beta)$} & $p(x)=\dfrac{\beta^{\alpha}}{\Gamma(\alpha)}x^{\alpha-1}e^{-\beta x}(x>0)$ & $\dfrac{\alpha}{\beta}$ & $\dfrac{\alpha}{\beta^2}$ &\thead{$\alpha>0$\\$\beta>0$} 
-		\\
-		\specialrule{3pt}{0pt}{0pt}
-	\end{tabular}
-	\label{table: "常用分布表"}
+	\label{table: 常用分布表}
+	\begin{tblr}{
+		hlines = {1pt},
+		hline{1,Z} = {2pt},
+		vline{2-Y} = {1pt},
+		cells = {c}
+	}
+		$\text{名称}$                                    & $\text{概率分布}$                                                                    & $\text{均值}$            & $\text{方差}$                      & $\text{参数范围}$                       \\
+		$\text{两点分布}$                                & {$P(X=k)=p^kq^{1-k}$\\ $(k=0,1)$}                                                   & $p$                      & $pq$                              & {$0<p<1$\\ $q=1-p$}                     \\
+		{$\text{二项分布}$\\ $B(n,p)$}                   & {$P(X=k)=C_{n}^{k}p^xq^{n-k}$ \\ $(x=0,1,\cdots,n)$}                                & $np$                     & $npq$                             & {$0<p<1$ \\ $q=1-p$\\ $n\in N$}         \\
+		{$\text{泊松分布}$\\ $P(\lambda$)}               & {$P(X=k)=\dfrac{\lambda^k}{k!}e^{-\lambda}$ \\ $(k=0,1,2,\cdots)$}                  & $\lambda$                & $\lambda$                         & $\lambda>0$                             \\
+		{$\text{超几何分布}$\\ $H(n,N,M)$}               & {$P(X=k)=\dfrac{C_{N-M}^{n-k}C_{M}^{k}}{C_{N}^{n}}$\\ $(k=0,1,\cdots\,min\{M,n\})$} & $\dfrac{nM}{N}$          & $\dfrac{n(N-n)(N-M)M}{N^2(N-1)}$  & {$n,N,M\in N$\\ $n\leq N,M\leq N$}      \\
+		{$\text{几何分布}$\\ $G(p)$}                     & {$P(X=k)=(1-p)^{k-1}p$\\ $(k=0,1,\cdots)$}                                          & $\dfrac{1}{p}$           & $\dfrac{1-p}{p^2}$                & {$0<p<1$\\ $q=1-p$}                     \\
+		{$\text{均匀分布}$\\ $U(a,b)$}                   & $p(x)=\frac{1}{b-a}(a\leq x\leq b)$                                                 & $\dfrac{a+b}{2}$         & $\dfrac{(b-a)^3}{12}$             & {$0<p<1$\\ $q=1-p$\\ $r\in \mathbb{R}$} \\
+		{$\text{指数分布}$\\ $E(\lambda)$}               & $p(x)=\lambda e^{-\lambda x}(x>0)$                                                  & $\dfrac{1}{\lambda}$     & $\dfrac{1}{\lambda^2}$            & $\lambda>0$                             \\
+		{$\text{正态分布}$\\ $N(\mu,\sigma^2)$}          & $p(x)=\dfrac{1}{\sqrt{2\pi\sigma}}e^{-\dfrac{(x-\mu)^2}{2\sigma^2}}$                & $\mu$                    & $\sigma^2$                        & $\sigma>0$                              \\
+		{$\Gamma\text{分布}$ \\ $\Gamma(\alpha,\beta)$} & $p(x)=\dfrac{\beta^{\alpha}}{\Gamma(\alpha)}x^{\alpha-1}e^{-\beta x}(x>0)$           & $\dfrac{\alpha}{\beta}$ & $\dfrac{\alpha}{\beta^2}$          & {$\alpha>0$\\ $\beta>0$}                \\
+	\end{tblr}
 \end{table}
 \chapterimage{chap21.jpg}
 \chapter{大数定理和中心极限定理}
@@ -923,18 +917,18 @@ $$E(XY)=\left\lbrace
 \end{definition}
 \begin{table}[h]
 	\centering
-	\setlength{\tabcolsep}{12pt}
 	\caption{正态总体均值的置信区间}
-	\begin{tabular}[h]{c|c|c|c}
-		\specialrule{3pt}{0pt}{0pt}
-		待估参数 & 其他参数 & 枢轴量分布 & 置信区间\\
-		\hline
-		$\mu$ & $\sigma^2$已知 & $Z=\dfrac{\overline{X}-\mu}{\sigma/\sqrt{n}}\sim N(0,1)$ & $\left( \overline{X}-\frac{\sigma}{\sqrt{n}}z_{\alpha/2},\overline{X}+\frac{\sigma}{\sqrt{n}}z_{\alpha/2}\right)$\\
-		\hline
-		$\mu$ & $\sigma^2$未知 & $t=\dfrac{\overline{X}-\mu}{S/\sqrt{n}}\sim t(n-1)$ & $\left( \overline{X}-\frac{S}{\sqrt{n}}t_{\alpha/2}(n-1),\overline{X}+\frac{S}{\sqrt{n}}t_{\alpha/2}(n-1)\right)$\\
-		\specialrule{3pt}{0pt}{0pt}
-	\end{tabular}
-	\label{"正态总体均值的置信区间"}
+	\label{table: 正态总体均值的置信区间}
+	\begin{tblr}{
+		hline{1,Z} = {2pt},
+		hline{2,Y} = {1pt},
+		vline{2-Y} = {1pt},
+		cells = {c,$}
+	}
+		\text{待估参数} & \text{其他参数}     & \text{枢轴量分布}                                        & \text{置信区间}                                                                                                 \\
+		\mu            & \sigma^2\text{已知} & Z=\dfrac{\overline{X}-\mu}{\sigma/\sqrt{n}}\sim N(0,1) & \left( \overline{X}-\frac{\sigma}{\sqrt{n}}z_{\alpha/2},\overline{X}+\frac{\sigma}{\sqrt{n}}z_{\alpha/2}\right) \\
+		\mu            & \sigma^2\text{未知} & t=\dfrac{\overline{X}-\mu}{S/\sqrt{n}}\sim t(n-1)      & \left( \overline{X}-\frac{S}{\sqrt{n}}t_{\alpha/2}(n-1),\overline{X}+\frac{S}{\sqrt{n}}t_{\alpha/2}(n-1)\right) \\
+	\end{tblr}
 \end{table}
 \section{假设检验}
 \begin{definition}[统计性检验]

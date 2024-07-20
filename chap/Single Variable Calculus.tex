@@ -110,7 +110,7 @@
 
 	设$f(x,y)$在平面有界闭区域$D$连续,$g(x,y)$平面有界闭区域$D$可积且不变号,我们有: $$\exists (\xi,\eta)\in D,\ s.t. \iint\limits_{D}f(x,y)g(x,y)d\sigma=f(\xi,\eta)\iint\limits_{D}g(x,y)d\sigma$$
 	\begin{anymark}[注]
-		我们构造函数: $F(x)=\int_{a}^{x}f(x)g(x),\ G(x)=\int_{a}^{x}g(x)$
+		我们构造函数: $F(x)=\int_{a}^{x}f(t)g(t)dt,\ G(x)=\int_{a}^{x}g(t)dt$,$F'(x) =f(x)g(x),G'(x) = g(x)$
 
 		我们利用柯西中值定理可以得到:
 		$$\exists \xi\in(a,b),\ s.t. \dfrac{F'(\xi)}{G'(\xi)}=\dfrac{F(b)-F(a)}{G(b)-G(a)}\Rightarrow \dfrac{f(\xi)g(\xi)}{g(\xi)}=\dfrac{\int_{a}^{b}f(x)g(x)dx}{\int_{a}^{b}g(x)dx}$$
@@ -2271,8 +2271,8 @@
 	$$(1+x)^{\alpha}=1+\alpha x+\frac{\alpha (\alpha-1)}{2!}x^2+\frac{\alpha (\alpha-1)(\alpha-2)}{3!}x^3+\dots+\frac{\alpha (\alpha-1)(\alpha-2)\dots(\alpha-n+1)}{n!}x^n+\dots$$
 \end{theorem}
 \section{函数展开成幂级数}
-\label{函数展开成幂级数}
-\begin{definition}
+
+\begin{definition}\label{函数展开成幂级数}
 	泰勒级数:  ( $f(x)$ 在点 $x=x_{0}$ 处存在任意阶导数 )
 	$$f(x)=\sum\limits_{n=0}^{+\infty}\frac{f^{(n)}(x_{0})}{n!}(x-x_{0})^n$$
 	麦克劳林级数:  ( $f(x)$ 在点 $x=0$ 处存在任意阶导数 )

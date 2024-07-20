@@ -1304,14 +1304,17 @@ $$A^{*}=O\Rightarrow r(A^{*})=0$$
 \begin{table}[h]
 	\centering
 	\caption{常用特征值和特征向量}
+	\label{table: 常用特征值和特征向量}
 	\begin{tblr}{
-			hline{1,Z}={0.08em},
-			hline{2}={0.04em},
-			vline{2}={0.05em},
-			cells={c}}
-		矩阵     & $A$       & $kA$       & $A^{k}$       & $f(A)$       & $A^{-1}$           & $ A^{*}$                      & $P^{-1}AP$\\
-		特征值   & $\lambda$ & $k\lambda$ & $\lambda^{k}$ & $f(\lambda)$ & $\frac{1}{\lambda}$ & $\frac{|A|}{\lambda}$ & $\lambda$\\
-		特征向量 & $\xi$      & $\xi$      & $\xi$         & $\xi$        & $\xi$               & $ \xi$           & $P^{-1}\xi$\\
+			hline{1,Z}={2pt},
+			hline{2}={1pt},
+			vline{2}={1pt},
+			cells={c,$},
+			cell{1-Z}{1} = {mode = text}
+		}
+		矩阵     & A      & kA        & A^{k}       & f(A)       & A^{-1}           &  A^{*}               & P^{-1}AP \\
+		特征值   & \lambda & k\lambda & \lambda^{k} & f(\lambda) & \frac{1}{\lambda} & \frac{|A|}{\lambda} & \lambda   \\
+		特征向量 & \xi     & \xi      & \xi         & \xi        & \xi               &  \xi                & P^{-1}\xi \\
 	\end{tblr}
 \end{table}
 \section{相似}
