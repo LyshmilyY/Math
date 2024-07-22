@@ -150,9 +150,17 @@
 
 	$g(x)=f(x)-\eta x,\ g'(x)=f'(x)-\eta$
 
-	$g'(a)=f'(a)-\eta<0\ g'(b)=f'(b)-\eta>0$
+	$g'_{+}(a)=f'_{+}(a)-\eta<0\ g'_{-}(b)=f'_{-}(b)-\eta>0$
 
-	由零点定理得到: $\exists \xi\in(a,b),\ s.t.\ g'(\xi)=0\Rightarrow  f'(\xi)=\eta$
+	我们利用极限的保号性得到:
+	\begin{cases}
+		\exists \delta_{1}>0, s.t. g(x)<g(a),\ x\in(a,a+\delta_{1}) \\
+		\exists \delta_{2}>0, s.t. g(x)<g(b),\ x\in(b-\delta_{2},b)
+	\end{cases}
+
+	$g(x)$ 是连续可导函数, 由费马定理,我们得到: $g(x)$ 最小值一定在 $(a,b)$ 内取得, 且 $g'(\xi)=0\to f'(\xi) -\eta =0$
+
+	综上所述, 我们得到 $\exists \xi\in(a,b),\ s.t.\ f'(\xi)=\eta$
 \end{theorem}
 \section{具体应用和题型}
 
