@@ -1,24 +1,9 @@
-\chapterimage{chap35.jpg}
+\chapterimage{chap39.jpg}
 \chapter{Summary}
-1. $\lim\limits_{x\rightarrow +\infty}\frac{\sqrt{x+\sqrt{x+\sqrt{x}}}}{\sqrt{x+1}}$
-\begin{solution}
-	
-	原极限等价于:  
-	$$\lim\limits_{x\rightarrow 0}\frac{x+\sqrt{x+\sqrt{x}}}{x+1}=1\Rightarrow \text{原极限为}1$$
-\end{solution}
-2. $\lim\limits_{n\rightarrow +\infty}n[(1+\frac{x}{n})^n-e^x]$
-\begin{solution}
-	
-	原极限等价于:  
-	$$\lim\limits_{n\rightarrow +\infty}n[e^{nln(1+\frac{x}{n})}-e^x]=\lim\limits_{n\rightarrow +\infty}n[e^{n\frac{x}{n}}-e^x]=0$$
-\end{solution}
-3. $\lim\limits_{x\rightarrow 0}x^{x^{x}-1}$
-\begin{solution}
-	
-	原极限等价于:  
-	$$\lim\limits_{x\rightarrow 0}e^{(e^{xlnx}-1)ln x}=\lim\limits_{x\rightarrow 0}e^{xln^2 x}=1$$
-\end{solution}
-4.双曲函数
+
+
+\section{双曲函数}
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=9.5cm,height=8cm]{"figure/Summary/双曲函数.png"}
@@ -55,36 +40,9 @@
 	3. 反双曲正切函数
 	$$\artanh x=\frac{1}{2}ln(\frac{1+x}{1-x}),\quad (artanh x)'=\frac{1}{1-x^2}$$
 \end{definition}
-5 .$\int\dfrac{\arctan x}{x^2(1+x^2)}dx$
-\begin{solution}
-	
-	原不定积分等价于:  
-	$$\int\dfrac{\arctan x}{x^2}dx-\int\frac{\arctan x}{1+x^2}dx$$
-	$$I_{1}=\int\arctan xd(-\frac{1}{x})=-\frac{\arctan x}{x}+\int\frac{1}{x(1+x^2)}dx=-\frac{\arctan x}{x}+\frac{1}{2}ln\frac{x^2}{1+x^2}$$
-	$$I_{2}=\frac{1}{2}\arctan^{2}x$$
-	
-	原不定积分为:  $$\frac{1}{2}ln\frac{x^2}{1+x^2}-\frac{\arctan x}{x}-\frac{1}{2}\arctan^{2}x+C$$
-\end{solution}
-6. 设 $y=y(x)$ 在 $(-1,1)$ 二阶可导,满足方程 $(1-x^2)\frac{d^2 y}{d x^2}-x\frac{dy}{dx}+a^2y=0$,做变量替换$x=\sin t$后,$y$ 作为 $t$ 的函数满足的方程.
-\begin{solution}
-	
-	$$\frac{dy}{dt}=\frac{dy}{dx}\frac{dx}{dt}=\frac{dy}{dx}\cos t,\quad \frac{d^2y}{dt^2}=\frac{d^2y}{dx^2}\cos^2 t-\frac{dy}{dx}\sin t $$
-	我们得到:  
-	$$\frac{dy}{dx}=\frac{1}{\cos t}\frac{dy}{dt},\quad \frac{d^2y}{dx^2}=\frac{1}{\cos^2 t}(\frac{d^2y}{dt^2}+\frac{dy}{dt}\frac{\sin t}{\cos t})$$
-	
-	新的方程为:  
-	$$\frac{d^2y}{dt^2}+a^2y=0$$
-\end{solution}
 
-7. 曲率和曲率半径
-\begin{definition}
-	曲率是描述曲线的弯曲程度的量.
-	
-	$$k=\dfrac{|f''(x_{0})|}{[1+(f'(x_{0}))^{2}]^{\frac{3}{2}}}$$
-	$$R=\dfrac{1}{k}=\dfrac{[1+(f'(x_{0}))^{2}]^{\frac{3}{2}}}{|f''(x_{0})|},(f''(x_{0})\neq 0)$$
-	
-\end{definition}
 
+\section{特殊曲线}
 8. 心形线、摆线、三叶玫瑰线、星形线、伯努利曲线和阿基米德螺线
 \begin{definition}\label{def: 常用曲线}
 	几类特殊曲线的面积、弧长、旋转体体积
@@ -137,7 +95,9 @@
 	\includegraphics[width=0.45\textwidth]{"figure/Summary/伯努利双扭线.png"}}
 	\caption{曲线图形}
 \end{figure}
-9. $Gamma$ 函数和 $Beta$函数
+
+\section{两类欧拉积分}
+
 \begin{definition}[$Gamma$ 函数和 $Beta$函数]	
 	1. $Gamma$ 函数(欧拉第一类积分)
 	$$B(p,q)=\int_{0}^{1}x^{p-1}(1-x)^{q-1}dx=B(q,p)$$
@@ -255,761 +215,9 @@
 	$$\lim\limits_{n\rightarrow +\infty}\sqrt[n]{x_{n}}=\lim\limits_{n\rightarrow +\infty}\dfrac{x_{n+1}}{x_{n}}$$
 \end{theorem}
 
-14. 反函数导数公式
-\begin{theorem}[反函数导数公式]\label{the: 反函数导数公式}
-	$f(x)$的反函数$\varphi(y)$,我们有:  
-	
-	(1). $$\varphi'(y)=\dfrac{1}{f'(x)}$$
-	
-	(2). $$\varphi''(y)=\dfrac{d\varphi'(y)}{dx}\dfrac{dx}{dy}=-\dfrac{f''(x)}{[f'(x)]^3}$$
-	
-	(3)当$\left\lbrace 
-	\begin{array}{l}
-		x=\alpha(t)\\
-		y=\beta(t)
-	\end{array}
-	\right. $,我们有:  
-	$$\dfrac{dy}{dx}=\dfrac{dy}{dt}\dfrac{dt}{dx}=\dfrac{\beta'(t)}{\alpha'(t)}$$
-	$$\dfrac{d^2y}{dx^2}=\dfrac{d(\frac{dy}{dx})}{dx}=\dfrac{d(\frac{\beta'(t)}{\alpha'(t)})}{dt}\dfrac{dt}{dx}=\dfrac{\beta''(t)\alpha'(t)-\alpha''(t)\beta'(t)}{[\alpha'(t)]^3}$$
-\end{theorem}
 
-15. 设$f(x)$为连续函数,$\varphi$为常数,$\int_{0}^{2\pi}f(\sin(x+\varphi))dx=A\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}f(\sin x)dx$,求$A$.
-\myspace{1}
-\begin{solution}
-	
-	我们得到函数$f(\sin x)$是周期函数,我们可以得到:  
-	$$\int_{0}^{2\pi}f(\sin(x+\varphi))dx\overset{t=x+\varphi}{=}\int_{\varphi}^{2\pi+\varphi}f(\sin t)dt=\int_{-\frac{\pi}{2}}^{\frac{3\pi}{2}}f(\sin t)dt$$
-	$$\int_{-\frac{\pi}{2}}^{\frac{3\pi}{2}}f(\sin t)dt=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}f(\sin t)dt+\int_{\frac{\pi}{2}}^{\frac{3\pi}{2}}f(\sin t)dt$$
-	\begin{eqnarray*}
-		\int_{\frac{\pi}{2}}^{\frac{3\pi}{2}}f(\sin t)dt\overset{t=\pi-u}{=}\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}f(\sin u)du
-	\end{eqnarray*}
+\section{谱分解定理}
 
-	我们得到:  $$\int_{0}^{2\pi}f(\sin(x+\varphi))dx=2\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}f(\sin t)dt\Rightarrow A=2$$
-\end{solution}
-\begin{anymark}[注]
-	[题目来源]:  $660 \ P_{61}$
-\end{anymark}
-\myspace{1}
-
-16.设$D=\{(x,y)|-1\leq x\leq 1,\ 0\leq y\leq 2\}$,则$I=\iint\limits_{D}\sqrt{|y-x^2|}dxdy$
-\myspace{1}
-\begin{solution}
-	
-	原二重积分等价于:  
-	\begin{eqnarray*}
-		I&=&2[\iint\limits_{D_{1}}\sqrt{|y-x^2|}dxdy]\\
-		 &=&2[\iint\limits_{D_{2}}\sqrt{y-x^2}dxdy+\iint\limits_{D_{3}}\sqrt{x^2-y}dxdy]\\
-		 &=&2[\int_{0}^{1}dx\int_{x^2}^{2}\sqrt{y-x^2}dy+\int_{0}^{1}dx\int_{0}^{x^2}\sqrt{x^2-y}dy]\\
-		 &=&2[\int_{0}^{1}\frac{2}{3}(2-x^2)^{\frac{3}{2}}dx+\int_{0}^{1}\frac{2}{3}x^3dx]\\
-		 &=&\dfrac{4}{3}\int_{0}^{1}(2-x^2)^{\frac{3}{2}}dx+\dfrac{4}{3}\int_{0}^{1}x^3dx\\
-		 &\overset{\text{三角换元}}{=}&\dfrac{16}{3}\int_{0}^{\frac{\pi}{4}}\cos^4 \theta d\theta+\dfrac{1}{3}\\
-		 &=&\dfrac{\pi}{2}+\dfrac{5}{3}
-	\end{eqnarray*}
-\end{solution}
-\begin{anymark}[注]
-	[题目来源]:  $660 \ P_{116}$
-\end{anymark}
-\myspace{1}
-
-17.证明函数$f(x)=3\arccos x-\arccos (3x-4x^3)$在$[-\dfrac{1}{2},\dfrac{1}{2}]$上恒为常数.
-\myspace{1}
-\begin{solution}
-	
-	我们对$f(x)$求导可得:  
-	\begin{eqnarray*}
-		f'(x)&=&-\dfrac{3}{\sqrt{1-x^2}}+\dfrac{3-12x^2}{\sqrt{1-(3x-4x^3)^2}}\\
-		&=&-\dfrac{3}{\sqrt{1-x^2}}+\dfrac{3-12x^2}{\sqrt{(1+3x-4x^3)(1-3x+4x^3)}}\\
-		&=&-\dfrac{3}{\sqrt{1-x^2}}+\dfrac{3-12x^2}{\sqrt{(1-x)(1+2x)^2(1+x)(2x-1)^2}}\\
-		&=&-\dfrac{3}{\sqrt{1-x^2}}+\dfrac{3-12x^2}{(1-4x^2)\sqrt{1-x^2}}\\
-		&=&0
-	\end{eqnarray*}
-
-	我们由$f'(x)=0\Rightarrow f(x)=C$
-\end{solution}
-\begin{anymark}[注]
-	[题目来源]:  $660 \ P_{172}$
-\end{anymark}
-\myspace{1}
-
-18.设$L$是连接两点$A(0,1)$与$B(1,0)$的一条凸弧,$P(x,y)$是$L$上任意一点,已知凸弧$L$与弦$AP$围成的平面图形的面积等于$x^4$,求$L$的方程.
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=15cm,height=10cm]{"figure/Summary/平面示意图.jpg"}
-	\caption{平面示意图}
-\end{figure} 
-\myspace{1}
-\begin{solution}
-	
-	如上图所示:  
-	$$S=\int_{0}^{x}f(t)dt-\dfrac{1+f(x)}{2}x=x^4$$
-	
-	两边同时求导得到:  
-	$$\dfrac{xf'(x)-f(x)}{x^2}=-\dfrac{8x^3+1}{x^2}\Rightarrow \dfrac{f(x)}{x}=-4x^2+\dfrac{1}{x}+C$$
-	
-	我们得到:  $f(x)=-4x^3+Cx+1$,又因为:  $\int_{0}^{1}f(x)dx=\dfrac{3}{2}\Rightarrow C=3$
-	
-	综上所述,$L$的方程为:  $f(x)=-4x^3+3x+1$
-\end{solution}
-\begin{anymark}[注]
-	[题目来源]:  $660 \ P_{216}$
-\end{anymark}
-\myspace{1}
-
-19.设函数$z=\sqrt{x^2+y^2}f(\dfrac{y}{x})$,且$f(u)$可导,若$x\dfrac{\partial z}{\partial x}+y\dfrac{\partial z}{\partial y}=\dfrac{2y^2}{\sqrt{x^2+y^2}}$,求$f(1)$,$f'(1)$.
-\myspace{1}
-\begin{solution}
-	
-	我们可以得到:  
-	$$\left\lbrace
-	\begin{array}{l}
-		\dfrac{\partial z}{\partial x}=\dfrac{x}{\sqrt{x^2+y^2}}f(\frac{y}{x})-\dfrac{y\sqrt{x^2+y^2}}{x^2}f'(\frac{y}{x})\\
-		\dfrac{\partial z}{\partial y}=\dfrac{y}{\sqrt{x^2+y^2}}f(\frac{y}{x})+\dfrac{\sqrt{x^2+y^2}}{x}f'(\frac{y}{x})
-	\end{array}
-	\right. \Rightarrow x\dfrac{\partial z}{\partial x}+y\dfrac{\partial z}{\partial y}=\sqrt{x^2+y^2}f(\frac{y}{x})=\dfrac{2y^2}{\sqrt{x^2+y^2}}$$
-	
-	我们得到:  
-	$$f(\frac{y}{x})=\dfrac{2y^2}{x^2+y^2}\Rightarrow \left\lbrace
-	\begin{array}{l}
-		f(x)=\dfrac{2x^2}{1+x^2}\\
-		\\
-		f'(x)=\dfrac{4x}{(1+x^2)^2}
-	\end{array}
-	\right. $$
-	
-	我们得到:  $f(1)=1,f'(1)=1$
-\end{solution}
-\begin{anymark}[注]
-	[题目来源]:  $660 \ P_{244}$
-\end{anymark}
-\myspace{1}
-
-20. 设函数$f(x,y)$可微且$f[x+1,ln(1+x)]=(1+x)^3+xln(1+x)(x+1)^{ln(x+1)}$,$f(x^2,x-1)=x^4e^{x-1}+(x-1)(x^2-1)x^{2(x-1)}$,求$df(1,0)$.
-\begin{solution}
-	
-	我们令:  $$\left\lbrace
-	\begin{array}{l}
-		g(x)=xln(1+x)(x+1)^{ln(x+1)}\\
-		h(x)=(x-1)(x^2-1)x^{2(x-1)}
-	\end{array}
-	\right. $$
-	
-	我们得到:  $$\left\lbrace
-	\begin{array}{l}
-		f[x+1,ln(1+x)]=(1+x)^3+g(x)\\
-		f(x^2,x-1)=x^4e^{x-1}+h(x)
-	\end{array}
-	\right. $$
-	
-	我们在两边同时对$x$求导:  
-	$$\left\lbrace
-	\begin{array}{l}
-		f'_{1}[x+1,ln(1+x)]+f'_{2}[x+1,ln(1+x)]\dfrac{1}{x+1}=3(1+x)^2+g'(x)\\
-		2xf'_{1}(x^2,x-1)+f'_{2}(x^2,x-1)=(4x^3+x^4)e^{x-1}+h'(x)
-	\end{array}
-	\right. $$
-	
-	我们得到:  
-	$$\left\lbrace
-	\begin{array}{l}
-		f'_{1}(1,0)+f'_{2}(1,0)=3+g'(0)\\
-		2f'_{1}(1,0)+f'_{2}(1,0)=5+h'(1)
-	\end{array}
-	\right. $$
-	
-	又因为:  $g'(0)=h'(0)=0$
-	$$f'_{1}(1,0)=2,\ f'_{2}(1,0)=1\Rightarrow df(1,0)=2dx+dy$$
-\end{solution}
-\begin{anymark}[注]
-	[题目来源]:  $660 \ P_{245}$
-\end{anymark}
-\myspace{1}
-
-21.求二重积分$I=\int_{0}^{1}dy\int_{y}^{1}\sqrt{x^2+y^2}dx$
-\myspace{1}
-\begin{solution}
-	
-	原二重积分等价于:  
-	\begin{eqnarray*}
-		I&=&\int_{0}^{\frac{\pi}{4}}d\theta\int_{0}^{\frac{1}{\cos \theta}}r^2dr\\
-		&=&\int_{0}^{\frac{\pi}{4}}\dfrac{1}{3\cos^3\theta}d\theta\\
-		I_{1}&=&\int_{0}^{\frac{\pi}{4}}\dfrac{1}{\cos^3\theta}d\theta\\
-		&=&\int_{0}^{\frac{\pi}{4}}\dfrac{1}{\cos\theta}d\tan \theta\\
-		&=&\dfrac{tan \theta}{\cos\theta}|_{0}^{\frac{\pi}{4}}-\int_{0}^{\frac{\pi}{4}}\dfrac{1-\cos^2\theta}{\cos^3\theta}d\theta\\
-		&=&\sqrt{2}-I_{1}+\int_{0}^{\frac{\pi}{4}}\dfrac{1}{\cos \theta}d\theta\\
-		&=&\sqrt{2}+ln|\frac{1+\sin\theta}{\cos\theta}|_{0}^{\frac{\pi}{4}}-I_{1}\\
-		&=&\sqrt{2}+ln(\sqrt{2}+1)-I_{1}\\
-	I_{1}&=&\dfrac{\sqrt{2}+ln(\sqrt{2}+1)}{2}\Rightarrow I=\dfrac{\sqrt{2}+ln(\sqrt{2}+1)}{6}
-	\end{eqnarray*}
-\end{solution}
-\begin{anymark}[注]
-	[题目来源]:  $660 \ P_{269}$
-\end{anymark}
-\myspace{1}
-
-22. 已知函数$f(x,y)$在点$(0,0)$某邻域内连续,且$\lim\limits_{(x,y)\rightarrow(0,0)}\dfrac{f(x,y)+4x^2-y^2}{x^4+x^2y^2+y^4}=1$.
-\begin{itemize}
-	\item \hl{A}. 点$(0,0)$不是$f(x,y)$的极值点
-	\item B. 点$(0,0)$是$f(x,y)$的极大值点
-	\item C. 点$(0,0)$是$f(x,y)$的极小值点
-	\item D. 所给条件不足以判断点$(0,0)$是否为$f(x,y)$的极值点
-\end{itemize}
-\myspace{1}
-\begin{solution}
-	
-	我们可以得到:  
-	$$f(x,y)=y^2-4x^2+(x^4+x^2y^2+y^4)(1+\alpha),\ \lim\limits_{(x,y)\rightarrow(0,0)}\alpha(x,y)=0$$
-	$$f(0,0)=\lim\limits_{(x,y)\rightarrow(0,0)}f(x,y)=0$$
-	
-	我们有:  $$\left\lbrace
-	\begin{array}{l}
-		f(0,y)=y^2+y^4(1+\alpha)\\
-		f(x,0)=-4x^2+x^4(1+\alpha)
-	\end{array}
-	\right. $$
-	
-	我们有:  $$\left\lbrace
-	\begin{array}{l}
-		x\rightarrow 0, f(x,0)<f(0,0)\\
-		y\rightarrow 0, f(0,y)>f(0,0)
-	\end{array}
-	\right. $$
-	
-	在$(0,0)$的邻域内,存在比$f(0,0)$大的函数值,也存在比$f(0,0)$小的函数值
-	
-	综上所述,$f(0,0)$不是极值点.
-\end{solution}
-\begin{anymark}[注]
-	[题目来源]:  $660 \ P_{254}$
-\end{anymark}
-\myspace{1}
-
-23. 求$(x+2)y''+x(y')^2=y'$的通解.
-\myspace{1}
-\begin{solution}
-	
-	我们不妨设$y'(x)=p$,我们有:  $y''=\frac{dp}{dx}$,原方程等价于:  
-	$$(x+2)\frac{dp}{dx}+xp^2=p\Rightarrow \frac{dp}{dx}-\frac{p}{x+2}=-\dfrac{x}{x+2}p^2$$
-	
-	我们两边同时除以$-p^2$得到:  
-	$$\frac{dp}{dx}(-\frac{1}{p^2})+\dfrac{1}{x+2}\frac{1}{p}=\frac{x}{x+2}\Rightarrow \frac{dp^{-1}}{dx}+\frac{p^{-1}}{x+2}=\frac{x}{x+2}$$
-	
-	我们可以得到:  $p^{-1}=\frac{1}{x+2}(\int xdx+C)=\frac{x^2+C_{1}}{2x+4}$
-	
-	我们有:  $\dfrac{dy}{dx}=\dfrac{2x+4}{x^2+C_{1}}$
-	
-	(1). 当$C_{1}>0$时,$y=ln(x^2+C_{1})+\dfrac{4}{\sqrt{C_{1}}}\arctan \dfrac{x}{\sqrt{C_{1}}}+C_{2}$
-	
-	(2). 当$C_{1}=0$时,$y=2ln|x|-\dfrac{4}{x}+C_{2}$
-	
-	(3). 当$C_{1}<0$时,$y=ln|x^2+C_{1}|+\dfrac{2}{\sqrt{-C_{1}}}ln|\dfrac{x-\sqrt{-C_{1}}}{x+\sqrt{-C_{1}}}|+C_{2}$
-\end{solution}
-\myspace{1}
-
-24. 设函数$f(t)$在$[0,+\infty)$上连续,且满足方程$f(t)=e^{4\pi t^2}+\iint\limits_{x^2+y^2\leq 4t^2}f(\frac{1}{2}\sqrt{x^2+y^2})dxdy$,求$f(t)$.
-\myspace{1}
-\begin{solution}
-	
-	原方程可以化为:  
-	\begin{eqnarray*}
-		f(t)&=&e^{4\pi t^2}+\int_{0}^{2\pi}d\theta\int_{0}^{2t}rf(\frac{1}{2}r)dr\\
-		&=&e^{4\pi t^2}+2\pi\int_{0}^{2t}rf(\frac{1}{2}r)dr
-	\end{eqnarray*}
-	
-	我们对等式两边对$t$求导得到:  
-	$$f'(t)=8\pi te^{4\pi t^2}+8\pi tf(t)\Rightarrow f'(t)-8\pi tf(t)=8\pi te^{4\pi t^2}$$
-	
-	我们有:  
-	$$f(t)=(\int 8\pi te^{4\pi t^2}e^{\int-8\pi t}dt+C)e^{\int8\pi t}=( 4\pi t^2+C)e^{4\pi t^2}$$
-	
-	因为$f(0)=1\Rightarrow C=1$
-	
-	综上所述,$f(t)=( 4\pi t^2+1)e^{4\pi t^2}$
-\end{solution}
-\myspace{1}
-
-25. 证明:  $r(A)=r(A^{T})=r(AA^{T})=r(A^{T}A)\Leftrightarrow$方程组$Ax=O$与方程组$A^{T}Ax=0$同解.
-\myspace{1}
-\begin{solution}
-	
-	(1). $Ax=0$的任意一个解$\alpha$满足:  $A\alpha=0$
-	
-	我们得到:  $A^{T}(A\alpha)=A^{T}0=0$,说明$Ax=0$的解都是$A^{T}Ax=0$的解.
-	
-	(2). $A^{T}Ax=0\Rightarrow x^{T}A^{T}Ax=0\Rightarrow (Ax)^{T}(Ax)=0$
-	
-	$Ax$是一个列向量,$(Ax)^{T}(Ax)=|Ax|\geq 0\Rightarrow Ax=0$,说明$A^{T}Ax=0$的解都是$Ax=0$的解.
-\end{solution}
-\myspace{1}
-
-26. 证明:  $n$阶矩阵$\left[ \begin{matrix}
-	1&1&\cdots&1\\
-	1&1&\cdots&1\\
-	\vdots&\vdots& &\vdots\\
-	1&1&\cdots&1
-\end{matrix}\right] $与$\left[ \begin{matrix}
-0&\cdots&0&1\\
-0&\cdots&0&2\\
-\vdots&\vdots& &\vdots\\
-0&\cdots&0&n
-\end{matrix}\right] $相似.
-\myspace{1}
-\begin{solution}
-	
-	我们转化为证明矩阵$A,B$都相似于同一个对角矩阵.
-	
-	(1).$|\lambda E-A|=\left|  \begin{matrix}
-		\lambda-1&-1&\cdots&-1\\
-		-1&\lambda-1&\cdots&-1\\
-		\vdots&\vdots& &\vdots\\
-		-1&-1&\cdots&\lambda-1
-	\end{matrix}\right|=(\lambda-n)\lambda^{n-1}$
-	
-	$A$为实对称矩阵,可以相似对角化为$\varLambda=\left[ \begin{matrix}
-		n& & & \\
-		 &0& & \\
-		 & &\ddots&\\
-		 & & & 0
-	\end{matrix}\right] $.
-
-	(2).$|\lambda E-A|=\left|  \begin{matrix}
-		\lambda&0&\cdots&-1\\
-		0&\lambda-1&\cdots&-2\\
-		\vdots&\vdots& &\vdots\\
-		0&0&\cdots&\lambda-n
-	\end{matrix}\right|=(\lambda-n)\lambda^{n-1}$
-	
-	$B$有特征值$0,0,\cdots,n$,特征值$0$对应的特征向量有$num=n-rank(A)=n-1$个.
-	
-	$B$可以相似对角化为$\varLambda=\left[ \begin{matrix}
-		n& & & \\
-		&0& & \\
-		& &\ddots&\\
-		& & & 0
-	\end{matrix}\right] $.
-
-	我们由$A\sim \varLambda,\ B\sim \varLambda\Rightarrow A\sim B$
-\end{solution}
-\myspace{1}
-
-27. 设$A=\left[ \begin{matrix}
-	1&-2&0&0\\
-	-1&0&0&0\\
-	0&0&2&1\\
-	0&0&0&2
-\end{matrix}\right] $,求$A^n(n\geq 2)$
-\myspace{1}
-\begin{solution}
-	
-	我们设$B=\left[ \begin{matrix}
-		1&-2\\-1&0
-	\end{matrix}\right] ,\ C=\left[ \begin{matrix}
-	2&1\\0&2
-\end{matrix}\right]$,我们得到:  
-$$A=\left[ \begin{matrix}
-	B&0\\0&C
-\end{matrix}\right]\Rightarrow A^{n}=\left[ \begin{matrix}
-B^n&0\\0&C^n
-\end{matrix}\right]$$
-
-(1). $B^{n}$我们利用对角矩阵来求,我们将$B$对角化
-
-$$|\lambda E-B|=|\begin{matrix}
-	\lambda-1&2\\
-	1&\lambda
-\end{matrix}|=(\lambda-2)(\lambda+1)$$
-
-当$\lambda=-1$时,$(-E-A)x=0\Rightarrow \left[\begin{matrix}
-	-2&2\\1&-1
-\end{matrix} \right]\left[\begin{matrix}
-x_{1}\\x_{2}
-\end{matrix} \right]=0$,我们取$\xi_{1}=(1,1)^T$
-
-当$\lambda=2$时,$(2E-A)x=0\Rightarrow \left[\begin{matrix}
-	1&2\\1&2
-\end{matrix} \right]\left[\begin{matrix}
-x_{1}\\x_{2}
-\end{matrix} \right]=0$,我们取$\xi_{2}=(2,-1)^T$
-
-我们取$P=[\xi_{1},\xi_{2}]$,\ $s.t. P^{-1}BP=\varLambda=\left[\begin{matrix}
-	-1&\\ &2
-\end{matrix} \right]$
-
-我们得到:  $$B^n=P\varLambda^n P^{-1}=\left[\begin{matrix}
-	1&2\\1&-1
-\end{matrix} \right]\left[\begin{matrix}
-(-1)^n&\\ &2^n
-\end{matrix} \right]\left[\begin{matrix}
-\dfrac{1}{3}&\dfrac{2}{3}\\\dfrac{1}{3}&-\dfrac{1}{3}
-\end{matrix} \right]=\left[\begin{matrix}
-\dfrac{(-1)^n+2^{n+1}}{3}&\dfrac{(-1)^n2-2^{n+1}}{3}\\
-\\\dfrac{(-1)^n-2^n}{3}&\dfrac{(-1)^n2+2^n}{3}
-\end{matrix} \right]$$
-
-(2). $C^n=(2E+D)^n,\ D=\left[ \begin{matrix}
-	0&1\\0&0
-\end{matrix}\right],D^{n}=0(n\geq 2)$
-$$C^n=C_{n}^{0}(2E)^n+C_{n}^{1}(2E)^{n-1}D+C_{n}^{2}(2E)^{n-2}D^2+\cdots=2^nE+n2^{n-1}D$$
-
-我们得到:  $C^n=\left[ \begin{matrix}
-	2^n&n2^{n-1}\\0&2^n
-\end{matrix}\right]$
-
-我们得到:  
-$$A^n=\left[ \begin{matrix}
-	B^n&0\\0&C^n
-\end{matrix}\right]=\left[ \begin{matrix}
-\dfrac{(-1)^n+2^{n+1}}{3}&\dfrac{(-1)^n2-2^{n+1}}{3}&0&0\\
-\dfrac{(-1)^n-2^n}{3}&\dfrac{(-1)^n2+2^n}{3}&0&0\\
-0&0&2^n&n2^{n-1}\\0&0&0&2^n
-\end{matrix}\right]$$
-\end{solution}
-\myspace{1}
-
-28. 已知$A$是三阶矩阵且$(A-E)^{-1}=A^2+A+E$,求$|A|$
-\myspace{1}
-\begin{solution}
-	
-	我们可以得到:  
-	$$(A-E)(A-E)^{-1}=(A-E)(A^2+A+E)=E\Rightarrow A^3-E^3=E\Rightarrow A^3=2E$$
-	
-	我们可以得到:  $|A^3|=|A|^3=|2E|=2^3|E|=8\Rightarrow |A|=2$
-\end{solution}
-\begin{anymark}[注]
-	[题目来源]:  $660 \ P_{349}$
-\end{anymark}
-\myspace{1}
-
-29. 求$\int_{0}^{+\infty}e^{-2x}|\sin x|dx$
-\myspace{1}
-\begin{solution}
-	
-	方法一:  (积分变换)
-	
-	原积分可以化为:  
-	\begin{eqnarray*}
-		I&=&\int_{0}^{\pi}e^{-2x}\sin xdx+\int_{\pi}^{+\infty}e^{-2x}|\sin x|dx\\
-		&=&\int_{0}^{\pi}e^{-2x}\sin xdx+e^{-2\pi}\int_{0}^{+\infty}e^{-2x}|\sin x|dx\\
-		&=&\int_{0}^{\pi}e^{-2x}\sin xdx+e^{-2\pi}I
-	\end{eqnarray*}
-
-	我们得到:  
-	$$I=\dfrac{\int_{0}^{\pi}e^{-2x}\sin xdx}{1-e^{-2\pi}}$$
-	$$\int_{0}^{\pi}e^{-2x}\sin xdx=\dfrac{\left|\begin{matrix}
-			-2e^{-2x}&\cos x\\e^{-2x}&\sin x \end{matrix}\right| }{5}|_{x=0}^{x=\pi}=\dfrac{1+e^{-2\pi}}{5}$$
-	
-	综上所述,我们得到:  $I=\dfrac{1+e^{-2\pi}}{5(1-e^{-2\pi})}$
-\end{solution}
-\begin{anymark}[思考]
-	$$f(x)=e^{-ax}|\sin bx|,(a>0,b>0),\ \text{求}\int_{0}^{+\infty}f(x)dx$$
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm,height=10cm]{"figure/Summary/伪周期问题.jpg"}
-	\caption{简易函数图示}
-\end{figure} 	
-	我们有:  
-	$$\forall x\in[\dfrac{n\pi}{n},\dfrac{(n+1)\pi}{b}], f(x+\dfrac{\pi}{b})=e^{-\dfrac{a\pi}{b}}f(x)$$
-	$$\int_{\dfrac{n\pi}{b}}^{\dfrac{(n+1)\pi}{b}}f(x)dx=e^{-\dfrac{a\pi}{b}}\int_{\dfrac{(n+1)\pi}{b}}^{\dfrac{(n+2)\pi}{b}}f(x)dx$$
-	
-	我们不妨设$A=\int_{0}^{\dfrac{\pi}{b}}f(x)dx,\ q=e^{-\dfrac{a\pi}{b}}$,我们有:  
-	\begin{eqnarray*}
-		\int_{0}^{+\infty}f(x)dx&=&\int_{0}^{\dfrac{\pi}{b}}f(x)dx+\int_{\dfrac{\pi}{b}}^{\dfrac{2\pi}{b}}f(x)dx+\cdots+int_{\dfrac{(n-1)\pi}{b}}^{\dfrac{n\pi}{b}}f(x)dx+\cdots\\
-		&=&A+Aq+Aq^2+\cdots+Aq^{n}+\cdots\\
-		&=&\lim\limits_{n\rightarrow+\infty}\dfrac{A(1-q^n)}{1-q}\\
-		&=&\dfrac{A}{1-q}
-	\end{eqnarray*}
-
-	$$A=\int_{0}^{\dfrac{\pi}{b}}f(x)dx=G(\dfrac{\pi}{b})-G(0)$$
-	$$G(x)=\dfrac{\left| \begin{matrix}
-			(e^{-a})'&(\sin(bx))'\\e^{-a}&\sin(bx)
-		\end{matrix}\right| }{a^2+b^2}\Rightarrow G(\dfrac{\pi}{b})-G(0)=\dfrac{b(1+e^{e^{-\dfrac{a\pi}{b}}})}{a^2+b^2}$$
-	
-	综上所述,我们得到:  
-	$$\int_{0}^{+\infty}f(x)dx=\dfrac{b(1+e^{-\dfrac{a\pi}{b}})}{(a^2+b^2)(1-e^{-\dfrac{a\pi}{b}})}$$
-\end{anymark}
-\myspace{1}
-
-30. 求$\int e^{ax}\sin bxdx$
-\myspace{1}
-\begin{solution}
-	
-	利用分部积分法,原不定积分可化为:  
-	\begin{eqnarray*}
-		I&=&\dfrac{1}{a}\int \sin (bx)d(e^{ax})\\
-		&=&\dfrac{e^{ax}\sin (bx)}{a}-\dfrac{b}{a}\int e^{ax}\cos(bx)dx\\
-		&=&\dfrac{e^{ax}\sin (bx)}{a}-\dfrac{b}{a^2}[e^{ax}\cos (bx)+b\int e^{ax}\sin (bx)dx]\\
-		&=&\dfrac{e^{ax}\sin (bx)}{a}-\dfrac{b}{a^2}e^{ax}\cos (bx)-\dfrac{b^2}{a^2}I+C
-	\end{eqnarray*}
-	
-	$$I=\dfrac{ae^{ax}\sin (bx)-be^{ax}\cos (bx)}{a^2+b^2}=\dfrac{\left|\begin{matrix}
-			(e^{ax})' & e^{ax}\\(\sin (bx))' & \sin(bx)
-		\end{matrix} \right|}{a^2+b^2}+C$$
-	
-	同样我们也可以得到:  
-	$$\int e^{ax}\cos (bx)dx=\dfrac{\left|\begin{matrix}
-			(e^{ax})' & e^{ax}\\(\cos (bx))' & \cos(bx)
-		\end{matrix} \right|}{a^2+b^2}+C$$
-\end{solution}
-\myspace{1}
-
-31. 设$x_{1}=a\geq 0$,$y_{1}=b\geq 0$,$a\leq b$,$x_{n+1}=\sqrt{x_{n}y_{n}},y_{n+1}=\dfrac{x_{n}+y_{n}}{2},(n=1,2,\cdots)$,证明:  $\lim\limits_{n\rightarrow +\infty}x_{n}=\lim\limits_{n\rightarrow +\infty}y_{n}$
-\myspace{1}
-\begin{solution}
-	
-	我们由:  $x_{1}=a\geq 0$,$y_{1}=b\geq 0$,$x_{n+1}=\sqrt{x_{n}y_{n}},y_{n+1}=\dfrac{x_{n}+y_{n}}{2}$,由归纳法可知:  
-	$$x_{n}\geq 0, y_{n}\geq 0$$
-	
-	由基本不等式:  
-	$$\dfrac{x_{n}+y_{n}}{2}\geq \sqrt{x_{n}y_{n}}\Rightarrow y_{n+1}\geq x_{n+1}$$
-	
-	又因为:  $x_{n+1}=\sqrt{x_{n}y_{n}}\geq x_{n}, y_{n+1}=\dfrac{x_{n}+y_{n}}{2}\leq y_{n}$.
-	
-	$x_{n}$单调递增,$y_{n}$单调递减,$x_{1}\leq x_{n}\leq y_{n}\leq y_{1}$
-	
-	$x_{n},y_{n}$单调且有界,数列$\{x_{n}\},\{y_{n}\}$均有极限,我们不妨设:  
-	$$\left\lbrace
-	\begin{array}{l}
-		\lim\limits_{n\rightarrow +\infty}x_{n}=a\\
-		\lim\limits_{n\rightarrow +\infty}y_{n}=b
-	\end{array}
-	\right. \Rightarrow \left\lbrace
-	\begin{array}{l}
-		a=\sqrt{ab}\\
-		b=\dfrac{a+b}{2}
-	\end{array}
-	\right. \Rightarrow a=b$$
-	
-	综上所述,我们得到:  $\lim\limits_{n\rightarrow +\infty}x_{n}=\lim\limits_{n\rightarrow +\infty}y_{n}$
-\end{solution}
-\begin{anymark}[注]
-	[题目来源]:  $880 \text{第一章基础}\ P_{11}$
-\end{anymark}
-\myspace{1}
-
-32.设数列$\{a_{n}\}$满足$\lim\limits_{n\rightarrow+\infty}\dfrac{a_{n+1}}{a_{n}}=q$,且$|q|<1$,证明:  $\lim\limits_{n\rightarrow+\infty}a_{n}=0$
-\myspace{1}
-\begin{solution}
-	
-	我们考虑数列$\{|a_{n}|\}$,我们可以得到:  
-	$$\lim\limits_{n\rightarrow +\infty}\dfrac{|a_{n+1}|}{|a_{n}|}=|q|\Rightarrow \exists\ M>0,\ n>M\text{时}, \dfrac{|a_{n+1}|}{|a_{n}|}<1$$
-	
-	又因为$|a_{n}|\geq 0$,我们可以知道$\{|a_{n}|\}$极限必定存在,我们不妨假设$\lim\limits_{n\rightarrow+\infty}|a_{n}|=a$.
-	
-	假设$a\neq 0$,我们可以得到:  $$\lim\limits_{n\rightarrow  +\infty}\dfrac{|a_{n+1}|}{|a_{n}|}=\dfrac{\lim\limits_{n\rightarrow  +\infty}|a_{n+1}|}{\lim\limits_{n\rightarrow  +\infty}|a_{n}|}=1$$
-	
-	这和$|q|<1$矛盾！！！
-	
-	
-	综上所述,我们可以得到:  $\lim\limits_{n\rightarrow+\infty}a_{n}=0$
-\end{solution}
-\begin{anymark}[注]
-	[题目来源]:  $880\text{第一章综合} \ P_{1}$
-\end{anymark}
-\myspace{1}
-
-33. 设$x_{1}=1,x_{2}=2,x_{n+2}=\dfrac{1}{2}(x_{n}+x_{n+1})$,求$\lim\limits_{n\rightarrow+\infty}x_{n}$
-\myspace{1}
-\begin{solution}
-	
-	我们有:  $x_{n+1}-x_{n}=-\dfrac{1}{2}(x_{n}-x_{n-1})$
-	
-	我们得到:  数列$\{x_{n+1}-x_{n}\}$是以$1$为首项,$-\dfrac{1}{2}$为公比的等比数列.
-	
-	$$\sum\limits_{k=1}^{n}(x_{k+1}-x_{k})=x_{n+1}-x_{1}=\dfrac{1-(-(\dfrac{-1}{2})^{n}}{1+\dfrac{1}{2}}$$
-	
-	$$\lim\limits_{n\rightarrow +\infty}x_{n+1}=1+\dfrac{2}{3}=\dfrac{5}{3}$$
-\end{solution}
-\begin{anymark}[注]
-	[题目来源]:  $880\text{第一章综合} \ P_{5}$
-\end{anymark}
-\myspace{1}
-
-34. 设$f_{n}(x)=1-(1-\cos x)^n(n=1,2,\cdots)$
-
-(1). 证明:  方程$f_{n}(x)=\dfrac{1}{2}$在$(0,\dfrac{\pi}{2})$内有且只有一个实数根$x_{n}$
-
-(2). 设$x_{n}\in(0,\dfrac{\pi}{2})$,满足$f_{n}(x)=\dfrac{1}{2}$,证明:  $$\arccos \dfrac{1}{n}<x_{n}<\dfrac{\pi}{2},\text{且}\lim\limits_{n\rightarrow +\infty}x_{n}=\dfrac{\pi}{2}$$
-\myspace{1}
-\begin{solution}
-	
-	我们构造辅助函数:  $G_{n}(x)=\dfrac{1}{2}-(1-\cos x)^{n}$
-	
-	(1). $$G_{n}'(x)=-n\sin x(1-\cos x)^{n-1}$$
-	
-	当$x\in(0,\dfrac{\pi}{2})$,$G_{n}'(x)<0$,$\ G_{n}(x)$在$(0,\dfrac{\pi}{2})$单调递减.
-	
-	$$G_{n}(0)=\dfrac{1}{2}>0,\ G_{n}(\dfrac{\pi}{2})=-\dfrac{\pi}{2}<0$$
-	
-	我们根据零点定理,可以得到:  $\exists \text{唯一的}x_{n}\in(0,\dfrac{\pi}{2}),\ s.t. G_{n}(x_{n})=0$
-	
-	(2). 我们将$x=\arccos\dfrac{1}{n}$代入$G_{n}(x)$得到:  
-	$$G_{n}(\arccos\dfrac{1}{n})=\dfrac{1}{2}-(1-\dfrac{1}{n})^{n}$$
-	
-	我们知道:  $\lim\limits_{n\rightarrow+\infty}(1-\dfrac{1}{n})^{n}=\dfrac{1}{e}\Rightarrow G_{n}(\arccos\dfrac{1}{n})>0$
-	
-	我们需要证明:  $(1-\dfrac{1}{n})^n$单调性,我们构造辅助函数:  $H(x)=e^{xln(1-\dfrac{1}{x})},x\geq 2$
-	
-	我们可以得到:  $H'(x)=e^{xln(1-\dfrac{1}{x})}[ln(1-\dfrac{1}{x})+\dfrac{1}{x-1}]>0$,$H(x)$单调递增.
-	
-	所以$G_{n}(\arccos\dfrac{1}{n})$单调递减,且$\lim\limits_{n\rightarrow+\infty}G_{n}(\arccos\dfrac{1}{n})=\dfrac{1}{2}-\dfrac{1}{e}>0$,我们得到:  $$\arccos \dfrac{1}{n}<x_{n}<\dfrac{\pi}{2}$$
-	
-	我们再由夹逼定理可以得到:  
-	$$\left\lbrace
-	\begin{array}{l}
-		\lim\limits_{n\rightarrow  +\infty}\arccos \dfrac{1}{n}=\dfrac{\pi}{2}\\
-		\lim\limits_{n\rightarrow  +\infty}\dfrac{\pi}{2}=\dfrac{\pi}{2}
-	\end{array}
-	\right. \Rightarrow \lim\limits_{n\rightarrow +\infty}x_{n}=\dfrac{\pi}{2}$$
-	
-\end{solution}
-\begin{anymark}[注]
-	[题目来源]:  $880\text{第一章综合} \ P_{6}$
-\end{anymark}
-\myspace{1}
-
-35. 设$x_{1}>0$,数列$\{x_{n}\}$满足$x_{n+1}=ln(e^{x_{n}}-1)-ln x_{n}$,证明:  $\lim\limits_{n\rightarrow +\infty}x_{n}$存在并求其值.
-\myspace{1}
-\begin{solution}
-	
-	我们由:  $x_{n+1}=ln(e^{x_{n}}-1)-ln x_{n}$可以得到:  
-	$$e^{x_{n+1}}=\dfrac{e^{x_{n}}-1}{x_{n}}$$
-	
-	我们构造辅助函数$f(x)=e^x-x-1$,$f'(x)=e^{x}-1$
-	
-	当$x>0$时,我们知道:  $f'(x)>0$,$f(x)$单调递增,$f(x)>f(0)=0\Rightarrow  x>0,\dfrac{e^x-1}{x}>1$
-	
-	我们有$x_{1}>0\Rightarrow e^{x_{2}}>1\Rightarrow x_{2}>0$,我们由归纳法可知:  $x_{n}>0$,数列$\{ x_{n}\}$有下界.
-	
-	我们由拉格朗日中值定理可以得到:  
-	$$e^{x_{n+1}}=\dfrac{e^{x_{n}}-1}{x_{n}}=e^{\xi},\text{其中}\xi\in(0,x_{n})$$
-	
-	我们得到:  $x_{n+1}=\xi<x_{n}$,数列$\{x_{n}\}$单调递减,我们由单调有界准则可以得到:  数列$\{x_{n}\}$极限必定存在,我们不妨假设$\lim\limits_{n\rightarrow +\infty}x_{n}=a$,我们有:  
-	$$e^{a}=\dfrac{e^a-1}{a}\Rightarrow a=0$$
-	
-	综上所述,数列$\{x_{n}\}$极限存在,其值为$0$
-\end{solution}
-\begin{anymark}[注]
-	[题目来源]:  $880\text{第一章综合} \ P_{13}$
-\end{anymark}
-\myspace{1}
-
-36. 设$f(x)$在$(a,b)$内连续,且$\lim\limits_{x\rightarrow a^{+}}f(x)=\lim\limits_{x\rightarrow b^{-}}f(x)=-\infty$,证明:  $f(x)$在$(a,b)$内有最大值.
-\myspace{1}
-\begin{solution}
-	
-	我们不妨取$M=f(\dfrac{a+b}{2})$,我们有$\lim\limits_{x\rightarrow a^{+}}f(x)=\lim\limits_{x\rightarrow b^{-}}f(x)=-\infty$
-	
-	我们由极限定义可以得到:  
-	$$\left\lbrace
-	\begin{array}{l}
-		\exists a<c<\dfrac{a+b}{2},\ x\in(a,c),\ s.t. f(x)\leq f(\dfrac{a+b}{2})\\
-		\exists \dfrac{a+b}{2}<d<b,\ x\in(d,b),\ s.t. f(x)\leq f(\dfrac{a+b}{2})
-	\end{array}
-	\right. $$
-	
-	在闭区间$[c,d]$上,$f(x)$连续,$f(x)$必定有最大值为$f(\xi),\ \xi\in[c,d]$,且$f(\xi)\geq f(\dfrac{a+b}{2})$.在区间$(a,c)\cup (d,b)$上,我们有$f(x)\leq f(\dfrac{a+b}{2})$.
-	
-	综上所述,$f(x)$在区间$(a,b)$内有最大值.
-\end{solution}
-\begin{anymark}[注]
-	[题目来源]:  $880\text{第一章综合} \ P_{16}$
-\end{anymark}
-\myspace{1}
-
-37. 设$f(x)$在$[a,b]$上可导,且$|f'(x)|<1$,当$x\in[a,b]$时,有$a<f(x)<b$,$F(x)=\dfrac{x+f(x)}{2}$,证明:  
-
-(1). $\exists x^{*}\in(a,b),\ s.t. F(x^{*})=x^{*}$
-
-(2). 对$x_{0}\in[a,b]$,数列$\{x_{n}\}$满足$x_{n+1}=F(x_{n}),(n=0,1,2,\cdots)$,有$\lim\limits_{n\rightarrow+\infty}x_{n}=x^{*}$
-\myspace{1}
-\begin{solution}
-	
-	(1). 我们构造辅助函数:  $G(x)=F(x)-x=\dfrac{f(x)-x}{2}$,我们有:  $G'(x)=\dfrac{f'(x)-1}{2}$
-	
-	又因为:  $|f'(x)|<1\Rightarrow G'(x)<0\Rightarrow G(x)\text{单调递减}$
-	$$\left\lbrace
-	\begin{array}{l}
-		G(a)=\dfrac{f(a)-a}{2}>0\\
-		G(b)=\dfrac{f(b)-b}{2}<0
-	\end{array}
-	\right. \Rightarrow G(a)G(b)<0$$
-	
-	我们根据零点定理可知:  $\exists x^{*}\in(a,b),\ s.t. G(x^{*})=0\Rightarrow \exists x^{*}\in(a,b),\ s.t. F(x^{*})=x^{*}$
-	
-	(2). 
-	$F'(x)=\dfrac{1+f'(x)}{2}\geq 0\Rightarrow F(x)\text{单调递增}$
-	
-	(i). 当$x_{0}=x^{*}$时,$x_{n}=x^{*}$,此时$\lim\limits_{n\rightarrow +\infty}x_{n}=x^{*}$
-	
-	(ii). 当$x_{0}>x^{*}$时,我们有$G(x^{*})>G(x_{0})\Rightarrow F(x_{0})<x_{0}\Rightarrow x_{1}<x_{0}$
-	
-	当$n=1$时,$x_{1}<x_{0}$;
-	
-	当$n=k$时,$x_{k}<x_{k-1}$成立,当$n=k+1$时,我们有$F(x_{k})<F(x_{k-1})\Rightarrow x_{k+1}<x_{k}$
-	
-	我们得到数列$\{x_{n}\}$单调递减,且$x_{0}\in[a,b],\ x_{n}=\dfrac{x_{n}+f(x_{n})}{2},\ a<f(x)<b\Rightarrow x_{n}\in[a,b]$,数列$\{x_{n}\}$单调递减且有下界,极限必定存在.
-	
-	我们不妨假设数列$\{x_{n}\}$的极限为$A$,我们有:  $A=\dfrac{A+f(A)}{2}\Rightarrow F(A)=A\Rightarrow A=x^{*}$
-	
-	(iii). 当$x_{0}<x_{*}$时,我们有$G(x^{*})<G(x_{0})\Rightarrow F(x_{0})>x_{0}\Rightarrow x_{1}>x_{0}$
-	
-	当$n=1$时,$x_{1}>x_{0}$;
-	
-	当$n=k$时,$x_{k}>x_{k-1}$成立,当$n=k+1$时,我们有$F(x_{k})>F(x_{k-1})\Rightarrow x_{k+1}>x_{k}$
-	
-	我们得到数列$\{x_{n}\}$单调递增,且$x_{0}\in[a,b],\ x_{n}=\dfrac{x_{n}+f(x_{n})}{2},\ a<f(x)<b\Rightarrow x_{n}\in[a,b]$,数列$\{x_{n}\}$单调递增且有上界,极限必定存在.
-	
-	我们不妨假设数列$\{x_{n}\}$的极限为$A$,我们有:  $A=\dfrac{A+f(A)}{2}\Rightarrow F(A)=A\Rightarrow A=x^{*}$
-	
-	综上所述,我们得到:  $\lim\limits_{n\rightarrow+\infty}x_{n}=x^{*}$
-\end{solution}
-\begin{anymark}[注]
-	[题目来源]:  $880\text{第一章扩展} \ P_{1}$
-\end{anymark}
-\myspace{1}
-
-38. (1).设$f(x)$是$[0,+\infty)$上单调减少且非负的连续函数,证明:  $$f(k+1)\leq \int_{k}^{k+1}f(x)dx\leq f(k),\ k=1,2,\cdots$$
-
-(2). 证明:  $ln(1+n)\leq 1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}\leq 1+ln n$,求极限$\lim\limits_{n\rightarrow+\infty}\dfrac{1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}}{ln n}$
-\myspace{1}
-\begin{solution}
-	
-	(1). 我们由$f(x)$单调减少且非负得到:  
-	$$0\leq f(k+1)\leq f(x)\leq f(k),\ x\in[k,k+1]$$
-	
-	我们对上述不等式在$[k,k+1]$上同时求定积分得到:  
-	$$\int_{k}^{k+1}f(k+1)dx\leq \int_{k}^{k+1}f(x)dx\leq \int_{k}^{k+1}f(k)dx\Rightarrow f(k+1)\leq \int_{k}^{k+1}f(x)dx\leq f(k)$$
-	
-	(2). 我们构造辅助函数$f(x)=\dfrac{1}{x}$,我们可以知道$f(x)$在$(0,+\infty)$上单调递减且非负,我们由(1)可以知道:  
-	$$\left\lbrace
-	\begin{array}{l}
-		\dfrac{1}{2}\leq \int_{1}^{2}\dfrac{1}{x}dx\leq 1\\
-		\dfrac{1}{3}\leq \int_{2}^{3}\dfrac{1}{x}dx\leq \dfrac{1}{2}\\
-		\cdots\\
-		\dfrac{1}{n}\leq \int_{n-1}^{n}\dfrac{1}{x}dx\leq \dfrac{1}{n-1}\\
-		\dfrac{1}{n+1}\leq \int_{n}^{n+1}\dfrac{1}{x}dx\leq \dfrac{1}{n}
-	\end{array}
-	\right. \Rightarrow \left\lbrace
-	\begin{array}{l}
-		\sum\limits_{k=2}^{n+1}\dfrac{1}{k}\leq \int_{1}^{n+1}\dfrac{1}{x}=ln(1+n)\leq \sum\limits_{k=1}^{n}\dfrac{1}{k}\\
-		\sum\limits_{k=2}^{n}\dfrac{1}{k}\leq \int_{1}^{n}\dfrac{1}{x}=ln n\\
-		\sum\limits_{k=1}^{n}\dfrac{1}{k}=1+\sum\limits_{k=2}^{n}\dfrac{1}{k}\leq 1+ln n
-	\end{array}
-	\right. $$
-	
-	我们由夹逼定理可以得到:  
-	$$\left\lbrace
-	\begin{array}{l}
-		\lim\limits_{n\rightarrow +\infty}\dfrac{ln(1+n)}{ln n}=1\\
-		\lim\limits_{n\rightarrow +\infty}\dfrac{1+ln n}{ln n}=1
-	\end{array}
-	\right. \Rightarrow \lim\limits_{n\rightarrow  +\infty}\dfrac{1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}}{ln n}=1$$
-\end{solution}
-\begin{anymark}[注]
-	[题目来源]:  $880\text{第一章扩展} \ P_{2}$
-\end{anymark}
-\myspace{1}
-
-39. 矩阵的谱分解定理
 \begin{definition}[代数重复度]
 	设$\lambda_{1},\lambda_{2},\cdots,\lambda_{k}$是矩阵$A\in \mathbb{C}^{n\times n}$的相异特征值,其重数分别为$r_{1},r_{2},\cdots,r_{k}$,称$r_{i}$为矩阵$A$的特征值$\lambda_{i}$的代数重复度.
 \end{definition}
@@ -1224,6 +432,8 @@ $$Y_{i}X_{j}=\left\lbrace
 	综上所述,矩阵$A$的谱分解是唯一的.
 \end{anymark}
 \myspace{1}
+
+\section{积分训练}
 40. 积分训练
 \begin{anymark}[积分训练]
 	(1). $\int \dfrac{x\sin x}{(1+\cos^2x)^{\frac{3}{2}}}dx$
@@ -1681,24 +891,6 @@ $$Y_{i}X_{j}=\left\lbrace
 \end{anymark}
 \myspace{1}
 
-41. 驻点、极值点、拐点
-\begin{definition}[极值点]
-	设函数$f(x)$在点$x_{0}$的某邻域$U(x_{0})$内有定义,如果对去心邻域内任意一$x$,均有$f(x)<f(x_{0})(\text{或}f(x)>f(x_{0}))$,我们称$f(x_{0})$是函数$f(x)$的一个极小值(或极大值).
-\end{definition}
-\begin{definition}[驻点]
-	一阶导数为$0$的点称为驻点;对于多元函数而言,驻点是一阶偏导数都为$0$的点.
-\end{definition}
-\begin{definition}[拐点]
-	连续函数$f(x)$在区间$I$上连续,$x_{0}$是区间的内点,当函数$f(x)$经过点$(x_{0},f(x_{0}))$时,函数的凹凸性发生改变,则称$(x_{0},f(x_{0}))$是函数$f(x)$的拐点.
-\end{definition}
-\begin{anymark}[注]
-	\begin{itemize}
-		\item 驻点是导数为$0$的点,不一定是极值点
-		\item 极值点导数可能存在,也可能不存在;当导数存在时,$f'(x_{0})=0$
-		\item 拐点处二阶导数可能存在,也可能不存在;当二阶导数存在时,$f''(x_{0})=0$
-	\end{itemize}
-\end{anymark}
-\myspace{1}
 
 42. 常见不定积分
 \begin{anymark}[常见不定积分]
@@ -1831,6 +1023,7 @@ $$Y_{i}X_{j}=\left\lbrace
 
 47. 压缩映射原理
 
+\section{多项式函数极值点和拐点}
 48. 多项式函数极值点和拐点个数
 
 \begin{theorem}[代数基本定理]\label{the: 代数基本定理}
@@ -1949,5 +1142,52 @@ $$Y_{i}X_{j}=\left\lbrace
 	\end{corollary}
 \end{anymark}
 
+49. 柯西收敛准则
+
+\begin{theorem}[柯西收敛准则]\label{the: 柯西收敛准则}
+	柯西极限存在准则, 又称柯西收敛准则, 给出某个式子(数列、数项级数、函数等)收敛的一个充分必要条件, 主要应用在数列、数项级数、函数、反常积分、函数列和函数项级数等的收敛性判断中.
+\end{theorem}
+
+\begin{proposition}[柯西收敛准则:数列]
+	数列 $\{a_{n}\}$ 收敛的充分必要条件是: 对于任意 $\varepsilon > 0$, 存在 $N\in\mathbb{N}$, 当 $n,m>N$ 时, $|a_{n}-a_{m}|<\varepsilon$, 我们将满足条件的 $\{a_{n}\}$ 称为柯西序列, 上述定理也可表述为: 数列 $\{a_{n}\}$ 收敛当且仅当 $\{a_{n}\}$ 是柯西序列
+\end{proposition}
+
+\begin{anymark}[证明]
+	(1). 必要性:
+
+	不妨设 $\lim\limits_{n\to \infty} a_{n} =\eta$, 对于任意 $\varepsilon > 0$, 存在 $N_{0}\in\mathbb{N}$, 当 $n>N_{0}$ 时, $|a_{n}-\eta|<\dfrac{\varepsilon}{2}$, 我们有:
+	$$\begin{cases} 
+		\forall n > N_{0}, s.t.\ |a_{n} - \eta| < \dfrac{\varepsilon}{2}\\ 
+		\forall m > N_{0}, s.t.\ |a_{m} - \eta| < \dfrac{\varepsilon}{2}
+	\end{cases}
+	\Rightarrow 
+	|x{n}-x_{m}| = |(x_{n} - \eta) - (x_{m} - \eta)| \leq |x_{n} - \eta| + |x_{m}-\eta| \leq \varepsilon$$
+
+	(2). 充分性:
 
 
+\end{anymark}
+
+\begin{proposition}[柯西收敛准则:数项级数]
+	
+\end{proposition}
+
+\begin{anymark}[证明]
+	(1). 必要性:
+
+	不妨设 $\lim\limits_{n\to \infty} a_{n} =\eta$, 对于任意 $\varepsilon > 0$, 存在 $N_{0}\in\mathbb{N}$, 当 $n>N_{0}$ 时, $|a_{n}-\eta|<\dfrac{\varepsilon}{2}$, 我们有:
+	$$\begin{cases} 
+		\forall n > N_{0}, s.t.\ |a_{n} - \eta| < \dfrac{\varepsilon}{2}\\ 
+		\forall m > N_{0}, s.t.\ |a_{m} - \eta| < \dfrac{\varepsilon}{2}
+	\end{cases}
+	\Rightarrow 
+	|x_{n}-x_{m}| = |(x_{n} - \eta) - (x_{m} - \eta)| \leq |x_{n} - \eta| + |x_{m}-\eta| \leq \varepsilon$$
+
+	(2). 充分性:
+
+
+\end{anymark}
+
+\begin{proposition}[柯西收敛准则:函数]
+	
+\end{proposition}

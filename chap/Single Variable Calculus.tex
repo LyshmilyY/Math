@@ -1,4 +1,153 @@
 \chapterimage{chap1.jpg}
+\chapter{预备知识}
+\chapterimage{chap2.jpg}
+\chapter{数列极限}
+
+\chapterimage{chap3.jpg}
+\chapter{函数极限和连续}
+
+\chapterimage{chap4.jpg}
+\chapter{一元微分学}
+\section{一元微分学概念}
+\begin{definition}[导数]
+	设 $y=f(x)$ 定义在区间 $I$ 上, 自变量在 $x=x_{0}$ 处增加一个增量 $\Delta x$ 时, 其中 $x_{0}\in I, x_{0}+\Delta\in I$, 函数值的增量 $\Delta y=f(x_{0}+\Delta x)-f(x_{0})$, 如果极限 $\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}$ 存在, 那么称此极限为函数 $y=f(x)$ 在点 $x_{0}$ 处的导数, 记为 $f'(x_{0})$ 或 $\frac{dy}{dx}|_{x=x_{0}}$ 或 $\dfrac{df(x)}{dx}|_{x=x_{0}}$
+\end{definition}
+\begin{definition}[导数的几何意义]
+	函数 $y=f(x)$ 在点 $x=x_{0}$ 处的导数 $f'(x_{0})$ 是函数 $y=f(x)$ 在点 $x=x_{0}$ 处的切线的斜率
+\end{definition}
+
+\begin{theorem}[导数存在充要条件]
+	函数 $y=f(x)$ 在点 $x=x_{0}$ 处可导的充要条件是: 函数 $y=f(x)$ 在点 $x=x_{0}$ 处的左导数 $f'_{-}(x_{0})$ 和右导数 $f'_{+}(x_{0})$ 存在且相等
+\end{theorem}
+
+\begin{definition}[微分]
+	设 $y=f(x)$ 定义在区间 $I$ 上, 如果函数 $y=f(x)$ 在点 $x_{0}$ 处可导, 那么函数 $y=f(x)$ 在点 $x_{0}$ 处的微分为 $dy=f'(x_{0})dx$, 其中 $dx$ 是自变量 $x$ 的增量, $dy$ 是因变量 $y$ 的增量
+\end{definition}
+\section{一元微分学计算}
+\begin{theorem}[基本求导公式]
+	\begin{enumerate}
+		\item $(x^{\alpha})'= \alpha x^{\alpha-1}$
+		\item $(a^{x})'= a^{x}\ln a \qquad\qquad (\log_{a}x)'= \dfrac{1}{x\ln a}$
+		\item $(e^{x})'= e^{x}\qquad \qquad (\ln x)' = \dfrac{1}{x}$
+		\myspace{1}
+		\item $(\sin x)' = \cos x\qquad \qquad (\cos x)' = -\sin x$
+		\item $(\tan x)' = \sec^{2} x = \dfrac{1}{\cos^{2} x}$
+		\item $(\sec x)' = \dfrac{\sin x}{\cos^{2}x} = \tan x\sec x$
+		\item $(\csc x)' = \dfrac{-\cos x}{\sin^{2} x} = -\cot x\csc x$
+		\item $(\cot x)' = -\csc^{2} x$
+		\myspace{1}
+		\item $(\arcsin x)' = \dfrac{1}{\sqrt{1-x^{2}}}$
+		\item $(\arccos x)' = -\dfrac{1}{\sqrt{1-x^{2}}}$
+		\item $(\arctan x)' = \dfrac{1}{x^{2}+1}$
+		\myspace{1}
+		\item $\left(\ln(x+\sqrt{x^{2}+a})\right)' = \dfrac{1}{\sqrt{x^{2}+a}}$
+		\item $\left(\ln(x+\sqrt{x^{2}-a})\right)' = \dfrac{1}{\sqrt{x^{2}-a}}$
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[导数四则运算]
+	\begin{enumerate}
+		\item 和差法则: $[f(x)\pm g(x)]' = f'(x) \pm g'(x)$
+		\item 积法则: $[f(x)g(x)]' = f'(x)g(x) + f(x)g'(x)$
+		\item 商法则: $\left[\dfrac{f(x)}{g(x)}\right]' = \dfrac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^{2}}$
+		\item 复合函数求导: $F[G(x)]' = F[G(x)]'\cdot G'(x)$
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[高阶导数]
+	\begin{enumerate}
+		\item $\sin^{(n)} x = \sin (x+\frac{n\pi}{2})\qquad \qquad\sin^{(n)}(ax+b) = a^{n} \sin(ax+b+\frac{n\pi}{2})$
+		\item $\cos^{(n)} x = \cos (x+\frac{n\pi}{2})\qquad\qquad \cos^{(n)}(ax+b) = a^{n} \cos(ax+b+\frac{n\pi}{2})$
+		\item $[\ln(1+x)]^{(n)} = (-1)^{n-1}\dfrac{(n-1)!}{(1+x)^{n}}\qquad\qquad [\ln(1+x)]^{(n)} = (-1)^{n-1}\dfrac{(n-1)!a^{n}}{(ax+b)^{n}}$
+		\item $(\dfrac{1}{ax+b})^{(n)} = (-1)^{n-1}\dfrac{(n-1)!a^{n}}{(ax+b)^{n+1}}$
+		\item 莱布尼茨公式: $(uv)^{n} = \sum\limits_{i=0}^{n}\binom{i}{n}u^{(i)}v^{(n-i)}$
+
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[泰勒公式]
+	\begin{enumerate}
+		\item 欧拉公式: $e^{i\theta}=\cos \theta+i\sin\theta$
+		\item $e^{x}=1+x+\dfrac{x^{2}}{2!}+\cdots+\dfrac{x^{n}}{n!}+\cdots, x\in(-\infty,+\infty)$
+		\item $\sin x = x-\dfrac{x^{3}}{3!}+\dfrac{x^{5}}{5!}-\dfrac{x^{7}}{7!}+\cdots+(-1)^{2n+1}\dfrac{x^{2n-1}}{(2n-1)!}+\cdots, x\in(-\infty,+\infty)$
+		\item $\cos x=1-\dfrac{x^{2}}{2!}+\dfrac{x^{4}}{4!}-\dfrac{x^{6}}{6!}+\cdots+(-1)^{2n-1}\dfrac{x^{2n-2}}{(2n-2)!}+\cdots, x\in(-\infty,+\infty)$
+		\item $\tan x = x+\dfrac{x^{3}}{3}+\cdots=\sum\limits_{n=0}^{\infty}\dfrac{B_{2n}(-4)^{n}(1-4^{n})}{(2n)!}x^{2n-1}, x\in(-\dfrac{\pi}{2},\dfrac{\pi}{2})$
+		\myspace{1}
+		\item $\arcsin x = x+\dfrac{x^{3}}{6}+\cdots=\sum\limits_{n=0}^{\infty}\dfrac{(2n)!}{4^{n}(n!)^{2}(2n+1)}x^{2n+1}, x\in(-1,1)$
+		\item $\arctan x = x-\dfrac{x^{3}}{3}+\cdots = \sum\limits_{n=0}^{\infty}\dfrac{(-1)^{n}}{2n+1}x^{2n+1}, x\in(-1,1)$
+		\myspace{1}
+		\item $\ln (1+x) = x-\dfrac{x^{2}}{2}+\cdots+(-1)^{n+1}\dfrac{x^{n}}{n}+\cdots, x\in(-1,1]$
+		\item $\ln (1-x) =-x-\dfrac{x^{2}}{2}-\cdots-\dfrac{x^{n}}{n}+\cdots, x\in[-1,1)$
+		\item $(1+x)^{\alpha} = 1+\alpha x+\dfrac{\alpha(\alpha-1)}{2!}x^{2}+\cdots+\dfrac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^{n}$
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[特殊函数导函数]
+1. 隐函数导数: 
+
+$$F(x,y) = 0\Rightarrow F'(x,y) \cdot y'= 0$$
+
+2. 指对数函数求导: 
+
+$$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a^{f(x)}\Rightarrow y = e^{f(x)\ln a}$$
+
+3. 反函数导数: $x = \varphi(y),y=f(x)$ 记 $x_{y}' = \varphi'(y),y_{x}' = f'(x)$
+\myspace{1}
+(1). 一阶导数: $x_{y}' y_{x}' =1\Rightarrow \varphi'(y) = \dfrac{1}{f'(x)}$
+
+(2). 二阶导数: $x_{yy}'' =-\dfrac{y_{x}''}{(y_{x}')^{3}}\qquad\qquad y_{xx}'' = -\dfrac{x_{yy}''}{(x_{y}')^{3}}$
+\myspace{1}
+4. 参数方程导数: $x = x(t), y = y(t)$
+\myspace{1}
+(1). 一阶导数: $\dfrac{dy}{dx} = \dfrac{dy}{dt}\cdot \dfrac{dx}{dt} = \dfrac{y'(t)}{x'(t)}$
+
+(2). 二阶导数: $\dfrac{d^{2}y}{dx^{2}} = \dfrac{\frac{dy}{dx}}{dx} = \dfrac{\frac{dy}{dx}}{dt}\cdot \dfrac{dx}{dt} = \dfrac{dx}{dx}\left[\dfrac{d^{2}y}{dt^{2}}\cdot \dfrac{dx}{dt}+\dfrac{d^{2}x}{dt^{2}}\cdot \dfrac{dy}{dt}\right]$
+\end{theorem}
+
+\section{函数图像}
+
+\begin{definition}[函数图像要点]
+	\begin{enumerate}
+		\item 定义域(间断点)
+		\item 奇偶性
+		\item 渐近线(铅垂、水平、斜)
+		\begin{anymark}[Points]
+			(1). $$\begin{cases}\text{水平渐近线:} \lim\limits_{x\to\infty}f(x)=a\Rightarrow y=a\\
+				\text{铅垂渐近线:} \lim\limits_{x\to a}f(x)=\infty\Rightarrow x=a \\
+				\text{斜渐近线:} \lim\limits_{x\to\infty}\dfrac{f(x)}{x}=a, \lim\limits_{x\to\infty}f(x)-ax = b\Rightarrow y=ax+b
+			\end{cases}$$
+			(2). 在同一个趋向方向中水平渐近线和斜渐进线只能有一个
+
+			(3). 间断点处看铅垂渐近线, $\pm \infty$ 处看水平渐近线和斜渐近线
+		\end{anymark}
+		\item 单调性和极值
+		\item 凹凸性和拐点
+	\end{enumerate}
+\end{definition}
+
+\subsection{函数极值点和拐点}
+
+\begin{definition}[极值点]
+	设函数$f(x)$在点$x_{0}$的某邻域$U(x_{0})$内有定义,如果对去心邻域内任意一$x$,均有$f(x)<f(x_{0})(\text{或}f(x)>f(x_{0}))$,我们称$f(x_{0})$是函数$f(x)$的一个极小值(或极大值).
+\end{definition}
+\begin{definition}[驻点]
+	一阶导数为$0$的点称为驻点; 对于多元函数而言,驻点是一阶偏导数都为$0$的点.
+\end{definition}
+\begin{definition}[拐点]
+	连续函数$f(x)$在区间$I$上连续,$x_{0}$是区间的内点,当函数$f(x)$经过点$(x_{0},f(x_{0}))$时,函数的凹凸性发生改变,则称$(x_{0},f(x_{0}))$是函数$f(x)$的拐点.
+\end{definition}
+\begin{anymark}[注]
+	\begin{itemize}
+		\item 驻点是导数为$0$的点,不一定是极值点
+		\item 极值点导数可能存在,也可能不存在;当导数存在时,$f'(x_{0})=0$
+		\item 拐点处二阶导数可能存在,也可能不存在;当二阶导数存在时,$f''(x_{0})=0$
+	\end{itemize}
+\end{anymark}
+
+
+\chapterimage{chap5.jpg}
+\chapter{一元积分学}
+\chapterimage{chap6.jpg}
 \chapter{中值定理}
 \section{定理性质和证明}
 \begin{theorem}[有界和最值定理]
@@ -153,10 +302,10 @@
 	$g'_{+}(a)=f'_{+}(a)-\eta<0\ g'_{-}(b)=f'_{-}(b)-\eta>0$
 
 	我们利用极限的保号性得到:
-	\begin{cases}
+	$$\begin{cases}
 		\exists \delta_{1}>0, s.t. g(x)<g(a),\ x\in(a,a+\delta_{1}) \\
 		\exists \delta_{2}>0, s.t. g(x)<g(b),\ x\in(b-\delta_{2},b)
-	\end{cases}
+	\end{cases}$$
 
 	$g(x)$ 是连续可导函数, 由费马定理,我们得到: $g(x)$ 最小值一定在 $(a,b)$ 内取得, 且 $g'(\xi)=0\to f'(\xi) -\eta =0$
 
@@ -1994,7 +2143,7 @@
 \end{solution}
 
 \myspace{1}
-\chapterimage{chap2.jpg}
+\chapterimage{chap7.jpg}
 \chapter{一元微积分应用}
 \section{一元微分学应用}
 \subsection{相关变化率}
@@ -2104,7 +2253,7 @@
 	3. $F=\rho g\int_{a}^{b}x(f(x)-h(x))dx$
 \end{definition}
 \section{微分方程应用}
-\chapterimage{chap3.jpg}
+\chapterimage{chap7.jpg}
 \chapter{无穷级数}
 
 \begin{definition}
@@ -2349,7 +2498,7 @@ $$f(x)=-f(-x),a_{n}=0,b_{n}=\dfrac{2}{l}\int_{-l}{l}f(x)\sin \dfrac{n\pi}{l}xdx$
 
 	2. 级数 $\sum\limits_{n=1}^{+\infty}\dfrac{1}{n!}$ 收敛,$\lim\limits_{n\rightarrow+\infty}S_{n}=e$
 \end{anymark}
-\chapterimage{chap4.jpg}
+\chapterimage{chap8.jpg}
 \chapter{常微分方程}
 
 \begin{definition}
@@ -2445,7 +2594,7 @@ $$\frac{dy}{dx}=f(x,y)$$
 
 	2. 当 $x<0$ 时,令 $x=-e^t,t=\ln(-x);\dfrac{dt}{dx}=\dfrac{1}{x}$,同理可得
 \end{definition}
-\chapterimage{chap5.jpg}
+\chapterimage{chap9.jpg}
 \chapter{二重积分}
 \section{概念和性质}
 \begin{definition}[二重积分]
