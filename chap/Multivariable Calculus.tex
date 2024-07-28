@@ -1,3 +1,68 @@
+\chapterimage{chap9.jpg}
+\chapter{二重积分}
+\section{概念和性质}
+\begin{definition}[二重积分]
+	三维空间中曲顶柱体的体积:
+	$$\iint\limits_{D}f(x,y)d\sigma$$
+	类比于一元定积分的概念,我们可以得到很好相似的性质:
+	$$\int_{a}^{b}1dx=b-a\qquad \iint\limits_{D}1d\sigma=S_{D}$$
+\end{definition}
+\begin{theorem}[对称性]
+	1. 普通对称性
+
+	区域 $D$ 关于$x$轴或者$y$轴对称,且被积函数 $f(x,y)$ 满足 $f(x,y)+f(-x,y)=0$ 或者 $f(x,y)+f(x,-y)=0$,我们得到 $\iint\limits_{D}f(x,y)d\sigma=0$
+
+	2. 轮换对称性
+
+	只要区域 $D$ 是关于直线 $y=x$ 对称,$I=\iint\limits_{D}f(x,y)d\sigma=\iint\limits_{D}f(y,x)d\sigma$
+\end{theorem}
+\section{计算}
+
+1. 直角坐标(重要的是积分次序)\label{def: 积分次序}
+
+$$\iint\limits_{D}f(x,y)d\sigma=\left\lbrace\begin{array}{l}
+		\int_{a}^{b}dx\int_{h(x)}^{g(x)}f(x,y)dy \\	\int_{a}^{b}dy\int_{p(y)}^{q(y)}f(x,y)dx
+	\end{array}\right. $$
+
+2. 极坐标计算(二重积分变量替换公式)\label{def: 极坐标计算二重积分}
+$$\iint\limits_{D}f(x,y)d\sigma=\iint\limits_{D'}rf(r\cos \theta,r\sin \theta)drd\theta$$
+
+3.变量替换\label{def: 变量替换}
+
+设$D$和$D^{'}$是平面上两个(有界)区域,$D$到$D^{'}$的对应$\varphi :(u,v)\rightarrow(x,y)$ (这里 $x=x(u,v),y=y(u,v)$ 连续可微),称为变量替换,要求 $\varphi$ 在一个面积为 $0$ 的集合外是 $1-1$,我们有:
+$$dxdy=J_{\varphi}(u,v)dudv, J_{\varphi}(u,v)=\dfrac{D(x,y)}{D(u,v)}=\left| \begin{matrix}
+		\frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\
+		\frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}
+	\end{matrix}
+	\right| $$
+
+\begin{anymark}[注]
+	$$d\sigma_{1}=dudv \quad d\sigma_{2}=|l\times m|$$
+	$$\left\lbrace
+		\begin{array}{l}
+			x(u,v+dv)-x(u,v)=x'_{v}dv \\
+			x(u+du,v)-x(u,v)=x'_{u}du \\
+			y(u,v+dv)-y(u,v)=x'_{v}dv \\
+			y(u+du,v)-y(u,v)=y'_{u}du
+		\end{array}
+		\right. \Rightarrow \left\lbrace
+		\begin{array}{l}
+			l=(x'_{u}du,y'_{u}du) \\
+			m=(x'_{v}dv,y'_{v}dv)
+		\end{array}
+		\right.$$
+	$$d\sigma_{2}=(x'_{u}y'_{v}-x'_{v}y'_{u})dvdu=\left| \begin{matrix}
+			x'_{u} & x'_{v} \\
+			y'_{u} & y'_{v}
+		\end{matrix}
+		\right| d\sigma_{1}$$
+\end{anymark}
+\section{二重积分解决一元积分}
+几个比较经典的例子:
+
+1. $\int_{0}^{+\infty}e^{-x^2}dx$
+
+2. $\int_{0}^{a}f(x)dx\int_{0}^{a}\frac{1}{f(x)}dx\geq a^{2}$
 \chapterimage{chap10.jpg}
 \chapter{多元函数微分}
 \section{多元函数微分概念}

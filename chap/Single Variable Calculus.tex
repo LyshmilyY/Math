@@ -1,13 +1,662 @@
 \chapterimage{chap1.jpg}
 \chapter{预备知识}
+\begin{introduction}
+	\item 函数定义和性质
+	\item 基本不等式
+	\item 柯西不等式
+	\item 三角函数和反三角函数
+	\item 特殊函数
+\end{introduction}
+\section{函数}
+\begin{definition}[函数]
+	$X,Y$ 是给定的两个集合, 若对于任意 $x\in X$, 存在法则 $f$, 使得唯一的 $y = f(x)$ 满足 $y\in Y$, 则称 $f$ 为从 $X$ 到 $Y$ 的一个函数, 记为 $f:X\to Y$, 其中 $X$ 称为定义域, $f(x), x\in X$ 称为值域, 我们知道函数的三要素是定义域、对应法则和值域
+\end{definition}
+
+\begin{definition}[函数的基本性质]
+	\begin{enumerate}
+		\item 单射: 若对于任意 $x_{1},x_{2}\in X$, 若 $x_{1}\neq x_{2}$, 则 $f(x_{1})\neq f(x_{2})$
+		\item 满射: 若对于任意 $y\in Y$, 存在 $x\in X$, 使得 $f(x)=y$
+		\item 双射: 若 $f$ 既是单射又是满射
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}[函数基本运算]
+	\begin{enumerate}
+		\item 基本四则运算
+		\item 复合运算
+		\item 反函数运算
+	\end{enumerate}
+\end{definition}
+
+\begin{property}[函数四大性质]
+	\begin{itemize}
+		\item 有界性
+		\item 奇偶性: $\begin{cases} \text{奇函数: }f(-x) = -f(-x) \\ \text{偶函数: }f(-x) = f(x) \end{cases}$
+		\item 周期性: $f(x+T) = f(x)$
+		\item 单调性: $\forall x_{1},x_{2}\in I (x_{1}\neq x_{2}),\dfrac{f(x_{1}-f(x_{2}))}{x_{1}-x_{2}}>(<)0$, $f(x)$ 单调递增(减)
+	\end{itemize}
+\end{property}
+
+\begin{corollary}[奇偶性推论]
+	任意一个定义在 $[-l,l]$ 上的函数 $f(x)$ 均可以写成一个奇函数和一个偶函数的和 $f(x)=h(x)+g(x)$, 其中 $h(x)=\dfrac{f(x)+f(-x)}{2}$ 是偶函数, $g(x)=\dfrac{f(x)-f(-x)}{2}$ 是奇函数
+\end{corollary}
+
+\begin{corollary}[周期性、中心对称性、轴对称性]
+	
+	1. $f(x)$有对称中心$(a,c)$,且关于直线$x=b$轴对称,我们可以推出$f(x)$的一个周期$T=4|b-a|$.
+	
+	2. $f(x)$有两个对称中心$(a,c)$和$(b,c)$,我们可以推出$f(x)$的一个周期$T=2|b-a|$.
+	
+	3. $f(x)$有两个对称轴直线$x=a$和直线$x=b$,我们可以推出$f(x)$的一个周期$T=2|b-a|$.
+
+\end{corollary}
+\begin{anymark}[证明]
+	1. 我们得到: 
+	$$\begin{cases} f(2a-x)+f(x)=2c  \\ f(2b-x) = f(x)\end{cases}\to \begin{cases} f(2a-x) + f(2b-x) =2c\\ f(2a-2b+x) +f(x) =2c  \end{cases}\to f(x) = f(x+4a-4b)$$
+
+	2. 我们得到:
+	$$\begin{cases} f(2a-x) = f(2b-x)  \\ f(2a-2b+x) = f(x) \end{cases}\to f(x) = f(x+2a-2b)$$
+
+	3. 我们得到:
+	$$\begin{cases} f(2a-x) = f(x)  \\ f(2b-x) = f(x)\end{cases}\to \begin{cases} f(2a-x) = f(2b-x) \\ f(2a-2b+x) = f(x)   \end{cases}\to f(x) = f(x+2a-2b)$$
+\end{anymark}
+
+\subsection{初等函数}
+\begin{definition}[初等函数]
+	初等函数是指可以用有限次基本初等函数和有限次代数运算得到的函数, 六种基本初等函数:
+	\begin{enumerate}
+		\item 常数函数: $y=C$
+		\item 幂函数: $y=x^{\alpha},\alpha\in \mathbb{R}^{*}$
+		\item 指数函数: $y=a^{x},a>0,a\neq 1$
+		\item 对数函数: $y=\log_{a}x,a>0,a\neq 1$
+		\item 三角函数: $y=\sin x, y=\cos x, y=\tan x, y=\cot x, y=\sec x, y=\csc x$
+		\item 反三角函数: $y=\arcsin x, y=\arccos x, y=\arctan x, y=\cot^{-1}(x), y=\sec^{-1}(x), y=\csc^{-1}(x)$
+	\end{enumerate}
+\end{definition}
+
+\subsection{三角函数和反三角函数}
+\begin{theorem}[积化和差\& 和差化积\& 倍角公式]
+	积化和差公式:
+	$$\sin\alpha\sin\beta=\dfrac{1}{2}[\cos(\alpha-\beta)-\cos(\alpha+\beta)]$$
+	$$\cos\alpha\cos\beta=\dfrac{1}{2}[\cos(\alpha-\beta)+\cos(\alpha+\beta)]$$
+	$$\sin\alpha\cos\beta=\dfrac{1}{2}[\sin(\alpha+\beta)+\sin(\alpha-\beta)]$$
+	$$\cos\alpha\sin\beta=\dfrac{1}{2}[\sin(\alpha+\beta)-\sin(\alpha-\beta)]$$
+	和差化积公式:
+	$$\sin\alpha+\sin\beta=2\sin\dfrac{\alpha+\beta}{2}\cos\dfrac{\alpha-\beta}{2}$$
+	$$\sin\alpha-\sin\beta=2\cos\dfrac{\alpha+\beta}{2}\sin\dfrac{\alpha-\beta}{2}$$
+	$$\cos\alpha+\cos\beta=2\cos\dfrac{\alpha+\beta}{2}\cos\dfrac{\alpha-\beta}{2}$$
+	$$\cos\alpha-\cos\beta=-2\sin\dfrac{\alpha+\beta}{2}\sin\dfrac{\alpha-\beta}{2}$$
+	倍角公式:
+	$$\sin 2\alpha = 2\sin\alpha\cos\alpha$$
+	$$\cos 2\alpha = \cos^{2}\alpha-\sin^{2}\alpha = 2\cos^{2}\alpha-1 = 1-2\sin^{2}\alpha$$
+	$$\tan 2\alpha = \dfrac{2\tan\alpha}{1-\tan^{2}\alpha}$$
+	$$\sin 2\alpha = \dfrac{2\tan \alpha}{1+\tan^{2}\alpha}\qquad \qquad \cos 2\alpha = \dfrac{1-\tan^{2}\alpha}{1+\tan^{2}\alpha}$$
+	$$\sin 3\alpha = 3\sin \alpha -4\sin^{3}\alpha\qquad\qquad \cos 3\alpha = 4\cos^{3}\alpha -3\cos \alpha$$
+\end{theorem}
+\begin{definition}[反三角函数]
+	\begin{enumerate}
+		\item $\arcsin x$ 的定义域为 $[-1,1]$, 值域为 $[-\dfrac{\pi}{2},\dfrac{\pi}{2}]$
+		\item $\arccos x$ 的定义域为 $[-1,1]$, 值域为 $[0,\pi]$
+		\item $\arctan x$ 的定义域为 $(-\infty,+\infty)$, 值域为 $(-\dfrac{\pi}{2},\dfrac{\pi}{2})$
+	\end{enumerate}
+\end{definition}
+
+\subsection{特殊函数}
+\begin{definition}[特殊函数]
+	\begin{enumerate}
+		\item 阶乘函数: $$n!=n(n-1)(n-2)\cdots 2\cdot 1, (2n)!! = 2^{n}\cdot n!, 0! = 1$$
+		\item 二项式系数: $$\binom{n}{k}=\dfrac{n!}{k!(n-k)!}, (a+b)^{n} = \sum\limits_{i = 0}^{n}\binom{n}{i}a^{i}b^{n-i}$$
+		\item 绝对值函数: $$|x|=\begin{cases} x & x\geq 0 \\ -x & x<0 \end{cases}$$
+		\item 符号函数: $$sgn(x)=\begin{cases} 1 & x>0 \\ 0 & x=0 \\ -1 & x<0 \end{cases}$$%
+		\item 取整函数: $$f(x) = [x], x-1< [x] \leq x, \lim\limits_{x\to 0^{+}} = 0, \lim\limits_{x\to 0^{-}} =-1$$
+		\item 分段函数: $$f(x)=\begin{cases} f_{1}(x) & x\in D_{1} \\ f_{2}(x) & x\in D_{2} \\ \cdots \end{cases}$$
+		\item 黎曼函数：$$f(x)=\begin{cases} \dfrac{1}{q} & p,q\in \mathbb{Q}, x = \dfrac{p}{q}\in(0,1) \\ 0 & x\notin \mathbb{Q}, x=0,1 \end{cases}$$
+		\item 狄利克雷函数: $$f(x)=\begin{cases} 1 & x\in \mathbb{Q} \\ 0 & x\notin \mathbb{Q} \end{cases}$$
+	\end{enumerate}
+\end{definition}
+
+
+\section{重要不等式和基本公式}
+\begin{theorem}[平均值不等式 $a_{i} > 0$]
+	算术平均值:
+	$$A_{n}=\dfrac{\sum_{i=1}^{n}a_{i}}{n}$$
+	几何平均值:
+	$$G_{n}=\sqrt[n]{\prod_{i=1}^{n}a_{i}}$$
+	平方平均值:
+	$$Q_{n}=\sqrt{\dfrac{\sum_{k=1}^{n}a_{k}^{2}}{n}}$$
+	调和平均值:
+	$$H_{n}=\dfrac{n}{\sum_{i=1}^{k}\frac{1}{a_{i}}}$$
+	平均值不等式:
+	$$Q_{n}\geq A_{n}\geq G_{n}\geq H_{n}, a_{1} = a_{2} = \cdots = a_{n} \text{等号成立}$$
+\end{theorem}
+
+\begin{theorem}[柯西不等式]
+	二维形式:
+	$$(a^{2}+b^{2})(c^{2}+d^{2})\geq (ac+bd)^{2}, \text{当且仅当} ad =bc \text{时等号成立}$$
+	$n$ 维形式:
+	$$\left(\sum_{i=1}^{n}a_{i}b_{i}\right)^{2}\leq \left(\sum_{i=1}^{n}a_{i}^{2}\right)\left(\sum_{i=1}^{n}b_{i}^{2}\right),\text{当且仅当} \dfrac{a_{i}}{b_{i}}=c\text{时等号成立}$$
+	$$\text{向量形式: } (\alpha,\beta)^{2}\leq (\alpha,\alpha)(\beta,\beta)$$
+\end{theorem}
+\begin{theorem}[重要不等式]
+	\begin{enumerate}
+		\item $\sin x < x < \tan x, x\in (0,\dfrac{\pi}{2})\qquad \qquad \arctan x < x < \arcsin x, x\in[0,1]$
+		\item $\dfrac{2}{\pi}x < \sin x < x, x\in(0,\dfrac{\pi}{2})\qquad \qquad x < \tan x < \dfrac{4}{\pi}x , x\in(0,\dfrac{\pi}{4})$
+		\item $e^{x} \geq x + 1,x\in\mathbb{R}\qquad \qquad x-1 \geq \ln x, x\in(0,+\infty)$
+		\item $\dfrac{1}{1+x} < \ln (1+\dfrac{1}{x}) < \dfrac{1}{x}, x\in(0,+\infty)$
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[重要公式]
+	\begin{enumerate}
+		\item $\dfrac{n}{(n+1)!} = \dfrac{1}{n!} - \dfrac{1}{(n+1)!}$
+		\item $(a^{3}-b^{3}) = (a-b)(a^{2}+ab+b^{2})\qquad\qquad (a^{3}+b^{3}) = (a+b)(a^{2}-ab+b^{2})$
+		\item $a^{n} - b^{n} = (a-b)(a^{n-1}-a^{n-2}b+\cdots -ab^{n-2}+b^{n-1})$
+		\item $a^{n} + b^{n} = (a+b)(a^{n-1}-a^{n-1}b+\cdots -ab^{n-2} +b^{n-1}), n\in \{2k+1 | k\in \mathbb{N}\}$
+	\end{enumerate}
+\end{theorem}
+
+\section{坐标系和重要函数图像}
+\subsection{极坐标}
+\begin{definition}[极坐标]
+	极坐标系是平面直角坐标系的一种推广, 它是由一个原点 $O$ 和一个射线 $Ox$ 组成的, 其中 $O$ 称为极点, $Ox$ 称为极轴, 任意一点 $P$ 到极点 $O$ 的距离 $r$ 叫做点 $P$ 的极径, 点 $P$ 到极轴的角 $\theta$ 叫做点 $P$ 的极角, 记为 $P(r,\theta)$
+\end{definition}
+
+\begin{definition}[重要极坐标方程]
+	\begin{enumerate}
+		\item 圆方程: $r = a, r = a\sin\theta, r = a\cos\theta$
+		\item 心形线方程: $r = a(1\pm \cos\theta), r = a(1\pm \sin\theta)$
+		\item 阿基米德螺线方程: $r = a\theta$
+		\item 三叶玫瑰线方程: $r = a\sin 3\theta, r = a\cos 3\theta$
+		\item 伯努利双扭线方程: $r^{2} = a^{2}\cos 2\theta, r^{2} = a^{2}\sin 2\theta$
+	\end{enumerate}
+\end{definition}
+\subsection{参数方程}
+\begin{definition}[参数方程]
+	设 $x=x(t),y=y(t)$, 如果 $x,y$ 都是 $t$ 的函数, 那么称 $x=x(t),y=y(t)$ 为参数方程, $t$ 称为参数
+\end{definition}
+\begin{definition}[重要参数方程]
+	\begin{enumerate}
+		\item 摆线方程: $x = a(t-\sin t), y = a(1-\cos t)$
+		\item 星形线方程: $x = a\cos^{3} t, y = a\sin^{3} t$
+	\end{enumerate}
+\end{definition}
+\begin{anymark}[注]
+	1. 关于双曲函数以及反双曲函数, 在 $\mathbf{def:}$ \ref{def: 双曲函数} 有详细介绍
+	
+	2. 有关极坐标和参数方程常见曲线的方程, 在 $\mathbf{def:}$ \ref{def: 常用曲线} 有详细介绍 
+\end{anymark}
+
+
+
+
 \chapterimage{chap2.jpg}
+
 \chapter{数列极限}
+\begin{introduction}
+	\item 数列极限定义和性质
+	\item 归结原理
+	\item 夹逼准则
+	\item 单调有界准则
+\end{introduction}
+\section{基础概念}
+\begin{definition}[数列极限]
+	设 $x_{n}$ 是 一数列, 若存在常数 $a$, $\forall \epsilon>0$, $\exists N_{0}>0$, 当 $n>N_{0}$ 时, $|x_{n}-a|<\epsilon$ 恒成立, 常数 $a$ 是数列 $\{x_{n}\}$ 的极限或者说数列 $\{x_{n}\}$ 趋近于 $a$
+\end{definition}
+
+\section{数列极限的性质}
+\begin{property}[唯一性]
+	若极限存在, 则极限唯一
+\end{property}
+
+\begin{property}[有界性]
+	若数列 $\{x_{n}\}$ 的极限 $a$ 存在, 则数列 $\{x_{n}\}$ 有界
+\end{property}
+
+\begin{property}[保号性]
+	若数列 $\{x_{n}\}$ 的极限 $a>0(a<0)$, 则存在正整数 $N_{0}$, 当 $n>N_{0}$ 时, $x_{n}>0(x_{n}<0)$, 取 $\epsilon = \pm a$ 即可
+\end{property}
+\begin{anymark}[注]
+	1. 若数列的任意子列发散, 数列极限不存在
+
+	2. 若数列的任意两个子列极限存在但不相等, 数列极限不存在
+\end{anymark}
+\begin{corollary}[数列极限]
+	\begin{itemize}
+		\item 如果数列从某项起有 $x_{n}\geq 0$ 且 $\lim\limits_{n\to\infty}x_{n} = a$, 则 $a\geq 0$
+		\item 如果 $\lim\limits_{n\to\infty} x_{n} = A$, 则 $\lim\limits_{n\to\infty} |x_{n}| = |A|$
+		\item $\lim\limits_{n\rightarrow +\infty}x_{n}=a\to \begin{cases} \lim\limits_{n\rightarrow +\infty}\dfrac{x_{n+1}}{x_{n}}=1, & a\neq 0\\ \lim\limits_{n\rightarrow +\infty}\dfrac{x_{n+1}}{x_{n}} \text{不一定存在}, & a=0  \end{cases}$
+		\item $\lim\limits_{n\rightarrow +\infty}\dfrac{x_{n+1}}{x_{n}}=a\to \begin{cases} \lim\limits_{n\rightarrow +\infty}x_{n}=\infty,& |a|>1  \\ \lim\limits_{n\rightarrow +\infty}x_{n}=0,&|a|<1\\  \lim\limits_{n\rightarrow +\infty}x_{n}\text{不确定},&|a|=1 \end{cases}$
+		\item $\lim\limits_{n\rightarrow +\infty}\dfrac{x_{n+1}}{x_{n}}\text{存在且}x_{n}>0\to \lim\limits_{n\rightarrow +\infty}\sqrt[n]{x_{n}}=\lim\limits_{n\rightarrow +\infty}\dfrac{x_{n+1}}{x_{n}}$
+	\end{itemize}
+\end{corollary}
+
+\section{数列极限计算}
+\subsection{定义法}
+\begin{definition}[极限的四则运算]
+	$$\lim\limits_{n\to \infty}x_{n}=a,\lim\limits_{n\to \infty}y_{n}=b$$
+	\begin{enumerate}
+		\item $\lim\limits_{n\to \infty}(x_{n}\pm y_{n}) = a\pm b$
+		\item $\lim\limits_{n\to \infty}(x_{n}\cdot y_{n}) = a\cdot b$
+		\item $\lim\limits_{n\to \infty}\dfrac{x_{n}}{y_{n}} = \dfrac{a}{b}, b\neq 0$
+	\end{enumerate}
+
+\end{definition}
+\subsection{归结原理}
+\begin{definition}[归结原理]
+	设函数 $f(x)$ 在去心邻域 $\mathring{U}(a,\delta)$ 上有定义, 那么 $\lim\limits_{x\to a}f(x) = l$ 的充分必要条件是: 对与一切序列 $\{x_{n}\}_{n=1}^{\infty}\subset \mathring{U}(a,\delta)$, 只要 $\lim\limits_{n\to\infty}x_{n}=a$, 就有 $\lim\limits_{n\to\infty}f(x_{n})=l$
+\end{definition}
+\subsection{夹逼准则}
+\begin{definition}[夹逼准则]
+	设数列 $\{x_{n}\}$, $\{y_{n}\}$, $\{z_{n}\}$ 满足 $x_{n}\leq y_{n}\leq z_{n}$, $\lim\limits_{n\to\infty}x_{n}=\lim\limits_{n\to\infty}z_{n}=a$, 则 $\lim\limits_{n\to\infty}y_{n}=a$, 条件可变为 $n>N_{0}$ 时, $x_{n}\leq y_{n}\leq z_{n}$(有限无关性)
+\end{definition}
+
+\begin{corollary}[夹逼准则]
+	$\lim\limits_{n\rightarrow +\infty}\sqrt[n]{u_{1}^{n}+u_{2}^{n}+u_{3}^{n}+\cdots+u_{m}^{n}}=\max\{ u_{1},u_{2},\cdots,u_{m}\}$
+	\begin{anymark}[证明]
+		$$[\max\{ u_{1},u_{2},\cdots,u_{m}\}]^{n}\leq u_{1}^{n}+u_{2}^{n}+u_{3}^{n}+\cdots+u_{m}^{n}\leq m[\cdot\max\{ u_{1},u_{2},\cdots,u_{m}\}]^{n}$$
+	
+		我们将$[\max\{ u_{1},u_{2},\cdots,u_{m}\}]^{n}$记作$a$,$m\cdot[\max\{ u_{1},u_{2},\cdots,u_{m}\}]^{n}$记作$b$,我们利用夹逼准则:
+
+	$$\lim\limits_{n\rightarrow +\infty}\sqrt[n]{a}=\lim\limits_{n\rightarrow +\infty}\sqrt[n]{b}=\text{max}\{ u_{1},u_{2},\cdots,u_{m}\}$$
+	\end{anymark}
+\end{corollary}
+
+\subsection{单调有界准则}
+\begin{definition}[单调有界准则]
+	单调有界数列必有极限, 详细证明见 $\mathbf{the:}$ \ref{the: 柯西收敛准则}.
+\end{definition}
+\section{Exercise}
+\begin{proposition}
+	设$x_{1}=a\geq 0$,$y_{1}=b\geq 0$,$a\leq b$,$x_{n+1}=\sqrt{x_{n}y_{n}},y_{n+1}=\dfrac{x_{n}+y_{n}}{2},(n=1,2,\cdots)$,证明:  $\lim\limits_{n\rightarrow +\infty}x_{n}=\lim\limits_{n\rightarrow +\infty}y_{n}$
+\end{proposition}
+\begin{solution}
+	
+	我们由:  $x_{1}=a\geq 0$,$y_{1}=b\geq 0$,$x_{n+1}=\sqrt{x_{n}y_{n}},y_{n+1}=\dfrac{x_{n}+y_{n}}{2}$,由归纳法可知:  
+	$$x_{n}\geq 0, y_{n}\geq 0$$
+	
+	由基本不等式:  
+	$$\dfrac{x_{n}+y_{n}}{2}\geq \sqrt{x_{n}y_{n}}\Rightarrow y_{n+1}\geq x_{n+1}$$
+	
+	又因为:  $x_{n+1}=\sqrt{x_{n}y_{n}}\geq x_{n}, y_{n+1}=\dfrac{x_{n}+y_{n}}{2}\leq y_{n}$.
+	
+	$x_{n}$单调递增,$y_{n}$单调递减,$x_{1}\leq x_{n}\leq y_{n}\leq y_{1}$
+	
+	$x_{n},y_{n}$单调且有界,数列$\{x_{n}\},\{y_{n}\}$均有极限,我们不妨设:  
+	$$\left\lbrace
+	\begin{array}{l}
+		\lim\limits_{n\rightarrow +\infty}x_{n}=a\\
+		\lim\limits_{n\rightarrow +\infty}y_{n}=b
+	\end{array}
+	\right. \Rightarrow \left\lbrace
+	\begin{array}{l}
+		a=\sqrt{ab}\\
+		b=\dfrac{a+b}{2}
+	\end{array}
+	\right. \Rightarrow a=b$$
+	
+	综上所述,我们得到:  $\lim\limits_{n\rightarrow +\infty}x_{n}=\lim\limits_{n\rightarrow +\infty}y_{n}$
+\end{solution}
+
+\begin{proposition}
+	设数列$\{a_{n}\}$满足$\lim\limits_{n\rightarrow+\infty}\dfrac{a_{n+1}}{a_{n}}=q$,且$|q|<1$,证明:  $\lim\limits_{n\rightarrow+\infty}a_{n}=0$
+\end{proposition}
+\begin{solution}
+	
+	我们考虑数列$\{|a_{n}|\}$,我们可以得到:  
+	$$\lim\limits_{n\rightarrow +\infty}\dfrac{|a_{n+1}|}{|a_{n}|}=|q|\Rightarrow \exists\ M>0,\ n>M\text{时}, \dfrac{|a_{n+1}|}{|a_{n}|}<1$$
+	
+	又因为$|a_{n}|\geq 0$,我们可以知道$\{|a_{n}|\}$极限必定存在,我们不妨假设$\lim\limits_{n\rightarrow+\infty}|a_{n}|=a$.
+	
+	假设$a\neq 0$,我们可以得到:  $$\lim\limits_{n\rightarrow  +\infty}\dfrac{|a_{n+1}|}{|a_{n}|}=\dfrac{\lim\limits_{n\rightarrow  +\infty}|a_{n+1}|}{\lim\limits_{n\rightarrow  +\infty}|a_{n}|}=1$$
+	
+	这和$|q|<1$矛盾！！！
+	
+	
+	综上所述,我们可以得到:  $\lim\limits_{n\rightarrow+\infty}a_{n}=0$
+\end{solution}
+
+\begin{proposition}
+	设$f_{n}(x)=1-(1-\cos x)^n(n=1,2,\cdots)$
+
+(1). 证明:  方程$f_{n}(x)=\dfrac{1}{2}$在$(0,\dfrac{\pi}{2})$内有且只有一个实数根$x_{n}$
+
+(2). 设$x_{n}\in(0,\dfrac{\pi}{2})$,满足$f_{n}(x)=\dfrac{1}{2}$,证明:  $$\arccos \dfrac{1}{n}<x_{n}<\dfrac{\pi}{2},\text{且}\lim\limits_{n\rightarrow +\infty}x_{n}=\dfrac{\pi}{2}$$
+\end{proposition}
+\begin{solution}
+	
+	我们构造辅助函数:  $G_{n}(x)=\dfrac{1}{2}-(1-\cos x)^{n}$
+	
+	(1). $$G_{n}'(x)=-n\sin x(1-\cos x)^{n-1}$$
+	
+	当$x\in(0,\dfrac{\pi}{2})$,$G_{n}'(x)<0$,$\ G_{n}(x)$在$(0,\dfrac{\pi}{2})$单调递减.
+	
+	$$G_{n}(0)=\dfrac{1}{2}>0,\ G_{n}(\dfrac{\pi}{2})=-\dfrac{\pi}{2}<0$$
+	
+	我们根据零点定理,可以得到:  $\exists \text{唯一的}x_{n}\in(0,\dfrac{\pi}{2}),\ s.t. G_{n}(x_{n})=0$
+	
+	(2). 我们将$x=\arccos\dfrac{1}{n}$代入$G_{n}(x)$得到:  
+	$$G_{n}(\arccos\dfrac{1}{n})=\dfrac{1}{2}-(1-\dfrac{1}{n})^{n}$$
+	
+	我们知道:  $\lim\limits_{n\rightarrow+\infty}(1-\dfrac{1}{n})^{n}=\dfrac{1}{e}\Rightarrow G_{n}(\arccos\dfrac{1}{n})>0$
+	
+	我们需要证明:  $(1-\dfrac{1}{n})^n$单调性,我们构造辅助函数:  $H(x)=e^{xln(1-\dfrac{1}{x})},x\geq 2$
+	
+	我们可以得到:  $H'(x)=e^{xln(1-\dfrac{1}{x})}[ln(1-\dfrac{1}{x})+\dfrac{1}{x-1}]>0$,$H(x)$单调递增.
+	
+	所以$G_{n}(\arccos\dfrac{1}{n})$单调递减,且$\lim\limits_{n\rightarrow+\infty}G_{n}(\arccos\dfrac{1}{n})=\dfrac{1}{2}-\dfrac{1}{e}>0$,我们得到:  $$\arccos \dfrac{1}{n}<x_{n}<\dfrac{\pi}{2}$$
+	
+	我们再由夹逼定理可以得到:  
+	$$\left\lbrace
+	\begin{array}{l}
+		\lim\limits_{n\rightarrow  +\infty}\arccos \dfrac{1}{n}=\dfrac{\pi}{2}\\
+		\lim\limits_{n\rightarrow  +\infty}\dfrac{\pi}{2}=\dfrac{\pi}{2}
+	\end{array}
+	\right. \Rightarrow \lim\limits_{n\rightarrow +\infty}x_{n}=\dfrac{\pi}{2}$$
+	
+\end{solution}
+
+\begin{proposition}
+	设$x_{1}>0$,数列$\{x_{n}\}$满足$x_{n+1}=ln(e^{x_{n}}-1)-ln x_{n}$,证明:  $\lim\limits_{n\rightarrow +\infty}x_{n}$存在并求其值
+\end{proposition}
+\begin{solution}
+	
+	我们由:  $x_{n+1}=ln(e^{x_{n}}-1)-ln x_{n}$可以得到:  
+	$$e^{x_{n+1}}=\dfrac{e^{x_{n}}-1}{x_{n}}$$
+	
+	我们构造辅助函数$f(x)=e^x-x-1$,$f'(x)=e^{x}-1$
+	
+	当$x>0$时,我们知道:  $f'(x)>0$,$f(x)$单调递增,$f(x)>f(0)=0\Rightarrow  x>0,\dfrac{e^x-1}{x}>1$
+	
+	我们有$x_{1}>0\Rightarrow e^{x_{2}}>1\Rightarrow x_{2}>0$,我们由归纳法可知:  $x_{n}>0$,数列$\{ x_{n}\}$有下界.
+	
+	我们由拉格朗日中值定理可以得到:  
+	$$e^{x_{n+1}}=\dfrac{e^{x_{n}}-1}{x_{n}}=e^{\xi},\text{其中}\xi\in(0,x_{n})$$
+	
+	我们得到:  $x_{n+1}=\xi<x_{n}$,数列$\{x_{n}\}$单调递减,我们由单调有界准则可以得到:  数列$\{x_{n}\}$极限必定存在,我们不妨假设$\lim\limits_{n\rightarrow +\infty}x_{n}=a$,我们有:  
+	$$e^{a}=\dfrac{e^a-1}{a}\Rightarrow a=0$$
+	
+	综上所述,数列$\{x_{n}\}$极限存在,其值为$0$
+\end{solution}
+\begin{proposition}
+	设$f(x)$在$[a,b]$上可导,且$|f'(x)|<1$,当$x\in[a,b]$时,有$a<f(x)<b$,$F(x)=\dfrac{x+f(x)}{2}$,证明:  
+
+(1). $\exists x^{*}\in(a,b),\ s.t. F(x^{*})=x^{*}$
+
+(2). 对$x_{0}\in[a,b]$,数列$\{x_{n}\}$满足$x_{n+1}=F(x_{n}),(n=0,1,2,\cdots)$,有$\lim\limits_{n\rightarrow+\infty}x_{n}=x^{*}$
+
+\end{proposition}
+\begin{solution}
+	
+	(1). 我们构造辅助函数:  $G(x)=F(x)-x=\dfrac{f(x)-x}{2}$,我们有:  $G'(x)=\dfrac{f'(x)-1}{2}$
+	
+	又因为:  $|f'(x)|<1\Rightarrow G'(x)<0\Rightarrow G(x)\text{单调递减}$
+	$$\left\lbrace
+	\begin{array}{l}
+		G(a)=\dfrac{f(a)-a}{2}>0\\
+		G(b)=\dfrac{f(b)-b}{2}<0
+	\end{array}
+	\right. \Rightarrow G(a)G(b)<0$$
+	
+	我们根据零点定理可知:  $\exists x^{*}\in(a,b),\ s.t. G(x^{*})=0\Rightarrow \exists x^{*}\in(a,b),\ s.t. F(x^{*})=x^{*}$
+	
+	(2). 
+	$F'(x)=\dfrac{1+f'(x)}{2}\geq 0\Rightarrow F(x)\text{单调递增}$
+	
+	(i). 当$x_{0}=x^{*}$时,$x_{n}=x^{*}$,此时$\lim\limits_{n\rightarrow +\infty}x_{n}=x^{*}$
+	
+	(ii). 当$x_{0}>x^{*}$时,我们有$G(x^{*})>G(x_{0})\Rightarrow F(x_{0})<x_{0}\Rightarrow x_{1}<x_{0}$
+	
+	当$n=1$时,$x_{1}<x_{0}$;
+	
+	当$n=k$时,$x_{k}<x_{k-1}$成立,当$n=k+1$时,我们有$F(x_{k})<F(x_{k-1})\Rightarrow x_{k+1}<x_{k}$
+	
+	我们得到数列$\{x_{n}\}$单调递减,且$x_{0}\in[a,b],\ x_{n}=\dfrac{x_{n}+f(x_{n})}{2},\ a<f(x)<b\Rightarrow x_{n}\in[a,b]$,数列$\{x_{n}\}$单调递减且有下界,极限必定存在.
+	
+	我们不妨假设数列$\{x_{n}\}$的极限为$A$,我们有:  $A=\dfrac{A+f(A)}{2}\Rightarrow F(A)=A\Rightarrow A=x^{*}$
+	
+	(iii). 当$x_{0}<x_{*}$时,我们有$G(x^{*})<G(x_{0})\Rightarrow F(x_{0})>x_{0}\Rightarrow x_{1}>x_{0}$
+	
+	当$n=1$时,$x_{1}>x_{0}$;
+	
+	当$n=k$时,$x_{k}>x_{k-1}$成立,当$n=k+1$时,我们有$F(x_{k})>F(x_{k-1})\Rightarrow x_{k+1}>x_{k}$
+	
+	我们得到数列$\{x_{n}\}$单调递增,且$x_{0}\in[a,b],\ x_{n}=\dfrac{x_{n}+f(x_{n})}{2},\ a<f(x)<b\Rightarrow x_{n}\in[a,b]$,数列$\{x_{n}\}$单调递增且有上界,极限必定存在.
+	
+	我们不妨假设数列$\{x_{n}\}$的极限为$A$,我们有:  $A=\dfrac{A+f(A)}{2}\Rightarrow F(A)=A\Rightarrow A=x^{*}$
+	
+	综上所述,我们得到:  $\lim\limits_{n\rightarrow+\infty}x_{n}=x^{*}$
+\end{solution}
+\begin{proposition}
+(1).设$f(x)$是$[0,+\infty)$上单调减少且非负的连续函数,证明:  $$f(k+1)\leq \int_{k}^{k+1}f(x)dx\leq f(k),\ k=1,2,\cdots$$
+
+(2). 证明:  $ln(1+n)\leq 1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}\leq 1+ln n$,求极限$\lim\limits_{n\rightarrow+\infty}\dfrac{1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}}{ln n}$
+
+\end{proposition}
+\begin{solution}
+	
+	(1). 我们由$f(x)$单调减少且非负得到:  
+	$$0\leq f(k+1)\leq f(x)\leq f(k),\ x\in[k,k+1]$$
+	
+	我们对上述不等式在$[k,k+1]$上同时求定积分得到:  
+	$$\int_{k}^{k+1}f(k+1)dx\leq \int_{k}^{k+1}f(x)dx\leq \int_{k}^{k+1}f(k)dx\Rightarrow f(k+1)\leq \int_{k}^{k+1}f(x)dx\leq f(k)$$
+	
+	(2). 我们构造辅助函数$f(x)=\dfrac{1}{x}$,我们可以知道$f(x)$在$(0,+\infty)$上单调递减且非负,我们由(1)可以知道:  
+	$$\left\lbrace
+	\begin{array}{l}
+		\dfrac{1}{2}\leq \int_{1}^{2}\dfrac{1}{x}dx\leq 1\\
+		\dfrac{1}{3}\leq \int_{2}^{3}\dfrac{1}{x}dx\leq \dfrac{1}{2}\\
+		\cdots\\
+		\dfrac{1}{n}\leq \int_{n-1}^{n}\dfrac{1}{x}dx\leq \dfrac{1}{n-1}\\
+		\dfrac{1}{n+1}\leq \int_{n}^{n+1}\dfrac{1}{x}dx\leq \dfrac{1}{n}
+	\end{array}
+	\right. \Rightarrow \left\lbrace
+	\begin{array}{l}
+		\sum\limits_{k=2}^{n+1}\dfrac{1}{k}\leq \int_{1}^{n+1}\dfrac{1}{x}=ln(1+n)\leq \sum\limits_{k=1}^{n}\dfrac{1}{k}\\
+		\sum\limits_{k=2}^{n}\dfrac{1}{k}\leq \int_{1}^{n}\dfrac{1}{x}=ln n\\
+		\sum\limits_{k=1}^{n}\dfrac{1}{k}=1+\sum\limits_{k=2}^{n}\dfrac{1}{k}\leq 1+ln n
+	\end{array}
+	\right. $$
+	
+	我们由夹逼定理可以得到:  
+	$$\left\lbrace
+	\begin{array}{l}
+		\lim\limits_{n\rightarrow +\infty}\dfrac{ln(1+n)}{ln n}=1\\
+		\lim\limits_{n\rightarrow +\infty}\dfrac{1+ln n}{ln n}=1
+	\end{array}
+	\right. \Rightarrow \lim\limits_{n\rightarrow  +\infty}\dfrac{1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}}{ln n}=1$$
+\end{solution}
+
+\begin{proposition}
+	设$f(x)$在$(a,b)$内连续,且$\lim\limits_{x\rightarrow a^{+}}f(x)=\lim\limits_{x\rightarrow b^{-}}f(x)=-\infty$,证明:  $f(x)$在$(a,b)$内有最大值
+\end{proposition}
+\begin{solution}
+	
+	我们不妨取$M=f(\dfrac{a+b}{2})$,我们有$\lim\limits_{x\rightarrow a^{+}}f(x)=\lim\limits_{x\rightarrow b^{-}}f(x)=-\infty$
+	
+	我们由极限定义可以得到:  
+	$$\left\lbrace
+	\begin{array}{l}
+		\exists a<c<\dfrac{a+b}{2},\ x\in(a,c),\ s.t. f(x)\leq f(\dfrac{a+b}{2})\\
+		\exists \dfrac{a+b}{2}<d<b,\ x\in(d,b),\ s.t. f(x)\leq f(\dfrac{a+b}{2})
+	\end{array}
+	\right. $$
+	
+	在闭区间$[c,d]$上,$f(x)$连续,$f(x)$必定有最大值为$f(\xi),\ \xi\in[c,d]$,且$f(\xi)\geq f(\dfrac{a+b}{2})$.在区间$(a,c)\cup (d,b)$上,我们有$f(x)\leq f(\dfrac{a+b}{2})$.
+	
+	综上所述,$f(x)$在区间$(a,b)$内有最大值.
+\end{solution}
+
+
+
 
 \chapterimage{chap3.jpg}
 \chapter{函数极限和连续}
+\begin{introduction}
+	\item 函数极限定义和性质
+	\item 无穷小概念和比阶
+	\item 洛必达法则
+	\item 连续和间断
+\end{introduction}
+\section{基础概念}
+\begin{definition}[函数极限]
+	设函数 $f(x)$ 在点 $x_{0}$ 的某个去心邻域 $\mathring{U}(x_{0},\delta)$ 内有定义, 如果存在常数 $A$, 对于任意给定的正数 $\epsilon$, 总存在正数 $\delta$, 使得当 $x$ 满足不等式 $0<|x-x_{0}|<\delta$ 时, 对应的函数值 $f(x)$ 都满足不等式 $|f(x)-A|<\epsilon$, 那么常数 $A$ 是当 $x$ 趋于 $x_{0}$ 时函数 $f(x)$ 的极限, 记作 $\lim\limits_{x\to x_{0}}f(x)=A$
+\end{definition}
 
+\begin{definition}[单侧极限]
+	若函数 $f(x)$ 在点 $x_{0}$ 的左(右)邻域内有定义, 如果存在常数 $A$, 对于任意给定的正数 $\epsilon$, 总存在正数 $\delta$, 使得当 $x$ 满足不等式 $0<x-x_{0}<\delta$($0<x_{0}-x<\delta$)时, 对应的函数值 $f(x)$都满足不等式 $|f(x)-A|<\epsilon$, 那么常数 $A$ 是当 $x$ 趋于 $x_{0}$ 时函数 $f(x)$ 的左(右)极限, 记作 $\lim\limits_{x\to x_{0}^{-}}f(x)=A$($\lim\limits_{x\to x_{0}^{+}}f(x)=A$)
+\end{definition}
+
+\begin{definition}[无穷远极限]
+	无穷远处极限(双侧,单侧只取一边): $f(x)$ 在 $(-\infty,-a)\cup(a,+\infty)$ 上有定义, $\forall \epsilon>0$, $\exists A>0$, 当 $|x|>A$ 时, $|f(x)-l|<\epsilon$, 我们称 $l$ 是当 $x$ 趋于无穷远时函数 $f(x)$ 的极限, 记作 $\lim\limits_{x\to\infty}f(x)=l$
+\end{definition}
+\begin{definition}[极限发散]
+	1. 震荡发散: $\lim\limits_{x\to 0}\sin(\dfrac{1}{x})$ 反复震荡
+
+	2. 左右极限存在但不相等: $\lim\limits_{x\to 0}[x]$
+
+	3. 广义收敛: $f(x)$ 在 $x=a$ 的去心邻域 $\mathring{U}(a,\delta)$ 上有定义, $\forall X>0$, $\exists \delta>0$, 当 $0<|x-a|<\delta$ 时, $|f(x)|>X$, 则称 $f(x)$ 在 $x=a$ 处广义收敛
+\end{definition}
+\section{函数极限性质}
+\begin{property}[唯一性]
+	若极限存在, 则极限唯一
+\end{property}
+
+\begin{property}[局部有界性]
+	若函数 $f(x)$ 满足$\lim\limits_{x\to x_{0}}f(x)=A$, 则存在正数 $M>0$, 存在正数 $\delta>0$, 使得当 $x$ 满足不等式 $0<|x-x_{0}|<\delta$ 时, 对应的函数值 $f(x)$ 都满足不等式 $|f(x)|\leq M$
+\end{property}
+
+\begin{property}[局部保号性]
+	若函数 $f(x)$ 满足 $\lim\limits_{x\to x_{0}}f(x)=A>(<)0$, 则存在正数 $\delta>0$, 使得当 $x$ 满足不等式 $0<|x-x_{0}|<\delta$ 时, 对应的函数值 $f(x)>(<)0$
+\end{property}
+
+\section{函数极限计算}
+\subsection{无穷小(大)概念和比阶}
+\begin{definition}[无穷小(大)]
+	1. 无穷小: 设函数 $f(x)$ 在点 $x_{0}$ 的某个去心邻域 $\mathring{U}(x_{0},\delta)$ 内有定义, 如果 $\lim\limits_{x\to x_{0}}f(x)=0$, 那么称函数 $f(x)$ 是当 $x$ 趋于 $x_{0}$ 时的无穷小
+
+	2. 无穷大: 设函数 $f(x)$ 在点 $x_{0}$ 的某个去心邻域 $\mathring{U}(x_{0},\delta)$ 内有定义, 如果 $\lim\limits_{x\to x_{0}}f(x)=\infty$, 那么称函数 $f(x)$ 是当 $x$ 趋于 $x_{0}$ 时的无穷大
+\end{definition}
+
+\begin{definition}[无穷小比阶]
+	$$\lim\limits_{x\to 0}f(x)=\lim\limits_{x\to 0}g(x)=0$$
+
+	1. 等价无穷小: $\lim\limits_{x\to 0}\dfrac{f(x)}{g(x)}=1$, 记作 $f(x)\sim g(x)$
+
+	2. 同阶无穷小: $\lim\limits_{x\to 0}\dfrac{f(x)}{g(x)}=k(k\neq 0)$, 记作 $f(x)\approx g(x)$
+
+	3. 高阶无穷小: $\lim\limits_{x\to 0}\dfrac{f(x)}{g(x)}=0$, 记作 $f(x)=o(g(x))$
+
+	4. 低阶无穷小: $\lim\limits_{x\to 0}\dfrac{f(x)}{g(x)}=\infty$, 记作 $g(x)=O(f(x))$
+\end{definition}
+
+\begin{corollary}[等价无穷小]
+	\begin{enumerate}
+		\item $x\to 0, x\sim \sin x\sim \tan x\sim \arcsin x\sim \arctan x\sim \ln(x+1)\sim e^{x}-1$
+		\item $x\to 0, \sin x\sim x - \dfrac{x^{3}}{6}, \arcsin x\sim x+\dfrac{x^{3}}{6}, \tan x\sim x+\dfrac{x^{3}}{3}, \arctan x\sim x-\dfrac{x^{3}}{3},\cos x\sim 1-\dfrac{x^{2}}{2}$
+		\item $x\to 0, (1+x)^{a}-1\sim ax, a^{x}-1\sim x\ln a$
+	\end{enumerate}
+\end{corollary}
+\begin{theorem}[洛必达法则]
+	设函数 $f(x)$ 和 $g(x)$ 都在 $x=a$ 的某邻域内可导($a$ 可以为 $\infty$, 邻域也可以是单侧的), 且 $g'(a)\neq 0$, 满足:(1) 或 (2)
+
+	(1). $\dfrac{0}{0}$: $\lim\limits_{x\to a}f(x)=\lim\limits_{x\to a}g(x)=0$
+
+	(2). $\dfrac{\infty}{\infty}$: $\lim\limits_{x\to a}f(x)=\lim\limits_{x\to a}g(x)=\infty$
+
+	如果 $\lim\limits_{x\to a}\dfrac{f'(x)}{g'(x)}=l$($l$ 可以是实数或者 $\infty$), 我们有: $\lim\limits_{x\to a}\dfrac{f(x)}{g(x)}=l$
+\end{theorem}
+\begin{anymark}[证明]
+	构造辅助函数: $F(x) = \begin{cases} 0,& x=x_{0}  \\ f(x),&x\in\mathring{U}(x_{0}) \end{cases}, G(x)= \begin{cases} 0,& x=x_{0}  \\ g(x),&x\in\mathring{U}(x_{0}) \end{cases} $
+
+	我们可以得到: $F(x),G(x)$ 在 $[x_{0},x]$ 上连续, 在 $(x_{0},x)$ 内可导, 且 $G'(x)\neq 0$
+	
+	我们利用柯西中值定理:
+	
+	$$\exists \xi\in (x_{0},x), s.t.\ \dfrac{F(x)-F(x_{0})}{G(x)-G(x_{0})}= \dfrac{F'(xi)}{G'(\xi)}\Rightarrow \dfrac{f(x)}{g(x)} = \dfrac{f'(\xi)}{g'(\xi)}$$
+
+	我们取极限 $x\to x_{0}^{+}$ 得到: $\lim\limits_{x\to x_{0}^{+}}\dfrac{f(x)}{g(x)} = \lim\limits_{\xi\to x_{0}^{+}}\dfrac{f'(\xi)}{g'(\xi)} = \lim\limits_{x\to x_{0}^{+}}\dfrac{f'(x)}{g'(x)} $
+
+	同理我们可以得到: $\lim\limits_{x\to x_{0}^{-}}\dfrac{f(x)}{g(x)} = \lim\limits_{x\to x_{0}^{-}}\dfrac{f'(x)}{g'(x)} $
+	
+	由于 $\lim\limits_{x\to a}\dfrac{f'(x)}{g'(x)}=l\to \lim\limits_{x\to x_{0}^{-}}\dfrac{f'(x)}{g'(x)} = \lim\limits_{x\to x_{0}^{+}}\dfrac{f'(x)}{g'(x)}=l$
+
+	我们得到: $\lim\limits_{x\to x_{0}^{-}}\dfrac{f(x)}{g(x)} = \lim\limits_{x\to x_{0}^{+}}\dfrac{f(x)}{g(x)} = l$, 证毕
+\end{anymark}
+\begin{theorem}[广义洛必达定理]
+	设 $f(x)$ 和 $g(x)$ 在 $\mathring{U}(x_{0})$ 上可导, 满足:
+
+	(1). $g'(x)\neq 0$
+
+	(2). $\lim\limits_{x\to x_{0}}g(x) =\infty$
+
+	(3). $\lim\limits_{x\to x_{0}}\dfrac{f'(x)}{g'(x)}=A(A\text{为有限数或}\pm\infty)$
+
+	我们有: $\lim\limits_{x\to x_{0}}\dfrac{f(x)}{g(x)}=A$
+\end{theorem}
+\begin{anymark}[证明]
+	首先考虑 $x\to x_{0}^{-}$:
+
+	(1). 当 $A$ 为常数时, 我们有:
+	$$\forall \varepsilon > 0, \exists \delta > 0, s.t.\ x\in (x_{0}-\delta,x_{0}), |\dfrac{f'(x)}{g'(x)}-A|<\dfrac{\varepsilon}{3}\Rightarrow \text{取定} x_{1}\in (x_{0}-\delta,x_{0})$$
+
+	我们考虑 $x\in (x_{1},x)$, 由柯西中值定理我们有:
+
+	$$\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})} = \dfrac{f'(\xi)}{g'(\xi)}\Rightarrow |\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})}-A| = |\dfrac{f'(\xi)}{g'(\xi)}-A| < \dfrac{\varepsilon}{3}$$
+
+	$x\in[x_{1},x_{0})$, 我们有:
+
+	\begin{eqnarray*}
+		|\dfrac{f(x)}{g(x)} -A| &=& |\dfrac{g(x)-g(x_{1})}{g(x)} \left[\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})}-A\right] + \dfrac{f(x_{1})-Ag(x_{1})}{g(x)}|\\
+								&\leq& |1-\dfrac{g(x_{1})}{g(x)}||\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})}-A|+|\dfrac{f(x_{1})-Ag(x_{1})}{g(x)}|\\
+								&\leq& (1+|\dfrac{g(x_{1})}{g(x)}|)|\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})}-A|+|\dfrac{f(x_{1})-Ag(x_{1})}{g(x)}|
+	\end{eqnarray*}
+
+	我们有: $\lim\limits_{x\to x_{0}}g(x) =\infty\Rightarrow \begin{cases} \lim\limits_{x\to x_{0}}\dfrac{g(x_{1})}{g(x)} =0 \\ \lim\limits_{x\to x_{0}}\dfrac{f(x_{1})-Ag(x_{1})}{g(x)}=0\end{cases}$
+
+	我们有:
+	$$\forall \varepsilon >0, \exists x_{2}\in(x_{1},x_{0}),\forall x\in(x_{2},x_{0}),\ s.t.\ |\dfrac{g(x_{1})}{g(x)}|< 1 \text{且} |\dfrac{f(x_{1})-Ag(x_{1})}{g(x)}|< \dfrac{\varepsilon}{3}$$
+
+	此时,我们有: $\forall \varepsilon > 0, \exists \delta_{1} = x_{0}-x_{2}, \forall x\in (x_{0}-\delta_{1},x_{0}), |\dfrac{f(x)}{g(x)} -A|<2\cdot \dfrac{\varepsilon}{3}+\dfrac{\varepsilon}{3}=\varepsilon$
+	
+	(2). 当 $A$ 为 $\infty$ 时, 我们有: $|\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})}| = |\dfrac{f'(\xi)}{g'(\xi)}| > M$
+	
+	取 $M = 1\to |f(x)-f(x_{1})|>|g(x)-g(x_{1})|\to \lim\limits_{x\to x_{0}^{-}}f(x) = \infty$
+
+	$x\to x_{0}^{+}$ 的情况类似, 证毕
+\end{anymark}
+
+\section{连续和间断}
+\begin{definition}[连续点]
+	设函数 $f(x)$ 在点 $x_{0}$ 的某个邻域 $U(x_{0},\delta)$ 内有定义, 如果 $\lim\limits_{x\to x_{0}}f(x)=f(x_{0})$, 那么称函数 $f(x)$ 在点 $x_{0}$ 处连续
+\end{definition}
+
+\begin{definition}[间断点]
+	第一类间断点:
+	\begin{enumerate}
+		\item 可去间断点: $\lim\limits_{x\to x_{0}}f(x)\neq f(x_{0})$($f(x_{0})$ 可以无定义)
+		\item 跳跃间断点: $\lim\limits_{x\to x_{0}^{-}}\neq \lim\limits_{x\to x_{0}^{+}}$
+	\end{enumerate}
+
+	第二类间断点: $\lim\limits_{x\to x_{0}^{-}}f(x)$ 和 $\lim\limits_{x\to x_{0}^{+}}f(x)$ 至少有一个不存在
+	\begin{enumerate}
+		\item 震荡间断点: $\lim\limits_{x\to x_{0}}f(x)$ 震荡不存在
+		\item 无穷间断点: $\lim\limits_{x\to x_{0}}f(x)=\infty$
+		\item 其他第二类间断点
+	\end{enumerate}
+\end{definition}
 \chapterimage{chap4.jpg}
 \chapter{一元微分学}
+\begin{introduction}
+	\item 导数和微分
+	\item 基本求导公式
+	\item 高阶导数
+	\item 泰勒公式
+	\item 函数单调性和凹凸性
+	\item 极值点和拐点
+	\item 渐近线
+	\item 曲率和曲率半径
+\end{introduction}
+
 \section{一元微分学概念}
 \begin{definition}[导数]
 	设 $y=f(x)$ 定义在区间 $I$ 上, 自变量在 $x=x_{0}$ 处增加一个增量 $\Delta x$ 时, 其中 $x_{0}\in I, x_{0}+\Delta\in I$, 函数值的增量 $\Delta y=f(x_{0}+\Delta x)-f(x_{0})$, 如果极限 $\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}$ 存在, 那么称此极限为函数 $y=f(x)$ 在点 $x_{0}$ 处的导数, 记为 $f'(x_{0})$ 或 $\frac{dy}{dx}|_{x=x_{0}}$ 或 $\dfrac{df(x)}{dx}|_{x=x_{0}}$
@@ -104,8 +753,8 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 (2). 二阶导数: $\dfrac{d^{2}y}{dx^{2}} = \dfrac{\frac{dy}{dx}}{dx} = \dfrac{\frac{dy}{dx}}{dt}\cdot \dfrac{dx}{dt} = \dfrac{dx}{dx}\left[\dfrac{d^{2}y}{dt^{2}}\cdot \dfrac{dx}{dt}+\dfrac{d^{2}x}{dt^{2}}\cdot \dfrac{dy}{dt}\right]$
 \end{theorem}
 
-\section{函数图像}
-
+\section{一元微分学应用}
+\subsection{几何应用}
 \begin{definition}[函数图像要点]
 	\begin{enumerate}
 		\item 定义域(间断点)
@@ -125,17 +774,92 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	\end{enumerate}
 \end{definition}
 
-\subsection{函数极值点和拐点}
+\subsection{函数单调性 \&凹凸性 \&极值点 \&拐点}
+\begin{definition}[单调性]
+	1. 设函数$f(x)$在区间$I$上有定义,如果对任意$x_{1},x_{2}\in I,x_{1}<x_{2}$,均有$f(x_{1})<f(x_{2})$,则称函数$f(x)$在区间$I$上是单调递增的;如果对任意$x_{1},x_{2}\in I,x_{1}<x_{2}$,均有$f(x_{1})>f(x_{2})$,则称函数$f(x)$在区间$I$上是单调递减的.
+
+	2. 设函数$f(x)$在区间$I$上有定义,如果对任意$x_{1},x_{2}\in I,x_{1}<x_{2}$,均有$f(x_{1})\leq f(x_{2})$,则称函数$f(x)$在区间$I$上是单调不减的;如果对任意$x_{1},x_{2}\in I,x_{1}<x_{2}$,均有$f(x_{1})\geq f(x_{2})$,则称函数$f(x)$在区间$I$上是单调不增的.
+\end{definition}
+
+\begin{definition}[凹凸性]
+	设函数$f(x)$在区间$I$上有定义
+	
+	1. 如果对任意$x_{1},x_{2}\in I,x_{1}<x_{2}$,均有$f(\dfrac{x_{1}+x_{2}}{2}) < \dfrac{f(x_{1})+f(x_{2})}{2}$,则称函数$f(x)$在区间$I$上是凹的
+	
+	2. 如果对任意$x_{1},x_{2}\in I,x_{1}<x_{2}$,均有$f(\dfrac{x_{1}+x_{2}}{2}) > \dfrac{f(x_{1})+f(x_{2})}{2}$,则称函数$f(x)$在区间$I$上是凸的
+\end{definition}
 
 \begin{definition}[极值点]
-	设函数$f(x)$在点$x_{0}$的某邻域$U(x_{0})$内有定义,如果对去心邻域内任意一$x$,均有$f(x)<f(x_{0})(\text{或}f(x)>f(x_{0}))$,我们称$f(x_{0})$是函数$f(x)$的一个极小值(或极大值).
+	设函数$f(x)$在点$x_{0}$的某邻域$U(x_{0})$内有定义,如果对去心邻域内任意$x$,均有$f(x)<f(x_{0})(\text{或}f(x)>f(x_{0}))$,我们称$f(x_{0})$是函数$f(x)$的一个极小值(或极大值).
 \end{definition}
 \begin{definition}[驻点]
 	一阶导数为$0$的点称为驻点; 对于多元函数而言,驻点是一阶偏导数都为$0$的点.
 \end{definition}
+
+\begin{theorem}[极值点判别]
+	第一充分条件:
+	$$\begin{cases} f(x) \text{在} x_{0} \text{处连续, 且在} \mathring{U}(x_{0}) \text{内可导} \\
+		 x\in(x_{0}-\delta,x_{0}),f'(x) > 0; x\in(x_{0},x_{0}+\delta), f'(x) < 0, f(x) \text{在} x= x_{0}\text{取极大值}\\
+		 x\in(x_{0}-\delta,x_{0}),f'(x) < 0; x\in(x_{0},x_{0}+\delta), f'(x) > 0, f(x) \text{在} x= x_{0}\text{取极小值}\\
+		 x\in(x_{0}-\delta,x_{0})\cup(x_{0},x_{0}+\delta), f'(x)\text{不变号}, x = x_{0} \text{不是极值点}
+		\end{cases}$$
+
+	第二充分条件:
+	$$
+	\begin{cases} f(x) \text{在} x_{0} \text{处二阶可导, 且} f'(x_{0}) = 0, f''(x_{0})\neq 0\\
+	f''(x_{0}) > 0, f(x) \text{在} x= x_{0}\text{取极小值}\\
+	f''(x_{0}) < 0, f(x) \text{在} x= x_{0}\text{取极大值}
+	\end{cases}
+	$$
+
+	第三充分条件:
+	$$
+	\begin{cases} f(x) \text{在} x_{0} \text{处} n \text{阶可导, 且} f^{(m)}(x_{0}) = 0(m = 1,2,\cdots,n-1), f^{(n)}(x_{0}) \neq 0, n\in \{2k|k\in \mathbb{N}^{+}\}\\
+	f^{(n)}(x_{0}) > 0, f(x) \text{在} x= x_{0}\text{取极小值}\\
+	f^{(n)}(x_{0}) < 0, f(x) \text{在} x= x_{0}\text{取极大值}
+	\end{cases}
+	$$
+\end{theorem}
+
 \begin{definition}[拐点]
 	连续函数$f(x)$在区间$I$上连续,$x_{0}$是区间的内点,当函数$f(x)$经过点$(x_{0},f(x_{0}))$时,函数的凹凸性发生改变,则称$(x_{0},f(x_{0}))$是函数$f(x)$的拐点.
 \end{definition}
+
+\begin{theorem}[拐点判别]
+	第一充分条件:
+	$$
+	\begin{cases} f(x) \text{在} x_{0} \text{处连续, 且在} \mathring{U}(x_{0}) \text{内二阶可导}\\
+		x\in(x_{0}-\delta,x_{0}),f''(x)<(>)0; x\in(x_{0},x_{0}+\delta),f''(x)>(<)0\\
+		(x_{0},f(x_{0})) \text{是} f(x) \text{的拐点}
+	\end{cases}
+	$$
+
+	第二充分条件:
+	$$
+	\begin{cases} f(x) \text{在} x_{0} \text{处三阶可导}\\
+		f''(x_{0}) = 0, f'''(x_{0})\neq 0\\
+		(x_{0},f(x_{0})) \text{是} f(x) \text{的拐点}
+	\end{cases}
+	$$
+
+	第三充分条件:
+	$$
+	\begin{cases} f(x) \text{在} x_{0} \text{处} n \text{阶可导}\\
+		f^{(m)}(x_{0}) = 0(m = 1,2,\cdots,n-1), f^{(n)}(x_{0}) \neq 0, n\in \{2k+1|k\in \mathbb{N}^{+}\}\\
+		(x_{0},f(x_{0})) \text{是} f(x) \text{的拐点}
+	\end{cases}
+	$$
+	
+\end{theorem}
+\begin{theorem}[多项式函数极值点和拐点个数]
+	假设 $P_{n}(x)=\prod\limits_{i=1}^{k}(x-a_{i})^{p_{i}}$, 其中 $k_{1}$ 个 $p_{i}$ 为奇数(大于 $1$), $k_{2}$ 个 $p_{i}$ 为偶数, $k_{0}$ 个 $p_{i}=1$, 满足 $k_{0}+k_{1}+k_{2} = k$, 我们有:
+		\begin{itemize}
+			\item $P_{n}(x)$ 的极值点个数: $k-1+k_{2} = k_{0}+k_{1}+2k_{2}-1$
+			\item $P_{n}(x)$ 的拐点个数: $k+2k_{1}+k_{2}-2 = k_{0}+3k_{1}+2k_{2}-2$
+		\end{itemize}
+
+		具体证明过程见: $\mathbf{the: }$\ref{the: 代数基本定理}
+\end{theorem}
 \begin{anymark}[注]
 	\begin{itemize}
 		\item 驻点是导数为$0$的点,不一定是极值点
@@ -143,13 +867,59 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 		\item 拐点处二阶导数可能存在,也可能不存在;当二阶导数存在时,$f''(x_{0})=0$
 	\end{itemize}
 \end{anymark}
+\begin{definition}[曲率和曲率半径]
 
+	设$y(x)$二阶可导,则曲线 $y=y(x)$ 在其上点 $(x_{0},y(x_{0}))$ 处的曲率公式表示为:
+	$$k=\frac{|y''|}{[1+(y')^{2}]^{\frac{3}{2}}}$$
+
+	曲率半径:
+	$$R=\frac{1}{k}=\frac{[1+(y')^{2}]^{\frac{3}{2}}}{|y''|}$$
+\end{definition}
+\begin{anymark}[曲率半径推导]
+	我们不妨设曲线上的任意一点 $C(x_{0},f(x_{0}))$, 这点的曲率圆半径为 $R$, 我们可以知道这个圆是 $C$ 点和周围两个点 $A(x_{0}-\delta,f(x_{0}-\delta)),B(x_{0}+\delta,f(x_{0}+\delta))$ 的外接圆, 且 $A,B$ 无线靠近 $C$
+
+	我们利用等面积法来求出这个外接圆半径 $R$, 首先我们利用正弦定理得到:
+	$$\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = \dfrac{c}{\sin C} = 2R\Rightarrow S_{\Delta ABC} = \dfrac{abc}{R}$$
+
+	我们利用向量法求出 $\Delta ABC$ 的面积:
+	$$S_{\Delta ABC} = \dfrac{1}{2}|\mathbf{det}(\vec{a},\vec{b})| ,\begin{cases} \vec{a} = (\delta, f(x_{0})-f(x_{0}))\\ \vec{b} = (\delta,f(x_{0}+\delta)-f(x_{0})) \\ \vec{c}= (2\delta,f(x_{0}+\delta)-f(x_{0}-\delta))\end{cases} $$
+
+	我们得到:
+	$$\begin{cases} S = \dfrac{\sqrt{\delta^{2}+\left[f(x_{0})-f(x_{0}-\delta)\right]^{2}}\sqrt{\delta^{2}+\left[f(x_{0}+\delta)-f(x_{0})\right]^{2}}\sqrt{4\delta^{2}+\left[f(x_{0}+\delta)-f(x_{0}-\delta)\right]^{2}}}{4R} \\ S = |\delta\left[f(x_{0}+\delta)+f(x_{0}-\delta)-2f(x_{0})\right]|\end{cases}$$
+
+	我们有:
+	$$ R = \lim\limits_{\delta\to 0}\dfrac{\sqrt{1+\left[\frac{f(x_{0}+\delta)-f(x_{0})}{\delta}\right]^{2}}\sqrt{1+\left[\frac{f(x_{0})-f(x_{0}-\delta)}{\delta}\right]^{2}}\sqrt{4+\left[\frac{f(x_{0}+\delta)-f(x_{0}-\delta)}{2\delta}\right]^{2}}}{|\dfrac{f(x_{0}+\delta)+f(x_{0}-\delta)-2f(x_{0})}{\delta^{2}}|}$$
+
+	我们得到: $R = \dfrac{\left[1 + [f'(x_{0})]^{2}\right]^{\frac{3}{2}}}{f''(x_{0})}$, $R$ 越大, 曲线越平坦, $R$ 越小, 曲线越陡峭.
+\end{anymark}
+\subsection{物理应用}
+\begin{definition}[相关变化率]
+	$$y=y(x)
+		\left\lbrace
+		\begin{array}{l}
+			y=y(t) \\
+			x=x(t)
+		\end{array}
+		\right.
+		\Rightarrow
+		\dfrac{dy}{dx}=\dfrac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}} $$
+\end{definition}
 
 \chapterimage{chap5.jpg}
-\chapter{一元积分学}
-\chapterimage{chap6.jpg}
 \chapter{中值定理}
-\section{定理性质和证明}
+\begin{introduction}
+	\item 介值定理
+	\item 零点定理
+	\item 费马定理
+	\item 罗尔定理
+	\item 拉格朗日中值定理
+	\item 柯西中值定理
+	\item 积分中值定理
+	\item 达布定理
+\end{introduction}
+\section{十大定理}
+\subsection{介值定理 \& 零点定理}
+
 \begin{theorem}[有界和最值定理]
 
 	$f(x)$ 在$[a,b]$ 上连续,我们有: $m\leq f(x)\leq M$
@@ -176,6 +946,8 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	$f(x)$ 在 $[a,b]$ 上连续,且我们有 $f(a)f(b)<0,\exists \xi\in(a,b),\ s.t.\ f(\xi)=0$
 \end{theorem}
+
+\subsection{费马定理}
 \begin{theorem}[费马定理]
 
 	$f(x)$ 在 $x_{0}$ 处可导,且 $x=x_{0}$ 是 $f(x)$ 极值点, 我们有: $f'(x_{0})=0$
@@ -192,6 +964,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	$f(x)$ 在 $x=x_{0}$ 处可导, $f'_{+}(x_{0})=f'_{-}(x_{0})=f(x_{0})=0$
 \end{theorem}
+\subsection{罗尔定理}
 \begin{theorem}[罗尔定理]
 
 	$f(x)$ 在 $[a,b]$ 上连续,在 $(a,b)$ 内可导,且 $f(a)=f(b)$,则 $\exists \xi\in(a,b),\ s.t.\ f'(\xi)=0$
@@ -205,6 +978,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	不妨假设在 $x=\xi$ 时,$f(\xi)$ 取得最值,此时 $x=\xi$ 一定是 $f(x)$ 极值点, 由费马定理我们得到: $f'(\xi)=0$
 
 \end{theorem}
+\subsection{拉格朗日中值定理}
 \begin{theorem}[拉格朗日中值定理]
 
 	$f(x)$ 在 $[a,b]$ 上连续,在 $(a,b)$ 内可导,则 $\exists \xi\in(a,b),\ s.t.\ \dfrac{f(b)-f(a)}{b-a}=f'(\xi)$
@@ -216,6 +990,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	$\exists \xi\in(a,b),\ s.t.\ g'(\xi)=0$
 	$$ f'(\xi)(b-a)=f(b)-f(a)\Leftrightarrow  \frac{f(b)-f(a)}{b-a}=f'(\xi)$$
 \end{theorem}
+\subsection{柯西中值定理}
 \begin{theorem}[柯西中值定理]
 
 	$f(x),g(x)$ 在 $[a,b]$ 上连续,在 $(a,b)$ 内可导,且$g'(x)\neq 0$,$\exists \xi\in(a,b),\ s.t.\ \dfrac{f(b)-f(a)}{g(b)-g(a)}=\dfrac{f'(\xi)}{g'(\xi)}$
@@ -225,6 +1000,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	由罗尔定理得到: $$\exists \xi\in(a,b),\ s.t.\ F'(\xi)=0$$
 	$$ f'(\xi)=\frac{f(b)-f(a)}{g(b)-g(a)}g'(\xi)\Leftrightarrow  \frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\xi)}$$
 \end{theorem}
+\subsection{泰勒公式}
 \begin{theorem}[泰勒公式]
 
 	(1).带拉格朗日余项的$n$阶泰勒公式
@@ -237,6 +1013,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	设$f(x)$在点$x_{0}$处$n$阶可导,则存在$x_{0}$的一个邻域,对于该邻域内任意一点$x$,我们有:
 	$$f(x)=f(x_{0})+f'(x_{0})(x-x_{0})+\cdots+\frac{1}{n!}f^{(n)}(x_{0})(x-x_{0})^{n}+o((x-x_{0})^n)$$
 \end{theorem}
+\subsection{积分中值定理}
 \begin{theorem}[积分中值定理]
 
 	(1).一元函数积分中值定理
@@ -267,7 +1044,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 		我们可以得到: $$f(\xi)\int_{a}^{b}g(x)dx=\int_{a}^{b}f(x)g(x)dx$$
 	\end{anymark}
 \end{theorem}
-\section{定理扩展}
+\subsection{达布定理}
 \begin{theorem}
 	1.导数零点定理
 
@@ -311,16 +1088,10 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	综上所述, 我们得到 $\exists \xi\in(a,b),\ s.t.\ f'(\xi)=\eta$
 \end{theorem}
-\section{具体应用和题型}
+\section{Exercise}
 
-1. 证明: $\exists \xi\in(a,b),\ s.t. f'(\xi)=0$ 或者 $f'(\xi)=k$ 或者 $f''(\xi)=0$
-\begin{anymark}[注]
-	这种方法比较简单,应用于许多定理的证明,比如拉格朗日中值定理、柯西中值定理的证明
-\end{anymark}
+\subsection{零点问题}
 
-\myspace{1}
-
-2. 证明原函数或者导函数的零点个数
 \begin{proposition}
 	设$f(x)$在$[0,1]$连续,且$\int_{0}^{1}f(x)dx=\int_{0}^{1}xf(x)dx=0$,证明: $f(x)$在$(0,1)$内至少有两个零点
 \end{proposition}
@@ -376,7 +1147,6 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 \myspace{1}
 
-3. 某些利用泰勒定理或者中值定理的题目利用辅助函数,使用罗尔定理解决
 \begin{proposition}
 	设 $f(x)$ 在 $[0,4]$ 二阶可导, $f(0)=0,f(1)=1,f(4)=2$,证明: $\exists \xi\in(0,4),\ s.t. f''(\xi)=-\dfrac{1}{3}$
 \end{proposition}
@@ -607,7 +1377,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 \myspace{1}
 
-\begin{proposition}[$\spadesuit\spadesuit$]
+\begin{proposition}
 	设$f(x)$在$[-1,1]$三阶连续可导,$f(-1)=0$,$f'(0)=0$,$f(1)=1$,证明: $\exists \xi\in(-1,1)$, $s.t. f'''(\xi)=3$
 \end{proposition}
 \begin{solution}
@@ -661,7 +1431,8 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \end{anymark}
 \myspace{1}
 
-4. 复合函数的导函数或原函数的零点问题: $\exists\xi\in(a,b),\ s.t. f'(\xi)+f(\xi)g'(\xi)=0$
+\subsection{复合函数零点问题}
+
 \begin{proposition}
 	设$f(x)$在$[a,b]$连续,$(a,b)$可导,$f(a)=f(b)=0$,证明: $\exists \xi\in(a,b),\ s.t. 2f(\xi)+\xi f'(\xi)=0$
 \end{proposition}
@@ -745,7 +1516,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 \myspace{1}
 
-5. 罗尔定理与费马定理相结合
+\subsection{罗尔定理 \& 费马定理}
 \begin{proposition}
 	设$f(x)$在$[0,1]$连续,$(0,1)$可导,$f(0)=1$,$f(1)=\frac{1}{2}$,证明: $\exists \xi\in(0,1)$, $s.t. f'(\xi)+f^{2}(\xi)=0$
 \end{proposition}
@@ -844,7 +1615,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 \myspace{1}
 
-6. 一阶导数在二阶导数和原函数之间的关系
+\subsection{原函数、导函数、高阶导数关系}
 
 \begin{proposition}
 	$f(x)$在$[a,b]$可导,$f(a)=f(b)=0$,$f'_{+}(a)f'_{-}(b)>0$证明: $\exists \xi\in(a,b)$,$s.t. f''(\xi)=f(\xi)$
@@ -932,7 +1703,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	$$\forall a>0,\exists c\in(2a,4a),\ s.t. f(4a)-2f(3a)+f(2a)=a^2f''(c)$$
 \end{solution}
 
-7. 分析法,具体问题具体分析
+\subsection{复合函数构造问题}
 \begin{proposition}
 	设$f(x)$在$[\dfrac{3}{4}\pi,\dfrac{7}{4}\pi]$可导,$f(\frac{3}{4}\pi)=f(\frac{7}{4}\pi)=0$,证明: $\exists \xi\in(\dfrac{3}{4}\pi,\dfrac{7}{4}\pi)$,$s.t. f'(\xi)+f(\xi)=\cos \xi$
 \end{proposition}
@@ -1208,7 +1979,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 \myspace{1}
 
-8. 拉格朗日中值定理和柯西中值定理
+\subsection{拉格朗日中值定理 \& 柯西中值定理}
 
 \begin{proposition}
 	设$a,b>0$,证明: $\exists \xi\in(a,b).\ s.t. ae^b-be^a=(1-\xi)e^{\xi}(a-b)$
@@ -1279,7 +2050,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 \myspace{1}
 
-9. 双中值问题
+\subsection{双中值问题}
 
 \begin{proposition}
 	设$f(x)$在$[a,b]$可导,$f(a)=f(b)=1$,证明: $\exists \xi_{1},\xi_{2}\in(a,b)$,$s.t. e^{\xi_{2}-\xi_{1}}[f'(\xi_{2})+f(\xi_{2})]=1$
@@ -1633,7 +2404,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 \myspace{1}
 
-10. 泰勒展开应用 \label{pro: 泰勒展开}
+\subsection{泰勒公式}
 
 \begin{proposition}
 	设$f(x)$二阶连续可导,$f''(x)\neq 0$,若$f(x+h)=f(x)+f'(x+\theta h)h(0<\theta<1)$,证明: $\lim\limits_{h\rightarrow 0 }\theta=\dfrac{1}{2}$
@@ -1972,7 +2743,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 \myspace{1}
 
-11.$\mathcolorbox{yellow}{\text{广义罗尔定理}}$
+\subsection{广义罗尔定理}
 
 \begin{proposition}
 	1. $f(x)$在$(a,b)$内可导,且$\lim\limits_{x\rightarrow a^{+}}f(x)=\lim\limits_{x\rightarrow b^{-}}f(x)=A$,证明: $\exists \xi\in(a,b),\ s.t. f'(\xi)=0$
@@ -2043,7 +2814,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 \myspace{1}
 
-12. 常数$K$值法
+\subsection{常数 K 值法}
 
 \begin{proposition}
 	$f(x)$在$(a,b)$上三阶可导,证明: $$\exists\xi\in(a,b),\ s.t. f(b)=f(a)+\dfrac{f'(a)+f'(b)}{2}(b-a)-\frac{1}{12}f'''(\xi)(b-a)^3$$
@@ -2143,31 +2914,203 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \end{solution}
 
 \myspace{1}
-\chapterimage{chap7.jpg}
-\chapter{一元微积分应用}
-\section{一元微分学应用}
-\subsection{相关变化率}
-\begin{definition}
-	$$y=y(x)
-		\left\lbrace
-		\begin{array}{l}
-			y=y(t) \\
-			x=x(t)
-		\end{array}
-		\right.
-		\Rightarrow
-		\frac{dy}{dx}=\frac{\frac{dy}{dt}}{\frac{dx}{dt}} $$
-\end{definition}
-\subsection{几何应用}
-\begin{definition}[曲率和曲率半径]
+\chapterimage{chap6.jpg}
 
-	设$y(x)$二阶可导,则曲线 $y=y(x)$ 在其上点 $(x_{0},y(x_{0}))$ 处的曲率公式表示为:
-	$$k=\frac{|y''|}{[1+(y')^{2}]^{\frac{3}{2}}}$$
-
-	曲率半径:
-	$$R=\frac{1}{k}=\frac{[1+(y')^{2}]^{\frac{3}{2}}}{|y''|}$$
+\chapter{一元积分学}
+\begin{introduction}
+	\item 不定积分
+	\item 定积分
+	\item 变限积分
+	\item 反常积分
+	\item 积分方法
+	\item 积分应用
+\end{introduction}
+\section{不定积分}
+\begin{definition}[不定积分]
+	$\forall x\in I$, 对于可导函数 $F(x)$, 均有 $F'(x) = f(x)$, 我们称 $F(x)$ 是 $f(x)$ 的一个原函数, 记为 $\int f(x)dx = F(x) + C$ 是 $f(x)$ 的原函数
 \end{definition}
+
+\begin{theorem}[原函数存在定理(充分条件)]
+	连续函数 $f(x)$ 必存在原函数 $F(x)$
+	\begin{anymark}[证明]
+		1. 构造函数 $F(x) = \int_{a}^{x}f(t)dt$, 证明 $F'(x) = f(x)$
+		
+		2. $\forall x\in(a,b), F'(x) = \lim\limits_{\Delta x\to 0}\dfrac{F(x+\Delta x)-F(x)}{\Delta x} = \lim\limits_{\Delta x\to 0}\dfrac{\int_{x}^{x+\Delta x}f(t)dt}{\Delta x} = \lim\limits_{\xi\to x}f(\xi) = f(x)$
+	\end{anymark}
+\end{theorem}
+
+\begin{theorem}[达布定理(必要条件)]
+	1. $f(x)$ 在 $[a,b]$ 上有原函数 $F(x)$, 则 $f(x)$ 在 $[a,b]$ 上必有介值性
+
+	2. $f(x)$ 在 $[a,b]$ 上有原函数 $F(x)$, 则 $f(x)$ 在 $[a,b]$ 上必无第一类间断点
+
+	3. $f(x)$ 在 $[a,b]$ 上有原函数 $F(x)$, 则 $f(x)$ 在 $[a,b]$ 上必无无穷间断点
+\end{theorem}
+\subsection*{不定积分计算}
+
+\begin{definition}[积分方法]
+	1. 第一换元法(凑微分): $\int f[\varphi(x)]\varphi'(x)dx = \int f(u)du$
+
+	2. 第二换元法: $\int f(x)dx = \int f[\varphi(t)]\varphi'(t)dt$
+
+	3. 三角换元法: $\sqrt{a^{2}-x{2}}\to t = a\sin x, \sqrt{a^{2}+x^{2}}\to t = a\tan x$
+
+	4. 万能公式: $\int R(\sin x, \cos x)dx \to t = \tan \dfrac{x}{2}\to \begin{cases} \sin x = \dfrac{2t}{1+t^{2}}\\ \cos x = \dfrac{1-t^{2}}{1+t^{2}}\end{cases}$
+	$$\begin{cases} R(\sin x,\cos x) = -R(-\sin x,\cos x)\to t =\cos x\\ 
+		R(\sin x,\cos x) = -R(\sin x,-\cos x)\to t = \sin x\\
+		R(\sin x,\cos x) = R(-\sin x,-\cos x)\to t = \tan x
+	\end{cases}$$
+
+	5. 分部积分法:
+	$$\int udv = uv - \int vdu$$
+
+	
+	6. 组合积分法: 
+	$$\begin{cases} \int f(x)dx = I + A\int g(x)dx  \\ \int g(x) dx= J + B\int f(x)dx \end{cases}\qquad\qquad \begin{cases} \int [f(x) + g(x)]dx = I \\ \int [f(x)-g(x)]dx =J  \end{cases}$$
+
+	7. 递归积分法(分部积分推广): 
+	$$I_{n} = f(x) + I_{n-1}$$
+\end{definition}
+
+\begin{theorem}[有理函数积分]
+	有理函数指的是分子、分母都是 $x$ 的多项式的分式 $\dfrac{p(x)}{q(x)}$, 其中(m > n)
+	$$\begin{cases} p(x) = a_{0}+a_{1}x+\cdots+a_{n}x^{n},a_{n}\neq 0 \\ p(x) = b_{0}+b_{1}x+\cdots+b_{m}x^{n},b_{m}\neq 0  \end{cases}$$
+
+	我们有在实数范围内, 任意实系数多项式 $q(x)$ 都可以分解为:
+	$$q(x) = b_{m}(x-a_{1})^{r_{1}}\cdots(x-a_{k})^{r_{k}}(x^{2}+b_{1}x+c_{1})^{s_{1}}\cdots(x^{2}+b_{l}x+c_{l})^{s_{l}}$$
+
+	其中 $r_{1}+\cdots+r_{k}+ 2(s_{1}+\cdots+s_{l}) = m$
+
+	我们可以得到:
+	\begin{eqnarray*}
+		\dfrac{p(x)}{q(x)} &=& \dfrac{A_{1,1}}{x-a_{1}}+\cdots+\dfrac{A_{1,r_{1}}}{(x-a_{1})^{r_{1}}}\\
+							& & + \cdots +\\
+							& & \dfrac{A_{k,1}}{x-a_{k}}+\cdots+\dfrac{A_{k,r_{k}}}{(x-a_{k})^{r_{k}}}\\
+							& & + \dfrac{M_{1,1}x+N_{1,1}}{x^{2}+b_{1}x+c_{1}}+\cdots+\dfrac{M_{1,s_{1}}x+N_{1,s_{1}}}{(x^{2}+b_{1}x+c_{1})^{s_{1}}}\\
+							& & + \cdots +\\
+							& & \dfrac{M_{l,1}x+N_{l,1}}{x^{2}+b_{l}x+c_{l}}+\cdots+\dfrac{M_{l,s_{l}}x+N_{l,s_{l}}}{(x^{2}+b_{l}x+c_{l})^{s_{l}}}
+	\end{eqnarray*}
+
+	我们只需要求解两种不定积分即可, $I = \int \dfrac{1}{(x-a)^{k}}dx$ 和 $J = \int \dfrac{mx+n}{(x^{2}+bx+c)^{k}}$, 其中 $c -\dfrac{b^{2}}{4} > 0$
+
+	第一个不定积分: $I = \int \dfrac{1}{(x-a)^{k}}dx = \begin{cases}\ln(x-a), &k =1 \\ \dfrac{1}{1-k}(x-a)^{1-k}, &k > 1 \end{cases}$
+
+	第二个不定积分: $J = \int \dfrac{mx+n}{(x^{2}+bx+c)^{k}}$
+
+	令 $t =x+\dfrac{b}{2}, a^{2} = c -\dfrac{b^{2}}{4}$, 则有:
+	
+	\begin{eqnarray*}
+		J &=& \int\dfrac{m(t-\dfrac{b}{2})+n}{(t^{2}+a^{2})}dt\\
+			&=& \dfrac{m}{2}\int \dfrac{2t}{(t^{2}+a^{2})^{k}}dt + (n-\dfrac{mb}{2})\int \dfrac{1}{(t^{2}+a^{2})^{k}}dt\\
+			&=& \dfrac{m}{2}\int \dfrac{1}{(t^{2}+a^{2})^{k}}d(t^{2}+a^{2}) + (n-\dfrac{mb}{2})\int \dfrac{1}{(t^{2}+a^{2})^{k}}dt\\ 
+			&=& \dfrac{m}{2}P+(n-\dfrac{mb}{2})Q
+	\end{eqnarray*}
+
+	其中 $P = \begin{cases} \ln(t^{2}+a^{2}), &k=1 \\ \dfrac{1}{1-k}\dfrac{1}{(t^{2}+a^{2})^{1-k}}, &k > 1  \end{cases}$
+
+
+\end{theorem}
+\section{定积分}
+\begin{definition}[定积分]
+	$f(x)$ 在 $[a,b]$ 上有界, 在 $(a,b)$ 上任取 $n-1$ 个分点 $x_{i}(i = 1,2,3,\cdots,n-1)$, 定义 $x_{0} = a, x_{n} = b$, 且满足 $a = x_{0} < x_{1}<x_{2}<\cdots<x_{n} = b$, 记 $\Delta x_{k}=x_{k}-x_{k-1},k=1,2,\cdots,n$, 任取一点 $\xi_{k}\in[x_{k-1},x_{k}]$, 
+	记 $\lambda = \max\{\Delta x_{k}\}$, 当 $\lambda\to 0$ 时, 极限 $\lim\limits_{\lambda\to 0}\sum\limits_{k=1}^{n}f(\xi_{k})\Delta x_{k}$ 存在且与分点 $x_{i}$ 和 $\xi_{k}$ 的取法无关, 
+	则称函数 $f(x)$ 在 $[a,b]$ 上可积, 记 $\int_{a}^{b}f(x)dx = \lim\limits_{\lambda\to 0}\sum\limits_{k=1}^{n}f(\xi_{k})\Delta x_{k}$ 为 $f(x)$ 在 $[a,b]$ 上的定积分
+
+	任取 $x_{i}$: 变为将区间 $[a,b]$ 分为 $n$ 个小区间, 且每个小区间的长度为 $\Delta x_{k}$, 且 $\Delta x_{k}\to 0$, 且 $\xi_{k}$ 为每个小区间的右端点, $\int_{a}^{b}f(x)dx = \lim\limits_{n\to +\infty}\sum\limits_{i=1}^{n}f(a+\frac{b-a}{n}i)\frac{b-a}{n}$
+\end{definition}
+
+
+\begin{theorem}[定积分存在定理]
+	1. 必要条件: 区间有界, 函数有界
+
+	2. 充分条件:
+
+	(1). $f(x)$ 在 $[a,b]$ 上连续, 则 $f(x)$ 在 $[a,b]$ 上可积
+
+	(2). $f(x)$ 在 $[a,b]$ 上有界, 且只有有限个间断点,则 $f(x)$ 在 $[a,b]$ 上可积
+\end{theorem}
+\begin{theorem}[牛顿莱布尼茨公式]
+	$f(x)$ 是 $[a,b]$ 上连续函数, $\int_{a}^{b}f(x)dx = F(x)|_{a}^{b} = F(b) - F(a)$
+\end{theorem}
+
+\section{变限积分}
+\begin{definition}[变限积分]
+	$x\in[a,b],\forall x\in[a,b]$, 积分 $\int_{a}^{x}f(t)dt$ 都有一个确定的值, 我们将这个关于 $x$ 的函数 $\int_{a}^{x}f(t)dt$ 称作变限积分
+\end{definition}
+\begin{corollary}[变限积分]
+	1. $f(x)$ 可积, $F(x) = \int_{a}^{x}f(t)dt$ 一定连续
+
+	2. $f(x)$ 连续, $F(x) = \int_{a}^{x}f(t)dt$ 一定可导, 且 $F'(x) = f(x)$
+
+	3. $f(x)$ 在 $[a,b]$ 上有唯一跳跃间断点 $x_{0}$, 则 $F(x) = \int_{a}^{x}f(t)dt$ 在 $x=x_{0}$ 处不可导
+
+	4. $f(x)$ 在 $[a,b]$ 上有唯一可去间断点 $x_{0}$, 则 $F(x) = \int_{a}^{x}f(t)dt$ 在 $x=x_{0}$ 处可导, 且 $F'(x_{0}) = \lim\limits_{x\to x_{0}}f(x)$
+\end{corollary}
+\begin{theorem}[变限积分的导数]
+	$f(x)$ 是连续函数, 则 $\left[\int_{\phi(x)}^{\varphi(x)}f(t)dt\right]' = f[\varphi(x)]\varphi'(x) - f[\phi(x)]\phi'(x)$
+\end{theorem}
+\begin{corollary}[变上限积分奇偶性和周期性与原函数关系]\label{cor: 变上限积分奇偶性和周期性与原函数关系}
+	$f(x)$连续,$f(x)$与$\int_{a}^{x} f(t)dt$之间的关系
+	
+	(1).如果$f(x)$是奇函数,$\int_{a}^{x}f(t)dt$是偶函数
+	
+	(2).如果$f(x)$是偶函数,$\int_{a}^{x}f(t)dt$是奇函数当且仅当$a=0$时成立.
+	
+	(3).如果 $f(x)$ 是周期函数,$\int_{a}^{x}f(t)dt\text{是周期函数与}\int_{0}^{T}f(t)dt=0\text{等价}$
+	\begin{anymark}[证明]
+		我们令: $F(x)=\int_{a}^{x}f(t)dt$
+
+		(i). 必要性: $F(x+T)-F(x)=\int_{x}^{x+T}f(t)dt=\int_{0}^{T}f(t)dt=0$
+
+		(ii). 充分性: $\int_{0}^{T}f(t)dt=0\Leftrightarrow F(x+T)-F(x)=0$
+	\end{anymark}
+\end{corollary}
+
+\section{反常积分}
+
+\begin{definition}[反常积分]
+	1. 积分区间无界: $\int_{a}^{+\infty}f(x)dx = \lim\limits_{A\to +\infty}\int_{a}^{A}f(x)dx$
+
+	2. 被积函数无界: $\int_{a}^{b}f(x)dx = \lim\limits_{\varepsilon\to 0^{+}}\int_{a}^{b-\varepsilon}f(x)dx$
+\end{definition}
+\subsection*{反常积分敛散性判别}
+\begin{theorem}[比较判别法]
+	1. 无穷区间: $f(x),g(x)$ 连续, 且 $0 leq f(x) \leq g(x)$
+	\begin{enumerate}
+		\item 若 $\int_{a}^{+\infty}g(x)dx$ 收敛, 则 $\int_{a}^{+\infty}f(x)dx$ 收敛
+		\item 若 $\int_{a}^{+\infty}f(x)dx$ 发散, 则 $\int_{a}^{+\infty}g(x)dx$ 发散
+	\end{enumerate}
+
+	2. 无穷函数: $f(x),g(x)$ 在 $(a,b]$ 连续, 瑕点为 $x=a$, 且 $0\leq f(x)\leq g(x)$
+	\begin{enumerate}
+		\item 若 $\int_{a}^{b}g(x)dx$ 收敛, 则 $\int_{a}^{b}f(x)dx$ 收敛
+		\item 若 $\int_{a}^{b}f(x)dx$ 发散, 则 $\int_{a}^{b}g(x)dx$ 发散
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[比较判别法的极限形式]
+	1. 无穷区间: $f(x),g(x)$ 连续, 且 $g(x)>0, f(x)\geq 0$, $\lim\limits_{x\to +\infty}\dfrac{f(x)}{g(x)}=\lambda$
+	\begin{enumerate}
+		\item $\lambda\neq 0$ 且 $\lambda \neq \infty$, 则 $\int_{a}^{+\infty}f(x)dx$ 与 $\int_{a}^{+\infty}g(x)dx$ 同敛散
+		\item $\lambda = 0$, 则 $\int_{a}^{+\infty}g(x)dx$ 收敛 $\Rightarrow$ $\int_{a}^{+\infty}f(x)dx$ 收敛
+		\item $\lambda = \infty$, 则 $\int_{a}^{+\infty}g(x)dx$ 发散 $\Rightarrow$ $\int_{a}^{+\infty}f(x)dx$ 发散
+	\end{enumerate}
+
+	2. 无穷函数: $f(x),g(x)$ 在 $(a,b]$ 连续, 瑕点为 $x=a$, 且 $g(x)>0, f(x)\geq 0$, $\lim\limits_{x\to a^{+}}\dfrac{f(x)}{g(x)}=\lambda$
+	\begin{enumerate}
+		\item $\lambda\neq 0$ 且 $\lambda \neq \infty$, 则 $\int_{a}^{b}f(x)dx$ 与 $\int_{a}^{b}g(x)dx$ 同敛散
+		\item $\lambda = 0$, 则 $\int_{a}^{b}g(x)dx$ 收敛 $\Rightarrow$ $\int_{a}^{b}f(x)dx$ 收敛
+		\item $\lambda = \infty$, 则 $\int_{a}^{b}g(x)dx$ 发散 $\Rightarrow$ $\int_{a}^{b}f(x)dx$ 发散
+	\end{enumerate}
+\end{theorem}
+
+\begin{corollary}[p级数判别法]
+	$$\int_{0}^{1}\frac{1}{x^{p}}dx\begin{cases} \text{收敛}, &0 < p < 1 \\ \text{发散},& p\geq 1  \end{cases}$$
+	$$\int_{1}^{+\infty}\frac{1}{x^{p}}dx\begin{cases} \text{收敛}, &p > 1 \\ \text{发散},& p\leq 1  \end{cases}$$
+\end{corollary}
+
 \section{一元积分学应用}
+
 \subsection{几何应用}
 \subsubsection{平面图形面积}
 \begin{definition}[定积分几何意义]
@@ -2252,10 +3195,482 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	3. $F=\rho g\int_{a}^{b}x(f(x)-h(x))dx$
 \end{definition}
-\section{微分方程应用}
+
+\section*{积分训练}
+\begin{proposition}
+	$\int \dfrac{x\sin x}{(1+\cos^2x)^{\frac{3}{2}}}dx$
+\end{proposition}
+\begin{solution}
+		
+	我们令$f(x)=\dfrac{\sin x}{(1+\cos^2x)^{\frac{3}{2}}}$
+	\begin{eqnarray*}
+		F(x)&=&\int f(x)dx\\
+			&=&\int -\dfrac{d\cos x}{(1+\cos^2x)^{\frac{3}{2}}}\\
+			&=&\int -\dfrac{du}{(1+u^2)^{\frac{3}{2}}}\\
+			&\xlongequal{u=\tan t}&\int (-\cos t)dt\\
+			&=&-\sin t+C\\
+			&\xlongequal{\sin t=\frac{u}{\sqrt{1+u^2}}}&-\dfrac{\cos x}{\sqrt{1+\cos^2 x}}+C
+	\end{eqnarray*}
+	
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&=&\int xd(F(x))\\
+		&=&xF(x)-\int F(x)dx\\
+		&=&-\dfrac{x\cos x}{\sqrt{1+\cos^2 x}}+\int \dfrac{\cos x}{\sqrt{1+\cos^2 x}}dx\\
+		&=&-\dfrac{x\cos x}{\sqrt{1+\cos^2 x}}+\int \dfrac{d\sin x}{\sqrt{2-\sin^2 x}}\\
+		&=&\arcsin(\dfrac{\sin x}{\sqrt{2}})-\dfrac{x\cos x}{\sqrt{1+\cos^2 x}}+C
+	\end{eqnarray*}
+\end{solution}
+
+\begin{proposition}
+	$\int \dfrac{x^3\arccos x}{\sqrt{1-x^2}}dx$
+\end{proposition}
+\begin{solution}
+		
+	我们令$f(x)=\dfrac{\arccos x}{\sqrt{1-x^2}}$
+	\begin{eqnarray*}
+		F(x)&=&\int f(x)dx\\
+		&=&\int -\arccos xd(\arccos x)\\
+		&=&-\dfrac{1}{2}(\arccos x)^2+C
+	\end{eqnarray*}
+	
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&=&\int x^3d(F(x))\\
+		&=&x^3F(x)-\int F(x)dx\\
+		&=&-\dfrac{x^3}{2}(\arccos x)^2-\dfrac{1}{2}\int (\arccos x)^2dx\\
+		&\xlongequal[x=\cos u]{u=\arccos x}&-\dfrac{x^3}{2}(\arccos x)^2+\dfrac{1}{2}\int u^2\sin udu\\
+		&\xlongequal{\text{分部积分}}&-\dfrac{x^3}{2}(\arccos x)^2-\dfrac{u^2}{2}\cos u+u\sin u+\cos u+C\\
+		&\xlongequal[\sin u=\sqrt{1-x^2}]{u=\arccos x}&-\dfrac{x^3}{2}(\arccos x)^2-\dfrac{x(\arccos x)^2}{2}+\sqrt{1-x^2}\arccos x+x+C
+	\end{eqnarray*}
+\end{solution}
+\begin{proposition}
+	$\int \dfrac{x+\sin x\cos x}{(x\sin x+\cos x)^2}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&=&\int \dfrac{xd\tan x+\tan xdx}{(x\tan x+1)^2}\\
+		&=&\int \dfrac{dx\tan x}{(x\tan x+1)^2}\\
+		&=&-\dfrac{1}{x\tan x+1}+C
+	\end{eqnarray*}
+\end{solution}
+\begin{proposition}
+	$\int \dfrac{1-\ln x}{(x-\ln x)^2}dx$
+\end{proposition}
+\begin{solution}
+		
+	我们令:  $f(x)=\dfrac{h(x)}{x-\ln x}$
+	\begin{eqnarray*}
+		f'(x)&=&\dfrac{h'(x)(x-\ln x)-h(x)(1-\dfrac{1}{x})}{(x-\ln x)^2}\\
+		&=&\dfrac{1-\ln x}{(x-\ln x)^2}
+	\end{eqnarray*}
+
+当$h(x)=x$时,$f'(x)=\dfrac{1-\ln x}{(x-ln x)^2}$,原不定积分为:  $I=\dfrac{x}{x-\ln x}+C$
+\end{solution}
+
+\begin{proposition}
+	$\int \dfrac{x\cos x}{(x+\cos x)^2}dx$
+\end{proposition}
+\begin{solution}
+		
+	我们令:  $f(x)=\dfrac{h(x)}{x+\cos x}$
+	\begin{eqnarray*}
+		f'(x)&=&\dfrac{h'(x)(x+\cos x)-h(x)(1-\sin x)}{(x+\cos x)^2}\\
+		&=&\dfrac{x\cos x}{(x+\cos x)^2}
+	\end{eqnarray*}
+	
+	当$h(x)=\sin x+1$时,$f'(x)=\dfrac{x\cos x}{(x+\cos x)^2}$,原不定积分为:  $I=\dfrac{\sin x+1}{x+\cos x}+C$
+\end{solution}
+\begin{proposition}
+	$\int \dfrac{\cos^2x-x^2\sin x}{(x+\cos x)^2}dx$
+\end{proposition}
+\begin{solution}
+		
+	我们令:  $f(x)=\dfrac{h(x)}{x+\cos x}$
+	\begin{eqnarray*}
+		f'(x)&=&\dfrac{h'(x)(x+\cos x)-h(x)(1-\sin x)}{(x+\cos x)^2}\\
+		&=&\dfrac{\cos^2x-x^2\sin x}{(x+\cos x)^2}
+	\end{eqnarray*}
+	
+	当$h(x)=x\cos x$时,$f'(x)=\dfrac{x\cos x}{(x+\cos x)^2}$,原不定积分为:  $I=\dfrac{x\cos x}{x+\cos x}+C$
+\end{solution}
+\begin{proposition}
+	$\int \dfrac{x\sin x+\cos x}{x^2+\cos^2x}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价为:  
+	\begin{eqnarray*}
+		I&=&\int \dfrac{\frac{x\sin x+\cos x}{x^2}}{1+\left( \frac{\cos x}{x}\right)^2}dx\\
+		&=&-\int \dfrac{d\frac{\cos x}{x}}{1+\left( \frac{\cos x}{x}\right)^2}\\
+		&=&-\arctan(\dfrac{\cos x}{x})+C
+	\end{eqnarray*}
+
+	原不定积分为:  $I=-\arctan(\dfrac{\cos x}{x})+C$
+\end{solution}
+\begin{proposition}
+	$\int \dfrac{e^x(x-1)}{x^2+e^{2x}}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价为:  
+	\begin{eqnarray*}
+		I&=&\dfrac{\frac{e^x(x-1)}{x^2}}{1+\left(\frac{e^x}{x}\right)^2}dx\\
+		&=&-\int \dfrac{d\frac{e^x}{x}}{1+\left( \frac{e^x}{x}\right)^2}\\
+		&=&-\arctan(\dfrac{e^x}{x})+C
+	\end{eqnarray*}
+	
+	原不定积分为:  $I=-\arctan(\dfrac{e^x}{x})+C$
+\end{solution}
+\begin{proposition}
+	$\int e^{\sec x}(\tan x-\sin x)dx$
+\end{proposition}
+\begin{solution}
+		
+	我们令:  $f(x)=h(x)e^{\sec x}$
+	\begin{eqnarray*}
+		f'(x)&=&h'(x)e^{\sec x}+h(x)e^{\sec x}\dfrac{\sin x}{\cos^2x}\\
+		&=&\dfrac{h'(x)\cos^2x+h(x)\sin x}{\cos^2x}e^{\sec x}\\
+		&=&(\tan x-\sin x)e^{\sec x}
+	\end{eqnarray*}
+	
+	当$h(x)=\cos x$时,$f'(x)=(\tan x-\sin x)e^{\sec x}$,原不定积分为:  $I=\cos xe^{\sec x}+C$
+\end{solution}
+\begin{proposition}
+	$\int e^{\frac{1}{x}}(2x-1)dx$
+\end{proposition}
+\begin{solution}
+		
+	我们令:  $f(x)=h(x)e^{\frac{1}{x}}$
+	\begin{eqnarray*}
+		f'(x)&=&h'(x)e^{\frac{1}{x}}-h(x)e^{\sec x}\dfrac{1}{x^2}\\
+		&=&\dfrac{h'(x)x^2-h(x)}{x^2}e^{\sec x}\\
+		&=&(2x-1)e^{\frac{1}{x}}
+	\end{eqnarray*}
+	
+	当$h(x)=x^2$时,$f'(x)=(2x-1)e^{\frac{1}{x}}$,原不定积分为:  $I=x^2e^{\frac{1}{x}}+C$
+\end{solution}
+\begin{proposition}
+	$\int e^{\sin x}\dfrac{x\cos^3 x-\sin x}{\cos^2x}dx$
+\end{proposition}
+\begin{solution}
+		
+	我们令:  $f(x)=h(x)\dfrac{e^{\sin x}}{\cos x}$
+	\begin{eqnarray*}
+		f'(x)&=&\dfrac{\left[h(x)e^{\sin x}\cos x+h'(x)e^{\sin x}\right]\cos x+h(x)e^{\sin x}\sin x }{\cos^2 x}\\
+		&=&\dfrac{e^{\sin x}}{\cos^2 x}\left[ h(x)\cos^2 x+h'(x)\cos x+h(x)\sin x\right] \\
+		&=&e^{\sin x}\dfrac{x\cos^3 x-\sin x}{\cos^2x}
+	\end{eqnarray*}
+	
+	当$h(x)=x\cos x-1$时,$f'(x)=e^{\sin x}\dfrac{x\cos^3 x-\sin x}{\cos^2x}$,原不定积分为:  $I=\dfrac{(x\cos x-1)e^{\sin x}}{\cos x}+C$
+\end{solution}
+\begin{proposition}
+	$\int e^{x^3}(10x-9x^7)dx$
+\end{proposition}
+\begin{solution}
+		
+	我们令:  $f(x)=h(x)e^{x^3}$
+	\begin{eqnarray*}
+		f'(x)&=&e^{x^3}\left(h'(x)+3x^2h(x)\right) \\
+		&=&e^{x^3}(10x-9x^7)
+	\end{eqnarray*}
+	
+	当$h(x)=5x^2-3x^5$时,$f'(x)=e^{x^3}(10x-9x^7)$,原不定积分为:  $I=e^{x^3}(5x^2-3x^5)+C$
+\end{solution}
+\begin{proposition}
+	$\int \dfrac{1}{x\sqrt{x-1}}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&\xlongequal[x=u^2+1]{u=\sqrt{x-1}}&\int \dfrac{2u}{(u^2+1)u}du\\
+		&=&2\arctan u+C\\
+		&=&2\arctan \sqrt{x-1}+C
+	\end{eqnarray*}
+
+原不定积分为:  $I=2\arctan \sqrt{x-1}+C$
+\end{solution}
+\begin{proposition}
+	$\int \dfrac{1}{x+\sqrt{x-1}}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&\xlongequal[x=u^2+1]{u=\sqrt{x-1}}&\int \dfrac{2u}{(u^2+1)+u}du\\
+		&=&\int \dfrac{2u}{u^2+u+1}du-\int \dfrac{1}{\frac{3}{4}+(u+\frac{1}{2})^2}du\\
+		&=&\ln(u^2+u+1)-\frac{2}{\sqrt{3}}\arctan\dfrac{2u+1}{\sqrt{3}}+C\\
+		&=&\ln(x+\sqrt{x-1})-\dfrac{2}{\sqrt{3}}\arctan\dfrac{2\sqrt{x-1}+1}{\sqrt{3}}+C
+	\end{eqnarray*}
+	
+	原不定积分为:  $I=\ln(x+\sqrt{x-1})-\dfrac{2}{\sqrt{3}}\arctan\dfrac{2\sqrt{x-1}+1}{\sqrt{3}}+C$
+\end{solution}
+\begin{proposition}
+	$\int \dfrac{1}{x^2\sqrt{2x-1}}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&\xlongequal[x=\frac{u^2+1}{2}]{u=\sqrt{2x-1}}&\int \dfrac{4}{(u^2+1)^2}du\\
+		&\xlongequal{u=\tan t}&\int 4\cos^2 tdt\\
+		&=&2t+\sin 2t\\
+		&=&2t+\dfrac{2\tan t}{1+\tan^2t}\\
+		&=&2\arctan u+\dfrac{2u}{1+u^2}\\
+		&=&2\arctan\sqrt{2x-1}+\dfrac{\sqrt{2x-1}}{x}+C
+	\end{eqnarray*}
+	
+	原不定积分为:  $I=2\arctan\sqrt{2x-1}+\dfrac{\sqrt{2x-1}}{x}+C$
+\end{solution}
+\begin{proposition}
+	$\int \dfrac{\sqrt{1-x}}{x^3}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&\xlongequal[t=\sqrt{1-x}]{x=1-t^2}&\int \dfrac{2t^2}{(t^2-1)^3}dt\\
+		&\xlongequal[t=\sec u]{u=\arccos\left(\dfrac{1}{\sqrt{1-x}}\right)}&\int \dfrac{2\cos^2u}{\sin^5 u}du\\
+		&=&\int \dfrac{2}{\sin^5 u}du-\int \dfrac{2}{\sin^3 u}du	
+	\end{eqnarray*}
+	
+	我们有:
+	$$\left\lbrace
+	\begin{array}{l}
+		\int \dfrac{1}{\sin^3 x}dx=\dfrac{1}{4}\ln\left(\dfrac{1-\cos x}{1+\cos x} \right)-\dfrac{\cos x}{2\sin^2 x}+C\\
+		\int \dfrac{1}{\sin^5 x}dx=\dfrac{3}{16}\ln\left(\dfrac{1-\cos x}{1+\cos x} \right)+\dfrac{3\cos^3 x-5\cos x}{8\sin^4x}+C
+	\end{array}
+	\right. $$
+	
+	\begin{eqnarray*}
+		I&=&\dfrac{3}{8}\ln\left(\dfrac{1-\cos u}{1+\cos u} \right)+\dfrac{3\cos^3 u-5\cos u}{4\sin^4u}-\dfrac{1}{2}ln\left(\dfrac{1-\cos u}{1+\cos u} \right)+\dfrac{\cos u}{\sin^2 u}\\
+		&=&-\dfrac{1}{8}\ln\left(\dfrac{1-\cos u}{1+\cos u} \right)-\dfrac{\cos^3 u+\cos u}{4\sin^4 u}\\
+		&=&-\dfrac{1}{8}\ln\left(\dfrac{t-1}{t+1} \right)-\dfrac{t^3+t}{4(t^2-1)^2}\\
+		&=&-\dfrac{1}{8}\ln\left(\dfrac{\sqrt{1-x}-1}{\sqrt{1-x}+1} \right)-\dfrac{(2-x)\sqrt{1-x}}{4x^2}+C
+	\end{eqnarray*}
+
+	原不定积分为:  $I=-\dfrac{1}{8}\ln\left(\dfrac{\sqrt{1-x}-1}{\sqrt{1-x}+1} \right)-\dfrac{(2-x)\sqrt{1-x}}{4x^2}+C$
+\end{solution}
+\begin{proposition}
+	$\int \dfrac{x}{\sqrt{x+1}+\sqrt{x-1}}dx$
+\end{proposition}
+
+\begin{solution}
+		
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&=&\int \dfrac{x(\sqrt{x+1}-\sqrt{x-1})}{2}dx\\
+		&=&\int \dfrac{x\sqrt{x+1}}{2}dx-\int \dfrac{x\sqrt{x-1}}{2}dx\\
+		&=&I_{1}-I_{2}\\
+		I_{1}&\xlongequal[u=\sqrt{x+1}]{x=u^2-1}&\int (u^2-1)u^2du\\
+		&=&\dfrac{u^5}{5}-\dfrac{u^3}{3}\\
+		I_{2}&\xlongequal[t=\sqrt{x-1}]{x=t^2+1}&\int (t^2+1)t^2dt\\
+		&=&\dfrac{t^5}{5}+\dfrac{t^3}{3}\\
+		I&=&\dfrac{(x+1)^2\sqrt{x+1}}{5}-\dfrac{(x+1)\sqrt{x+1}}{3}-\dfrac{(x-1)^2\sqrt{x-1}}{5}-\dfrac{(x-1)\sqrt{x-1}}{3}+C
+	\end{eqnarray*}
+	
+	原不定积分为:  $I=\dfrac{(x+1)^2\sqrt{x+1}}{5}-\dfrac{(x+1)\sqrt{x+1}}{3}-\dfrac{(x-1)^2\sqrt{x-1}}{5}-\dfrac{(x-1)\sqrt{x-1}}{3}+C$
+\end{solution}
+
+\begin{proposition}
+	$\int \dfrac{1}{\sqrt{1+x}+\sqrt{1-x}+\sqrt{2}}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&=&\int \dfrac{\sqrt{1+x}+\sqrt{1-x}-\sqrt{2}}{(\sqrt{1+x}+\sqrt{1-x})^2-2}dx\\
+		&=&\int \dfrac{\sqrt{1+x}+\sqrt{1-x}-\sqrt{2}}{2\sqrt{1-x^2}}dx\\
+		&=&\int \dfrac{1}{2\sqrt{1-x}}dx+\int \dfrac{1}{2\sqrt{1+x}}dx-\int \dfrac{\sqrt{2}}{2\sqrt{1-x^2}}dx\\
+		&=&\sqrt{1+x}-\sqrt{1-x}-\dfrac{\sqrt{2}}{2}\arcsin x+C
+	\end{eqnarray*}
+	
+	原不定积分为:  $I=\sqrt{1+x}-\sqrt{1-x}-\dfrac{\sqrt{2}}{2}\arcsin x+C$
+\end{solution}
+
+\begin{proposition}
+	$\int \sqrt{\dfrac{1+x}{1-x}}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&\xlongequal[x=\frac{t^2-1}{t^2+1}]{t=\sqrt{\frac{1+x}{1-x}}}&\int\dfrac{4t^2}{(t^2+1)^2}dt\\
+		&\xlongequal{t=\tan u}&\int 4\sin^2 udu\\
+		&=&2u-\sin2u\\
+		&=&2u-\dfrac{2\tan u}{1+\tan^2 u}+C\\
+		&=&2\arctan\sqrt{\dfrac{1+x}{1-x}}-\sqrt{1-x^2}+C
+	\end{eqnarray*}
+	
+	原不定积分为:  $I=2\arctan\sqrt{\dfrac{1+x}{1-x}}-\sqrt{1-x^2}+C$
+\end{solution}
+\begin{proposition}
+	$\int x\sqrt{\dfrac{x}{3-x}}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&\xlongequal[x=\frac{3t^2}{t^2+1}]{t=\sqrt{\frac{x}{3-x}}}&\int\dfrac{18t^4}{(t^2+1)^3}dt\\
+		&\xlongequal{t=\tan u}&\int 18\sin^4 udu\\
+		&=&\int \dfrac{9(1-2\cos 2u+\cos^22u)}{2}du\\
+		&=&\int \left( \dfrac{27}{4}+\dfrac{9}{4}\cos 4u-9\cos 2u\right)du\\
+		&=&\dfrac{27}{4}u+\dfrac{9}{16}\sin 4u-\dfrac{9}{2}\sin 2u\\
+		&\xlongequal[\sin 2u=\frac{2t}{1+t^2}]{\cos 2u=\frac{1-t^2}{1+t^2}}& \dfrac{27}{4}\arctan\sqrt{\dfrac{x}{3-x}}-\dfrac{(9+2x)\sqrt{3x-x^2}}{4}+C
+	\end{eqnarray*}
+	
+	原不定积分为:  $I=\dfrac{27}{4}\arctan\sqrt{\dfrac{x}{3-x}}-\dfrac{(9+2x)\sqrt{3x-x^2}}{4}+C$
+\end{solution}
+
+\begin{proposition}
+	$\int \sqrt{\dfrac{x}{1+x}}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&\xlongequal[x=\frac{t^2}{1-t^2}]{t=\sqrt{\frac{x}{1+x}}}&\int\dfrac{2t^2}{(t^2-1)^2}dt\\
+		&\xlongequal{t=\sec u}&\int \dfrac{2}{\sin^3 u}du\\
+		&=&\dfrac{1}{2}\ln\left(\dfrac{1-\cos u}{1+\cos u} \right)-\dfrac{\cos u}{\sin^2 u}+C\\
+		&=&\dfrac{1}{2}\ln\left(\dfrac{t-1}{t+1} \right)-\dfrac{t}{1-t^2}+C\\
+		&=&\dfrac{1}{2}\ln\left(\dfrac{\sqrt{1+x}-\sqrt{x}}{\sqrt{1+x}+\sqrt{x}} \right)+\sqrt{x+x^2}+C
+	\end{eqnarray*}
+	
+	原不定积分为:  $I=\dfrac{1}{2}\ln\left(\dfrac{\sqrt{1+x}-\sqrt{x}}{\sqrt{1+x}+\sqrt{x}} \right)+\sqrt{x+x^2}+C$
+\end{solution}
+
+\begin{proposition}
+	$\int \sqrt{\dfrac{x+1}{x-1}}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&\xlongequal[x=\frac{t^2+1}{t^2-1}]{t=\sqrt{\frac{x+1}{x-1}}}&\int-\dfrac{4t^2}{(t^2-1)^2}dt\\
+		&\xlongequal{t=\sec u}&\int -\dfrac{4}{\sin^3 u}du\\
+		&=&\ln\left(\dfrac{1+\cos u}{1-\cos u} \right)+\dfrac{2\cos u}{\sin^2 u}+C\\
+		&=&\ln\left(\dfrac{\sqrt{x+1}+\sqrt{x-1}}{\sqrt{x+1}-\sqrt{x-1}} \right)+\sqrt{x^2-1}+C
+	\end{eqnarray*}
+	
+	原不定积分为:  $I=\ln\left(\dfrac{\sqrt{x+1}+\sqrt{x-1}}{\sqrt{x+1}-\sqrt{x-1}} \right)+\sqrt{x^2-1}+C$
+\end{solution}
+\begin{proposition}
+	$\int \sqrt{x(x+2)}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&\xlongequal[x=u-1]{u=x+1}&\int \sqrt{u^2-1}du\\
+		&=&\dfrac{u\sqrt{u^2-1}}{2}-\dfrac{\ln |u+\sqrt{u^2-1}|}{2}+C\\
+		&=&\dfrac{(x+1)\sqrt{x^2+2x}}{2}-\dfrac{\ln |x+1+\sqrt{x^2+2x}|}{2}+C
+	\end{eqnarray*}
+	
+	原不定积分为:  $I=\dfrac{(x+1)\sqrt{x^2+2x}}{2}-\dfrac{\ln|x+1+\sqrt{x^2+2x}|}{2}+C$
+\end{solution}
+
+\begin{proposition}
+	$\int \dfrac{x^2}{\sqrt{-x^2+2x+3}}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&\xlongequal[x=2\sin\theta+1]{\sin\theta=\frac{x-1}{2}}&\int (2\sin\theta+1)^2d\theta\\
+		&=&3\theta-\sin2\theta-4\cos\theta+C\\
+		&=&3\arcsin\dfrac{x-1}{2}-\dfrac{(x+3)\sqrt{-x^2+2x+3}}{2}+C
+	\end{eqnarray*}
+	
+	原不定积分为:  $I=3\arcsin\dfrac{x-1}{2}-\dfrac{(x+3)sqrt{-x^2+2x+3}}{2}+C$
+\end{solution}
+
+\begin{proposition}
+	$\int \dfrac{\sin 2x}{\sin^4 x+\cos^4 x}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&\xlongequal[x=\arctan u]{\tan x=u}&\int \dfrac{2u}{u^4+1}du\\
+		&=&\int \dfrac{1}{(u^2)^2+1}d(u^2)\\
+		&=&\arctan u^2+C\\
+		&=&\arctan(tan^2 x)+C
+	\end{eqnarray*}
+	
+	原不定积分为:  $I=\arctan(tan^2 x)+C$
+\end{solution}
+
+\begin{proposition}
+	$\int \dfrac{e^{\sin x}\sin 2x}{\sin^4(\frac{\pi}{4}+\frac{x}{2})}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&=&\int \dfrac{8e^{\sin x}\sin x}{(1+\sin x)^2}d\sin x\\
+		&\xlongequal[x=\arcsin u]{\sin x=u}&\int\dfrac{8e^{u}u}{(1+u)^2}du\\
+		&=&\dfrac{8e^u}{1+u}+C \\
+		&=&\dfrac{8e^{\sin x}}{1+\sin x}+C
+	\end{eqnarray*}
+	
+	原不定积分为:  $I=\dfrac{8e^{\sin x}}{1+\sin x}+C$
+\end{solution}
+\begin{proposition}
+	$\int \dfrac{1}{\sin^2x+\sin 2x}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价于:  
+	\begin{eqnarray*}
+		I&=&\int \dfrac{1}{\tan^2 x+2\tan x}d\tan x\\
+		&=&\int\dfrac{1}{2}\left(\dfrac{1}{\tan x}-\dfrac{1}{\tan x+2}\right)d\tan x\\
+		&=&\dfrac{1}{2}\ln |\dfrac{\tan x}{\tan x+2}|+C 
+	\end{eqnarray*}
+
+原不定积分为:  $I=\dfrac{1}{2}\ln |\dfrac{\tan x}{\tan x+2}|+C $
+\end{solution}
+
+\begin{proposition}
+	$\int \dfrac{\sin x}{\cos x+2\sin x}dx$
+\end{proposition}
+\begin{solution}
+		
+	原不定积分等价于:  $I=\dfrac{A(\cos x+2\sin x)+B(2\cos x-\sin x)}{\cos x+2\sin x}$
+	
+	我们有:  $\left\lbrace
+	\begin{array}{l}
+		A+2B=0\\
+		2A-B=1
+	\end{array}
+	\right. \Rightarrow \left\lbrace
+	\begin{array}{l}
+		A=\dfrac{2}{5}\\
+		B=-\dfrac{1}{5}
+	\end{array}
+	\right. $
+	
+	原不定积分等价为:  
+	\begin{eqnarray*}
+		I&=&\dfrac{2}{5}-\dfrac{2\cos x-\sin x}{5(\cos x+2\sin x)}\\
+		&=&\dfrac{2x}{5}-\dfrac{\ln |\cos x+2\sin x|}{5}+C
+	\end{eqnarray*}
+
+原不定积分为:  $I=\dfrac{2x}{5}-\dfrac{\ln |\cos x+2\sin x|}{5}+C$
+\end{solution}
+
 \chapterimage{chap7.jpg}
 \chapter{无穷级数}
-
+\begin{introduction}
+	\item 常数项级数
+	\item 收敛半径和收敛域
+	\item 幂级数
+	\item 和函数
+	\item 函数展开式
+	\item 傅里叶级数
+\end{introduction}
 \begin{definition}
 	给定一个无穷数列 $u_{1},u_{2},u_{3},\dots,u_{n},\dots$,将其各项相加得到 $\sum\limits_{n=1}^{+\infty}u_{n}$,即:
 	$$u_{1}+u_{2}+u_{3}+\dots+u_{n}+\dots=\sum_{n=1}^{+\infty}u_{n}$$
@@ -2287,11 +3702,11 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \begin{theorem}[收敛原则]\label{the: 正向级数敛散性的判别方法}
 	$\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛 $\Leftrightarrow$ $\lim\limits_{n\rightarrow +\infty}S_{n}$ 有界
 \end{theorem}
-\begin{proof}
+\begin{anymark}[证明]
 	$\sum\limits_{n=1}^{+\infty}u_{n}$ 是正项级数,$u_{n}>0$,$S_{n}$ 单调递增
 
 	如果 $S_{n}$ 有界,$\lim\limits_{n\rightarrow+\infty}S_{n}$ 存在,原级数收敛;反之亦然
-\end{proof}
+\end{anymark}
 (2). 比较判别法
 \begin{theorem}
 	存在无穷级数 $\sum\limits_{n=1}^{+\infty}u_{n},\sum\limits_{n=1}^{+\infty}v_{n}$,若从某一项起满足 $u_{n}<v_{n}$,我们有下面的推论:
@@ -2347,7 +3762,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	2. $\sum\limits_{n=1}^{+\infty}u_{n}(u_{n}>0)$ 收敛 $\Rightarrow\sum\limits_{n=1}^{+\infty}u_{n}^2$ 收敛
 \end{theorem}
-\begin{proof}
+\begin{anymark}[证明]
 
 	1. 我们构造级数$v_{n}=\sum\limits_{n=1}^{+\infty}\frac{1}{2}(u_{n}+|u_{n}|)$,我们发现当$u_{n}<0$时,$v_{n}=0$;当$u_{n}>0$时,$v_{n}=u_{n}$,我们得到:
 	$$0\leq v_{n}\leq |u_{n}|$$
@@ -2363,7 +3778,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	$$\exists M>0,\ s.t. |u_{n}|<M\Rightarrow 0<u_{n}^2<Mu_{n}$$
 
 	我们得到$\sum\limits_{n=1}^{+\infty}u_{n}^2$收敛
-\end{proof}
+\end{anymark}
 \myspace{1}
 \section{幂级数}
 \begin{definition}[幂级数]
@@ -2500,7 +3915,13 @@ $$f(x)=-f(-x),a_{n}=0,b_{n}=\dfrac{2}{l}\int_{-l}{l}f(x)\sin \dfrac{n\pi}{l}xdx$
 \end{anymark}
 \chapterimage{chap8.jpg}
 \chapter{常微分方程}
-
+\begin{introduction}
+	\item 一阶微分方程
+	\item 二阶可降解微分方程
+	\item 二阶常系数微分方程
+	\item 欧拉方程
+	\item 伯努利方程
+\end{introduction}
 \begin{definition}
 	方程 $F(x,y,y',y'',\dots,y^{(n)})=0$ 是微分方程,当函数为一元函数时,是常微分方程;函数最高阶导数的阶数是微分方程的阶数.
 \end{definition}
@@ -2594,70 +4015,6 @@ $$\frac{dy}{dx}=f(x,y)$$
 
 	2. 当 $x<0$ 时,令 $x=-e^t,t=\ln(-x);\dfrac{dt}{dx}=\dfrac{1}{x}$,同理可得
 \end{definition}
-\chapterimage{chap9.jpg}
-\chapter{二重积分}
-\section{概念和性质}
-\begin{definition}[二重积分]
-	三维空间中曲顶柱体的体积:
-	$$\iint\limits_{D}f(x,y)d\sigma$$
-	类比于一元定积分的概念,我们可以得到很好相似的性质:
-	$$\int_{a}^{b}1dx=b-a\qquad \iint\limits_{D}1d\sigma=S_{D}$$
-\end{definition}
-\begin{theorem}[对称性]
-	1. 普通对称性
 
-	区域 $D$ 关于$x$轴或者$y$轴对称,且被积函数 $f(x,y)$ 满足 $f(x,y)+f(-x,y)=0$ 或者 $f(x,y)+f(x,-y)=0$,我们得到 $\iint\limits_{D}f(x,y)d\sigma=0$
-
-	2. 轮换对称性
-
-	只要区域 $D$ 是关于直线 $y=x$ 对称,$I=\iint\limits_{D}f(x,y)d\sigma=\iint\limits_{D}f(y,x)d\sigma$
-\end{theorem}
-\section{计算}
-
-1. 直角坐标(重要的是积分次序)\label{def: 积分次序}
-
-$$\iint\limits_{D}f(x,y)d\sigma=\left\lbrace\begin{array}{l}
-		\int_{a}^{b}dx\int_{h(x)}^{g(x)}f(x,y)dy \\	\int_{a}^{b}dy\int_{p(y)}^{q(y)}f(x,y)dx
-	\end{array}\right. $$
-
-2. 极坐标计算(二重积分变量替换公式)\label{def: 极坐标计算二重积分}
-$$\iint\limits_{D}f(x,y)d\sigma=\iint\limits_{D'}rf(r\cos \theta,r\sin \theta)drd\theta$$
-
-3.变量替换\label{def: 变量替换}
-
-设$D$和$D^{'}$是平面上两个(有界)区域,$D$到$D^{'}$的对应$\varphi :(u,v)\rightarrow(x,y)$ (这里 $x=x(u,v),y=y(u,v)$ 连续可微),称为变量替换,要求 $\varphi$ 在一个面积为 $0$ 的集合外是 $1-1$,我们有:
-$$dxdy=J_{\varphi}(u,v)dudv, J_{\varphi}(u,v)=\dfrac{D(x,y)}{D(u,v)}=\left| \begin{matrix}
-		\frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\
-		\frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}
-	\end{matrix}
-	\right| $$
-
-\begin{anymark}[注]
-	$$d\sigma_{1}=dudv \quad d\sigma_{2}=|l\times m|$$
-	$$\left\lbrace
-		\begin{array}{l}
-			x(u,v+dv)-x(u,v)=x'_{v}dv \\
-			x(u+du,v)-x(u,v)=x'_{u}du \\
-			y(u,v+dv)-y(u,v)=x'_{v}dv \\
-			y(u+du,v)-y(u,v)=y'_{u}du
-		\end{array}
-		\right. \Rightarrow \left\lbrace
-		\begin{array}{l}
-			l=(x'_{u}du,y'_{u}du) \\
-			m=(x'_{v}dv,y'_{v}dv)
-		\end{array}
-		\right.$$
-	$$d\sigma_{2}=(x'_{u}y'_{v}-x'_{v}y'_{u})dvdu=\left| \begin{matrix}
-			x'_{u} & x'_{v} \\
-			y'_{u} & y'_{v}
-		\end{matrix}
-		\right| d\sigma_{1}$$
-\end{anymark}
-\section{二重积分解决一元积分}
-几个比较经典的例子:
-
-1. $\int_{0}^{+\infty}e^{-x^2}dx$
-
-2. $\int_{0}^{a}f(x)dx\int_{0}^{a}\frac{1}{f(x)}dx\geq a^{2}$
 
 
