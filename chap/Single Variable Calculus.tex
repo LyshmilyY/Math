@@ -129,7 +129,6 @@
 \end{definition}
 
 
-\section{重要不等式和基本公式}
 \begin{theorem}[平均值不等式 $a_{i} > 0$]
 	平方平均值:
 	$$Q_{n}=\sqrt{\dfrac{\sum\limits_{k=1}^{n}a_{k}^{2}}{n}}$$
@@ -168,7 +167,15 @@
 	\end{enumerate}
 \end{theorem}
 
-\section{坐标系和重要函数图像}
+\section{函数的表示方法}
+\subsection{显式表达}
+\begin{definition}[显示表达]
+	$y = f(x)$ 的形式, 初等函数都是显性表达.
+\end{definition}
+\subsection{隐式表达}
+\begin{definition}[隐式表达]
+	$f(x,y) = 0$ 的形式, 一般不能用 $x$ 表示 $y$, 也不能用 $y$ 表示 $x$
+\end{definition}
 \subsection{极坐标}
 \begin{definition}[极坐标]
 	极坐标系是平面直角坐标系的一种推广, 它是由一个原点 $O$ 和一个射线 $Ox$ 组成的, 其中 $O$ 称为极点, $Ox$ 称为极轴, 任意一点 $P$ 到极点 $O$ 的距离 $r$ 叫做点 $P$ 的极径, 点 $P$ 到极轴的角 $\theta$ 叫做点 $P$ 的极角, 记为 $P(r,\theta)$
@@ -193,6 +200,7 @@
 		\item 星形线方程: $x = a\cos^{3} t, y = a\sin^{3} t$
 	\end{enumerate}
 \end{definition}
+
 \begin{anymark}[注]
 	1. 关于双曲函数以及反双曲函数, 在 $\mathbf{def:}$ \ref{def: 双曲函数} 有详细介绍
 	
@@ -211,12 +219,12 @@
 	\item 夹逼准则
 	\item 单调有界准则
 \end{introduction}
-\section{基础概念}
+\section{数列极限}
 \begin{definition}[数列极限]
 	设 $x_{n}$ 是 一数列, 若存在常数 $a$, $\forall \epsilon>0$, $\exists N_{0}>0$, 当 $n>N_{0}$ 时, $|x_{n}-a|<\epsilon$ 恒成立, 常数 $a$ 是数列 $\{x_{n}\}$ 的极限或者说数列 $\{x_{n}\}$ 趋近于 $a$
 \end{definition}
 
-\section{数列极限的性质}
+
 \begin{property}[唯一性]
 	若极限存在, 则极限唯一
 \end{property}
@@ -500,8 +508,6 @@
 \end{solution}
 
 
-
-
 \chapterimage{chap3.jpg}
 \chapter{函数极限和连续}
 \begin{introduction}
@@ -510,7 +516,7 @@
 	\item 洛必达法则
 	\item 连续和间断
 \end{introduction}
-\section{基础概念}
+\section{函数极限}
 \begin{definition}[函数极限]
 	设函数 $f(x)$ 在点 $x_{0}$ 的某个去心邻域 $\mathring{U}(x_{0},\delta)$ 内有定义, 如果存在常数 $A$, 对于任意给定的正数 $\epsilon$, 总存在正数 $\delta$, 使得当 $x$ 满足不等式 $0<|x-x_{0}|<\delta$ 时, 对应的函数值 $f(x)$ 都满足不等式 $|f(x)-A|<\epsilon$, 那么常数 $A$ 是当 $x$ 趋于 $x_{0}$ 时函数 $f(x)$ 的极限, 记作 $\lim\limits_{x\to x_{0}}f(x)=A$
 \end{definition}
@@ -529,7 +535,7 @@
 
 	3. 广义收敛: $f(x)$ 在 $x=a$ 的去心邻域 $\mathring{U}(a,\delta)$ 上有定义, $\forall X>0$, $\exists \delta>0$, 当 $0<|x-a|<\delta$ 时, $|f(x)|>X$, 则称 $f(x)$ 在 $x=a$ 处广义收敛
 \end{definition}
-\section{函数极限性质}
+
 \begin{property}[唯一性]
 	若极限存在, 则极限唯一
 \end{property}
@@ -932,8 +938,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	\item 积分中值定理
 	\item 达布定理
 \end{introduction}
-\section{十大定理}
-\subsection{介值定理 \& 零点定理}
+\section{介值定理 \& 零点定理}
 
 \begin{theorem}[有界和最值定理]
 
@@ -962,7 +967,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	$f(x)$ 在 $[a,b]$ 上连续,且我们有 $f(a)f(b)<0,\exists \xi\in(a,b),\ s.t.\ f(\xi)=0$
 \end{theorem}
 
-\subsection{费马定理}
+\section{费马定理}
 \begin{theorem}[费马定理]
 
 	$f(x)$ 在 $x_{0}$ 处可导,且 $x=x_{0}$ 是 $f(x)$ 极值点, 我们有: $f'(x_{0})=0$
@@ -979,7 +984,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	$f(x)$ 在 $x=x_{0}$ 处可导, $f'_{+}(x_{0})=f'_{-}(x_{0})=f(x_{0})=0$
 \end{theorem}
-\subsection{罗尔定理}
+\section{罗尔定理}
 \begin{theorem}[罗尔定理]
 
 	$f(x)$ 在 $[a,b]$ 上连续,在 $(a,b)$ 内可导,且 $f(a)=f(b)$,则 $\exists \xi\in(a,b),\ s.t.\ f'(\xi)=0$
@@ -993,7 +998,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	不妨假设在 $x=\xi$ 时,$f(\xi)$ 取得最值,此时 $x=\xi$ 一定是 $f(x)$ 极值点, 由费马定理我们得到: $f'(\xi)=0$
 
 \end{theorem}
-\subsection{拉格朗日中值定理}
+\section{拉格朗日中值定理}
 \begin{theorem}[拉格朗日中值定理]
 
 	$f(x)$ 在 $[a,b]$ 上连续,在 $(a,b)$ 内可导,则 $\exists \xi\in(a,b),\ s.t.\ \dfrac{f(b)-f(a)}{b-a}=f'(\xi)$
@@ -1005,7 +1010,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	$\exists \xi\in(a,b),\ s.t.\ g'(\xi)=0$
 	$$ f'(\xi)(b-a)=f(b)-f(a)\Leftrightarrow  \frac{f(b)-f(a)}{b-a}=f'(\xi)$$
 \end{theorem}
-\subsection{柯西中值定理}
+\section{柯西中值定理}
 \begin{theorem}[柯西中值定理]
 
 	$f(x),g(x)$ 在 $[a,b]$ 上连续,在 $(a,b)$ 内可导,且$g'(x)\neq 0$,$\exists \xi\in(a,b),\ s.t.\ \dfrac{f(b)-f(a)}{g(b)-g(a)}=\dfrac{f'(\xi)}{g'(\xi)}$
@@ -1015,7 +1020,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	由罗尔定理得到: $$\exists \xi\in(a,b),\ s.t.\ F'(\xi)=0$$
 	$$ f'(\xi)=\frac{f(b)-f(a)}{g(b)-g(a)}g'(\xi)\Leftrightarrow  \frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\xi)}$$
 \end{theorem}
-\subsection{泰勒公式}
+\section{泰勒公式}
 \begin{theorem}[泰勒公式]
 
 	(1).带拉格朗日余项的$n$阶泰勒公式
@@ -1028,7 +1033,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	设$f(x)$在点$x_{0}$处$n$阶可导,则存在$x_{0}$的一个邻域,对于该邻域内任意一点$x$,我们有:
 	$$f(x)=f(x_{0})+f'(x_{0})(x-x_{0})+\cdots+\frac{1}{n!}f^{(n)}(x_{0})(x-x_{0})^{n}+o((x-x_{0})^n)$$
 \end{theorem}
-\subsection{积分中值定理}
+\section{积分中值定理}
 \begin{theorem}[积分中值定理]
 
 	(1).一元函数积分中值定理
@@ -1059,7 +1064,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 		我们可以得到: $$f(\xi)\int_{a}^{b}g(x)dx=\int_{a}^{b}f(x)g(x)dx$$
 	\end{anymark}
 \end{theorem}
-\subsection{达布定理}
+\section{达布定理}
 \begin{theorem}
 	1.导数零点定理
 
@@ -2985,6 +2990,198 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 		\item $\int \dfrac{1}{x^{n}+1} dx , n = 3,4,6$
 	\end{enumerate}
 \end{theorem}
+\begin{corollary}[扩展不定积分]
+	\begin{proposition}
+		$$\int \sin^{2}x dx\qquad\qquad \int \cos^{2} xdx $$
+	\end{proposition}
+	\begin{solution}
+
+		$$\begin{cases} \int \sin^{2} x dx = \int \dfrac{1-\cos 2x}{2} dx = \dfrac{x}{2} -\dfrac{\sin 2x}{4} +C\\ \int \cos^{2} x dx = \int \dfrac{1+\cos 2x}{2} dx = \dfrac{x}{2} +\dfrac{\sin 2x}{4} +C \end{cases}$$
+	\end{solution}
+
+
+	\begin{proposition}
+		$$\int \sin^{3}x dx\qquad\qquad \int \cos^{3} xdx $$
+	\end{proposition}
+	\begin{solution}
+
+		$$\begin{cases} \int \sin^{3} x dx = \int (\cos^{2}x -1) d(\cos x) = \dfrac{\cos^{3}x}{3} -\cos x +C\\ \int \cos^{3} x dx = \int (1-\sin^{2} x) d(\sin x) = \sin x - \dfrac{\sin^{3} x}{3} +C \end{cases}$$
+	\end{solution}
+
+
+
+	\begin{proposition}
+		$$\int \sin^{4}x dx\qquad\qquad \int \cos^{4} xdx $$
+	\end{proposition}
+	\begin{solution}
+
+		$$\begin{cases} \int \sin^{4} x dx = \int \dfrac{\cos^{2}2x-2\cos 2x+1}{4} dx = \dfrac{\sin 4x}{32} -\dfrac{\sin 2x}{4} + \dfrac{3}{8} + C\\ \int \cos^{4} x dx = \int \dfrac{\cos^{2}2x-2\cos 2x+1}{4} dx = \dfrac{\sin 4x}{32} + \dfrac{\sin 2x}{4} + \dfrac{3}{8} + C \end{cases}$$
+	\end{solution}
+
+
+
+	\begin{proposition}
+		$$\int \sin^{5}x dx\qquad\qquad \int \cos^{5} xdx $$
+	\end{proposition}
+	\begin{solution}
+
+		$$\begin{cases} \int \sin^{5} x dx = -\int (1-\cos^{2} x)^{2} d(\cos x) = -\dfrac{\cos^{5}x}{5} + \dfrac{2\cos^{3}x}{3} -\cos x+C \\ \int \cos^{5} x dx = \int (1-\sin^{2} x)^{2} d(\sin x) = \dfrac{\sin^{5}x}{5} - \dfrac{2\sin^{3}x}{3} + \sin x+C \end{cases}$$
+	\end{solution}
+
+
+
+	\begin{proposition}
+		$$\int \dfrac{1}{\sin^{2}x} dx\qquad\qquad \int \dfrac{1}{\cos^{2} x}dx $$
+	\end{proposition}
+	\begin{solution}
+
+		$$\begin{cases} \int \dfrac{1}{\sin^{2}x} dx = -\cot x+C\\  \int \dfrac{1}{\cos^{2}x} dx = \tan x+C \end{cases}$$
+	\end{solution}
+
+
+
+	\begin{proposition}
+		$$\int \dfrac{1}{\sin^{3}x} dx\qquad\qquad \int \dfrac{1}{\cos^{3} x}dx $$
+	\end{proposition}
+	\begin{solution}
+		\begin{eqnarray*}
+			I&=&-\int \dfrac{1}{\sin^4 x}d\cos x\\
+			&=&-\int \dfrac{1}{(1-t^2)^2}dt\\
+			&=&\int\left[ \dfrac{A}{t+1}+\dfrac{B}{(t+1)^2}+\dfrac{C}{t-1}+\dfrac{D}{(t-1)^2}\right]dx 
+		\end{eqnarray*}
+
+		我们令$f(x)=A(t-1)^2(t+1)+B(t-1)^2+C(t+1)^2(t-1)+D(t+1)^2=-1$,我们有:  
+		$$\left\lbrace
+		\begin{array}{l}
+			f(0)=A+B-C+D=-1\\
+			f(-1)=4B=-1\\
+			f(1)=4D=-1\\
+			f(2)=3A+B+9C+9D=-1
+		\end{array}
+		\right. \Rightarrow \left\lbrace
+		\begin{array}{l}
+			A=-\dfrac{1}{4}\\
+			B=-\dfrac{1}{4}\\
+			C=\dfrac{1}{4}\\
+			D=-\dfrac{1}{4}
+		\end{array}
+		\right. $$
+		原不定积分为:  
+		\begin{eqnarray*}
+			I&=&\int\left[ -\dfrac{1}{4(t+1)}-\dfrac{1}{4(t+1)^2}+\dfrac{1}{4(t-1)}-\dfrac{1}{4(t-1)^2}\right]dt\\
+			&=&-\dfrac{ln|t+1|}{4}+\dfrac{1}{4(t+1)}+\dfrac{ln|t-1|}{4}+\dfrac{1}{4(t-1)}\\
+			&=&\dfrac{1}{4}ln\left(\dfrac{1-\cos x}{1+\cos x} \right)-\dfrac{\cos x}{2\sin^2 x}
+		\end{eqnarray*}
+
+		综上所述, 我们有:
+		$$\begin{cases}\int \dfrac{1}{\sin^{3}x} dx = \dfrac{1}{4}ln\left(\dfrac{1-\cos x}{1+\cos x} \right)-\dfrac{\cos x}{2\sin^2 x} +C  \\ 
+			\int \dfrac{1}{\cos^{3}x} dx = \dfrac{1}{4}ln\left(\dfrac{1+\sin x}{1-\sin x} \right)-\dfrac{\sin x}{2\cos^2 x} +C  \end{cases}$$
+	\end{solution}
+
+
+
+	\begin{proposition}
+		$$\int \dfrac{1}{\sin^{4}x} dx\qquad\qquad \int \dfrac{1}{\cos^{4} x}dx $$
+	\end{proposition}
+	\begin{solution}
+		\begin{eqnarray*}
+			I&=&\int \dfrac{\cos^2 x+\sin^2 x}{\sin^4 x}dx\\
+			&=&\int \dfrac{1+\tan^2 x}{\tan^4x}d\tan x\\
+			&=&-\dfrac{1}{3\tan^3 x}-\dfrac{1}{\tan x}+C 
+		\end{eqnarray*}
+		\begin{eqnarray*}
+			J&=&\int \dfrac{\cos^2 x+\sin^2 x}{\cos^4 x}dx\\
+			&=&\int (1+\tan^2 x)d\tan x\\
+			&=&\tan x-\dfrac{\tan^{3}x}{3}+C 
+		\end{eqnarray*}
+
+		综上所述, 我们有:
+		$$\begin{cases}\int \dfrac{1}{\sin^{4}x} dx = -\dfrac{1}{3\tan^3 x}-\dfrac{1}{\tan x}+C  \\ 
+			\int \dfrac{1}{\cos^{4}x} dx = \tan x-\dfrac{\tan^{3}x}{3}+C   \end{cases}$$
+	\end{solution}
+
+
+
+	\begin{proposition}
+		$$\int \dfrac{1}{\sin^{5}x} dx\qquad\qquad \int \dfrac{1}{\cos^{5} x}dx $$
+	\end{proposition}
+	\begin{solution}
+		\begin{eqnarray*}
+			I&=&-\int \dfrac{1}{\sin^6 x}d\cos x\\
+			&=&\int \dfrac{1}{(t^2-1)^3}dt\\
+			&=&\int\left[ \dfrac{A}{t+1}+\dfrac{B}{(t+1)^2}+\dfrac{C}{(t+1)^3}+\dfrac{D}{t-1}+\dfrac{E}{(t-1)^2}+\dfrac{F}{(t-1)^3}\right]dx 
+		\end{eqnarray*}
+		我们令:  $$f(x)=A(t-1)^3(t+1)^2+B(t-1)^3(t+1)+C(t-1)^3+D(t+1)^3(t-1)^2+E(t+1)^3(t-1)+F(t+1)^3=1$$
+	
+		我们有:  
+		$$\left\lbrace
+		\begin{array}{l}
+			A+D=0\\
+			-A+B+D+E=0\\
+			f(0)=-A-B-C+D-E+F=1\\
+			f(-1)=-8C=1\\
+			f(1)=8F=1\\
+			f(2)=9A+3B+C+27D+27E+27F=1
+		\end{array}
+		\right. \Rightarrow \left\lbrace
+		\begin{array}{l}
+			A=-\frac{3}{16}\\
+			B=-\frac{3}{16}\\
+			C=-\frac{1}{8}\\
+			D=\frac{3}{16}\\
+			E=-\frac{3}{16}\\
+			F=\frac{1}{8}
+		\end{array}
+		\right. $$
+		
+		原不定积分为:  
+		\begin{eqnarray*}
+			I&=&\int\left[ -\dfrac{1}{8(t+1)}-\dfrac{3}{16(t+1)^2}-\dfrac{1}{8(t+1)^3}+\dfrac{3}{16(t-1)}-\dfrac{3}{16(t-1)^2}+\dfrac{1}{8(t-1)^3}\right]dx\\
+			&=&-\dfrac{3ln|t+1|}{16}+\dfrac{3}{16(t+1)}+\dfrac{1}{16(t+1)^2}+\dfrac{3ln|t-1|}{16}+\dfrac{3}{16(t-1)}-\dfrac{1}{16(t-1)^2}\\
+			&=&\dfrac{3}{16}ln\left(|\dfrac{1-t}{1+t}| \right)+\dfrac{6t^3-10t}{16(t^2-1)^2}\\
+			&=&\dfrac{3}{16}ln\left(\dfrac{1-\cos x}{1+\cos x} \right)+\dfrac{3\cos^3 x-5\cos x}{8\sin^4x}+C
+		\end{eqnarray*}
+	综上所述, 我们有:
+	$$\begin{cases} \int \dfrac{1}{\sin^{5}x}dx = \dfrac{3}{16}ln\left(\dfrac{1-\cos x}{1+\cos x} \right)+\dfrac{3\cos^3 x-5\cos x}{8\sin^4x}+C  \\ 
+		\int \dfrac{1}{\cos^{5}x}dx = \dfrac{3}{16}ln\left(\dfrac{1+\sin x}{1 - \sin x} \right) - \dfrac{3\sin^3 x-5\sin x}{8\cos^4x}+C \end{cases}$$
+	\end{solution}
+
+
+	\begin{proposition}
+		$$\int \dfrac{1}{x^{n}+1} dx, n = 3,4,6$$
+	\end{proposition}
+
+	\begin{solution}
+
+		(i). 
+		\begin{eqnarray*}
+			\int \dfrac{1}{x^{3}+1} dx&=&\int \dfrac{1}{(x+1)(x^{2}-x+1)} dx\\
+			                          &=&\int \dfrac{1}{3}\left[\dfrac{1}{x+1} - \dfrac{x-2}{x^{2}-x+1}\right]dx\\
+			                          &=&\dfrac{1}{3}\ln |x+1| -\dfrac{1}{6}\int \dfrac{2x-1-3}{x^{2}-x+1}dx\\
+			                          &=&\dfrac{1}{3}\ln |x+1| -\dfrac{1}{6}\ln |x^{2}-x+1| +\dfrac{1}{2}\int \dfrac{1}{(x-\frac{1}{2})^{2}+(\frac{\sqrt{3}}{2})^{2}}dx\\
+									  &=& \dfrac{1}{3}\ln |x+1| -\dfrac{1}{6}\ln |x^{2}-x+1| +\dfrac{1}{\sqrt{3}}\arctan \dfrac{2x-1}{\sqrt{3}}+C
+		\end{eqnarray*}
+
+		(ii). 
+		\begin{eqnarray*}
+			\int \dfrac{1}{x^{4}+1} dx&=&\int \dfrac{1}{(x^{2}+\sqrt{2}x+1)(x^{2}-\sqrt{2}x+1)} dx\\
+			                          &=&\int \dfrac{Ax+B}{x^{2}+\sqrt{2}x+1}dx + \int\dfrac{Cx+D}{x^{2}-\sqrt{2}x+1}dx\\
+			                          &=&\dfrac{\sqrt{2}}{4}\int \dfrac{x+\sqrt{2}}{(x+\frac{\sqrt{2}}{2})^{2}+(\frac{\sqrt{2}}{2})^{2}}dx -\dfrac{\sqrt{2}}{4}\int \dfrac{x-\sqrt{2}}{(x-\frac{\sqrt{2}}{2})^{2}+(\frac{\sqrt{2}}{2})^{2}}dx\\
+			                          &=&\dfrac{\sqrt{2}}{8}\ln \big|\dfrac{x^{2}+\sqrt{2}x+1}{x^{2}-\sqrt{2}x+1}\big| +\dfrac{1}{2\sqrt{2}}\arctan (\sqrt{2}x+1) -\dfrac{1}{2\sqrt{2}}\arctan (\sqrt{2}x+1) +C\\
+		\end{eqnarray*}
+
+		(iii)
+		\begin{eqnarray*}
+			\int \dfrac{1}{x^{6}+1} dx&=&\int \dfrac{1}{(x^{2}+1)(x^{4}-x^{2}+1)} dx\\
+			                          &=&\int \dfrac{1}{(x^{2}+1)(x^{2}-\sqrt{3}x+1)(x^{2}+\sqrt{3}x+1)} dx\\
+			                          &=&\int \left[\dfrac{Ax+B}{x^{2}+1} + \dfrac{Cx+D}{x^{2}-\sqrt{3}x+1} + \dfrac{Ex+F}{x^{2}+\sqrt{3}x+1}\right]dx\\
+			                          &=&\dfrac{1}{3}\int \dfrac{1}{x^{2}+1}dx +\dfrac{1}{6\sqrt{3}}\int\left[\dfrac{3x+2\sqrt{3}}{x^{2}+\sqrt{3}x+1} - \dfrac{3x-2\sqrt{3}}{x^{2}-\sqrt{3}x+1}\right]dx\\
+			                          &=&\dfrac{1}{3}\arctan x + \dfrac{1}{4\sqrt{3}}\ln \big|\dfrac{x^{2}+\sqrt{3}x+1}{x^{2}-\sqrt{3}x+1}\big|\\ 
+									  &+&\dfrac{1}{12}\int \left[\dfrac{1}{(x+\frac{\sqrt{3}}{2})^{2}+(\frac{1}{2}^{2})}+\dfrac{1}{(x-\frac{\sqrt{3}}{2})^{2}+(\frac{1}{2}^{2})}\right]dx\\
+			                          &=&\dfrac{1}{3}\arctan x + \dfrac{1}{4\sqrt{3}}\ln \big|\dfrac{x^{2}+\sqrt{3}x+1}{x^{2}-\sqrt{3}x+1}\big| + \dfrac{1}{6}\left[\arctan(2x+\sqrt{3})+\arctan(2x-\sqrt{3})\right]+C
+		\end{eqnarray*}
+	\end{solution}
+\end{corollary}
 \begin{definition}[积分方法]
 	1. 第一换元法(凑微分): $\int f[\varphi(x)]\varphi'(x)dx = \int f(u)du$
 
@@ -3178,11 +3375,44 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \begin{theorem}[牛顿莱布尼茨公式]
 	$f(x)$ 是 $[a,b]$ 上连续函数, $\int_{a}^{b}f(x)dx = F(x)|_{a}^{b} = F(b) - F(a)$
 \end{theorem}
+\begin{theorem}[对称函数积分]
+	(1). $f(x)$ 在 $[-l,l]$ 上连续, 我们有:
+	\begin{enumerate}
+		\item $f(x)$ 是奇函数, 则 $\int_{-l}^{l} f(x)dx = 0$
+		\item $f(x)$ 是偶函数, 则 $\int_{-l}^{l} f(x)dx = 2\int_{0}^{l} f(x)dx$
+	\end{enumerate}
+
+	(2). $f(x)$ 在 $[a,b]$ 连续:
+	\begin{enumerate}
+		\item $f(a+b-x) = -f(x)$, 称 $f(x)$ 关于 $x = \dfrac{a+b}{2}$ 奇对称, $\int_{a}^{b}f(x)dx = 0$
+		\item $f(a+b-x) = f(x)$, 称 $f(x)$ 关于 $x = \dfrac{a+b}{2}$ 偶对称, $\int_{a}^{b}f(x)dx = 2\int_{a}^{\frac{a+b}{2}}f(x)dx = 2\int_{\frac{a+b}{2}}^{b}f(x)dx$
+	\end{enumerate}
+
+	(3). $f(x),g(x)$ 在 $[a,b]$ 上连续, 且:
+
+	\begin{enumerate}
+		\item $f(a+b-x) = f(x)$, $f(x)$ 关于 $\dfrac{a+b}{2}$ 对称
+		\item $g(a+b-x) + g(x) =A$, $A$ 为常数
+	\end{enumerate}
+
+	我们有:
+	$$\int_{a}^{b}f(x)g(x) dx= \dfrac{A}{2}\int_{a}^{b}f(x)dx = A\int_{a}^{\frac{a+b}{2}}f(x)dx = A\int_{\frac{a+b}{2}}^{b}f(x)dx$$
+
+	(3). $f(x),g(x)$ 在 $[\dfrac{1}{a},a]$ 上连续, 且:
+
+	\begin{enumerate}
+		\item $f(x) = f(\dfrac{1}{x})$
+		\item $g(x) + g(\dfrac{1}{a}) =A$, $A$ 为常数
+	\end{enumerate}
+
+	我们有:
+	$$\int_{\frac{1}{a}}^{a}f(x)g(x) dx= \dfrac{A}{2}\int_{\frac{1}{a}}^{a}f(x)dx = A\int_{\frac{1}{a}}^{1}f(x)dx = A\int_{1}^{a}f(x)dx$$
+\end{theorem}
 \begin{theorem}[华里士公式]
 	$$\int_{0}^{\frac{\pi}{2}}\sin^{n}x dx = \int_{0}^{\frac{\pi}{2}}\cos^{n} xdx =
 	\begin{cases} 
-	\dfrac{n-1}{n}\cdot \dfrac{n-3}{n-1}\cdots \dfrac{2}{3}\cdot 1, n\in \{2k+1|k\in \mathbb{N}\} \\
-	\dfrac{n-1}{n}\cdot \dfrac{n-3}{n-1}\cdots \dfrac{1}{2}\cdot \dfrac{\pi}{2}, n\in \{2k+2|k\in \mathbb{N}\}  
+	\dfrac{n-1}{n}\cdot \dfrac{n-3}{n-2}\cdots \dfrac{2}{3}\cdot 1, n\in \{2k+1|k\in \mathbb{N}\} \\
+	\dfrac{n-1}{n}\cdot \dfrac{n-3}{n-2}\cdots \dfrac{1}{2}\cdot \dfrac{\pi}{2}, n\in \{2k+2|k\in \mathbb{N}\}  
 	\end{cases}$$
 
 	关于公式的推导, 使用上面的递归积分法, 我们需要证明两个部分:
@@ -3233,6 +3463,13 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	\end{cases}$$
 	\end{corollary}
 \end{theorem}
+\begin{proposition}
+	$$\int_{0}^{1}x^{k}\ln^{m} x, k>0,m\in \mathbb{N}$$
+\end{proposition}
+
+\begin{proposition}
+	$$\lim\limits_{n\to +\infty} \left(\dfrac{(2n)!!}{(2n-1)!!}\right)^{2}\dfrac{1}{2n+1}$$
+\end{proposition}
 \section{变限积分}
 \begin{definition}[变限积分]
 	$x\in[a,b],\forall x\in[a,b]$, 积分 $\int_{a}^{x}f(t)dt$ 都有一个确定的值, 我们将这个关于 $x$ 的函数 $\int_{a}^{x}f(t)dt$ 称作变限积分
@@ -3314,9 +3551,28 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \subsection{几何应用}
 \subsubsection{平面图形面积}
 \begin{definition}[定积分几何意义]
+
+	(i).直角坐标 $y=f(x)$
 	$$S=\int_{a}^{b}f(x)dx$$
 
 	$S$ 表示的是由 $y=0,y=f(x)$ 和 $x=a,x=b$ 四条直线围成的平面图形的面积.
+
+	(ii).极坐标 $r=r_{1}(\theta)$ 与 $r=r_{2}(\theta)$
+	$$S=\dfrac{1}{2}\int_{\theta_{1}}^{\theta_{2}}\big|[r_{1}(\theta)]^{2}-[r_{2}(\theta)]^{2}\big|d\theta$$
+
+	$S$ 表示的是由 $\theta=\theta_{1},\theta=\theta_{2}$ 和 $r=r_{1}(\theta),r=r_{2}\theta$ 四条曲线围成的平面图形的面积.
+
+	(iii).参数方程 $\left\lbrace
+		\begin{array}{l}
+			x=x(t) \\
+			y=y(t)
+		\end{array}
+		\right. $
+
+	$$S=\int_{a}^{b}f(x)dx = \int_{\alpha}^{\beta}y(t)x'(t)dt$$
+
+	$S$ 表示的是由 $t=\alpha,t=\beta$ 和 $x=x(t),y=y(t)$ 四条曲线围成的平面图形的面积.
+	
 \end{definition}
 \subsubsection{平面曲线弧长}
 \begin{theorem}[平面曲线的弧长]
@@ -3338,47 +3594,73 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \subsubsection{旋转体体积}
 \begin{theorem}[旋转体体积]
 
-	(i).绕 $x$ 轴旋转
+	(i). 绕 $x$ 轴旋转
 
 	$y=f(x)$与 $x=a,x=b$ 围成的几何图形绕$x$轴旋转得到的几何体体积 $V$ :
 	$$V=\pi\int_{a}^{b}f^{2}(x)dx$$
 
-	(ii).绕 $y$ 轴旋转
+	(ii). 绕 $y$ 轴旋转
 
 	$y=f(x)$与 $x=a,x=b$ 围成的几何图形绕$y$轴旋转得到的几何体体积 $V$ :
 	$$V=2\pi\int_{a}^{b}x|f(x)|dx$$
+
+	(iii). 绕任意直线 $L_{0}: Ax+By+C=0$ 旋转
+
+	$$\begin{cases} V=\pi\int_{l_{1}}^{l_{2}}r^{2}dl \\ 
+		r = \dfrac{|Ax+Bf(x)+C|}{\sqrt{A^{2}+B^{2}}}\\
+		dl = \dfrac{\vec{n}\cdot \vec{l}}{|\vec{l}|}\\
+		\vec{n} = (dx,dy)\\
+		\vec{l} = (B,-A)
+	\end{cases}\Rightarrow V = \dfrac{\pi}{(A^{2}+B^{2})^{\frac{3}{2}}}\int_{a}^{b} \left[Ax+Bf(x)+C\right]^{2}\big|Af'(x)-B\big|dx$$
+
+	(iv). 平面区域 $D$ 绕直线 $L_{0}: Ax+By+C=0$
+
+	$$V = 2\pi\iint\limits_{(x,y)\in D} rd\sigma = 2\pi\iint\limits_{(x,y)\in D} \dfrac{|Ax+By+C|}{\sqrt{A^{2}+B^{2}}}d\sigma$$
 \end{theorem}
-\subsubsection{旋转曲面表面积}
-\begin{theorem}[曲线旋转得到的曲面的表面积]
+\subsubsection{旋转曲面侧面积}
+\begin{theorem}[曲线绕 $x$ 轴旋转得到的曲面的侧面积]
 
-	(i).直角坐标
-	$$S=2\pi\int_{a}^{b}|y(x)|\sqrt{1+[y'(x)]^{2}}dx$$
+	(i). 直角坐标
 
-	(ii).参数方程 $\left\lbrace
+	$$S = 2\pi\int_{a}^{b}|y(x)|\sqrt{1+[y'(x)]^{2}}dx$$
+
+	(ii). 参数方程 $\left\lbrace
 		\begin{array}{l}
 			x=x(t) \\
 			y=y(t)
 		\end{array}
 		\right. $
-	$$S=2\pi\int_{\alpha}^{\beta}|y(t)|\sqrt{[x'(t)]^{2}+[y'(t)]^{2}}dt$$
+
+	$$S = 2\pi\int_{\alpha}^{\beta}|y(t)|\sqrt{[x'(t)]^{2}+[y'(t)]^{2}}dt$$
+
+	(iii). 极坐标
+
+	$$S = 2\pi \int_{\alpha}^{\beta}|r\sin\theta|\sqrt{[r(\theta)]^{2}+[r'(\theta)]^{2}}d\theta$$
 \end{theorem}
 \subsubsection{函数平均值和形心坐标}
 \begin{theorem}[平均值和形心坐标]
 
 	(i).平均值
-	$$\overline{y}=\frac{1}{b-a}\int_{a}^{b}f(x)dx$$
+	$$\overline{y}=\dfrac{1}{b-a}\int_{a}^{b}f(x)dx$$
 
 	(ii).形心坐标
 	$$\left\lbrace
 		\begin{array}{l}
-			\overline{x}=\frac{\iint xd\sigma}{\iint d\sigma}=\frac{\int_{a}^{b}xf(x)dx}{\int_{a}^{b}f(x)dx} \\
-			\overline{y}=\frac{\iint yd\sigma}{\iint d\sigma}=\frac{\frac{1}{2}\int_{a}^{b}f^{2}(x)dx}{\int_{a}^{b}f(x)dx}
+			\overline{x}=\dfrac{\iint xd\sigma}{\iint d\sigma}=\dfrac{\int_{a}^{b}xf(x)dx}{\int_{a}^{b}f(x)dx} \\
+			\overline{y}=\dfrac{\iint yd\sigma}{\iint d\sigma}=\dfrac{\dfrac{1}{2}\int_{a}^{b}f^{2}(x)dx}{\int_{a}^{b}f(x)dx}
 		\end{array}
 		\right. $$
 \end{theorem}
 \subsection{物理应用}
-\subsubsection{抽水做工}
-\begin{definition}[抽水做工]
+\subsubsection{变力做功}
+\begin{definition}[变力做功]
+
+	1. $dW = Fds$
+
+	2. $W=\int_{a}^{b} Fds$
+\end{definition}
+\subsubsection{抽水做功}
+\begin{definition}[抽水做功]
 
 	1. 建立坐标系
 
@@ -3861,360 +4143,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 原不定积分为:  $I=\dfrac{2x}{5}-\dfrac{\ln |\cos x+2\sin x|}{5}+C$
 \end{solution}
 
-\chapterimage{chap7.jpg}
-\chapter{无穷级数}
-\begin{introduction}
-	\item 常数项级数
-	\item 收敛半径和收敛域
-	\item 幂级数
-	\item 和函数
-	\item 函数展开式
-	\item 傅里叶级数
-\end{introduction}
-\begin{definition}
-	给定一个无穷数列 $u_{1},u_{2},u_{3},\dots,u_{n},\dots$,将其各项相加得到 $\sum\limits_{n=1}^{+\infty}u_{n}$,即:
-	$$u_{1}+u_{2}+u_{3}+\dots+u_{n}+\dots=\sum_{n=1}^{+\infty}u_{n}$$
-	我们将 $\sum\limits_{n=1}^{+\infty}u_{n}$ 称为无穷级数,简称为级数,其中 $u_{n}$ 是无穷级数的通项,如果 $u_{n}$ 是常数项,则称为常数项级数;如果 $u_{n}$ 是函数,则称为函数项级数
-\end{definition}
-\begin{definition}[级数敛散性]
-	级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 的敛散性研究:
-	\myspace{1}
-	引入 $S_{n}=\sum\limits_{i=1}^{n}u_{i}$,我们称 $S_{n}$ 是无穷级数的部分和,我们定义:
-	\myspace{1}
-	(1). 当 $\lim\limits_{n\rightarrow +\infty}S_{n}=S$ 时,我们称级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛.
-	\myspace{1}
-	(2). 当 $\lim\limits_{n\rightarrow +\infty}S_{n}=\infty$ 或者不存在时,我们称级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 发散.
-\end{definition}
-\begin{corollary}
-	(1). 当 $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛时,我们有:  $\lim\limits_{n\rightarrow +\infty}u_{n}=0$ (必要条件)
-	\myspace{1}
-	(2). 当 $\sum\limits_{n=1}^{+\infty}u_{n},\sum\limits_{n=1}^{+\infty}v_{n}$ 收敛时,且这两个级数的和分别为 $S,T$, $\forall \alpha ,\beta \in \mathbb{R} ,\sum\limits_{n=1}^{+\infty}(\alpha u_{n}+\beta v_{n})$ 收敛,且级数和为 $\alpha S+\beta T$
-	\myspace{1}
-	(3). 如果存在去掉 $m$ 项的级数 $\sum\limits_{n=m}^{+\infty}u_{n}$ 收敛,原级数收敛;反之亦然
-\end{corollary}
-\section{常数项级数}
 
-常数项级数敛散性判别方法
-
-1. 正项级数判别
-
-(1). 定义法\label{定义法}
-\begin{theorem}[收敛原则]\label{the: 正向级数敛散性的判别方法}
-	$\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛 $\Leftrightarrow$ $\lim\limits_{n\rightarrow +\infty}S_{n}$ 有界
-\end{theorem}
-\begin{anymark}[证明]
-	$\sum\limits_{n=1}^{+\infty}u_{n}$ 是正项级数,$u_{n}>0$,$S_{n}$ 单调递增
-
-	如果 $S_{n}$ 有界,$\lim\limits_{n\rightarrow+\infty}S_{n}$ 存在,原级数收敛;反之亦然
-\end{anymark}
-(2). 比较判别法
-\begin{theorem}
-	存在无穷级数 $\sum\limits_{n=1}^{+\infty}u_{n},\sum\limits_{n=1}^{+\infty}v_{n}$,若从某一项起满足 $u_{n}<v_{n}$,我们有下面的推论:
-	\myspace{1}
-	若 $\sum\limits_{n=1}^{+\infty}u_{n}$ 发散, $\sum\limits_{n=1}^{+\infty}v_{n}$ 发散
-	\myspace{1}
-	若 $\sum\limits_{n=1}^{+\infty}v_{n}$ 收敛, $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛
-\end{theorem}
-(3). 比较判别法的极限形式
-\begin{theorem}\label{the: 比较判别法的极限形式}
-	$\lim\limits_{n\rightarrow+\infty}\dfrac{u_{n}}{v_{n}}=A$
-	\myspace{1}
-	(i). $A=0$,若 $\sum\limits_{n=1}^{+\infty}v_{n}$ 收敛,$\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛
-
-	(ii). $0<A<+\infty$,$\sum\limits_{n=1}^{+\infty}u_{n}$ 和 $\sum\limits_{n=1}^{+\infty}v_{n}$ 有相同的敛散性
-
-	(iii). $A=+\infty$,若 $\sum\limits_{n=1}^{+\infty}v_{n}$ 发散,$\sum\limits_{n=1}^{+\infty}u_{n}$ 发散
-\end{theorem}
-(4). 比值判别法
-\begin{theorem}
-	$\lim\limits_{n\rightarrow+\infty}\dfrac{u_{n+1}}{u_{n}}=\rho$
-	\myspace{1}
-	(i). $\rho<1$, $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛
-
-	(ii). $\rho>1$, $\sum\limits_{n=1}^{+\infty}u_{n}$ 发散
-
-	(iii). $\rho=1$, $\sum\limits_{n=1}^{+\infty}u_{n}$ 敛散性不确定
-\end{theorem}
-(5). 根值判别法(柯西判别法)
-\begin{theorem}
-	$\lim\limits_{n\rightarrow+\infty}\sqrt[n]{u_{n}}=\rho$
-	\myspace{1}
-	(i). $\rho<1$, $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛
-
-	(ii). $\rho>1$, $\sum\limits_{n=1}^{+\infty}u_{n}$ 发散
-
-	(iii). $\rho=1$, $\sum\limits_{n=1}^{+\infty}u_{n}$ 敛散性不确定
-\end{theorem}
-2. 交错级数判别
-\begin{theorem}[莱布尼茨判别法]
-	$u_{n}$ 单调不增且 $\lim\limits_{n\rightarrow +\infty}u_{n}=0$  $\Rightarrow\sum\limits_{n=1}^{+\infty}(-1)^{n-1}u_{n}$ 收敛
-\end{theorem}
-3. 任意项级数判别
-\begin{definition}
-	$\sum\limits_{n=1}^{+\infty}|u_{n}|$ 是原级数的绝对值级数
-	\myspace{1}
-	(i). 如果 $\sum\limits_{n=1}^{+\infty}|u_{n}|$ 收敛,称其\textbf{绝对收敛}
-	\myspace{1}
-	(ii). 如果 $\sum\limits_{n=1}^{+\infty}|u_{n}|$ 发散,$\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛,称其\textbf{条件收敛}
-\end{definition}
-\begin{theorem}
-	1. $\sum\limits_{n=1}^{+\infty}|u_{n}|$ 收敛 $\Rightarrow\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛
-
-	2. $\sum\limits_{n=1}^{+\infty}u_{n}(u_{n}>0)$ 收敛 $\Rightarrow\sum\limits_{n=1}^{+\infty}u_{n}^2$ 收敛
-\end{theorem}
-\begin{anymark}[证明]
-
-	1. 我们构造级数$v_{n}=\sum\limits_{n=1}^{+\infty}\frac{1}{2}(u_{n}+|u_{n}|)$,我们发现当$u_{n}<0$时,$v_{n}=0$;当$u_{n}>0$时,$v_{n}=u_{n}$,我们得到:
-	$$0\leq v_{n}\leq |u_{n}|$$
-
-	我们得到$v_{n}=\sum\limits_{n=1}^{+\infty}\frac{1}{2}(u_{n}+|u_{n}|)$收敛,由收敛级数的可加性得到:
-
-	级数$\sum\limits_{n=1}^{+\infty}(2v_{n}-|u_{n}|)$ 收敛
-
-	综上,$\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛
-
-
-	2. 我们由$\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛 可以得到:
-	$$\exists M>0,\ s.t. |u_{n}|<M\Rightarrow 0<u_{n}^2<Mu_{n}$$
-
-	我们得到$\sum\limits_{n=1}^{+\infty}u_{n}^2$收敛
-\end{anymark}
-\myspace{1}
-\section{幂级数}
-\begin{definition}[幂级数]
-	$$\sum\limits_{n=1}^{+\infty}u_{n}(x)=u_{1}(x)+u_{2}(x)+u_{3}(x)+\dots+u_{n}(x)+\dots$$
-	级数的每一项都是函数项,函数的定义域 $I$,当 $x=x_{0}$ 时, $\sum\limits_{n=1}^{+\infty}u_{n}(x_{0})$ 就是常数项级数.
-	\myspace{1}
-	$\sum\limits_{n=1}^{+\infty}u_{n}(x_{0})$ 收敛的 $x_{0}$ 点被称为\textbf{收敛点},所有收敛点的集合被称为\textbf{收敛域}
-\end{definition}
-\begin{definition}
-	幂级数标准形式:
-	$$\sum\limits_{n=0}^{+\infty}u_{n}(x)=a_{0}+a_{1}x+a_{2}x^{2}+\dots+a_{n}x^{n}+\dots$$
-	幂级数的一般形式:
-	$$\sum\limits_{n=0}^{+\infty}u_{n}(x)=a_{0}+a_{1}(x-x_{0})+a_{2}(x-x_{0})^{2}+\dots+a_{n}(x-x_{0})^{n}+\dots$$
-\end{definition}
-
-
-\begin{theorem}[阿贝尔定理]\label{the: 幂级数收敛区间(收敛半径)和收敛域}
-	\textbf{幂级数收敛域判定\ (阿贝尔定理)}:
-	\myspace{1}
-	当幂级数 $\sum\limits_{n=0}^{+\infty}u_{n}(x)$ 在 $x=x_{1}$ 处收敛时, $\forall x<|x_{1}|$,幂级数 $\sum\limits_{n=0}^{+\infty}u_{n}(x)$ 都收敛
-
-	当幂级数 $\sum\limits_{n=0}^{+\infty}u_{n}(x)$ 在 $x=x_{2}$ 处发散时, $\forall x>|x_{2}|$,幂级数 $\sum\limits_{n=0}^{+\infty}u_{n}(x)$ 都发散.
-\end{theorem}
-对于标准幂级数求收敛域,我们利用公式法:
-\begin{theorem}
-	$\lim\limits_{n\rightarrow +\infty}|\dfrac{a_{n+1}}{a_{n}}|=\rho$
-	$$R=\left\lbrace \begin{matrix}
-			\frac{1}{\rho},\rho \neq 0 \\
-			0,\rho = \infty            \\
-			\infty,\rho = 0
-		\end{matrix}\right. $$
-\end{theorem}
-我们将 $(-R,R)$ 称为幂级数的收敛区间
-
-幂级数的收敛域为$(-R,R) \ or \ [-R,R]\ or\ (-R,R] \ or\ [-R,R) $
-\myspace{1}
-\section{幂级数求和函数}
-
-
-\begin{definition}[幂级数的和函数]\label{def: 幂级数求和函数}
-	在幂级数收敛域上,我们称 $S(x)$ 是幂级数的和函数:
-	$$S(x)=\sum\limits_{n=0}^{+\infty}u_{n}(x)$$
-\end{definition}
-\begin{theorem}[可积性与可导性]
-
-	(i). 幂级数和函数 $S(x)=\sum\limits_{n=0}^{+\infty}u_{n}(x)$ 在收敛域上连续
-
-	(ii). 幂级数在收敛域 $I$ 上可积,有逐项积分公式(收敛域 $I'\geq I$)
-	$$\int_{0}^{x}S(t)dt=\int_{0}^{x}(\sum\limits_{n=0}^{+\infty}a_{n}t^{n})dt=\sum\limits_{n=0}^{+\infty}\frac{a_{n}}{n+1}x^{n+1},x\in I$$
-
-	(iii). 幂级数在收敛域 $I$ 上可导,有逐项求导公式(收敛域 $I'\leq I$)
-	$$S'(x)=(\sum\limits_{n=0}^{+\infty}a_{n}x^{n})'=\sum\limits_{n=0}^{+\infty}na_{n}x^{n-1},x\in I$$
-\end{theorem}
-\subsection{重要展开式}
-\begin{theorem}\label{the: 重要幂级数展开式}
-	$$e^{x}=1+x+\frac{x^2}{2!}+\dots+\frac{x^n}{n!}+\dots ,-\infty<x<+\infty$$
-	$$\frac{1}{1-x}=1+x+x^2+\dots+x^{n}+\dots,-1<x<1$$
-	$$\frac{1}{1+x}=1-x+x^2-x^3+\dots+(-1)^{n}x^{n}+\dots,-1<x<1$$
-	$$\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\dots+\frac{(-1)^nx^{n+1}}{n+1}+\dots=\sum\limits_{n=1}^{+\infty}(-1)^{n-1}\frac{x^{n}}{n},-1<x\leq 1$$
-	$$\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dots+\frac{(-1)^{n}x^{2n+1}}{(2n+1)!}+\dots=\sum\limits_{n=0}^{+\infty}(-1)^{n}\frac{x^{2n+1}}{(2n+1)!},-\infty<x<+\infty$$
-	$$\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}+\dots+\frac{(-1)^nx^{2n}}{2n!}+\dots=\sum\limits_{n=0}^{+\infty}(-1)^{n}\frac{x^{2n}}{(2n)!},-\infty<x<+\infty$$
-	$$(1+x)^{\alpha}=1+\alpha x+\frac{\alpha (\alpha-1)}{2!}x^2+\frac{\alpha (\alpha-1)(\alpha-2)}{3!}x^3+\dots+\frac{\alpha (\alpha-1)(\alpha-2)\dots(\alpha-n+1)}{n!}x^n+\dots$$
-\end{theorem}
-\section{函数展开成幂级数}
-
-\begin{definition}\label{函数展开成幂级数}
-	泰勒级数:  ( $f(x)$ 在点 $x=x_{0}$ 处存在任意阶导数 )
-	$$f(x)=\sum\limits_{n=0}^{+\infty}\frac{f^{(n)}(x_{0})}{n!}(x-x_{0})^n$$
-	麦克劳林级数:  ( $f(x)$ 在点 $x=0$ 处存在任意阶导数 )
-	$$f(x)=\sum\limits_{n=0}^{+\infty}\frac{f^{(n)}(0)}{n!}x^n$$
-\end{definition}
-\section{傅里叶级数}
-将满足特定条件的周期函数用一个序列的正弦函数叠加表示,这种表示我们称为傅里叶级或者三角级数
-\begin{definition}[傅里叶级数]\label{def: 傅里叶级数}
-	设 $f(x)$是周期函数且满足狄利克雷收敛定律
-
-	$f(x)=A_{0}+\sum\limits_{n=1}^{+\infty}A_{n}\sin (n\omega t+\varphi_{n})$是函数的傅里叶展开,展开式是傅里叶级数.
-	通过一些变量代换,可以得到:
-	$$f(x)=A_{0}+\sum\limits_{n=1}^{+\infty}(a_{n}\cos nx+b_{n}\sin nx)$$
-\end{definition}
-\textbf{三角函数族的正交性}
-\begin{definition}
-	$\{1,\sin x,\cos x,\sin 2x,\cos 2x,\dots,\sin nx,\cos nx\dots\}$被称为三角函数族,满足任意两个不同的函数之积在 $[-\pi,\pi]$ 上的定积分 $\int_{-\pi}^{\pi}f(x)g(x)dx=0$
-\end{definition}
-利用三角函数族的正交性这一性质,我们可以求出傅里叶级数的傅里叶系数:
-$$\int_{-\pi}^{\pi}f(x)\sin nxdx=\int_{-\pi}^{\pi}A_{0}\sin nxdx+\int_{-\pi}^{\pi}b_{n}\sin^{2}nxdx \Rightarrow b_{n}=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin nxdx$$
-$$\int_{-\pi}^{\pi}f(x)\cos nxdx=\int_{-\pi}^{\pi}A_{0}\cos nxdx+\int_{-\pi}^{\pi}a_{n}\cos^{2}nxdx \Rightarrow a_{n}=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos nxdx$$
-$$\int_{-\pi}^{\pi}f(x)=\int_{-\pi}^{\pi}A_{0}dx\Rightarrow A_{0}=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x)dx$$
-\begin{theorem}
-	$$f(x)~\frac{a_{0}}{2}+\sum\limits_{n=1}^{+\infty}(a_{n}\cos nx+b_{n}\sin nx)$$
-	其中傅里叶系数 $a_{n},b_{n}$ 表达式:
-	$$\left\lbrace \begin{array}{l}
-			a_{n}=\dfrac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos nxdx,n=0,1,2,\cdots \\
-			b_{n}=\dfrac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin nxdx,n=1,2,\cdots
-		\end{array}\right. $$
-\end{theorem}
-\begin{theorem}
-	$$S(x)=\frac{a_{0}}{2}+\sum\limits_{n=1}^{+\infty}(a_{n}\cos nx+b_{n}\sin nx)$$
-	$$S(x)=\left\lbrace \begin{array}{l}
-			f(x),x\ is\ contiue \\
-			\\
-			\dfrac{\lim\limits_{x\rightarrow x^{+}}f(x)+\lim\limits_{x\rightarrow x^{-}}f(x)}{2},x\ is\ uncontiue
-			\\
-			\\
-			\dfrac{\lim\limits_{x\rightarrow x^{+}}f(x)+\lim\limits_{x\rightarrow x^{-}}f(x)}{2},x=\pm\pi
-		\end{array}\right. $$
-\end{theorem}
-\textbf{任意对称区间中的傅里叶展开}
-\begin{definition}
-	设 $f(x)$ 定义域为 $[-l,l]$,我们令 $t=\frac{x\pi}{l},t\in[-\pi,\pi]$
-
-	我们得到:
-	$$g(t)=\frac{a_{0}}{2}+\sum\limits_{n=1}^{+\infty}(a_{n}\cos nt+b_{n}\sin nt)\rightarrow f(x)=\frac{a_{0}}{2}+\sum\limits_{n=1}^{+\infty}(a_{n}\cos \dfrac{\pi nx}{l}+b_{n}\sin \dfrac{\pi nx}{l})$$
-	$$\left\lbrace \begin{array}{l}
-			a_{n}=\dfrac{1}{\pi}\int_{-\pi}^{\pi}g(t)\cos ntdt,n=0,1,2,\cdots \\
-			b_{n}=\dfrac{1}{\pi}\int_{-\pi}^{\pi}g(t)\sin ntdt,n=1,2,\cdots
-		\end{array}\right. $$
-	我们进行变量代换:
-	$$\left\lbrace \begin{array}{l}
-			a_{n}=\dfrac{1}{l}\int_{-l}^{l}f(x)\cos \dfrac{\pi nx}{l}dx,n=0,1,2,\cdots \\
-			\\
-			b_{n}=\dfrac{1}{l}\int_{-l}^{l}f(x)\sin \dfrac{\pi nx}{l}dx,n=1,2,\cdots
-		\end{array}\right. $$
-\end{definition}
-\textbf{正弦级数和余弦级数}
-
-当 $f(x)$ 有奇偶性时,$a_{n}=0 \ or\ b_{n}=0$;
-$$f(x)=f(-x),b_{n}=0,a_{n}=\dfrac{2}{l}\int_{-l}{l}f(x)\cos \dfrac{n\pi}{l}xdx$$
-$$f(x)=-f(-x),a_{n}=0,b_{n}=\dfrac{2}{l}\int_{-l}{l}f(x)\sin \dfrac{n\pi}{l}xdx$$
-\begin{anymark}[总结]\label{mark: $p$级数}
-	1. p级数 $\sum\limits_{n=1}^{+\infty}\dfrac{1}{n^{p}}$,当 $p>1$ 时,级数收敛;当 $p\leq 1$ 时,级数发散
-
-	2. 级数 $\sum\limits_{n=1}^{+\infty}\dfrac{1}{n!}$ 收敛,$\lim\limits_{n\rightarrow+\infty}S_{n}=e$
-\end{anymark}
-\chapterimage{chap8.jpg}
-\chapter{常微分方程}
-\begin{introduction}
-	\item 一阶微分方程
-	\item 二阶可降解微分方程
-	\item 二阶常系数微分方程
-	\item 欧拉方程
-	\item 伯努利方程
-\end{introduction}
-\begin{definition}
-	方程 $F(x,y,y',y'',\dots,y^{(n)})=0$ 是微分方程,当函数为一元函数时,是常微分方程;函数最高阶导数的阶数是微分方程的阶数.
-\end{definition}
-\section{一阶微分方程}
-\textbf{分离变量型} \label{def: 分离变量型一阶微分方程}
-$$\frac{dy}{dx}=f(x,y)$$
-\textbf{一阶线性微分方程} \label{def: 一阶线性微分方程公式}
-\begin{definition}
-	$$y'+p(x)y=q(x)$$
-\end{definition}
-\begin{theorem}[一阶线性微分方程解]
-	$$e^{\int p(x)dx}(y'+p(x)y)=e^{\int p(x)dx}q(x)\Rightarrow \left[e^{\int p(x)dx}y \right]'=e^{\int p(x)dx}q(x) $$
-	$$e^{\int p(x)dx}y=\int e^{\int p(x)dx}q(x)dx+C$$
-	$$y=e^{-\int p(x)dx}(\int e^{\int p(x)dx}q(x)dx+C)$$
-\end{theorem}
-
-\section{二阶可降解微分方程}
-\begin{definition}
-
-	1. $y''=f(y,y')$
-
-	我们令:  $p=y'$,则 $$y''=\frac{dp}{dx}=\frac{dp}{dy}\frac{dy}{dx}=p'=f(y,p)$$
-
-	2. $y''=f(x,y')$
-
-	我们令:  $p(x)=y'$,则
-	$$y''=\frac{dp}{dx}=f(x,p)$$
-\end{definition}
-\section{二阶常系数微分方程}
-\begin{definition}[二阶常系数微分方程]
-	齐次二阶常系数微分方程:
-	$$y''+py'+py=0$$
-	非齐次性二阶常系数微分方程:
-	$$y''+py'+py=f(x)$$
-\end{definition}
-\begin{theorem}\label{the: 二阶常系数微分方程}
-	对于齐次性二阶常系数微分方程:
-
-	特征方程:  $\lambda^{2}+p\lambda+q=0$
-
-	1. 当方程有两个不同的实数根 $\lambda_{1},\lambda_{2}$ ,微分方程通解: $$y=C_{1}e^{\lambda_{1} x}+C_{2}e^{\lambda_{2}x}$$
-
-	2.当方程有两个相同的实根 $\lambda_{1}=\lambda_{2}=\lambda$ ,微分方程通解: $$y=C_{1}+C_{2}xe^{\lambda x}$$
-
-	3. 当方程有两个不同的虚根 $\lambda_{1}=\alpha +i\beta,\lambda_{2}=\alpha-i\beta$ ,微分方程通解: $$y=e^{\alpha x}(C_{1}\cos \beta x+C_{2}\sin \beta x)$$
-\end{theorem}
-\begin{theorem}[二阶常系数微分方程解]
-	对于非齐次性二阶常系数微分方程:
-	$$y''+py'+py=f(x)$$
-	\textbf{通解为齐次性二阶常系数微分方程的通解加上特解: $\quad y_{0}=y^{*}+y$}
-
-	1. 当 $f(x)=e^{\alpha x}Q_{n}(x)$时,特解 $y^{*}$:
-	$$y^{*}=e^{\alpha x}x^{k}P_{n}(x)$$
-
-	(i). 当 $\alpha$ 不是特征方程的根,$k=0$
-
-	(ii). 当 $\alpha$ 是特征方程的一个根,$k=1$
-
-	(iii). 当 $\alpha$ 是特征方程的重根,$k=2$
-
-	2. 当 $f(x)=e^{\alpha x}(Q_{n}(x)\cos \beta x+Q_{m}(x)\sin \beta x)$时,特解 $y^{*}$:
-	$$y^{*}=e^{\alpha x}x^{k}(P_{l}^{1}(x)\cos \beta x+P_{l}^{2}(x)\sin \beta x),\quad l=max\{m,n\}$$
-
-	(i). 当 $\alpha\pm i\beta$ 不是特征方程的根,$k=0$
-
-	(ii).当 $\alpha\pm i\beta$ 是特征方程的根,$k=1$
-\end{theorem}
-\section{伯努利方程}
-\begin{definition}[伯努利方程]\label{def: 伯努利方程}
-	$$y'+p(x)y=q(x)y^{n}$$
-\end{definition}
-\begin{theorem}
-	原方程可化简为:
-	$$y^{-n}y'+p(x)y^{1-n}=q(x)$$
-	不妨设:  $$z=y^{1-n},\dfrac{dz}{dx}=\dfrac{dz}{dy}\dfrac{dy}{dx}=(1-n)y^{-n}\dfrac{dy}{dx}$$
-	原方程为:
-	$$\dfrac{1}{1-n}\dfrac{dz}{dx}+p(x)z=q(x)$$
-\end{theorem}
-\section{欧拉方程}
-\begin{definition}[欧拉方程]\label{def: 欧拉方程}
-	形如以下形式的微分方程:
-	$$x^{2}\dfrac{d^{2}y}{dx^2}+px\dfrac{dy}{dx}+qy=f(x)$$
-
-	1. 当 $x>0$ 时,令 $x=e^t,t=\ln x;\dfrac{dt}{dx}=\dfrac{1}{x}$
-
-	$$\dfrac{dy}{dx}=\dfrac{dy}{dt}\dfrac{dt}{dx}=\dfrac{1}{x}\dfrac{dy}{dt}$$
-	$$\dfrac{d^{2}y}{dx^2}=\dfrac{d(\frac{dy}{dx})}{dt}\dfrac{dt}{dx}=\dfrac{1}{x^2}\dfrac{d^{2}y}{dt^2}$$
-
-	原微分方程可化为:
-	$$\dfrac{d^{2}y}{dt^2}+p\dfrac{dy}{dt}+qy=f(e^t)$$
-
-	2. 当 $x<0$ 时,令 $x=-e^t,t=\ln(-x);\dfrac{dt}{dx}=\dfrac{1}{x}$,同理可得
-\end{definition}
 
 
 

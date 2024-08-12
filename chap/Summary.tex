@@ -49,7 +49,7 @@
 	
 	1.心形线 \quad $r=a(1+\cos \theta)$
 	$$L=\int_{0}^{2\pi}\sqrt{a^2(1+\cos \theta)^2+a^2\sin^2\theta}d\theta=8a$$
-	$$S=2\int_{0}^{\pi}a^2(1+\cos \theta)^2d\theta=\frac{3}{2}a^2\pi$$
+	$$S=\int_{0}^{2\pi}a^2(1+\cos \theta)^2d\theta=3\pi a^2$$
 	
 	2.摆线\quad 
 	$\left\lbrace
@@ -59,7 +59,7 @@
 	\end{array}
 	 \right. $
 	 $$L=\int_{0}^{2\pi}\sqrt{a^2(1-\cos \theta)^2+a^2\sin^2\theta}d\theta=8a$$
-	 $$S=\int_{0}^{x_{0}}f(x)dx=\int_{0}^{2\pi}a^2(1-\cos \theta)^2d\theta=3a^2\pi$$
+	 $$S=\int_{0}^{2a\pi}f(x)dx=\int_{0}^{2\pi}a^2(1-\cos \theta)^2d\theta=3\pi a^2$$
 	
 	3.星形线\quad $x^{\frac{2}{3}}+y^{\frac{2}{3}}=a^{\frac{2}{3}}\Leftrightarrow$
 	$\left\lbrace
@@ -72,11 +72,11 @@
 	$$S=4\int_{0}^{\frac{\pi}{2}}3a\sin^4\theta\cos^2\theta=\frac{3\pi}{8}a^2$$
 	
 	4.三叶玫瑰线 \quad $\rho=a\cos 3\theta$\quad $\rho=a\sin 3\theta$
-	$$L=3\int_{\frac{\pi}{6}}^{\frac{\pi}{2}}\sqrt{a^2\cos^2 3\theta+9a^2\sin^2 3\theta}d\theta=2a\int_{0}^{\frac{\pi}{2}}\sqrt{1+8\sin^2 t}dt$$
-	$$S=\frac{3}{2}\int_{\frac{\pi}{6}}^{\frac{\pi}{2}}a^2\cos^2 3\theta d\theta=\frac{\pi a^2}{4}$$
+	$$L=6\int_{0}^{\frac{\pi}{6}}\sqrt{a^2\cos^2 3\theta+9a^2\sin^2 3\theta}d\theta=2a\int_{0}^{\frac{\pi}{2}}\sqrt{1+8\sin^2 t}dt$$
+	$$S=3\int_{0}^{\frac{\pi}{6}}a^2\cos^2 3\theta d\theta=\frac{\pi a^2}{4}$$
 	
 	5.伯努利双扭线\quad $\rho^2=a^2\cos 2\theta$
-	$$L=4\int_{0}^{\frac{\pi}{4}}a\sqrt{\frac{\sin^2 2\theta}{\cos 2\theta}+\cos^2 2\theta}=2a\int_{0}^{\frac{\pi}{2}}\cos^{-\frac{1}{2}}\theta d\theta$$
+	$$L=4\int_{0}^{\frac{\pi}{4}}a\sqrt{\frac{\sin^2 2\theta}{\cos 2\theta}+\cos^2 2\theta}d\theta=2a\int_{0}^{\frac{\pi}{2}}\sqrt{\dfrac{1-\cos^{2}\theta +\cos^{3}\theta}{\cos\theta}} d\theta$$
 	$$S=2\int_{0}^{\frac{\pi}{4}}a^2\cos 2\theta d\theta=a^2$$
 \end{definition}
 \begin{figure}[H]
@@ -109,10 +109,15 @@
 	特别的,我们有:  $$\mathcolorbox{yellow}{B(m,n)=\frac{(n-1)!(m-1)!}{(m+n-1)!}}$$
 	
 	2.$Beta$函数(第二类欧拉积分)
-	$$\Gamma(\alpha)=\int_{0}^{+\infty}x^{\alpha-1}e^{-x}dx$$
+	$$\Gamma(\alpha)\begin{cases} \int_{0}^{+\infty}x^{\alpha-1}e^{-x}dx\\ 2\int_{0}^{+\infty}x^{2\alpha-1}e^{-x^{2}}dx \end{cases}$$
 	
 	我们有:  $$\Gamma(\alpha)=(-x^{\alpha-1}e^{-x})|_{0}^{+\infty}+(\alpha-1)\int_{0}^{+\infty}x^{\alpha-2}e^{-x}dx$$
 	$$\mathcolorbox{red}{\Gamma(\alpha)=(\alpha-1)\Gamma(\alpha-1)},\alpha>1$$
+
+	有两个特别的 $\alpha$, 分别是 $\alpha = \dfrac{1}{2}$ 和 $\alpha = 1$:
+
+	$$\begin{cases} \int_{0}^{+\infty}e^{-x}dx = 1, & \alpha =1 \\ 
+		\int_{0}^{+\infty}x^{-\frac{1}{2}}e^{-x}dx = 2\int_{0}^{+\infty}e^{-x^{2}}dx = \sqrt{\pi}, & \alpha =\dfrac{1}{2}\end{cases}$$
 	
 	特别的,我们有:  $$\mathcolorbox{red}{\Gamma(n+1)=n!}$$
 	
@@ -510,3 +515,52 @@ $$Y_{i}X_{j}=\left\lbrace
 \begin{proposition}[柯西收敛准则:函数]
 	
 \end{proposition}
+\section{阿达玛不等式}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=15cm,height=8cm]{"figure/Summary/阿达玛不等式.jpg"}
+	\caption{$Hadamard$不等式}
+	\label{Figure: 阿达玛不等式}
+\end{figure}
+
+\begin{theorem}[$\mathbf{Hadamard}$不等式]\label{thm: 阿达玛不等式}
+
+	$f(x)$在$[a,b]$上具有二阶导数,且$f''(x)\geq 0$,下面不等式成立:  
+	$$f(\dfrac{a+b}{2})\leq \dfrac{1}{b-a}\int_{a}^{b}f(t)dt\leq \dfrac{1}{2}[f(a)+f(b)]$$
+	\begin{proof}
+		
+		原不等式可以化为:  
+		$$(b-a)f(\dfrac{a+b}{2})\leq\int_{a}^{b}f(t)dt\leq\dfrac{b-a}{2}[f(a)+f(b)]$$
+		
+		我们由图\ref{Figure: 阿达玛不等式}可以发现:  
+		
+		不等式左边表示的过$(\dfrac{a+b}{2},f(\dfrac{a+b}{2}))$的切线与$x=a,x=b,y=0$围成的图形的面积$S_{3}$;
+		
+		不等式中间表示的是$f(x)$与$x=a,x=b,y=0$围成的曲边梯形的面积$S_{2}$;
+		
+		不等式右边表示的是直线$x=a,x=b,y=0$与直线$y=\dfrac{f(b)-f(a)}{b-a}(x-a)+f(a)$围成的梯形的面积$S_{1}$.
+		
+		我们可以由图形上直观的看出三个面积的大小关系:  $S_{3}\leq S_{2}\leq S_{1}$
+		
+		对于左边的不等式,我们将$f(x)$在$x=\dfrac{a+b}{2}$处展开得到:  
+		$$f(x)=f(\dfrac{a+b}{2})+f'(\dfrac{a+b}{2})(x-\dfrac{a+b}{2})+f''(\xi)(x-\dfrac{a+b}{2})^2$$
+		
+		我们由$f''(x)>0$,我们可以得到:  
+		$$f(x)>f(\dfrac{a+b}{2})+f'(\dfrac{a+b}{2})(x-\dfrac{a+b}{2})$$
+		
+		两边同时在$[a,b]$内取定积分得到:  
+		$$\int_{a}^{b}f(x)dx>\int_{a}^{b}[f(\dfrac{a+b}{2})+f'(\dfrac{a+b}{2})(x-\dfrac{a+b}{2})]=(b-a)f(\dfrac{a+b}{2})$$
+		
+		对于右边的不等式,我们构造辅助函数:  
+		$$F(x)=\dfrac{x-a}{2}[f(x)+f(a)]-\int_{a}^{x}f(t)dt,\ F(a)=0$$
+		$$\left\lbrace
+		\begin{array}{l}
+			F'(x)=\dfrac{x-a}{2}f'(x)-\dfrac{f(x)-f(a)}{2}\\
+			F''(x)=\dfrac{x-a}{2}f''(x)
+		\end{array}
+		\right. F'(0)=0,F''(x)\geq 0\Rightarrow F'(x)\geq 0$$
+		
+		我们得到$F'(x)\geq 0\Rightarrow F(x)\text{单调递增}$,$F(x)\geq F(a)=0$
+	\end{proof}
+\end{theorem}
