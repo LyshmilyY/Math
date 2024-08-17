@@ -247,39 +247,45 @@ $$\iint\limits_{D}f(x,y)d\sigma=\iint\limits_{D'}rf(r\cos \theta,r\sin \theta)dr
 
 3.变量替换\label{def: 变量替换}
 
-设$D$和$D^{'}$是平面上两个(有界)区域,$D$到$D^{'}$的对应$\varphi :(u,v)\rightarrow(x,y)$ (这里 $x=x(u,v),y=y(u,v)$ 连续可微),称为变量替换,要求 $\varphi$ 在一个面积为 $0$ 的集合外是 $1-1$,我们有:
-$$dxdy=J_{\varphi}(u,v)dudv, J_{\varphi}(u,v)=\dfrac{D(x,y)}{D(u,v)}=\left| \begin{matrix}
-		\frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\
-		\frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}
-	\end{matrix}
-	\right| $$
+设$D$和$D^{'}$是平面上两个(有界)区域,$D$到$D^{'}$的对应$\varphi :(u,v)\rightarrow(x,y)$ (这里 $x=x(u,v),y=y(u,v)$ 连续可微),称为变量替换,要求 $\varphi$ 在一个面积为 $0$ 的集合外是 $1\sim 1$,我们有:
+
+$$dxdy=J_{\varphi}(u,v)dudv$$ 
+$$J_{\varphi}(u,v)=\dfrac{D(x,y)}{D(u,v)}=
+\begin{vmatrix}
+	\dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\
+	\dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v}
+\end{vmatrix}
+$$
 
 \begin{anymark}[注]
-	$$d\sigma_{1}=dudv \quad d\sigma_{2}=|l\times m|$$
-	$$\left\lbrace
-		\begin{array}{l}
-			x(u,v+dv)-x(u,v)=x'_{v}dv \\
-			x(u+du,v)-x(u,v)=x'_{u}du \\
-			y(u,v+dv)-y(u,v)=x'_{v}dv \\
-			y(u+du,v)-y(u,v)=y'_{u}du
-		\end{array}
-		\right. \Rightarrow \left\lbrace
-		\begin{array}{l}
-			l=(x'_{u}du,y'_{u}du) \\
-			m=(x'_{v}dv,y'_{v}dv)
-		\end{array}
-		\right.$$
-	$$d\sigma_{2}=(x'_{u}y'_{v}-x'_{v}y'_{u})dvdu=\left| \begin{matrix}
+	$$d\sigma_{1}=dudv \qquad d\sigma_{2}=|l\times m|$$
+	$$\begin{cases}
+		x(u,v+dv)-x(u,v)=x'_{v}dv \\
+		x(u+du,v)-x(u,v)=x'_{u}du \\
+		y(u,v+dv)-y(u,v)=x'_{v}dv \\
+		y(u+du,v)-y(u,v)=y'_{u}du
+	 \end{cases}\Rightarrow 
+	 \begin{cases}
+		l=(x'_{u}du,y'_{u}du) \\
+		m=(x'_{v}dv,y'_{v}dv)  
+	\end{cases}$$
+	$$d\sigma_{2}=(x'_{u}y'_{v}-x'_{v}y'_{u})dvdu=\begin{vmatrix}
 			x'_{u} & x'_{v} \\
 			y'_{u} & y'_{v}
-		\end{matrix}
-		\right| d\sigma_{1}$$
+		\end{vmatrix}d\sigma_{1}$$
 \end{anymark}
 \section{二重积分解决一元积分}
 几个比较经典的例子:
 
-1. $\int_{0}^{+\infty}e^{-x^2}dx$
+1. $\int_{0}^{+\infty}e^{-x^{2}}dx$
+\begin{anymark}[注]
+	我们有: $I = \int_{0}^{+\infty}e^{-x^{2}}dx = \int_{0}^{+\infty}e^{-y^{2}}dy$
 
+	\begin{eqnarray*}
+		I^{2} &=& \int_{0}^{+\infty}e^{-x^{2}}dx\int_{0}^{+\infty}e^{-y^{2}}dy\\
+			  &=& \int_{0}^{+\infty}dx\int_{0}^{+\infty}e^{-(x^{2}+y^{2})}dy\\
+	\end{eqnarray*}
+\end{anymark}
 2. $\int_{0}^{a}f(x)dx\int_{0}^{a}\frac{1}{f(x)}dx\geq a^{2}$
 
 \chapterimage{chap9.jpg}

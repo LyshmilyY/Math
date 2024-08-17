@@ -29,7 +29,7 @@
 2. 编辑器选择: `texstudio` 和 `vscode`, 前者在宏设置有优势, 后者搭配 `Github Copilot` 有优势, 个人推荐使用 `vscode`, 可以方便预览公式
 3. 关于 `vscode` 的配置, 一下是 `LaTeXWorkshop` 插件的配置, 请参考:
 
-```json
+``` json
 {
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.showContextMenu": true,
@@ -166,11 +166,9 @@
 
 ## 打赏
 如果您觉得本项目对您有所帮助, 欢迎打赏, 以激励作者继续努力, 生活不易, 鼠鼠叹气, 感谢支持!
-<center class="half">
-<img src="https://cdn.jsdelivr.net/gh/LyshmilyY/MuYiPicture/HomePage/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg" width=150/>
-<img src="https://cdn.jsdelivr.net/gh/LyshmilyY/MuYiPicture/HomePage/%E5%BE%AE%E4%BF%A1.png" width=150/>
-</center>
+![|400](https://yjl0928-image-1328687625.cos.ap-beijing.myqcloud.com/Image/README-%E6%94%AF%E4%BB%98%E5%AE%9D.jpg)
 
+![|400](https://yjl0928-image-1328687625.cos.ap-beijing.myqcloud.com/Image/README-%E5%BE%AE%E4%BF%A1.png)
 ## 推广
 下面是一个考研的星球圈子(知识星球), 欢迎大家加入, 一起交流学习, 互帮互助, 一起进步!
-![200](https://cdn.jsdelivr.net/gh/LyshmilyY/MuYiPicture/HomePage/%E6%98%9F%E7%90%83.png)
+![|750](https://yjl0928-image-1328687625.cos.ap-beijing.myqcloud.com/Image/README-%E6%98%9F%E7%90%83.png)
