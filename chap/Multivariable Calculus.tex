@@ -291,91 +291,154 @@ $$
 \chapterimage{chap9.jpg}
 \chapter{常微分方程}
 \begin{introduction}
+	\item 微分方程概念、解和通解
 	\item 一阶微分方程
-	\item 二阶可降解微分方程
-	\item 二阶常系数微分方程
-	\item 欧拉方程
 	\item 伯努利方程
+	\item 高阶线性微分方程
+	\item (非)齐次二阶常系数线性微分方程
+	\item 欧拉方程
 \end{introduction}
-\begin{definition}
-	方程 $F(x,y,y',y'',\dots,y^{(n)})=0$ 是微分方程,当函数为一元函数时,是常微分方程;函数最高阶导数的阶数是微分方程的阶数.
+\begin{definition}[微分方程及其阶]
+	表示未知函数及其导数(或者微分)与自变量之间关系的方程称为微分方程, 一般写为:
+	$$F(x,y,y',y'',\dots,y^{(n)})=0\text{或} y^{(n)} = f(x,y,y',\cdots,y^{(n-1)})$$
+	
+	微分方程中未知函数的最高阶导数的阶数称为\textbf{微分方程的阶}.
+\end{definition}
+
+\begin{definition}[常微分方程]
+	未知函数是一元函数的微分方程称为\textbf{常微分方程}.
+\end{definition}
+
+\begin{definition}[线性微分方程]
+	$$a_{n}(x)y^{(n)} + a_{n-1}(x)y^{(n-1)} + \cdots + a_{1}(x)y' + a_{0}(x) y = f(x)$$
+	形如上述的微分方程称为 $n$ 阶\textbf{线性微分方程}, 其中 $a_{k}(x)(k=0,1,2,\cdots,n)$ 都是自变量 $x$ 的函数, $a_{k}(x)\not\equiv 0$, 当 $a_{k}(x)(k=0,1,2,\cdots,n)$ 都是常数时,
+	又称方程为 $n$ 阶\textbf{常系数线性微分方程}; 若右端 $f(x)\equiv 0$, 则称方程为 $n$ 阶\textbf{齐次线性微分方程}, 否则称其为 $n$ 阶\textbf{非齐次线性微分方程}.
+\end{definition}
+\begin{definition}[微分方程的解和通解]
+	\begin{itemize}
+		\item 若将函数代入微分方程, 使方程成为恒等式, 则该函数称为\textbf{微分方程的解}, 微分方程解的图形称为积分曲线
+		\item 若微分方程的解中含有的独立常数的个数等于微分方程的阶数, 则该解称为微分方程的\textbf{通解}.
+	\end{itemize}
+\end{definition}
+\begin{definition}[初始条件和特解]
+	确定通解中常数的条件就是\textbf{初始条件},如 $y(x_{0})=a_{0},y'(x_{0})=a_{1},\cdots,y^{(n-1)}(x_{0})=a_{n-1}$,
+	其中 $a_{0},a_{1},\cdots,a_{n-1}$ 为 $n$ 个给定的数, 确定通解中的常数后, 解就成为\textbf{特解}.
 \end{definition}
 \section{一阶微分方程}
-\textbf{分离变量型} \label{def: 分离变量型一阶微分方程}
-$$\frac{dy}{dx}=f(x,y)$$
-\textbf{一阶线性微分方程} \label{def: 一阶线性微分方程公式}
-\begin{definition}
-	$$y'+p(x)y=q(x)$$
+
+\subsection{可分离变量型微分方程}\label{def: 分离变量型一阶微分方程}
+\subsubsection{直接可分离}
+$$\dfrac{dy}{dx} = F(x,y)=f(x)g(y)\Rightarrow \int \dfrac{dy}{g(y)} = \int f(x)dx$$
+\subsubsection{换元后可分离}
+
+$$\dfrac{dy}{dx} = f(ax+by+c)\Rightarrow 
+\begin{cases}
+	u = ax +by +c\\
+	\dfrac{du}{dx} = a + b\dfrac{dy}{dx}\\
+	\dfrac{du}{dx} = a + bf(u)
+\end{cases}\Rightarrow \int \dfrac{du}{a + bf(u)} = \int dx$$
+\begin{anymark}[注]
+	\begin{itemize}
+		\item 在换元过程中, 可能会因为定义域问题漏掉某些解, 这些解称为奇解.
+		\item 非线性微分方程的所有解等于通解和奇解的并集; 线性微分方程的所有解等于通解, 没有奇解.
+	\end{itemize}
+\end{anymark}
+
+\subsection{齐次型微分方程}
+$$\dfrac{dy}{dx} = \varphi(\dfrac{y}{x})\Rightarrow 
+\begin{cases}
+	u = \dfrac{y}{x}\\
+	\dfrac{dy}{dx} = \dfrac{d(ux)}{x} = u + x\dfrac{du}{dx}\\
+	u + x\dfrac{du}{dx} = \varphi(u)
+\end{cases}\Rightarrow \int \dfrac{du}{\varphi(u) - u} =\int \dfrac{dx}{x} $$
+
+\subsection{一阶线性微分方程}\label{def: 一阶线性微分方程公式}
+\begin{definition}[一阶线性微分方程]
+	$$y'+p(x)y=q(x), p(x)\text{和} q(x)\text{是已知的连续函数}$$
 \end{definition}
 \begin{theorem}[一阶线性微分方程解]
-	$$e^{\int p(x)dx}(y'+p(x)y)=e^{\int p(x)dx}q(x)\Rightarrow \left[e^{\int p(x)dx}y \right]'=e^{\int p(x)dx}q(x) $$
-	$$e^{\int p(x)dx}y=\int e^{\int p(x)dx}q(x)dx+C$$
-	$$y=e^{-\int p(x)dx}(\int e^{\int p(x)dx}q(x)dx+C)$$
+	$$y=e^{-\int p(x)dx}\left[\int e^{\int p(x)dx}q(x)dx+C\right]$$
+	\begin{anymark}[注]
+		\begin{eqnarray*}
+			&\quad & e^{\int p(x)dx}y' + p(x)e^{\int p(x)dx} = q(x)\cdot e^{\int p(x)dx}\\
+			&\quad & \left[e^{\int p(x)dx}y\right]' = q(x)\cdot e^{\int p(x)dx}\\
+			&\quad & e^{\int p(x)dx}y = \int q(x)\cdot e^{\int p(x)dx} + C\\
+			&\quad & y = e^{-\int p(x)dx}\left[\int q(x)\cdot e^{\int p(x)dx} + C\right]
+		\end{eqnarray*}
+	\end{anymark}
 \end{theorem}
 
-\section{二阶可降解微分方程}
-\begin{definition}
+\subsection{伯努利方程}
+\begin{definition}[伯努利方程]\label{def: 伯努利方程}
+	$$\dfrac{dy}{dx}+p(x)y=q(x)y^{n}$$
+\end{definition}
+\begin{theorem}
+	$$y^{-n}\dfrac{dy}{dx} +p(x)y^{1-n} = q(x)\Rightarrow
+	\begin{cases}
+		z = y^{1-n}\\
+		\dfrac{dz}{dx} = \dfrac{1}{1-n}y^{-n}\dfrac{dy}{dx}
+	\end{cases}\Rightarrow (1-n)\dfrac{dz}{dx} + p(x)z =q(x)$$
 
-	1. $y''=f(y,y')$
+	我们可以得到: 
+	$$\dfrac{dz}{dx} + (1-n)p(x)z = (1-n)q(x)\Rightarrow z = e^{-\int (1-n)p(x)dx}\left[ e^{\int (1-n)p(x)dx}\cdot q(x)+ C \right]$$
+\end{theorem}
 
-	我们令:  $p=y'$,则 $$y''=\frac{dp}{dx}=\frac{dp}{dy}\frac{dy}{dx}=p'=f(y,p)$$
+\subsection{二阶可降阶微分方程}
+\begin{definition}[二阶可降阶微分方程]
 
-	2. $y''=f(x,y')$
+	1. $y''=f(y,y')\Leftrightarrow F(y,y',y'') = 0$
+
+	我们令:  $p=y'$,则 
+	$$y''=\frac{dp}{dx}=\frac{dp}{dy}\frac{dy}{dx}=p'p \Rightarrow p\dfrac{dp}{dy} = f(y,p)$$
+
+	2. $y''=f(x,y')\Leftrightarrow F(x,y',y'') = 0$
 
 	我们令:  $p(x)=y'$,则
-	$$y''=\frac{dp}{dx}=f(x,p)$$
+	$$y''=\frac{dp}{dx}\Rightarrow \dfrac{dp}{dx} = f(x,p)$$
 \end{definition}
-\section{二阶常系数微分方程}
-\begin{definition}[二阶常系数微分方程]
-	齐次二阶常系数微分方程:
+\section{高阶线性微分方程}
+\subsection{二阶常系数线性微分方程}
+\begin{definition}[二阶常系数线性微分方程]
+	二阶常系数齐次微分方程:
 	$$y''+py'+py=0$$
-	非齐次性二阶常系数微分方程:
+	二阶常系数非齐次微分方程:
 	$$y''+py'+py=f(x)$$
 \end{definition}
-\begin{theorem}\label{the: 二阶常系数微分方程}
-	对于齐次性二阶常系数微分方程:
+\begin{theorem}[二阶常系数齐次线性微分方程解]\label{the: 齐次二阶常系数线性微分方程}
+	对于二阶常系数齐次x线性微分方程:
 
 	特征方程:  $\lambda^{2}+p\lambda+q=0$
 
-	1. 当方程有两个不同的实数根 $\lambda_{1},\lambda_{2}$ ,微分方程通解: $$y=C_{1}e^{\lambda_{1} x}+C_{2}e^{\lambda_{2}x}$$
-
-	2.当方程有两个相同的实根 $\lambda_{1}=\lambda_{2}=\lambda$ ,微分方程通解: $$y=C_{1}+C_{2}xe^{\lambda x}$$
-
-	3. 当方程有两个不同的虚根 $\lambda_{1}=\alpha +i\beta,\lambda_{2}=\alpha-i\beta$ ,微分方程通解: $$y=e^{\alpha x}(C_{1}\cos \beta x+C_{2}\sin \beta x)$$
+	\begin{itemize}
+		\item 当方程有两个不同的实数根 $\lambda_{1},\lambda_{2}$ ,微分方程通解: $$y=C_{1}e^{\lambda_{1} x}+C_{2}e^{\lambda_{2}x}$$
+		\item 当方程有两个相同的实根 $\lambda_{1}=\lambda_{2}=\lambda$ ,微分方程通解: $$y=C_{1}+C_{2}xe^{\lambda x}$$
+		\item 当方程有两个不同的虚根 $\lambda_{1}=\alpha +i\beta,\lambda_{2}=\alpha-i\beta$ ,微分方程通解: $$y=e^{\alpha x}(C_{1}\cos \beta x+C_{2}\sin \beta x)$$
+	\end{itemize}
 \end{theorem}
-\begin{theorem}[二阶常系数微分方程解]
-	对于非齐次性二阶常系数微分方程:
+\begin{theorem}[二阶常系数非齐次线性微分方程解]
+	对于二阶常系数非齐次线性微分方程:
 	$$y''+py'+py=f(x)$$
-	\textbf{通解为齐次性二阶常系数微分方程的通解加上特解: $\quad y_{0}=y^{*}+y$}
+	\textbf{通解为二阶常系数齐次线性微分方程的通解加上特解}: $y_{0}=y^{*}+y$
 
-	1. 当 $f(x)=e^{\alpha x}Q_{n}(x)$时,特解 $y^{*}$:
-	$$y^{*}=e^{\alpha x}x^{k}P_{n}(x)$$
+	1. 当 $f(x)=e^{\alpha x}P_{n}(x)$时,特解 $y^{*}$:
 
-	(i). 当 $\alpha$ 不是特征方程的根,$k=0$
+	$$y^{*}=e^{\alpha x}x^{k}Q_{n}(x)$$
+	\begin{itemize}
+		\item 当 $\alpha$ 不是特征方程的根,$k=0$
+		\item 当 $\alpha$ 是特征方程的一个根,$k=1$
+		\item 当 $\alpha$ 是特征方程的重根,$k=2$
+	\end{itemize}
 
-	(ii). 当 $\alpha$ 是特征方程的一个根,$k=1$
+	2. 当 $f(x)=e^{\alpha x}(P_{n}(x)\cos \beta x+P_{m}(x)\sin \beta x)$时,特解 $y^{*}$:
 
-	(iii). 当 $\alpha$ 是特征方程的重根,$k=2$
-
-	2. 当 $f(x)=e^{\alpha x}(Q_{n}(x)\cos \beta x+Q_{m}(x)\sin \beta x)$时,特解 $y^{*}$:
-	$$y^{*}=e^{\alpha x}x^{k}(P_{l}^{1}(x)\cos \beta x+P_{l}^{2}(x)\sin \beta x),\quad l=max\{m,n\}$$
-
-	(i). 当 $\alpha\pm i\beta$ 不是特征方程的根,$k=0$
-
-	(ii).当 $\alpha\pm i\beta$ 是特征方程的根,$k=1$
+	$$y^{*}=e^{\alpha x}x^{k}(Q_{l}^{(1)}(x)\cos \beta x+Q_{l}^{(2)}(x)\sin \beta x),\quad l=max\{m,n\}$$
+	\begin{itemize}
+		\item 当 $\alpha\pm i\beta$ 不是特征方程的根,$k=0$
+		\item 当 $\alpha\pm i\beta$ 是特征方程的根,$k=1$
+	\end{itemize}
 \end{theorem}
-\section{伯努利方程}
-\begin{definition}[伯努利方程]\label{def: 伯努利方程}
-	$$y'+p(x)y=q(x)y^{n}$$
-\end{definition}
-\begin{theorem}
-	原方程可化简为:
-	$$y^{-n}y'+p(x)y^{1-n}=q(x)$$
-	不妨设:  $$z=y^{1-n},\dfrac{dz}{dx}=\dfrac{dz}{dy}\dfrac{dy}{dx}=(1-n)y^{-n}\dfrac{dy}{dx}$$
-	原方程为:
-	$$\dfrac{1}{1-n}\dfrac{dz}{dx}+p(x)z=q(x)$$
-\end{theorem}
-\section{欧拉方程}
+
+\subsection{欧拉方程}
 \begin{definition}[欧拉方程]\label{def: 欧拉方程}
 	形如以下形式的微分方程:
 	$$x^{2}\dfrac{d^{2}y}{dx^2}+px\dfrac{dy}{dx}+qy=f(x)$$
@@ -388,8 +451,18 @@ $$\frac{dy}{dx}=f(x,y)$$
 	原微分方程可化为:
 	$$\dfrac{d^{2}y}{dt^2}+p\dfrac{dy}{dt}+qy=f(e^t)$$
 
-	2. 当 $x<0$ 时,令 $x=-e^t,t=\ln(-x);\dfrac{dt}{dx}=\dfrac{1}{x}$,同理可得
+	2. 当 $x<0$ 时,令 $x=-e^t,t=\ln(-x);\dfrac{dt}{dx}=\dfrac{1}{x}$
+
+	$$\dfrac{dy}{dx}=\dfrac{dy}{dt}\dfrac{dt}{dx}=\dfrac{1}{x}\dfrac{dy}{dt}$$
+	$$\dfrac{d^{2}y}{dx^2}=\dfrac{d(\frac{dy}{dx})}{dt}\dfrac{dt}{dx}=\dfrac{1}{x^2}\dfrac{d^{2}y}{dt^2}$$
+
+	原微分方程可化为:
+	$$\dfrac{d^{2}y}{dt^2}+p\dfrac{dy}{dt}+qy=f(-e^t)$$
 \end{definition}
+\subsection{$n$ 阶常系数齐次线性微分方程}
+
+
+
 \chapterimage{chap10.jpg}	
 \chapter{无穷级数}
 \begin{introduction}
