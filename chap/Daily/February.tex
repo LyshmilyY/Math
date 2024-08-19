@@ -7,32 +7,100 @@
 \begin{itemize}
 	\item A. $f(0)$ 是 $f(x)$ 的极大值
 	\item B. $f(0)$ 是 $f(x)$ 的极小值
-	\item C. $(0,f(0))$ 是曲线 $y=f(x)$ 的拐点
+	\item \hl{\textbf{C}}. $(0,f(0))$ 是曲线 $y=f(x)$ 的拐点
 	\item D. $f(0)$ 不是 $f(x)$ 的极值,$(0,f(0))$ 也不是曲线 $y=f(x)$ 的拐点
 \end{itemize}
 \myspace{1}
+\begin{solution}
+
+	我们有: $f''(x) = x - [f'(x)]^{2}, f'(0) = 0\Rightarrow f''(0) = 0$
+	
+	我们求 $f(x)$ 的三阶导: $f^{(3)}(x) = 1 - 2f'(x)f''(x), f^{(3)}(0) = 1\neq 0$
+
+	综上所述, 我们得到: $x=0$ 不是 $f(x)$ 的极值点, 点 $(0,f(0))$ 是 曲线 $f(x)$ 的拐点. 
+\end{solution}
+\myspace{1}
 
 2. 设函数 $f(x)$ 在 $(-\infty,+\infty)$ 上连续,其导函数图形如图所示,则:
+
+\begin{tikzpicture}
+    \draw[->] (-2,0) -- (3,0) node[right] {$x$};
+    \draw[->] (0,-2) -- (0,2) node[above] {$y$};
+    \draw[thick, domain=-1:0.9, smooth, variable=\x] plot ({\x},{2-(\x+1)*(\x+1)});
+    \draw[thick, domain= 1.2:2.3, smooth, variable=\x] plot ({\x},{10*(\x-1.5)*(\x-2)*(\x-2)});
+    \draw[dashed] (1,-2) -- (1,1.5);
+    \node at (-0.2,-0.2) {O};
+\end{tikzpicture}
 \begin{itemize}
 	\item A. 函数 $f(x)$ 有 $2$ 个极值点,曲线 $y=f(x)$ 有 $2$ 个拐点
-	\item B. 函数 $f(x)$ 有 $2$ 个极值点,曲线 $y=f(x)$ 有 $3$ 个拐点
+	\item \hl{\textbf{B}}. 函数 $f(x)$ 有 $2$ 个极值点,曲线 $y=f(x)$ 有 $3$ 个拐点
 	\item C. 函数 $f(x)$ 有 $3$ 个极值点,曲线 $y=f(x)$ 有 $1$ 个拐点
 	\item D. 函数 $f(x)$ 有 $3$ 个极值点,曲线 $y=f(x)$ 有 $2$ 个拐点
 \end{itemize}
 \myspace{1}
+\begin{solution}
+
+	$f'(x)$ 在 $(-\infty,+\infty)$ 上有 $3$ 个零点 $x_{1},x_{2},x_{3}$,我们有:
+	$$\begin{cases}
+	x\in(-\infty,x_{1})\cup (x_{2},+\infty), f'(x) > 0\\
+	x\in(x_{1},x_{2}), f'(x) < 0
+	\end{cases}\Rightarrow 
+	\begin{cases}
+	x = x_{1}\text{是} f(x) \text{极大值点}\\
+	x = x_{2}\text{是} f(x) \text{极小值点}
+	\end{cases}$$
+
+	我们来观察到函数 $f'(x)$ 的单调性, $f'(x)$ 在 $(-\infty,a)$ 上单调减少;$(a,b)$ 上单调增加, $(b,c)$ 上单调减少; $(c,+\infty)$ 上单调增加;
+	$f(x)$ 有拐点 $(a,f(a))$ 和 $(b,f(b))$以及 $(c,f(c))$
+
+	综上所述, $f(x)$ 有 $2$ 个极值点和 $3$ 个拐点
+\end{solution}
+\myspace{1}
+
 \hl{\textbf{\textit{February 2}}}
 
 1. 曲线 $y=x\ln\left( e+\dfrac{1}{x}\right)(x>0) $ 的渐近线方程为:
+\myspace{1}
+\begin{solution}
+
+	(i). 铅锤渐近线: $x\to 0, f(x)\to 0$, 无铅锤渐近线
+
+	(ii). 水平渐近线和斜渐进线: $x\to +\infty, f(x)\to +\infty$, 无水平渐近线
+
+	$$\begin{cases}
+	a = \lim\limits_{x\to +\infty}\dfrac{f(x)}{x} = 1\\
+	b = \lim\limits_{x\to +\infty}f(x)-ax = \dfrac{1}{e}
+	\end{cases}$$
+
+	综上所述, $f(x)$ 有且仅有一条斜渐近线: $x-y+\dfrac{1}{e} = 0$
+\end{solution}
 \myspace{1}
 
 2. 曲线 $y=\dfrac{x^{2}+x}{x^{2}-1}$ 渐近线的条数为:
 \begin{itemize}
 	\item A. $0$
 	\item B. $1$
-	\item C. $2$
+	\item \hl{\textbf{C}}. $2$
 	\item D. $3$
 \end{itemize}
 \myspace{1}
+\begin{solution}
+
+	令 $f(x) = \dfrac{x(x+1)}{(x+1)(x-1)}=\dfrac{x}{x-1},x\neq \pm 1$, 我们有: 
+	$\begin{cases}
+	x\to -1, f(x)\to \dfrac{1}{2}\\
+	x\to 1^{+}, f(x)\to +\infty\\
+	x\to 1^{-}, f(x)\to -\infty
+	\end{cases}$
+
+	(i). 铅锤渐近线: $x = 1$
+
+	(ii). 水平渐近线和斜渐近线: $x\to \infty, f(x)\to 1$, 无斜渐近线
+
+	综上所述, $f(x)$ 有且仅有两条渐近线, $1$ 条铅锤渐近线, $1$ 条水平渐近线
+\end{solution}
+\myspace{1}
+
 \hl{\textbf{\textit{February 3}}}
 
 1. 设函数 $y=\dfrac{x^{3}+4}{x^{2}}$,求
@@ -45,61 +113,242 @@
 
 (4). 作出其图形
 \myspace{1}
+\begin{solution}
+
+	我们令: $f(x) = \dfrac{x^{3}+4}{x^{2}} = x+\dfrac{4}{x^{2}},x\neq 0$
+
+	(1). $f'(x) = 1-\dfrac{8}{x^{3}}\Rightarrow 
+	\begin{cases}
+	x\in(-\infty,0)\cup (0,2), f'(x) < 0\\
+	x\in(2,+\infty), f'(x) > 0
+	\end{cases}$
+
+	$f(x)$ 单调递增区间 $(2,+\infty)$, 单调递减区间 $(-\infty,0)$ 和 $(0,2)$, $f(x)$ 无极大值, 在 $x=2$ 处取得极小值 $f(2) = 3$
+
+	(2). $f''(x) = \dfrac{24}{x^{4}} > 0$, $f(x)$ 在定义域上是凹函数, 无拐点
+
+	(3). 
+	
+	(i). 铅锤渐近线: $x\to 0, f(x)\to +\infty$, $f(x)$ 有铅锤渐近线 $x=0$
+
+	(ii). 水平渐近线和斜渐近线: $x\to \infty, f(x)\to \infty$, 无水平渐近线
+	$$\begin{cases}
+	a = \lim\limits_{x\to \infty} \dfrac{f(x)}{x} =1\\
+	b = \lim\limits_{x\to \infty} f(x)-ax = 0
+	\end{cases}\Rightarrow y = x$$
+
+	综上所述, $f(x)$ 有 $2$ 条渐近线, $1$ 条铅锤渐近线 $x=0$, 一条斜渐近线 $y = x$
+
+	(4). 如下图所示:
+
+	\begin{tikzpicture}
+		\draw[->] (-5,0) -- (5,0) node[right] {$x$};
+		\draw[->] (0,-5) -- (0,5) node[above] {$y$};
+		\draw[thick, domain=-3:-1, smooth, variable=\x] plot ({\x},{(\x+4/(\x*\x))});
+		\draw[thick, domain=1:4, smooth, variable=\x] plot ({\x},{(\x+4/(\x*\x))});
+		\draw[dashed, domain=-4:4, smooth, variable=\x] plot ({\x},{\x});
+		\node at (-0.2,-0.2) {O};
+	\end{tikzpicture}
+\end{solution}
+\myspace{1}
 
 2. 在区间 $(-\infty,+\infty)$ 内,方程 $|x|^{\frac{1}{4}}+|x|^{\frac{1}{2}}-\cos x=0$: 
 \begin{itemize}
 	\item A. 无实根
 	\item B. 有且仅有一个实根
-	\item C. 有且仅有两个实根
+	\item \hl{\textbf{C}}. 有且仅有两个实根
 	\item D. 有无穷多个实根
 \end{itemize}
 \myspace{1}
+\begin{solution}
+
+	令 $f(x) = |x|^{\frac{1}{4}}+|x|^{\frac{1}{2}}-\cos x$, $f(x)$ 是偶函数, 取 $x > 0$, $f(x) = x^{\frac{1}{4}}+x^{\frac{1}{2}}-\cos x$
+
+	(i). 当 $x \geq 1$ 时, $f(x) > 0$
+
+	(ii). 当 $x\in (0,1)$ 时, $f'(x) = \dfrac{1}{4}x^{-\frac{3}{4}}+\dfrac{1}{2}x^{-\frac{1}{2}}+\sin x > 0$
+	
+	$f(x)$ 在 $(0,1)$ 单调递增
+	$$\begin{cases}f(0) = -1<0\\f(1)=2-\cos 1\\ f(0)\cdot f(1)<0 \end{cases}\Rightarrow f(x)\text{在}(0,1) \text{内有且仅有} 1 \text{个零点}$$
+
+	综上所述, $f(x)$ 有且仅有 $2$ 个零点, $x_{1}\in(-1,0),x_{2}\in(0,1)$
+\end{solution}
+\myspace{1}
+
 \hl{\textbf{\textit{February 4}}}
 
 1. 函数 $f(x)=\ln|(x-1)(x-2)(x-3)|$ 的驻点个数为:
 \begin{itemize}
 	\item A. $0$
 	\item B. $1$
-	\item C. $2$
+	\item \hl{\textbf{C}}. $2$
 	\item D. $3$
 \end{itemize}
+\myspace{1}
+\begin{solution}
+
+	令 $g(x) =|(x-1)(x-2)(x-3)|$, $f(x)$ 和 $g(x)$ 同单调性,令 $h(x) = (x-1)(x-2)(x-3)$
+
+	由罗尔定理得到: $\exists x_{1}\in(1,2), x_{2}\in (2,3),\ s.t.\ f'(x_{1}) =f'(x_{2}) =0$, 我们得到:
+
+	$$\begin{cases}
+	x\in(-\infty,x_{1]})\cup (x_{2},+\infty), f'(x) > 0\\
+	x\in(x_{1}, x_{2}), f'(x) < 0\\
+	f(1) =f(2) =f(3) =0
+	\end{cases}\Rightarrow |h(x)|\text{在} x=1,2,3\text{处均不可导}$$
+
+	$f(x)$ 的驻点只有$2$个驻点, 分别是 $x=x_{1}$ 和 $x=x_{2}$ 
+\end{solution}
 \myspace{1}
 
 2. 设 $f(x)=x^{2}(1-x)^{2}$,则方程 $f''(x)=0$在 $(0,1)$ 上:
 \begin{itemize}
 	\item A. 无实根
 	\item B. 有且仅有一个实根
-	\item C. 有且仅有两个实根
+	\item \hl{\textbf{C}}. 有且仅有两个实根
 	\item D. 有且仅有三个实根
 \end{itemize}
 \myspace{1}
+\begin{solution}
+
+	我们有: $f'(x) = 2x(x-1)^{2}+2x^{2}(x-1) = 2x(x-1)(3x-1)$ 且 $f'(0) = f'(\dfrac{1}{3}) = f(1) = 0$
+
+	由罗尔定理得到: $\exists x_{1}\in (0,\dfrac{1}{3}), x_{1}\in(\dfrac{1}{3}),\ s.t.\ f''(x_{i}) = 0(i = 1,2)$
+
+	我们得到: $f''(x)$ 是一个二次多项式, 至多存在 $2$ 个实数根, 综上, $f''(x)$ 有且仅有 $2$ 个实数根.
+\end{solution}
+\myspace{1}
+
 \hl{\textbf{\textit{February 5}}}
 
 1. 设常数 $k>0$,设函数 $f(x)=\ln x-\dfrac{x}{e}+k$ 在 $(0,+\infty)$ 内零点个数为:
 \begin{itemize}
 	\item A. $3$
-	\item B. $2$
+	\item \hl{\textbf{B}}. $2$
 	\item C. $1$
 	\item D. $0$
 \end{itemize}
 \myspace{1}
+\begin{solution}
+
+	我们得到: $f'(x) = \dfrac{1}{x}-\dfrac{1}{e} = \dfrac{e-x}{ex}, x > 0$
+
+	当 $x\in(0,e)$, $f'(x) > 0$; 当 $x\in(e,+\infty)$, $f'(x) < 0$; $f(x)$ 在 $x = e$ 处取得最大值 $f(e) = k > 0$
+
+	且 $$\begin{cases}
+		x\to 0, f(x)\to -\infty\\
+		x\to +\infty, f(x)\to -\infty
+	\end{cases}$$
+	根据零点定理,$\exists x_{1}\in(0,e),x_{2}\in(e,+\infty),\ s.t.\ f(x_{i}) = 0(i = 1,2)$
+
+	综上所述, $f(x)$ 在 $(0,+\infty)$ 内有且仅有 $2$ 个零点.
+\end{solution}
+\myspace{1}
 
 2. 证明:当 $x>0$ 时,有不等式 $\ln(1+\dfrac{1}{x})>\dfrac{1}{1+x}$
 \myspace{1}
+\begin{solution}
+	
+	构造辅助函数: $f(x) = \ln x, \ln(1+\dfrac{1}{x}) = \ln(1+x) -\ln x = f(x+1)-f(x)$
+
+	我们利用拉格朗日中值定理: $$f(x+1)-f(x) = \dfrac{1}{\xi}, \xi\in(x,x+1)\Rightarrow \dfrac{1}{x+1}< f(x+1)-f(x) < \dfrac{1}{x}$$
+
+	综上所述, 我们有: $\dfrac{1}{1+x} < \ln(1+\dfrac{1}{x}) < \dfrac{1}{x}$
+\end{solution}
+\myspace{1}
+
 \hl{\textbf{\textit{February 6}}}
 
 1. 证明:当 $x>0$ 时,有不等式 $\arctan x+\dfrac{1}{x}>\dfrac{\pi}{2}$
 \myspace{1}
+\begin{solution}
+
+	构造辅助函数: $f(x) = \arctan x +\dfrac{1}{x}, f'(x) = \dfrac{1}{1+x^{2}}-\dfrac{1}{x^{2}} = -\dfrac{1}{(1+x^{2})x^{2}} < 0, x>0$
+
+	$f(x)$ 在 $(0,+\infty)$ 上单调递减, $f(x) > \lim\limits_{x\to +\infty}f(x)$
+
+	我们有: $\lim\limits_{x\to +\infty}f(x) = \lim\limits_{x\to +\infty}(\arctan x +\dfrac{1}{x}) =\dfrac{\pi}{2}$
+
+	综上所述, $f(x) > \dfrac{\pi}{2}$
+\end{solution}
+\myspace{1}
 
 2. 设 $p,q$ 是大于 $1$ 的常数,并且 $\dfrac{1}{p}+\dfrac{1}{q}=1$,证明:对于任意的 $x>0$,有 $\dfrac{1}{p}x^{p}+\dfrac{1}{q}\geq x$
 \myspace{1}
+\begin{solution}
+
+	原不等式等价于: $\forall x > 0, \dfrac{1}{p}x^{p} -x +1-\dfrac{1}{p} \geq 0$
+	
+	构造辅助函数: $f(x) = \dfrac{1}{p}(x^{p}-1) - (x-1), x > 0$
+
+	$$\begin{cases}
+		f'(x) = x^{p-1}-1, p > 1\\
+		f''(x) = (p-1)x^{p-2}
+	\end{cases}\Rightarrow 
+	\begin{cases}
+		x\in (-\infty,1), f'(x) < 0\\
+		x\in(1,+\infty), f'(x) > 0
+	\end{cases}\Rightarrow f(x)\text{在} x=1\text{取最小值} f(x)_{\min} = f(1) =0$$
+
+	综上所述, $f(x)\geq 0\Rightarrow \forall x > 0, \dfrac{1}{p}x^{p}+\dfrac{1}{q}\geq x$
+\end{solution}
+\myspace{1}
+
 \hl{\textbf{\textit{February 7}}}
 
 1. 设函数 $f(x)$ 在 $[0,3]$ 上连续,在 $(0,3)$内可导,且 $f(0)+f(1)+f(2)=3,f(3)=1$,试证明:必存在$\xi\in(0,3),s.t.\ f'(\xi)=0$
 \myspace{1}
+\begin{solution}
+
+	我们不妨设 $f(x)$ 在 $[0,2]$ 上最大值为 $M$, 最小值为 $m$, 由介值定理:
+	$$\begin{cases}
+		m\leq f(0)\leq M\\
+		m\leq f(1)\leq M\\
+		m\leq f(2)\leq M
+	\end{cases}\Rightarrow m\leq \dfrac{f(0)+f(1)+f(2)}{3}\leq M
+	\Rightarrow \exists \eta\in(0,2),\ s.t.\ f(\eta) = \dfrac{f(0)+f(1)+f(2)}{3}=1$$
+
+	我们利用罗尔定理:
+	$$\begin{cases} 
+		f(\eta) = 1,\eta\in[0,2]\\
+		f(3) =1
+	\end{cases}\Rightarrow \exists \xi\in(\eta,3)\subset (0,3),\ s.t.\ f'(\xi) = 0$$
+
+	综上所述, 必存在$\xi\in(0,3),s.t.\ f'(\xi)=0$
+\end{solution}
+\myspace{1}
 
 2. 设 $f(x)$在区间 $[a,b]$ 上具有二阶导数,且 $f(a)=f(b)=0$,$f'(a)f'(b)>0$,试证明:存在 $\xi\in(a,b)$ 和 $\eta\in(a,b)$,$s.t.\ f(\xi)=0$ 且 $f''(\eta)=0$
 \myspace{1}
+\begin{solution}
+
+	由极限保号性: 不妨设 $f'(a) > 0$
+	$$\begin{cases}
+	f'(a) = \lim\limits_{x\to a} \dfrac{f(x)-f(a)}{x-a}\\
+	f'(b) = \lim\limits_{x\to a} \dfrac{f(x)-f(b)}{x-b}\\
+	f'(a)\cdot f'(b) > 0
+	\end{cases}\Rightarrow 
+	\begin{cases}
+	x\in(a,a+\delta), f(x) > f(a) =0, f(x_{1}) > 0, x_{1}\in(a,a+\delta)\\
+	x\in(b-\delta,b), f(x) < f(b) =0, f(x_{2}) > 0, x_{2}\in(b-\delta,b)
+	\end{cases}$$
+	$$\begin{cases}
+	f(x_{1}) > 0, x_{1}\in(a,a+\delta)\\
+	f(x_{2}) > 0, x_{2}\in(b-\delta,b)
+	\end{cases}\Rightarrow f(x_{1})\cdot f(x_{2}) < 0$$
+
+	由零点定理: $\exists \xi\in(a,b),\ s.t.\ f(\xi) = 0$
+
+	由罗尔定理: $f(a) = f(\xi) =f(b) =0$
+	$$\begin{cases}
+	\exists x_{3}\in (a,\xi),\ s.t.\ f'(x_{3}) = 0\\
+	\exists x_{4}\in (\xi,b),\ s.t.\ f'(x_{4}) = 0
+	\end{cases}\Rightarrow \exists \eta\in (x_{3},x_{4}),\ s.t.\ f''(\eta) = 0$$
+
+	综上所述, 存在 $\xi\in(a,b)$ 和 $\eta\in(a,b)$,$s.t.\ f(\xi)=0$ 且 $f''(\eta)=0$
+\end{solution}
+\myspace{1}
+
 \section{Week \Rmnum{2}}
 \hl{\textbf{\textit{February 8}}}
 
@@ -111,16 +360,73 @@
 
 (3). $\exists \zeta\in(a,b),s.t.\ f'(\zeta)+\lambda f(\zeta)=0$
 \myspace{1}
+\begin{solution}
 
-2. 设 $f(x)$ 在 $[0,1]$ 上连续,在 $(0,1)$ 内可导,且 $f(1)=0$,试证明:$\exists \xi\in(0,1),s.t.\ \xi f'(\xi)=-f(\xi)$
+	(1). 构造辅助函数: $g(x) = e^{x}f(x), g'(x) = e^{x}\left[f'(x) + f(x)\right]$, 且 $g(a) = g(b) = 0$
+
+	由罗尔定理: $\exists \xi\in(a,b),\ s.t.\ g'(\xi) = e^{\xi}\left[f'(\xi) + f(\xi)\right] = 0\Rightarrow f'(\xi) + f(\xi) = 0$
+
+	\myspace{1}
+
+	(2). 构造辅助函数: $g(x) = e^{-x}f(x), g'(x) = e^{-x}\left[f'(x) - f(x)\right]$, 且 $g(a) = g(b) = 0$
+
+	由罗尔定理: $\exists \eta\in(a,b),\ s.t.\ g'(\eta) = e^{-\eta}\left[f'(\eta) - f(\eta)\right] = 0\Rightarrow f'(\eta) - f(\eta) = 0$
+
+	\myspace{1}
+
+	(3). 构造辅助函数: $g(x) = e^{\lambda x}f(x), g'(x) = e^{\lambda x}\left[f'(x) + \lambda f(x)\right]$, 且 $g(a) = g(b) = 0$
+
+	由罗尔定理: $\exists \zeta\in(a,b),\ s.t.\ g'(\zeta) = e^{\lambda\zeta}\left[f'(\zeta) + \lambda f(\zeta)\right] = 0\Rightarrow f'(\zeta) + \lambda f(\zeta) = 0$
+\end{solution}
 \myspace{1}
+
+2. 设 $f(x)$ 在 $[0,1]$ 上连续,在 $(0,1)$ 内可导,且 $f(1)=0$,试证明:$\exists \xi\in(0,1),s.t.\ \xi f'(\xi) + f(\xi) = 0$
+\myspace{1}
+\begin{solution}
+
+	构造辅助函数: $g(x) = xf(x), g'(x) = f(x) +xf'(x)$, 且 $g(1) = g(0) = 0$
+
+	由罗尔定理得到: $\exists \xi\in(0,1),\ s.t.\ g'(\xi) = 0\Rightarrow \xi f'(\xi) + f(\xi) = 0$
+
+	综上所述, $\exists \xi\in(0,1),s.t.\ \xi f'(\xi) + f(\xi) = 0$
+\end{solution}
+\myspace{1}
+
 \hl{\textbf{\textit{February 9}}}
 
 1. 设函数 $f(x)$ 在闭区间 $[0,1]$ 上连续,在开区间$(0,1)$ 内可导,且$f(0)=0,f(1)=\dfrac{1}{3}$,证明:存在 $\xi\in\left(0,\dfrac{1}{2}\right),\eta\in\left( \dfrac{1}{2},1\right),s.t.\ f'(\xi)+f'(\eta)=\xi^{2}+\eta^{2}$
 \myspace{1}
+\begin{solution}
+
+	构造辅助函数: $g(x) = f(x) - \dfrac{1}{3}x^{3}$, $g(0) = g(1) = 0$, $g'(x) =f'(x) -x^{2}$
+
+	由拉格朗日中值定理:
+	$$\begin{cases}
+		2\left[g(\dfrac{1}{2})-g(0)\right] = g'(\xi), \xi\in(0,\dfrac{1}{2})\\
+		2\left[g(1)-g(\dfrac{1}{2})\right] = g'(\eta), \eta\in(\dfrac{1}{2},1)\\
+		g(1) = g(0) = 0
+	\end{cases}\Rightarrow g'(\xi) + g'(\eta) = 0\Rightarrow f'(\xi) + f'(\eta) =\xi^{2} +\eta^{2}$$
+
+	综上所述, 存在 $\xi\in\left(0,\dfrac{1}{2}\right),\eta\in\left( \dfrac{1}{2},1\right),s.t.\ f'(\xi)+f'(\eta)=\xi^{2}+\eta^{2}$
+\end{solution}
+\myspace{1}
 
 2. 设 $f(x)$ 在区间 $[a,b]$ 上连续,在 $(a,b)$ 内可导,且 $a,b$ 同号,证明:存在$\xi,\eta\in(a,b),s.t.\ abf'(\xi)=\eta^{2}f'(\eta)$
 \myspace{1}
+\begin{solution}
+
+	由拉格朗日中值定理:
+	$$\exists \xi\in (a,b),\ s.t.\ \dfrac{f(b)-f(a)}{b-a} = f'(\xi)$$
+
+	由柯西中值定理: $g(x) = \dfrac{1}{x}$
+	$$\exists \eta\in(a,b),\ s.t.\ \dfrac{ab[f(b)-f(a)]}{a-b} = \eta^{2}f'(\eta)$$
+
+	综合上面两个式子, 得到: $abf'(\xi) = \eta^{2}f'(\eta)$
+
+	综上所述, 存在$\xi,\eta\in(a,b),s.t.\ abf'(\xi)=\eta^{2}f'(\eta)$
+\end{solution}
+\myspace{1}
+
 \hl{\textbf{\textit{February 10}}}
 
 1. 求下列的不定积分
@@ -129,6 +435,30 @@
 
 (2). $\int \dfrac{1}{\sin x}dx$
 \myspace{1}
+\begin{solution}
+
+	(1). 原不定积分:
+	\begin{eqnarray*}
+		I & = & \int \dfrac{\cos x}{\cos ^{2}x}dx\\
+		  & = & \int \dfrac{1}{1-\sin^{2}x}d(\sin x)\\
+		  & = & \int \dfrac{1}{2}\left[\dfrac{1}{1+\sin x}+\dfrac{1}{1-\sin x}\right]d(\sin x)\\
+		  & = & \dfrac{1}{2} \ln \dfrac{1+\sin x}{1-\sin x} +C\\
+		  & = & \ln \big|\dfrac{1+\sin x}{\cos x}\big| +C\\
+		  & = & \ln \big|\sec x + \tan x\big| +C 
+	\end{eqnarray*}
+
+	(2). 原不定积分:
+	\begin{eqnarray*}
+		I & = & \int \dfrac{\sin x}{\sin ^{2}x}dx\\
+		  & = & -\int \dfrac{1}{1-\cos^{2}x}d(\cos x)\\
+		  & = & -\int \dfrac{1}{2}\left[\dfrac{1}{1+\cos x}+\dfrac{1}{1-\cos x}\right]d(\cos x)\\
+		  & = & -\dfrac{1}{2} \ln \dfrac{1+\cos x}{1-\cos x} +C\\
+		  & = & -\ln \big|\dfrac{1+\cos x}{\sin x}\big| +C\\
+		  & = & -\ln \big|\csc x + \cot x\big| +C 
+	\end{eqnarray*}
+
+\end{solution}
+\myspace{1}
 
 2. 求下列的不定积分
 
@@ -136,6 +466,36 @@
 
 (2). $\int (1+\ln x)(\ln x+\ln\ln x)dx$
 \myspace{1}
+\begin{solution}
+
+	(1). 原不定积分:
+	\begin{eqnarray*}
+		I & = & \int \dfrac{(x+1)e^{x}}{xe^{x}(1+xe^{x})}dx\\
+		  & = & \int \dfrac{1}{xe^{x}(1+xe^{x})}d(xe^{x})\\
+		  & = & \int \left[\dfrac{1}{xe^{x}}-\dfrac{1}{1+xe^{x}}\right]d(xe^{x})\\
+		  & = & \ln \dfrac{xe^{x}}{1+xe^{x}} +C
+	\end{eqnarray*}
+
+	(2). 令 
+	$$\begin{cases}
+		f(x) = x\ln x \\ 
+		g(x) = \ln x+\ln \ln x
+	\end{cases}\Rightarrow 
+	\begin{cases} 
+		f'(x) = 1+\ln x\\
+		g'(x) = \dfrac{1+\ln x}{x\ln x}
+	\end{cases}$$
+	
+	原不定积分:
+	\begin{eqnarray*}
+		I & = & \int f'(x)g(x)dx\\
+		  & = & f(x)g(x) - \int g'(x)f(x)dx\\
+		  & = & x(\ln x)\ln(x\ln x) - \int (1+\ln x)dx\\
+		  & = & x\ln x\left[\ln(x\ln x) - 1 \right] + C
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
+
 \hl{\textbf{\textit{February 11}}}
 
 1. 求下列的不定积分
