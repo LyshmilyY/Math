@@ -240,5 +240,149 @@
 
 \myspace{1}
 
+\hl{\textbf{\textit{March 21}}}
+
+1. $\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}\dfrac{nx^n}{1+e^x}dx$
+\myspace{1}
+\begin{lemma}[第一积分中值定理]\label{lem: 第一积分中值定理}
+	
+	$$\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}x^nf(x)dx$$
+	
+	其中$f(x)$在$[0,1]$上连续可导,则: $\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}x^nf(x)dx=0$
+	$f(x)$在$[0,1]$上连续可导,$|f(x)|\leq M$
+	因此: 
+	$$0\leq\int_{0}^{1}x^nf(x)dx\leq\int_{0}^{1}Mx^ndx=\frac{M}{n+1}$$
+	
+	由夹逼准则得到: 
+	$$\lim\limits_{n\rightarrow +\infty}0=0\quad\quad \lim\limits_{n\rightarrow +\infty}\frac{M}{n+1}=0$$
+	$$\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}x^nf(x)dx=0$$
+	
+	利用不等式: $x>\sin x;x>\ln(1+x)$,可以将上面的式子进行一些变换
+	
+\end{lemma}
+\begin{lemma}
+	
+	$$\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}nx^nf(x)dx$$
+	
+	利用 $\mathbf{lem: }$ \ref{lem: 第一积分中值定理},原极限可以化为: 
+	$$\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}(n+1)x^nf(x)dx=\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}f(x)dx^n=\lim\limits_{n\rightarrow+\infty}[(f(x)x^n)|_{0}^{1}-\int_{0}^{1}f'(x)x^ndx]=f(1)$$
+\end{lemma}
+\begin{solution}
+	
+	令: $f(x)=\dfrac{1}{1+e^x}$
+	
+	利用引理,我们得到: $$\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}\dfrac{nx^n}{1+e^x}dx=f(1)=\dfrac{1}{1+e}$$
+\end{solution}
+\myspace{1}
+
+2. $\lim\limits_{x\rightarrow 0}\left[ \dfrac{1}{\ln(x+\sqrt{1+x^2})}-\dfrac{1}{\ln(1+x)}\right] $
+\myspace{1}
+\begin{solution}
+	
+	两个等价无穷小:  $$x\rightarrow 0,\sqrt{1+x^{2}}-1\sim \dfrac{1}{2}x^{2}, x\sim \ln(x+\sqrt{1+x^2})$$
+	
+	设 $f(x)=\ln x,f'(x)=\frac{1}{x}$
+	
+	原极限可以化为: 
+	$$\lim\limits_{x\rightarrow 0}-\frac{\ln(x+\sqrt{1+x^2})-\ln(1+x)}{\ln(x+\sqrt{1+x^2})\ln(1+x)}\stackrel{Lagrange}{\longrightarrow}\lim\limits_{x\rightarrow 0}-\frac{f'(\varphi)(\sqrt{1+x^2}-1)}{x^2}=\lim\limits_{x\rightarrow 0}-\frac{1}{2}f'(\varphi)$$
+	$$1+x<\varphi<x+\sqrt{1+x^2},\lim\limits_{x\rightarrow 0}(x+1)=\lim\limits_{x\rightarrow 0}\sqrt{1+x^2}=1\stackrel{squeeze theorem}{\longrightarrow} f'(\varphi)=1$$
+	
+	原极限: $\lim\limits_{x\rightarrow 0}\left[ \dfrac{1}{\ln(x+\sqrt{1+x^2})}-\dfrac{1}{\ln(1+x)}\right] =-\dfrac{1}{2}$
+	
+\end{solution}
+\myspace{1}
+
 \section{Week \Rmnum{4}}
+
+\hl{\textbf{\textit{March 22}}}
+
+1. $\int\dfrac{\sin x}{\sqrt{2+\sin 2x}}dx$\label{problem: 组合积分法}
+\myspace{1}
+\begin{solution}
+	
+	我们有: $2+\sin 2x=1+(\sin x+\cos x)^2$
+	
+	不妨设 $I=A(\sin x+\cos x),J=B(\cos x-\sin x)$ 
+	
+	$ I+J=\sin x\Rightarrow A=\dfrac{1}{2},B=-\dfrac{1}{2}$
+	
+	原不定积分化为: 
+	$$\int\frac{I+J}{\sqrt{1+(\sin x+\cos x)^2}}dx=\frac{1}{2}\left( \int\frac{\sin x+\cos x}{\sqrt{3-(\sin x-\cos x)^2}}dx-\int\frac{\cos x-\sin x}{\sqrt{1+(\sin x+\cos x)^2}}dx\right)$$
+	
+	原不定积分为: 
+	$$\dfrac{1}{2}\left[ \arcsin \frac{\sin x-\cos x}{\sqrt{3}}-\ln(\sin x+\cos x+\sqrt{1+(\sin x+\cos x)^2} )\right] +C$$
+\end{solution}
+\myspace{1}
+
+2. $\int_{\frac{1}{6}}^{+\infty}\dfrac{1}{x}\left[ \dfrac{1}{\sqrt{x}}\right]dx$
+\myspace{1}
+\begin{solution}
+	
+	$$\begin{cases}
+		\left[ \dfrac{1}{\sqrt{x}}\right]=0, &x\geq 1\\
+		\left[ \dfrac{1}{\sqrt{x}}\right]=1, &\dfrac{1}{4}\leq x\leq 1\\
+		\left[ \dfrac{1}{\sqrt{x}}\right]=2, &\dfrac{1}{6}\leq x\leq \dfrac{1}{4}
+	\end{cases}$$
+	
+	原积分为: 
+	$$\int_{\frac{1}{6}}^{\frac{1}{4}}\dfrac{2}{x}dx+\int_{\frac{1}{4}}^{1}\dfrac{1}{x}dx=2\ln 3$$
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{March 23}}}
+
+1. 已知函数 $f(x,y)=
+\begin{cases}
+	\dfrac{\sin x^2\cos y^2}{\sqrt{x^2+y^2}}, &(x,y)\neq (0,0)\\
+	0, &(x,y)=(0,0)
+\end{cases}$ 求 $f'_{x}(0,0),f'_{y}(0,0)$
+\myspace{1}
+\begin{solution}
+	
+	$$\lim\limits_{\Delta x\rightarrow 0}\frac{f(\Delta x,0)}{\Delta x}=\lim\limits_{\Delta x\rightarrow 0}\frac{\sin (\Delta x)^2}{(\Delta x)^2}|\Delta x|$$
+	$$\lim\limits_{\Delta y\rightarrow 0}\frac{f(0,\Delta y)}{\Delta y}=0$$
+	
+	$f'_{x}(0,0)$ 不存在, $f'_{y}(0,0)=0$
+\end{solution}
+\myspace{1}
+
+2. 设 $z=e^{xy}+f(x+y,xy)$, 求 $\dfrac{\partial^2 z}{\partial x\partial y}$,其中 $f(u,v)$ 有二阶连续偏导数
+\myspace{1}
+\begin{solution}
+	
+	$$\frac{\partial z}{\partial x}=ye^{xy}+f_{1}'(x+y,xy)+yf_{2}'(x+y,xy)$$
+	$$\frac{\partial^{2} z}{\partial x\partial y}=(1+xy)e^{xy}+f_{11}'(x+y,xy)+xf_{12}''(x+y,xy)+f_{2}'(x+y,xy)+y(f_{21}''(x+y,xy)+xf_{22}''(x+y,xy))$$
+	$$\frac{\partial^{2} z}{\partial x\partial y}=(1+xy)e^{xy}+f_{11}''(x+y,xy)+xyf_{22}''(x+y,xy)+(x+y)f_{12}''(x+y,xy)+f_{2}'(x+y,xy)$$
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{March 24}}}
+
+1. $\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n^4}\prod\limits_{k=1}^{2n}(n^2+k^2)^{\frac{1}{n}}$
+\myspace{1}
+\begin{solution}
+	
+	原极限等价于: 
+	$$\lim\limits_{n\rightarrow +\infty}e^{\frac{1}{n}\ln(\prod\limits_{k=1}^{2n}(n^2+k^2))-4\ln n} $$
+	$$\lim\limits_{n\rightarrow +\infty}e^{\frac{1}{n}\ln(\prod\limits_{k=1}^{2n}(1+(\frac{k}{n})^2))}=e^{\int_{0}^{2}\ln(1+x^2)dx}$$
+	$$\int_{0}^{2}\ln(1+x^2)dx=x\ln(1+x^2)|_{x=0}^{x=2}-\int_{0}^{2}\dfrac{x^2}{1+x^2}dx=2\ln5 -2+\arctan 2$$
+	
+	原极限: $\lim\limits_{n\rightarrow
+		+\infty}\dfrac{1}{n^4}\prod\limits_{k=1}^{2n}(n^2+k^2)^{\frac{1}{n}}=25e^{\arctan 2-2}$
+\end{solution}
+\hl{\textbf{\textit{March 25}}}
+
+\hl{\textbf{\textit{March 26}}}
+
+\hl{\textbf{\textit{March 27}}}
+
+\hl{\textbf{\textit{March 28}}}
+
+\hl{\textbf{\textit{March 29}}}
+
+\hl{\textbf{\textit{March 30}}}
+
+\hl{\textbf{\textit{March 31}}}
+
+
 

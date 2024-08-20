@@ -2,206 +2,61 @@
 \chapter{April}
 \section{Week \Rmnum{1}}
 
+\hl{\textbf{\textit{April 1}}}
+
+\hl{\textbf{\textit{April 2}}}
+
+\hl{\textbf{\textit{April 3}}}
+
+\hl{\textbf{\textit{April 4}}}
+
+\hl{\textbf{\textit{April 5}}}
+
+\hl{\textbf{\textit{April 6}}}
+
+\hl{\textbf{\textit{April 7}}}
+
 \section{Week \Rmnum{2}}
+
+\hl{\textbf{\textit{April 8}}}
+
+\hl{\textbf{\textit{April 9}}}
+
+\hl{\textbf{\textit{April 10}}}
+
+\hl{\textbf{\textit{April 11}}}
+
+\hl{\textbf{\textit{April 12}}}
+
+\hl{\textbf{\textit{April 13}}}
+
+\hl{\textbf{\textit{April 14}}}
 
 \section{Week \Rmnum{3}}
 
-\section{Week \Rmnum{4}}
+\hl{\textbf{\textit{April 15}}}
+
+\hl{\textbf{\textit{April 16}}}
+
+\hl{\textbf{\textit{April 17}}}
+
+\hl{\textbf{\textit{April 18}}}
+
+\hl{\textbf{\textit{April 19}}}
+
+\hl{\textbf{\textit{April 20}}}
+
 \hl{\textbf{\textit{April 21}}}
 
-1. $ \lim\limits_{x\rightarrow +\infty}x^2(\arctan \dfrac{a}{x}-\arctan \dfrac{a}{x+1})$
-\myspace{1}
-\begin{solution}
-	
-	令 $f(x)=\arctan x$,由拉格朗日中值定理得: 
-	$$\arctan \frac{a}{x}-\arctan \frac{a}{x+1}=f'(\varepsilon)(\frac{a}{x}-\frac{a}{x+1}),\varepsilon\in (\frac{a}{x+1},\frac{a}{x})$$
-	
-	原极限等价于: 
-	$$\lim\limits_{x\rightarrow +\infty}\frac{1}{1+\varepsilon^2}\frac{ax^2}{x(x+1)}=\lim\limits_{x\rightarrow +\infty}\frac{1}{1+\varepsilon^2}\lim\limits_{x\rightarrow +\infty}\frac{ax^2}{x(x+1)}$$
-	
-	$\lim\limits_{x\rightarrow +\infty}\dfrac{a}{x+1}=0$;
-	$\lim\limits_{x\rightarrow +\infty}\dfrac{a}{x}=0$,夹逼准则得到: 
-	$\lim\limits_{x\rightarrow +\infty}\dfrac{1}{1+\varepsilon^2}=1$
-	
-	原极限:  $ \lim\limits_{x\rightarrow +\infty}x^2(\arctan \dfrac{a}{x}-\arctan \dfrac{a}{x+1})=2$
-\end{solution}
-
-\myspace{1}
-
-2. $\int_{0}^{1}dy\int_{y}^{1}\sqrt{x^2-y^2}dx$
-\myspace{1}
-\begin{solution}
-	
-	积分区域是由直线 $x=1,y=0,y=x$ 围成的一个三角形,采用极坐标方法计算二重积分: 
-	$$\theta\in[0,\dfrac{\pi}{4}],r\in[0,\dfrac{1}{\cos x}]$$
-	
-	原二重积分等价于: 
-	$$\int_{0}^{\frac{\pi}{4}}d\theta\int_{0}^{\frac{1}{\cos \theta}}r^2\sqrt{\cos^{2}\theta-\sin^{2}\theta}dr$$
-	
-	化简得到: 
-	$$\frac{1}{3}\int_{0}^{\frac{\pi}{4}}\sqrt{\cos^{2}\theta-\sin^{2}\theta}\frac{1}{\cos^{3}\theta}d\theta=\frac{1}{3}\int_{0}{\frac{\pi}{4}}\sqrt{1-\tan^{2}\theta}d\tan \theta$$
-	
-	我们有: $\int\sqrt{1-x^2}dx=\dfrac{x\sqrt{1-x^2}}{2}+\dfrac{\arcsin x}{2}+C$
-	
-	因此,原二重积分: $$\dfrac{1}{3}\int_{0}^{\frac{\pi}{4}}\sqrt{1-\tan^{2}\theta}d\tan \theta=\dfrac{1}{3}(\dfrac{\tan \theta\sqrt{1-\tan^{2}\theta}}{2}+\dfrac{\arcsin \theta}{2} )|_{0}^{\frac{\pi}{4}} =\dfrac{\pi}{12}$$
-\end{solution}
-
-\myspace{1}
-
-3. $\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}\dfrac{nx^n}{1+e^x}dx$
-\myspace{1}
-\begin{lemma}[第一积分中值定理]\label{lem: 第一积分中值定理}
-	
-	$$\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}x^nf(x)dx$$
-	
-	其中$f(x)$在$[0,1]$上连续可导,则: $\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}x^nf(x)dx=0$
-	$f(x)$在$[0,1]$上连续可导,$|f(x)|\leq M$
-	因此: 
-	$$0\leq\int_{0}^{1}x^nf(x)dx\leq\int_{0}^{1}Mx^ndx=\frac{M}{n+1}$$
-	
-	由夹逼准则得到: 
-	$$\lim\limits_{n\rightarrow +\infty}0=0\quad\quad \lim\limits_{n\rightarrow +\infty}\frac{M}{n+1}=0$$
-	$$\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}x^nf(x)dx=0$$
-	
-	利用不等式: $x>\sin x;x>\ln(1+x)$,可以将上面的式子进行一些变换
-	
-\end{lemma}
-\begin{lemma}
-	
-	$$\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}nx^nf(x)dx$$
-	
-	利用 $\mathbf{lem: }$ \ref{lem: 第一积分中值定理},原极限可以化为: 
-	$$\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}(n+1)x^nf(x)dx=\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}f(x)dx^n=\lim\limits_{n\rightarrow+\infty}[(f(x)x^n)|_{0}^{1}-\int_{0}^{1}f'(x)x^ndx]=f(1)$$
-\end{lemma}
-\begin{solution}
-	
-	令: $f(x)=\dfrac{1}{1+e^x}$
-	
-	利用引理,我们得到: $$\lim\limits_{n\rightarrow +\infty}\int_{0}^{1}\dfrac{nx^n}{1+e^x}dx=f(1)=\dfrac{1}{1+e}$$
-\end{solution}
-
-\myspace{1}
+\section{Week \Rmnum{4}}
 
 \hl{\textbf{\textit{April 22}}}
 
-1. $\int_{0}^{1}dy\int_{y}^{1}(\dfrac{e^{x^2}}{x}-e^{y^2})dx$
-\myspace{1}
-\begin{solution}
-	
-	积分区域是由直线 $y=0,y=1,x=1$ 围成的三角形,交换积分次序,原二重积分等价于: 
-	$$\int_{0}^{1}dx\int_{0}^{x}(\dfrac{e^{x^2}}{x}-e^{y^2})dy=\int_{0}^{1}e^{x^2}dx-\int_{0}^{1}dx\int_{0}^{x}e^{y^2}dy$$
-	
-	后面的二重积分再次交换积分次序: 
-	$$\int_{0}^{1}dy\int_{y}^{1}e^{y^2}dx=\int_{0}^{1}(e^{y^2}-ye^{y^2})dy$$
-	
-	原二重积分化为: 
-	$$\int_{0}^{1}e^{x^2}dx-\int_{0}^{1}(e^{y^2}-ye^{y^2})dy=\int_{0}^{1}xe^{x^2}dx=(\frac{1}{2}e^{y^2})|_{x=0}^{x=1}=\dfrac{e-1}{2}$$
-\end{solution}
-
-\myspace{1}
-
-2. $\lim\limits_{x\rightarrow 0}\left[ \dfrac{1}{\ln(x+\sqrt{1+x^2})}-\dfrac{1}{\ln(1+x)}\right] $
-\myspace{1}
-\begin{solution}
-	
-	两个等价无穷小:  $$x\rightarrow 0,\sqrt{1+x^{2}}-1\sim \dfrac{1}{2}x^{2}, x\sim \ln(x+\sqrt{1+x^2})$$
-	
-	设 $f(x)=\ln x,f'(x)=\frac{1}{x}$
-	
-	原极限可以化为: 
-	$$\lim\limits_{x\rightarrow 0}-\frac{\ln(x+\sqrt{1+x^2})-\ln(1+x)}{\ln(x+\sqrt{1+x^2})\ln(1+x)}\stackrel{Lagrange}{\longrightarrow}\lim\limits_{x\rightarrow 0}-\frac{f'(\varphi)(\sqrt{1+x^2}-1)}{x^2}=\lim\limits_{x\rightarrow 0}-\frac{1}{2}f'(\varphi)$$
-	$$1+x<\varphi<x+\sqrt{1+x^2},\lim\limits_{x\rightarrow 0}(x+1)=\lim\limits_{x\rightarrow 0}\sqrt{1+x^2}=1\stackrel{squeeze theorem}{\longrightarrow} f'(\varphi)=1$$
-	
-	原极限: $\lim\limits_{x\rightarrow 0}\left[ \dfrac{1}{\ln(x+\sqrt{1+x^2})}-\dfrac{1}{\ln(1+x)}\right] =-\dfrac{1}{2}$
-	
-\end{solution}
-
-\myspace{1}
-
-3. $\int\dfrac{\sin x}{\sqrt{2+\sin 2x}}dx$\label{problem: 组合积分法}
-
-\myspace{1}
-\begin{solution}
-	
-	我们有: $2+\sin 2x=1+(\sin x+\cos x)^2$
-	
-	不妨设 $I=A(\sin x+\cos x),J=B(\cos x-\sin x)$ 
-	
-	$ I+J=\sin x\Rightarrow A=\dfrac{1}{2},B=-\dfrac{1}{2}$
-	
-	原不定积分化为: 
-	$$\int\frac{I+J}{\sqrt{1+(\sin x+\cos x)^2}}dx=\frac{1}{2}\left( \int\frac{\sin x+\cos x}{\sqrt{3-(\sin x-\cos x)^2}}dx-\int\frac{\cos x-\sin x}{\sqrt{1+(\sin x+\cos x)^2}}dx\right)$$
-	
-	原不定积分为: 
-	$$\dfrac{1}{2}\left[ \arcsin \frac{\sin x-\cos x}{\sqrt{3}}-\ln(\sin x+\cos x+\sqrt{1+(\sin x+\cos x)^2} )\right] +C$$
-\end{solution}
-
-\myspace{1}
-
 \hl{\textbf{\textit{April 23}}}
-
-1. 区域 $D$ 是由曲线 $y=\sin x,x=\pm\dfrac{\pi}{2},y=1$ 围成,求 $\iint\limits_{D}(xy^{5}-1)dxdy$
-
-\myspace{1}
-\begin{solution}
-	
-	$$\iint\limits_{D}(xy^{5}-1)dxdy=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}dx\int_{\sin x}^{1}(xy^5-1)dy=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\left( \dfrac{x}{6}-\dfrac{x\sin^{6}}{6}+\sin x-1\right) dx=-\pi$$
-\end{solution}
-
-\myspace{1}
-
-2. 	$\int_{\frac{1}{6}}^{+\infty}\dfrac{1}{x}\left[ \dfrac{1}{\sqrt{x}}\right]dx$
-\myspace{1}
-\begin{solution}
-	
-	$$\left\lbrace
-	\begin{array}{l}
-		\left[ \dfrac{1}{\sqrt{x}}\right]=0,x\geq 1\\
-		\left[ \dfrac{1}{\sqrt{x}}\right]=1,\dfrac{1}{4}\leq x\leq 1\\
-		\left[ \dfrac{1}{\sqrt{x}}\right]=2,\dfrac{1}{6}\leq x\leq \dfrac{1}{4}
-	\end{array}\right. $$
-	
-	原积分为: 
-	$$\int_{\frac{1}{6}}^{\frac{1}{4}}\dfrac{2}{x}dx+\int_{\frac{1}{4}}^{1}\dfrac{1}{x}dx=2\ln 3$$
-\end{solution}
-
-\myspace{1}
-
-3. 已知函数 $f(x,y)=\left\lbrace \begin{array}{l}
-	\dfrac{\sin x^2\cos y^2}{\sqrt{x^2+y^2}},(x,y)\neq (0,0)\\
-	0,(x,y)=(0,0)
-\end{array}\right. $ 求 $f'_{x}(0,0),f'_{y}(0,0)$
-\myspace{1}
-\begin{solution}
-	
-	$$\lim\limits_{\Delta x\rightarrow 0}\frac{f(\Delta x,0)}{\Delta x}=\lim\limits_{\Delta x\rightarrow 0}\frac{\sin (\Delta x)^2}{(\Delta x)^2}|\Delta x|$$
-	$$\lim\limits_{\Delta y\rightarrow 0}\frac{f(0,\Delta y)}{\Delta y}=0$$
-	
-	$f'_{x}(0,0)$ 不存在, $f'_{y}(0,0)=0$
-\end{solution}
-
-\myspace{1}
 
 \hl{\textbf{\textit{April 24}}}
 
-1. $\iint\limits_{D}x^2ydxdy$,区域 $D$ 是由曲线 $x^2-y^2=1$ 以及直线 $y=0,y=1$ 围成的平面区域的面积
-\myspace{1}
-\begin{solution}
-	
-	原二重积分等价于: 
-	$$\int_{0}^{1}dy\int_{-\sqrt{1+y^2}}^{\sqrt{1+y^2}}x^2ydx=\int_{0}^{1}\dfrac{2}{3}y(1+y^2)^{\frac{3}{2}}dy=\dfrac{8\sqrt{2}-2}{15}$$
-\end{solution}
 
-\myspace{1}
-
-2. 设 $z=e^{xy}+f(x+y,xy)$, 求 $\dfrac{\partial^2 z}{\partial x\partial y}$,其中 $f(u,v)$ 有二阶连续偏导数
-\myspace{1}
-\begin{solution}
-	
-	$$\frac{\partial z}{\partial x}=ye^{xy}+f_{1}'(x+y,xy)+yf_{2}'(x+y,xy)$$
-	$$\frac{\partial^{2} z}{\partial x\partial y}=(1+xy)e^{xy}+f_{11}'(x+y,xy)+xf_{12}''(x+y,xy)+f_{2}'(x+y,xy)+y(f_{21}''(x+y,xy)+xf_{22}''(x+y,xy))$$
-	$$\frac{\partial^{2} z}{\partial x\partial y}=(1+xy)e^{xy}+f_{11}''(x+y,xy)+xyf_{22}''(x+y,xy)+(x+y)f_{12}''(x+y,xy)+f_{2}'(x+y,xy)$$
-\end{solution}
 
 \myspace{1}
 
@@ -220,15 +75,6 @@
 
 \hl{\textbf{\textit{April 25}}}
 
-1. $\iint\limits_{D}\sqrt{x^2+y^2}dxdy$,其中 $D=\left\lbrace (x,y)|0\leq y\leq x,\ x^2+y^2\leq 2x \right\rbrace $
-\myspace{1}
-\begin{solution}
-	
-	采用极坐标积分方法: 
-	$$\int_{0}^{\frac{\pi}{4}}d\theta \int_{0}^{2\cos \theta}r^2dr=\frac{8}{3}\int_{0}^{\frac{\pi}{4}}\cos^3\theta d\theta=\dfrac{10\sqrt{2}}{9}$$
-\end{solution}
-
-\myspace{1}
 
 2. 设连续函数 $z=f(x,y)$ 满足$\lim\limits_{x\rightarrow 0,y\rightarrow 1}\dfrac{f(x,y)-2x+y-2}{\sqrt{x^2+(y-1)^2}}=0$,求 $dz|_{(0,1)}$
 \myspace{1}
@@ -240,20 +86,6 @@
 \myspace{1}
 
 \hl{\textbf{\textit{April 26}}}
-
-1. 计算二重积分 $I=\iint\limits_{D}r^2\sin\theta\sqrt{1-r^2\cos 2\theta}drd\theta$,其中 $D=\left\lbrace(r,\theta)|0\leq r\leq \sec \theta,0\leq \theta\leq\dfrac{\pi}{4} \right\rbrace $
-\myspace{1}
-\begin{solution}
-	
-	原二重积分化为直角坐标形式: 
-	$$I=\iint\limits_{D'}y\sqrt{1+y^2-x^2}dxdy$$
-	
-	其中 $D=\left\lbrace(x,y)|0\leq x\leq 1,0\leq y\leq x \right\rbrace $
-	
-	$$I=\int_{0}^{1}dx\int_{0}^{x}y\sqrt{1+y^2-x^2}dy=\frac{1}{3}\left[ \int_{0}^{1}(1-(1-x^2)^{\frac{3}{2}})dx\right]=\frac{1}{3}-\frac{1}{3}\int_{0}^{\frac{\pi}{2}}\cos^4 \theta d\theta=\frac{1}{3}-\frac{\pi}{16} $$
-\end{solution}
-
-\myspace{1}
 
 2. $\int_{0}^{1}x^{a}(1-x)^{b}\ln xdx$
 \myspace{1}

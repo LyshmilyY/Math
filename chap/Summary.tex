@@ -519,7 +519,26 @@ $$Y_{i}X_{j}=\left\lbrace
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=15cm,height=8cm]{"figure/Summary/阿达玛不等式.jpg"}
+	\begin{tikzpicture}
+		\draw[->] (-1,0) -- (7,0) node[right] {$x$};
+		\draw[->] (0,-1) -- (0,7) node[above] {$y$};
+		\draw[red,thick, domain=1:4, smooth, variable=\x] plot ({\x},{0.2*2^(\x)+1});
+		\draw[green] (1,1.4) -- (4,4.2);
+		\draw (2.5,0) -- (2.5,2.8);
+		\draw[dashed,blue] (1,0) -- (1,1.4);
+		\draw[dashed,blue] (4,0) -- (4,4.2);
+		\draw (1,0.9148) -- (4,3.2668);
+		\node at (6,3.3) {$y = f'(\frac{a+b}{2})[x-\frac{a+b}{2}]+f(\frac{a+b}{2})$};
+		\node at (1,-0.2) {$a$};
+		\node at (4,-0.2) {$b$};
+		\node at (2.5,-0.2) {\small{$x=\frac{a+b}{2}$}};
+		\node at (0.6,1.4) {$f(a)$};
+		\node at (4.4,4.2) {$f(b)$};
+		\node at (-0.2,-0.2) {O};
+		\node[green] at (2,6) {$S_{1} = \frac{f(a)+f(b)}{2}(b-a)$};
+		\node[red] at (2,5) {$S_{2} = \int_{a}^{b}f(x)dx$};
+		\node at (2,4) {$S_{3} = (b-a)f(\frac{a+b}{2})$};
+	\end{tikzpicture}
 	\caption{$Hadamard$不等式}
 	\label{Figure: 阿达玛不等式}
 \end{figure}

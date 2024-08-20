@@ -234,9 +234,31 @@
 	\begin{figure}[H]
 		\centering  %图片全局居中
 		\subfigure[概率密度]{
-			\includegraphics[width=0.45\textwidth]{"figure/Note/均匀分布1.jpg"}}
+			\begin{tikzpicture}
+				\draw[->] (-3,0) -- (3,0) node[right] {$x$};
+				\draw[->] (0,-1) -- (0,2) node[above] {$f(x)$};
+				\draw[line width=1pt] (-3,0) -- (-1,0);
+				\draw (-1,1) -- (2,1);
+				\draw[dashed,blue] (-1,0) -- (-1,1);
+				\draw[dashed,blue] (2,0) -- (2,1);
+				\draw[line width=1pt] (2,0) -- (3,0);
+				\node at (0.2,-0.2) {O};
+				\node at (-0.5,1.3) {$\frac{1}{b-a}$};
+				\node at (-1,-0.2) {$a$};
+				\node at (2,-0.2) {$b$};
+			\end{tikzpicture}}
 		\subfigure[分布函数]{
-			\includegraphics[width=0.45\textwidth]{"figure/Note/均匀分布2.jpg"}}
+			\begin{tikzpicture}
+				\draw[->] (-3,0) -- (3,0) node[right] {$x$};
+				\draw[->] (0,-1) -- (0,2) node[above] {$F(x)$};
+				\draw[line width=1pt] (-3,0) -- (-1,0);
+				\draw (-1,0) -- (1.5,1);
+				\draw (1.5,1) -- (3,1);
+				\node at (0.2,-0.2) {O};
+				\node at (-0.1,1.1) {$1$};
+				\node at (-1,-0.2) {$a$};
+				\node at (1.5,-0.2) {$b$};
+			\end{tikzpicture}}
 	\end{figure}
 	\mathcolorbox{yellow}{(2). \text{指数分布}}
 	
@@ -255,14 +277,29 @@
 	\begin{figure}[H]
 		\centering  %图片全局居中
 		\subfigure[概率密度]{
-			\includegraphics[width=0.45\textwidth]{"figure/Note/指数分布1.jpg"}}
+			\begin{tikzpicture}
+				\draw[->] (-0.5,0) -- (3,0) node[right] {$x$};
+				\draw[->] (0,-0.5) -- (0,2) node[above] {$f(x)$};
+				\draw[thick, domain=0:2.5, smooth, variable=\x] plot ({\x},{0.8+2^(-\x-1)});
+				\node at (0.2,-0.2) {O};
+				\node at (-0.2,1.3) {$\lambda$};
+			\end{tikzpicture}	
+		}
 		\subfigure[分布函数]{
-			\includegraphics[width=0.45\textwidth]{"figure/Note/指数分布2.jpg"}}
+			\begin{tikzpicture}
+				\draw[->] (-0.5,0) -- (5,0) node[right] {$x$};
+				\draw[->] (0,-0.5) -- (0,2.5) node[above] {$F(x)$};
+				\draw[thick, domain=0:5, smooth, variable=\x] plot ({\x},{2-2^(1-\x)});
+				\draw[dashed,blue] (0,2) -- (5,2);
+				\node at (0.2,-0.2) {O};
+				\node at (-0.2,2) {$1$};
+			\end{tikzpicture}
+		}
 	\end{figure}
 	\mathcolorbox{yellow}{(3). \text{正态分布}}
 	
 	$X\sim N(\mu,\sigma^2)$,$X$的概率密度$f(x)$: 
-	$$f(x)=\dfrac{1}{\sqrt{2\pi\sigma}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2},(-\infty<x<+\infty) $$
+	$$f(x)=\dfrac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2},(-\infty<x<+\infty) $$
 	特别的,当$\mu=0,\sigma=1$时,$X\sim f(x)$是标准正态分布: 
 	$$f(x)=\dfrac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}x^2},(-\infty<x<+\infty)$$
 	
@@ -273,9 +310,34 @@
 	\begin{figure}[H]
 		\centering  %图片全局居中
 		\subfigure[概率密度]{
-			\includegraphics[width=0.45\textwidth]{"figure/Note/正态分布2.jpg"}}
+			\begin{tikzpicture}
+				\draw[->] (-1,0) -- (5,0) node[right] {$x$};
+				\draw[->] (0,-0.5) -- (0,2) node[above] {$f(x)$};
+				\draw[thick, domain=0:4, smooth, variable=\x] plot ({\x},{1.5*(2.7)^(-2*(\x-2)^(2)});
+				\node at (0.2,-0.2) {O};
+				\draw[dashed,blue] (0,1.5) -- (2,1.5);
+				\draw[dashed,green] (1.5,0) -- (1.5,0.9);
+				\draw[dashed,green] (2,0) -- (2,1.5);
+				\draw[dashed,green] (2.5,0) -- (2.5,0.9);
+				\node at (1.5,-0.2) {\tiny{$\mu-\sigma$}};
+				\node at (2,-0.2) {\tiny{$\mu$}};
+				\node at (2.5,-0.2) {\tiny{$\mu+\sigma$}};
+				\node at (-0.4,1.5) {\small{$\frac{1}{\sqrt{2\pi}\sigma}$}};
+			\end{tikzpicture}	
+		}
 		\subfigure[分布函数]{
-			\includegraphics[width=0.45\textwidth]{"figure/Note/正态分布2.jpg"}}
+			\begin{tikzpicture}
+				\draw[->] (-2.5,0) -- (2.5,0) node[right] {$x$};
+				\draw[->] (0,-0.5) -- (0,1.5) node[above] {$\varphi(x)$};
+				\draw[thick, domain=-2.4:2.4, smooth, variable=\x] plot ({\x},{(2.71)^(-0.5*(\x)^(2)});
+				\node at (0.2,-0.2) {O};
+				\draw[dashed,green] (2,0) -- (2,0.137);
+				\draw[dashed,green] (-2,0) -- (-2,0.137);
+				\node at (-2,-0.2) {$-1$};
+				\node at (2,-0.2) {$1$};
+				\node at (0.4,1.2) {\small{$\frac{1}{\sqrt{2\pi}}$}};
+			\end{tikzpicture}	
+		}
 	\end{figure}
 \end{definition}
 \section{一维随机变量函数的分布}
@@ -492,7 +554,18 @@
 	\begin{figure}[H]
 		\centering  %图片全局居中
 		\subfigure[$X+Y$]{
-			\includegraphics[width=0.6\textwidth]{"figure/Note/和.jpg"}}
+			\begin{tikzpicture}
+				\draw[->] (-1,0) -- (2,0) node[right] {$x$};
+				\draw[->] (0,-1) -- (0,2) node[above] {$y$};
+				\draw[thick, domain=-0.5:1.8, smooth, variable=\x] plot ({\x},{1-\x});
+				\node at (0.2,-0.2) {O};
+				\node at (1.2,1.2) {$x+y =z$};
+				\foreach \i in {0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,1.1,1.2}
+				{
+					\draw (\i-0.1,1.1-\i) -- (\i-0.9,-0.1-\i);
+				}
+			\end{tikzpicture}
+		}
 	\end{figure}
 	$Z=X+Y$
 	
@@ -516,7 +589,18 @@
 	\begin{figure}[H]
 		\centering  %图片全局居中
 		\subfigure[$X-Y$]{
-			\includegraphics[width=0.6\textwidth]{"figure/Note/差.jpg"}}
+			\begin{tikzpicture}
+				\draw[->] (-1,0) -- (2,0) node[right] {$x$};
+				\draw[->] (0,-1) -- (0,2) node[above] {$y$};
+				\draw[thick, domain=-1.2:1.2, smooth, variable=\x] plot ({\x},{\x+0.5});
+				\node at (0.2,-0.2) {O};
+				\node at (1.5,1.1) {\small{$x-y =z$}};
+				\foreach \i in {0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5}
+				{
+					\draw (\i-1,\i-0.5) -- (\i-1.1,\i-0.1);
+				}
+			\end{tikzpicture}	
+		}
 	\end{figure}
 	$Z=X-Y$
 	
@@ -540,7 +624,19 @@
 	\begin{figure}[H]
 		\centering  %图片全局居中
 		\subfigure[$XY$]{
-			\includegraphics[width=0.6\textwidth]{"figure/Note/积.jpg"}}
+			\begin{tikzpicture}
+				\draw[->] (-2,0) -- (2,0) node[right] {$x$};
+				\draw[->] (0,-2) -- (0,2) node[above] {$y$};
+				\draw[thick, domain=0.5:2, smooth, variable=\x] plot ({\x},{1/\x});
+				\draw[thick, domain=-2:-0.5, smooth, variable=\x] plot ({\x},{1/\x});
+				\node at (0.2,-0.2) {O};
+				\node at (1.5,1.1) {\small{$xy=z$}};
+				\foreach \i in {0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8}
+				{
+					\draw (\i,1/\i) -- (-1/\i,-\i);
+				}
+			\end{tikzpicture}	
+		}
 	\end{figure}
 	$Z=XY$
 	
@@ -567,7 +663,21 @@
 	\begin{figure}[H]
 		\centering  %图片全局居中
 		\subfigure[$\dfrac{X}{Y}$]{
-			\includegraphics[width=0.6\textwidth]{"figure/Note/商.jpg"}}
+			\begin{tikzpicture}
+				\draw[->] (-2,0) -- (2,0) node[right] {$x$};
+				\draw[->] (0,-2) -- (0,2) node[above] {$y$};
+				\draw[thick, domain=-2:2, smooth, variable=\x] plot ({\x},{\x});
+				\node at (0.2,-0.2) {O};
+				\node at (1.6,1) {\small{$x=zy$}};
+				\foreach \i in {0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5}
+				{
+					\draw (-\i,0) -- (-\i+0.1,0.5);
+					\draw (\i,0) -- (\i+0.1,-0.5);
+					\draw (\i,\i) -- (\i+0.1,\i+0.5);
+					\draw (-\i,-\i) -- (-\i+0.1,-\i-0.5);
+				}
+			\end{tikzpicture}	
+		}
 	\end{figure}
 	$Z=\dfrac{X}{Y}$
 	
