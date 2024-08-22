@@ -16,7 +16,7 @@
 \myspace{1}
 \begin{solution}
 	
-	由题意得: $f[\varphi(x)]=1-x\Rightarrow e^{\varphi^{2}(x)}=1-x$, 因此: $\varphi(x)=\sqrt{\ln (1-x)}, x\ge 1$
+	$f[\varphi(x)]=1-x\Rightarrow e^{\varphi^{2}(x)}=1-x$, 因此: $\varphi(x)=\sqrt{\ln (1-x)}, x\ge 1$
 \end{solution}
 \myspace{1}
 
@@ -33,7 +33,6 @@
 \myspace{1}
 \begin{solution}
 
-	由题意得:
 	$$
 	g[f(x)] = 
 	\begin{cases}
@@ -69,7 +68,7 @@ $$
 \myspace{1}
 \begin{solution}
 
-	令 $g(x)= \dfrac{f(x)+f(-x)}{2},\quad h(x)=\dfrac{f(x)-f(-x)}{2}$, 我们有:
+	令 $g(x)= \dfrac{f(x)+f(-x)}{2}\quad h(x)=\dfrac{f(x)-f(-x)}{2}$
 	$$
 	\begin{cases}
 		g(-x)=\dfrac{f(-x)+f(x)}{2}=\dfrac{f(x)+f(-x)}{2}=g(x)\\
@@ -133,13 +132,12 @@ $$
 \myspace{1}
 \begin{solution}
 
-	原极限等价于: 
 	\begin{align*}
 		I = & \lim\limits_{n\to\infty}\left[\sqrt{1+2+\cdots+n}-\sqrt{1+2+\cdots+(n-1)}\right]\\
-		= & \lim\limits_{n\to\infty}\left[\sqrt{\dfrac{n(n+1)}{2}}-\sqrt{\dfrac{(n-1)n}{2}}\right]\\
-		= & \lim\limits_{n\to\infty}\dfrac{\left[\dfrac{n(n+1)}{2}-\dfrac{n(n-1)}{2}\right]}{\sqrt{\dfrac{n(n+1)}{2}}+\sqrt{\dfrac{(n-1)n}{2}}}\\
-		= & \lim\limits_{n\to\infty}\dfrac{n}{\sqrt{2}n}\\
-		= & \dfrac{1}{\sqrt{2}} 
+		  = & \lim\limits_{n\to\infty}\left[\sqrt{\dfrac{n(n+1)}{2}}-\sqrt{\dfrac{(n-1)n}{2}}\right]\\
+		  = & \lim\limits_{n\to\infty}\dfrac{\left[\dfrac{n(n+1)}{2}-\dfrac{n(n-1)}{2}\right]}{\sqrt{\dfrac{n(n+1)}{2}}+\sqrt{\dfrac{(n-1)n}{2}}}\\
+		  = & \lim\limits_{n\to\infty}\dfrac{n}{\sqrt{2}n}\\
+		  = & \dfrac{1}{\sqrt{2}} 
 	\end{align*}
 \end{solution}
 \myspace{1}
@@ -148,12 +146,11 @@ $$
 \myspace{1}
 \begin{solution}
 
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to-\infty}\dfrac{\sqrt{4x^{2}+x-1}+x+1}{\sqrt{x^{2}+\sin x}}\\
-		= & \lim\limits_{x\to-\infty}\dfrac{\sqrt{x^{2}(4+\dfrac{1}{x}-\dfrac{1}{x^{2}})}+x(1+\dfrac{1}{x})}{\sqrt{x^{2}(1+\dfrac{\sin x}{x^{2}})}}\\
-		= & \lim\limits_{x\to-\infty}\dfrac{\sqrt{4+\dfrac{1}{x}-\dfrac{1}{x^{2}}}-(1+\dfrac{1}{x})}{\sqrt{1+\dfrac{\sin x}{x^{2}}}}\\
-		= & 1
+		  = & \lim\limits_{x\to-\infty}\dfrac{\sqrt{x^{2}(4+\dfrac{1}{x}-\dfrac{1}{x^{2}})}+x(1+\dfrac{1}{x})}{\sqrt{x^{2}(1+\dfrac{\sin x}{x^{2}})}}\\
+		  = & \lim\limits_{x\to-\infty}\dfrac{\sqrt{4+\dfrac{1}{x}-\dfrac{1}{x^{2}}}-(1+\dfrac{1}{x})}{\sqrt{1+\dfrac{\sin x}{x^{2}}}}\\
+		  = & 1
 	\end{align*}
 \end{solution}
 \myspace{1}
@@ -164,7 +161,6 @@ $$
 \myspace{1}
 \begin{solution}
 
-	原极限等价于:
 	\begin{align*}
 		I^{+} = & \lim\limits_{x\to 0^{+}}\left(\dfrac{2+e^{\frac{1}{x}}}{1+e^{\frac{4}{x}}}+\dfrac{\sin x}{|x|}\right)\\
 		      = & \lim\limits_{x\to 0^{+}}\dfrac{2+e^{\frac{1}{x}}}{1+e^{\frac{4}{x}}}+\lim\limits_{x\to 0^{+}}\dfrac{\sin x}{x}\\
