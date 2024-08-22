@@ -166,9 +166,7 @@
 
 ## 打赏
 如果您觉得本项目对您有所帮助, 欢迎打赏, 以激励作者继续努力, 生活不易, 鼠鼠叹气, 感谢支持!
-![|400](https://yjl0928-image-1328687625.cos.ap-beijing.myqcloud.com/Image/README-%E6%94%AF%E4%BB%98%E5%AE%9D.jpg)
+![|200](https://yjl0928-image-1328687625.cos.ap-beijing.myqcloud.com/Image/README-%E6%94%AF%E4%BB%98%E5%AE%9D.jpg)
 
-![|400](https://yjl0928-image-1328687625.cos.ap-beijing.myqcloud.com/Image/README-%E5%BE%AE%E4%BF%A1.png)
-## 推广
-下面是一个考研的星球圈子(知识星球), 欢迎大家加入, 一起交流学习, 互帮互助, 一起进步!
-![|750](https://yjl0928-image-1328687625.cos.ap-beijing.myqcloud.com/Image/README-%E6%98%9F%E7%90%83.png)
+![|200](https://yjl0928-image-1328687625.cos.ap-beijing.myqcloud.com/Image/README-%E5%BE%AE%E4%BF%A1.png)
+

@@ -4,112 +4,6 @@
 
 \hl{\textbf{\textit{July 1}}}
 
-1. 证明: $e^{\int_{0}^{1}f(x)dx}\leq \int_{0}^{1}e^{f(x)}dx$
-\begin{figure}[ht]
-	\centering
-	\begin{tikzpicture}
-		\draw[->] (-1,0) -- (5,0) node[right] {$x$};
-		\draw[->] (0,-1) -- (0,5) node[above] {$y$};
-		\draw[thick, domain=1:4, smooth, variable=\x] plot ({\x},{0.2*2^(\x)+1});
-		\draw[red] (1,1.4) -- (4,4.2);
-		\draw[green] (3,0) -- (3,3.27);
-		\draw[dashed,blue] (1,0) -- (1,1.4);
-		\draw[dashed,blue] (4,0) -- (4,4.2);
-		\node at (1,-0.2) {$x_{1}$};
-		\node at (4,-0.2) {$x_{2}$};
-		\node at (2.9,-0.2) {\small{$px_{1}+qx_{2}$}};
-		\node at (0.6,1.4) {$f(x_{1})$};
-		\node at (4.4,4.2) {$f(x_{2})$};
-		\node at (3,1.7) {$f(px_{1}+qx_{2})$};
-		\node at (2,3.6) {$pf(x_{1})+qf(x_{2})$};
-		\node at (-0.2,-0.2) {O};
-	\end{tikzpicture}
-	\caption{凹函数性质}
-	\label{Figure: 凹函数性质}
-\end{figure}
-
-\myspace{1}
-\begin{solution}
-	\begin{anymark}[凹函数性质]
-		我们不妨假设$f(x)$在$(a,b)$上是凹函数,我们有以下的定理.
-		
-		$$\forall x_{1},x_{2},\cdots,x_{n}\in(a,b), x_{1}<x_{2}<\cdots<x_{n}, \exists p_{1},p_{2},\cdots,p_{n}>0,\sum\limits_{i=1}^{n}p_{n}=1,\ s.t. \sum\limits_{i=1}^{n}p_{i}f(x_{i})\geq f(\sum\limits_{i=1}^{n}p_{i}x_{i})$$
-		\begin{proof}
-			
-			(1). 当$n=1$时,原命题显然成立.
-			
-			(2). 当$n=2$时,原命题等价于: 
-			$$p+q=1,\ f(px_{1}+qx_{2})\leq pf(x_{1})+qf(x_{2})$$
-			
-			我们由 $Figure: $\ref{Figure: 凹函数性质}得到: 
-			$$\left\lbrace
-			\begin{array}{l}
-				px_{1}+qx_{2}>(p+q)x_{1}=x_{1}\\
-				px_{1}+qx_{2}<(p+q)x_{2}=x_{2}
-			\end{array}
-			\right. px_{1}+qx_{2}\in(x_{1},x_{2})$$
-			
-			$$\dfrac{l-f(x_{1})}{f(x_{2})-f(x_{1})}=\dfrac{px_{1}+qx_{2}-x_{1}}{x_{2}-x_{1}}=q\Rightarrow l=qf(x_{1})+(1-q)f(x_{1})=pf(x_{1})+qf(x_{2})$$
-			
-			(3). 假设当$n=k$时,我们有: $$\sum\limits_{i=1}^{k}p_{i}f(x_{i})\geq f(\sum\limits_{i=1}^{k}p_{i}x_{i})$$
-			
-			当$n=k+1$时,我们有: 
-			\begin{eqnarray*}
-				f(x_{1}+x_{2}+\cdots+x_{k}+x_{k+1})&=&f((1-x_{k+1})[\frac{x_{1}}{1-p_{k+1}}+\frac{x_{2}}{1-p_{k+1}}+\cdots+\frac{x_{k}}{1-p_{k+1}}+p_{k+1}x_{k+1}])\\
-				&\leq& p_{k+1}f(x_{k+1})+\dfrac{1}{1-p_{k+1}}f(\sum\limits_{i=1}^{k}\dfrac{p_{i}}{1-p_{k+1}}x_{i})\\
-				&\leq & \sum\limits_{i=1}^{k+1}p_{i}f(x_{i})
-			\end{eqnarray*}
-		\end{proof}
-	\end{anymark}
-	原命题等价于: 
-	$$\lim\limits_{n\rightarrow+\infty}e^{\sum\limits_{i=1}^{n}f(\frac{i}{n})\frac{i}{n}}\leq \lim\limits_{n\rightarrow+\infty}\sum\limits_{i=1}^{n}\frac{1}{n}e^{f(\frac{i}{n})}$$
-	
-	我们得到: 
-	$$e^{\int_{0}^{1}f(x)dx}\leq \int_{0}^{1}e^{f(x)}dx$$
-\end{solution}
-\myspace{1}
-
-2. 求极限$\lim\limits_{x\rightarrow 0}\int_{0}^{x}(\dfrac{\arctan t}{t})^{\dfrac{1}{\int_{0}^{t}\ln(1+u)du}}\cot xdt$
-\myspace{1}
-\begin{solution}
-	
-	原极限等价于: 
-	\begin{eqnarray*}
-		I&=&\lim\limits_{x\rightarrow 0}\dfrac{\cos x\int_{0}^{x}(\dfrac{\arctan t}{t})^{\dfrac{1}{\int_{0}^{t}\ln(1+u)du}}}{\sin x}\\
-		&=&\lim\limits_{x\rightarrow 0}\dfrac{\int_{0}^{x}(\dfrac{\arctan t}{t})^{\dfrac{1}{\int_{0}^{t}\ln(1+u)du}}dt}{x}\\
-		&=&e^{\lim\limits_{x\rightarrow 0}\dfrac{\ln(\frac{\arctan x}{x})}{\int_{0}^{x}\ln(1+u)du}}\\
-		&=&e^{\lim\limits_{x\rightarrow 0}\dfrac{-\frac{2}{3}x^2}{\int_{0}^{x}\ln(1+u)du}}\\
-		&=&e^{-\frac{2}{3}}
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-3. $f(x)$在$[0,1]$上连续,我们有$\int_{0}^{1}xf(x)dx=1,\ \int_{0}^{1}f(x)dx=0$,证明: $$\exists\xi\in(0,1),\ s.t. |f(\xi)|\geq 4$$
-\myspace{1}
-\begin{solution}
-	
-	我们由$\int_{0}^{1}xf(x)dx=1,\ \int_{0}^{1}f(x)dx=0$得到: 
-	$$\int_{0}^{1}(x+a)f(x)=1\Rightarrow \int_{0}^{1}|x+a||f(x)|\geq 1$$
-	
-	我们假设$f(x)<4$,我们得到: 
-	$$4\int_{0}^{1}|x+a|dx>1$$
-	
-	我们有: $$4\int_{0}^{1}|x+a|dx=\left\lbrace
-	\begin{array}{l}
-		4a+2,a\geq 0\\
-		-4a-2,a\leq -1\\
-		4a^2+4a+2,a\in(-1,0)
-	\end{array}
-	\right. $$
-	
-	我们要得出矛盾,即令$4\int_{0}^{1}|x+a|dx\leq 1$,我们令$a=-\dfrac{1}{2}$,$4\int_{0}^{1}|x+a|dx=1$矛盾!!!
-	
-	综上所述,我们得到: $\exists\xi\in(0,1),\ s.t. |f(\xi)|\geq 4$
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{July 2}}}
-
 1. 求极限 $\lim\limits_{x\rightarrow +\infty}\left[ \dfrac{\ln(x+\sqrt{x^2+1})}{\ln(x+\sqrt{x^2-1})}\right]^{x^2\ln x} $
 \myspace{1}
 \begin{solution}
@@ -129,13 +23,13 @@
 	原极限$I=e^{\dfrac{1}{2}}$
 \end{solution}
 \myspace{1}
+
 2. 设$f(x)$在$[0,1]$导函数连续,且$\int_{0}^{1}x^2f'(x)dx=1$,证明: 
 
 (1). $\exists \xi\in(0,1),\ s.t. f'(\xi)=3$
 
 (2). 若$f(1)=\int_{0}^{1}f(x)dx=0$,则$\exists \eta\in(0,1), \ s.t. f'(\eta)=-\dfrac{6}{7}$
 \myspace{1}
-
 \begin{solution}
 	
 	(1).我们不妨设$g(x)=x^2$,我们有$x\in(0,1),g(x)>0$,我们根据第一积分中值定理得到: 
@@ -161,7 +55,7 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 3}}}
+\hl{\textbf{\textit{July 2}}}
 
 1. 设$f(x)$连续,$\lim\limits_{x\rightarrow 0}\dfrac{f(x)}{x}=1$,求极限$\lim\limits_{x\rightarrow 0 }\left[ 1+\int_{0}^{x}tf(x^2-t^2)dt\right]^{\frac{1}{(\tan x-x)\ln(1+x)}} $
 \myspace{1}
@@ -209,7 +103,9 @@
 \end{solution}
 \myspace{1}
 
-3. 设$D=\{(x,y)|0\leq x\leq 2,0\leq y\leq 2\}$,$f(x,y)$在$D$上连续,$\iint\limits_{D}f(x,y)dxdy=0$,$\iint\limits_{D}xyf(x,y)dxdy=1$,证明: $\exists (\xi,\eta)\in D,\ s.t. |f'(\xi,\eta)|\geq \dfrac{2}{4\ln 2+3}$
+\hl{\textbf{\textit{July 3}}}
+
+1. 设$D=\{(x,y)|0\leq x\leq 2,0\leq y\leq 2\}$,$f(x,y)$在$D$上连续,$\iint\limits_{D}f(x,y)dxdy=0$,$\iint\limits_{D}xyf(x,y)dxdy=1$,证明: $\exists (\xi,\eta)\in D,\ s.t. |f'(\xi,\eta)|\geq \dfrac{2}{4\ln 2+3}$
 \myspace{1}
 \begin{solution}
 	
@@ -267,9 +163,7 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 4}}}
-
-1.求极限: $\lim\limits_{x\rightarrow+\infty}(x^{\frac{1}{x}}-1)^{\frac{1}{\ln x}}$
+2. 求极限: $\lim\limits_{x\rightarrow+\infty}(x^{\frac{1}{x}}-1)^{\frac{1}{\ln x}}$
 \myspace{1}
 \begin{solution}
 	
@@ -288,7 +182,9 @@
 \end{solution}
 \myspace{1}
 
-2. 已知$a_{n}=\sum\limits_{k=1}^{n}\dfrac{1}{k^2}$,$b_{n}=\sum\limits_{k=1}^{n}\dfrac{1}{(2k-1)^2}$,且$\lim\limits_{n\rightarrow +\infty}a_{n}=\dfrac{\pi^2}{6}$
+\hl{\textbf{\textit{July 4}}}
+
+1. 已知$a_{n}=\sum\limits_{k=1}^{n}\dfrac{1}{k^2}$,$b_{n}=\sum\limits_{k=1}^{n}\dfrac{1}{(2k-1)^2}$,且$\lim\limits_{n\rightarrow +\infty}a_{n}=\dfrac{\pi^2}{6}$
 
 (1). 证明: $a_{2n}=\dfrac{1}{4}a_{n}+b_{n},\ (n=1,2,\cdots)$
 
@@ -324,9 +220,7 @@
 \end{anymark}
 \myspace{1}
 
-\hl{\textbf{\textit{July 5}}}
-
-1. 若$\lim\limits_{x\rightarrow 0}\dfrac{\cos(xe^x)-e^{-\frac{x^2}{2}e^{2x}}}{x^{\alpha}}=\beta\neq0$,求$\alpha,\beta$
+2. 若$\lim\limits_{x\rightarrow 0}\dfrac{\cos(xe^x)-e^{-\frac{x^2}{2}e^{2x}}}{x^{\alpha}}=\beta\neq0$,求$\alpha,\beta$
 \myspace{1}
 \begin{solution}
 	
@@ -341,7 +235,9 @@
 \end{solution}
 \myspace{1}
 
-2. 求$\int_{0}^{+\infty}\dfrac{\ln x}{x^2+a^2}dx\ (a>0)$
+\hl{\textbf{\textit{July 5}}}
+
+1. 求$\int_{0}^{+\infty}\dfrac{\ln x}{x^2+a^2}dx\ (a>0)$
 \myspace{1}
 \begin{solution}
 	
@@ -365,9 +261,7 @@
 \end{anymark}
 \myspace{1}
 
-\hl{\textbf{\textit{July 6}}}
-
-1. 若$\lim\limits_{x\rightarrow 0}\dfrac{\cos 2x-\cos x\sqrt{\cos 2x}}{x^{\alpha}}=\beta\neq0$,求$\alpha,\beta$
+2. 若$\lim\limits_{x\rightarrow 0}\dfrac{\cos 2x-\cos x\sqrt{\cos 2x}}{x^{\alpha}}=\beta\neq0$,求$\alpha,\beta$
 \myspace{1}
 \begin{solution}
 	
@@ -384,7 +278,9 @@
 \end{solution}
 \myspace{1}
 
-2. 设$f(x)=\dfrac{1}{1+3x+9x^2}$,求$f^{(100)}(0)$
+\hl{\textbf{\textit{July 6}}}
+
+1. 设$f(x)=\dfrac{1}{1+3x+9x^2}$,求$f^{(100)}(0)$
 \myspace{1}
 \begin{solution}
 	
@@ -408,9 +304,7 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 7}}}
-
-1.如果$\lim\limits_{x\rightarrow 0}\dfrac{ax^2+bx+1-e^{x^2-2x}}{x^2}=2$,求$a,b$
+2. 如果$\lim\limits_{x\rightarrow 0}\dfrac{ax^2+bx+1-e^{x^2-2x}}{x^2}=2$,求$a,b$
 \myspace{1}
 \begin{solution}
 	
@@ -435,7 +329,9 @@
 \end{solution}
 \myspace{1}
 
-2. 求极限$\lim\limits_{x\rightarrow 0}\dfrac{n!x^n-\sin x\sin 2x\cdots\sin nx}{x^{n+2}}$
+\hl{\textbf{\textit{July 7}}}
+
+1. 求极限$\lim\limits_{x\rightarrow 0}\dfrac{n!x^n-\sin x\sin 2x\cdots\sin nx}{x^{n+2}}$
 \myspace{1}
 \begin{solution}
 	
@@ -453,11 +349,7 @@
 \end{solution}
 \myspace{1}
 
-\section{Week \Rmnum{2}}
-
-\hl{\textbf{\textit{July 8}}}
-
-1.若$\lim\limits_{x\rightarrow 0}\left(\dfrac{\ln(x+\sqrt{x^2+1})+ax^2+bx^3}{x} \right)^{\frac{1}{x^2}}=e^2$,求$a,b$
+2. 若$\lim\limits_{x\rightarrow 0}\left(\dfrac{\ln(x+\sqrt{x^2+1})+ax^2+bx^3}{x} \right)^{\frac{1}{x^2}}=e^2$,求$a,b$
 \myspace{1}
 \begin{solution}
 	
@@ -493,7 +385,11 @@
 \end{anymark}
 \myspace{1}
 
-2. 设$n$阶矩阵$A,B$满足$AB+aA+bB+cE=O$,其中$ab\neq c$,证明: 
+\section{Week \Rmnum{2}}
+
+\hl{\textbf{\textit{July 8}}}
+
+1. 设$n$阶矩阵$A,B$满足$AB+aA+bB+cE=O$,其中$ab\neq c$,证明: 
 
 (1). $A+bE$与$B+aE$均为可逆矩阵 
 
@@ -526,9 +422,7 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 9}}}
-
-1.已知常数$a>0,\ bc\neq 0$,使得$\lim\limits_{x\rightarrow+\infty}[x^a\ln(1+\frac{x}{b})-x]=c$,求$a,b,c$
+2. 已知常数$a>0,\ bc\neq 0$,使得$\lim\limits_{x\rightarrow+\infty}[x^a\ln(1+\frac{x}{b})-x]=c$,求$a,b,c$
 \myspace{1}
 \begin{solution}
 	
@@ -555,7 +449,9 @@
 \end{solution}
 \myspace{1}
 
-2. 求极限
+\hl{\textbf{\textit{July 9}}}
+
+1. 求极限
 $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\dfrac{\sin y}{y}dy+\int_{\frac{1}{3}}^{\frac{3}{6n}}\dfrac{\sin y}{y}dy+\cdots+\int_{\frac{1}{3}}^{\frac{(2n-1)}{6n}}\dfrac{\sin y}{y}dy \right]$$
 \myspace{1}
 \begin{solution}
@@ -572,9 +468,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 10}}}
-
-1. 设$A$为$n$阶反对称矩阵,证明: 对于任意向量$x$,均有$x^{T}(A+E)x\geq 0$.
+2. 设 $A$ 为 $n$ 阶反对称矩阵, 证明: 对于任意向量 $x$,均有 $x^{T}(A+E)x\geq 0$
 \myspace{1}
 \begin{solution}
 	
@@ -584,7 +478,9 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-2. $s>0$,证明: $\dfrac{n^{s+1}}{s+1}<1^s+2^s+\cdots+n^s<\dfrac{(n+1)^{s+1}}{s+1}$
+\hl{\textbf{\textit{July 10}}}
+
+1. $s>0$,证明: $\dfrac{n^{s+1}}{s+1}<1^s+2^s+\cdots+n^s<\dfrac{(n+1)^{s+1}}{s+1}$
 \myspace{1}
 \begin{figure}[H]
 	\centering
@@ -664,7 +560,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-3. 求极限$\lim\limits_{n\rightarrow +\infty}\dfrac{1^{p+1}+2^{p+1}+\cdots+n^{p+1}}{n(1^p+2^p+\cdots+n^p)}(p>0)$
+2. 求极限$\lim\limits_{n\rightarrow +\infty}\dfrac{1^{p+1}+2^{p+1}+\cdots+n^{p+1}}{n(1^p+2^p+\cdots+n^p)}(p>0)$
 \myspace{1}
 \begin{solution}
 	
@@ -799,7 +695,9 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-3.设$A$是任意的$m\times n$矩阵,证明: $\text{方程组}A^{T}Ax=A^{T}b$一定有解.
+\hl{\textbf{\textit{July 12}}}
+
+1. 设$A$是任意的$m\times n$矩阵,证明: $\text{方程组}A^{T}Ax=A^{T}b$一定有解.
 \myspace{1}
 \begin{solution}
 	
@@ -822,10 +720,9 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 	
 	原方程组一定有解.
 \end{solution}
+\myspace{1}
 
-\hl{\textbf{\textit{July 12}}}
-
-1. 设$A$为$3$阶实对称矩阵,$B=\left( \begin{matrix}
+2. 设$A$为$3$阶实对称矩阵,$B=\left( \begin{matrix}
 	3&0&0\\0&1&1\\0&0&1
 \end{matrix}\right) $,$\alpha=(1,0,1)^{T}$是矩阵$A$特征值$3$的一个特征向量,若$r(3E-A)>1$,且$A^2-4E+3E=0$,下列选项错误的是: 
 \begin{itemize}
@@ -847,7 +744,9 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-2. 求$f(x)=\sqrt{4x^2+x}\ln(2+\dfrac{1}{x})$的斜渐近线.
+\hl{\textbf{\textit{July 13}}}
+
+1. 求$f(x)=\sqrt{4x^2+x}\ln(2+\dfrac{1}{x})$的斜渐近线.
 \myspace{1}
 \begin{solution}
 	
@@ -901,9 +800,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 13}}}
-
-1. 当$x\rightarrow 0$时,下列无穷小量最高阶的是: 
+2. 当$x\rightarrow 0$时,下列无穷小量最高阶的是: 
 \begin{itemize}
 	\item A. $(1+x)^{x^2}-1$
 	\item B. $e^{x^4-2x}-1$
@@ -923,7 +820,9 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-2. 求曲线$y=\sqrt{x^4-3x^3+4}$在$x\rightarrow +\infty$方向的渐进二次曲线.
+\hl{\textbf{\textit{July 14}}}
+
+1. 求曲线$y=\sqrt{x^4-3x^3+4}$在$x\rightarrow +\infty$方向的渐进二次曲线.
 \myspace{1}
 \begin{solution}
 	\begin{eqnarray*}
@@ -936,9 +835,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 14}}}
-
-1. 设$\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$是$n$个$n$维列向量,证明: $\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$线性无关的充要条件为: $$\left| \begin{matrix}
+2. 设$\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$是$n$个$n$维列向量,证明: $\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$线性无关的充要条件为: $$\left| \begin{matrix}
 	\alpha_{1}^{T}\alpha_{1}&\alpha_{1}^{T}\alpha_{2}&\cdots&\alpha_{1}^{T}\alpha_{n}\\\alpha_{2}^{T}\alpha_{1}&\alpha_{2}^{T}\alpha_{2}&\cdots&\alpha_{2}^{T}\alpha_{n}\\\vdots&\vdots& &\vdots\\\alpha_{n}^{T}\alpha_{1}&\alpha_{n}^{T}\alpha_{2}&\cdots&\alpha_{n}^{T}\alpha_{n}
 \end{matrix}\right|\neq 0$$
 \myspace{1}
@@ -957,7 +854,11 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-2. 当$x\rightarrow 0^{+}$时,下列无穷小量中最高阶的是: 
+\section{Week \Rmnum{3}}
+
+\hl{\textbf{\textit{July 15}}}
+
+1. 当$x\rightarrow 0^{+}$时,下列无穷小量中最高阶的是: 
 \begin{itemize}
 	\item A. $\int_{0}^{1-\cos x}\dfrac{\sin t}{t}dt$
 	\item B. $\int_{0}^{x}t\tan \sqrt{x^2-t^2}dt$
@@ -987,11 +888,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\section{Week \Rmnum{3}}
-
-\hl{\textbf{\textit{July 15}}}
-
-1. 求级数$\sum\limits_{n=1}^{+\infty}\dfrac{(-1)^n}{(2n-1)(2n+1)}$的和.
+2. 求级数$\sum\limits_{n=1}^{+\infty}\dfrac{(-1)^n}{(2n-1)(2n+1)}$的和.
 \myspace{1}
 \begin{solution}
 	
@@ -1050,7 +947,11 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 		\item $1+\dfrac{1}{2^2}+\dfrac{1}{3^2}+\cdots+\dfrac{1}{n^2}+\cdots=\sum\limits_{n=0}^{+\infty}\dfrac{1}{n^2}=\dfrac{\pi^2}{6}$
 	\end{itemize}
 \end{anymark}
-2. 设$A=(a_{ij})_{3\times 3}$,$A$的每行元素之和为$a$,且$|A|=b$,将$A$中的每个元素加$k$得到矩阵$B=(a_{ij}+k)_{3\times 3}$,求$|B|$
+\myspace{1}
+
+\hl{\textbf{\textit{July 16}}}
+
+1. 设$A=(a_{ij})_{3\times 3}$,$A$的每行元素之和为$a$,且$|A|=b$,将$A$中的每个元素加$k$得到矩阵$B=(a_{ij}+k)_{3\times 3}$,求$|B|$
 \myspace{1}
 \begin{solution}
 	
@@ -1072,7 +973,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-3. 求$\sum\limits_{n=0}^{+\infty}\dfrac{(-1)^n(n^2-n+1)}{2^n}$的和.
+2. 求$\sum\limits_{n=0}^{+\infty}\dfrac{(-1)^n(n^2-n+1)}{2^n}$的和.
 \myspace{1}
 \begin{solution}
 	
@@ -1101,7 +1002,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 16}}}
+\hl{\textbf{\textit{July 17}}}
 
 1. 设$A$是$3$阶矩阵,且满足$|A-2E|=|A-3E|=|A-4E|=3$,求$|A-E|$
 \myspace{1}
@@ -1140,7 +1041,9 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-3.证明: $\sum\limits_{n=1}^{+\infty}\dfrac{1+\frac{1}{2}+\cdots+\frac{1}{n}}{(n+1)(n+2)}$收敛,并求其和.
+\hl{\textbf{\textit{July 18}}}
+
+1. 证明: $\sum\limits_{n=1}^{+\infty}\dfrac{1+\frac{1}{2}+\cdots+\frac{1}{n}}{(n+1)(n+2)}$收敛,并求其和.
 \myspace{1}
 \begin{solution}
 	
@@ -1160,9 +1063,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 17}}}
-
-1. 当$x\rightarrow 0$时,$2\arctan x-\ln\dfrac{1+x}{1-x}$是$x$的$n$阶无穷小,求$n$.
+2. 当$x\rightarrow 0$时,$2\arctan x-\ln\dfrac{1+x}{1-x}$是$x$的$n$阶无穷小,求$n$.
 \myspace{1}
 \begin{solution}
 	
@@ -1184,7 +1085,9 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-2. 关于函数$f(x,y)=\left\lbrace
+\hl{\textbf{\textit{July 19}}}
+
+1. 关于函数$f(x,y)=\left\lbrace
 \begin{array}{l}
 	xy,\ xy\neq 0\\x,\ y=0\\y,\ x=0
 \end{array}
@@ -1216,7 +1119,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-3. 求$\sum\limits_{n=0}^{+\infty}\dfrac{(2n)!!}{(2n+1)!!}\dfrac{x^{2n+2}}{n+1}$的和函数$S(x)$
+2. 求$\sum\limits_{n=0}^{+\infty}\dfrac{(2n)!!}{(2n+1)!!}\dfrac{x^{2n+2}}{n+1}$的和函数$S(x)$
 \myspace{1}
 \begin{solution}
 	
@@ -1260,7 +1163,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 18}}}
+\hl{\textbf{\textit{July 20}}}
 
 1. 当$x\rightarrow 0^{+}$时,$(1+x)^{\frac{1}{x}}-(e+ax+bx^2)$是比$x^2$高阶的无穷小,求$a,b$
 \myspace{1}
@@ -1312,7 +1215,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 19}}}
+\hl{\textbf{\textit{July 21}}}
 
 1. 设函数$f(x)=\dfrac{\sin x}{1+x^2}$在$x=0$处的$3$次泰勒多项式为$ax+bx^2+cx^3$,求$a,b,c$
 \myspace{1}
@@ -1354,7 +1257,8 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 20}}}
+\section{Week \Rmnum{4}}
+\hl{\textbf{\textit{July 22}}}
 
 1. 设函数$f(x)=\sec x$在$x=0$处的$2$次泰勒多项式为$1+ax+bx^2$,求$a,b$
 \myspace{1}
@@ -1399,9 +1303,8 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 	综上所述,我们得到: $\exists \xi\in[-1,1],\ s.t. \int_{-1}^{1}xf(x)dx=\dfrac{2f'(\xi)+\xi f''(\xi)}{3}$
 \end{solution}
 \myspace{1}
-\section{Week \Rmnum{4}}
 
-\hl{\textbf{\textit{July 21}}}
+\hl{\textbf{\textit{July 23}}}
 
 1.函数$f(x)=\dfrac{(x+1)|x-1|}{e^{\frac{1}{x-2}}\ln|x|}$的可去间断点个数.
 \myspace{1}
@@ -1437,9 +1340,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution} 
 \myspace{1}
 
-\hl{\textbf{\textit{July 22}}}
-
-1. 设$f(x)$和$\varphi(x)$在$(-\infty,+\infty)$内有定义,$f(x)$为连续函数,$\varphi(x)$有间断点,下列命题正确的是: 
+2. 设$f(x)$和$\varphi(x)$在$(-\infty,+\infty)$内有定义,$f(x)$为连续函数,$\varphi(x)$有间断点,下列命题正确的是: 
 \begin{itemize}
 	\item A. $f(x)[|\varphi(x)|+\varphi^2(x)]$必有间断点
 	\item \hl{B}. 若$f(x)$单调,则$\dfrac{\varphi(x)}{|f(x)|}$必有间断点
@@ -1461,7 +1362,9 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-2. 设$\lambda_{1},\lambda_{2},\cdots,\lambda_{m}$是$n$阶矩阵$A$的$m$个两两互异的特征值$(m\leq n)$,对应的特征向量分别为$\xi_{1},\xi_{2},\cdots,\xi_{m}$,令$\eta=\sum\limits_{k=1}^{m}\xi_{k}$,证明: $$\eta,A\eta,A^2\eta,\cdots,A^{m-1}\eta\text{线性无关}$$
+\hl{\textbf{\textit{July 24}}}
+
+1. 设$\lambda_{1},\lambda_{2},\cdots,\lambda_{m}$是$n$阶矩阵$A$的$m$个两两互异的特征值$(m\leq n)$,对应的特征向量分别为$\xi_{1},\xi_{2},\cdots,\xi_{m}$,令$\eta=\sum\limits_{k=1}^{m}\xi_{k}$,证明: $$\eta,A\eta,A^2\eta,\cdots,A^{m-1}\eta\text{线性无关}$$
 \myspace{1}
 \begin{solution}
 	
@@ -1498,9 +1401,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 23}}}
-
-1. 设$f(x)=\lim\limits_{n\rightarrow+\infty}\dfrac{x^{n+2}}{\sqrt{2^{2n}+x^{2n}}}$,则$f(x)$在其定义域内: 
+2. 设$f(x)=\lim\limits_{n\rightarrow+\infty}\dfrac{x^{n+2}}{\sqrt{2^{2n}+x^{2n}}}$,则$f(x)$在其定义域内: 
 \begin{itemize}
 	\item A. 连续
 	\item B. 有$1$个可去间断点
@@ -1521,7 +1422,9 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-2. 求积分$\int_{0}^{1}dx\int_{0}^{\sqrt{x}}(\dfrac{e^x}{x}-\dfrac{e^{y^2}}{\sqrt{x}})dy$
+\hl{\textbf{\textit{July 25}}}
+
+1. 求积分$\int_{0}^{1}dx\int_{0}^{\sqrt{x}}(\dfrac{e^x}{x}-\dfrac{e^{y^2}}{\sqrt{x}})dy$
 \myspace{1}
 \begin{solution}
 	
@@ -1534,9 +1437,8 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 	\end{eqnarray*}
 \end{solution}
 \myspace{1}
-\hl{\textbf{\textit{July 24}}}
 
-1. 设$f(x)=\lim\limits_{n\rightarrow +\infty}\dfrac{x^{n+2}-x^{-n}}{x^n+x^{-n}}$,则函数$f(x)$: 
+2. 设$f(x)=\lim\limits_{n\rightarrow +\infty}\dfrac{x^{n+2}-x^{-n}}{x^n+x^{-n}}$,则函数$f(x)$: 
 \begin{itemize}
 	\item A. 仅有$1$个间断点
 	\item B. 仅有$2$个间断点,其中$1$个可去,$1$个无穷
@@ -1559,7 +1461,9 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-2. $\int_{0}^{1}\dfrac{x^b-x^a}{\ln x}dx$
+\hl{\textbf{\textit{July 26}}}
+
+1. $\int_{0}^{1}\dfrac{x^b-x^a}{\ln x}dx$
 \myspace{1}
 \begin{solution}
 	
@@ -1574,7 +1478,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-3. $\int_{0}^{1}\sin (\ln\dfrac{1}{x})\dfrac{x^b-x^a}{\ln x}dx$
+2. $\int_{0}^{1}\sin (\ln\dfrac{1}{x})\dfrac{x^b-x^a}{\ln x}dx$
 \myspace{1}
 \begin{solution}
 	
@@ -1593,7 +1497,8 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 	\end{eqnarray*}
 \end{solution}
 \myspace{1}
-\hl{\textbf{\textit{July 25}}}
+
+\hl{\textbf{\textit{July 27}}}
 
 1. 设$f(x)$在$x=1$处连续,且$\dfrac{f(x)-2x}{e^{x-1}-1}-\dfrac{1}{\ln x}$在$x=1$的某去心邻域有界,求$f(1)$
 \myspace{1}
@@ -1676,7 +1581,8 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 		综上所述,二次型$f=x^{T}Ax$的标准型为$f=\dfrac{3}{4}y_{1}^2-\dfrac{1}{4}y_{2}^{2}$.
 	\end{solution}
 \end{anymark}
-\hl{\textbf{\textit{July 26}}}
+
+\hl{\textbf{\textit{July 28}}}
 
 1. 已知函数$f(x)=\dfrac{(x^2+a^2)(x-1)}{e^{\frac{1}{x}}+b}$在$(-\infty,+\infty)$上有一个可去间断点和一个跳跃间断点,求$a,b$
 \myspace{1}
@@ -1717,7 +1623,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 27}}}
+\hl{\textbf{\textit{July 29}}}
 
 1. 函数$f(x)=\left\lbrace
 \begin{array}{l}
@@ -1764,7 +1670,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 28}}}
+\hl{\textbf{\textit{July 30}}}
 
 1. 下列函数在$x=0$处不可导的是: 
 \begin{itemize}
@@ -1833,7 +1739,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 29}}}
+\hl{\textbf{\textit{July 31}}}
 
 1. 已知$f(x)$在$x=0$的某邻域内有定义,且$\lim\limits_{x\rightarrow 0}\varphi(x)=0$,则$\lim\limits_{x\rightarrow 0}\dfrac{f[\varphi(x)]-f(0)}{\varphi(x)}$存在和$f(x)$在$x=0$处可导之间关系
 \myspace{1}
@@ -1873,106 +1779,3 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 	我们不妨记$A=\int_{0}^{1}f(x)dx$,我们可以得到: 
 	$$A=1+\dfrac{\lambda}{2}A^2\text{在}\mathbb{R}\text{上有实数根}\Rightarrow 1-2\lambda\geq 0\Rightarrow \lambda\leq \dfrac{1}{2}$$
 \end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{July 30}}}
-
-1. 已知$f(x)$为奇函数,则$f_{+}'(0)$存在和$f(x)$在$x=0$处可导关系
-\myspace{1}
-\begin{solution}
-	
-	(1). 充分性
-	
-	$$\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)-f(0)}{x}=A\Rightarrow \lim\limits_{x\rightarrow 0^{+}}f(x)=0$$
-	
-	我们可以得到: 
-	$$\lim\limits_{x\rightarrow 0^{-}}\dfrac{f(x)-f(0)}{x}=\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(-x)-f(0)}{-x}=\lim\limits_{x\rightarrow 0^{+}}\dfrac{-f(x)-f(0)}{-x}=A$$
-	
-	我们得到: $$\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)-f(0)}{x}=\lim\limits_{x\rightarrow 0^{-}}\dfrac{f(x)-f(0)}{x}=A$$
-	
-	充分性成立
-	
-	(2). 必要性
-	
-	$$f(x)\text{在}x=0\text{处可导}\Rightarrow \lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)-f(0)}{x}=\lim\limits_{x\rightarrow 0^{-}}\dfrac{f(x)-f(0)}{x}=A$$
-	
-	必要性成立
-	
-	综上所述,$f_{+}'(0)$存在是$f(x)$在$x=0$处可导的充要条件.
-\end{solution} 
-\myspace{1}
-
-2. 求$\int_{0}^{1}dx\int_{1-x}^{2-x}e^{(x+y)^2}(\sin^2x+\cos^2y)dy+\int_{1}^{2}dx\int_{0}^{2-x}e^{(x+y)^2}(\sin^2x+\cos^2y)dy$
-\myspace{1}
-\begin{solution}
-	
-	我们画出二重积分的积分区域,不难发现积分区域关于直线$y=x$对称,原二重积分等价于: 
-	$$I=\int_{0}^{1}dx\int_{1-x}^{2-x}e^{(y+x)^2}(\sin^2y+\cos^2x)dy+\int_{1}^{2}dx\int_{0}^{2-x}e^{(y+x)^2}(\sin^2y+\cos^2x)dy$$
-	
-	我们得到: 
-	\begin{eqnarray*}
-		2I&=&\int_{0}^{1}dx\int_{1-x}^{2-x}2e^{(x+y)^2}dy+\int_{1}^{2}dx\int_{0}^{2-x}2e^{(x+y)^2}dy\\
-		&=&\int_{0}^{\frac{\pi}{2}}d\theta\int_{\frac{1}{\sin\theta+\cos\theta}}^{\frac{2}{\sin\theta+\cos\theta}}2re^{r^2(1+\sin 2\theta)}dr\\
-		&=&\int_{0}^{\frac{\pi}{2}}\dfrac{e^4-e}{1+\sin2\theta}d\theta\\
-		I&=&\dfrac{e^4-e}{2}\int_{0}^{\frac{\pi}{2}}\dfrac{\frac{1}{\cos^2\theta}}{(1+\tan\theta)^2}d\theta\\
-		&=&\dfrac{e^4-e}{2}\int_{0}^{+\infty}\dfrac{1}{(1+x)^2}dx\\
-		&=&\dfrac{e^4-4}{2}
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{July 31}}}
-
-1.已知函数$f(x)$在$x=x_{0}$的邻域内可导,则$f'(x_{0})>0$是$f(x)$在$x=x_{0}$的某邻域内单调递增之间关系
-\myspace{1}
-\begin{solution}
-	
-	(1). 充分性
-	$$\lim\limits_{x\rightarrow x_{0}}\dfrac{f(x)-f(x_{0})}{x-x_{0}}=A>0$$
-	
-	我们可以得出,$x\in(x_{0}-\delta,x_{0}),f(x)<f(x_{0})$;$x\in(x_{0},x_{0}+\delta),f(x)>f(x_{0})$,并不能得出函数的单调性.
-	
-	(2). 必要性
-	
-	$f(x)$在某邻域内单调递增,我们只能得出$f'(x_{0})\geq 0$
-	
-	综上所述,$f'(x_{0})>0$是$f(x)$在$x=x_{0}$的某邻域内单调递增的既不充分也不必要条件.
-\end{solution}
-\myspace{1}
-
-2. $I_{n}=\int_{1}^{+\infty}\dfrac{\sqrt{t-1}}{t^n}dt\ (n\geq 2)$,求$\lim\limits_{n\rightarrow+\infty}\dfrac{I_{n+1}}{I_{n}}$
-\myspace{1}
-\begin{solution}
-	
-	我们令$t=\dfrac{1}{\cos^2 x},\ x\in(0,\dfrac{\pi}{2}),\ dt=\dfrac{2\sin x}{\cos^3 x}$,我们可以得到: 
-	\begin{eqnarray*}
-		I_{n}&=&\int_{0}^{\frac{\pi}{2}}\dfrac{\sin x}{\cos x}\cos^{2n}x\dfrac{2\sin x}{\cos^3 x}dx\\
-		&=&2\int_{0}^{\frac{\pi}{2}}\cos^{2n-4}xdx-2\int_{0}^{\frac{\pi}{2}}\cos^{2n-2}xdx
-	\end{eqnarray*}
-	由此我们可以得到: 
-	$$\left\lbrace
-	\begin{array}{l}
-		I_{n+1}=2\int_{0}^{\frac{\pi}{2}}\cos^{2n-2}xdx-2\int_{0}^{\frac{\pi}{2}}\cos^{2n}xdx\\
-		I_{n}=2\int_{0}^{\frac{\pi}{2}}\cos^{2n-4}xdx-2\int_{0}^{\frac{\pi}{2}}\cos^{2n-2}xdx
-	\end{array}
-	\right. $$
-	
-	我们得到: 
-	$$\dfrac{I_{n+1}}{I_{n}}=\dfrac{\int_{0}^{\frac{\pi}{2}}\cos^{2n-2}xdx-\int_{0}^{\frac{\pi}{2}}\cos^{2n}xdx}{\int_{0}^{\frac{\pi}{2}}\cos^{2n-4}xdx-\int_{0}^{\frac{\pi}{2}}\cos^{2n-2}xdx}$$
-	
-	我们计算: 
-	\begin{eqnarray*}
-		J_{2n}&=&\int_{0}^{\frac{\pi}{2}}\cos^{2n}xdx\\
-		&=&\int_{0}^{\frac{\pi}{2}}\cos^{2n-1}xd\sin x\\
-		&=&(2n-1)\int_{0}^{\frac{\pi}{2}}\sin^{2} x\cos^{2n-2}xdx\\
-		&=&(2n-1)\int_{0}^{\frac{\pi}{2}}\cos^{2n-2}xdx-(2n-1)\int_{0}^{\frac{\pi}{2}}\cos^{2n}xdx\\
-		&=&(2n-1)J_{2n-2}-(2n-1)J_{2n}\\
-		J_{2n}&=&\dfrac{2n-2}{2n}J_{2n-2}
-	\end{eqnarray*}
-
-	我们得到: 
-	$$\dfrac{I_{n+1}}{I_{n}}=\dfrac{J_{2n-2}-J_{2n}}{J_{2n-4}-J_{2n-2}}=\dfrac{\frac{2}{2n}J_{2n-2}}{\frac{2}{2n-2}J_{2n-4}}=\dfrac{n-1}{n}\dfrac{2n-4}{2n-2}=\dfrac{n-2}{n}$$
-	
-	$$\lim\limits_{n\rightarrow+\infty}\dfrac{I_{n+1}}{I_{n}}=\lim\limits_{n\rightarrow+\infty}\dfrac{n-2}{n}=1$$
-\end{solution}
-\myspace{1}

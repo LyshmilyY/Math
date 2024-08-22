@@ -506,6 +506,140 @@
 	综上所述,$f(x)$在区间$(a,b)$内有最大值.
 \end{solution}
 
+\begin{lemma}[不单调数列极限]
+	(1). 夹逼准则: 从定义出发, 证明: $|x_{n}-a|$ 极限为 $0$
+	
+	(2). 构造无穷级数: $\sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n})$, 证明这个级数收敛即可证明出数列 $\{x_{n}\}$ 极限存在
+	
+	(3). 奇数项和偶数项极限存在且相等: $\lim\limits_{n\to\infty}x_{2n}=\lim\limits_{n\to\infty}x_{2n-1}=A$
+\end{lemma}
+
+\begin{proposition}
+	设$2x_{1}=1,2x_{n+1}=1-x_{n}^2,\ n=1,2,\cdots$,证明数列$\{x_{n}\}$收敛,
+	并求极限$\lim\limits_{n\rightarrow +\infty}x_{n}$
+\end{proposition}
+\begin{solution}
+	
+	我们有: $x_{1}=\dfrac{1}{2},x_{n+1}=\dfrac{1}{2}-\dfrac{x_{n}^2}{2}\Rightarrow x_{n}\in(0,\dfrac{1}{2})$
+	
+	我们发现数列$\{x_{n}\}$不单调,不能使用单调有界准则来判断.
+	\begin{anymark}[方法一]
+
+		使用夹逼定理, 先假定极限存在求出后证明: 
+
+		不妨设 $\lim\limits_{n\rightarrow\infty}x_{n}=A(A>0)$,
+		我们对 $2x_{n+1}=1-x_{n}^2$ 两边同时取极限得到: 
+	    
+		$$2A=1-A^2\Rightarrow A=\sqrt{2}-1$$
+		
+		$$a=\sqrt{2}-1\Rightarrow a=\dfrac{1-a^2}{2}$$
+		
+		\begin{eqnarray*}
+			|x_{n}-a| & = & |\dfrac{1-x_{n}^2}{2}-\dfrac{1-a^2}{2}|\\
+					  & = & |\dfrac{x_{x_{n-1}^2-a^2}}{2}|\\
+					  & \leq & \dfrac{\sqrt{2}-\frac{1}{2}}{2}|x_{n-1}-a|\\
+					  & \leq & \cdots\\
+					  & \leq & (\dfrac{\sqrt{2}-\frac{1}{2}}{2})^{n-1}|x_{1}-a|
+		\end{eqnarray*}
+		
+		$$\lim\limits_{n\to \infty} 0 = \lim\limits_{n\to \infty}(\dfrac{\sqrt{2}-\frac{1}{2}}{2})^{n-1}=0$$
+		
+		由夹逼定理: $\lim\limits_{n\to \infty}|x_{n}-a|=0$
+	\end{anymark}
+	\begin{anymark}[方法二]
+
+		构造无穷级数$\sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n})$,证明此级数收敛.
+		
+		\begin{eqnarray*}
+			|a_{n+1}-a_{n}| & = & |\dfrac{a_{n-1}^2-a_{n}^2}{2}|\\
+					  		& \leq & \dfrac{1}{2}|a_{n}-a_{n-1}|\\
+					  		& \leq & \cdots\\
+					  		& \leq & \dfrac{1}{2^{n-1}}|a_{2}-a_{1}|
+		\end{eqnarray*}
+		
+		我们知道级数 $\sum\limits_{n=1}^{+\infty}\dfrac{1}{2^{n-1}}$ 收敛, 
+		由比较判别法我们知道级数 $\sum\limits_{n=1}^{+\infty}|x_{n+1}-x_{n}|$ 收敛,
+		级数 $\sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n})$ 收敛
+		
+		我们得到: 
+		$$\lim\limits_{n\rightarrow \infty}x_{n+1}-x_{1}\text{存在}\Rightarrow \text{数列}\{x_{n}\}\text{极限存在}$$
+	\end{anymark}
+	\begin{anymark}[方法三]
+
+		用奇数项和偶数项极限相等推出数列 $\{x_{n}\}$ 极限存在
+		
+		我们可以证明奇数项和偶数项单调递减, 且有下界, 奇数项和偶数项的极限必定存在
+		
+		我们不妨设: $\lim\limits_{n\rightarrow\infty}x_{2n}=A,\lim\limits_{n\rightarrow\infty}x_{2n-1}=B$
+		
+		我们有: 
+		$$\begin{cases}
+			2A=1-B^2\\
+			2B=1-A^2
+		\end{cases}\Rightarrow A=B=\sqrt{2}-1$$
+	\end{anymark}
+\end{solution}
+
+\begin{proposition}
+	设 $x_{1}=1,x_{n}=1+\dfrac{1}{1+x_{n-1}},(n=1,2,\cdots)$,证明极限 $\lim\limits_{n\rightarrow\infty}x_{n}$ 存在并求出此极限
+\end{proposition}
+\begin{solution}
+	
+	我们发现: $x_{1}=1,x_{2}=\dfrac{3}{2},x_{3}=\dfrac{7}{5},x_{4}=\dfrac{17}{12}\Rightarrow x_{1}<x_{3},x_{2}>x_{4}$
+	
+	我们发现$x_{n}$不单调,我们考虑数列$\{x_{n}\}$的奇数项和偶数项.
+	
+	我们不妨假设$x_{2k-1}<x_{2k+1},x_{2k}>x_{2k+2}$
+	
+	我们有: $$x_{2k+3}=1+\dfrac{1}{1+x_{2k+2}}>1+\dfrac{1}{1+x_{2k}}=x_{2k+1}$$
+	$$x_{2k+4}=1+\dfrac{1}{1+x_{2k+3}}<1+\dfrac{1}{1+x_{2k+1}}=x_{2k+2}$$
+	
+	我们得到奇数项单调递增,偶数项单调递减,我们不妨假设: 
+	$$\begin{cases}
+		\lim\limits_{n\to\infty}x_{2n} = A(A>0)\\
+		\lim\limits_{n\to\infty}x_{2n-1}=B(B>0)
+	\end{cases}\Rightarrow 
+	\begin{cases}
+		A=1+\dfrac{1}{1+B}\\
+		B=1+\dfrac{1}{1+A}
+	\end{cases}\Rightarrow A=B=\sqrt{2}$$
+\end{solution}
+
+\begin{proposition}
+	设$x_{1}=1,2x_{n+1}=x_{n}+\sqrt{x_{n}^2+\dfrac{1}{n^2}},(n=1,2,\cdots)$,证明极限数列$\{x_{n}\}$收敛.
+\end{proposition}
+\begin{solution}
+	
+	我们有: $x_{1}=1,x_{n}\geq 1$
+	$$2x_{n+1}=x_{n}+\sqrt{x_{n}^2+\dfrac{1}{n^2}}\Rightarrow x_{n}>0,\text{且}x_{n+1}>x_{n}$$
+	
+	我们不好找出$x_{n}$的上界,我们要证明$x_{n}$收敛,可以转化为证明: 
+	$$\text{级数}\sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n})\text{收敛}$$
+	$$x_{n+1}-x_{n}=\dfrac{\frac{1}{n^2}}{2(\sqrt{x_{n}+\frac{1}{n^2}}+x_{n})}\leq \frac{1}{4n^2}$$
+	
+	级数$\sum\limits_{n=1}^{+\infty}\dfrac{1}{4n^2}$收敛,我们由比较判别法得到原级数收敛.
+	
+	数列$\{x_{n}\}$收敛,极限$\lim\limits_{n\rightarrow\infty}x_{n}$存在.
+\end{solution}
+
+\begin{proposition}
+	设$x_{0}=1,x_{n+1}=\dfrac{1}{x_{n}^3+4},(n=0,1,2,\cdots)$,证明极限$\lim\limits_{n\rightarrow\infty}x_{n}$存在并求出此极限
+\end{proposition}
+\begin{solution}
+	
+	我们有: $x_{1}=\dfrac{1}{5},x_{2}=\dfrac{125}{601},x_{n}\in(0,1)$
+	
+	$$|x_{n+1}-x_{n}|=\dfrac{1}{x_{n}^3+4}-\dfrac{1}{x_{n-1}^3+4}=\dfrac{|x_{n}-x_{n-1}^3|}{(x_{n}^3+4)(x_{n-1}^3+4)}\leq \dfrac{3}{16}|x_{n}-x_{n-1}|\leq \cdots\leq (\dfrac{3}{16})^{n}|x_{1}-x_{0}|$$
+	
+	级数$\sum\limits_{n=1}^{+\infty}(\dfrac{3}{16})^{n}$收敛,根据比较判别法,我们得到: 
+	$$\text{级数}\sum\limits_{n=1}^{+\infty}(x_{n}-x_{n-1})\text{收敛}\Rightarrow \lim\limits_{n\rightarrow\infty}x_{n}-x_{0}\text{存在}$$
+	
+	我们不妨设$\lim\limits_{n\rightarrow\infty}x_{n}=A(A>0)$,我们有: 
+	$$A=\dfrac{1}{A^3+4}\Rightarrow A^4+4A-1=0$$
+	
+	$A$是方程$x^4+4x-1=0$的唯一正根.
+\end{solution}
+\myspace{1}
 
 \chapterimage{chap3.jpg}
 \chapter{函数极限和连续}
@@ -575,7 +709,7 @@
 	\end{enumerate}
 \end{corollary}
 \begin{theorem}[洛必达法则]
-	设函数 $f(x)$ 和 $g(x)$ 都在 $x=a$ 的某邻域内可导($a$ 可以为 $\infty$, 邻域也可以是单侧的), 且 $g'(a)\neq 0$, 满足:(1) 或 (2)
+	设函数 $f(x)$ 和 $g(x)$ 都在 $x=a$ 的某去心邻域内可导($a$ 可以为 $\infty$, 邻域也可以是单侧的), 且 $g'(a)\neq 0$, 满足:(1) 或 (2)
 
 	(1). $\dfrac{0}{0}$: $\lim\limits_{x\to a}f(x)=\lim\limits_{x\to a}g(x)=0$
 

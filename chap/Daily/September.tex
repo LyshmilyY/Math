@@ -3,7 +3,1694 @@
 \section{Week \Rmnum{1}}
 \hl{\textbf{\textit{September 1}}}
 
-1. 设$f(x)$在$[0,1]$上二阶可导,且$\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)}{x}=2$,$\int_{0}^{1}f(x)dx=1$.
+1. 求曲线$y=\dfrac{x^{1+x}}{(1+x)^x}(x>0)$的斜渐近线方程
+\myspace{1}
+\begin{solution}
+
+	我们不妨设曲线的斜渐近线方程为:  $y=ax+b$,我们可以得到:  
+	
+	$$\left\lbrace
+	\begin{array}{l}
+		a=\lim\limits_{x\rightarrow +\infty}\dfrac{f(x)}{x}=e^{\lim\limits_{t\rightarrow 0}-\frac{\ln(t+1)}{t}}=e^{-1}\\
+		b=\lim\limits_{x\rightarrow +\infty}[f(x)-ax]=\dfrac{1}{2e}
+	\end{array}
+	\right. $$
+	
+	综上所述,曲线的斜渐近线方程为:  $y=\frac{x}{e}+\frac{1}{2e}$
+\end{solution}
+\myspace{1}
+
+2. $\int_{0}^{\frac{\pi}{2}}\ln(\sin x)dx$
+\myspace{1}
+\begin{solution}
+
+	我们利用区间再现公式:  
+	\begin{eqnarray*}
+		I&=&\int_{0}^{\frac{\pi}{2}}\ln(\cos x)dx\\
+		2I&=&\int_{0}^{\frac{\pi}{2}}\ln(\sin x\cos x)dx\\
+		&=&\int_{0}^{\frac{\pi}{2}}\ln(\sin 2x)dx-\int_{0}^{\frac{\pi}{2}}\ln2dx\\
+		&=&\dfrac{1}{2}\int_{0}^{\pi}\ln(\sin x)dx-\dfrac{\pi \ln 2}{2}\\
+		&=&I-\dfrac{\pi \ln 2}{2}\\
+		I&=&\dfrac{\pi \ln 2}{2}
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 2}}}
+
+1. $\int_{0}^{\frac{\pi}{2}}\dfrac{1}{1+\tan^{n}x}dx$
+\myspace{1}
+\begin{solution}
+
+	原定积分等价于:  $\int_{0}^{+\infty}\dfrac{1}{(1+x^{n})(1+x^2)}dx$
+	\begin{eqnarray*}
+		I&=&\int_{0}^{+\infty}\dfrac{1}{(1+x^{n})(1+x^2)}dx\\
+		&=&\int_{0}^{+\infty}\dfrac{x^n}{(1+x^{n})(1+x^2)}dx\\
+		2I&=&\int_{0}^{+\infty}\dfrac{1}{1+x^2}dx\\
+		&=&\dfrac{\pi}{2}\\
+		I&=&\dfrac{\pi}{4}
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
+
+2. 设随即变量$(X,Y)$的联合概率密度为:  $f(x,y)=\left\lbrace
+\begin{array}{l}
+	\dfrac{21}{4}x^2y,\ x^2\leq y\leq 1\\
+	0,\ \text{其他}
+\end{array}
+\right. $,求$P\{Y\geq 0.75|X=0.5\}$
+\myspace{1}
+\begin{solution}
+	
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 3}}}
+
+1. 设$f(x)=\left\lbrace
+\begin{array}{l}
+	\dfrac{g(x)}{x},\ x\neq 0\\
+	0,\ x=0
+\end{array}
+\right. $,其中$g(x)$在$x=0$的一个邻域内有二阶导数,且$g(0)=0$,$g'(0)=0$,则$f(x)$在点$x=0$处
+\begin{itemize}
+	\item A. 不连续
+	\item B. 连续,但$f'(0)$不存在
+	\item C. $f'(0)$存在,但$f'(x)$在$x=0$处不连续
+	\item \hl{D}. $f'(x)$在$x=0$处连续
+\end{itemize}
+\myspace{1}
+\begin{solution}
+
+	(1). $f(x)$在$x=0$处连续性
+	
+	$$\left\lbrace
+	\begin{array}{l}
+		\lim\limits_{x\rightarrow 0}f(x)=\lim\limits_{x\rightarrow 0}\dfrac{g(x)}{x}=\lim\limits_{x\rightarrow 0}g'(x)=0\\
+		f(0)=0
+	\end{array}
+	\right. \Rightarrow f(x)\text{在}x=0\text{处连续}$$
+	
+	(2). $f'(x)$在$x=0$处连续性
+	
+	$$f'(x)=\left\lbrace
+	\begin{array}{l}
+		\dfrac{xg'(x)-g(x)}{x^2},x\neq 0\\
+		f'(0)=\lim\limits_{x\rightarrow 0}\dfrac{f(x)-f(0)}{x}=\lim\limits_{x\rightarrow 0}\dfrac{g(x)}{x^2}=\dfrac{g''(0)}{2}
+	\end{array}
+	\right.$$
+	$$\lim\limits_{x\rightarrow 0}f'(x)=\lim\limits_{x\rightarrow 0}\dfrac{xg'(x)-g(x)}{x^2}=\dfrac{g''(0)}{2}=f'(0)$$
+	
+	综上所述,我们得到$f'(x)$在$x=0$处连续.
+\end{solution}
+\myspace{1}
+
+2. 设$f(x)$在$[0,+\infty)$上连续,$\int_{0}^{+\infty}f^{2}(x)dx$收敛,$a_{n}=\int_{0}^{1}f(nx)dx$,证明:  $k>0\text{时},\sum\limits_{n=1}^{+\infty}\dfrac{a_{n}^2}{n^k}$收敛.
+\myspace{1}
+\begin{solution}
+
+	我们由$a_{n}=\int_{0}^{1}f(nx)dx\Rightarrow a_{n}=\dfrac{1}{n}\int_{0}^{n}f(x)dx$,我们可以得到:  
+	$$\left\lbrace
+	\begin{array}{l}
+		a_{n}^2=\dfrac{[\int_{0}^{n}f(x)dx]^2}{n^2}\leq \dfrac{\int_{0}^{n}[f(x)]^2dx}{n}(\text{积分形式柯西不等式})\\
+		b=\lim\limits_{n\rightarrow+\infty}\int_{0}^{n}[f(x)]^2dx=\int_{0}^{+\infty}f^{2}(x)dx\text{收敛}
+	\end{array}
+	\right. $$
+	
+	我们得到:  $$\dfrac{a_{n}^2}{n^{k}}\leq \dfrac{\int_{0}^{n}[f(x)]^2dx}{n^{1+k}}\leq \dfrac{b}{n^{1+k}}$$
+	
+	我们已知级数$\sum\limits_{n=1}^{+\infty}\dfrac{b}{n^{1+k}}(k>0,b>0)$收敛,我们根据比较判别法可以得到:  级数$\sum\limits_{n=1}^{+\infty}\dfrac{a_{n}^2}{n^k}$收敛
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 4}}}
+
+1. 已知方程$x^5-5x+k=0$有三个不同的实数根,求$k$的取值范围
+\myspace{1}
+\begin{solution}
+
+	我们令$f(x)=x^5-5x+k$,$f'(x)=5x^4-5=5(x^2+1)(x+1)(x-1)$
+	
+	$$\left\lbrace
+	\begin{array}{l}
+		x\in(-\infty,-1)\cup(1,+\infty),\ f'(x)>0\\
+		x\in(-1,1),\ f'(x)<0
+	\end{array}
+	\right. $$
+	
+	我们得到:  $f(x)$在$(-\infty,-1)$上单调递增;$(-1,1)$上单调递减;$(1,+\infty)$上单调递增.
+	
+	我们有:  $\left\lbrace
+	\begin{array}{l}
+		\lim\limits_{x\rightarrow -\infty}f(x)=-\infty\\
+		\lim\limits_{x\rightarrow +\infty}f(x)=+\infty
+	\end{array}
+	\right. $,$f(x)$有三个不同的实数根,我们需要满足:  
+	$$\left\lbrace
+	\begin{array}{l}
+		f(-1)>0\\
+		f(1)<0
+	\end{array}
+	\right. \Rightarrow \left\lbrace
+	\begin{array}{l}
+		k+4>0\\
+		k-4>0
+	\end{array}
+	\right. \Rightarrow k\in(-4,4)$$
+	
+	综上所述,我们得到$k$的取值范围为$(-4,4)$.
+\end{solution}
+\myspace{1}
+
+2. $\int_{0}^{+\infty}\dfrac{1}{(1+x^2)(1+x^n)}dx$
+\myspace{1}
+\begin{solution}
+
+	原定积分可以化为:  
+	\begin{eqnarray*}
+		I&=&\int_{0}^{+\infty}\dfrac{x^n}{(1+x^2)(1+x^n)}dx\\
+		2I&=&\int_{0}^{+\infty}\dfrac{1+x^n}{(1+x^2)(1+x^n)}dx\\
+		&=&\int_{0}^{+\infty}\dfrac{1}{1+x^2}dx\\
+		&=&\dfrac{\pi}{2}\\
+		I&=&\dfrac{\pi}{4}
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 5}}}
+
+1. $\int_{0}^{1}\dfrac{\ln(1+x)}{1+x^2}dx$
+\myspace{1}
+\begin{solution}
+
+	原定积分可以化为:  
+	\begin{eqnarray*}
+		I&=&\int_{0}^{\frac{\pi}{4}}\ln(1+\tan \theta)d\theta\\
+		&=&\int_{0}^{\frac{\pi}{4}}\ln(1+\dfrac{1-\tan\theta}{1+\tan\theta})d\theta\\
+		&=&\int_{0}^{\frac{\pi}{4}}\ln(\dfrac{2}{1+\tan\theta})d\theta\\
+		2I&=&\int_{0}^{\frac{\pi}{4}}\ln2d\theta\\
+		&=&\dfrac{\pi \ln 2}{4}\\
+		I&=&\dfrac{\pi \ln 2}{8}
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
+
+2. 求极限$\lim\limits_{x\rightarrow 0}\int_{\ln(1+x)}^{x}\dfrac{(1-2t)^{\frac{1}{t}}}{t^2}dt$
+\myspace{1}
+\begin{solution}
+
+	我们利用第二积分中值定理可以得到:  
+	$$\lim\limits_{x\rightarrow 0}\dfrac{\xi}{x}=1$$
+	\begin{eqnarray*}
+		I&=&\lim\limits_{x\rightarrow 0}(x-\ln(1+x))\dfrac{(1-2\xi)^{\frac{1}{\xi}}{\xi^2}},\ \xi\in(\ln(1+x),x)\\
+		 &=&\lim\limits_{x\rightarrow 0}\dfrac{x-\ln(1+x)}{\xi^2}\lim\limits_{\xi\rightarrow 0}(1-2\xi)^{\frac{1}{\xi}}\\
+		 &=&\dfrac{e^{-2}}{2}
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 6}}}
+
+1. 已知$f(x)=[x]\sin \pi x$,其中$[x]$表示不超过$x$的最大整数,求$f'(x)$
+\myspace{1}
+\begin{solution}
+
+	(1). 
+	$$x\in(n,n+1),(n\in\mathbb{Z}),\ [x]=n$$
+	
+	我们得到:  $$f'(x)=n\pi\cos(\pi x),\ x\in(n,n+1), \ n\in\mathbb{Z}$$
+	
+	(2). 当$x=n,\ n\in\mathbb{Z}$时,我们利用导数定义可以得到:  
+	$$\left\lbrace
+	\begin{array}{l}
+		\lim\limits_{x\rightarrow n^{+}}\dfrac{n\sin \pi x}{x-n}\\
+		\lim\limits_{x\rightarrow n^{-}}\dfrac{(n-1)\sin \pi x}{x-n}\\
+	\end{array}
+	\right.\Rightarrow f'(n)\text{不存在}$$
+	
+	综上所述,我们得到:  $f'(x)=\left\lbrace
+	\begin{array}{l}
+		[x]\cos \pi x,\ x\neq n,\ n\in\mathbb{Z}\\
+		\text{不存在},\ x=n,\ n\in\mathbb{Z}
+	\end{array}
+	\right. $
+\end{solution}
+\myspace{1}
+
+2. 设函数$f(x)=ax-b\ln x(a>0)$有两个零点,求$\dfrac{b}{a}$的取值范围.
+\myspace{1}
+\begin{solution}
+
+	我们首先得到$f(x)$定义域为$(0,+\infty)$,我们有:  $f'(x)=\dfrac{ax-b}{x}$.
+	
+	(1). 当$b\leq 0$时,$f'(x)>0$,$f(x)$在$(0,+\infty)$上单调递增,至多存在一个零点.
+	
+	(2). 当$b>0$时,令$f'(x)=0\Rightarrow x=\dfrac{b}{a}$.
+	
+	$$\left\lbrace
+	\begin{array}{l}
+		x\in(0,\frac{b}{a}),\ f'(x)<0\\
+		x\in(\frac{b}{a},+\infty),\ f'(x)>0
+	\end{array}
+	\right. \Rightarrow f(x)_{min}=f(\dfrac{b}{a})$$
+	
+	我们有:  $$\left\lbrace
+	\begin{array}{l}
+		\lim\limits_{x\rightarrow 0}f(x)=+\infty\\
+		\lim\limits_{x\rightarrow +\infty}f(x)=+\infty
+	\end{array}
+	\right. $$
+	
+	当且仅当$f(\dfrac{b}{a})<0$时,$f(x)$在$(0,+\infty)$上有两个零点.
+	$$f(\dfrac{b}{a})=b(1-\ln\dfrac{b}{a})<0\Rightarrow \dfrac{b}{a}>e$$
+	
+	综上所述,我们得到$\dfrac{b}{a}$的取值范围为$(e,+\infty)$.
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 7}}}
+
+1. $\int_{0}^{1}\dfrac{x^2}{x+\sqrt{1-x^2}}dx$
+\myspace{1}
+\begin{solution}
+
+	原定积分可以化为:  
+	\begin{eqnarray*}
+		I&=&\int_{0}^{\frac{\pi}{2}}\dfrac{\sin^2\theta\cos\theta}{\sin\theta+\cos\theta}d\theta\\
+		&=&\int_{0}^{\frac{\pi}{2}}\dfrac{\cos^2\theta\sin\theta}{\sin\theta+\cos\theta}d\theta\\
+		2I&=&\int_{0}^{\frac{\pi}{2}}\dfrac{\sin^2\theta\cos\theta+\cos^2\theta\sin\theta}{\sin\theta+\cos\theta}d\theta\\
+		&=&\int_{0}^{\frac{\pi}{2}}\sin\theta\cos\theta d\theta\\
+		&=&\dfrac{1}{2}\\
+		I&=&\dfrac{1}{4}
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
+
+2. $\int_{0}^{1}\dfrac{1}{x+\sqrt{1-x^2}}dx$
+\myspace{1}
+\begin{solution}
+
+	原定积分可以化为:  
+	\begin{eqnarray*}
+		I&=&\int_{0}^{\frac{\pi}{2}}\dfrac{\cos\theta}{\sin\theta+\cos\theta}d\theta\\
+		&=&\int_{0}^{\frac{\pi}{2}}\dfrac{\sin\theta}{\sin\theta+\cos\theta}d\theta\\
+		2I&=&\int_{0}^{\frac{\pi}{2}}1d\theta\\
+		&=&\dfrac{\pi}{2}\\
+		I&=&\dfrac{\pi}{4}
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
+
+\section{Week \Rmnum{2}}
+\hl{\textbf{\textit{September 8}}}
+
+1. 求极限$\lim\limits_{n\rightarrow+\infty}\left[1+\sin\left(\pi\sqrt{1+4n^2} \right) \right]^n$
+\myspace{1}
+\begin{solution}
+
+	原极限可以化为:  
+	\begin{eqnarray*}
+		I&=&\lim\limits_{n\rightarrow+\infty}\left[1+\sin\left(\dfrac{\pi}{\sqrt{1+4n^2}+2n}\right) \right]^n\\
+		&=&e^{\lim\limits_{n\rightarrow+\infty}n\ln\left[1+\sin\left(\dfrac{\pi}{\sqrt{1+4n^2}+2n}\right)\right]}\\
+		&=&e^{\lim\limits_{n\rightarrow+\infty}n\sin\left(\dfrac{\pi}{\sqrt{1+4n^2}+2n}\right)}\\
+		&=&e^{\lim\limits_{n\rightarrow+\infty}\dfrac{\pi n}{\sqrt{1+4n^2}+2n}}\\
+		&=&e^{\frac{\pi}{4}}
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
+
+2. 设$f_{n}(x)=\tan^n x(n=1,2,\cdots)$,且曲线$y=\tan^n x$在点$x=\dfrac{\pi}{4}$处的切线与$x$轴的交点为$(x_{n},0)$,求极限$\lim\limits_{n\rightarrow+\infty}f_{n}(x_{n})$
+\myspace{1}
+\begin{solution}
+
+	我们先求切线方程:  
+	$$\left\lbrace
+	\begin{array}{l}
+		f(x)=\tan^n x\\
+		f(\frac{\pi}{4})=1\\
+		f'(x)=n\tan^{n-1}x\sec^2 x
+	\end{array}
+	\right. \Rightarrow l:\ y-1=2n(x-\dfrac{\pi}{4})\Rightarrow x_{n}=\dfrac{\pi}{4}-\dfrac{1}{2n}$$
+	
+	原极限可以化为:  
+	\begin{eqnarray*}
+		I&=&\lim\limits_{n\rightarrow+\infty}\tan^{n}\left( \dfrac{\pi}{4}-\dfrac{1}{2n}\right) \\
+		&=&e^{\lim\limits_{x\rightarrow 0}\dfrac{\ln(\tan(\frac{\pi}{4}-x))}{2x}}\\
+		&=&e^{-1}
+	\end{eqnarray*}
+
+	综上所述,我们得到:  $\lim\limits_{n\rightarrow+\infty}f_{n}(x_{n})=e^{-1}$
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 9}}}
+
+1. 设$A$是$3$阶实对称矩阵,且不可逆,\ $\left(\begin{matrix}
+	2&-2&1\\-2&-1&2
+\end{matrix} \right)\cdot A=\left(\begin{matrix}
+6&-6&3\\-12&-6&12
+\end{matrix} \right) $,求$A$
+\myspace{1}
+\begin{solution}
+
+	我们利用谱分解定理:  $A=\sum\limits_{i=1}^{3}\lambda_{i}G_{i},\ G_{i}=e_{i}e_{i}^{T}$
+	
+	我们将上述方程两边取转置得到:  
+	$$A^{T}\cdot\left(\begin{matrix}
+		2&-2\\-2&-1\\&1&2
+	\end{matrix} \right)=\left(\begin{matrix}
+	6&-12\\-6&-6\\3&12
+\end{matrix} \right)\Rightarrow \left\lbrace
+\begin{array}{l}
+A^{T}\xi_{1}=3\xi_{1}\\
+A^{T}\xi_{2}=6\xi_{2}
+\end{array}
+\right. $$
+
+我们知道矩阵$A^{T}$的两个特征值为$3,6$,又因为矩阵$A$不可逆,矩阵$A^{T}$的三个特征值分别为$0,3,6$
+
+我们可以得到:  $A^{T}=\sum\limits_{i=1}^{3}\lambda_{i}G_{i}=\left(\begin{matrix}
+	4&0&-2\\0&2&-2\\-2&-2&3
+\end{matrix} \right)$
+
+我们有$A^{T}=A$,综上所述,我们得到:  $A=\left(\begin{matrix}
+	4&0&-2\\0&2&-2\\-2&-2&3
+\end{matrix} \right)$
+\end{solution}
+\myspace{1}
+
+
+2. 已知方程$\dfrac{1}{\ln(1+x)}-\dfrac{1}{x}=k$在区间$(0,1)$有实数根,求$k$的取值范围
+\myspace{1}
+\begin{solution}
+
+	我们构造辅助函数:  $f(x)=\dfrac{1}{\ln(1+x)}-\dfrac{1}{x}$,我们有:  
+	$$f'(x)=\dfrac{(1+x)\ln^2(1+x)-x^2}{x^2(1+x)\ln^2(1+x)},\ x\in(0,1)$$
+	
+	我们构造辅助函数:  $g(x)=2\ln x-\dfrac{x^2-1}{x},\ x\in(1,2)$
+	
+	我们有:  
+	$$\left\lbrace
+	\begin{array}{l}
+		g'(x)=\dfrac{-(x-1)^2}{x^2}\leq 0\\
+		g(x)\text{单调递减}\\
+		g(x)\leq g(1)=0
+	\end{array}
+	\right. \Rightarrow 2\ln t\leq \dfrac{t^2-1}{t},\ t\in(1,2)\Rightarrow \ln^2(1+x)\leq \dfrac{x^2}{1+x}$$
+	
+	我们得到:  $f'(x)\leq 0,\ x\in(0,1)\Rightarrow f(x)$在$(0,1)$上单调递减.
+	
+	我们有:  $$\left\lbrace
+	\begin{array}{l}
+		\lim\limits_{x\rightarrow 0}f(x)=\lim\limits_{x\rightarrow 0}\dfrac{x-\ln(1+x)}{x\ln(1+x)}=\dfrac{1}{2}\\
+		\lim\limits_{x\rightarrow 1}f(x)=\dfrac{1}{\ln 2}-1
+	\end{array}
+	\right. $$
+	
+	综上所述,$k$的取值范围为:  $(\dfrac{1}{\ln2}-1,\dfrac{1}{2})$
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 10}}}
+
+1. 设$f(x)=\left\lbrace
+\begin{array}{l}
+	\dfrac{e^x-1}{x},\ x\neq 0\\
+	1,\ x=0
+\end{array}
+\right. $,则下列关于$y=\dfrac{\int_{0}^{x}f(t)dt}{x}$的命题正确的个数
+\begin{itemize}
+	\item A. 有垂直渐近线
+	\item \hl{B}. 有水平渐近线
+	\item C. 有斜渐近线
+	\item D. 是有界函数
+\end{itemize}
+\myspace{1}
+\begin{solution}
+
+	我们可以得到:  $f(x)$在$x=0$处连续,$f(x)$在$\mathbb{R}$上连续,我们令$g(x)=\dfrac{\int_{0}^{x}f(t)dt}{x}$
+	
+	首先$g(x)$在$x=0$处无定义,我们可以得到:  
+	$$\left\lbrace
+	\begin{array}{l}
+		\lim\limits_{x\rightarrow 0^{+}}g(x)=1\\
+		\lim\limits_{x\rightarrow 0^{-}}g(x)=1
+	\end{array}
+	\right. \Rightarrow g(x)\text{没有垂直渐近线}$$
+	
+	其次$g(x)$在$\infty$处水平渐近线:  
+	$$\left\lbrace
+	\begin{array}{l}
+		\lim\limits_{x\rightarrow+\infty}g(x)=\lim\limits_{x\rightarrow+\infty}f(x)=+\infty\\
+		\lim\limits_{x\rightarrow-\infty}g(x)=0
+	\end{array}
+	\right. \Rightarrow g(x)\text{在}x\Rightarrow -\infty\text{时}\text{有水平渐近线}y=0$$
+	
+	在$x\Rightarrow +\infty$时,$\lim\limits_{x\rightarrow+\infty}\dfrac{g(x)}{x^2}=\lim\limits_{x\rightarrow +\infty}\dfrac{e^x-1}{2x^2}=+\infty$,$g(x)$不存在斜渐近线,且$g(x)$为无界函数.
+	
+\end{solution}
+\myspace{1}
+
+2. $\int_{0}^{+\infty}\dfrac{\ln x}{1+x^2}dx$
+\myspace{1}
+\begin{solution}
+
+	原定积分可以化为:  
+
+	\begin{eqnarray*}
+		I&=&-\int_{0}^{+\infty}\dfrac{\ln t}{1+t^2}dt\\
+		&=&-I\\
+		I&=&0
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 11}}}
+
+1. $\int_{0}^{+\infty}\dfrac{\ln(1-x^2+x^4)}{(1+x^2)\ln x}dx$
+\myspace{1}
+\begin{solution}
+
+	原定积分可以化为:  
+	\begin{eqnarray*}
+		I&=&-\int_{0}^{+\infty}\dfrac{\ln (t^4-t^2+1)}{(1+t^2)\ln t}dt+\int_{0}^{+\infty}\dfrac{4}{1+t^2}dt\\
+		&=&-I+2\pi\\
+		I&=&\pi
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
+
+2. 已知函数$f(x)$三阶可导,则下列命题中不是$(0,f(0))$为曲线$y=f(x)$的拐点的必要条件的有:  
+\begin{itemize}
+	\item \hl{A}. 存在$\delta>0$,$f(x)$在$(-\delta,0)$内单调下降,$f(x)$在$(0,\delta)$内单调增加
+	\item \hl{B}. 存在$\delta>0$,当$x\in(-\delta,\delta)$,有$f''(-x)=-f''(x)$
+	\item \hl{C}. $f''(0)=0,\ f'''(0)\neq 0$
+\end{itemize}
+\myspace{1}
+\begin{solution}
+
+	拐点是函数凹凸性发生改变的函数点,由函数$f(x)$三阶可导,我们可以得到$f''(x_{0})=0$,且有:  
+	$$\left\lbrace
+	\begin{array}{l}
+		f''(a)\cdot f''(b)<0,\ a\in(x_{0}-\xi,x_{0}),\ b\in(x_{0},x_{0}+\xi)\\
+		f'''(x_{0})\text{符号不确定}\\
+		f(x)=x^3
+	\end{array}
+	\right. $$
+	
+	综上所述,上述三个命题都不正确.
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 12}}}
+
+1. 下列命题正确的是:  
+\begin{itemize}
+	\item A. 若$\lim\limits_{x\rightarrow x_{0}}f'(x)=a$,则$f'(x_{0})=a$
+	\item B. 若$\lim\limits_{x\rightarrow x_{0}}f'(x)$不存在,则$f(x)$在点$x_{0}$处不可导
+	\item \hl{C}. 若$f'(x)$在$x=x_{0}$处连续,则在$x_{0}$的某邻域内$f'(x)$存在
+	\item D. 若$f(x)$在$x=x_{0}$处可导,$g(x)$在$x=x_{0}$处不可导,则$f(x)\cdot g(x)$在$x=x_{0}$处不可导
+\end{itemize}
+\myspace{1}
+\begin{solution}
+
+	重要反例:  
+	
+	(1). 函数在某个点无定义,但是这个点处导数极限存在
+	$$f(x)=\arctan\dfrac{1}{x},\ f'(x)=-\dfrac{1}{1+x^2}$$
+	
+	(2). 函数导函数在某点处可导,但是导函数在该点处极限不存在
+	$$f(x)=\left\lbrace
+	\begin{array}{l}
+		x^2\sin\dfrac{1}{x},\ x\neq 0\\
+		0
+	\end{array}
+	\right. ,f'(x)=\left\lbrace
+	\begin{array}{l}
+		2x\sin\dfrac{1}{x}-\cos\dfrac{1}{x},\ x\neq 0\\
+		0
+	\end{array}
+	\right. $$
+\end{solution}
+\myspace{1}
+
+2. 证明不等式和求极限
+
+(1). 证明:  $\dfrac{1}{n}-\ln(1+\dfrac{1}{n})<\dfrac{1}{2}\cdot\dfrac{1}{n^2},\ (n\in\mathbb{N}^{*})$
+
+(2). 求$\lim\limits_{n\rightarrow+\infty}\prod\limits_{i=1}^{n}\dfrac{n^2+i}{n^2}$
+\myspace{1}
+\begin{solution}
+
+	(1). 我们构造辅助函数:  $f(x)=x-\ln(1+x)-\dfrac{x^2}{2},\ x\in(0,1]$
+	
+	我们有:  $f'(x)=1-x-\dfrac{1}{1+x}=\dfrac{-x^2}{1+x}<0$,$f(x)$在$(0,1]$上单调递减,我们得到:  $f(x)<f(x)_{max}=f(0)=0$
+	
+	我们得到:  $f(x)<0,\ x\in(0,1]\Rightarrow \dfrac{1}{n}-\ln(1+\dfrac{1}{n})<\dfrac{1}{2}\cdot\dfrac{1}{n^2},\ (n\in\mathbb{N}^{*})$
+	
+	(2). 我们由:  
+	$$\left\lbrace
+	\begin{array}{l}
+		\ln(1+x)<x,\ x\in(0,1]\\
+		\ln(1+x)>x-\dfrac{x^2}{2},\ x\in(0,1]
+	\end{array}
+	\right. \Rightarrow \left\lbrace
+	\begin{array}{l}
+		\ln(1+\dfrac{i}{n^2})<\dfrac{i}{n^2}\\
+		\ln(1+\dfrac{i}{n^2})>\dfrac{i}{n^2}-\dfrac{i^2}{2n^4}
+	\end{array}
+	\right. $$
+	
+	我们可以得到:  
+	\begin{eqnarray*}
+		\lim\limits_{n\rightarrow+\infty}\prod\limits_{i=1}^{n}\dfrac{n^2+i}{n^2}=e^{\lim\limits_{n\rightarrow+\infty}\sum\limits_{i=1}^{+\infty}\ln(1+\frac{i}{n^2})}\\
+		e^{\lim\limits_{n\rightarrow+\infty}\sum\limits_{i=1}^{+\infty}\dfrac{i}{n^2}-\dfrac{i^2}{2n^4}}\leq I\leq e^{\lim\limits_{n\rightarrow+\infty}\sum\limits_{i=1}^{+\infty}\dfrac{i}{n^2}}\\
+		e^{\lim\limits_{n\rightarrow+\infty}\frac{n+1}{2n}-\frac{n(n+1)(2n+1)}{12n^4}}\leq I\leq e^{\lim\limits_{n\rightarrow+\infty}\frac{n+1}{2n}}
+	\end{eqnarray*}
+	$\text{左边}=\text{右边}=e^{\frac{1}{2}}$,
+	我们由夹逼定理可以得到原式子$I=e^{\frac{1}{2}}$
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 13}}}
+
+1. 设区域$D_{1}:\{(x,y)| 0\leq x\leq 1,\ 0\leq y\leq 1\}$,$D_{2}:\{(x,y)| x^2+y^2\leq r^2,\ (r>0)\}$,比较$I=\iint \limits_{D_{1}}\left(\cos x^2+\sin y^2\right) dxdy$,\ $J=\iint\limits_{D_{1}}\sqrt{2}dxdy$,\ $K=\lim\limits_{r\rightarrow 0}\dfrac{1}{\pi r^2}\iint\limits_{D_{2}}e^{x^2-y^2}\cos(x+y)dxdy$大小
+\myspace{1}
+\begin{solution}
+
+	我们首先可以得到:  $J=\sqrt{2}$
+	
+	我们根据轮换对称性:  
+	\begin{eqnarray*}
+		I&=&\iint \limits_{D_{1}}\left(\cos x^2+\sin y^2\right) dxdy\\
+		&=&\iint \limits_{D_{1}}\left(\cos x^2+\sin x^2\right) dxdy\\
+		&=&\iint \limits_{D_{1}}\left(\sqrt{2}\sin(x^2+\frac{\pi}{4})\right)dxdy\\
+		&\in&(1,\sqrt{2})
+	\end{eqnarray*}
+
+	我们对于$K$,我们根据积分中值定理可以得到:  
+	\begin{eqnarray*}
+		K&=&\lim\limits_{r\rightarrow 0}\dfrac{1}{\pi r^2}e^{\xi^2-\eta^2}\cos(\xi+\eta)\iint\limits_{D_{2}}1dxdy\\
+		&=&\lim\limits_{r\rightarrow 0}e^{\xi^2-\eta^2}\cos(\xi+\eta)\\
+		&=&1
+	\end{eqnarray*}
+
+	综上所述,我们得到:  $\left\lbrace
+	\begin{array}{l}
+		I\in(1,\sqrt{2})\\
+		J=\sqrt{2}\\
+		K=1
+	\end{array}
+	\right.\Rightarrow K<I<J$
+\end{solution}
+\myspace{1}
+
+2. 证明:  若在区间$I$上$f^{(n)}(x)\neq 0$,则方程$f(x)=0$在$I$上最多$n$个实数根
+\myspace{1}
+\begin{solution}
+
+	我们利用反证法,来证明:  方程$f(x)=0$在区间$I$上有超过$n$个实数根,则$f^{(n)}(x)=0$在区间$I$上有解.
+	
+	我们不妨假设$\exists x_{1}<x_{2}<\cdots<x_{n}<x_{n+1}\in I$,且满足$f(x_{1})=f(x_{2})=\cdots=f(x_{n})=f(x_{n+1})=0$.
+	
+	我们对$f(x)$在区间$(x_{1},x_{2}),(x_{2},x_{3}),\cdots,(x_{n},x_{n+1})$上使用罗尔定理:  
+	$$\left\lbrace
+	\begin{array}{l}
+		\exists \xi_{1}\in(x_{1},x_{2}),\ s.t. f'(\xi_{1})=0\\
+		\exists \xi_{2}\in(x_{2},x_{3}),\ s.t. f'(\xi_{2})=0\\
+		\cdots\cdots\\
+		\exists \xi_{n}\in(x_{n},x_{n+1}),\ s.t. f'(\xi_{n})=0\\	
+	\end{array}
+	\right. $$
+	
+	我们以此类推,我们可以得到:  $\exists\eta_{1},\eta_{2}\in I,\ s.t. f^{(n-1)}(x)=0$,我们再次使用罗尔定理,可以得到:  
+	$\exists \mu\in(\eta_{1},\eta_{2}),\ s.t. f^{(n)}(\mu)=0$
+	
+	综上所述,原命题的逆否命题成立,原命题成立.
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 14}}}
+
+1. 设函数$f(x)$在$[0,+\infty)$上连续,且$(0,+\infty)$上$f'(x)>0$,下列命题正确的是:  
+\begin{itemize}
+	\item A. 若$f(0)=0$,则$\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)}{x}$存在
+	\item B. 若$\lim\limits_{x\rightarrow+\infty}\dfrac{f(x)}{x}=2024$,则$\lim\limits_{x\rightarrow +\infty}f'(x)=2024$
+	\item \hl{C}. 若$\lim\limits_{x\rightarrow+\infty}\dfrac{1}{x}\int_{0}^{x}f(t)dt=1$,则$\lim\limits_{x\rightarrow +\infty}f(x)=1$
+	\item D. 若$\lim\limits_{x\rightarrow+\infty}\dfrac{1}{x}\int_{0}^{x}f(t)dt=1$且$\lim\limits_{x\rightarrow+\infty}\int_{0}^{x}f(t)dt=\infty$,则$\lim\limits_{x\rightarrow+\infty}f(x)$不存在
+\end{itemize}
+\myspace{1}
+\begin{solution}
+
+	(A). $f(x)=\sqrt{x}$
+	
+	(B). $f(x)=2024x+\sin x,\ f'(x)=2024+\cos x$,$\lim\limits_{x\rightarrow +\infty}f'(x)\text{不存在}$
+	
+	(C). $\lim\limits_{x\rightarrow +\infty}f(x)=\lim\limits_{x\rightarrow+\infty}\dfrac{\int_{0}^{x}f(x)dt}{x}$
+	
+	我们有:  $$\int_{0}^{x}f(t)dt<\int_{0}^{x}f(x)dt<\int_{x}^{2x}f(t)dt\Rightarrow \dfrac{\int_{0}^{x}f(t)dt}{x}<\dfrac{\int_{0}^{x}f(x)dt}{x}<\dfrac{\int_{x}^{2x}f(t)dt}{x}$$
+	
+	我们有:  $\left\lbrace
+	\begin{array}{l}
+		\lim\limits_{x\rightarrow+\infty}\dfrac{\int_{0}^{x}f(t)dt}{x}=1\\
+		\lim\limits_{x\rightarrow+\infty}\dfrac{\int_{0}^{2x}f(t)dt}{x}=2
+	\end{array}
+	\right. $
+	
+	我们可以得到:  $\lim\limits_{x\rightarrow +\infty}f(x)=1$
+	
+	(D). 我们假设$\lim\limits_{x\rightarrow +\infty}f(x)$不存在,我们可以得到:  
+	$$\lim\limits_{x\rightarrow +\infty}\dfrac{\int_{0}^{x}f(t)dt}{x}=\lim\limits_{x\rightarrow+\infty}f(x)\neq 1$$
+	
+\end{solution}
+\myspace{1}
+
+2. 讨论$\int_{0}^{+\infty}\dfrac{x^m|\ln x|^n}{1+x^k}dx$的敛散性
+\myspace{1}
+\begin{solution}
+
+	我们可知函数可能的暇点为$x=0,\ x=1,\ x=+\infty$
+	
+	(1). $x=0$
+	
+	当$k\geq 0$时,$1+x^{k}$非零,原反常积分敛散性等价于:  $\int_{0}^{\frac{1}{2}}x^{m}|\ln x|^ndx$
+	$$\left\lbrace
+	\begin{array}{l}
+		m>-1,\text{反常积分收敛}\\
+		m=-1,n<-1\text{反常积分收敛}
+	\end{array}
+	\right. $$
+	
+	当$k<0$时,原反常积分敛散性等价于:  $\int_{0}^{\frac{1}{2}}x^{m-k}|\ln x|^ndx$
+	$$\left\lbrace
+	\begin{array}{l}
+		m-k>-1,\text{反常积分收敛}\\
+		m-k=-1,n<-1,\text{反常积分收敛}
+	\end{array}
+	\right. $$
+	
+	(2). $x=1$
+	
+	原反常积分敛散性等价于:  $\int_{\frac{1}{2}}^{1}|\ln x|^ndx$和$\int_{1}^{2}|\ln x|^ndx$收敛$\Rightarrow n>-1$
+	
+	(3).$x=+\infty$
+	
+	当$k\geq 0$时,原反常积分敛散性等价于:  $\int_{2}^{+\infty}x^{m-k}|\ln x|^ndx$
+	$$\left\lbrace
+	\begin{array}{l}
+		m-k<-1,\text{反常积分收敛}\\
+		m-k=-1,n<-1,\text{反常积分收敛}
+	\end{array}
+	\right. $$
+	
+	当$k<0$时,原反常积分敛散性等价于:  $\int_{2}^{+\infty}x^{m}|\ln x|^ndx$
+	$$\left\lbrace
+	\begin{array}{l}
+		m<-1,\text{反常积分收敛}\\
+		m=-1,n<-1,\text{反常积分收敛}
+	\end{array}
+	\right. $$
+	
+	综上所述,我们得到:  $\left\lbrace
+	\begin{array}{l}
+		n>-1\\
+		k<0,k-1<m<-1\\
+		k>0,-1<m<k-1
+	\end{array}
+	\right. $时,原反常积分收敛
+\end{solution}
+\myspace{1}
+
+\section{Week \Rmnum{3}}
+\hl{\textbf{\textit{September 15}}}
+
+1. 对于$y=\left(1+x+\dfrac{x^2}{2!}+\cdots+\dfrac{x^n}{n!} \right)e^{-x}$而言,下列说法正确的是:  
+\begin{itemize}
+	\item A. 当$n$无论为偶数还是奇数时,函数都取极值
+	\item B. 当$n$无论为偶数还是奇数时,函数都不取极值
+	\item C. 当$n$为偶数时,函数取极值;当$n$为奇数时,函数不取极值
+	\item \hl{D}. 当$n$为偶数时,函数不取极值;当$n$为奇数时,函数取极值
+\end{itemize}
+\myspace{1}
+\begin{solution}
+
+	我们对原函数求导,可以得到:  
+	$$f'(x)=-\dfrac{x^{n}}{n!}e^{-x}$$
+	
+	(1). 当$n$为偶数时,$f'(x)\leq 0$,$f(x)$没有极值点
+	
+	(2). 当$n$为奇数时,$x<0$时,$f'(x)>0$;$x>0$时,$f'(x)<0$,$f(x)$在$x=0$处取极值.
+\end{solution}
+\myspace{1}
+
+2. 设$f(x)$连续,$g(x)=f(x)\cdot\int_{0}^{x}f(t)dt$单调不增,证明$f(x)\equiv 0$
+\myspace{1}
+\begin{solution}
+
+	我们构造辅助函数:  $F(x)=\dfrac{1}{2}\left(\int_{0}^{x}f(t)dt \right)^2$
+	
+	我们有:  $$\left\lbrace
+	\begin{array}{l}
+		F(0)=0\\
+		F'(x)=f(x)\int_{0}^{x}f(t)dt\text{单调不增}\\
+		F'(0)=0
+	\end{array}
+	\right. \Rightarrow \left\lbrace
+	\begin{array}{l}
+		x\in(-\infty,0),F'(x)\geq 0\\
+		x\in(0,+\infty),F'(x)\leq 0
+	\end{array}
+	\right. \Rightarrow F(x)\leq F(0)=0$$
+	
+	我们有:  $F(x)=\dfrac{1}{2}\left(\int_{0}^{x}f(t)dt \right)^2\geq 0\Rightarrow F(x)=0\Rightarrow f(x)\equiv 0$
+	
+	综上所述,我们得到:  $f(x)\equiv 0$
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 16}}}
+
+1. 设函数$f(x)$在$(-\infty,+\infty)$上二阶可导,且$f''(x)\neq 0$,$\lim\limits_{x\rightarrow \infty}\dfrac{\sqrt{x^2-x+1}}{xf'(x)}=\alpha>0$,且存在一点$f(x_{0})<0$,证明:  方程$f(x)=0$在$(-\infty,+\infty)$上恰有两个实数根
+\myspace{1}
+\begin{solution}
+
+	我们可以得到:  $$\left\lbrace
+	\begin{array}{l}
+		\lim\limits_{x\rightarrow+\infty}f'(x)=\dfrac{1}{\alpha}>0\\
+		\lim\limits_{x\rightarrow-\infty}f'(x)=-\dfrac{1}{\alpha}<0
+	\end{array}
+	\right. \Rightarrow\left\lbrace
+	\begin{array}{l}
+		\exists x_{1}\in(0,+\infty),f(x_{1})>0\\
+		\exists x_{2}\in(-\infty,0),f(x_{2})>0
+	\end{array}
+	\right. $$
+	
+	我们由$f''(x)\neq 0$,且$\left\lbrace
+	\begin{array}{l}
+		\lim\limits_{x\rightarrow+\infty}f'(x)>0\\
+		\lim\limits_{x\rightarrow-\infty}f'(x)<0
+	\end{array}
+	\right. \Rightarrow f''(x)>0$
+	
+	我们可以得到$f'(x)$单调递增,$\exists x_{3}\in(-\infty,+\infty),\ s.t. f'(x_{3})=0$.
+	
+	我们可以得到$f(x)$在$(-\infty,x_{3})$上单调递减,$(x_{3},+\infty)$上单调递增,且$\exists x_{0},s.t. f(x_{0})<0$.
+	
+	我们根据单调性可知$f(x)$至多两个零点,根据零点定理可知$(-\infty,x_{0})$和$(x_{0},+\infty)$上都有一个零点,我们得到$f(x)$有且仅有两个零点.
+	
+	综上所述,我们得到:  方程$f(x)=0$在$(-\infty,+\infty)$上恰有两个实数根
+\end{solution}
+\myspace{1}
+
+2. 讨论$\int_{0}^{+\infty}\dfrac{(1+x^p)\ln|\ln x|}{x^q}dx$的敛散性
+\myspace{1}
+\begin{solution}
+
+	我们可以找到函数可能的暇点为$x=0,x=1,x=+\infty$
+	
+	(1). $x=0$
+	
+	当$p\geq 0$时,$1+x^{p}$非零,原反常积分敛散性等价于:  $\int_{0}^{\frac{1}{2}}\dfrac{\ln|\ln x|}{x^q}dx$
+	$$\left\lbrace
+	\begin{array}{l}
+		q<1,\text{反常积分收敛}\\
+		q=1,n<-1\text{反常积分发散}
+	\end{array}
+	\right. $$
+	
+	当$p<0$时,原反常积分敛散性等价于:  $\int_{0}^{\frac{1}{2}}\dfrac{\ln|\ln x|}{x^{q-p}}dx$
+	$$\left\lbrace
+	\begin{array}{l}
+		q-p<1,\text{反常积分收敛}\\
+		q-p=1,\text{反常积分发散}
+	\end{array}
+	\right. $$
+	
+	(2). $x=1$
+	
+	原反常积分敛散性等价于:  $\int_{\frac{1}{2}}^{1}\ln|\ln x|dx$和$\int_{1}^{2}\ln|\ln x|dx$收敛
+	
+	(3).$x=+\infty$
+	
+	当$p\leq 0$时,原反常积分敛散性等价于:  $\int_{2}^{+\infty}\dfrac{\ln|\ln x|}{x^q}dx$
+	$$\left\lbrace
+	\begin{array}{l}
+		q>1,\text{反常积分收敛}\\
+		q=1,,\text{反常积分发散}
+	\end{array}
+	\right. $$
+	
+	当$p>0$时,原反常积分敛散性等价于:  $\int_{2}^{+\infty}\dfrac{\ln|\ln x|}{x^{q-p}}dx$
+	$$\left\lbrace
+	\begin{array}{l}
+		q-p>1,\text{反常积分收敛}\\
+		q-p=1,\text{反常积分发散}
+	\end{array}
+	\right. $$
+	
+	综上所述,我们得到,原反常积分一定发散.
+	
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 17}}}
+
+1. 设函数$f(x)$在$x=0$的某个邻域内可导,$g(x)$在$x=0$的某个邻域内连续,且$\lim\limits_{x\rightarrow 0}\dfrac{g(x)}{x}=0,\ f'(x)=\sin^2 x+\int_{0}^{x}g(x-t)dt$,则下列命题正确的是:  
+\begin{itemize}
+	\item A. $x=0$是$f(x)$的极大值点
+	\item B. $x=0$是$f(x)$的极小值点
+	\item \hl{C}. $(0,f(0))$是$y=f(x)$的拐点
+	\item D. $x=0$是$f(x)$的极值点,但$(0,f(0))$不是$y=f(x)$的拐点
+\end{itemize}
+\myspace{1}
+\begin{solution}
+
+	我们首先可以得到:  $g(0)=0,g'(0)=0$,我们有:  
+	$$\left\lbrace
+	\begin{array}{l}
+		f''(x)=2\sin x\cos x+g(x)\\
+		f''(0)=0\\
+		f'''(0)=\lim\limits_{x\rightarrow 0}\dfrac{f''(x)}{x}=\lim\limits_{x\rightarrow 0}\dfrac{2\sin x\cos x+g(x)}{x}=2
+	\end{array}
+	\right. $$
+	
+	我们可以得到:  $$\left\lbrace
+	\begin{array}{l}
+		x\in(-\xi,0),f''(x)<0\\
+		x\in(0,\xi),f''(x)>0
+	\end{array}
+	\right. \Rightarrow f'(x)\text{在}(-\xi,0)\text{单调递减};f'(x)\text{在}(0,\xi)\text{单调递增}\Rightarrow f'(x)\geq f'(0)=0$$
+	
+	我们有:  $x=0$不是$f(x)$的极值点;$(0,f(0))$是$f(x)$的拐点.
+\end{solution}
+\myspace{1}
+
+2. 设$X_{1},X_{2},\cdots,X_{9}$是来自正态总体$X$的简单随机样本,$Y_{1}=\dfrac{X_{1}+X_{2}+\cdots+X_{6}}{6}$,$Y_{2}=\dfrac{X_{7}+X_{8}+X_{9}}{3}$,$S^2=\dfrac{1}{2}\sum\limits_{i=1}^{9}(X_{i}-Y_{2})^2$,$Z=\dfrac{\sqrt{2}(Y_{1}-Y_{2})}{S}$,证明:  $Z\sim t(2)$
+\myspace{1}
+\begin{solution}
+	
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 18}}}
+
+1.设函数$f(x)$在区间$[-2,2]$上可导,且$f'(x)>f(x)>0$,下列命题正确的是:  
+\begin{itemize}
+	\item A. $\dfrac{f(-2)}{f(-1)}>1$
+	\item \hl{B}. $\dfrac{f(0)}{f(-1)}>e$
+	\item C. $\dfrac{f(1)}{f(-1)}<e^2$
+	\item D. $\dfrac{f(2)}{f(-1)}<e^3$
+\end{itemize}
+\myspace{1}
+\begin{solution}
+
+	我们构造辅助函数:  $F(x)=\dfrac{f(x)}{e^x}$
+	
+	我们有:  $F'(x)=\dfrac{f'(x)-f(x)}{e^x}>0$,$F(x)$在$[-2,2]$上单调递增.
+	$$\left\lbrace
+	\begin{array}{l}
+		F(-1)>F(-2)\\
+		F(0)>F(-1)\\
+		F(1)>F(-1)\\
+		F(2)>F(-1)
+	\end{array}
+	\right. \Rightarrow \left\lbrace
+	\begin{array}{l}
+		\dfrac{f(-2)}{f(-1)}<\dfrac{1}{e}\\
+		\dfrac{f(0)}{f(-1)}>e\\
+		\dfrac{f(1)}{f(-1)}>e^2\\
+		\dfrac{f(2)}{f(-1)}>e^3
+	\end{array}
+	\right. $$
+\end{solution}
+\myspace{1}
+
+2. 设$D=\{(p,q)|\int_{0}^{+\infty}\dfrac{x^p|x-1|^q}{(x+1)\ln x\ln(x+2)}dx\text{收敛}\}$,求$D$绕$q$轴旋转一周扫过的体积
+\myspace{1}
+\begin{solution}
+
+	我们可以找到函数可能的暇点为$x=0,x=1,x=+\infty$
+	
+	(1). $x=0$
+	
+	原反常积分敛散性等价于:  $\int_{0}^{\frac{1}{2}}\dfrac{x^p}{\ln x}dx$
+	$$\left\lbrace
+	\begin{array}{l}
+		p>-1,\text{反常积分收敛}\\
+		p\leq-1,\text{反常积分发散}
+	\end{array}
+	\right. $$
+	
+	(2). $x=1$
+	
+	原反常积分敛散性等价于:  $\int_{\frac{1}{2}}^{1}\dfrac{|x-1|^q}{\ln x}dx$和$\int_{1}^{2}\dfrac{|x-1|^q}{\ln x}dx$
+	$$\left\lbrace
+	\begin{array}{l}
+		q-1>-1,\text{反常积分收敛}\\
+		q-1\leq-1,\text{反常积分发散}
+	\end{array}
+	\right. $$
+	
+	(3).$x=+\infty$
+	
+	原反常积分敛散性等价于:  $\int_{2}^{+\infty}\dfrac{x^{p+q-1}}{\ln^2 x}dx$
+	$$\left\lbrace
+	\begin{array}{l}
+		p+q-1<-1,\text{反常积分收敛}\\
+		p+q-1=-1,\text{反常积分收敛}\\
+		p+q-1>-1,\text{反常积分发散}
+	\end{array}
+	\right. $$
+	
+	综上所述,我们得到$\left\lbrace
+	\begin{array}{l}
+		p>-1\\
+		q>0\\
+		p+q\leq 0
+	\end{array}
+	\right. $时,原反常积分收敛.
+	
+	我们可以得到:  $D=\{(p,q)|-1<p<0,0<q<-p\}$,我们可以得到:  
+	$$V=\dfrac{2\pi}{3}$$
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 19}}}
+
+1.设$f(x)$是以$T$为周期的连续函数,下列哪些命题是$\int_{0}^{x}f(t)dt$是以$T$为周期的周期函数的充分条件:  
+\begin{itemize}
+	\item A. $\int_{0}^{T}\left[ f(t)-f(-t)\right]dt=0$
+	\item \hl{B}. $f(-x)=f(x)$
+	\item \hl{C}. $\int_{0}^{+\infty}f(t)dt$收敛
+\end{itemize}
+\myspace{1}
+\begin{solution}
+
+	我们设$F(x)=\int_{0}^{x}f(t)dt$,已知函数$f(x)$为周期函数,$F(x)$为在周期函数等价于:  
+	$$F(x)\text{为周期函数}\Leftrightarrow \int_{0}^{T}f(x)dx=0$$
+	
+	(1). $f(x)=1$,$F(x)=x$
+	
+	(2). $f(-x)=-f(x)\Rightarrow f(x)\text{为奇函数}\Rightarrow \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}f(x)dx=\int_{0}^{T}f(x)dx=0$
+	
+	(3). $\int_{0}^{+\infty}f(t)dt=\lim\limits_{n\rightarrow+\infty}\sum\limits_{i=0}^{n}\int_{iT}^{(i+1)T}f(x)dx=\lim\limits_{n\rightarrow+\infty}nA\text{收敛}$
+	
+	我们得到:  $\int_{0}^{T}f(x)dx=A=0$
+\end{solution}
+\myspace{1}
+
+2. 设随机变量$X$和$Y$独立同分布,$X$的概率密度为$f_{X}(x)=\left\lbrace
+\begin{array}{l}
+	\dfrac{2}{\sqrt{\pi}}e^{-x^2},\ x>0\\
+	0,\ x<0
+\end{array}
+\right. $,令$Z=\sqrt{X^2+Y^2}$,求$D(Z)$
+\myspace{1}
+\begin{solution}
+	
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 20}}}
+
+1.已知常数$k\geq \ln2-1$,证明:  $(x-1)(x-\ln^2 x+2k\ln x-1)\geq 0$
+\myspace{1}
+\begin{solution}
+
+	我们构造辅助函数:  $f(x)=x-\ln^2 x+2k\ln x-1,x>0$
+	
+	我们有:  $\left\lbrace
+	\begin{array}{l}
+		f'(x)=\dfrac{x-2\ln x+2k}{x}\\
+		f(1)=0
+	\end{array}
+	\right. $
+	
+	我们不妨设$g(x)=x-2\ln x+2k$,$g(x)$与$f'(x)$同号,$g'(x)=\dfrac{x-2}{x}$
+	
+	我们可以得到:  $$\left\lbrace
+	\begin{array}{l}
+		x\in(0,2),g'(x)<0\\
+		x\in(2,+\infty),g'(x)>0
+	\end{array}
+	\right. \Rightarrow g(x)_{min}=g(2)=2-2\ln2+2k\geq 0$$
+	
+	我们得到:  $g(x)\geq 0\Rightarrow f'(x)\geq 0\Rightarrow f(x)\text{在}(0,+\infty)\text{上单调递增}$
+	
+	我们得到:  
+	$$\left\lbrace
+	\begin{array}{l}
+		x\in(0,1),f(x)<0,x-1<0\\
+		x\in(1,+\infty),f(x)>0,x-1>0\\
+		x=1,f(x)=0,x-1=0
+	\end{array}
+	\right. \Rightarrow (x-1)f(x)\geq 0$$
+	
+	综上所述,我们得到:  $(x-1)(x-\ln^2 x+2k\ln x-1)\geq 0$
+\end{solution}
+\myspace{1}
+
+2. 求$\sum\limits_{n=1}^{+\infty}\dfrac{(n-1)^3}{n(n+1)}x^n$的和函数$S(x)$
+\myspace{1}
+\begin{solution}
+
+	我们不妨设$a_{n}=\dfrac{(n-1)^3}{n(n+1)}$,我们可以得到:  
+	$$\rho=\lim\limits_{n\rightarrow+\infty}|\dfrac{a_{n+1}}{a_{n}}|=1\Rightarrow R=\dfrac{1}{\rho}$$
+	
+	我们得到幂级数的收敛区间为$(-1,1)$,当$x=\pm 1$时,原级数发散,因此原级数的收敛域为$(-1,1)$
+	
+	我们有:  $a_{n}=\dfrac{(n-1)^3}{n(n+1)}=\dfrac{n^3-3n^3+3n-1}{n^2+n}=n-4+\dfrac{8}{n+1}-\dfrac{1}{n}$
+	
+	原级数可以等价于:  
+	\begin{eqnarray*}
+		\sum\limits_{n=1}^{+\infty}\dfrac{(n-1)^3}{n(n+1)}x^n&=&\sum\limits_{n=1}^{+\infty}a_{n}x^n\\
+		&=&\sum\limits_{n=1}^{+\infty}(n+1)x^n-5\sum\limits_{n=1}^{+\infty}x^n+8\sum\limits_{n=1}^{+\infty}\dfrac{x^n}{n+1}-\sum\limits_{n=1}^{+\infty}\dfrac{x^n}{n}\\
+		&=&(\dfrac{x^2}{1-x})'-\dfrac{5x}{1-x}+\dfrac{8}{x}[-\ln(1-x)-x]+\ln(1-x)\\
+		&=&\dfrac{1}{(1-x)^2}-9-\dfrac{5x}{1-x}-\dfrac{8\ln(1-x)}{x}+\ln(1-x)
+	\end{eqnarray*}
+
+综上所述,$S(x)=\dfrac{1}{(1-x)^2}-9-\dfrac{5x}{1-x}-\dfrac{8\ln(1-x)}{x}+\ln(1-x), \ x\in(-1,1)$
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 21}}}
+
+1. 设$f(x)=x[\dfrac{1}{x}]$,\ $[\dfrac{1}{x}]$表示不超过$\dfrac{1}{x}$的最大整数,判断$f(x)$的间断点及其类型
+\myspace{1}
+\begin{solution}
+
+	我们发现$f(x)$可能的间断点在$x=0,\pm \dfrac{1}{n}$,且$x-1<[x]\leq x\Rightarrow \dfrac{1}{x}-1<[\dfrac{1}{x}]<\dfrac{1}{x}$
+	
+	(1). 当在$x=0$处附近,$f(x)$在$x=0$处无定义
+	$$\left\lbrace
+	\begin{array}{l}
+		\lim\limits_{x\rightarrow 0^{+}}f(x)\in(1-x,1)\\
+		\lim\limits_{x\rightarrow 0^{-}}f(x)\in(1,1-x)
+	\end{array}
+	\right. \Rightarrow \lim\limits_{x\rightarrow 0^{+}}f(x)=\lim\limits_{x\rightarrow 0^{-}}f(x)=1$$
+	
+	$x=0$是$f(x)$的可去间断点
+	
+	(2). 当$x=\dfrac{1}{n}$处附近:  
+	$$\left\lbrace
+	\begin{array}{l}
+		\lim\limits_{x\rightarrow \frac{1}{n}^{+}}f(x)=1-\frac{1}{n}\\
+		\lim\limits_{x\rightarrow \frac{1}{n}^{-}}f(x)=1
+	\end{array}
+	\right. \Rightarrow f(x)\text{在}x=\dfrac{1}{n}\text{跳跃间断}$$
+	
+	(3). 当$x=-\dfrac{1}{n}$处附近:  
+	$$\left\lbrace
+	\begin{array}{l}
+		\lim\limits_{x\rightarrow -\frac{1}{n}^{+}}f(x)=1+\frac{1}{n}\\
+		\lim\limits_{x\rightarrow -\frac{1}{n}^{-}}f(x)=1
+	\end{array}
+	\right. \Rightarrow f(x)\text{在}x=\dfrac{1}{n}\text{跳跃间断}$$
+	
+	综上所述,$f(x)$有且仅有一个可去间断点$x=0$,有无数多个跳跃间断点$x=\pm \dfrac{1}{n}$
+\end{solution}
+\myspace{1}
+
+2. 设$f(x,y)$在全平面上有连续的偏导数,且$x\dfrac{\partial f}{\partial x}+y\dfrac{\partial f}{\partial y}=0$,证明:  $f(x,y)$为常数.
+\myspace{1}
+\begin{solution}
+
+	我们构造辅助函数:  $g(t)=f(tx,ty)$,我们有:  
+	$$\left\lbrace
+	\begin{array}{l}
+		g'(t)=xf_{1}(tx,ty)+yf_{2}(tx,ty)\\
+		tg'(t)=txf_{1}(tx,ty)+tyf_{2}(tx,ty)\\
+		x\dfrac{\partial f}{\partial x}+y\dfrac{\partial f}{\partial y}=0
+	\end{array}
+	\right. tg'(t)=0$$
+	
+	(1). 当$t\neq 0$,我们可以得到:  $g'(t)=0\Rightarrow g(t)=C$
+	
+	(2). 当$t\neq 0$时,我们由$f(x,y)$在全平面上有连续的偏导数,可以得到:  $g'(t)$连续$\Rightarrow g'(0)=0$
+	
+	综上所述,$g'(t)=0\Rightarrow g(t)=C\Rightarrow g(0)=g(1)\Rightarrow f(0,0)=f(x,y)=C$,$f(x,y)$为常数.
+\end{solution}
+\myspace{1}
+
+\section{Week \Rmnum{4}}
+\hl{\textbf{\textit{September 22}}}
+
+1.设函数$f(x)$二阶可导,$f(0)=1,f'(0)=0$,且对任意$x\geq 0$,有$f''(x)-5f'(x)+6f(x)\geq 0$,证明不等式$f(x)\geq 3e^{2x}-2e^{3x},\ (x\geq 0)$
+\myspace{1}
+\begin{solution}
+
+	我们构造辅助函数:  $F(x)=e^{-3x}(f'(x)-2f(x))$,我们有:  
+	$$\left\lbrace
+	\begin{array}{l}
+		F'(x)=e^{-3x}(f''(x)-5f'(x)+6f(x))\geq 0,x\geq 0\\
+		F(x)\text{在}(0,+\infty)\text{上单调递增}\\
+		F(x)\geq F(0)=-2
+	\end{array}
+	\right. \Rightarrow f'(x)-2f(x)+2e^{3x}\geq 0$$
+	
+	我们构造辅助函数:  $G(x)=e^{-2x}(f(x)+2e^{3x}),x\geq 0$,我们有:  
+	$$\left\lbrace
+	\begin{array}{l}
+		G'(x)=e^{-2x}(f'(x)-2f(x)+2e^{3x}),x\geq 0\\
+		G'(x)\geq 0\\
+		G(x)\geq G(0)=3\\
+	\end{array}
+	\right. \Rightarrow f(x)\geq 3e^{2x}-2e^{3x}$$
+	
+	综上所述,我们证明:  $f(x)\geq 3e^{2x}-2e^{3x},\ (x\geq 0)$
+\end{solution}
+\myspace{1}
+
+2. 求$\sum\limits_{n=1}^{+\infty}\dfrac{n!}{(2n+1)!!(n+1)}$的和
+\myspace{1}
+\begin{solution}
+
+	我们构造幂级数$\sum\limits_{n=1}^{+\infty}\dfrac{(2n)!!}{(2n+1)!!(n+1)}x^{2n+2}$,我们设该幂级数的和函数为$S(x)$
+	
+	我们可以得到原和式为$2S(\dfrac{1}{\sqrt{2}})$,我们需要求出幂级数的和函数$S(x)$
+	
+	我们不妨设$a_{n}=\dfrac{(2n)!!}{(2n+1)!!(n+1)}$,我们可以得到:  
+	$$\rho=\lim\limits_{n\rightarrow +\infty}|\dfrac{a_{n+1}}{a_{n}}|=1\Rightarrow R^2=1$$
+	
+	我们可以得到幂级数的收敛区间为$(-1,1)$,我们对幂级数逐项求导可以得到:  
+	$$S'(x)=2\sum\limits_{n=1}^{+\infty}\dfrac{(2n)!!}{(2n+1)!!}x^{2n+1}$$
+	
+	我们不妨设$f(x)=\sum\limits_{n=1}^{+\infty}\dfrac{(2n)!!}{(2n+1)!!}x^{2n+1}$,我们有:  $f'(x)=\sum\limits_{n=1}^{+\infty}\dfrac{(2n)!!}{(2n-1)!!}x^{2n}$
+	
+	我们对$f'(x)$稍作变形:  
+	\begin{eqnarray*}
+		f'(x)&=&\sum\limits_{n=1}^{+\infty}\dfrac{(2n)!!}{(2n-1)!!}x^{2n}\\
+		&=&x\left[\sum\limits_{n=1}^{+\infty}\dfrac{(2n-2)!!}{(2n-1)!!}x^{2n} \right]'\\
+		&=&x\left[ x\left(\sum\limits_{n=1}^{+\infty}\dfrac{(2n-2)!!}{(2n-1)!!}x^{2n-1} \right) \right]'\\
+		&=&x\left[ xf(x)+x^2\right]'   
+	\end{eqnarray*}
+
+	我们得到:  $f'(x)-\dfrac{x}{1-x^2}f(x)=\dfrac{2x^2}{1-x^2}$
+	
+	我们可以解得:  $f(x)=\dfrac{\arcsin x}{\sqrt{1-x^2}}-x+C,f(0)=0\Rightarrow C=0$
+	
+	我们得到:  $S'(x)=\dfrac{2\arcsin x}{\sqrt{1-x^2}}-2x,S(0)=0\Rightarrow S(x)=(\arcsin x)^2-x^2$
+	
+	我们得到原和式为:  $I=2S(\dfrac{1}{\sqrt{2}})=\dfrac{\pi^2}{8}-1$
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 23}}}
+
+1. 计算$\iint\limits_{D}\left[ x(1-y^3)+y(1+x^3)\right]dxdy$,其中$D=\{(x,y)|x^2+y^2\leq 2x+2y\}$
+\myspace{1}
+\begin{solution}
+
+	我们根据轮换对称性,可以得到:
+	\begin{eqnarray*}
+		I&=&\iint\limits_{D}\left[ x(1-y^3)+y(1+x^3)\right]dxdy\\
+		&=&\iint\limits_{D}\left[ y(1-x^3)+x(1+y^3)\right]dxdy\\
+		&=&\iint\limits_{D}(x+y)dxdy\\
+		&=&\iint\limits_{D}(x-1+y-1)dxdy+\iint\limits_{D}2dxdy\\
+		&=&2S_{D}\\
+		&=&4\pi
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
+
+2. 设$a_{n}=\int_{0}^{\frac{\pi}{2}}\cos^n x\sin nxdx$,证明:  $a_{n}=\dfrac{1}{2^{n+1}}\sum\limits_{k=1}^{n}\dfrac{2^k}{k},\ (n\geq 1)$
+\myspace{1}
+\begin{solution}
+
+	我们可以得到:
+	$$\left\lbrace
+	\begin{array}{l}
+		a_{n}=\int_{0}^{\frac{\pi}{2}}\cos^n x\sin nxdx\\
+		a_{n-1}=\int_{0}^{\frac{\pi}{2}}\cos^{n-1} x\sin(n-1)xdx
+	\end{array}
+	\right. \Rightarrow a_{n-1}=a_{n}-\int_{0}^{\frac{\pi}{2}}\cos^{n-1}x\sin x\cos nxdx$$
+	
+	我们利用分部积分对$a_{n}$进行简化:  
+	\begin{eqnarray*}
+		a_{n}&=&\int_{0}^{\frac{\pi}{2}}\cos^n x\sin nxdx\\
+		&=&-\dfrac{1}{n}\left(\int_{0}^{\frac{\pi}{2}}\cos^n xd\cos nx \right)\\
+		&=&-\dfrac{1}{n}\left(\cos^n x\cos nx|_{x=0}^{x=\frac{\pi}{2}}+n\int_{0}^{\frac{\pi}{2}}\cos^{n-1}x\sin x\cos nxdx\right)\\
+		&=&\dfrac{1}{n}-\int_{0}^{\frac{\pi}{2}}\cos^{n-1}x\sin x\cos nxdx
+	\end{eqnarray*}
+
+	我们可以得到:  $$a_{n}=\dfrac{1}{n}+a_{n-1}-a_{n}\Rightarrow a_{n}-\dfrac{a_{n-1}}{2}=\dfrac{1}{2n}$$
+	
+	我们有:  $a_{1}=\int_{0}^{\frac{\pi}{2}}\cos x\sin xdx=\dfrac{1}{2}$
+	
+	$$\left\lbrace
+	\begin{array}{l}
+		a_{1}=\dfrac{1}{2}\\
+		a_{n}-\dfrac{a_{n-1}}{2}=\dfrac{1}{2n}
+	\end{array}
+	\right. \Rightarrow\text{数列}\{a_{n}\}\text{唯一}$$
+	
+	我们不妨假设:  $a_{n}=\dfrac{1}{2^{n+1}}\sum\limits_{k=1}^{n}\dfrac{2^k}{k}$,下面用数学归纳法证明:  
+	
+	(1). 当$n=1$时,$a_{1}=\dfrac{1}{2}$
+	
+	(2). 当$n=k$时,我们有:  $a_{k}=\dfrac{1}{2^{k+1}}\sum\limits_{i=1}^{k}\dfrac{2^i}{i}$
+	$$a_{k+1}=\dfrac{1}{2(k+1)}+\dfrac{1}{2}a_{k}=\dfrac{2^{k+1}}{2^{k+2}(k+1)}+\dfrac{1}{2^{k+2}}\sum\limits_{i=1}^{k}\dfrac{2^i}{i}=\dfrac{1}{2^{k+2}}\sum\limits_{i=1}^{k+1}\dfrac{2^i}{i}$$
+	
+	综上所述,我们得到:  $a_{n}=\dfrac{1}{2^{n+1}}\sum\limits_{k=1}^{n}\dfrac{2^k}{k},\ (n\geq 1)$
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 24}}}
+
+1. 设三元二次型$f=x^{T}Ax$正定,其中$x=(x_{1},x_{2},x_{3})^{T}$,$A$为实对称矩阵,则下列说法不正确的是:  
+\begin{itemize}
+	\item A. 仅在$x=0$处$f$取得最小值
+	\item B. 齐次方程组$\left\lbrace
+	\begin{array}{l}
+		\dfrac{\partial f}{\partial x_{1}}=0\\
+		\dfrac{\partial f}{\partial x_{2}}=0\\
+		\dfrac{\partial f}{\partial x_{3}}=0
+	\end{array}
+	\right. $只有零解
+	\item C. 二阶偏导数矩阵
+	$$\left( \dfrac{\partial^2 f}{\partial x_{i}\partial x_{j}}\right)_{3\times 3}=\left( \begin{matrix}
+		\dfrac{\partial^2 f}{\partial x_{1}^2}&\dfrac{\partial^2 f}{\partial x_{1}\partial x_{2}}&\dfrac{\partial^2 f}{\partial x_{1}\partial x_{3}}\\
+		\dfrac{\partial^2 f}{\partial x_{2}\partial x_{1}}&\dfrac{\partial^2 f}{\partial x_{2}^2}&\dfrac{\partial^2 f}{\partial x_{2}\partial x_{3}}\\
+		\dfrac{\partial^2 f}{\partial x_{3}\partial x_{1}}&\dfrac{\partial^2 f}{\partial x_{3}\partial x_{2}}&\dfrac{\partial^2 f}{\partial x_{3}^2}
+	\end{matrix}\right) \text{正定}$$
+	\item \hl{D}. 存在三维非零列向量$\alpha$,使得$A=\alpha\alpha^{T}$,从而$f=(\alpha^{T}x)^2$
+\end{itemize}
+\myspace{1}
+\begin{solution}
+
+	我们不妨假设$f=a_{11}x_{1}^2+a_{22}x_{2}^2+a_{33}x_{3}^2+2a_{12}x_{1}x_{2}+2a_{13}x_{1}x_{3}+2a_{23}x_{2}x_{3}$,我们可以得到:  
+	$$A=\left[ \begin{matrix}
+		a_{11}&a_{12}&a_{13}\\
+		a_{11}&a_{22}&a_{23}\\
+		a_{13}&a_{23}&a_{33}
+	\end{matrix}\right] $$
+
+	(1).我们由$f$正定,可以得到:  $f\geq 0$,当且仅当$\left(\begin{matrix}
+		x_{1}\\x_{2}\\x_{3}
+	\end{matrix} \right) =\left( \begin{matrix}
+	0\\0\\0
+\end{matrix}\right) $时等号成立.
+
+(2)
+$$\left\lbrace
+\begin{array}{l}
+	\dfrac{\partial f}{\partial x_{1}}=0\\
+	\dfrac{\partial f}{\partial x_{2}}=0\\
+	\dfrac{\partial f}{\partial x_{3}}=0
+\end{array}
+\right. \Rightarrow \left\lbrace
+\begin{array}{l}
+	2a_{11}x_{1}+2a_{12}x_{2}+2a_{13}x_{3}=0\\
+	2a_{12}x_{1}+2a_{22}x_{2}+2a_{23}x_{3}=0\\
+	2a_{13}x_{1}+2a_{23}x_{2}+2a_{33}x_{3}=0
+\end{array}
+\right. \Rightarrow \left( \begin{matrix}
+	2a_{11}&2a_{12}&2a_{13}\\
+	2a_{12}&2a_{22}&2a_{23}\\
+	2a_{13}&2a_{23}&2a_{33}
+\end{matrix}\right) \left(\begin{matrix}
+x_{1}\\x_{2}\\x_{3}
+\end{matrix} \right) =\left( \begin{matrix}
+0\\0\\0
+\end{matrix}\right) \Rightarrow 2Ax=0$$
+
+矩阵$A$为正定矩阵$\Rightarrow |A|\neq 0\Rightarrow$原方程组只有零解.
+
+(3).我们可以得到:  
+$$\left( \dfrac{\partial^2 f}{\partial x_{i}\partial x_{j}}\right)_{3\times 3}=\left( \begin{matrix}
+	\dfrac{\partial^2 f}{\partial x_{1}^2}&\dfrac{\partial^2 f}{\partial x_{1}\partial x_{2}}&\dfrac{\partial^2 f}{\partial x_{1}\partial x_{3}}\\
+	\dfrac{\partial^2 f}{\partial x_{2}\partial x_{1}}&\dfrac{\partial^2 f}{\partial x_{2}^2}&\dfrac{\partial^2 f}{\partial x_{2}\partial x_{3}}\\
+	\dfrac{\partial^2 f}{\partial x_{3}\partial x_{1}}&\dfrac{\partial^2 f}{\partial x_{3}\partial x_{2}}&\dfrac{\partial^2 f}{\partial x_{3}^2}
+\end{matrix}\right)=\left( \begin{matrix}
+2a_{11}&2a_{12}&2a_{13}\\
+2a_{12}&2a_{22}&2a_{23}\\
+2a_{13}&2a_{23}&2a_{33}
+\end{matrix}\right)=2A\text{正定}$$
+
+(4)$|A|\neq 0\Rightarrow rank(A)=3$,假设$A=\alpha\alpha^{T}$,$rank(A)=1$矛盾！！！
+\end{solution}
+\myspace{1}
+
+
+2. 证明不等式:  $$|\dfrac{\sin x-\sin y}{x-y}-\cos y|\leq \dfrac{1}{2}|x-y|,\ (x\neq y)$$
+\myspace{1}
+\begin{solution}
+
+	我们利用带拉格朗日余项的泰勒公式将$f(x)=\sin x$进行展开:  
+	$$\sin x=\sin y+(x-y)\cos y+\dfrac{(x-y)^2}{2}\sin\xi, \xi\text{位于}x,y\text{之间}$$
+	
+	我们可以得到:  
+	\begin{eqnarray*}
+		|\dfrac{\sin x-\sin y}{x-y}-\cos y|&=&|\dfrac{\sin\xi}{2}(x-y)|\\
+		&\leq&\dfrac{1}{2}|x-y|
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 25}}}
+
+1.求$\sum\limits_{n=2}^{+\infty}\dfrac{n^2+3n+4}{2^n(n+1)!}x^{2n}$的和函数$S(x)$
+\myspace{1}
+\begin{solution}
+
+	我们可以将原级数化为:  $\sum\limits_{n=2}^{+\infty}\dfrac{n^2+3n+4}{(n+1)!}(\dfrac{x^2}{2})^{n}$
+	
+	我们设$a_{n}=\dfrac{n^2+3n+4}{(n+1)!}$,我们可以得到:  
+	$$a_{n}=\dfrac{1}{(n-1)!}+\dfrac{2}{n!}+\dfrac{2}{(n+1)!}$$
+	
+	我们先求出收敛半径:  
+	$$\rho=\lim\limits_{n\rightarrow +\infty}|\dfrac{a_{n+1}}{a_{n}}|=0\Rightarrow R=\infty$$
+	
+	原级数可以化为:  
+	\begin{eqnarray*}
+		\sum\limits_{n=2}^{+\infty}\dfrac{n^2+3n+4}{2^n(n+1)!}x^{2n}&=&\sum\limits_{n=2}^{+\infty}\dfrac{1}{(n-1)!}(\dfrac{x^2}{2})^{n}+\sum\limits_{n=2}^{+\infty}\dfrac{2}{n!}(\dfrac{x^2}{2})^{n}+\sum\limits_{n=2}^{+\infty}\dfrac{2}{(n+1)!}(\dfrac{x^2}{2})^{n}\\
+		&=&\dfrac{x^2}{2}\sum\limits_{n=1}^{+\infty}\dfrac{1}{n!}(\dfrac{x^2}{2})^{n}+2\sum\limits_{n=2}^{+\infty}\dfrac{1}{n!}(\dfrac{x^2}{2})^{n}+\dfrac{4}{x^2}\sum\limits_{n=3}^{+\infty}\dfrac{1}{n!}(\dfrac{x^2}{2})^{n}\\
+		&=&\dfrac{x^2}{2}\left[e^{\frac{x^2}{2}}-1\right]+2\left[e^{\frac{x^2}{2}}-1-\dfrac{x^2}{2}\right]+\dfrac{4}{x^2}\left[ e^{\frac{x^2}{2}}-1-\dfrac{x^2}{2}-\dfrac{x^4}{8}\right]\\
+		&=&\dfrac{x^2e^{\frac{x^2}{2}}}{2}+2e^{\frac{x^2}{2}}+\dfrac{4e^{\frac{x^2}{2}}}{x^2}-2x^2-4-\dfrac{4}{x^2}   
+	\end{eqnarray*}
+
+	综上所述,我们得到:  $S(x)=\left\lbrace
+	\begin{array}{l}
+		\dfrac{x^2e^{\frac{x^2}{2}}}{2}+2e^{\frac{x^2}{2}}+\dfrac{4e^{\frac{x^2}{2}}}{x^2}-2x^2-4-\dfrac{4}{x^2},\ x\neq 0\\
+		0,\ x=0
+	\end{array}
+	\right. $
+\end{solution}
+\myspace{1}
+
+2. 设线性方程组$Ax=\alpha$有解,$\left( \begin{matrix}
+	A\\B
+\end{matrix}\right)x=\left( \begin{matrix}
+\alpha\\\beta
+\end{matrix}\right) $无解,则下列结论正确的是:  
+\begin{itemize}
+	\item A. $r(B,\beta)=r(B)+1$
+	\item B. $r\left(\begin{matrix}
+		A&\alpha\\B&\beta
+	\end{matrix}\right)<r\left( \begin{matrix}
+	A\\B
+\end{matrix}\right) +1$
+	\item C. $r\left[B^{T}(B,\beta)\right]>r(B^{T}B)$ 
+	\item \hl{D}. $r\left[(A^T,B^T)\left(\begin{matrix}
+		A&\alpha\\B&\beta
+	\end{matrix} \right) \right] =r\left[ (A^T,B^T)\left( \begin{matrix}
+	A\\B
+\end{matrix}\right) \right] $
+\end{itemize}
+\myspace{1}
+\begin{solution}
+
+	(1). 方程组$Ax=\alpha$与$Bx=\beta$无公共解,$r(B,\beta)$和$r(B)+1$可能相等,也可能不等
+	
+	(2). 方程组$\left( \begin{matrix}
+		A\\B
+	\end{matrix}\right)x=\left( \begin{matrix}
+		\alpha\\\beta
+	\end{matrix}\right)$无解$\Rightarrow r\left(\begin{matrix}
+	A&\alpha\\B&\beta
+\end{matrix}\right)=r\left( \begin{matrix}
+A\\B
+\end{matrix}\right) +1$
+
+	(3). $\left\lbrace
+	\begin{array}{l}
+		r\left[B^{T}(B,\beta)\right]\leq r(B^{T})\\
+		r(B^{T})=r(B)=r(BB^{T})=r(B^{T}B)\\
+		r\left[B^{T}(B,\beta)\right]=r(B^{T}B,B^{T}\beta)\geq r(B^{T}B)
+	\end{array}
+	\right. \Rightarrow r\left[B^{T}(B,\beta)\right]=r(B^{T}B)$
+	
+	(4). $$\left\lbrace
+	\begin{array}{l}
+		r\left[(A^T,B^T)\left(\begin{matrix}
+			A&\alpha\\B&\beta
+		\end{matrix} \right) \right]\geq r\left[ (A^T,B^T)\left( \begin{matrix}
+		A\\B
+	\end{matrix}\right) \right] \\
+		r\left[ (A^T,B^T)\left( \begin{matrix}
+			A\\B
+		\end{matrix}\right) \right] =r(A^{T},B^{T})\\
+	r(A^{T},B^{T})\geq r\left[(A^T,B^T)\left(\begin{matrix}
+		A&\alpha\\B&\beta
+	\end{matrix} \right) \right]
+	\end{array}
+	\right. \Rightarrow r\left[(A^T,B^T)\left(\begin{matrix}
+		A&\alpha\\B&\beta
+	\end{matrix} \right) \right] =r\left[ (A^T,B^T)\left( \begin{matrix}
+		A\\B
+	\end{matrix}\right) \right] $$
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 26}}}
+
+1. 已知$\lim\limits_{x\rightarrow 0^{+}}\dfrac{x^{\ln (3\cos x)}-3^{\ln x}}{x^k\ln x}=c,\ (c\neq 0)$,求$c$、$k$
+\myspace{1}
+\begin{solution}
+
+	原极限可以化为:  
+	\begin{eqnarray*}
+		I&=&\lim\limits_{x\rightarrow 0^{+}}\dfrac{x^{\ln (3\cos x)}-3^{\ln x}}{x^k\ln x}\\
+		&=&\lim\limits_{x\rightarrow 0^{+}}\dfrac{e^{\ln x\ln (3\cos x)}-e^{\ln3\ln x}}{x^k\ln x}\\
+		&=&\lim\limits_{x\rightarrow 0^{+}}\dfrac{e^{\ln3\ln x}[e^{\ln(\cos x)\ln x}-1]}{x^k\ln x}\\
+		&=&\lim\limits_{x\rightarrow 0^{+}}\dfrac{x^{\ln3}[\ln x\ln(\cos x)]}{x^k\ln x}\\
+		&=&\lim\limits_{x\rightarrow 0^{+}}\dfrac{-x^{2+\ln3}}{2x^k}\\
+		&=&c
+	\end{eqnarray*}
+	
+	我们可以得到:  $\left\lbrace
+	\begin{array}{l}
+		k=2+\ln3\\
+		c=-\dfrac{1}{2}
+	\end{array}
+	\right. $
+\end{solution}
+\myspace{1}
+
+2. 设$f(x,y)$在$D=\{(x,y)|x^2+y^2\leq 1\}$内具有连续的偏导数,且在边界上取值为$0$,证明:  
+$$f(0,0)=\lim\limits_{\xi\rightarrow 0^{+}}\dfrac{-1}{2\pi}\iint\limits_{D_{1}}\dfrac{x\dfrac{\partial f}{\partial x}+y\dfrac{\partial f}{\partial y}}{x^2+y^2}dxdy,\ (D_{1}=\{(x,y)|\xi^{2}\leq x^2+y^2\leq 1\})$$
+\myspace{1}
+\begin{solution}
+
+	我们利用极坐标代换:  
+	$$\left\lbrace
+	\begin{array}{l}
+		x=r\cos\theta\\
+		y=r\sin\theta
+	\end{array}
+	\right. \Rightarrow f(x,y)=f(r\cos\theta,r\sin\theta)\Rightarrow \dfrac{\partial f}{\partial r}=\dfrac{\partial f}{\partial x}\cos\theta+\dfrac{\partial f}{\partial y}\sin\theta$$
+	
+	我们得到:  $r\dfrac{\partial f}{\partial r}=x\dfrac{\partial f}{\partial x}+y\dfrac{\partial f}{\partial y}$
+	
+	原极限可以化为:  
+	\begin{eqnarray*}
+		I&=&\lim\limits_{\xi\rightarrow 0^{+}}\dfrac{-1}{2\pi}\iint\limits_{D_{1}}\dfrac{\partial f}{\partial r}drd\theta\\
+		&=&\lim\limits_{\xi\rightarrow 0^{+}}\dfrac{-1}{2\pi}\int_{0}^{2\pi}d\theta\int_{\xi}^{1}\dfrac{\partial f}{\partial r}dr\\
+		&=&\lim\limits_{\xi\rightarrow 0^{+}}\dfrac{-1}{2\pi}\int_{0}^{2\pi}[f(\cos\theta,\sin\theta)-f(\xi\cos\theta,\xi\sin\theta)]d\theta\\
+		&=&\lim\limits_{\xi\rightarrow 0^{+}}\dfrac{-1}{2\pi}(-2\pi)f(\xi\cos\alpha,\xi\sin\alpha),\alpha\in(0,2\pi)(\text{积分中值定理})\\
+		&=&f(0,0)
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 27}}}
+
+1. 设$f(x)$二阶可导,$f(x)>0$,$\lim\limits_{x\rightarrow 0}\dfrac{f(x)-1}{x}=1$,且$f(x)f''(x)>[f'(x)]^2$,下列命题一定成立的是:  
+\begin{itemize}
+	\item \hl{A}. $e^{-x}f(x)\geq 1$
+	\item B. $e^{-x}f(x)<1$
+	\item C. $\dfrac{\ln f(x)}{x}<1$
+	\item D. $\dfrac{\ln f(x)}{x}>1$
+\end{itemize}
+\myspace{1}
+\begin{solution}
+
+	$\lim\limits_{x\rightarrow 0}\dfrac{f(x)-1}{x}=1\Rightarrow \left\lbrace
+	\begin{array}{l}
+		f(0)=1\\
+		f'(0)=1
+	\end{array}
+	\right. $
+	我们构造辅助函数:  $F(x)=\ln f(x)$,我们有:  
+	$$\left\lbrace
+	\begin{array}{l}
+		F'(x)=\dfrac{f'(x)}{f(x)}\\
+		F''(x)=\dfrac{f''(x)f(x)-[f'(x)]^2}{[f(x)]^2}>0\\
+		F(0)=0\\
+		F'(0)=1
+	\end{array}
+	\right. $$
+	
+	我们将$F(x)$在$x=0$处进行泰勒展开得到:  
+	$$F(x)=F(0)+F'(0)x+\dfrac{F''(\xi)}{2}x^2,\ F''(x)>0\Rightarrow F(x)\geq x\Rightarrow e^{-x}f(x)\geq 1$$
+\end{solution}
+\myspace{1}
+
+2. 求$\sum\limits_{n=1}^{+\infty}n^3x^n$的和函数$S(x)$
+\myspace{1}
+\begin{solution}
+
+	首先求收敛域,不妨设$a_{n}=n^3$,我们有:  
+	$$\rho=\lim\limits_{n\rightarrow +\infty}|\dfrac{a_{n+1}}{a_{n}}|=1\Rightarrow R=1$$
+	
+	当$x=\pm 1$时,原幂级数发散,因此幂级数的收敛域为$(-1,1)$
+	
+	我们已知幂级数:  $G(x)=\sum\limits_{n=1}^{+\infty}x^{n}=\dfrac{x}{1-x},x\in(-1,1)$
+	
+	我们可以得到:  
+	$$\left\lbrace
+	\begin{array}{l}
+		G'(x)=\sum\limits_{n=1}^{+\infty}nx^{n-1}=\dfrac{1}{(x-1)^2}\\
+		xG'(x)=\sum\limits_{n=1}^{+\infty}nx^{n}=\dfrac{x}{(x-1)^2}
+	\end{array}
+	\right.\Rightarrow \left\lbrace
+	\begin{array}{l}
+		[xG'(x)]'=\sum\limits_{n=1}^{+\infty}n^2x^{n-1}=\dfrac{1+x}{(1-x)^3}\\
+		x[xG'(x)]'=\sum\limits_{n=1}^{+\infty}n^2x^{n}=\dfrac{x(1+x)}{(1-x)^3}\\
+	\end{array}
+	\right.\Rightarrow \left\lbrace
+	\begin{array}{l}
+		\{x[xG'(x)]'\}'=\sum\limits_{n=1}^{+\infty}n^3x^{n-1}=\dfrac{x^2+4x+1}{(x-1)^4}\\
+		S(x)=x\{x[xG'(x)]'\}'=\dfrac{x^3+4x^2+x}{(x-1)^4}
+	\end{array}
+	\right. $$
+	
+	综上所述,原幂级数的和函数$S(x)=\dfrac{x^3+4x^2+x}{(x-1)^4}$
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 28}}}
+
+1. 求极限$\lim\limits_{x\rightarrow +\infty}\left[(x+2)^{1+\frac{1}{x}}-x^{1+\frac{1}{x+\sin x}}\right]$
+\myspace{1}
+\begin{solution}
+
+	原极限可化为:  
+	\begin{eqnarray*}
+		I&=&\lim\limits_{x\rightarrow +\infty}2(x+2)^{\frac{1}{x}}+\lim\limits_{x\rightarrow +\infty}x\left[(x+2)^{\frac{1}{x}}-x^{\frac{1}{x+\sin x}}\right]\\
+		&=&2+\lim\limits_{x\rightarrow +\infty}x\left[e^{\frac{\ln(x+2)}{x}}-e^{\frac{\ln x}{x+\sin x}}\right]\\
+		&=&2+\lim\limits_{x\rightarrow +\infty}e^{\xi}x[\frac{\ln(x+2)}{x}-\frac{\ln x}{x+\sin x}](\text{拉格朗日中值定理})\\
+		&=&2
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
+
+
+2. 设$A$为$n$阶方阵,$\beta$为$n$维非零列向量,且$r\left( \begin{matrix}
+	A^T\\\beta^T
+\end{matrix}\right)<r\left( \begin{matrix}
+A^T&0\\\beta^T&1
+\end{matrix}\right)$,下列说法正确的是:  
+\begin{itemize}
+	\item A. $\left( \begin{matrix}
+		A&\beta\\\beta^T&0
+	\end{matrix}\right)\left( \begin{matrix}
+	x\\y
+\end{matrix}\right)=0$必有非零解
+	\item B. $\left( \begin{matrix}
+		A&\beta\\\beta^T&0
+	\end{matrix}\right)\left( \begin{matrix}
+		x\\y
+	\end{matrix}\right)=0$只有零解
+	\item C. 方程组$Ax=\beta$必无解
+	\item \hl{D}. 方程组$Ax=\beta$必有解
+\end{itemize}
+\myspace{1}
+\begin{solution}
+
+	$$\left( \begin{matrix}
+		A&\beta\\\beta^T&0
+	\end{matrix}\right)\left( \begin{matrix}
+		x\\y
+	\end{matrix}\right)=0\Rightarrow (A,\beta)v=0$$
+	我们由:  $r\left( \begin{matrix}
+		A^T\\\beta^T
+	\end{matrix}\right)<r\left( \begin{matrix}
+		A^T&0\\\beta^T&1
+	\end{matrix}\right)$得到:  
+
+	(1). 当$r\left( \begin{matrix}
+		A^T&0\\\beta^T&1
+	\end{matrix}\right)=n+1$时,$(A,\beta)v=0$只有零解$\Rightarrow \left( \begin{matrix}
+	A&\beta\\\beta^T&0
+\end{matrix}\right)\left( \begin{matrix}
+x\\y
+\end{matrix}\right)=0$只有零解
+
+	(2). 当$r\left( \begin{matrix}
+		A^T&0\\\beta^T&1
+	\end{matrix}\right)<n+1$时,$\left( \begin{matrix}
+	A&\beta\\\beta^T&0
+\end{matrix}\right)\left( \begin{matrix}
+x\\y
+\end{matrix}\right)=0$必有非零解
+
+	以上两种情况我们都有:  $r\left( \begin{matrix}
+		A^T\\\beta^T
+	\end{matrix}\right)<r\left( \begin{matrix}
+		A^T&0\\\beta^T&1
+	\end{matrix}\right)<\left( \begin{matrix}
+	A^T\\\beta^T
+\end{matrix}\right)+1\Rightarrow r(A,\beta)=r(A)$,我们可以得到:  方程组$Ax=\beta$一定有解
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 29}}}
+
+1. 设$X\sim N(0,1)$,求$E(X^4e^{X})$
+\myspace{1}
+\begin{solution}
+	
+\end{solution}
+\myspace{1}
+
+2.设$f(x)$为非负连续函数,且当$x>0$时,有$\int_{0}^{x}f(x)f(x-t)dt=x^3$,求$f(x)$ 
+\myspace{1}
+\begin{solution}
+
+	我们不妨设$F(x)=\int_{0}^{x}f(t)dt,F(0)=0$,上述条件可化为:  
+	$$\int_{0}^{x}f(x)f(x-t)dt=x^3\Rightarrow f(x)\int_{0}^{x}f(t)dt=x^3\Rightarrow F(x)F'(x)=x^3\Rightarrow F(x)=\dfrac{x^2}{\sqrt{2}}$$
+	$$f(x)=F'(x)=\sqrt{2}x$$
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{September 30}}}
+
+1. $a_{n+2}=\dfrac{2}{n+2}a_{n+1}+\dfrac{3}{(n+2)(n+1)}a_{n}(n\geq 0)$,$a_{0}=0,a_{1}=1$,已知$a_{3}>a_{4}>a_{5}$,求$\sum\limits_{n=0}^{+\infty}a_{n}x^n$的和函数$S(x)$
+\myspace{1}
+\begin{solution}
+
+	我们利用数学归纳法证明$\{a_{n}\}(n\geq 3)$单调递减:  
+	
+	(1). 当$n=3,4,5$,$a_{3}>a_{4}>a_{5}$
+	
+	(2). 假设$n=k(k\geq 3)$时,$a_{k+1}<a_{k}$,我们有:  
+	$$a_{k+2}=\dfrac{2}{k+2}a_{k+1}+\dfrac{3}{(k+2)(k+1)}a_{k}<\dfrac{2}{k+1}a_{k}+\dfrac{3}{(k+1)k}a_{k-1}=a_{k+1}$$
+	
+	我们可以得到$\{a_{n}\}(n\geq 3)$单调递减,$a_{n}>0$,$\lim\limits_{n\rightarrow+\infty}a_{n}$存在
+	
+	我们假设$\lim\limits_{n\rightarrow+\infty}\dfrac{a_{n+1}}{a_{n}}=A$存在,我们有:  
+	$$A=A\lim\limits_{n\rightarrow+\infty}\dfrac{2}{n+2}+\lim\limits_{n\rightarrow+\infty}\dfrac{3}{(n+2)(n+1)}\Rightarrow A=0\Rightarrow \text{收敛域}(-\infty,+\infty)$$
+	
+	我们可以得到:  
+	$$(n+2)(n+1)a_{n+2}=2(n+1)a_{n+1}+3a_{n}\Rightarrow (a_{n+2}x^{n+2})''=2(a_{n+1}x^{n+1})'+3a_{n}x^n$$
+	
+	我们得到:  $$\sum\limits_{n=0}^{+\infty}(a_{n+2}x^{n+2})''=2\sum\limits_{n=0}^{+\infty}(a_{n+1}x^{n+1})'+3\sum\limits_{n=0}^{+\infty}a_{n}x^n$$
+	
+	我们进一步得到:  
+	$$[S(x)-a_{0}-a_{1}x]''=2[S(x)-a_{0}]'+3S(x)\Rightarrow S''(x)=2S'(x)+3S(x),\left\lbrace
+	\begin{array}{l}
+		S(0)=a_{0}=0\\
+		S'(0)=a_{1}=1
+	\end{array}
+	\right. $$
+	
+	我们可以得到:  $S(x)=\dfrac{e^{3x}-e^{-x}}{4}$
+\end{solution}
+\myspace{1}
+
+2. 设$f(x)$在$[0,1]$上二阶可导,且$\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)}{x}=2$,$\int_{0}^{1}f(x)dx=1$.
 
 (1). 证明:  $\exists \xi\in(0,1),\ s.t. f'(\xi)=f(\xi)-2\xi+2$
 
@@ -90,1565 +1777,3 @@
 	我们对$P(x)$在$(0,1)$上使用罗尔定理可以得到:  
 	$$\exists \mu\in(0,1),\ s.t. P'(\mu)=0\Rightarrow \mu f(\mu)=2\int_{0}^{\mu}f(t)dt$$
 \end{solution}
-\myspace{1}
-
-2. 设$I=\int_{0}^{\sqrt{\pi}}x\cos x^2dx$,$J=\int_{0}^{\sqrt{\pi}}\cos x^2dx$,$K=\int_{0}^{\pi}\sqrt{x}\cos xdx$,比较$I,J,K$的大小
-\myspace{1}
-\begin{solution}
-
-	我们有:  $I=\int_{0}^{\sqrt{\pi}}x\cos x^2dx=\dfrac{\sin x^2}{2}|_{0}^{\sqrt{\pi}}=0$
-	
-	$$J=\int_{0}^{\sqrt{\pi}}\cos x^2dx=\int_{0}^{\pi}\dfrac{\cos t}{2\sqrt{t}}dt>0$$
-	
-	$$K=\int_{0}^{\pi}\sqrt{x}\cos xdx<0$$
-	
-	综上所述,我们可以得到:  $K<I<J$
-\end{solution}
-\myspace{1}
-
-3. 已知曲线$L: y=x^2-1(-1\leq x\leq 2)$,方向从$A(-1,0)$到$B(2,3)$,求曲线积分$\int_{L}\dfrac{xdy-ydx}{x^2+y^2}$
-\myspace{1}
-\begin{solution}
-
-	原曲线积分可化为:  
-	\begin{eqnarray*}
-		\int_{L}\dfrac{xdy-ydx}{x^2+y^2}&=&\int_{-1}^{2}\dfrac{x^2+1}{x^2+(x^2-1)^2}dx\\
-		&=&\int_{-1}^{2}\dfrac{x^2+1}{x^4-x^2+1}dx\\
-		&=&\int_{-1}^{2}\dfrac{1+\frac{1}{x^2}}{x^2+\frac{1}{x^2}-1}dx\\
-		&=&\int_{-1}^{2}\dfrac{1}{1+(x-\frac{1}{x})^2}d(x-\frac{1}{x})\\
-		&=&\int_{-1}^{0^{-}}\dfrac{1}{1+(x-\frac{1}{x})^2}d(x-\frac{1}{x})+\int_{0^{+}}^{2}\dfrac{1}{1+(x-\frac{1}{x})^2}d(x-\frac{1}{x})\\
-		&=&\arctan(x-\frac{1}{x})|_{x=-1}^{x=0^{-}}+\arctan(x-\frac{1}{x})|_{x=0^{+}}^{x=2}\\
-		&=&\arctan\dfrac{3}{2}+\pi
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-4. 设$f(x)=\lim\limits_{n\rightarrow+\infty}\sqrt[n]{1+x^n+\left( \dfrac{x^2}{2}\right) ^n}(x>0)$,求$\int f(x)dx$
-\myspace{1}
-
-\begin{solution}
-
-	我们可以得到:  
-	$$f(x)=\left\lbrace
-	\begin{array}{l}
-		1,x\in(0,1]\\
-		x,x\in(1,2]\\
-		\dfrac{x^2}{2},x\in(2,+\infty)
-	\end{array}
-	\right. \Rightarrow \int f(x)=\left\lbrace
-	\begin{array}{l}
-		x+C,\ x\in(0,1]\\
-		\dfrac{x^2+1}{2}+C,\ x\in(1,2]\\
-		\dfrac{x^3+7}{6}+C,\ x\in(2,+\infty)
-	\end{array}
-	\right. $$
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 2}}}
-
-1. 设$f(x)$连续,$f(x+2)-f(x)=\sin x$,$\int_{0}^{2}f(x)dx=0$,求$\int_{1}^{3}f(x)dx$
-\myspace{1}
-\begin{solution}
-
-	我们可以得到:  
-	\begin{eqnarray*}
-		\int_{1}^{3}f(x)dx&=&\int_{1}^{3}f(x)dx-\int_{0}^{2}f(x)dx\\
-		&=&\int_{2}^{3}f(x)dx-\int_{0}^{1}f(x)dx\\
-		&=&\int_{0}^{1}f(x+2)dx-\int_{0}^{1}f(x)dx\\
-		&=&\int_{0}^{1}[f(x+2)-f(x)]dx\\
-		&=&\int_{0}^{1}\sin xdx\\
-		&=&1-\cos 1
-	\end{eqnarray*}
-	\begin{anymark}[注]
-	我们构造辅助函数:  $F(x)=\int_{x}^{x+2}f(t)dt$,我们有:  
-	$$\left\lbrace
-	\begin{array}{l}
-		F'(x)=f(x+2)-f(x)=\sin x\\
-		F(0)=0
-	\end{array}
-	\right. \Rightarrow \left\lbrace
-	\begin{array}{l}
-		F(x)=-\cos x+1\\
-		F(1)=\int_{1}^{3}f(x)dx=1-\cos 1
-	\end{array}
-	\right.$$
-	\end{anymark}
-\end{solution}
-\myspace{1}
-
-2. 设$f(x)$在$[0,1]$上连续,在$(0,1)$内可导,且$f(0)=1,f(1)=0$
-
-(1). 证明:  $\exists \xi_{1},\xi_{2}\in(0,1)(\xi_{1}\neq \xi_{2}),\ s.t.\ f'(\xi_{1})+f'(\xi_{2})=-2$
-
-(2). 证明:  $\exists \eta,\zeta\in(0,1)(\eta\neq \zeta),\ s.t.\ f'(\eta)f'(\zeta)=1$
-\myspace{1}
-\begin{solution}
-
-	(1). 我们取$c=f(\frac{1}{2})$,我们在$(0,\dfrac{1}{2})$和$(\dfrac{1}{2},1)$上分别对$f(x)$使用拉格朗日中值定理可以得到:  
-	$$\left\lbrace
-	\begin{array}{l}
-		\exists \xi_{1}\in(0,\frac{1}{2}),\ s.t. \dfrac{c-1}{\frac{1}{2}}=f'(\xi_{1})\\
-		\exists \xi_{2}\in(\frac{1}{2},1),\ s.t. \dfrac{-c}{\frac{1}{2}}=f'(\xi_{2})
-	\end{array}
-	\right.\Rightarrow f(\xi_{1})+f(\xi_{2})=-2$$
-	
-	(2). 我们构造辅助函数:  $F(x)=f(x)-x$,我们有:  
-	$$\left\lbrace
-	\begin{array}{l}
-		F(0)=f(0)=1>0\\
-		F(1)=f(1)-1=-1<0
-	\end{array}
-	\right. \Rightarrow \text{根据零点定理:  }\exists c\in(0,1),\ s.t. F(c)=f(c)-c=0$$
-	
-	我们对$f(x)$分别在$(0,c)$和$(c,1)$上使用拉格朗日中值定理得到:  
-	$$\left\lbrace
-	\begin{array}{l}
-		\exists\eta\in(0,c),s.t. \dfrac{f(c)-1}{c}=f'(\eta)\\
-		\exists\zeta\in(c,1),s.t. \dfrac{-f(c)}{1-c}=f'(\zeta)
-	\end{array}
-	\right. \Rightarrow f'(\eta)f'(\zeta)=\dfrac{c-1}{c}\cdot\dfrac{-c}{1-c}=1$$
-\end{solution}
-\myspace{1}
-
-3. 设$f(x)=\int_{-1}^{x}t\cos tdt,x\in(-\frac{\pi}{2},\frac{\pi}{2})$,则曲线$y=f(x)$与$x$轴所围成的图形面积为:  
-\begin{itemize}
-	\item A. $2\int_{0}^{1}x\sin xdx$
-	\item B. $2\int_{0}^{1}x^2\sin xdx$
-	\item C. $2\int_{0}^{1}x\cos xdx$
-	\item \hl{D}. $2\int_{0}^{1}x^2\cos xdx$
-\end{itemize}
-\myspace{1}
-\begin{solution}
-
-	我们可以得到:  $f(x)$为偶函数,且$f'(x)=x\cos x$,我们可以得到:  
-	$$\left\lbrace
-	\begin{array}{l}
-		x\in(-\frac{\pi}{2}),f'(x)<0\\
-		x\in(0,\frac{\pi}{2}),f'(x)>0
-	\end{array}
-	\right. \Rightarrow f(x)\text{在}(-\frac{\pi}{2},0)\text{上单调递减},\text{在}(0,\frac{\pi}{2})\text{上单调递增}$$
-	
-	我们有:  $f(1)=f(-1)=0$,我们得到:  
-	\begin{eqnarray*}
-		S&=&-2\int_{0}^{1}f(x)dx\\
-		&=&2\int_{0}^{1}xf'(x)dx\\
-		&=&2\int_{0}^{1}x^2\cos xdx
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-4. 设$\varGamma$是柱面$x^2+y^2=1$与平面$z=x+y$的交线,从$z$轴正向往负向看去为逆时针,计算积分$\oint_{\varGamma}xzdx+xdy+\frac{y^2}{2}dz$
-\myspace{1}
-\begin{solution}
-
-	原曲线积分可以化为:  
-	\begin{eqnarray*}
-		I&=&\int_{0}^{2\pi}\left[ -\sin\theta\cos\theta(\cos\theta+\sin\theta)+\cos^2\theta+\dfrac{\sin^2 \theta}{2}(\cos\theta-\sin\theta)\right]d\theta\\
-		&=&\int_{0}^{2\pi}\cos^2\theta d\theta+\dfrac{1}{2}\int_{0}^{2\pi}\sin^2\theta\cos\theta d\theta-\dfrac{1}{2}\int_{0}^{2\pi}\sin^3\theta d\theta\\
-		&=&\pi
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-5. $\int\dfrac{1}{\sin^3 x+\cos^3 x}dx$
-\myspace{1}
-\begin{solution}
-
-	原不定积分可以化为:  
-	\begin{eqnarray*}
-		I&=&\int \dfrac{1}{(\sin x+\cos x)(\sin^2 x+\cos^2 x-\sin x\cos x)}dx\\
-		&=&\int \dfrac{d(\sin x-\cos x)}{(1+2\sin x+\cos x)(\sin^2 x+\cos^2 x-\sin x\cos x)}\\
-		&=&\int \dfrac{2d(\sin x-\cos x)}{[2-(\sin x-\cos x)^2][1+(\sin x-\cos x)^2]}\\
-		&=&\int \dfrac{2du}{(2-u^2)(1+u^2)}\\
-		&=&\dfrac{2}{3}[\int\dfrac{1}{2-u^2}du+\int\dfrac{1}{1+u^2}du]\\
-		&=&\dfrac{2}{3}[\dfrac{1}{2\sqrt{2}}\ln|\dfrac{\sqrt{2}+u}{\sqrt{2}-u}|+\arctan u]\\
-		&=&\dfrac{1}{3\sqrt{2}}\ln|\dfrac{1+\sin(x-\frac{\pi}{4})}{1-\sin(x-\frac{\pi}{4})}|+\dfrac{2}{3}\arctan(\sin x-\cos x)+C
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-6. 设$F(x)=\int_{x}^{x+2\pi}e^{\sin t}\sin tdt$,求$F(x)$
-\myspace{1}
-\begin{solution}
-
-	我们不妨设$f(x)=e^{\sin x}\sin x$,$f(x)$为周期函数,我们可以得到:  
-	\begin{eqnarray*}
-		F(x)&=&\int_{x}^{x+2\pi}e^{\sin t}\sin tdt\\
-		&=&\int_{0}^{2\pi}e^{\sin x}\sin xdx\\
-		&=&\int_{0}^{\pi}e^{\sin x}\sin xdx+\int_{\pi}^{2\pi}e^{\sin x}\sin xdx\\
-		&=&\int_{0}^{\pi}e^{\sin x}\sin xdx-\int_{0}^{\pi}e^{-\sin x}\sin xdx\\
-		&=&\int_{0}^{\pi}(e^{\sin x}-e^{-\sin x})\sin xdx>0\\
-	\end{eqnarray*}
-
-	我们可以得到:  $F(x)=C>0$
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 3}}}
-
-1. 设$f(x)$在$[0,1]$上连续,且$I=\int_{0}^{1}f(x)dx\neq 0$,证明:  $\exists \xi,\eta\in(0,1)(\xi\neq \eta),s.t. \dfrac{1}{f(\xi)}+\dfrac{1}{f(\eta)}=\dfrac{2}{I}$
-\myspace{1}
-\begin{solution}
-
-	我们构造辅助函数:  $F(x)=\int_{0}^{x}f(t)dt$,$F(0)=0,F(1)=I\neq 0$
-	
-	我们由介值定理可以得到:  
-	$$\exists c\in(0,1),s.t. \ F(c)=\dfrac{I}{2}$$
-	
-	我们对$F(x)$在区间$(0,c)$和$(c,1)$上使用拉格朗日中值定理得到:  
-	$$\left\lbrace
-	\begin{array}{l}
-		\exists\xi\in(0,c),\ s.t. \dfrac{F(c)}{c}=F'(\xi)=f(\xi)\\
-		\exists\eta\in(c,1).\ s.t. \dfrac{F(1)-F(c)}{1-c}=F'(\eta)=f(\eta)
-	\end{array}
-	\right. \Rightarrow \dfrac{1}{f(\xi)}+\dfrac{1}{f(\eta)}=\dfrac{2c}{I}+\dfrac{2(1-c)}{I}=\dfrac{I}{2}$$
-	
-	综上所述,我们得到:  $\exists \xi,\eta\in(0,1)(\xi\neq \eta),s.t. \dfrac{1}{f(\xi)}+\dfrac{1}{f(\eta)}=\dfrac{2}{I}$
-\end{solution}
-\myspace{1}
-
-2. 设函数$f(x)$在$(-\infty,+\infty)$内有定义,在$(-\infty,0)\cup(0,+\infty)$内可导,$\lim\limits_{x\rightarrow 0}f'(x)$存在,$f(x)$在$x=0$处可导的充分条件为:  
-\begin{itemize}
-	\item A $\lim\limits_{x\rightarrow 0}\dfrac{f(x)}{x}$存在
-	\item B $\lim\limits_{x\rightarrow 0}\dfrac{f'(x)}{x}$存在
-	\item \hl{C} $f(x)$在点$x=0$处连续
-	\item D $\int_{0}^{x}f(t)dt$在点$x=0$处可导
-\end{itemize}
-\myspace{1}
-\begin{solution}
-
-	我们可以得到:  
-	$$\left\lbrace
-	\begin{array}{l}
-		f(x)\text{在}(-\infty,0)\cup(0,+\infty)\text{上可导}\\
-		\lim\limits_{x\rightarrow 0}f'(x)\text{存在}
-	\end{array}
-	\right. $$
-	
-	(1). $\lim\limits_{x\rightarrow 0}\dfrac{f(x)}{x}$存在$\Rightarrow \lim\limits_{x\rightarrow 0}f(x)$存在
-	
-	(2). $\lim\limits_{x\rightarrow 0}\dfrac{f'(x)}{x}$存在$\Rightarrow \lim\limits_{x\rightarrow 0}f'(x)$存在
-	
-	(3). $f(x)$在点$x=0$处连续$\Rightarrow \lim\limits_{x\rightarrow 0}f(x)=f(0)$
-	$$\left\lbrace
-	\begin{array}{l}
-		\lim\limits_{x\rightarrow 0}f'(x)=k\\
-		\lim\limits_{x\rightarrow 0}\dfrac{f(x)-f(0)}{x}=\lim\limits_{x\rightarrow 0}f'(x)
-	\end{array}
-	\right. \Rightarrow f'(0)=\lim\limits_{x\rightarrow 0}f'(x)=k$$
-	
-	(4). $\int_{0}^{x}f(t)dt$在点$x=0$处可导$\Rightarrow f(0)$存在
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 4}}}
-
-1. 求不定积分$\int x\arctan x\cdot \ln(1+x^2)dx$
-\myspace{1}
-\begin{solution}
-
-	原不定积分可化为:  
-	\begin{eqnarray*}
-		I&=&\int x\arctan x\cdot \ln(1+x^2)dx\\
-		&=&\dfrac{1}{2}\int \arctan x\cdot \ln(1+x^2)d(x^2+1)\\
-		&=&\dfrac{1}{2}(x^2+1)\arctan x\ln(x^2+1)-\dfrac{1}{2}\int \ln(x^2+1)dx-\int x\arctan xdx\\
-		&=&\dfrac{1}{2}(x^2+1)\arctan x\ln(x^2+1)-\dfrac{1}{2}x\ln(x^2+1)+x-\arctan x-\dfrac{1}{2}x^2\arctan x+\dfrac{1}{2}x-\dfrac{1}{2}\arctan x\\
-		&=&\dfrac{(x^2+1)\ln(x^2+1)-x^2-3}{2}\arctan x-\dfrac{x\ln(x^2+1)}{2}+\dfrac{3}{2}x+C
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-2. 设$\varGamma:=\left\lbrace
-\begin{array}{l}
-	x=2\sqrt{1-y^2}\\
-	z=x+y
-\end{array}
-\right. $,从$z$轴正向往负向看去为逆时针,计算积分$\int\limits_{\varGamma}\dfrac{ydx+zdy+xdz}{x^2+y^2+z^2}$
-\myspace{1}
-\begin{solution}
-
-	原曲线积分可化为:  
-	\begin{eqnarray*}
-		I&=&\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\dfrac{4\cos^2\theta-2\sin^2\theta-3\cos\theta\sin\theta}{2\sin^2\theta+8\cos^2\theta+4\cos\theta\sin\theta}d\theta\\
-		&=&\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\dfrac{1+3\cos 2\theta-\frac{3}{2}\sin 2\theta}{3\cos 2\theta+2\sin\theta+5}d\theta\\
-		&=&\dfrac{1}{2}\int_{-\pi}^{\pi}\dfrac{1+3\cos x-\frac{3}{2}\sin x}{3\cos x+2\sin x+5}dx\\
-		&=&\dfrac{1}{2}\left[ \int_{-\pi}^{\pi}\dfrac{6}{13}dx+\dfrac{11}{26}\int_{-\pi}^{\pi}\dfrac{2\cos x-3\sin x}{3\cos x+2\sin x+5}-\dfrac{17}{13}\int_{-\pi}^{\pi}\dfrac{1}{3\cos x+2\sin x+5}dx\right]\\
-		&=&\dfrac{6}{13}\pi+0-\dfrac{17\sqrt{3}\pi}{39}\\
-		&=&\dfrac{(36-17\sqrt{3})\pi}{78}
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-3. 设函数$f(x)$在$(-\infty,+\infty)$上是以$T$为最小正周期的连续奇函数,下列函数中不是周期函数的个数:  
-\begin{itemize}
-	\item (1). $\int_{a}^{x}f(t)dt$
-	\item (2). $\int_{-x}^{a}f(t)dt$
-	\item (3). $\int_{-x}^{x}tf(t)dt$
-	\item (4). $\int_{-x}^{x}t^2f(t)dt$
-\end{itemize}
-\myspace{1}
-\begin{solution}
-
-	$f(x)$是周期函数,且为奇函数$\Rightarrow \int_{-\frac{T}{2}}^{\frac{T}{2}}f(x)dx=0$
-	
-	(1). 我们不妨设$F(x)=\int_{a}^{x}f(t)dt$,我们有:  
-	$$\left\lbrace
-	\begin{array}{l}
-		F(x+T)=\int_{a}^{x+T}f(t)dt\\
-		F(x+T)-F(x)=\int_{x}^{x+T}f(t)dt=\int_{-\frac{T}{2}}^{\frac{T}{2}}f(x)dx=0
-	\end{array}
-	\right. \Rightarrow F(x+T)=F(x)\Rightarrow F(x)\text{为周期函数}$$
-	
-	(2). 我们不妨设$F(x)=\int_{-x}^{a}f(t)dt$,我们有:  
-	$$\left\lbrace
-	\begin{array}{l}
-		F(x+T)=\int_{-x-T}^{a}f(t)dt\\
-		F(x+T)-F(x)=\int_{-x-T}^{-x}f(t)dt=\int_{-\frac{T}{2}}^{\frac{T}{2}}f(x)dx=0
-	\end{array}
-	\right. \Rightarrow F(x+T)=F(x)\Rightarrow F(x)\text{为周期函数}$$
-	
-	(3). 我们不妨设$F(x)=\int_{-x}^{x}tf(t)dt$,我们有:  
-	$$\left\lbrace
-	\begin{array}{l}
-		F(x+T)=\int_{-x-T}^{x+T}tf(t)dt\\
-		F(x+T)-F(x)=2\int_{x}^{x+T}tf(t)dt\neq 0
-	\end{array}
-	\right. \Rightarrow F(x+T)\neq F(x)\Rightarrow F(x)\text{不是周期函数}$$
-	
-	(4). $\int_{-x}^{x}t^2f(t)dt\equiv 0\Rightarrow F(x)\text{是周期函数}$
-	
-	综上所述,上述函数只有$(3)$不是周期函数,$(1)(2)(4)$均为周期函数.
-\end{solution}
-\myspace{1}
-
-4. 设随机变量$(X,Y)$服从二维正态分布,$X\sim N(1,3^2),Y\sim N(0,4^2)$,且满足$\rho_{XY}=-\dfrac{1}{2}$,$Z=\dfrac{X}{3}+\dfrac{Y}{2}$
-
-(1).求$E(Z)$与$D(Z)$
-
-(2).求$\rho_{XZ}$
-
-(3).证明$X$与$Z$是否独立
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 5}}}
-
-1.计算二重积分:  $\iint\limits_{D}\dfrac{1}{\sqrt{xy}}dxdy$,$D:\{(x,y)|(\dfrac{x}{2}+\dfrac{y}{4})^2\leq \dfrac{x}{6},x,y\geq 0\}$
-\myspace{1}
-\begin{solution}
-	原二重积分可化为:  
-	\begin{eqnarray*}
-		I&=&\int_{0}^{\frac{2}{3}}dx\int_{0}^{4\sqrt{\frac{x}{6}}-2x}\dfrac{1}{\sqrt{xy}}dy\\
-		&=&2\int_{0}^{\frac{2}{3}}\dfrac{1}{\sqrt{x}}\sqrt{4\sqrt{\frac{x}{6}}-2x}dx\\
-		&=&8\sqrt{6}\int_{0}^{\frac{1}{3}}\sqrt{t-3t^2}dt\\
-		&=&\dfrac{24\sqrt{2}}{36}\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\cos^2\theta d\theta\\
-		&=&\dfrac{\sqrt{2}\pi}{3}
-	\end{eqnarray*}
-\end{solution}
-\begin{anymark}[注]
-	我们不妨设$\sqrt{x}=m,\sqrt{y}=n$,我们有:  $\dfrac{(m-\frac{1}{\sqrt{6}})^2}{2}+\dfrac{n^2}{4}=\dfrac{1}{12}(m,n>0)$.
-	
-	我们根据雅可比行列式,得到:  
-	$$dxdy=4mndmdn\Rightarrow \iint\limits_{D}\dfrac{1}{\sqrt{xy}}dxdy=\iint\limits_{D'}4dmdn$$
-	
-	我们得到原二重积分与椭圆面积之间的关系:  $I=2S_{D'}=2ab\pi=2\pi\times\dfrac{1}{\sqrt{6}}\times\dfrac{1}{\sqrt{3}}=\dfrac{\sqrt{2}\pi}{3}$
-\end{anymark}
-\myspace{1}
-
-2. $\int \dfrac{\sqrt{x-1}\arctan \sqrt{x-1}}{x}dx$
-\myspace{1}
-\begin{solution}
-
-	我们令$\sqrt{x-1}=t,x=t^2+1,dx=2tdt$,原不定积分可化为:  
-	\begin{eqnarray*}
-		I&=&\int \dfrac{2t^2\arctan t}{t^2+1}dt\\
-		&=&2\int \arctan tdt-2\int\dfrac{\arctan t}{1+t^2}dt\\
-		&=&2t\arctan t-\ln|1+t^2|-(\arctan t)^2\\
-		&=&2\sqrt{x-1}\arctan \sqrt{x-1}-\ln|x|-(\arctan\sqrt{x-1})^2+C
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-3. 设函数$f(x)$在$(-\infty,+\infty)$内满足$f(x)=f(x-\pi)+\sin x$,且$f(x)=x,x\in[0,\pi)$,求$\int_{\pi}^{3\pi}f(x)dx$
-\myspace{1}
-\begin{solution}
-
-	我们由:  $\left\lbrace
-	\begin{array}{l}
-		f(x)=f(x-\pi)+\sin x\\
-		f(x)=x,x\in[0,\pi)
-	\end{array}
-	\right. $可以得到:  
-	$$f(x)=x+\sin x-\pi,x\in[\pi,2\pi)$$
-	
-	我们有:  
-	\begin{eqnarray*}
-		\int_{\pi}^{3\pi}f(x)dx&=&\int_{\pi}^{3\pi}[f(x-\pi)+\sin x]dx\\
-		&=&\int_{\pi}^{3\pi}f(x-\pi)dx\\
-		&=&\int_{0}^{2\pi}f(x)dx\\
-		&=&\int_{0}^{\pi}xdx+\int_{\pi}^{2\pi}[x+\sin x-\pi]dx\\
-		&=&\pi^2-2
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 6}}}
-
-1. $\int \dfrac{\cos^3 x-2\cos x}{1+\sin^2 x+\sin^4 x}dx$
-\myspace{1}
-\begin{solution}
-
-	我们令$t=\sin x$,我们可以得到原不定积分为:  
-	\begin{eqnarray*}
-		I&=&-\int \dfrac{t^2+1}{1+t^2+t^4}dt\\
-		&=&-\int \dfrac{1+\frac{1}{t^2}}{1+t^2+\frac{1}{t^2}}dt\\
-		&=&-\int \dfrac{d(t-\frac{1}{t})}{(t-\frac{1}{t})^2+3}\\
-		&=&-\dfrac{1}{\sqrt{3}}\arctan(\dfrac{t-\frac{1}{t}}{\sqrt{3}})+C\\
-		&=&\dfrac{1}{\sqrt{3}}\arctan(\dfrac{\cos^2 x}{\sqrt{3}\sin x})dx+C
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-2. 下列积分中,与积分$I=\int_{0}^{1}\dfrac{1}{2}xe^{-\sqrt{x}}dx$值最接近的是:  
-\begin{itemize}
-	\item A. $\int_{0}^{1}\sqrt{x}e^{-x}dx$
-	\item B. $\int_{0}^{1}xe^{-x}dx$
-	\item C. $\int_{0}^{1}x^2e^{-x}dx$
-	\item \hl{D}. $\int_{0}^{1}x^4e^{-x}dx$
-\end{itemize}
-\myspace{1}
-\begin{solution}
-
-	我们可以得到:  
-	\begin{eqnarray*}
-		I&=&\int_{0}^{1}\dfrac{1}{2}xe^{-\sqrt{x}}dx\\
-		&=&\int_{0}^{1}t^3e^{-t}dt\\
-		&=&\int_{0}^{1}x^3e^{-x}dx
-	\end{eqnarray*}
-	
-	我们可以得到:  
-	$$\int_{0}^{1}\sqrt{x}e^{-x}dx>\int_{0}^{1}xe^{-x}dx>\int_{0}^{1}x^2e^{-x}dx>\int_{0}^{1}x^3e^{-x}dx>\int_{0}^{1}x^4e^{-x}dx$$
-	
-	我们只需要比较$x^2-x^3$和$x^3-x^4$的大小,我们有:  $x^2-x^3>x^3-x^4$,我们得到最接近$I$的是$\int_{0}^{1}x^4e^{-x}dx$
-\end{solution}
-\myspace{1}
-
-3. $f(x)=\dfrac{\left(\sqrt[n]{x}-1\right) ^n}{x+1}$,求$f^{(n)}(1)(n\geq 2)$
-\myspace{1}
-\begin{solution}
-
-	我们有:  $$\lim\limits_{x\rightarrow 1}\dfrac{f(x)}{(x-1)^n}=\dfrac{1}{2}\lim\limits_{x\rightarrow 1}\dfrac{(\sqrt[n]{x}-1)^n}{(x-1)^n}=\dfrac{1}{2n^{n}}$$
-	
-	我们利用泰勒展开式:  
-	$$\lim\limits_{x\rightarrow 1}\dfrac{f(x)}{(x-1)^n}=\lim\limits_{x\rightarrow 1}\dfrac{\sum\limits_{k=1}^{n}\frac{f^{(k)}(x)}{k!}(x-1)^k+o[(x-1)^n]}{(x-1)^n}$$
-	
-	上述极限存在,我们可以得到:  $f^{(k)}=0(k=1,2,\cdots,n-1)$
-	$$\lim\limits_{x\rightarrow 1}\dfrac{f(x)}{(x-1)^n}=\dfrac{f^{(n)}(1)}{n!}\Rightarrow f^{(n)}(1)=\dfrac{n!}{2n^{n}}$$
-\end{solution}
-\myspace{1}
-
-4. 设$f(x)$在$[0,1]$上二阶导数连续,$f(1)=f'(1)=0$,$D=\{(x,y)|0\leq x\leq 1,0\leq y\leq 1\}$
-
-(1).证明:  $\iint\limits_{D}f(x)dxdy=\iint\limits_{D}x^2yf''(x)dxdy$
-
-(2).证明:  $\exists \xi,\eta\in(0,1),\ s.t. \xi^2f''(\xi)=2f'(\eta)(\xi-1)$
-\myspace{1}
-\begin{solution}
-
-	(1). \begin{eqnarray*}
-		\text{左边}&=&\iint\limits_{D}f(x)dxdy\\
-		&=&\int_{0}^{1}f(x)dx\int_{0}^{1}dy\\
-		&=&\int_{0}^{1}f(x)dx\\
-		&=&xf(x)|_{x=0}^{x=1}-\int_{0}^{1}xf'(x)dx\\
-		&=&-\int_{0}^{1}xf'(x)dx
-	\end{eqnarray*}
-	\begin{eqnarray*}
-		\text{右边}&=&\iint\limits_{D}x^2yf''(x)dxdy\\
-		&=&\int_{0}^{1}x^2f''(x)dx\int_{0}^{1}ydy\\
-		&=&\int_{0}^{1}\dfrac{x^2}{2}df'(x)\\
-		&=&\dfrac{x^2}{2}f'(x)|_{x=0}^{x=1}-\int_{0}^{1}xf'(x)dx\\
-		&=&-\int_{0}^{1}xf'(x)dx
-	\end{eqnarray*}
-	
-	综上所述,$\text{左边}=\text{右边}\Rightarrow \iint\limits_{D}f(x)dxdy=\iint\limits_{D}x^2yf''(x)dxdy$
-	
-	(2). 原命题等价于:  $\exists \xi,\eta\in(0,1),\ s.t. \xi^2f''(\xi)=2f'(\eta)(\xi-1)=2[f(\xi)-f(1)]=2f(\xi)$
-	
-	我们需要证明:  $\exists \xi\in(0,1),\ s.t. \xi^2f''(\xi)-2f(\xi)=0$
-	
-	我们由$(1)$得到:  $\int_{0}^{1}f(x)dx=\int_{0}^{1}\dfrac{x^2}{2}f''(x)dx\Rightarrow \int_{0}^{1}[x^2f''(x)-2f(x)]dx=0$
-	
-	我们由积分中值定理得到:  
-	$$\exists \xi\in(0,1),\ s.t. \xi^2f''(\xi)-2f(\xi)=0$$
-	
-	我们由拉格朗日中值定理得到:  
-	$$\exists\eta\in(\xi,1),\ s.t. f(\xi)-f(1)=f'(\eta)(\xi-1)$$
-	
-	综上所述,我们得到:  $\exists \xi,\eta\in(0,1),\ s.t. \xi^2f''(\xi)=2f'(\eta)(\xi-1)$
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 7}}}
-
-1. $\int_{-\pi}^{\pi}\dfrac{x\sin x\left( \arctan e^x+\int_{0}^{x}e^{t^2}dt\right) }{1+\cos^2 x}dx$
-\myspace{1}
-\begin{solution}
-
-	原定积分可以化为:  
-	\begin{eqnarray*}
-		I&=&\int_{-\pi}^{\pi}\dfrac{x\sin x\arctan e^x}{1+\cos^2 x}dx\\
-		&=&\int_{-\pi}^{\pi}\dfrac{x\sin x\arctan e^{-x}}{1+\cos^2 x}dx\\
-		2I&=&\pi\int_{0}^{\pi}\dfrac{x\sin x}{1+\cos^2 x}dx\\
-		&=&\pi\int_{0}^{\pi}\dfrac{(\pi-x)\sin x}{1+\cos^2 x}dx\\
-		4I&=&\pi^2\int_{0}^{\pi}\dfrac{\sin x}{1+\cos^2 x}dx\\
-		4I&=&\dfrac{\pi^3}{2}\\
-		I&=&\dfrac{\pi^3}{8}
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-2. 若$\int_{0}^{+\infty}\dfrac{\arctan(ax)}{x^n}dx$收敛,求$n$的取值范围
-\myspace{1}
-\begin{solution}
-
-	原积分可能的暇点为$x=0,x=+\infty$
-	
-	(1). $x=0$处,$\dfrac{\arctan (ax)}{x^n}\sim ax^{1-n}$收敛$\Rightarrow 1-n>-1\Rightarrow n<2$
-	
-	(2). $x=+\infty$,$\dfrac{\arctan (ax)}{x^n}\sim \frac{\pi}{2}x^{-n}$收敛$\Rightarrow -n<-1\Rightarrow n>1$
-	
-	综上所述,$n\in(1,2)$
-\end{solution}
-\myspace{1}
-
-3. 设$0<a<1$,$I_{1}=\int_{0}^{\frac{\pi}{4}}\dfrac{\sin ax}{\sin x}dx$,$I_{2}=\int_{0}^{\frac{\pi}{4}}\dfrac{\tan ax}{\tan x}dx$,比较$I_{1},I_{2}$和$\dfrac{\pi a}{4}$的大小
-\myspace{1}
-\begin{solution}
-
-	我们可以得到:  $\left\lbrace
-	\begin{array}{l}
-		x\in(0,\frac{\pi}{4})\\
-		ax\in(0,\frac{\pi}{4})\\
-		ax<x
-	\end{array}
-	\right.$和函数$\left\lbrace
-	\begin{array}{l}
-		y=\sin x\\
-		y=\tan x
-	\end{array}
-	\right. $在$(0,\frac{\pi}{2})$内单调递增.
-	
-	我们得到:  $$\left\lbrace
-	\begin{array}{l}
-		\dfrac{\sin(ax)}{\sin x}<1\\
-		\dfrac{\tan(ax)}{\tan x}<1\\
-		\dfrac{\frac{\tan(ax)}{\tan x}}{\frac{\sin(ax)}{\sin x}}=\dfrac{\cos(ax)}{\cos x}>1
-	\end{array}
-	\right. \Rightarrow I_{1}<I_{2}<\dfrac{\pi a}{4}$$
-\end{solution}
-\myspace{1}
-
-4. 求$\iint\limits_{D}\dfrac{\tan^3x+y}{\sqrt{x^2+y^2}}dxdy$,其中$D=\{(x,y)|y\geq |x|,(x^2+y^2)^3\leq y^4\}$
-
-\myspace{1}
-\begin{solution}
-
-	原二重积分等价于:  
-	\begin{eqnarray*}
-		I&=&\iint\limits_{D}\dfrac{\tan^3x+y}{\sqrt{x^2+y^2}}dxdy\\
-		&=&\iint\limits_{D}\dfrac{y}{\sqrt{x^2+y^2}}dxdy\\
-		&=&\int_{\frac{\pi}{4}}^{\frac{3\pi}{4}}d\theta\int_{0}^{\sin^2\theta}r\sin\theta dr\\
-		&=&\int_{\frac{\pi}{4}}^{\frac{3\pi}{4}}\dfrac{1}{2}\sin^5\theta d\theta\\
-		&=&\int_{\frac{\pi}{4}}^{\frac{\pi}{2}}\sin^5\theta d\theta\\
-		&=&\dfrac{43\sqrt{2}}{120}
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-5. 已知$\int_{1}^{+\infty}\left( \dfrac{2x^2+bx+a}{2x^2+ax}-1\right)dx=0$,求$a,b$
-
-\myspace{1}
-\begin{solution}
-
-	原积分可化为:  $\int_{1}^{+\infty}\dfrac{(b-a)x+a}{2x^2+ax}dx=0\text{收敛}$
-	
-	(1). $x=+\infty$,假设$a\neq b\Rightarrow \dfrac{(b-a)x+a}{2x^2+ax}\sim \dfrac{1}{x}\text{发散}$,我们得到:  $a=b$
-	
-	原积分等价于:  $$\int_{1}^{+\infty}\dfrac{a}{2x^2+ax}dx=\int_{1}^{+\infty}(\dfrac{1}{x}-\dfrac{2}{2x+a})dx=0\Rightarrow \ln|\dfrac{x}{2x+a}|_{x=1}^{x=+\infty}=0\Rightarrow a=b=0$$
-\end{solution}
-\myspace{1}
-
-\section{Week \Rmnum{2}}
-\hl{\textbf{\textit{September 8}}}
-
-1. 求$\lim\limits_{n\rightarrow +\infty}\left[\sum\limits_{k=1}^{n}\dfrac{\ln(n+k)}{n+\frac{1}{k}}-\ln n\right] $ 
-
-\myspace{1}
-\begin{solution}
-
-	我们利用夹逼准则:  $$\sum\limits_{k=1}^{n}\dfrac{\ln(n+k)}{n+1}-\ln n<I<\sum\limits_{k=1}^{n}\dfrac{\ln(n+k)}{n}-\ln n$$
-	\begin{eqnarray*}
-		\text{左边}&=&\lim\limits_{n\rightarrow +\infty}\sum\limits_{k=1}^{n}\dfrac{\ln(n+k)}{n+1}-\ln n\\
-		&=&\lim\limits_{n\rightarrow +\infty}\left\lbrace \dfrac{n}{n+1}\dfrac{1}{n}\sum\limits_{k=1}^{n}[\ln(n+k)-\ln n]-\dfrac{\ln n}{n+1}\right\rbrace \\
-		&=&\int_{0}^{1}\ln(1+x)dx\\
-		&=&2\ln2-1
-	\end{eqnarray*}
-	
-	\begin{eqnarray*}
-		\text{右边}&=&\lim\limits_{n\rightarrow +\infty}\sum\limits_{k=1}^{n}\dfrac{\ln(n+k)}{n}-\ln n\\
-		&=&\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\sum\limits_{k=1}^{n}[\ln(n+k)-\ln n]\\
-		&=&\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\sum\limits_{k=1}^{n}\ln(1+\frac{k}{n})\\
-		&=&\int_{0}^{1}\ln(1+x)dx\\
-		&=&2\ln2-1
-	\end{eqnarray*}
-	
-	综上所述,我们可以得到原极限$I=2\ln2-1$
-\end{solution}
-\myspace{1}
-
-2. $\int_{0}^{+\infty}\dfrac{dx}{(1+x^2)(1+x^4)}$
-
-\myspace{1}
-\begin{solution}
-
-	原定积分等价于:  
-	\begin{eqnarray*}
-		I&=&\int_{0}^{+\infty}\dfrac{x^4}{(1+x^2)(1+x^4)}dx\\
-		2I&=&\int_{0}^{+\infty}\dfrac{1}{1+x^2}dx\\
-		&=&\dfrac{\pi}{2}\\
-		I&=&\dfrac{\pi}{4}
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-3. 设随机变量$Y=min\{|X|,1\}$,其中$X$为随机变量,且密度函数为$f(x)=\dfrac{k}{1+x^2}(k\text{为常数},-\infty<x<+\infty)$,下列说法不正确的是:  
-\begin{itemize}
-	\item A. $k=\dfrac{1}{\pi}$
-	\item B. $E(X)=0$
-	\item C. $Y$没有概率密度
-	\item D. $E(Y)=\dfrac{\ln(2e^{\frac{\pi}{2}})}{\pi}$
-\end{itemize}
-
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-4. 求$y=e^{-x}\sqrt{\sin x}(0\leq x<+\infty)$绕$x$轴旋转一周的旋转体体积
-
-\myspace{1}
-\begin{solution}
-
-	我们可以得到:  
-	\begin{eqnarray*}
-		V&=&\int_{0}^{+\infty}\pi y^2dx\\
-		&=&\lim\limits_{n\rightarrow+\infty}\sum\limits_{k=0}^{n}\int_{2k\pi}^{(2k+1)\pi}\pi e^{-2x}\sin xdx\\
-		&=&\lim\limits_{n\rightarrow+\infty}A(1+e^{-4\pi}+e^{-8\pi}+\cdots+e^{-4n\pi})\\
-		&=&\dfrac{A\pi}{1-e^{-4\pi}}\\
-		A&=&=\int_{0}^{\pi}e^{-2x}\sin xdx=\dfrac{e^{-2\pi}+1}{5}\\
-		V&=&\dfrac{e^{-2\pi}+1}{5(1-e^{-4\pi})}=\dfrac{e^{2\pi}\pi}{5(e^{2\pi}-1)}
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 9}}}
-
-1. 已知$\int_{0}^{+\infty}\dfrac{\ln(1+x)}{x^{\alpha}}dx$收敛,求$\alpha$的取值范围
-
-\myspace{1}
-\begin{solution}
-
-	原积分可能存在的暇点为$x=0,x=+\infty$
-	
-	(1). $x=0$时,$\dfrac{\ln(1+x)}{x^{\alpha}}\sim x^{1-\alpha}$收敛$\Rightarrow 1-\alpha>-1\Rightarrow \alpha<2$
-	
-	(2). $x=+\infty$时,$\dfrac{\ln(1+x)}{x^{\alpha}}\sim x^{-\alpha}$收敛$\Rightarrow -\alpha<-1\Rightarrow \alpha>1$
-	
-	我们得到:  $\alpha\in(1,2)$
-\end{solution}
-\myspace{1}
-
-2. 设随机变量$X,Y$相互独立,且$X\sim N(0,1)$,$Y\sim B(n,p)$,$0<p<1$,且$X+Y$的分布函数:  
-\begin{itemize}
-	\item A. 是连续函数
-	\item B. 恰有$n+1$个间断点
-	\item C. 恰有$1$个间断点
-	\item D. 有无穷个间断点
-\end{itemize}
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-3. 已知微分方程$\cos^4 x\dfrac{d^2y}{dx^2}+2\cos^2 x(1-\sin x\cos x)\dfrac{dy}{dx}+y=e^{-\tan x}$,求该微分方程在$t=\tan x$变换下所得的$y$对$t$的微分方程,并求出其通解
-
-\myspace{1}
-\begin{solution}
-
-	我们可以得到:  $$\left\lbrace
-	\begin{array}{l}
-		t=\tan x\\
-		\sin x=\dfrac{t}{\sqrt{1+t^2}}\\
-		\cos x=\dfrac{1}{\sqrt{1+t^2}}\\
-		\dfrac{dy}{dx}=\dfrac{dy}{dt}\dfrac{dt}{dx}=\dfrac{(1+t^2)dy}{dt}\\
-		\dfrac{d^2y}{dx^2}=\dfrac{\dfrac{dy}{dx}}{dt}\dfrac{dt}{dx}=\dfrac{(1+t^2)^2d^2y}{dt^2}-\dfrac{2t(1+t^2)dy}{dt}
-	\end{array}
-	\right. $$
-	
-	我们可以得到原微分方程等价于:  
-	$$\dfrac{d^2y}{(1+t^2)^2dx^2}+\dfrac{2dy}{(1+t^2)dx}-\dfrac{2tdy}{(1+t^2)^2dx}+y=e^{-t}$$
-	
-	我们可以得到:  
-	$$\dfrac{d^2y}{dt^2}+2\dfrac{dy}{dt}+y=e^{-t}\Rightarrow y''(t)+2y'(t)+y(t)=e^{-t}$$
-	
-	我们得到特征方程:  $\lambda^2+2\lambda+1=0\Rightarrow \lambda_{1}=\lambda_{2}=-1$
-	
-	我们可以得到:  $y=(C_{1}x+C_{2})e^{-x}+y^{*}\Rightarrow y^{*}=Ax^2e^{-x}\Rightarrow y^{*}=\dfrac{1}{2}x^2e^{-x}$
-	
-	综上所述,微分方程的通解为:  $y=(C_{1}x+C_{2})e^{-x}+\dfrac{1}{2}x^2e^{-x}$
-\end{solution}
-\myspace{1}
-
-4. 求二重积分$I=\iint\limits_{D}\arcsin(2\sqrt{x-x^2})dxdy$,$D=\{(x,y)|0\leq x\leq 1,0\leq y\leq x\}$
-
-\myspace{1}
-\begin{solution}
-
-	原二重积分可化为:  
-	\begin{eqnarray*}
-		I&=&\int_{0}^{1}x\arcsin(2\sqrt{x-x^2})dx\\
-		&=&\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\dfrac{\arcsin(\cos\theta) \cos\theta(\sin\theta+1)}{4}d\theta\\
-		&=&\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\dfrac{\arcsin(\cos\theta)\cos\theta}{4}d\theta\\
-		&=&\dfrac{1}{2}\int_{0}^{\frac{\pi}{2}}(\frac{\pi}{2}-\theta)\cos\theta d\theta\\
-		&=&\dfrac{\pi}{4}-\dfrac{1}{2}\int_{0}^{\frac{\pi}{2}}\theta d\sin\theta\\
-		&=&\dfrac{1}{2}
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 10}}}
-
-1. 设$f(x)=\lim\limits_{n\rightarrow+\infty}\dfrac{x^{n+1}-x^2}{x^n+1}$,$F(x)=\int_{0}^{x}f(t)dt$,下列说法正确的是:  
-\begin{itemize}
-	\item A. $f(x)$有$1$个间断点,$F(x)$有$1$个不可导点
-	\item B. $f(x)$有$1$个间断点,$F(x)$有$2$个不可导点
-	\item \hl{C}. $f(x)$有$2$个间断点,$F(x)$有$1$个不可导点
-	\item D. $f(x)$有$2$个间断点,$F(x)$有$2$个不可导点
-\end{itemize}
-\myspace{1}
-\begin{solution}
-
-	我们可以得到:  $f(x)=\left\lbrace
-	\begin{array}{l}
-		x,\ x<-1\\
-		-x^2,\ -1<x<1\\
-		0,\ x=1\\
-		x,\ x>1
-	\end{array}
-	\right. $
-	
-	$f(x)$在$x=-1$处无定义,$x=-1$是可去间断点,$x=1$是跳跃间断点.
-	
-	$F(x)=\int_{0}^{x}f(t)dt$处处连续,仅在$x=1$处不可导.
-\end{solution}
-\myspace{1}
-
-2. 设当$x\geq 0$时,连续函数$f(x)$的原函数$F(x)$非负,且满足方程$\int_{0}^{x^2}f(x^2)f(t)dt=\dfrac{1}{2}(\sqrt{1+x^2}-1)$,$F(0)=0$,求$f(x)$
-
-\myspace{1}
-\begin{solution}
-
-	我们设$F(x)=\int_{0}^{x}f(t)dt$,我们令$x^2=u$,我们得到:  
-	$$f(u)\int_{0}^{u}f(t)dt=\dfrac{1}{2}(\sqrt{1+u}-1)\Rightarrow F'(x)F(x)=\dfrac{1}{2}(\sqrt{1+x}-1)\Rightarrow \dfrac{1}{2}[F^2(x)]'=\dfrac{1}{2}(\sqrt{1+x}-1)$$
-	
-	我们得到:  
-	$$F^2(x)=\dfrac{2}{3}(1+x)^{\frac{3}{2}}-x+C,F(0)=0\Rightarrow \left\lbrace
-	\begin{array}{l}
-		F(x)=\sqrt{\dfrac{2}{3}(1+x)^{\frac{3}{2}}-x-\dfrac{2}{3}}\\
-		f'(x)=\dfrac{\sqrt{1+x}-1}{2\sqrt{\dfrac{2}{3}(1+x)^{\frac{3}{2}}-x-\dfrac{2}{3}}}
-	\end{array}
-	\right. $$
-\end{solution}
-\myspace{1}
-
-3. 证明:  $\sum\limits_{n=1}^{+\infty}\dfrac{1}{n^2}=\dfrac{\pi^2}{6}$
-
-\myspace{1}
-\begin{solution}
-
-	我们有:  
-	$$\sin x=x-\dfrac{x^3}{3!}+\dfrac{x^5}{5!}+\cdots+\dfrac{(-1)^{n}x^{2n+1}}{(2n+1)}+\cdots$$
-	
-	我们有:  $f(x)=\dfrac{\sin x}{x}=1-\dfrac{x^2}{3!}+\dfrac{x^4}{5!}+\cdots+\dfrac{(-1)^{n}x^{2n}}{(2n+1)}+\cdots$
-	
-	我们知道$f(x)$有零点$x=\pm\pi,\pm 2\pi,\cdots\Rightarrow f(x)=A(x-\pi)(x+\pi)(x-2\pi)(x+2\pi)\cdots$
-	
-	
-	我们有:  
-	$$f(x)=A(x^2-\pi^2)(x^2-4\pi^2)\cdots,\text{令}x=0,\text{我们有:  }A(-\pi^2)(-4\pi^2)\cdots=1\Rightarrow A=\dfrac{1}{(-\pi^2)(-4\pi^2)\cdots}$$
-	
-	我们有:  $$f(x)=\left\lbrace
-	\begin{array}{l}
-		1-\dfrac{x^2}{3!}+\dfrac{x^4}{5!}+\cdots+\dfrac{(-1)^{n}x^{2n}}{(2n+1)}+\cdots\\
-		(1-\dfrac{x^2}{\pi^2})(1-\dfrac{x^2}{4\pi^2})\cdots
-	\end{array}
-	\right. \Rightarrow x^2\text{项系数相等}\Rightarrow -\dfrac{1}{6}=\sum\limits_{n=1}^{+\infty}(-\dfrac{1}{n^2\pi^2})$$
-	
-	我们可以得到:  $\sum\limits_{n=1}^{+\infty}\dfrac{1}{n^2}=\dfrac{\pi^2}{6}$
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 11}}}
-
-1. 设$f(x)$在$[1,+\infty)$上有连续的一阶导数,$f'(x)=\dfrac{1}{1+f^{2}(x)}\left[\sqrt{\dfrac{1}{x}}-\sqrt{\ln(1+\dfrac{1}{x})} \right] $,证明:  $\lim\limits_{x\rightarrow +\infty}f(x)$存在
-
-\myspace{1}
-\begin{solution}
-
-	我们由:  $\lim\limits_{x\rightarrow +\infty}f(x)-f(1)=\int_{1}^{+\infty}f'(x)dx\Rightarrow $我们只需要证明:  $\int_{1}^{+\infty}f'(x)dx$收敛
-	
-	我们有:  
-	\begin{eqnarray*}
-		\int_{1}^{+\infty}f'(x)dx&=&\int_{1}^{+\infty}\dfrac{1}{1+f^{2}(x)}\left[\sqrt{\dfrac{1}{x}}-\sqrt{\ln(1+\dfrac{1}{x})} \right]dx\\
-		&\leq&\int_{1}^{+\infty}\left[\sqrt{\dfrac{1}{x}}-\sqrt{\ln(1+\dfrac{1}{x})} \right]dx
-	\end{eqnarray*}
-	
-	我们由拉格朗日中值定理得到:  
-	$$\lim\limits_{x\rightarrow+\infty}\left[\sqrt{\dfrac{1}{x}}-\sqrt{\ln(1+\dfrac{1}{x})} \right]=\lim\limits_{x\rightarrow+\infty}\dfrac{1}{2\sqrt{\xi}}\left(\dfrac{1}{x}-\ln(1+\dfrac{1}{x}) \right)=\lim\limits_{x\rightarrow+\infty}\dfrac{x^{-\frac{3}{2}}}{4}$$
-	
-	我们由比较判别法可以得到:  $\left\lbrace 
-	\begin{array}{l}
-		\int_{1}^{+\infty}\dfrac{1}{x^p}dx\text{收敛},p>1\\
-		\int_{1}^{+\infty}\dfrac{1}{4x^{\frac{3}{2}}}dx\text{收敛}
-	\end{array}
-	\right. $
-	
-	综上所述,我们得到:  $\lim\limits_{x\rightarrow +\infty}f(x)$存在
-\end{solution}
-\myspace{1}
-
-2. 函数$f(x)$在$[0,+\infty)$上可导,$f(0)=1$且满足等式:  
-$$f'(x)+f(x)-\dfrac{1}{x+1}\int_{0}^{x}f(t)dt=0$$
-
-(1).求导数$f'(x)$
-
-(2).证明:  当$x\geq 0$时,不等式$e^{-x}\leq f(x)\leq 1$成立
-
-\myspace{1}
-\begin{solution}
-
-	(1). 我们可以得到:  
-	$$(x+1)f'(x)+(x+1)f(x)-\int_{0}^{x}f(t)dt=0$$
-	
-	我们对上式子求导可以得到:  
-	$$(x+1)f''(x)+(x+2)f''(x)=0\Rightarrow \left\lbrace 
-	\begin{array}{l}
-		(x+1)e^{x}f'(x)=C\\
-		f'(0)=-1
-	\end{array}
-	\right. \Rightarrow f'(x)=-\dfrac{1}{(1+x)e^{x}}$$
-	
-	(2). 我们有:  $$\left\lbrace 
-	\begin{array}{l}
-		F(x)=f(x)-1\\
-		G(x)=f(x)-e^{-x}
-	\end{array}
-	\right.$$
-	$$\downdownarrows$$ 
-	
-	$$\left\lbrace 
-	\begin{array}{l}
-		F'(x)=f'(x)=-\dfrac{1}{(1+x)e^{x}}<0\\
-		F(0)=0\\
-		G'(x)=f'(x)+e^{-x}=\dfrac{x}{(1+x)e^{x}}>0\\
-		G(0)=0
-	\end{array}
-	\right.$$ 
-	$$\downdownarrows$$ 
-	$$\left\lbrace 
-	\begin{array}{l}
-		F(x)\text{单调递减}\\
-		F(x)\leq F(0)=1\\
-		G(x)\text{单调递增}\\
-		G(x)\geq G(0)\Rightarrow f(x)\geq e^{-x}
-	\end{array}
-	\right. $$
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 12}}}
-
-1. 设$f(x)=\int_{-1}^{x}(1-|t|)dt(x\geq -1)$,求曲线$y=f(x)$与$x$轴所围成的面积
-
-\myspace{1}
-\begin{solution}
-
-	我们可以得到$f(x)$表达式:  
-	$$f(x)=\left\lbrace 
-	\begin{array}{l}
-		\dfrac{(x+1)^2}{2},\ x\in[-1,0]\\
-		\dfrac{2x-x^2+1}{2},\ x\in(1,+\infty)
-	\end{array}
-	\right. $$
-	
-	我们可以得到:  
-	$$S=\int_{0}^{1}f(x)dx+\int_{0}^{1+\sqrt{2}}f(x)dx=\dfrac{1}{6}+\dfrac{5}{6}+\dfrac{2\sqrt{2}}{3}=1+\dfrac{2\sqrt{2}}{3}$$
-\end{solution}
-\myspace{1}
-
-2. 设函数$f(x)$连续,$f'(0)$存在,并对于任意$x,y\in\mathbb{R}$,$f(x+y)=\dfrac{f(x)+f(y)}{1-4f(x)f(y)}$,且$f'(0)=\dfrac{1}{2}$,求$f(x)$
-
-\myspace{1}
-\begin{solution}
-
-	我们有:  $f(0)=\dfrac{2f(0)}{1-4f^2(0)}\Rightarrow f(0)=0$
-	
-	我们利用导数定义:  
-	\begin{eqnarray*}
-		f'(x)&=&\lim\limits_{\Delta x\rightarrow 0}\dfrac{f(x+\Delta x)-f(x)}{\Delta x}\\
-		&=&\lim\limits_{\Delta x\rightarrow 0}\dfrac{\dfrac{f(x)+f(\Delta x)}{1-4f(x)f(\Delta x)}-f(x)}{\Delta x}\\
-		&=&(1+4f^{2}(x))\lim\limits_{\Delta x\rightarrow 0}\dfrac{f(\Delta x)}{\Delta}\\
-		&=&\dfrac{1+4f^{2}(x)}{2}
-	\end{eqnarray*}
-	
-	我们可以得到微分方程的解:  
-	$$\arctan[2f(x)]=x+C,f(0)=0\rightarrow f(x)=\dfrac{1}{2}\tan x$$
-\end{solution}
-\myspace{1}
-
-3. 设函数$f(x)$在$[0,+\infty)$上具有二阶连续导数,$f(0)=f'(0)=0,f''(0)=1$,对于任意的$x>0$,$u(x)$表示曲线$y=f(x)$在点$(x,f(x))$处的切线在$x$轴上的截距,当$x\rightarrow 0^{+}$时,下列等价无穷小不成立的是:  
-\begin{itemize}
-	\item A. $f(x)\sim \dfrac{x^2}{2}$
-	\item B. $x\cdot f(u(x))\sim \dfrac{u(x)\cdot f(x)}{2}$
-	\item C. $\int_{0}^{x}u(t)dt\sim \dfrac{x^2}{4}$
-	\item \hl{D}. $\int_{0}^{f(x)}u(t)dt\sim \dfrac{x^4}{4}$
-\end{itemize}
-\myspace{1}
-\begin{solution}
-
-	我们求出$f(x)$在$(x,f(x))$处的切线方程:$y-f(x)=f'(x)(x'-x)$
-	
-	我们有:
-	$$u(x)=x'=x-\dfrac{f(x)}{f'(x)}$$
-	
-	我们利用泰勒展开式,将$f(x)$展开:
-	$$\left\lbrace 
-	\begin{array}{l}
-		f(x)=f(0)+f'(0)x+\dfrac{f''(0)}{2}x^2+o(x^2)\\
-		f'(x)=f'(0)+f''(0)x+o(x)
-	\end{array}
-	\right. \rightarrow \left\lbrace 
-	\begin{array}{l}
-		f(x)=\dfrac{1}{2}x^2+o(x^2)\\
-		f'(x)=x+o(x)
-	\end{array}
-	\right. $$
-	
-	当$x\rightarrow 0^{+}$时,$f(x)\sim \dfrac{1}{2}x^2,u(x)\sim \dfrac{1}{2}x$
-	
-	我们得到:
-	$$\left\lbrace 
-	\begin{array}{l}
-		x\cdot f(u(x))\sim \dfrac{u(x)\cdot f(x)}{2}\\
-		\int_{0}^{x}u(t)dt\sim \dfrac{x^2}{4}\\
-		\int_{0}^{f(x)}u(t)dt\sim \dfrac{x^4}{16}
-	\end{array}
-	\right. $$
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 13}}}
-
-1. 比较$\int_{0}^{\frac{\pi}{2}}\dfrac{\sin x}{1+x^2}dx$和$\int_{0}^{\frac{\pi}{2}}\dfrac{\cos x}{1+x^2}dx$的大小
-\myspace{1}
-\begin{solution}
-
-	我们不妨设:$I=\int_{0}^{\frac{\pi}{2}}\dfrac{\sin x}{1+x^2}dx,J=\int_{0}^{\frac{\pi}{2}}\dfrac{\cos x}{1+x^2}dx$,我们有:
-	\begin{eqnarray*}
-		I-J&=&\int_{0}^{\frac{\pi}{2}}\dfrac{\sin x-\cos x}{1+x^2}dx\\
-		&=&\int_{0}^{\frac{\pi}{2}}\dfrac{\sin(x-\frac{\pi}{4})}{1+x^2}dx\\
-		&=&\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}\dfrac{\sin t}{1+(t+\frac{\pi}{4})^2}dt\\
-		&=&\int_{-\frac{\pi}{4}}^{0}\dfrac{\sin t}{1+(t+\frac{\pi}{4})^2}dt+\int_{0}^{\frac{\pi}{4}}\dfrac{\sin t}{1+(t+\frac{\pi}{4})^2}dt\\
-		&=&\int_{0}^{\frac{\pi}{4}}\sin t[\dfrac{1}{1+(t+\frac{\pi}{4})^2}-\dfrac{1}{1+(\frac{\pi}{4}-t)^2}]dt\\
-		&=&\int_{0}^{\frac{\pi}{4}}\dfrac{-\pi t\sin t}{[1+(t+\frac{\pi}{4})^2][1+(\frac{\pi}{4}-t)^2]}dt<0
-	\end{eqnarray*}
-	
-\end{solution}
-\myspace{1}
-
-2. 求曲线$y=\dfrac{x^2}{1+x^2}$与其渐近线所围区域绕该渐近线旋转所得旋转体体积
-\myspace{1}
-\begin{solution}
-
-	我们可以得到$f(x)$的渐近线为$y=1$,因此我们有:
-	\begin{eqnarray*}
-		V&=&\pi\int_{-\infty}^{+\infty}\dfrac{1}{(1+x^2)^2}dx\\
-		&=&2\pi\int_{0}^{\frac{\pi}{2}}\cos^2\theta d\theta\\
-		&=&\dfrac{\pi^2}{2}
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-3. 设$A$是$n$阶矩阵,$A$的第$i$行第$j$列元素为$a_{ij}$,满足$a_{ij}=i\cdot j$,下列命题正确的是:  
-\begin{itemize}
-	\item A. $r(A)=1$
-	\item B. 矩阵$A$不可相似对角化
-	\item C. 矩阵$A$的特征值之和为$\sum\limits_{k=1}^{n}k$
-	\item \hl{D}. 矩阵$A$的特征值之和为$\sum\limits_{k=1}^{n}k^2$
-\end{itemize}
-\myspace{1}
-\begin{solution}
-
-	我们由:$a_{ij}=i\cdot j\rightarrow a_{ij}=a_{ji}=i\cdot j$,即矩阵$A$为实对称矩阵,$A$一定可以相似对角化
-	
-	我们可以得到:$|A|\neq 0\rightarrow r(A)=n$且矩阵$A$的特征值之和为$\sum\limits_{i=1}^{n}i^2$
-\end{solution}
-\myspace{1}
-
-4. 求二重积分$\iint\limits_{D}\dfrac{1}{x^4+y^2}dxdy,\ D=\{(x,y)|y\geq x^2+1\}$
-\myspace{1}
-\begin{solution}
-
-	原二重积分等价于:
-	\begin{eqnarray*}
-		I&=&\int_{-\infty}^{+\infty}dx\int_{x^2+1}^{+\infty}\dfrac{1}{x^4+y^2}dy\\
-		&=&2\int_{0}^{+\infty}\dfrac{1}{x^2}\arctan(\dfrac{x^2}{x^2+1})dx\\
-		&=&2\int_{0}^{+\infty}\arctan(\dfrac{1}{t^2+1})dt\\
-		&=&
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-5. 求二重积分$\iint\limits_{D}\dfrac{1}{x^4+y^2}dxdy,\ D=\{(x,y)|x\geq 1,y\geq x^2\}$
-\myspace{1}
-\begin{solution}
-
-	原二重积分等价于:
-	\begin{eqnarray*}
-		I&=&\int_{1}^{+\infty}dx\int_{x^2}^{+\infty}\dfrac{1}{x^4+y^2}dy\\
-		&=&\int_{1}^{+\infty}\dfrac{\pi}{4x^2}dx\\
-		&=&\dfrac{\pi}{4}
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 14}}}
-
-1. 曲线 $y=x^2$与直线 $y=mx(m>0)$在第一象限内所围成的图形绕该直线旋转所形成的旋转体的体积$V$
-\myspace{1}
-\begin{solution}
-
-	我们设围成区域中任意一点$(x,y)$,我们有:$d=\dfrac{mx-y}{\sqrt{1+m^2}}$
-	\begin{eqnarray*}
-		V&=&\iint\limits_{S}2\pi ddxdy\\
-		&=&\dfrac{2\pi}{\sqrt{1+m^2}}\int_{0}^{m}dx\int_{x^2}^{mx}(mx-y)dy\\
-		&=&\dfrac{\pi m^5}{30\sqrt{1+m^2}}
-	\end{eqnarray*}
-\end{solution}
-\myspace{1}
-
-2. 设函数 $f(x,y)=\left\lbrace 
-\begin{array}{l}
-	(xy+a|x|+b\sqrt{|y|})\arctan \dfrac{1}{|x|+y^2},\ (x,y)\neq (0,0)\\
-	0,\ (x,y)=(0,0)
-\end{array}
-\right. $,下列说法中正确的是:  
-\begin{itemize}
-	\item A. $f(x,y)$在$(0,0)$处的连续性和$a,b$的取值有关
-	\item B. $f(x,y)$在$(0,0)$处偏导数存在的充要条件是$ab=0$
-	\item C. $f(x,y)$在$(0,0)$处可微的充要条件是$f(x,y)$在$(0,0)$处偏导数存在
-	\item D. $f(x,y)$在$(0,0)$处可微,则$(0,0)$是$f(x,y)$的极值点
-\end{itemize}
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-3. 设$f(x)$在$[0,+\infty)$上可导,$f'(x)+f^2(x)\geq 0,f(0)=1,f(x)\neq 0$,证明:  $f(x)\geq \dfrac{1}{x+1}$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-\section{Week \Rmnum{3}}
-\hl{\textbf{\textit{September 15}}}
-
-1. 设函数$f(x)$在$[0,1]$上二阶可导,且$\int_{0}^{1}f(x)dx=0$,则
-\begin{itemize}
-	\item A. 当$f'(x)<0$时,$f(\dfrac{1}{2})<0$
-	\item B. 当$f''(x)<0$时,$f(\dfrac{1}{2})<0$
-	\item C. 当$f'(x)>0$时,$f(\dfrac{1}{2})<0$
-	\item D. 当$f''(x)>0$时,$f(\dfrac{1}{2})<0$
-\end{itemize}
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-2. 设$f(x)=\begin{pmatrix}
-	1&x&x^2&x^3\\
-	1&2&4&8\\
-	1&-1&1&-1\\
-	1&1&1&1
-\end{pmatrix}$,则曲线$y=f(x)$在$(-1,2)$内存在水平切线的条数
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 16}}}
-
-1. 已知正值连续函数$f(x)$在$[0,1]$上单调减少,对于任意的$a,b(0<a<b<1)$,下列结论不正确的是
-\begin{itemize}
-	\item A. $a\int_{0}^{b}f(x)dx>b\int_{0}^{a}f(x)dx$
-	\item B. $b\int_{0}^{a}f(x)dx>a\int_{0}^{b}f(x)dx$
-	\item C. $a\int_{0}^{b}\sqrt{f(x)}dx<b\int_{0}^{a}\sqrt{f(x)}dx$
-	\item D. $b\int_{0}^{a}\sqrt{f(x)}dx<a\int_{0}^{b}\sqrt{f(x)}dx$
-\end{itemize}
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-2. 设函数$\varphi(x,y)$的全微分为$dz=(2x-y^2-2y)dx+(-2xy-2x+y^3+3y)dy$,$f(x,y)$连续,且$\lim\limits_{(x,y)\rightarrow (0,0)}\dfrac{f(x,y)}{\varphi(x,y)}=-1$
-\begin{itemize}
-	\item A. 点$(0,0)$是$f(x,y)$的极大值点
-	\item B. 点$(0,0)$是$f(x,y)$的极小值点
-	\item C. 点$(0,0)$不是$f(x,y)$的极值点
-	\item D. 不能确定点$(0,0)$是否为$f(x,y)$的极值点
-\end{itemize}
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-3. 求$\int_{L}\dfrac{|y|}{x^2+y^2+z^2}ds$,其中$L:\left\lbrace 
-\begin{array}{l}
-	x^2+y^2+z^2=a^2\\
-	x^2+y^2=2ax\\
-	a\geq 0
-\end{array}
-\right. (a>0)$
-
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 17}}}
-
-1. 设$I_{1}=\int_{0}^{\pi}\dfrac{x\sin^2 x}{1+e^{\cos^2 x}}dx$,$I_{2}=\int_{0}^{\pi}\dfrac{\sin^2 x}{1+e^{\cos^2 x}}dx$,$I_{3}=\int_{0}^{\frac{\pi}{2}}\dfrac{\cos^2 x}{1+e^{\sin^2 x}}dx$,比较$I_{1},I_{2},I_{3}$的大小
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-2. 设$f(u,v)$有一阶偏导数,$f(x,1-x)=1,f_{1}^{'}(x,1-x)=x$
-
-(1)设$z(t)=f(\cos t,\sin t)$,计算$z'(0)$
-
-(2)证明:  $f(u,v)$在单位圆周上至少存在两个不同的点满足方程:  $v\dfrac{\partial f}{\partial u}=u\dfrac{\partial f}{\partial v}$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 18}}}
-
-1. 设$f(x)$在$[0,1]$连续可导,$\int_{0}^{1}f(x)dx=\dfrac{5}{2}$,$\int_{0}^{1}xf(x)dx=\dfrac{3}{2}$,证明:$\exists \xi\in(0,1),\ s.t. f'(\xi)=3$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-2. 求极限 $\lim\limits_{x\rightarrow 0 }\dfrac{(1-\cos^3 x)(1-\cos^{17} x)}{\frac{x^2}{2}-\int_{0}^{x}\sum\limits_{n=0}^{+\infty}\dfrac{(-1)^n}{3^n(2n+1)!}t^{2n+1}dt}$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-3. 设偶函数$f(t)$具有连续的导函数,且满足$f(t)=e^{4\pi t^2}+\iint\limits_{x^2+y^2\leq 4t^2}f(\dfrac{\sqrt{x^2+y^2}}{2})dxdy$,求方程$\int_{0}^{x}\sqrt{1+4\pi t^2}dt+\int_{\cos x}^{0}\dfrac{1+4\pi t^2}{f(t)}dt=0$在$(0,+\infty)$内根的个数
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-4. 设二阶可导函数$f(x)$满足$f(0)=f(2)=0$,$f(1)=a>0$且$f''(x)<0$,则
-\begin{itemize}
-	\item A. $\int_{0}^{2}f(x)dx>a$
-	\item B. $\int_{0}^{2}f(x)dx<a$
-	\item C. $\int_{0}^{1}f(x)dx>\int_{1}^{2}f(x)dx$
-	\item D. $\int_{0}^{1}f(x)dx<\int_{1}^{2}f(x)dx$
-\end{itemize}
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 19}}}
-
-1. 设$f(x,y)=\left\lbrace 
-\begin{array}{l}
-	\dfrac{y^2\sin x}{x^2+y^2},\ (x,y)\neq (0,0)\\
-	0,\ (x,y)=(0,0)
-\end{array}
-\right. $,$f(x,y)$在$(0,0)$点处
-\begin{itemize}
-	\item A. 不连续
-	\item B. 连续但不可导
-	\item C. 可导但不可微
-	\item D. 可微
-\end{itemize}
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-2. 求$\iint_{D}\dfrac{1-x^3y^2}{(y+2\sqrt{1-x^2})^2}dxdy$,其中$D:\{(x,y)|x^2+y^2\leq 1,-y\leq x\leq y\}$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 20}}}
-
-1. 求 $\iiint\limits_{\Omega}(mx+ly+nz)^2dv$,其中 $\Omega=\{(x,y,x)|x^2+y^2+z^2\leq a^2(a>0)\}$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-2. 设 $f(x)$在$[a,b]$上导函数连续,$f'(a)=f'(b)$,证明:  $\exists \xi\in(a,b),\ s.t.\ f'(\xi)=\dfrac{f(\xi)-f(a)}{\xi-a}$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-3. 下列函数在$(0,0)$点可微的是:
-\begin{itemize}
-	\item A.$f(x,y)=\sqrt{x^2+y^2}$
-	\item B.$g(x,y)=\left\lbrace 
-	\begin{array}{l}
-		\dfrac{xy}{x^2+y^2},\ (x,y)\neq (0,0)\\
-		0,\ (x,y)=(0,0)
-	\end{array}
-	\right. $
-	\item C.$\varphi(x,y)=\left\lbrace 
-	\begin{array}{l}
-		\dfrac{xy}{\sqrt{x^2+y^2}},\ (x,y)\neq (0,0)\\
-		0,\ (x,y)=(0,0)
-	\end{array}
-	\right. $
-	\item D.$\psi(x,y)=\left\lbrace 
-	\begin{array}{l}
-		(x^2+y^2)\sin\frac{1}{x^2+y^2},\ (x,y)\neq (0,0)\\
-		0,\ (x,y)=(0,0)
-	\end{array}
-	\right. $
-\end{itemize}
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-4. 已知$(b-a)(c-a)(d-a)(c-b)(d-c)=k$,求行列式
-$$\begin{vmatrix}
-	1&1&1&1\\
-	a^2&b^2&c^2&d^2\\
-	a^3&b^3&c^3&d^3\\
-	a^4&b^4&c^4&d^4\\
-\end{vmatrix}$$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-5. 求 $\int_{0}^{1}dx\int_{0}^{1-x}dy\int_{x+y}^{1}\dfrac{\sin z}{z}dz$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 21}}}
-
-1. 已知函数$f(x,y)$在$(0,0)$点的某邻域内有定义,则$\lim\limits_{x\rightarrow 0}f_{x}'(x,0)=f_{x}'(0,0),\lim\limits_{y\rightarrow 0}f_{y}'(0,y)=f_{y}'(0,0)$是$f(x,y)$在$(0,0)$处可微的什么条件?
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-2. 设$n$阶可逆矩阵 $A=\begin{pmatrix}
-	a&b&\cdots&b\\
-	b&a&\cdots&b\\
-	\vdots&\vdots&&\vdots\\
-	b&b&\cdots&a
-\end{pmatrix}$,其中$b\neq 0$,求$A^{-1}$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-3. 求微分方程$y''+(4x+e^{2y})(y')^3=0$的通解,其中$y'\neq 0$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-4. 设$f(x)$二阶可导,$f^{2}(x)-f^{2}(y)=f(x+y)-f(x-y)$
-
-(1)证明:$f''(x)f(y)=f(x)f''(y)$
-
-(2)若$f''(1)=f(1)=1$,求$f(x)$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-\section{Week \Rmnum{4}}
-\hl{\textbf{\textit{September 22}}}
-
-1. 设$z=\dfrac{x\cos(y-1)-(y-1)\cos x}{1+\sin x+\sin(y-1)}$,求$\dfrac{\partial z}{\partial y}|_{(0,1)}$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-2.已知$A$是正交矩阵,则$A^{*}=A^{T}$是$|A|=1$的什么条件?
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-3. 求$\lim\limits_{n\rightarrow +\infty}\sqrt{n}\left( 1-\sum\limits_{i=1}^{n}\dfrac{1}{n+\sqrt{i}}\right) $
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-
-\hl{\textbf{\textit{September 23}}}
-
-1. 已知$f(x,y)=\left\lbrace 
-\begin{array}{l}
-	xy\dfrac{x^2-y^2}{x^2+y^2},\ (x,y)\neq(0,0)\\
-	0,\ (x,y)=(0,0)
-\end{array}
-\right. $,求$f_{xy}''(0,0)\cdot f_{yx}''(0,0)$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-2. 设矩阵 $A=(a_{ij})$ 满足 $a_{ij}=A_{ij}$,$a_{11}=-1$,求 $Ax=\begin{pmatrix}
-	1\\0\\0
-\end{pmatrix}$ 的解
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-3. 求 $\int_{0}^{+\infty}\dfrac{1-e^{-x}}{\sqrt{x^3}}dx$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-4. 方程 $x=e^{\sin^{n}x}(n=1,2,\cdots)$
-
-(1). 证明方程在 $(\dfrac{\pi}{2},e)$ 内有唯一实数根
-
-(2). 计算$\lim\limits_{n\rightarrow +\infty}\left(\dfrac{\pi}{2}\cdot \dfrac{\sin x_{n}}{x_{n}} \right)^{\dfrac{1}{x_{n}-\frac{\pi}{2}}}$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 24}}}
-
-1. 若 $\dfrac{\partial^2 z}{\partial x\partial y}=1$,且当 $x=0$ 时,$z=\sin y$, 当$y=0$ 时,$z=\sin x$,求$z(x,y)$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-2.设矩阵$\begin{bmatrix}
-	a_{1}&b_{1}&c_{1}\\
-	a_{2}&b_{2}&c_{2}\\
-	a_{3}&b_{3}&c_{3}
-\end{bmatrix}$满秩,则直线$l_{1}:\ \dfrac{x-a_{1}}{a_{1}-a_{2}}=\dfrac{y-b_{1}}{b_{1}-b_{2}}=\dfrac{z-c_{1}}{c_{1}-c_{2}}$与直线$l_{2}:\ \dfrac{x-a_{1}}{a_{2}-a_{3}}=\dfrac{y-b_{1}}{b_{2}-b_{3}}=\dfrac{z-c_{1}}{c_{2}-c_{3}}$关系
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-3. 设 $A=\begin{bmatrix}
-	-3&4&0&0\\
-	-2&3&0&0\\
-	0&0&1&1\\
-	0&0&0&1
-\end{bmatrix}$,求$A^{n}$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-4. 求$\sum\limits_{n=1}^{+\infty}\dfrac{(-1)^{n}n^{2}}{(n+1)!}x^{n}$的和函数$S(x)$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 25}}}
-
-1. 设可微函数 $f(x,y)$ 满足$\dfrac{\partial f}{\partial x}=-f(x,y)$,$f(0,\dfrac{\pi}{2})=1$,且$\lim\limits_{n\rightarrow +\infty}\left[\dfrac{f(0,y+\frac{1}{n})}{f(0,y)} \right]^{n}=e^{\cot y} $,求$f(x,y)$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-2. $f(x)$在$(-\infty,+\infty)$可微,$|f'(x)|<k\cdot f(x)(0<k<1)$
-
-(1).$\exists \xi\in(-\infty),+\infty),\ s.t.\ \ln f(\xi)=\xi$
-
-(2).设$a_{n}=\ln f(a_{n-1})(n=1,2,\cdots)$,证明$\{a_{n}\}$收敛
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 26}}}
-
-1.设$f(x)$有连续一阶导数,$(xy-yf(x))dx+(f(x)+y^2)dy=du(x,y)$,且$f(0)=-1$,求$u(x,y)$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-2. 积分计算
-
-(1).$\int_{0}^{\ln 2}dy\int_{e^{y}}^{2}\dfrac{e^{xy}}{x^{x}-1}dx$
-
-(2).$\int_{0}^{1}dx\int_{x}^{1}ydy\int_{y}^{1}\sqrt{1+z^4}dz$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 27}}}
-
-1. $f(x)$在$x=0$处$n+1$阶可导,$f(0)=f'(0)=\cdots=f^{(n-1)}(0)=0$,$f^{(n)}(0)=a$,求$\lim\limits_{x\rightarrow 0}\dfrac{f(e^{x}-1)-f(x)}{x^{n+1}}$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-2. 若函数$z=z(x,y)$由方程$e^{x+2y+3z}+\dfrac{xyz}{\sqrt{1+x^2+y^2+z^2}}=1$确定,求$dz|_{(0,0)}$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 28}}}
-
-1.设$f(x)$在$[0,+\infty)$上有一阶连续导数,对半空间$x\geq 0$中任意光滑闭曲面$\varSigma$,我们有$\oiint\lim\limits_{\varSigma}e^{-x}f(x)dydz+y\sqrt{e^{x}-1}f^{2}(x)dzdx=0$,求$f(x)$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-2.设$f(t)$在$[t,+\infty)$上有连续二阶导数,且$f(1)=0,f'(1)=1$,$z=(x^2+y^2)f(x^2+y^2)$满足$\dfrac{\partial^2 z}{\partial x^2}+\dfrac{\partial^2 z}{\partial y^2}=0$,求$f(x)$在$[1,+\infty)$上的最大值
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 29}}}
-
-1. 设$u=f(x,y,z)$,$z=z(x,y)$是由方程$\varphi(x+y,z)=1$所确定的隐函数,其中$f$和$\varphi$有二阶连续偏导数且$\varphi_{2}\neq 0$,求$\dfrac{\partial u}{\partial x},du,\dfrac{\partial^2 u}{\partial x\partial y}$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-\hl{\textbf{\textit{September 30}}}
-
-1. 设函数$z=z(x,y)$的微分$dz=(2x+12y)dx+(12x+4y)dy$且$z(0,0)=0$,求函数$z=z(x,y)$在$4x^2+y^2\leq 25$上的最大值
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

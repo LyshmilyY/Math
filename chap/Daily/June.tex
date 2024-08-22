@@ -3,750 +3,7 @@
 \section{Week \Rmnum{1}}
 \hl{\textbf{\textit{June 1}}}
 
-1. $f(x)\text{在}[0,1]\text{上连续},\forall x,y\in \mathbb{R} ,|f(x)-f(y)|\leq M|x-y|,\text{求证: }\left| \int_{0}^{1}f(x)dx-\dfrac{1}{n}\sum\limits_{k=1}^{n}f(\dfrac{k}{n})\right|\leq \dfrac{M}{2n} $
-\myspace{1}
-\begin{solution}
-	\begin{lemma}[积分和求和]
-		
-		$$\int_{0}^{1}f(x)dx=\sum\limits_{k=1}^{n}\int_{\frac{k-1}{n}}^{\frac{k}{n}}f(x)dx$$
-	\end{lemma}
-	我们利用上面的式子,对不等式的左边进行处理: 
-	$$\text{左边: }\left| \sum\limits_{k=1}^{n}\int_{\frac{k-1}{n}}^{\frac{k}{n}}f(x)dx-\sum\limits_{k=1}^{n}\int_{\frac{k-1}{n}}^{\frac{k}{n}}f(\frac{k}{n})dx\right|=\left|\sum\limits_{k=1}^{n}\int_{\frac{k-1}{n}}^{\frac{k}{n}}[f(x)-f(\frac{k}{n})]dx\right|$$
-	
-	由绝对值不等式得到: 
-	$$\text{左边}\leq \sum\limits_{k=1}^{n}\int_{\frac{k-1}{n}}^{\frac{k}{n}}\left|  [f(x)-f(\frac{k}{n})]\right|dx\leq  \sum\limits_{k=1}^{n}\int_{\frac{k-1}{n}}^{\frac{k}{n}}M(\frac{k}{n}-x)dx$$
-	$$\text{左边}\leq M\sum\limits_{k=1}^{n}\frac{1}{2n^2}=\dfrac{M}{2n}=\text{右边} $$
-\end{solution}
-
-\myspace{1}
-
-\hl{\textbf{\textit{June 2}}}
-
-1. 已知数列$\{x_{n}\}$,且$\lim\limits_{n\rightarrow +\infty}\dfrac{x_{n}}{x_{n+1}}=\int_{0}^{1}e^{-x^2}dx$,则: 
-
-\begin{itemize}
-	\item A.$\lim\limits_{n\rightarrow +\infty}=0$
-	\item \hl{B}.$\lim\limits_{n\rightarrow +\infty}=\infty$
-	\item C.$\lim\limits_{n\rightarrow +\infty}=a\ (a\neq 0)$
-	\item D.$\lim\limits_{n\rightarrow +\infty}\text{不存在但不是}\infty$
-\end{itemize}
-\myspace{1}
-\begin{solution}
-	
-	首先我们可以得到: 
-	$$\int_{0}^{1}e^{-x^2}dx=a,\ a\in(0,1)$$
-	
-	我们由$\lim\limits_{n\rightarrow +\infty}\frac{x_{n}}{x_{n+1}}=a\Rightarrow |x_{n}|=a|x_{n+1}|<|x_{n+1}|\Rightarrow x_{n}\text{单调递增}$
-	
-	我们假设$x_{n}$有上界
-	$$\lim\limits_{n\rightarrow +\infty}x_{n}=\lim\limits_{n\rightarrow +\infty}x_{n+1}\Rightarrow \lim\limits_{n\rightarrow +\infty}\frac{x_{n}}{x_{n+1}}=1\neq a\text{矛盾！！！}$$
-	
-	答案:$B$
-\end{solution}
-
-\myspace{1}
-
-2. 设$f(x,y)\text{二阶偏导数连续},f(1,y)=f(x,1)=0,\iint\limits_{D}f(x,y)dxdy=a$,其中$D\in [0,1]\times [0,1]$,计算$\iint\limits_{D}xyf''_{xy}(x,y)d\sigma$
-\myspace{1}
-\begin{solution}
-	
-	原二重积分可以化为: 
-	\begin{eqnarray*}
-		\int_{0}^{1}xdx\int_{0}^{1}ydf'_{x}(x,y)&=&\int_{0}^{1}x\left[yf'_{x}(x,y)|_{y=0}^{y=1}-\int_{0}^{1}f'_{x}(x,y)dy\right]dx\\
-		&=&-\int_{0}^{1}xdx\int_{0}^{1}f'_{x}(x,y)dy\\
-		&=&-\int_{0}^{1}dy\int_{0}^{1}xdf(x,y)\\
-		&=&-\int_{0}^{1}\left[xf(x,y)|_{x=0}^{x=1}-\int_{0}^{1}f(x,y)dx\right]dy\\
-		&=&\int_{0}^{1}dx\int_{0}^{1}f(x,y)dy=a
-	\end{eqnarray*}
-	
-	$$\iint\limits_{D}xyf''_{xy}(x,y)d\sigma=\int_{0}^{1}dx\int_{0}^{1}f(x,y)dy=a$$
-\end{solution}
-
-\myspace{1}
-
-3. 设$a_{n}=\int_{0}^{1}x^{n}\sqrt{1-x^2}dx\ (n=0,1,2,\cdots)$
-
-(1).$\text{证明: 数列}\{a_{n}\}\text{单调减少,且}a_{n}=\dfrac{n-1}{n+2}a_{n-2},\ (n=2,3,\cdots)$
-
-(2). $\text{求}\lim\limits_{n\rightarrow \infty}\dfrac{a_{n}}{a_{n-1}}$
-\myspace{1}
-\begin{solution}
-	
-	(1).
-	我们令$x=\sin t,\ t\in[0,\frac{\pi}{2}],\ dx=\cos tdt$,我们有: 
-	$$a_{n}=\int_{0}^{\frac{\pi}{2}}\sin^{n}t\cos^{2} tdt=\int_{0}^{\frac{\pi}{2}}\sin^{n}tdt-\int_{0}^{\frac{\pi}{2}}\sin^{n+2}tdt$$
-	$$a_{0}=\frac{\pi}{4},\ a_{1}=\frac{1}{3}$$
-	
-	根据华里士公式,我们有: 
-	$$\int_{0}^{\frac{\pi}{2}}\sin^{n}xdx=\left\lbrace 
-	\begin{array}{l}
-		\dfrac{n-1}{n}\cdot\dfrac{n-3}{n-2}\cdots\dfrac{2}{3}\cdot 1,n\text{为大于1的奇数}\\
-		\dfrac{n-1}{n}\cdot\dfrac{n-3}{n-2}\cdots\dfrac{1}{2}\cdot\dfrac{\pi}{2},n\text{为正偶数}
-	\end{array}
-	\right. $$
-	$$a_{n}-a_{n-1}=\int_{0}^{\frac{\pi}{2}}\sin^{n}tdt-\int_{0}^{\frac{\pi}{2}}\sin^{n+2}tdt-\int_{0}^{\frac{\pi}{2}}\sin^{n-1}tdt+\int_{0}^{\frac{\pi}{2}}\sin^{n+1}tdt$$
-	$$a_{n}-a_{n-1}=\int_{0}^{\frac{\pi}{2}}-(1-\sin t)^2\sin^{n-1}tdt<0\Rightarrow a_{n}<a_{n-1}\Rightarrow \{a_{n}\}\text{单调递减}$$
-	
-	(i). 当$n$为奇数时,我们有: 
-	$$\left\lbrace 
-	\begin{array}{l}
-		a_{n}=(1-\dfrac{n+1}{n+2})\dfrac{n-1}{n}\cdot\dfrac{n-3}{n-2}\cdots\dfrac{2}{3}\cdot 1\\
-		a_{n-2}=(1-\dfrac{n-1}{n})\dfrac{n-3}{n-2}\cdots\dfrac{2}{3}\cdot 1
-	\end{array}
-	\right. $$
-	$$\left\lbrace 
-	\begin{array}{l}
-		a_{n}=\dfrac{n-1}{n+2}\cdot\dfrac{1}{n}\cdot\dfrac{n-3}{n-2}\cdots\dfrac{2}{3}\cdot 1\\
-		a_{n-2}=\dfrac{1}{n}\cdot\dfrac{n-3}{n-2}\cdots\dfrac{2}{3}\cdot 1
-	\end{array}
-	\right. 
-	$$
-	$$a_{n}=\dfrac{n-1}{n+2}a_{n-2}$$
-	
-	(i). 当$n$为偶数数时,我们有: 
-	$$\left\lbrace 
-	\begin{array}{l}
-		a_{n}=(1-\dfrac{n+1}{n+2})\dfrac{n-1}{n}\cdot\dfrac{n-3}{n-2}\cdots\dfrac{1}{2}\cdot\dfrac{\pi}{2}\\
-		a_{n-2}=(1-\dfrac{n-1}{n})\dfrac{n-3}{n-2}\cdots\dfrac{1}{2}\cdot\dfrac{\pi}{2}
-	\end{array}
-	\right. $$
-	$$\left\lbrace 
-	\begin{array}{l}
-		a_{n}=\dfrac{n-1}{n+2}\cdot\dfrac{1}{n}\cdot\dfrac{n-3}{n-2}\cdots\dfrac{1}{2}\cdot\dfrac{\pi}{2}\\
-		a_{n-2}=\dfrac{1}{n}\cdot\dfrac{n-3}{n-2}\cdots\dfrac{1}{2}\cdot\dfrac{\pi}{2}
-	\end{array}
-	\right. 
-	$$
-	$$a_{n}=\frac{n-1}{n+2}a_{n-2}$$
-	
-	综上所述,$\text{数列}\{a_{n}\}\text{单调减少,且}a_{n}=\dfrac{n-1}{n+2}a_{n-2},\ (n=2,3,\cdots)$
-	
-	(2). 我们不妨设$b_{n}=\dfrac{a_{n}}{a_{n-1}},\ (n=1,2,\cdots)$
-	
-	$b_{1}=\dfrac{4}{3\pi}$,当$n\geq 2$是,我们有: 
-	
-	$$b_{n}b_{n-1}=\dfrac{a_{n}}{a_{n-1}}\cdot\dfrac{a_{n-1}}{a_{n-2}}=\dfrac{n-1}{n+2}$$
-	
-	不妨设$\lim\limits_{n\rightarrow \infty}b_{n}=A$
-	$$ A^2=\lim\limits_{n\rightarrow \infty}\dfrac{n-1}{n+2}=1\Rightarrow A=1(A>0)$$
-	
-	我们来严格证明$\lim\limits_{n\rightarrow \infty}\dfrac{a_{n}}{a_{n-1}}=1$
-	
-	原命题转换为: 
-	
-	$$\forall \varepsilon>0,\ \exists N>0,\text{当}n>N\text{时},|\dfrac{a_{n}}{a_{n-1}}-1|<\epsilon$$
-	$$\int_{0}^{1}(1-x)x^{n-1}\sqrt{1-x^2}dx<\varepsilon \int_{0}^{1}x^{n-1}\sqrt{1-x^2}dx\Rightarrow \int_{0}^{1}(1-x-\varepsilon)x^{n-1}\sqrt{1-x^2}dx<0$$
-	$$\int_{0}^{1-\varepsilon}(1-x-\varepsilon)x^{n-1}\sqrt{1-x^2}dx<\int_{1-\varepsilon}^{1}(x+\varepsilon-1)x^{n-1}\sqrt{1-x^2}dx$$
-	
-	$$\text{左式}<(1-\varepsilon)^{n-1}\int_{0}^{1}x^{n-1}\sqrt{1-x^2}dx=P(1-\varepsilon)^{n-1}$$
-	$$\text{右式}>\int_{1-\frac{\varepsilon}{2}}^{1}(x+\varepsilon-1)x^{n-1}\sqrt{1-x^2}dx>(1-\frac{\varepsilon}{2})^{n-1}\int_{1-\frac{\varepsilon}{2}}^{1}(x+\varepsilon-1)\sqrt{1-x^2}dx>Q(1-\frac{\varepsilon}{2})^{n-1}$$
-	
-	其中$P,Q$均为与$n$无关的正数,我们只需找到$N$,使得$Q(1-\dfrac{\varepsilon}{2})^{n-1}>P(1-\varepsilon)^{n-1}$
-	$$n>[1+\dfrac{\ln P-\ln Q}{\ln(1-\frac{\varepsilon}{2})-\ln(1-\varepsilon)}]$$
-	
-	综上,$\forall \varepsilon>0,\ \exists N=[1+\dfrac{\ln P-\ln Q}{\ln(1-\frac{\varepsilon}{2})-\ln(1-\varepsilon)}]+1>0,\text{当}n>N\text{时},|\dfrac{a_{n}}{a_{n-1}}-1|<\epsilon$
-\end{solution}
-\begin{anymark}[注]
-	(1). 我们可以得到: 
-	$$a_{n+1}-a_{n}=\int_{0}^{1}x^{n+1}\sqrt{1-x^2}dx-\int_{0}^{1}x^{n}\sqrt{1-x^2}dx=\int_{0}^{1}(x-1)x^{n}\sqrt{1-x^2}dx<0$$
-	
-	我们可以得到数列$\{a_{n}\}$单调递减.
-	
-	我们还有: 
-	\begin{eqnarray*}
-		a_{n}&=&\int_{0}^{1}x^{n}\sqrt{1-x^2}dx\\
-		&=&-\dfrac{1}{3}\int_{0}^{1}x^{n-1}d(1-x^2)^{\frac{3}{2}}\\
-		&=&\dfrac{n-1}{3}\int_{0}^{1}x^{n-2}\sqrt{1-x^2}(1-x^2)dx\\
-		&=&\dfrac{n-1}{3}a_{n-2}-\dfrac{n-1}{3}a_{n}\\
-		a_{n}&=&\dfrac{n-1}{n+2}a_{n-2}
-	\end{eqnarray*}
-	
-	(2). 我们由(1)知道,$\{a_{n}\}$单调递减且$a_{n}>0$,我们得到: 
-	$$\left\lbrace
-	\begin{array}{l}
-		a_{n}<a_{n-1}\\a_{n-1}<a_{n-2}
-	\end{array}
-	\right. \Rightarrow \left\lbrace
-	\begin{array}{l}
-		\dfrac{a_{n}}{a_{n-1}}<1\\\dfrac{a_{n}}{a_{n-2}}<\dfrac{a_{n}}{a_{n-1}}
-	\end{array}
-	\right. $$
-	
-	我们由夹逼定理可以得到: 
-	$$\left\lbrace
-	\begin{array}{l}
-		\lim\limits_{n\rightarrow +\infty}\dfrac{a_{n}}{a_{n-2}}=1\\
-		\lim\limits_{n\rightarrow +\infty}1=1
-	\end{array}
-	\right. \Rightarrow \lim\limits_{n\rightarrow +\infty}\dfrac{a_{n}}{a_{n-1}}=1$$
-	
-	综上所述,我们得到: $\lim\limits_{n\rightarrow +\infty}\dfrac{a_{n}}{a_{n-1}}=1$
-\end{anymark}
-\myspace{1}
-
-\hl{\textbf{\textit{June 3}}}
-
-1.$xy'-(2x^2+1)y=x^2(x\geq 1)$,且$y(1)=a$,讨论$\lim\limits_{x\rightarrow +\infty}y(x)$
-\myspace{1}
-\begin{solution}
-	
-	我们得到微分方程: 
-	$$y'-(2x+\frac{1}{x})y=x\Rightarrow (e^{\int (-2x-\frac{1}{x})dx}y)'=xe^{\int (2x+\frac{1}{x})dx}$$
-	
-	$$y=xe^{x^2}(\int_{1}^{x}e^{-t^2}dt+C)$$
-	
-	我们由: $y(1)=a\Rightarrow C=\dfrac{a}{e}$
-	
-	原问题转化为: 
-	$$\lim\limits_{x\rightarrow +\infty}xe^{x^2}(\int_{1}^{x}e^{-t^2}dt+\frac{a}{e})$$
-	
-	我们有: $$\int_{0}^{+\infty}e^{-x^2}dx=\frac{\sqrt{\pi}}{2}$$
-	
-	原极限可以写作: 
-	$$\lim\limits_{x\rightarrow +\infty}xe^{x^2}(\frac{\sqrt{\pi}}{2}-\int_{0}^{1}e^{-t^2}dt+\frac{a}{e})$$
-	
-	(i).当$a=e(\int_{0}^{1}e^{-t^2}dt-\dfrac{\sqrt{\pi}}{2})$
-	
-	洛必达法则: $$\lim\limits_{x\rightarrow +\infty}xe^{x^2}(\frac{\sqrt{\pi}}{2}-\int_{0}^{1}e^{-t^2}dt+\frac{a}{e})=\lim\limits_{x\rightarrow +\infty}\frac{x^2}{-2x^2-1}=-\frac{1}{2}$$
-	
-	(ii).当$a\neq e(\int_{0}^{1}e^{-t^2}dt-\dfrac{\sqrt{\pi}}{2})$,极限不存在.
-\end{solution}
-
-\myspace{1}
-
-2.已知当$n$充分大时,$|a_{n}|\leq |b_{n}|\leq |c_{n}|$,且$\lim\limits_{x\rightarrow \infty}a_{n}=\lim\limits_{x\rightarrow \infty}|c_{n}|$,则: 
-\begin{itemize}
-	\item A. $\lim\limits_{x\rightarrow \infty}(|a_{n}|-b_{n})$
-	\item B. $\lim\limits_{x\rightarrow \infty}(|b_{n}|-c_{n})$
-	\item C. $\lim\limits_{x\rightarrow \infty}(|b_{n}|-c_{n})$
-	\item \hl{D}. $\lim\limits_{x\rightarrow \infty}(|b_{n}|-a_{n})$
-\end{itemize}
-\myspace{1}
-\begin{solution}
-	
-	我们有: $\lim\limits_{x\rightarrow \infty}x_{n}=A\Rightarrow \lim\limits_{x\rightarrow \infty}|x_{n}|=A$
-	
-	我们假设: $\lim\limits_{x\rightarrow \infty}a_{n}=\lim\limits_{x\rightarrow \infty}|c_{n}|=A$
-	
-	我们得到: $\lim\limits_{x\rightarrow \infty}|a_{n}|=A$
-	
-	根据夹逼定理: $\lim\limits_{x\rightarrow \infty}|b_{n}|=A$
-	
-	我们已知的极限有$\lim\limits_{x\rightarrow \infty}a_{n},\lim\limits_{x\rightarrow \infty}|a_{n}|,\lim\limits_{x\rightarrow \infty}|b_{n}|,\lim\limits_{x\rightarrow \infty}|c_{n}|$
-	
-	答案:$D$.
-\end{solution}
-
-\myspace{1}
-
-\hl{\textbf{\textit{June 4}}}
-
-1.$\lim\limits_{n\rightarrow+\infty}\sin^{2}(\pi\sqrt{n^2+3n})$
-\myspace{1}
-\begin{solution}
-	
-	原极限等价于: 
-	\begin{eqnarray*}
-		\lim\limits_{n\rightarrow+\infty}\sin^{2}(\pi\sqrt{n^2+3n}-\pi n)&=&\lim\limits_{n\rightarrow+\infty}\sin^{2}(\dfrac{3n\pi }{\sqrt{n^2+3n}+n})\\
-		&=&\sin^2(\frac{3\pi}{2})=1
-	\end{eqnarray*}
-	
-\end{solution}
-
-\myspace{1}
-
-\hl{\textbf{\textit{June 5}}}
-
-1. $\lim\limits_{n\rightarrow +\infty}\dfrac{1}{\sqrt[n]{n!}}\left[\dfrac{1}{n+\ln 1}+\dfrac{2}{n+\ln 2}+\cdots+\dfrac{n}{n+\ln n} \right]$
-\myspace{1}
-\begin{solution}
-	
-	我们不妨设$b_{n}=\dfrac{1}{\sqrt[n]{n!}}\left[\dfrac{1}{n+\ln 1}+\dfrac{2}{n+\ln 2}+\cdots+\dfrac{n}{n+\ln n} \right]$
-	$$a_{n}=\dfrac{1}{\sqrt[n]{n!}}[\frac{1}{n}+\frac{2}{n}+\cdots+\frac{n}{n}],\ c_{n}=\dfrac{1}{\sqrt[n]{n!}}[\frac{1}{n+\ln n}+\frac{2}{n+\ln n}+\cdots+\frac{n}{n+\ln n}]$$
-	
-	我们得到: 
-	$$c_{n}<b_{n}<a_{n}\Rightarrow \dfrac{n+1}{2(n+\ln n)}\dfrac{n}{\sqrt[n]{n!}}<b_{n}<\dfrac{n+1}{2n}\dfrac{n}{\sqrt[n]{n!}}$$
-	
-	我们有: $\lim\limits_{n\rightarrow +\infty}\dfrac{n+1}{2(n+\ln n)}=\lim\limits_{n\rightarrow +\infty}\dfrac{n+1}{2n}=\dfrac{1}{2}$
-	
-	对于$\lim\limits_{n\rightarrow +\infty}\dfrac{n}{\sqrt[n]{n!}}$
-	\begin{lemma}[斯特林公式]\label{lem: 斯特林公式}
-		$$\mathcolorbox{yellow}{n!\approx \sqrt{2\pi n}(\dfrac{n}{e})^n}$$
-		
-	\end{lemma}
-	我们可以知道: $\lim\limits_{n\rightarrow +\infty}\dfrac{n}{\sqrt[n]{n!}}=e$
-	\begin{anymark}[注]
-		\begin{eqnarray*}
-			\lim\limits_{n\rightarrow +\infty}\dfrac{n}{\sqrt[n]{n!}}
-			&=&\lim\limits_{n\rightarrow +\infty}e^{-\frac{1}{n}(\ln\frac{1}{n}+\ln\frac{2}{n}+\cdots+\ln\frac{n}{n})}\\
-			&=&e^{-\int_{0}^{1}\ln x dx}\\
-			&=&e
-		\end{eqnarray*}
-	\end{anymark}
-	我们得到: $\lim\limits_{n\rightarrow +\infty}a_{n}=\lim\limits_{n\rightarrow +\infty}b_{n}=\dfrac{e}{2}$
-	
-	由夹逼定理,我们得到: $\lim\limits_{n\rightarrow +\infty}b_{n}=\dfrac{e}{2}$
-\end{solution}
-
-\myspace{1}
-
-2. $f(x)>0,f(x)f''(x)\geq [f'(x)]^2,f(0)=1$,证明: $f(x)\geq e^{f'(0)x}$
-\myspace{1}
-\begin{solution}
-	
-	这个题还有第一问: $f(x_{1})f(x_{2})\geq f^2(\dfrac{x_{1}+x_{2}}{2})$
-	
-	我们由: $$f(x)f''(x)\geq [f'(x)]^2\Rightarrow \text{可以构造出函数}\frac{f'(x)}{f(x)}\text{单调递增}$$
-	
-	我们将$f(x_{1})f(x_{2})\geq f^2(\dfrac{x_{1}+x_{2}}{2})$取对数得到: 
-	$$\ln f(x_{1})+\ln f(x_{2})\geq 2\ln f(\frac{x_{1}+x_{2}}{2})$$
-	
-	我们构造函数$g(x)=\ln f(x)$
-	
-	原命题转化为: $\dfrac{g(x_{1})+g(x_{2})}{2}\geq g(\frac{x_{1}+x_{2}}{2})$
-	
-	我们只需要证明: $g(x)\text{是凹函数},g''(x)\geq 0$
-	
-	我们有: $$g'(x)=\dfrac{f'(x)}{f(x)},\ g''(x)=\dfrac{f(x)f''(x)-[f'(x)]^2}{f^2(x)}\geq 0$$
-	
-	$g(x)\text{为凹函数}\Rightarrow \dfrac{g(x_{1})+g(x_{2})}{2}\geq g(\frac{x_{1}+x_{2}}{2})$
-	
-	我们证明了: $f(x_{1})f(x_{2})\geq f^2(\frac{x_{1}+x_{2}}{2})$
-	
-	$$g''(x)\geq 0\Rightarrow g'(x)\geq g'(0)=\dfrac{f'(0)}{f(0)}$$
-	
-	我们可以理解为: $g(x)\text{始终大于}g(0)\text{处的切线}$
-	
-	$$g(x)\geq g'(0)x+g(0)\Rightarrow \ln f(x)\geq f'(0)x\Rightarrow f(x)\geq e^{f'(0)x}$$
-\end{solution}
-
-\myspace{1}
-
-3. 设$f'(x)$在$[a,b]$上连续,且$f(a)=f(b)=0$,证明: $|f(x)|\leq \frac{1}{2}\int_{a}^{b}|f'(x)|dx$
-\myspace{1}
-\begin{solution}
-	
-	我们可以得到: $$f(x)=f(x)-f(a)=\int_{a}^{x}f'(t)tdt,\ f(x)=-(f(b)-f(x))=-\int_{x}^{b}f'(t)tdt$$
-	
-	我们得到: 
-	$$\left\lbrace 
-	\begin{array}{l}
-		|f(x)|=|\int_{a}^{x}f'(t)tdt|\leq\int_{a}^{x}|f'(t)|dt\\
-		|f(x)|=|\int_{x}^{b}f'(t)tdt|\leq\int_{x}^{b}|f'(t)|dt
-	\end{array}
-	\right. \Rightarrow 2|f(x)|\leq\int_{a}^{b}|f'(x)|dx$$
-	
-	我们证明: $|f(x)|\leq \frac{1}{2}\int_{a}^{b}|f'(x)|dx$
-\end{solution}
-
-\myspace{1}
-
-\hl{\textbf{\textit{June 6}}}
-
-1. $\iint_{D}\ln|sin(x-y)|dxdy,\ D=\{(x,y)|0\leq x\leq y\leq 2\pi\}$
-\myspace{1}
-\begin{solution}
-	
-	利用二重积分换元公式: $\left\lbrace 
-	\begin{array}{l}
-		u=y-x\\
-		v=x
-	\end{array}
-	\right.\Rightarrow dudv=dxdy,\ 0\leq u\leq \pi-v,0\leq v\leq \pi$
-	
-	我们得到原二重积分等价于: 
-	$$I=\int_{0}^{\pi}du\int_{0}^{\pi-u}\ln(sin u)dudv=\int_{0}^{\pi}(\pi-u)\ln(\sin u)du$$
-	
-	利用区间再现公式: 
-	$$2I=\pi\int_{0}^{\pi}\ln(\sin u)du\Rightarrow I=\pi\int_{0}^{\frac{\pi}{2}}\ln(\sin u)du$$
-	
-	$$I=-\frac{\ln 2\pi^2}{2}$$
-	\begin{lemma}[区间再现例子]
-		\begin{itemize}
-			\item $\int_{0}^{\pi}\ln(\sin x)dx=\int_{0}^{\pi}\ln(\cos x)dx=-\dfrac{\ln 2\pi}{2}$
-			\item $\int_{0}^{\frac{\pi}{2}}\ln(\tan x)dx=0$
-		\end{itemize}
-		\begin{anymark}[注]
-			$$\int_{0}^{\frac{\pi}{2}}\ln(\sin x)dx=\int_{0}^{\frac{\pi}{2}}\ln(\cos x)dx$$
-			
-			我们有: 
-			\begin{eqnarray*}
-				2I&=&\int_{0}^{\frac{\pi}{2}}\ln(\sin x\cos x)dx\\
-				&=&\int_{0}^{\frac{\pi}{2}}\ln(\sin 2x)dx-\int_{0}^{\frac{\pi}{2}}\ln 2dx\\
-				&=&I-\frac{\ln 2\pi}{2}\\
-				I&=&-\frac{\ln 2\pi}{2}
-			\end{eqnarray*}
-		\end{anymark}
-		$$\int_{0}^{\pi}xf(\sin x)dx=\frac{\pi}{2}\int_{0}^{\pi}f(\sin x)dx$$
-	\end{lemma}
-\end{solution}
-
-\myspace{1}
-
-2. 设$x_{n}=(1+\dfrac{1}{n^2})(1+\dfrac{2}{n^2})\cdots(1+\dfrac{n}{n^2})$,求$\lim\limits_{n\rightarrow\infty}x_{n}$
-\myspace{1}
-\begin{solution}
-	
-	原极限等价于: 
-	\begin{eqnarray*}
-		I&=&\lim\limits_{n\rightarrow\infty}e^{\ln(1+\frac{1}{n^2})}e^{\ln(1+\frac{2}{n^2})}\cdots e^{\ln(1+\frac{n}{n^2})}\\
-		&=&\lim\limits_{n\rightarrow\infty}e^{\frac{1}{n^2}}e^{\frac{2}{n^2}}\cdots e^{\frac{n}{n^2}}\\
-		&=&\lim\limits_{n\rightarrow\infty}e^{\frac{n(n+1)}{2n^2}}\\
-		&=&e^{\frac{1}{2}}
-	\end{eqnarray*}
-	\begin{lemma}[不等式放缩]
-		\begin{itemize}
-			\item $\text{琴生不等式: }\dfrac{2}{\pi}x\leq \sin x\leq x,x\in[0,\frac{\pi}{2}]$
-			\item $\text{琴生不等式: }x\leq \tan x\leq \dfrac{4}{\pi}x,x\in[0,\frac{\pi}{4}]$
-			\item $\text{泰勒不等式: }\dfrac{x}{1+x}\leq \ln(1+x)\leq x,\ x\in[0,+\infty)$
-		\end{itemize}
-	\end{lemma}
-	我们利用不等式放缩: 
-	$$\frac{k}{n^2+k}\leq \ln(1+\frac{k}{n^2})\leq \frac{k}{n^2}\Rightarrow \frac{k}{n^2+n}\leq \ln(1+\frac{k}{n^2})\leq \frac{k}{n^2}$$
-	
-	我们得到: 
-	$$\sum\limits_{k=1}^{n}\frac{k}{n^2+n}\leq \sum\limits_{k=1}^{n}\ln(1+\frac{k}{n^2})\leq \sum\limits_{k=1}^{n}\frac{k}{n^2}$$
-	
-	$$\lim\limits_{n\rightarrow\infty}\sum\limits_{k=1}^{n}\frac{k}{n^2+n}=\lim\limits_{n\rightarrow\infty}\sum\limits_{k=1}^{n}\dfrac{k}{n^2}=\dfrac{1}{2}$$
-	
-	由夹逼定理,我们得到: $\sum\limits_{k=1}^{n}\ln(1+\dfrac{k}{n^2})=\dfrac{1}{2}\Rightarrow I=e^{\frac{1}{2}}$
-\end{solution}
-
-\myspace{1}
-
-3.若函数$\varphi(x)$具有二阶导数,且满足$\varphi(2)>\varphi(1)$,$\varphi(2)>\int_{2}^{3}\varphi(x)dx$,证明: 至少存在一点$\xi\in(1,3)$,$s.t.\varphi ''(x)<0$
-\myspace{1}
-\begin{solution}
-	
-	我们有积分中值定理得到: 
-	$$\exists \eta\in(2,3),\ s.t. \int_{2}^{3}\varphi(x)dx=\varphi(\eta)$$
-	
-	我们由拉格朗日中值定理得到: 
-	$$\left\lbrace 
-	\begin{array}{l}
-		\exists \xi_{1}\in(1,2),\ s.t. \dfrac{\varphi(2)-\varphi(1)}{2-1}=\varphi '(\xi_{1})>0\\
-		\exists \xi_{2}\in(2,\eta),\ s.t. \dfrac{\varphi(\eta)-\varphi(2)}{\eta-2}=\varphi '(\xi_{2})<0
-	\end{array}
-	\right. $$
-	
-	我们在区间$(\xi_{1},\xi_{2})$内使用拉格朗日中值定理得到: 
-	$$\exists \xi_{3}\in(\xi_{1},\xi_{2}),\ s.t. \dfrac{\varphi(\xi_{2})-\varphi(\xi_{1})}{\xi_{2}-\xi_{1}}=\varphi '(\xi_{3})<0$$
-	
-	综上所述,我们得到: $\exists \xi\in(1,3)$,$s.t.\varphi ''(x)<0$
-\end{solution}
-
-\myspace{1}
-
-\hl{\textbf{\textit{June 7}}}
-
-1.设$x_{0}=0,x_{n}=\dfrac{1+2x_{n-1}}{1+x_{n-1}}$,证明数列$\{x_{n}\}$收敛,并求极限$\lim\limits_{n\rightarrow +\infty}x_{n}$
-\myspace{1}
-\begin{solution}
-	
-	我们有: $x_{1}=1,x_{2}=\dfrac{3}{2},x_{n}>0$
-	
-	我们使用数学归纳法来证明$x_{n}$单调递增: ($x_{n+1}>x_{n}$)
-	
-	(1).当$n=1$时,$x_{2}>x_{1}$成立
-	
-	(2).当$n\geq 1$时,假设$n=k$时,$x_{k+1}>x_{k}$,我们有: 
-	$$x_{k+1}=\dfrac{1+2x_{k}}{1+x_{k}}>x_{k}\Rightarrow 1+2x_{k}-x_{k}>0$$
-	
-	当$n=k+1$时: 
-	$$x_{k+2}=\dfrac{1+2\dfrac{1+2x_{k}}{1+x_{k}}}{1+\dfrac{1+2x_{k}}{1+x_{k}}}=\dfrac{3+5x_{k}}{2+3x_{k}}$$
-	
-	$$x_{k+2}-x_{k+1}=\dfrac{3+5x_{k}}{2+3x_{k}}-\dfrac{1+2x_{k}}{1+x_{k}}=\dfrac{1+2x_{k}-x_{k}^2}{(2+3x_{k})(1+x_{k})}>0$$
-	
-	我们证明: $x_{n}$单调递增,且$x_{n}-2x_{n}-1<0\Rightarrow |x_{n}|<3$
-	
-	$\{x_{n}\}$单调递增且有上界,我们得到$x_{n}$极限必定存在,我们不妨设: 
-	
-	$$\lim\limits_{n\rightarrow +\infty}x_{n}=A(A>0)\Rightarrow A=\frac{1+2A}{1+A}\Rightarrow A=\dfrac{1+\sqrt{5}}{2}$$
-\end{solution}
-
-\myspace{1}
-
-2. $\lim\limits_{n\rightarrow +\infty}\int_{n}^{n+1}x^2\sin\dfrac{1}{x}dx$
-\myspace{1}
-\begin{solution}
-	
-	我们有: 
-	$$\lim\limits_{x\rightarrow +\infty}x^2\sin\frac{1}{x}=\lim\limits_{x\rightarrow +\infty}x\dfrac{\sin\frac{1}{x}}{\frac{1}{x}}=+\infty$$
-	
-	我们有: $\lim\limits_{n\rightarrow +\infty}\int_{n}^{n+1}x^2\sin\dfrac{1}{x}dx=+\infty$
-\end{solution}
-
-\myspace{1}
-
-3. 判断级数的敛散性: $\sum\limits_{n=1}^{+\infty}\dfrac{n+1}{\sqrt{n^5-n+2}}$和$\sum\limits_{n=1}^{+\infty}\dfrac{1}{\sqrt{n(n+1)}(\sqrt{n+1}+\sqrt{n})}$
-\myspace{1}
-\begin{solution}
-	
-	我们运用比较判别法的极限形式: 
-	$$\lim\limits_{n\rightarrow +\infty}\dfrac{\dfrac{n+1}{\sqrt{n^5-n+2}}}{n^{-\frac{3}{2}}}=1$$
-	
-	原级数收敛.
-	
-	$$\lim\limits_{n\rightarrow +\infty}\dfrac{\frac{1}{\sqrt{n(n+1)}(\sqrt{n+1}+\sqrt{n})}}{2n^{-\frac{3}{2}}}=\frac{1}{2}$$
-	
-	原级数收敛.
-\end{solution}
-
-\myspace{1}
-
-4. $f(x)$在$[0,1]$上连续,且$\int_{0}^{1}f(x)dx=A$,求$\int_{0}^{1}dx\int_{x}^{1}dy\int_{x}^{y}f(x)f(y)f(z)dz$
-\myspace{1}
-\begin{solution}
-	
-	我们不妨设: $F(x)=\int_{0}^{x}f(t)dt,\ F(0)=0,F(1)=A$,原积分等价于: 
-	\begin{eqnarray*}
-		I&=&\int_{0}^{1}dx\int_{x}^{1}f(x)f(y)[F(y)-F(x)]dy\\
-		&=&\int_{0}^{1}f(x)dx\int_{x}^{1}f(y)F(y)dy-\int_{0}^{1}f(x)F(x)dx\int_{x}^{1}f(y)dy\\
-		&=&\int_{0}^{1}f(x)[\dfrac{F^2(1)}{2}-\dfrac{F^2(x)}{2}]dx-\int_{0}^{1}f(x)F(x)[F(1)-F(x)]dx\\
-		&=&\frac{A^3}{2}-\frac{A^3}{6}-\frac{A^3}{2}+\frac{A^3}{3}\\
-		&=&\frac{A^3}{6}
-	\end{eqnarray*}
-\end{solution}
-
-\myspace{1}
-
-\section{Week \Rmnum{2}}
-\hl{\textbf{\textit{June 8}}}
-
-1. 设$2x_{1}=1,2x_{n+1}=1-x_{n}^2,\ n=1,2,\cdots$,证明数列$\{x_{n}\}$收敛,并求极限$\lim\limits_{n\rightarrow +\infty}x_{n}$
-\myspace{1}
-\begin{solution}
-	
-	我们有: $x_{1}=\dfrac{1}{2},x_{n+1}=\dfrac{1}{2}-\dfrac{x_{n}^2}{2}\Rightarrow x_{n}\in(0,\dfrac{1}{2})$
-	
-	我们发现数列$\{x_{n}\}$不单调,不能使用单调有界准则来判断.
-	\begin{anymark}[方法一]
-		使用夹逼定理,先假定极限存在求出后证明: 
-		$$a=\sqrt{2}-1\Rightarrow a=\dfrac{1-a^2}{2}$$
-		$$|x_{n}-a|=|\dfrac{1-x_{n}^2}{2}-\dfrac{1-a^2}{2}|=|\dfrac{x_{x_{n-1}^2-a^2}}{2}|\leq \dfrac{\sqrt{2}-\frac{1}{2}}{2}|x_{n-1}-a|\leq \cdots\leq (\dfrac{\sqrt{2}-\frac{1}{2}}{2})^{n-1}|x_{1}-a|$$
-		
-		$$\lim\limits_{n\rightarrow \infty}(\dfrac{\sqrt{2}-\frac{1}{2}}{2})^{n-1}=0$$
-		
-		由夹逼定理: $\lim\limits_{n\rightarrow \infty}|x_{n}-a|=0$
-	\end{anymark}
-	\begin{anymark}[方法二]
-		构造无穷级数$\sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n})$,证明此级数收敛.
-		
-		$$|a_{n+1}-a_{n}|=|\dfrac{a_{n-1}^2-a_{n}^2}{2}|\leq \dfrac{1}{2}|a_{n}-a_{n-1}|\leq \cdots\leq \dfrac{1}{2^{n-1}}|a_{2}-a_{1}|$$
-		
-		我们知道级数$\sum\limits_{n=1}^{+\infty}\dfrac{1}{2^{n-1}}$收敛,由比较判别法我们知道级数$\sum\limits_{n=1}^{+\infty}|x_{n+1}-x_{n}|$收敛,级数$\sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n})$收敛
-		
-		我们得到: 
-		$$\lim\limits_{n\rightarrow \infty}x_{n+1}-x_{1}\text{存在}\Rightarrow \text{数列}\{x_{n}\}\text{极限存在}$$
-	\end{anymark}
-	\begin{anymark}[方法三]
-		用奇数项和偶数项极限相等推出数列$\{x_{n}\}$极限存在
-		
-		我们可以证明奇数项和偶数项单调递减,如果极限存在奇数项和偶数项极限存在且相等.
-		
-		我们不妨设: $\lim\limits_{n\rightarrow\infty}x_{2n}=A,\lim\limits_{n\rightarrow\infty}x_{2n-1}=B$
-		
-		我们有: 
-		$$\left\lbrace 
-		\begin{array}{l}
-			2A=1-B^2\\
-			2B=1-A^2
-		\end{array}
-		\right. \Rightarrow A=B=\sqrt{2}-1$$
-	\end{anymark}
-	
-	不妨设$\lim\limits_{n\rightarrow\infty}x_{n}=A(A>0)$,我们对$2x_{n+1}=1-x_{n}^2$两边同时取极限得到: 
-	$$2A=1-A^2\Rightarrow A=\sqrt{2}-1$$
-	\begin{lemma}[不单调数列极限]
-		(1).夹逼准则
-		
-		从定义出发,证明: \ $|x_{n}-a|$极限为$0$.
-		(2).构造无穷级数
-		
-		我们构造出无穷级数 $\sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n})$,证明这个级数收敛即可证明出数列$\{x_{n}\}$极限存在.
-		
-		(3)奇数项和偶数项极限存在且相等
-		$$\lim\limits_{n\rightarrow\infty}x_{2n}=\lim\limits_{n\rightarrow\infty}x_{2n-1}=A$$
-	\end{lemma}
-	\begin{proposition}
-		设$x_{1}=1,x_{n}=1+\dfrac{1}{1+x_{n-1}},(n=1,2,\cdots)$,证明极限$\lim\limits_{n\rightarrow\infty}x_{n}$存在并求出此极限
-	\end{proposition}
-	\begin{solution}
-		
-		我们发现: $x_{1}=1,x_{2}=\dfrac{3}{2},x_{3}=\dfrac{7}{5},x_{4}=\dfrac{17}{12}\Rightarrow x_{1}<x_{3},x_{2}>x_{4}$
-		
-		我们发现$x_{n}$不单调,我们考虑数列$\{x_{n}\}$的奇数项和偶数项.
-		
-		我们不妨假设$x_{2k-1}<x_{2k+1},x_{2k}>x_{2k+2}$
-		
-		我们有: $$x_{2k+3}=1+\dfrac{1}{1+x_{2k+2}}>1+\dfrac{1}{1+x_{2k}}=x_{2k+1}$$
-		$$x_{2k+4}=1+\dfrac{1}{1+x_{2k+3}}<1+\dfrac{1}{1+x_{2k+1}}=x_{2k+2}$$
-		
-		我们得到奇数项单调递增,偶数项单调递减,我们不妨假设: 
-		$$\lim\limits_{n\rightarrow\infty}x_{2n}=A(A>0),\lim\limits_{n\rightarrow\infty}x_{2n-1}=B(B>0)$$
-		
-		我们有: 
-		$$\left\lbrace 
-		\begin{array}{l}
-			A=1+\dfrac{1}{1+B}\\
-			B=1+\dfrac{1}{1+A}
-		\end{array}
-		\right. \Rightarrow A=B=\sqrt{2}$$
-	\end{solution}
-	\begin{proposition}
-		设$x_{1}=1,2x_{n+1}=x_{n}+\sqrt{x_{n}^2+\dfrac{1}{n^2}},(n=1,2,\cdots)$,证明极限数列$\{x_{n}\}$收敛.
-	\end{proposition}
-	\begin{solution}
-		
-		我们有: $x_{1}=1,x_{n}\geq 1$
-		$$2x_{n+1}=x_{n}+\sqrt{x_{n}^2+\dfrac{1}{n^2}}\Rightarrow x_{n}>0,\text{且}x_{n+1}>x_{n}$$
-		
-		我们不好找出$x_{n}$的上界,我们要证明$x_{n}$收敛,可以转化为证明: 
-		$$\text{级数}\sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n})\text{收敛}$$
-		$$x_{n+1}-x_{n}=\dfrac{\frac{1}{n^2}}{2(\sqrt{x_{n}+\frac{1}{n^2}}+x_{n})}\leq \frac{1}{4n^2}$$
-		
-		级数$\sum\limits_{n=1}^{+\infty}\dfrac{1}{4n^2}$收敛,我们由比较判别法得到原级数收敛.
-		
-		数列$\{x_{n}\}$收敛,极限$\lim\limits_{n\rightarrow\infty}x_{n}$存在.
-	\end{solution}
-	\begin{proposition}
-		设$x_{0}=1,x_{n+1}=\dfrac{1}{x_{n}^3+4},(n=0,1,2,\cdots)$,证明极限$\lim\limits_{n\rightarrow\infty}x_{n}$存在并求出此极限
-	\end{proposition}
-	\begin{solution}
-		
-		我们有: $x_{1}=\dfrac{1}{5},x_{2}=\dfrac{125}{601},x_{n}\in(0,1)$
-		
-		$$|x_{n+1}-x_{n}|=\dfrac{1}{x_{n}^3+4}-\dfrac{1}{x_{n-1}^3+4}=\dfrac{|x_{n}-x_{n-1}^3|}{(x_{n}^3+4)(x_{n-1}^3+4)}\leq \dfrac{3}{16}|x_{n}-x_{n-1}|\leq \cdots\leq (\dfrac{3}{16})^{n}|x_{1}-x_{0}|$$
-		
-		级数$\sum\limits_{n=1}^{+\infty}(\dfrac{3}{16})^{n}$收敛,根据比较判别法,我们得到: 
-		$$\text{级数}\sum\limits_{n=1}^{+\infty}(x_{n}-x_{n-1})\text{收敛}\Rightarrow \lim\limits_{n\rightarrow\infty}x_{n}-x_{0}\text{存在}$$
-		
-		我们不妨设$\lim\limits_{n\rightarrow\infty}x_{n}=A(A>0)$,我们有: 
-		$$A=\dfrac{1}{A^3+4}\Rightarrow A^4+4A-1=0$$
-		
-		$A$是方程$x^4+4x-1=0$的唯一正根.
-	\end{solution}
-	
-\end{solution}
-
-\myspace{1}
-
-2. 判断级数$\sum\limits_{n=1}^{+\infty}(-1)^{n-1}\dfrac{2+(-1)^n}{n^2}$敛散性
-\myspace{1}
-\begin{solution}
-	
-	我们不妨设: $a_{n}=\sum\limits_{n=1}^{+\infty}(-1)^{n-1}\dfrac{2}{n^2}$,$b_{n}=\sum\limits_{n=1}^{+\infty}-\frac{1}{n^2}$
-	
-	我们根据莱布尼茨判别法得到: 
-	$a_{n}$收敛,$b_{n}$收敛,原级数收敛.
-\end{solution}
-
-\myspace{1}
-
-3. $\iint_{D}|\dfrac{x+y}{2}-x^2-y^2|dxdy,D=\{(x,y)|x^2+y^2\leq 1\}$
-\myspace{1}
-\begin{solution}
-	
-	原二重积分可化为: 
-	$$I=\iint_{D}|\dfrac{1}{8}-(x-\dfrac{1}{4})^2-(y-\dfrac{1}{4})^2|dxdy,D:\{(x,y)|x^2+y^2\leq 1\}$$
-	
-	$$I=\iint_{D}(x^2+y^2-\dfrac{x+y}{2})dxdy-2\iint_{D'}(x^2+y^2-\dfrac{x+y}{2})dxdy$$
-	
-	其中: $$D=\{(x,y)|x^2+y^2\leq 1\},\ D'=\{(x,y)|(x-\frac{1}{4})^2+(y-\frac{1}{4})^2\leq \frac{1}{8}\}$$
-	
-	$$I=\int_{0}^{2\pi}d\theta\int_{0}^{1}[r^3-\frac{r^2}{2}(\sin\theta+\cos\theta)]dr-2\int_{-\frac{\pi}{4}}^{\frac{3\pi}{4}}d\theta\int_{0}^{\frac{\sin\theta+\cos\theta}{2}}[r^3-\frac{r^2}{2}(\sin\theta+\cos\theta)]dr$$
-	
-	$$I=\frac{\pi}{2}+\frac{1}{24}\int_{0}^{\pi}\sin^4\theta d\theta=\frac{\pi}{2}+\frac{\pi}{64}=\frac{33\pi}{64}$$
-\end{solution}
-
-\myspace{1}
-
-4. 设$f(x,y)$在区域$0\leq x\leq 1,0\leq y\leq 1$上连续,$f(0,0)=0$,且$f(x)$在点$(0,0)$处可微,$f'_{y}(0,0)=1$,求$\lim\limits_{x\rightarrow 0^{+}}\dfrac{\int_{0}^{x^2}dt\int_{x}^{\sqrt{t}}f(t,u)du}{1-e^{-\frac{x^4}{4}}}$
-\myspace{1}
-\begin{solution}
-	
-	我们交换积分次序得到: 
-	\begin{eqnarray*}
-		I&=&-\lim\limits_{x\rightarrow 0^{+}}\dfrac{\int_{0}^{x}du\int_{0}^{u^2}f(t,u)dt}{\frac{x^4}{4}}\\
-		&=&-\lim\limits_{x\rightarrow 0^{+}}\dfrac{\int_{0}^{x^2}f(t,x)dt}{x^3}
-	\end{eqnarray*}
-	
-	我们由积分中值定理得到: 
-	$$\exists \xi\in(0,x^2),\ s.t. \int_{0}^{x^2}f(t,x)dt=x^2f(\xi,x)$$
-	
-	原极限可以化为: 
-	$$I=-\lim\limits_{x\rightarrow 0^{+}}\dfrac{x^2f(\xi,x)}{x^3}=-\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(\xi,x)}{x}$$
-	
-	$f(x,y)$在$(0,0)$处可微,我们得到: 
-	$$f(x+\Delta x,y+\Delta y)=f(0,0)+f'_{x}(0,0)\Delta x+f'_{y}(0,0)\Delta y+o(\sqrt{(\Delta x)^2+(\Delta y)^2})$$
-	
-	我们有: 
-	$$f(\xi,x)=f(0,0)+f'_{x}(0,0)\xi+f'_{y}(0,0)x+o(\sqrt{(\xi)^2+x^2})=f'_{x}(0,0)\xi+x+o(\sqrt{\xi^2+x^2})$$
-	
-	我们知道: 
-	$$0<\xi<x^2\rightarrow \lim\limits_{x\rightarrow 0}\dfrac{\xi}{x}=0$$
-	$$0<\sqrt{\xi^2+x^2}<\sqrt{(x^4+x^2}\rightarrow \lim\limits_{x\rightarrow 0}\dfrac{\sqrt{\xi^2+x^2}}{x}=0 $$
-	
-	我们得到原极限$I=-1$
-\end{solution}
-
-\myspace{1}
-
-\hl{\textbf{\textit{June 9}}}
-
-1. 设$f(x)=1-\cos x$,则$\lim\limits_{x\rightarrow 0}\dfrac{(1-\sqrt{\cos x})(1-\sqrt[3]{\cos x})(1-\sqrt[4]{\cos x})(1-\sqrt[5]{\cos x})}{f\{f[f(x)]\}}$
-\myspace{1}
-\begin{solution}
-	
-	我们有: 
-	$$\left\lbrace 
-	\begin{array}{l}
-		x\rightarrow 0,\sqrt{\cos x}-1=\sqrt{1+\cos x-1}-1\sim \frac{1}{2}(\cos x-1) \\
-		x\rightarrow 0,\sqrt[3]{\cos x}-1=\sqrt[3]{1+\cos x-1}-1\sim \frac{1}{3}(\cos x-1)\\
-		x\rightarrow 0,\sqrt[4]{\cos x}-1=\sqrt[4]{1+\cos x-1}-1\sim \frac{1}{4}(\cos x-1)\\
-		x\rightarrow 0,\sqrt[5]{\cos x}-1=\sqrt[5]{1+\cos x-1}-1\sim \frac{1}{5}(\cos x-1)
-	\end{array}
-	\right. $$
-	
-	原极限为: 
-	$$\lim\limits_{x\rightarrow 0}\dfrac{\dfrac{1}{120}(1-\cos x)^4}{\dfrac{1}{8}(1-\cos x)^4}=\frac{1}{15}$$
-\end{solution}
-\myspace{1}
-
-2. $z(x,y)=\int_{0}^{x}dt\int_{t}^{x}f(t+y)g(yu)du$,$f\text{和}g'$连续,求$\dfrac{\partial^2 z}{\partial x\partial y}$
-\myspace{1}
-\begin{solution}
-	
-	我们交换积分次序: 
-	$$z(x,y)=\int_{0}^{x}du\int_{0}^{u}f(t+y)g(yu)dt$$
-	
-	我们得到: 
-	$$\dfrac{\partial z}{\partial x}=g(xy)\int_{0}^{x}f(t+y)dt$$
-	
-	我们令$t+y=u,t=u-y,dt=du$,我们得到: 
-	$$\dfrac{\partial z}{\partial x}=g(xy)\int_{y}^{x+y}f(u)du$$
-	
-	我们得到: 
-	$$\dfrac{\partial^2 z}{\partial x\partial y}=xg'(xy)\int_{y}^{x+y}f(t)dt+g(xy)[f(x+y)-f(y)]$$
-\end{solution}
-
-\myspace{1}
-
-\hl{\textbf{\textit{June 10}}}
-
-1.$F(x)=\int_{0}^{x}e^{tx-t^2}dt$,求$F'(x)$
-\myspace{1}
-\begin{solution}
-	$$F(x)=\int_{0}^{x}e^{\frac{x^2}{4}-(t-\frac{x}{2})^2}dt=e^{\frac{x^2}{4}}\int_{0}^{x}e^{-(t-\frac{x}{2})^2}dt$$
-	
-	令$t-\dfrac{x}{2}=u,t=u+\dfrac{x}{2},dt=du$,我们得到: 
-	$$F(x)=e^{\frac{x^2}{4}}\int_{-\frac{x}{2}}^{\frac{x}{2}}e^{-u^2}du$$
-	$$F'(x)=\frac{x}{2}e^{\frac{x^2}{4}}\int_{-\frac{x}{2}}^{\frac{x}{2}}e^{-u^2}du+e^{\frac{x^2}{4}}e^{-1\frac{x^2}{4}}=\frac{x}{2}e^{\frac{x^2}{4}}\int_{-\frac{x}{2}}^{\frac{x}{2}}e^{-u^2}du+1$$
-\end{solution}
-
-\myspace{1}
-
-2.$\lim\limits_{x\rightarrow 0}\dfrac{\tan(\sin x)-x}{\arctan x-\arcsin x}$
+1.$\lim\limits_{x\rightarrow 0}\dfrac{\tan(\sin x)-x}{\arctan x-\arcsin x}$
 \myspace{1}
 \begin{solution}
 	
@@ -756,10 +13,9 @@
 	$$I_{2}=\lim\limits_{x\rightarrow 0}\dfrac{-\frac{1}{6} x^3}{-\frac{1}{2}x^3}=\frac{1}{3}$$
 	$$I=I_{1}+I_{2}=-\frac{1}{3}$$
 \end{solution}
-
 \myspace{1}
 
-3.设$\{x_{n}\},\{y_{n}\}$满足$x_{1}=y_{1}=\dfrac{1}{2}$,$x_{n+1}=\sin x_{n}$,$y_{n+1}=y_{n}^2$,判断$x_{n}$和$y_{n}$的阶数
+2. 设$\{x_{n}\},\{y_{n}\}$满足$x_{1}=y_{1}=\dfrac{1}{2}$,$x_{n+1}=\sin x_{n}$,$y_{n+1}=y_{n}^2$,判断$x_{n}$和$y_{n}$的阶数
 \begin{itemize}
 	\item A.$\{x_{n}\}\text{比}\{y_{n}\}\text{高阶}$
 	\item \hl{B}.$\{y_{n}\}\text{比}\{x_{n}\}\text{高阶}$
@@ -787,10 +43,11 @@
 	两边取极限,由夹逼定理可以得到: 
 	$$\lim\limits_{n\rightarrow +\infty}\frac{y_{n}}{x_{n}}=0$$
 \end{solution}
-
 \myspace{1}
 
-4.$f(x)$可微,且$x=\int_{0}^{x}f(t)dt+\int_{0}^{x}tf(t-x)dt$,求$f(x)$
+\hl{\textbf{\textit{June 2}}}
+
+1. $f(x)$可微,且$x=\int_{0}^{x}f(t)dt+\int_{0}^{x}tf(t-x)dt$,求$f(x)$
 \myspace{1}
 \begin{solution}
 	
@@ -807,10 +64,9 @@
 	
 	$$f(x)=\cos x-\sin x$$
 \end{solution}
-
 \myspace{1}
 
-\hl{\textbf{\textit{June 11}}}
+\hl{\textbf{\textit{June 3}}}
 
 1. $\lim\limits_{x\rightarrow 0}\dfrac{\sqrt[4]{1-\sqrt[3]{1-\sqrt{1-x}}}-1}{(1+x)^{\frac{1}{\sqrt[3]{x^2}}}-1}$
 \myspace{1}
@@ -819,10 +75,9 @@
 	原极限等价于: 
 	$$I=-\frac{1}{4}\lim\limits_{x\rightarrow 0}\dfrac{\sqrt[3]{1-\sqrt{1-x}}}{x^{-\frac{2}{3}}\ln(1+x)}=-\frac{1}{4}\lim\limits_{x\rightarrow 0}\dfrac{\sqrt[3]{x}}{\sqrt[3]{x}\sqrt[3]{1+\sqrt{1-x}}}=-\frac{1}{4\sqrt[3]{2}}$$
 \end{solution}
-
 \myspace{1}
 
-2.$y''+ay'=f(x),a>0$,$f(+\infty)=b$,求$\lim\limits_{x\rightarrow +\infty}y''(x)$
+2. $y''+ay'=f(x),a>0$,$f(+\infty)=b$,求$\lim\limits_{x\rightarrow +\infty}y''(x)$
 \myspace{1}
 \begin{solution}
 	
@@ -836,12 +91,11 @@
 	
 	$$\lim\limits_{x\rightarrow +\infty}y''=\lim\limits_{x\rightarrow +\infty}[f(x)-ay']=0$$
 \end{solution}
-
 \myspace{1}
 
-\hl{\textbf{\textit{June 12}}}
+\hl{\textbf{\textit{June 4}}}
 
-1.$\lim\limits_{x\rightarrow 0}\dfrac{(3+\sin x^2)^{x}-3^{\sin x}}{x^3}$
+1. $\lim\limits_{x\rightarrow 0}\dfrac{(3+\sin x^2)^{x}-3^{\sin x}}{x^3}$
 \myspace{1}
 \begin{solution}
 	
@@ -860,10 +114,9 @@
 	
 	综上所述,原极限$I=\dfrac{2+\ln 3}{6}$
 \end{solution}
-
 \myspace{1}
 
-2.$\sum\limits_{n=1}^{+\infty}n(n+1)x^n$
+2. $\sum\limits_{n=1}^{+\infty}n(n+1)x^n$
 \myspace{1}
 \begin{solution}
 	
@@ -876,10 +129,11 @@
 		&=&\dfrac{-2x}{(x-1)^3},x\in(-1,1)
 	\end{eqnarray*}
 \end{solution}
-
 \myspace{1}
 
-3.设$f(x)$在$[0,2\pi]$连续可导,$f'(x)\geq 0$,证明: 
+\hl{\textbf{\textit{June 5}}}
+
+1. 设$f(x)$在$[0,2\pi]$连续可导,$f'(x)\geq 0$,证明: 
 $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 \myspace{1}
 \begin{solution}
@@ -893,10 +147,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 		&=&\dfrac{2}{n}[f(2\pi)-f(0)]
 	\end{eqnarray*}
 \end{solution}
-
 \myspace{1}
 
-4. 证明$\left| \int_{x}^{x+1}\sin t^2dt\right| \leq \dfrac{1}{x}$
+2. 证明$\left| \int_{x}^{x+1}\sin t^2dt\right| \leq \dfrac{1}{x}$
 \myspace{1}
 \begin{solution}
 	
@@ -909,10 +162,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 		&\leq&\frac{1}{x}
 	\end{eqnarray*}
 \end{solution}
-
 \myspace{1}
 
-\hl{\textbf{\textit{June 13}}}
+\hl{\textbf{\textit{June 6}}}
 
 1. $\lim\limits_{x\rightarrow 1}\dfrac{x-x^{x}}{1-x+\ln x}$
 \myspace{1}
@@ -925,7 +177,6 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 		&=&2
 	\end{eqnarray*}
 \end{solution}
-
 \myspace{1}
 
 2. $\sum\limits_{n=1}^{+\infty}\dfrac{n}{(n+1)!}$
@@ -940,10 +191,11 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 		&=&1	
 	\end{eqnarray*}
 \end{solution}
-
 \myspace{1}
 
-3.设函数$u=f(x,y,x)$有连续偏导数,且$z=z(x,y)$由方程$xe^x-ye^y=ze^z$所确定,求$du$
+\hl{\textbf{\textit{June 7}}}
+
+1. 设函数$u=f(x,y,x)$有连续偏导数,且$z=z(x,y)$由方程$xe^x-ye^y=ze^z$所确定,求$du$
 \myspace{1}
 \begin{solution}
 	
@@ -960,10 +212,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	
 	$$du=(f_{1}+f_{3}\dfrac{(x+1)e^x}{(z+1)e^z})dx+(f_{1}-f_{3}\dfrac{(y+1)e^y}{(z+1)e^z})dy$$
 \end{solution}
-
 \myspace{1}
 
-4. 设$u=f(x,y,z)$,$\varphi(x^2,e^y,z)=0$,$y=\sin x$确定了函数$u(x)$,其中$f,\varphi$具有一阶偏导数,且$\dfrac{\partial \varphi}{\partial z}\neq 0$,求$\dfrac{du}{dx}$
+2. 设$u=f(x,y,z)$,$\varphi(x^2,e^y,z)=0$,$y=\sin x$确定了函数$u(x)$,其中$f,\varphi$具有一阶偏导数,且$\dfrac{\partial \varphi}{\partial z}\neq 0$,求$\dfrac{du}{dx}$
 \myspace{1}
 \begin{solution}
 	
@@ -975,10 +226,12 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	我们最终得到$\dfrac{du}{dx}$: 
 	$$\dfrac{du}{dx}=f_{1}+f_{2}\cos x-f_{3}\dfrac{2x\varphi_{1}+e^{\sin x}\cos x \varphi_{2}}{\varphi_{3}}$$
 \end{solution}
-
 \myspace{1}
 
-5. $$\lim\limits_{t\rightarrow 0^{+}}\lim\limits_{x\rightarrow+\infty}\dfrac{\int_{0}^{\sqrt{t}}dx\int_{x^2}^{t}\sin y^2dy}{\left[\left( \frac{2}{\pi}\arctan \frac{x}{t^2}\right)^{x}-1\right]\int_{0}^{t}(e^{\sqrt{u}}-1)du }$$
+\section{Week \Rmnum{2}}
+\hl{\textbf{\textit{June 8}}}
+
+1. $$\lim\limits_{t\rightarrow 0^{+}}\lim\limits_{x\rightarrow+\infty}\dfrac{\int_{0}^{\sqrt{t}}dx\int_{x^2}^{t}\sin y^2dy}{\left[\left( \frac{2}{\pi}\arctan \frac{x}{t^2}\right)^{x}-1\right]\int_{0}^{t}(e^{\sqrt{u}}-1)du }$$
 \myspace{1}
 \begin{solution}
 	
@@ -991,12 +244,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 		&=&-\dfrac{3\pi}{14}
 	\end{eqnarray*}
 \end{solution}
-
 \myspace{1}
 
-\hl{\textbf{\textit{June 14}}}
-
-1. 求极限$\lim\limits_{x\rightarrow 0}\dfrac{(1+x)^{\frac{2}{x}}-e^2[1-\ln(e^x+\sin x)]}{x}$
+2. 求极限$\lim\limits_{x\rightarrow 0}\dfrac{(1+x)^{\frac{2}{x}}-e^2[1-\ln(e^x+\sin x)]}{x}$
 \myspace{1}
 \begin{solution}
 	
@@ -1008,10 +258,11 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 		I&=&e^2(I_{1}+I_{2})=e^2
 	\end{eqnarray*}
 \end{solution}
-
 \myspace{1}
 
-2. $f(x)$二阶可导,$f(a)=f'(a)=f''(a)=f(b)=0$,证明: $\exists \xi\in(a,b),\ s.t. (\xi-a)^2f''(\xi)-2f(\xi)=0$
+\hl{\textbf{\textit{June 9}}}
+
+1. $f(x)$二阶可导,$f(a)=f'(a)=f''(a)=f(b)=0$,证明: $\exists \xi\in(a,b),\ s.t. (\xi-a)^2f''(\xi)-2f(\xi)=0$
 \myspace{1}
 \begin{solution}
 	
@@ -1044,13 +295,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	$$\exists\xi\in(a,c),\ s.t.H'(\xi)=0\Rightarrow  (\xi-a)^2f''(\xi)-2f(\xi)=0$$
 	
 \end{solution}
-
 \myspace{1}
 
-\section{Week \Rmnum{3}}
-\hl{\textbf{\textit{June 15}}}
-
-1. 求极限$\lim\limits_{x\rightarrow 0}\dfrac{(1+x)^{\frac{1}{x}}-(1+2x)^{\frac{1}{2x}}}{\sin x}$
+2. 求极限$\lim\limits_{x\rightarrow 0}\dfrac{(1+x)^{\frac{1}{x}}-(1+2x)^{\frac{1}{2x}}}{\sin x}$
 \myspace{1}
 \begin{solution}
 	
@@ -1064,10 +311,11 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 		&=&\lim\limits_{x\rightarrow 0}e^{\xi}\dfrac{1}{2(1+x)(1+2x)}=\frac{e}{2}
 	\end{eqnarray*}
 \end{solution}
-
 \myspace{1}
 
-2. 设函数$f(x)$在区间$[0,2]$上具有连续导数,$f(0)=f(2)=0$,$M=max_{x\in[0,2]}\{|f(x)|\}$,证明: 
+\hl{\textbf{\textit{June 10}}}
+
+1. 设函数$f(x)$在区间$[0,2]$上具有连续导数,$f(0)=f(2)=0$,$M=max_{x\in[0,2]}\{|f(x)|\}$,证明: 
 
 (1).$\exists\xi\in(0,2),\ s.t. |f'(\xi)|\geq M$
 
@@ -1128,12 +376,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	
 	综上所述,$M=0$
 \end{solution}
-
 \myspace{1}
 
-\hl{\textbf{\textit{June 16}}}
-
-1. 求极限$\lim\limits_{x\rightarrow 0}\dfrac{1+\frac{x^2}{2}-\sqrt{1+x^2}}{(\cos x-e^{x^2})\sin x^2}$
+2. 求极限$\lim\limits_{x\rightarrow 0}\dfrac{1+\frac{x^2}{2}-\sqrt{1+x^2}}{(\cos x-e^{x^2})\sin x^2}$
 \myspace{1}
 \begin{solution}
 	
@@ -1144,10 +389,11 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 		I=\lim\limits_{x\rightarrow 0}\dfrac{1+\frac{x^2}{2}-(1+\frac{x^2}{2}+\frac{\frac{1}{2}(\frac{1}{2}-1)}{2}x^4)}{x^2(1-\frac{x^2}{2}-1-x^2)}=-\dfrac{1}{12}
 	\end{eqnarray*}
 \end{solution}
-
 \myspace{1}
 
-2. 证明方程$x^n+x^{n-1}+\cdots+x=1(n\geq 2)$在$(\frac{1}{2},1)$内有且仅有一个实数根,我们将这个实数根记作$x_{n}$,求$\lim\limits_{n\rightarrow+\infty}x_{n}$
+\hl{\textbf{\textit{June 11}}}
+
+1. 证明方程$x^n+x^{n-1}+\cdots+x=1(n\geq 2)$在$(\frac{1}{2},1)$内有且仅有一个实数根,我们将这个实数根记作$x_{n}$,求$\lim\limits_{n\rightarrow+\infty}x_{n}$
 \myspace{1}
 \begin{solution}
 	
@@ -1172,10 +418,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	$$\dfrac{A}{1-A}=1\Rightarrow A=\dfrac{1}{2}$$
 	
 \end{solution}
-
 \myspace{1}
 
-3. 方程$\cos x+\cos^2 x+\cdots+\cos^n x=1(n\geq 2)$在区间$(0,\dfrac{\pi}{3})$的根$x_{n}$,求$\lim\limits_{n\rightarrow+\infty}x_{n}$
+2. 方程$\cos x+\cos^2 x+\cdots+\cos^n x=1(n\geq 2)$在区间$(0,\dfrac{\pi}{3})$的根$x_{n}$,求$\lim\limits_{n\rightarrow+\infty}x_{n}$
 \myspace{1}
 \begin{solution}
 	
@@ -1189,12 +434,11 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	
 	上面的题已证明: $\lim\limits_{n\rightarrow+\infty}t_{n}=\dfrac{1}{2}\Rightarrow\lim\limits_{n\rightarrow+\infty}x_{n}=\dfrac{\pi}{3}$
 \end{solution}
-
 \myspace{1}
 
-\hl{\textbf{\textit{June 17}}}
+\hl{\textbf{\textit{June 12}}}
 
-1.求极限$\lim\limits_{x\rightarrow 0 }\dfrac{x\sin x^2-2(1-\cos x)\sin x}{x^5}$
+1. 求极限$\lim\limits_{x\rightarrow 0 }\dfrac{x\sin x^2-2(1-\cos x)\sin x}{x^5}$
 \myspace{1}
 \begin{solution}
 	
@@ -1206,8 +450,8 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 		I&=&\lim\limits_{x\rightarrow 0}\dfrac{x^3-\frac{1}{6}x^7-2(\frac{1}{2}x^3-\frac{1}{8}x^5+\frac{1}{144}x^7)}{x^5}=\dfrac{1}{4}
 	\end{eqnarray*}
 \end{solution}
-
 \myspace{1}
+
 2. $\lim\limits_{n\rightarrow +\infty}\dfrac{(2\sqrt[n]{n}-1)^n}{n^2}$
 \myspace{1}
 \begin{solution}
@@ -1216,10 +460,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	$$I=\lim\limits_{x\rightarrow +\infty}\dfrac{e^{x\ln(1+2x^{\frac{1}{x}}-2)}}{x^2}=\lim\limits_{x\rightarrow +\infty}\dfrac{e^{2x(e^{\frac{\ln x}{x}}-1)}}{x^2}$$
 	$$I=\lim\limits_{x\rightarrow +\infty}\dfrac{2x\frac{\ln x}{x}}{x^2}=1$$
 \end{solution}
-
 \myspace{1}
 
-\hl{\textbf{\textit{June 18}}}
+\hl{\textbf{\textit{June 13}}}
 
 1. 设$f'(0)=0,f''(0)$存在,求极限$\lim\limits_{x\rightarrow 0}\dfrac{f(x)-f(\ln(1+x))}{x^3}$
 \myspace{1}
@@ -1237,7 +480,6 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 		&=&\dfrac{f''(0)}{2}
 	\end{eqnarray*}
 \end{solution}
-
 \myspace{1}
 
 2. 求椭圆$x^2+2xy+3y^2-8y=0$与直线$x+y=8$的最短距离.
@@ -1271,10 +513,11 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	
 	综上所述,距离最小值为$2\sqrt{2}-2$.
 \end{solution}
-
 \myspace{1}
 
-3. 证明$\tan x=x$在区间$(n\pi,n\pi+\dfrac{\pi}{2})$内存在实根$x_{n}$,并求出极限$\lim\limits_{n\rightarrow +\infty}(x_{n+1}-x_{n})$
+\hl{\textbf{\textit{June 14}}}
+
+1. 证明$\tan x=x$在区间$(n\pi,n\pi+\dfrac{\pi}{2})$内存在实根$x_{n}$,并求出极限$\lim\limits_{n\rightarrow +\infty}(x_{n+1}-x_{n})$
 \myspace{1}
 \begin{solution}
 	
@@ -1291,12 +534,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	
 	我们得到: $\lim\limits_{n\rightarrow +\infty}\tan(x_{n+1}-x_{n})=0\Rightarrow \lim\limits_{n\rightarrow +\infty}x_{n+1}-x_{n}=\pi$
 \end{solution}
-
 \myspace{1}
 
-\hl{\textbf{\textit{June 19}}}
-
-1. $\lim\limits_{x\rightarrow 0^{+}}\dfrac{1}{x\sqrt{x}}(\sqrt{a}\arctan\sqrt{\dfrac{x}{a}}-\sqrt{b}\arctan\sqrt{\dfrac{x}{b}})$
+2. $\lim\limits_{x\rightarrow 0^{+}}\dfrac{1}{x\sqrt{x}}(\sqrt{a}\arctan\sqrt{\dfrac{x}{a}}-\sqrt{b}\arctan\sqrt{\dfrac{x}{b}})$
 \myspace{1}
 \begin{solution}
 	
@@ -1320,10 +560,12 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	\end{array}
 	\right. $$
 \end{solution}
-
 \myspace{1}
 
-2. $\lim\limits_{x\rightarrow+\infty}\dfrac{\int_{0}^{x}|\arcsin(\sin t)|dt}{x}$
+\section{Week \Rmnum{3}}
+\hl{\textbf{\textit{June 15}}}
+
+1. $\lim\limits_{x\rightarrow+\infty}\dfrac{\int_{0}^{x}|\arcsin(\sin t)|dt}{x}$
 \begin{lemma}[周期函数积分性质]\label{lem: 周期函数积分性质}
 	$f(x)=\int_{0}^{x}|\sin t|dt$
 	
@@ -1372,12 +614,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	我们得到原极限等价于: 
 	$$I=\dfrac{\int_{0}^{T}f(x)dx}{T}=\dfrac{\pi}{4}$$
 \end{solution}
-
 \myspace{1}
 
-\hl{\textbf{\textit{June 20}}}
-
-1.设函数$f(x)$连续,且$f(0)\neq 0$,求极限$\lim\limits_{x\rightarrow 0}\dfrac{x\int_{0}^{x}f(x-t)dt}{\int_{0}^{x}tf(t-x)dt}$
+2. 设函数$f(x)$连续,且$f(0)\neq 0$,求极限$\lim\limits_{x\rightarrow 0}\dfrac{x\int_{0}^{x}f(x-t)dt}{\int_{0}^{x}tf(t-x)dt}$
 \myspace{1}
 \begin{solution}
 	
@@ -1389,10 +628,11 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	$$I=\lim\limits_{x\rightarrow 0}\dfrac{x\int_{0}^{x}f(t)dt}{x\int_{0}^{x}f(t)dt-\int_{0}^{x}tf(t)dt}=\lim\limits_{x\rightarrow 0}\dfrac{\int_{0}^{x}f(t)dt+xf(x)}{\int_{0}^{x}f(t)dt}$$
 	$$I=1+\lim\limits_{x\rightarrow 0}\dfrac{f(x)}{\frac{\int_{0}^{x}f(t)dt}{x}}=2$$
 \end{solution}
-
 \myspace{1}
 
-2. $f(x)=\int_{1}^{x}e^{t^2}dt$
+\hl{\textbf{\textit{June 16}}}
+
+1. $f(x)=\int_{1}^{x}e^{t^2}dt$
 
 (i).证明: $\exists \xi\in(1,2),\ s.t. f(\xi)=(2-\xi)e^{\xi^2}$
 
@@ -1412,12 +652,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	我们构造辅助函数: $g(x)=\ln x,\ g'(x)=\dfrac{1}{x}$,我们由柯西中值定理得到: 
 	$$\exists \eta\in(1,2),\ s.t. \dfrac{f(2)-f(1)}{\ln 2-\\ln 1}=\dfrac{f'(\eta)}{g'(\eta)}\Rightarrow f(2)=e^{\eta^2}\eta \ln 2$$
 \end{solution}
-
 \myspace{1}
 
-\hl{\textbf{\textit{June 21}}}
-
-1. 设函数$f(x)$连续,且$\lim\limits_{x\rightarrow 0}\dfrac{f(x)}{x}=2$,求极限$\lim\limits_{x\rightarrow 0}\dfrac{\int_{0}^{x}e^{xt}\arctan(x-t)^2dt}{\int_{0}^{x}tf(x-t)dt}$
+2. 设函数$f(x)$连续,且$\lim\limits_{x\rightarrow 0}\dfrac{f(x)}{x}=2$,求极限$\lim\limits_{x\rightarrow 0}\dfrac{\int_{0}^{x}e^{xt}\arctan(x-t)^2dt}{\int_{0}^{x}tf(x-t)dt}$
 \myspace{1}
 \begin{solution}
 	
@@ -1430,10 +667,11 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	$$I=\lim\limits_{x\rightarrow 0}\dfrac{e^{x\xi}\int_{0}^{x}\arctan u^2dt}{x\int_{0}^{x}f(u)du-\int_{0}^{x}uf(u)du}=\lim\limits_{x\rightarrow 0}\dfrac{x^2}{\int_{0}^{x}f(u)du}$$
 	$$I=\lim\limits_{x\rightarrow 0}\dfrac{2x}{f(x)}=2\lim\limits_{x\rightarrow 0}\dfrac{x-0}{f(x)-f(0)}=1$$
 \end{solution}
-
 \myspace{1}
 
-2. 设$f(x)$在$[0,1]$二阶可导,$f(0)=0,f(1)=1$,证明: $$\exists \xi\in(0,1),\ s.t. \xi f''(\xi)+(1+\xi)f'(\xi)=1+\xi$$
+\hl{\textbf{\textit{June 17}}}
+
+1. 设$f(x)$在$[0,1]$二阶可导,$f(0)=0,f(1)=1$,证明: $$\exists \xi\in(0,1),\ s.t. \xi f''(\xi)+(1+\xi)f'(\xi)=1+\xi$$
 \myspace{1}
 \begin{solution}
 	
@@ -1451,10 +689,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	
 	综上所述,$\exists \xi\in(0,1),\ s.t. \xi f''(\xi)+(1+\xi)f'(\xi)=1+\xi$
 \end{solution}
-
 \myspace{1}
 
-3. 已知微分方程$y'+y=f(x)$,其中$f(x)$是以$T$为周期的周期函数,证明: 该微分方程存在唯一的以$T$为周期的解.
+2. 已知微分方程$y'+y=f(x)$,其中$f(x)$是以$T$为周期的周期函数,证明: 该微分方程存在唯一的以$T$为周期的解.
 \myspace{1}
 \begin{solution}
 	
@@ -1475,11 +712,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	
 	当且仅当$C=\dfrac{\int_{0}^{T}e^{t}f(t)dt}{e^{T}-1}$时,$y(x)$为周期函数.
 \end{solution}
-
 \myspace{1}
 
-\section{Week \Rmnum{4}}
-\hl{\textbf{\textit{June 22}}}
+\hl{\textbf{\textit{June 18}}}
 
 1. $f(x)$一阶连续可导,且$f(0)=0,f'(0)\neq 0$,则$\lim\limits_{x\rightarrow 0}\dfrac{\int_{0}^{x^2}f(t)dt}{x^2\int_{0}^{x}f(t)dt}$
 \myspace{1}
@@ -1494,7 +729,6 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 		&=&1
 	\end{eqnarray*}
 \end{solution}
-
 \myspace{1}
 
 2. 设$f(x)$满足$f(x+y)=\dfrac{f(x)+f(y)}{1-f(x)f(y)}$,$f'(0)=2$,求$f(x)$
@@ -1518,10 +752,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	
 	综上所述,$f(x)=tan (2x)$
 \end{solution}
-
 \myspace{1}
 
-\hl{\textbf{\textit{June 23}}}
+\hl{\textbf{\textit{June 19}}}
 
 1. $\lim\limits_{x\rightarrow 0^{+}}\dfrac{\int_{0}^{x}[\int_{u}^{x}u^2\arctan (1+tu)dt]du}{(\int_{0}^{x}\ln(1+t)dt)^2}$
 \myspace{1}
@@ -1559,10 +792,11 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	
 	综上,我们得到$|f(2)|\leq \dfrac{1}{2}|\int_{0}^{2}f(x)dx|+\int_{0}^{2}|f'(x)|dx$
 \end{solution}
-
 \myspace{1}
 
-3.设$f'(x)$在$[0,1]$上连续,证明: $\mathop{max}\limits_{0\leq x\leq 1}\{|f(x)|\}\leq \int_{0}^{1}[|f(x)|+|f'(x)|]$
+\hl{\textbf{\textit{June 20}}}
+
+1. 设$f'(x)$在$[0,1]$上连续,证明: $\mathop{max}\limits_{0\leq x\leq 1}\{|f(x)|\}\leq \int_{0}^{1}[|f(x)|+|f'(x)|]$
 \myspace{1}
 \begin{solution}
 	
@@ -1579,12 +813,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	
 	综上所述,我们得到: $\mathop{max}\limits_{0\leq x\leq 1}\{|f(x)|\}\leq \int_{0}^{1}[|f(x)|+|f'(x)|]$
 \end{solution}
-
 \myspace{1}
 
-\hl{\textbf{\textit{June 24}}}
-
-1. 求极限$\lim\limits_{x\rightarrow+\infty}\dfrac{\int_{0}^{x}t|\sin t|dt}{x^2}$
+2. 求极限$\lim\limits_{x\rightarrow+\infty}\dfrac{\int_{0}^{x}t|\sin t|dt}{x^2}$
 \myspace{1}
 \begin{solution}
 	
@@ -1604,10 +835,11 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	
 	由夹逼定理可以得到,原极限$I=\dfrac{1}{\pi}$
 \end{solution}
-
 \myspace{1}
 
-2. 已知$|A|=\left|
+\hl{\textbf{\textit{June 21}}}
+
+1. 已知$|A|=\left|
 \begin{matrix}
 	1&1&1&1\\
 	2&3&4&5\\
@@ -1639,9 +871,7 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{June 25}}}
-
-1. 求极限$\lim\limits_{x\rightarrow +\infty}\sin\frac{1}{x}\int_{x}^{x^2}(1+\dfrac{1}{2t})^{t}\sin\dfrac{1}{\sqrt{t}}dt$
+2. 求极限$\lim\limits_{x\rightarrow +\infty}\sin\frac{1}{x}\int_{x}^{x^2}(1+\dfrac{1}{2t})^{t}\sin\dfrac{1}{\sqrt{t}}dt$
 \myspace{1}
 \begin{solution}
 	
@@ -1655,6 +885,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	$$I_{1}=e^{\dfrac{1}{2}},\  I_{2}=2\Rightarrow I=2e^{\dfrac{1}{2}}$$
 \end{solution}
 \myspace{1}
+
+\section{Week \Rmnum{4}}
+\hl{\textbf{\textit{June 22}}}
 
 2. 三对角线行列式
 \myspace{1}
@@ -1711,9 +944,8 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	\right. $$
 \end{solution}
 \myspace{1}
-\hl{\textbf{\textit{June 26}}}
 
-1. 求极限$\lim\limits_{x\rightarrow +\infty}x\ln(1-\dfrac{\ln x}{x})^{x}$
+2. 求极限$\lim\limits_{x\rightarrow +\infty}x\ln(1-\dfrac{\ln x}{x})^{x}$
 \myspace{1}
 \begin{solution}
 	
@@ -1725,10 +957,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	
 	原极限$I=1$
 \end{solution}
-
 \myspace{1}
 
-\hl{\textbf{\textit{June 27}}}
+\hl{\textbf{\textit{June 23}}}
 
 1. 求极限 $\lim\limits_{x\rightarrow 0}\left( \dfrac{1+\int_{0}^{x}e^{t^2}dt}{e^x-1}-\dfrac{1}{\sin x}\right) $
 \myspace{1}
@@ -1740,7 +971,6 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	我们利用泰勒展开可以得到: 
 	$$I=\dfrac{x+o(x^2)+(x+o(x^2))\int_{0}^{x}(1+o(t))dt-x-\frac{1}{2}x^2+o(x^2)}{x^2}=\dfrac{1}{2}$$
 \end{solution}
-
 \myspace{1}
 
 2. $A=\left( \begin{matrix}
@@ -1762,10 +992,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	我们将$A$上下颠倒即可得到一个范德蒙行列式.
 	$$|A|=(-1)^{\frac{n(n-1)}{2}}\sum\limits_{n=1}^{n}n!$$
 \end{solution}
-
 \myspace{1}
 
-\hl{\textbf{\textit{June 28}}}
+\hl{\textbf{\textit{June 24}}}
 
 1. 求极限: $\lim\limits_{x\rightarrow 0}\left[ \dfrac{1}{\ln(x+\sqrt{1+x^2})}-\dfrac{1}{\ln(1+x)+\int_{0}^{x}t(1+t)^{\frac{1}{t}dt}}\right]$
 \myspace{1}
@@ -1794,10 +1023,11 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 		&=&\dfrac{\pi}{4}
 	\end{eqnarray*}
 \end{solution}
-
 \myspace{1}
 
-3. 求极限$\lim\limits_{n\rightarrow+\infty}\sum\limits_{k=1}^{2n}\dfrac{\sqrt{1+\sin \frac{\pi k}{n}}}{n+\frac{1}{k}}$
+\hl{\textbf{\textit{June 25}}}
+
+1. 求极限$\lim\limits_{n\rightarrow+\infty}\sum\limits_{k=1}^{2n}\dfrac{\sqrt{1+\sin \frac{\pi k}{n}}}{n+\frac{1}{k}}$
 \myspace{1}
 \begin{solution}
 	
@@ -1830,9 +1060,7 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{June 29}}}
-
-1. 求极限$\lim\limits_{x\rightarrow +\infty}\left[(x^3-x^2+\frac{x}{2}+1)e^{\frac{1}{x}}-\sqrt{x^6+x^2+x+1} \right] $
+2. 求极限$\lim\limits_{x\rightarrow +\infty}\left[(x^3-x^2+\frac{x}{2}+1)e^{\frac{1}{x}}-\sqrt{x^6+x^2+x+1} \right] $
 \myspace{1}
 \begin{solution}
 	
@@ -1849,7 +1077,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 \end{solution}
 \myspace{1}
 
-2. 求$\sum\limits_{n=1}^{100}\dfrac{1}{\sqrt{n}}$的整数部分.
+\hl{\textbf{\textit{June 26}}}
+
+1. 求$\sum\limits_{n=1}^{100}\dfrac{1}{\sqrt{n}}$的整数部分.
 \myspace{1}
 \begin{solution}
 	
@@ -1871,7 +1101,7 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 \end{solution}
 \myspace{1}
 
-3. 设$f(x)$是满足$\int_{x}^{\frac{\pi}{2}}f(t-x)f(t)dt=\cos^4 x$的连续函数,求$f(x)$在$[0,\frac{\pi}{2}]$上的平均值.
+2. 设$f(x)$是满足$\int_{x}^{\frac{\pi}{2}}f(t-x)f(t)dt=\cos^4 x$的连续函数,求$f(x)$在$[0,\frac{\pi}{2}]$上的平均值.
 \myspace{1}
 \begin{solution}
 	
@@ -1891,7 +1121,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 \end{solution}
 \myspace{1}
 
-4. 求行列式 $|A|=\left|\begin{matrix}
+\hl{\textbf{\textit{June 27}}}
+
+1. 求行列式 $|A|=\left|\begin{matrix}
 	a+x_{1}&a+x_{1}^2&\cdots&a+x_{1}^n\\
 	a+x_{2}&a+x_{2}^2&\cdots&a+x_{2}^n\\
 	\vdots&\vdots&\ddots&\vdots\\
@@ -1953,47 +1185,45 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 		\vdots&\vdots&\ddots&\vdots\\
 		a^n+x_{1}^n&a^n+x_{2}^n&\cdots&a^n+x_{n}^n
 	\end{matrix} \right| (a\neq 0)$
-	\begin{solution}
-		\begin{eqnarray*}
-			|A|&=&\left|\begin{matrix}
-				1&0&0&\cdots&0\\
-				a&a+x_{1}&a+x_{2}&\cdots&a+x_{n}\\
-				a^2&a^2+x_{1}^2&a^2+x_{2}^2&\cdots&a^2+x_{n}^2\\
-				\vdots&\vdots&\vdots&\ddots&\vdots\\
-				a^n&a^n+x_{1}^n&a^n+x_{2}^n&\cdots&a^n+x_{n}^n
-			\end{matrix} \right|
-			=\left|\begin{matrix}
-				1&-1&-1&\cdots&-1\\
-				a&x_{1}&x_{2}&\cdots&x_{n}\\
-				a^2&x_{1}^2&x_{2}^2&\cdots&x_{n}^2\\
-				\vdots&\vdots&\vdots&\ddots&\vdots\\
-				a^n&x_{1}^n&x_{2}^n&\cdots&x_{n}^n
-			\end{matrix} \right|
-		\end{eqnarray*}
-		\begin{eqnarray*}
-			A&=&\left|\begin{matrix}
-				2&0&0&\cdots&0\\
-				a&x_{1}&x_{2}&\cdots&x_{n}\\
-				a^2&x_{1}^2&x_{2}^2&\cdots&x_{n}^2\\
-				\vdots&\vdots&\vdots&\ddots&\vdots\\
-				a^n&x_{1}^n&x_{2}^n&\cdots&x_{n}^n
-			\end{matrix} \right|-\left|\begin{matrix}
-				1&1&1&\cdots&1\\
-				a&x_{1}&x_{2}&\cdots&x_{n}\\
-				a^2&x_{1}^2&x_{2}^2&\cdots&x_{n}^2\\
-				\vdots&\vdots&\vdots&\ddots&\vdots\\
-				a^n&x_{1}^n&x_{2}^n&\cdots&x_{n}^n
-			\end{matrix} \right|\\
-			&=&2\prod\limits_{k=1}^{n}x_{k}\prod\limits_{1<i\leq j<n}(x_{j}-x_{i})-\prod\limits_{k=1}^{n}(x_{k}-a)\prod\limits_{1<i\leq j<n}(x_{j}-x_{i})\\
-			&=&\prod\limits_{1<i\leq j<n}(x_{j}-x_{i})\left[ 2\prod\limits_{k=1}^{n}x_{k}-\prod\limits_{k=1}^{n}(x_{k}-a)\right] 
-		\end{eqnarray*}
-	\end{solution}
 \end{anymark}
+\begin{solution}
+	\begin{eqnarray*}
+		|A|&=&\left|\begin{matrix}
+			1&0&0&\cdots&0\\
+			a&a+x_{1}&a+x_{2}&\cdots&a+x_{n}\\
+			a^2&a^2+x_{1}^2&a^2+x_{2}^2&\cdots&a^2+x_{n}^2\\
+			\vdots&\vdots&\vdots&\ddots&\vdots\\
+			a^n&a^n+x_{1}^n&a^n+x_{2}^n&\cdots&a^n+x_{n}^n
+		\end{matrix} \right|
+		=\left|\begin{matrix}
+			1&-1&-1&\cdots&-1\\
+			a&x_{1}&x_{2}&\cdots&x_{n}\\
+			a^2&x_{1}^2&x_{2}^2&\cdots&x_{n}^2\\
+			\vdots&\vdots&\vdots&\ddots&\vdots\\
+			a^n&x_{1}^n&x_{2}^n&\cdots&x_{n}^n
+		\end{matrix} \right|
+	\end{eqnarray*}
+	\begin{eqnarray*}
+		A&=&\left|\begin{matrix}
+			2&0&0&\cdots&0\\
+			a&x_{1}&x_{2}&\cdots&x_{n}\\
+			a^2&x_{1}^2&x_{2}^2&\cdots&x_{n}^2\\
+			\vdots&\vdots&\vdots&\ddots&\vdots\\
+			a^n&x_{1}^n&x_{2}^n&\cdots&x_{n}^n
+		\end{matrix} \right|-\left|\begin{matrix}
+			1&1&1&\cdots&1\\
+			a&x_{1}&x_{2}&\cdots&x_{n}\\
+			a^2&x_{1}^2&x_{2}^2&\cdots&x_{n}^2\\
+			\vdots&\vdots&\vdots&\ddots&\vdots\\
+			a^n&x_{1}^n&x_{2}^n&\cdots&x_{n}^n
+		\end{matrix} \right|\\
+		&=&2\prod\limits_{k=1}^{n}x_{k}\prod\limits_{1<i\leq j<n}(x_{j}-x_{i})-\prod\limits_{k=1}^{n}(x_{k}-a)\prod\limits_{1<i\leq j<n}(x_{j}-x_{i})\\
+		&=&\prod\limits_{1<i\leq j<n}(x_{j}-x_{i})\left[ 2\prod\limits_{k=1}^{n}x_{k}-\prod\limits_{k=1}^{n}(x_{k}-a)\right] 
+	\end{eqnarray*}
+\end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{June 30}}}
-
-1. 求极限$\lim\limits_{x\rightarrow 0}\dfrac{1}{x^4}\left[ \ln(1+\sin^2 x)-6(\sqrt[3]{2-\cos x}-1)\right] $
+2. 求极限$\lim\limits_{x\rightarrow 0}\dfrac{1}{x^4}\left[ \ln(1+\sin^2 x)-6(\sqrt[3]{2-\cos x}-1)\right] $
 \myspace{1}
 \begin{solution}
 	
@@ -2003,11 +1233,12 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 		&=&\dfrac{x^2-\frac{1}{3}x^4+o(x^4)-\frac{1}{2}x^4+o(x^4)-2(\frac{1}{2}x^2-\frac{1}{24}x^4)+o(x^4)+\frac{2}{3}\frac{1}{4}x^4+o(x^4)}{x^4}\\
 		&=&-\dfrac{7}{12}
 	\end{eqnarray*}
-	
 \end{solution}
 \myspace{1}
 
-2. $\int_{0}^{1}x\arcsin 2\sqrt{x-x^2}dx$
+\hl{\textbf{\textit{June 28}}}
+
+1. $\int_{0}^{1}x\arcsin 2\sqrt{x-x^2}dx$
 \myspace{1}
 \begin{solution}
 	
@@ -2026,7 +1257,7 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 \end{solution}
 \myspace{1}
 
-3. 设$a_{n}\geq 0$,且$\{na_{n}\}$有界,证明: $\sum\limits_{n=1}^{+\infty}a_{n}^2$收敛.
+2. 设$a_{n}\geq 0$,且$\{na_{n}\}$有界,证明: $\sum\limits_{n=1}^{+\infty}a_{n}^2$收敛.
 \myspace{1}
 \begin{solution}
 	
@@ -2037,7 +1268,9 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 \end{solution}
 \myspace{1}
 
-4. $A$是三阶矩阵,$\forall i,j\in\{1,2,3\}$,我们有: $a_{ij}=A_{ij}$,$a_{33}=1$,证明: $A$是正交矩阵.
+\hl{\textbf{\textit{June 29}}}
+
+1. $A$是三阶矩阵,$\forall i,j\in\{1,2,3\}$,我们有: $a_{ij}=A_{ij}$,$a_{33}=1$,证明: $A$是正交矩阵.
 \myspace{1}
 \begin{solution}
 	
@@ -2051,3 +1284,110 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 	
 	我们有: $AA^{T}=AA^{*}=E\Rightarrow A\text{是正交矩阵}$.
 \end{solution}
+\myspace{1}
+
+2. 证明: $e^{\int_{0}^{1}f(x)dx}\leq \int_{0}^{1}e^{f(x)}dx$
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-1,0) -- (5,0) node[right] {$x$};
+		\draw[->] (0,-1) -- (0,5) node[above] {$y$};
+		\draw[thick, domain=1:4, smooth, variable=\x] plot ({\x},{0.2*2^(\x)+1});
+		\draw[red] (1,1.4) -- (4,4.2);
+		\draw[green] (3,0) -- (3,3.27);
+		\draw[dashed,blue] (1,0) -- (1,1.4);
+		\draw[dashed,blue] (4,0) -- (4,4.2);
+		\node at (1,-0.2) {$x_{1}$};
+		\node at (4,-0.2) {$x_{2}$};
+		\node at (2.9,-0.2) {\small{$px_{1}+qx_{2}$}};
+		\node at (0.6,1.4) {$f(x_{1})$};
+		\node at (4.4,4.2) {$f(x_{2})$};
+		\node at (3,1.7) {$f(px_{1}+qx_{2})$};
+		\node at (2,3.6) {$pf(x_{1})+qf(x_{2})$};
+		\node at (-0.2,-0.2) {O};
+	\end{tikzpicture}
+	\caption{凹函数性质}
+	\label{Figure: 凹函数性质}
+\end{figure}
+\myspace{1}
+\begin{solution}
+	\begin{anymark}[凹函数性质]
+		我们不妨假设$f(x)$在$(a,b)$上是凹函数,我们有以下的定理.
+		
+		$$\forall x_{1},x_{2},\cdots,x_{n}\in(a,b), x_{1}<x_{2}<\cdots<x_{n}, \exists p_{1},p_{2},\cdots,p_{n}>0,\sum\limits_{i=1}^{n}p_{n}=1,\ s.t. \sum\limits_{i=1}^{n}p_{i}f(x_{i})\geq f(\sum\limits_{i=1}^{n}p_{i}x_{i})$$
+		\begin{proof}
+			
+			(1). 当$n=1$时,原命题显然成立.
+			
+			(2). 当$n=2$时,原命题等价于: 
+			$$p+q=1,\ f(px_{1}+qx_{2})\leq pf(x_{1})+qf(x_{2})$$
+			
+			我们由 $Figure: $\ref{Figure: 凹函数性质}得到: 
+			$$\left\lbrace
+			\begin{array}{l}
+				px_{1}+qx_{2}>(p+q)x_{1}=x_{1}\\
+				px_{1}+qx_{2}<(p+q)x_{2}=x_{2}
+			\end{array}
+			\right. px_{1}+qx_{2}\in(x_{1},x_{2})$$
+			
+			$$\dfrac{l-f(x_{1})}{f(x_{2})-f(x_{1})}=\dfrac{px_{1}+qx_{2}-x_{1}}{x_{2}-x_{1}}=q\Rightarrow l=qf(x_{1})+(1-q)f(x_{1})=pf(x_{1})+qf(x_{2})$$
+			
+			(3). 假设当$n=k$时,我们有: $$\sum\limits_{i=1}^{k}p_{i}f(x_{i})\geq f(\sum\limits_{i=1}^{k}p_{i}x_{i})$$
+			
+			当$n=k+1$时,我们有: 
+			\begin{eqnarray*}
+				f(x_{1}+x_{2}+\cdots+x_{k}+x_{k+1})&=&f((1-x_{k+1})[\frac{x_{1}}{1-p_{k+1}}+\frac{x_{2}}{1-p_{k+1}}+\cdots+\frac{x_{k}}{1-p_{k+1}}+p_{k+1}x_{k+1}])\\
+				&\leq& p_{k+1}f(x_{k+1})+\dfrac{1}{1-p_{k+1}}f(\sum\limits_{i=1}^{k}\dfrac{p_{i}}{1-p_{k+1}}x_{i})\\
+				&\leq & \sum\limits_{i=1}^{k+1}p_{i}f(x_{i})
+			\end{eqnarray*}
+		\end{proof}
+	\end{anymark}
+	原命题等价于: 
+	$$\lim\limits_{n\rightarrow+\infty}e^{\sum\limits_{i=1}^{n}f(\frac{i}{n})\frac{i}{n}}\leq \lim\limits_{n\rightarrow+\infty}\sum\limits_{i=1}^{n}\frac{1}{n}e^{f(\frac{i}{n})}$$
+	
+	我们得到: 
+	$$e^{\int_{0}^{1}f(x)dx}\leq \int_{0}^{1}e^{f(x)}dx$$
+\end{solution}
+\myspace{1}
+
+\hl{\textbf{\textit{June 30}}}
+
+1. 求极限$\lim\limits_{x\rightarrow 0}\int_{0}^{x}(\dfrac{\arctan t}{t})^{\dfrac{1}{\int_{0}^{t}\ln(1+u)du}}\cot xdt$
+\myspace{1}
+\begin{solution}
+	
+	原极限等价于: 
+	\begin{eqnarray*}
+		I&=&\lim\limits_{x\rightarrow 0}\dfrac{\cos x\int_{0}^{x}(\dfrac{\arctan t}{t})^{\dfrac{1}{\int_{0}^{t}\ln(1+u)du}}}{\sin x}\\
+		&=&\lim\limits_{x\rightarrow 0}\dfrac{\int_{0}^{x}(\dfrac{\arctan t}{t})^{\dfrac{1}{\int_{0}^{t}\ln(1+u)du}}dt}{x}\\
+		&=&e^{\lim\limits_{x\rightarrow 0}\dfrac{\ln(\frac{\arctan x}{x})}{\int_{0}^{x}\ln(1+u)du}}\\
+		&=&e^{\lim\limits_{x\rightarrow 0}\dfrac{-\frac{2}{3}x^2}{\int_{0}^{x}\ln(1+u)du}}\\
+		&=&e^{-\frac{2}{3}}
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
+
+2. $f(x)$在$[0,1]$上连续,我们有$\int_{0}^{1}xf(x)dx=1,\ \int_{0}^{1}f(x)dx=0$,证明: $$\exists\xi\in(0,1),\ s.t. |f(\xi)|\geq 4$$
+\myspace{1}
+\begin{solution}
+	
+	我们由$\int_{0}^{1}xf(x)dx=1,\ \int_{0}^{1}f(x)dx=0$得到: 
+	$$\int_{0}^{1}(x+a)f(x)=1\Rightarrow \int_{0}^{1}|x+a||f(x)|\geq 1$$
+	
+	我们假设$f(x)<4$,我们得到: 
+	$$4\int_{0}^{1}|x+a|dx>1$$
+	
+	我们有: $$4\int_{0}^{1}|x+a|dx=\left\lbrace
+	\begin{array}{l}
+		4a+2,a\geq 0\\
+		-4a-2,a\leq -1\\
+		4a^2+4a+2,a\in(-1,0)
+	\end{array}
+	\right. $$
+	
+	我们要得出矛盾,即令$4\int_{0}^{1}|x+a|dx\leq 1$,我们令$a=-\dfrac{1}{2}$,$4\int_{0}^{1}|x+a|dx=1$矛盾!!!
+	
+	综上所述,我们得到: $\exists\xi\in(0,1),\ s.t. |f(\xi)|\geq 4$
+\end{solution}
+\myspace{1}
