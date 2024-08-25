@@ -177,7 +177,6 @@ $$
 \myspace{1}
 \begin{solution}
 
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to+\infty}(\sqrt{x^{2}+x}-\sqrt{x^{2}-x})\\
 		  = & \lim\limits_{x\to+\infty}\dfrac{(\sqrt{x^{2}+x}-\sqrt{x^{2}-x})(\sqrt{x^{2}+x}+\sqrt{x^{2}-x})}{\sqrt{x^{2}+x}+\sqrt{x^{2}-x}}\\
@@ -195,7 +194,6 @@ $$
 \myspace{1}
 \begin{solution}
 
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}\dfrac{\sqrt{1+\tan x}-\sqrt{1+\sin x}}{x(1-\cos x)}\\
 		  = & \lim\limits_{x\to 0}\dfrac{\sqrt{1+\tan x}-\sqrt{1+\sin x}}{x(1-\cos x)}\cdot \dfrac{\sqrt{1+\tan x}+\sqrt{1+\sin x}}{\sqrt{1+\tan x}+\sqrt{1+\sin x}}\\
@@ -211,14 +209,14 @@ $$
 \myspace{1}
 \begin{solution}
 
-	利用泰勒展开式:
+	泰勒展开式:
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}\dfrac{e^{x^{2}}-\cos 2x}{ax^{b}}\\
 		  = & \lim\limits_{x\to 0}\dfrac{1+x^{2}+\dfrac{x^{4}}{2}-1+\dfrac{4x^{2}}{2!}-\dfrac{8x^{4}}{4!}}{ax^{b}}\\
 		  = & \lim\limits_{x\to 0}\dfrac{3x^{2}-\dfrac{x^{4}}{6}}{ax^{b}}\\
 		  = & \lim\limits_{x\to 0}\dfrac{3}{a} = 1
 	\end{align*}
-	因此我们有: $a = 3, b = 2$
+	因此: $a = 3, b = 2$
 \end{solution}
 \myspace{1}
 
@@ -242,7 +240,6 @@ $$
 \myspace{1}
 \begin{solution}
 
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}\dfrac{\arcsin x-\arctan x}{\sin x-\tan x}\\
 		  = & \lim\limits_{x\to 0}\dfrac{\dfrac{1}{2}x^{3}}{-\dfrac{1}{2}x^{3}}\\
@@ -256,7 +253,6 @@ $$
 \myspace{1}
 \begin{solution}
 
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}\dfrac{\ln\dfrac{x}{\ln(1+x)}}{x}\\
 		  = & \lim\limits_{x\to 0}\dfrac{x-\ln(1+x)}{x\ln (1+x)}\\
@@ -270,7 +266,6 @@ $$
 \myspace{1}
 \begin{solution}
 	
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to +\infty}\dfrac{e^{x}}{(1+\frac{1}{x})^{x^{2}}}\\
 		  = & \lim\limits_{x\to +\infty}\dfrac{e^{x}}{e^{x^{2}\ln(1+\frac{1}{x})}}\\
@@ -286,8 +281,7 @@ $$
 1. 求极限 $\lim\limits_{x\to 0}\dfrac{\cos x-\cos(\sin x)}{x^{4}}$
 \myspace{1}
 \begin{solution}
-	
-	原极限等价于:
+
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}\dfrac{\cos x-\cos(\sin x)}{x^{4}} (\text{Lagrange's Mean Value Theorem})\\
 		  = & \lim\limits_{x\to 0}\dfrac{-\sin \xi(x-\sin x)}{x^{4}}, \xi\in (\sin x\sim x)\\
@@ -295,7 +289,8 @@ $$
 		  = & -\dfrac{1}{6}
 	\end{align*}
 
-	我们由夹逼定理: $\sin \xi \in (\sin x\sim x)\to \lim\limits_{x\to 0}\dfrac{\sin x}{x} = \lim\limits_{x\to 0}\dfrac{x}{x}=1\Rightarrow \lim\limits_{x\to 0}\dfrac{\sin \xi}{x} = 1$
+	夹逼定理: 
+	$$\sin \xi \in (\sin x\sim x)\to \lim\limits_{x\to 0}\dfrac{\sin x}{x} = \lim\limits_{x\to 0}\dfrac{x}{x}=1\Rightarrow \lim\limits_{x\to 0}\dfrac{\sin \xi}{x} = 1$$
 
 \end{solution}
 \myspace{1}
@@ -303,15 +298,16 @@ $$
 2. 求极限 $\lim\limits_{x\to +\infty}x^{2}\left[\arctan(x+1)-\arctan x\right]$
 \myspace{1}
 \begin{solution}
-	
-	原极限等价于:
+
 	\begin{align*}
 		I = & \lim\limits_{x\to +\infty}x^{2}[\arctan(x+1)-\arctan x](\text{Lagrange's Mean Value Theorem})\\
 		  = & \lim\limits_{x\to +\infty}x^{2}\dfrac{1}{1+\xi^{2}},\xi\in(x,x+1)\\
 		  = & 1
 	\end{align*}
 
-	我们由夹逼定理: $\xi\in (x, x+1)\to \lim\limits_{x\to +\infty}\frac{x^{2}}{1+(x^{2})} = \lim\limits_{x\to +\infty}\frac{x^{2}}{1+(x+1)^{2}}=1\Rightarrow \lim\limits_{x\to +\infty}\frac{x^{2}}{1+\xi^{2}} = 1$
+	夹逼定理: 
+	$$\xi\in (x, x+1)\to \lim\limits_{x\to +\infty}\frac{x^{2}}{1+(x^{2})} = \lim\limits_{x\to +\infty}\frac{x^{2}}{1+(x+1)^{2}}=1
+	\Rightarrow \lim\limits_{x\to +\infty}\frac{x^{2}}{1+\xi^{2}} = 1$$
 \end{solution}
 \myspace{1}
 
@@ -322,14 +318,15 @@ $$
 \myspace{1}
 \begin{solution}
 	
-	由归结原理,原极限等价于:
+	归结原理:
 	\begin{align*}
 		I = & \lim\limits_{x\to \infty}x^{2}[\arctan\dfrac{a}{x}-\arctan \dfrac{a}{x+1}](\text{Lagrange's Mean Value Theorem})\\
 		  = & \lim\limits_{x\to \infty}\dfrac{ax^{2}}{x(x+1)}\dfrac{1}{1+\xi^{2}},\xi\in(\dfrac{a}{x},\dfrac{a}{x+1})\\
 		  = & a
 	\end{align*}
 
-	我们由夹逼定理: $\xi\in (\dfrac{a}{x},\dfrac{a}{x+1})\to \lim\limits_{x\to \infty}\dfrac{a}{x} = \lim\limits_{x\to \infty}\dfrac{a}{x+1}=0\Rightarrow \lim\limits_{x\to \infty}\xi = 0$
+	夹逼定理: 
+	$$\xi\in (\dfrac{a}{x},\dfrac{a}{x+1})\to \lim\limits_{x\to \infty}\dfrac{a}{x} = \lim\limits_{x\to \infty}\dfrac{a}{x+1}=0\Rightarrow \lim\limits_{x\to \infty}\xi = 0$$
 \end{solution}
 \myspace{1}
 
@@ -337,7 +334,6 @@ $$
 \myspace{1}
 \begin{solution}
 	
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to +\infty}[\sin\sqrt{x+1}-\sin\sqrt{x}](\text{Lagrange's Mean Value Theorem})\\
 		  = & \lim\limits_{x\to +\infty}\cos \xi(\sqrt{x+1}-\sqrt{x}),\xi\in(\sqrt{x},\sqrt{x+1})\\
@@ -353,7 +349,6 @@ $$
 \myspace{1}
 \begin{solution}
 	
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}\left[\dfrac{1}{\ln(1+x^{2})}-\dfrac{1}{\ln(1+\tan^{2}x)}\right]\\
 		  = & \lim\limits_{x\to 0}\dfrac{\ln(1+\tan^{2}x)-\ln(1+x^{2})}{\ln(1+x^{2})\ln(1+\tan^{2}x)}(\text{Lagrange's Mean Value Theorem})\\
@@ -362,7 +357,8 @@ $$
 		  = & \dfrac{2}{3}
 	\end{align*}
 
-	我们由夹逼定理: $\xi\in(1+x^{2},1+\tan^{2}x)\to \lim\limits_{x\to 0}(1+x^{2}) = \lim\limits_{x\to 0} (1+\tan^{2}x) = 1\Rightarrow \lim\limits_{x\to 0}\xi = 1$
+	夹逼定理: 
+	$$\xi\in(1+x^{2},1+\tan^{2}x)\to \lim\limits_{x\to 0}(1+x^{2}) = \lim\limits_{x\to 0} (1+\tan^{2}x) = 1\Rightarrow \lim\limits_{x\to 0}\xi = 1$$
 \end{solution}
 \myspace{1}
 
@@ -370,7 +366,6 @@ $$
 \myspace{1}
 \begin{solution}
 
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}\left[\dfrac{1}{\ln(1+x^{2})}-\dfrac{1}{\sin^{2}x}\right]\\
 		  = & \lim\limits_{x\to 0}\dfrac{\sin^{2}x-\ln(1+x^{2})}{\ln(1+x^{2})\sin^{2}x}\\
@@ -381,7 +376,8 @@ $$
 		  = & \dfrac{1}{6}
 	\end{align*}
 	
-	我们由夹逼定理: $\xi\in(1+\sin^{2}x,1+x^{2})\to \lim\limits_{x\to 0}(1+\sin^{2}x) = \lim\limits_{x\to 0} (1+x^{2}) = 1\Rightarrow \lim\limits_{x\to 0}\xi = 1$
+	夹逼定理: 
+	$$\xi\in(1+\sin^{2}x,1+x^{2})\to \lim\limits_{x\to 0}(1+\sin^{2}x) = \lim\limits_{x\to 0} (1+x^{2}) = 1\Rightarrow \lim\limits_{x\to 0}\xi = 1$$
 \end{solution}
 \myspace{1}
 \hl{\textbf{\textit{January 10}}}
@@ -390,7 +386,6 @@ $$
 \myspace{1}
 \begin{solution}
 	
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}(x+2^{x})^{\frac{2}{x}}\\
 		  = & \lim\limits_{x\to 0}e^{\frac{2\ln(x+2^{x})}{x}}\\
@@ -407,7 +402,6 @@ $$
 \myspace{1}
 \begin{solution}
 	
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}\left(\dfrac{1-\tan x}{1+\tan x} \right)^{\frac{1}{\sin kx}} \\
 		  = & \lim\limits_{x\to 0}e^{\frac{1}{\sin kx}\ln\frac{1-\tan x}{1+\tan x}}\\
@@ -425,8 +419,7 @@ $$
 1.  若 $\lim\limits_{x\to 0}(e^{x}+ax^{2}+bx)^{\frac{1}{x^{2}}}=1$,求 $a,b$
 \myspace{1}
 \begin{solution}
-	
-	原极限等价于:
+
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}(e^{x}+ax^{2}+bx)^{\frac{1}{x^{2}}}\\
 		  = & \lim\limits_{x\to 0}e^{\frac{1}{x^{2}}\ln(e^{x}+ax^{2}+bx)}\\
@@ -443,7 +436,6 @@ $$
 \myspace{1}
 \begin{solution}
 	
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}\left(\dfrac{\arctan x}{x}\right)^{\frac{1}{1-\cos x}}\\
 		  = & \lim\limits_{x\to 0}e^{\frac{1}{1-\cos x}\ln\frac{\arctan x}{x}}\\
@@ -461,7 +453,7 @@ $$
 \myspace{1}
 \begin{solution}
 	
-	由归结原理,原极限等价于:
+	归结原理:
 	\begin{align*}
 		I = & \lim\limits_{x\to \infty}\left(x\tan\frac{1}{x}\right)^{x^{2}}\\
 		  = & \lim\limits_{x\to \infty}e^{x^{2}\ln(x\tan\frac{1}{x})}\\
@@ -477,7 +469,7 @@ $$
 \myspace{1}
 \begin{solution}
 	
-	由归结原理,原极限等价于:
+	归结原理:
 	\begin{align*}
 		I = & \lim\limits_{x\to \infty}e^{x\ln(\tan(\frac{\pi}{4}+\frac{1}{x}))}\\
 		  = & \lim\limits_{x\to \infty}e^{x\ln(\frac{1+\tan(\frac{1}{x})}{1-\tan(\frac{1}{x})})}\\
@@ -491,8 +483,7 @@ $$
 1. 求极限 $\lim\limits_{x\to 0}\left( \dfrac{\ln(1+x)}{x}\right)^{\frac{1}{e^{x}-1}}$
 \myspace{1}
 \begin{solution}
-	
-	原极限等价于:
+
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}e^{\frac{\ln(1+x)-x}{x(e^{x}-1)}}\\
 		  = & e^{\lim\limits_{x\to 0}\frac{\ln(1+x)-x}{x^{2}}}\\
@@ -505,7 +496,6 @@ $$
 \myspace{1}
 \begin{solution}
 
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}e^{\frac{\ln(1+x)-x}{x^{2}}}\\
 		  = & e^{\frac{1}{2}}
@@ -518,7 +508,6 @@ $$
 \myspace{1}
 \begin{solution}
 
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}e^{\frac{2x\sin x+\cos 2x-1}{x^{4}}}\quad (\text{Taylor's Formula})\\
 		  = & e^{\lim\limits_{x\to 0}\frac{2x(x-\frac{x^{3}}{6})-2x^{2}+\frac{2}{3}x^{4}}{x^{4}}}\\
@@ -531,7 +520,6 @@ $$
 \myspace{1}
 \begin{solution}
 
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to \frac{\pi}{4}}e^{\frac{\tan x-1}{\cos x-\sin x}}\\
 		  = & e^{\lim\limits_{x\to \frac{\pi}{4}}\frac{\tan x-1}{\cos x(1-\tan x)}}\\
@@ -546,8 +534,7 @@ $$
 1. 求极限 $\lim\limits_{x\to 0}\left(\dfrac{(e^{x}+e^{2x}+\cdots +e^{nx})}{n} \right)^{\frac{1}{x}} $
 \myspace{1}
 \begin{solution}
-	
-	原极限等价于:
+
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}e^{\frac{\ln \frac{e^{x}+e^{2x}+\cdots +e^{nx}}{n}}{x}}\\
 		  = & e^{\lim\limits_{x\to 0}\frac{e^{x}-1+e^{2x}-1+\cdots +e^{nx}-1}{nx}}\\
@@ -561,7 +548,6 @@ $$
 \myspace{1}
 \begin{solution}
 
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to +\infty}\left(1+\dfrac{1}{x}\right)^{-x}\left(1+\dfrac{2}{x}\right)^{-x}\cdots \left(1+\dfrac{n}{x}\right)^{-x}\\
 		  = & e^{\lim\limits_{x\to +\infty}-x\ln(1+\frac{1}{x})}e^{\lim\limits_{x\to +\infty}-x\ln(1+\frac{2}{x})}\cdots e^{\lim\limits_{x\to +\infty}-x\ln(1+\frac{n}{x})}\\
@@ -576,7 +562,6 @@ $$
 \myspace{1}
 \begin{solution}
 
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to \infty}\left(\sin\frac{1}{x}+\cos\frac{1}{x} \right)^{x}\\
 		  = & e^{\lim\limits_{x\to +\infty}x\ln(\sin\frac{1}{x}+\cos\frac{1}{x})}\\
@@ -591,7 +576,7 @@ $$
 \myspace{1}
 \begin{solution}
 	
-	由归结原理得, 原极限等价于:
+	归结原理:
 	\begin{align*}
 		I = & \lim\limits_{x\to \infty}x\left[e\left(1+\dfrac{1}{x} \right)^{-x}-1 \right]\\
 		  = & \lim\limits_{x\to \infty}x(e^{1-x\ln(1+\frac{1}{x})}-1)\\
@@ -607,7 +592,6 @@ $$
 \myspace{1}
 \begin{solution}
 
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to +\infty}x^{p}(a^{\frac{1}{x}}-a^{\frac{1}{x+1}})(\text{Lagrange's Mean Value Theorem})\\
 		  = & \lim\limits_{x\to +\infty}\dfrac{x^{p}}{x(x+1)}a^{\xi}\ln a, \xi\in(\dfrac{1}{x+1},\dfrac{1}{x})\\
@@ -615,7 +599,8 @@ $$
 		  = & \ln a
 	\end{align*}
 
-	我们由夹逼准则: $\lim\limits_{x\to +\infty} \dfrac{1}{x+1} =\lim\limits_{x\to +\infty} \dfrac{1}{x} = 0\Rightarrow \lim\limits_{x\to +\infty} \xi =0$
+	夹逼准则: 
+	$$\lim\limits_{x\to +\infty} \dfrac{1}{x+1} =\lim\limits_{x\to +\infty} \dfrac{1}{x} = 0\Rightarrow \lim\limits_{x\to +\infty} \xi =0$$
 
 	综上所述, 我们有: $p = 2$
 \end{solution}
@@ -625,7 +610,8 @@ $$
 \myspace{1} 
 \begin{solution}
 	
-	我们利用等价无穷小 $x\to 0, 1- \sqrt[n]{\cos x}\sim -(\sqrt[n]{1+\cos x-1}-1)\sim \dfrac{1-\cos x}{n}$, 原极限等价于:
+	等价无穷小: 
+	$$x\to 0, 1- \sqrt[n]{\cos x}\sim -(\sqrt[n]{1+\cos x-1}-1)\sim \dfrac{1-\cos x}{n}$$
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}\dfrac{(1-\sqrt{\cos x})(1-\sqrt[3]{\cos x})\cdots(1-\sqrt[n]{\cos x})}{(1-\cos x)^{n-1}}\\
 		  = & \lim\limits_{x\to 0}\dfrac{(1-\cos x)^{n-1}}{n!(1-\cos x)^{n-1}}\\
@@ -638,8 +624,7 @@ $$
 1. 求极限 $\lim\limits_{x\to 0}\dfrac{\ln(\sin^{2}x+e^{x})-x}{\ln(x^{2}+e^{2x})-2x}$
 \myspace{1} 
 \begin{solution}
-	
-	原极限等价于:
+
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}\dfrac{\ln(\sin^{2}x+e^{x})-x}{\ln(x^{2}+e^{2x})-2x}\\
 		  = & \lim\limits_{x\to 0}\dfrac{\ln(\frac{\sin^{2}x}{e^{x}}+1)}{\ln(\frac{x^{2}}{e^{2x}}+1)}\\
@@ -653,14 +638,13 @@ $$
 \myspace{1}
 \begin{solution}
 
-	原极限等价于:
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}\dfrac{x-\tan x}{x^{k}}\\
 		  = & \lim\limits_{x\to 0}-\dfrac{x^{3}}{3x^{k}}\\
 		  = & c
 	\end{align*}
 
-	我们有: $k = 3, c = -\dfrac{1}{3}$
+	综上所述: $k = 3, c = -\dfrac{1}{3}$
 \end{solution}
 \myspace{1}
 
@@ -676,13 +660,13 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们记 
-	$\begin{cases}
+	令 
+	$$\begin{cases}
 		I = \lim\limits_{x\to 0}\left(\dfrac{\sin x^{4}}{x^{4}}-\dfrac{f(x)}{x^{3}}\right) = 2\\
 		J = \lim\limits_{x\to 0}\dfrac{\sin x^{4}}{x^{4}} = 1
-	\end{cases}\Rightarrow \lim\limits_{x\to 0}\dfrac{f(x)}{x^{3}} = -1$
+	\end{cases}\Rightarrow \lim\limits_{x\to 0}\dfrac{f(x)}{x^{3}} = -1$$
 
-	我们得到: $\lim\limits_{x\to 0}\dfrac{f(x)}{x} = \lim\limits_{x\to 0}\dfrac{f(x)}{x^{4}}\cdot\lim\limits_{x\to 0}x^{3} = 0$
+	$$\lim\limits_{x\to 0}\dfrac{f(x)}{x} = \lim\limits_{x\to 0}\dfrac{f(x)}{x^{4}}\cdot\lim\limits_{x\to 0}x^{3} = 0$$
 
 	综上所述, $f(x)$ 是 $x$ 的 高阶无穷小.
 \end{solution}
@@ -692,7 +676,7 @@ $$
 \myspace{1}
 \begin{solution}
 
-	由等价无穷小定义得到:
+	等价无穷小定义:
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}\dfrac{\beta(x)}{\alpha(x)}\\
 		  = & \lim\limits_{x\to 0}\dfrac{\sqrt{1+x\arcsin x}-\sqrt{\cos x}}{kx^{2}}\\
@@ -718,7 +702,6 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们有:
 	$$\begin{cases} 
 		1-e^{\sqrt{x}}\sim -\sqrt{x}\\
 		1-\cos\sqrt{x} \sim \dfrac{1}{2}x\\
@@ -726,7 +709,7 @@ $$
 		\ln\dfrac{1+x}{1-\sqrt{x}}\sim \sqrt{x}
 	\end{cases}$$
 
-	我们得到: $\ln \dfrac{1-x}{1-\sqrt{x}}\sim \sqrt{x}$
+	因此: $\ln \dfrac{1-x}{1-\sqrt{x}}\sim \sqrt{x}$
 \end{solution}
 \myspace{1}
 
@@ -740,14 +723,13 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们有:
 	$$\begin{cases}
 		\alpha_{1}\sim -\dfrac{1}{2}x^{2}\\
 		\alpha_{2}\sim x^{\frac{5}{6}}\\
 		\alpha_{3}\sim \dfrac{1}{3}x
 	\end{cases}$$
 
-	我们得到: $\alpha_{2} < \alpha_{3} < \alpha_{1}$
+	因此: $\alpha_{2} < \alpha_{3} < \alpha_{1}$
 \end{solution}
 \myspace{1}
 
@@ -763,7 +745,7 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们有: $f(x)$ 在 $[-\pi,\pi]$ 上无定义的点有 $x=0, x=1, x=\pm\dfrac{\pi}{2}$
+	$f(x)$ 在 $[-\pi,\pi]$ 上无定义的点有 $x=0, x=1, x=\pm\dfrac{\pi}{2}$
 
 	\begin{itemize}
 		\item $x\to 0^{+}, f(x)\to 1 ; x\to 0^{-}, f(x)\to -1$
@@ -786,7 +768,7 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们有: $f(x)$ 在定义域上无定义的点有 $x=0, x=1$
+	$f(x)$ 在定义域上无定义的点有 $x=0, x=1$
 	\begin{itemize}
 		\item $x\to 0^{+}, f(x)\to 0 ; x\to 0^{-}, f(x)\to 0$
 		\item $x\to 1^{+}, f(x)\to \sin 1 ; x\to 1^{-}, f(x)\to -\sin 1$
@@ -809,7 +791,7 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们有: $f(x)$ 在定义域上无定义的点有 $x=0, x=\pm 1$
+	$f(x)$ 在定义域上无定义的点有 $x=0, x=\pm 1$
 	\begin{itemize}
 		\item $x\to 0^{+}, f(x)\to 1 ; x\to 0^{-}, f(x)\to -1$
 		\item $x\to 1^{+}, f(x)\to \dfrac{\sqrt{2}}{2} ; x\to 1^{-}, f(x)\to \dfrac{\sqrt{2}}{2}$
@@ -830,7 +812,7 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们有: $f(x)$ 在定义域上无定义的点有 $x=0, x=\pm 1$
+	$f(x)$ 在定义域上无定义的点有 $x=0, x=\pm 1$
 	\begin{itemize}
 		\item $x\to 0^{+}, f(x)\to 1 ; x\to 0^{-}, f(x)\to 1$
 		\item $x\to 1^{+}, f(x)\to \dfrac{1}{2} ; x\to 1^{-}, f(x)\to \dfrac{1}{2}$
@@ -853,7 +835,7 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们得到:$$f(x) = \begin{cases}
+	$$f(x) = \begin{cases}
 	0, & x\in(-\infty,-1)\\
 	0, & x = -1\\
 	x+1, & x\in(-1,1)\\
@@ -875,7 +857,7 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们由 $f(x)$ 在 $x=0$ 处连续得到:
+	$f(x)$ 在 $x=0$ 处连续:
 	$$f(0) = \lim\limits_{x\to 0}f(x) = \lim\limits_{x\to 0^{+}}f(x) = \lim\limits_{x\to 0^{-}}f(x)$$
 
 	$$\lim\limits_{h\to 0}\dfrac{f(h^{2})}{h^{2}}=1\Rightarrow 
@@ -930,7 +912,7 @@ $$
 \myspace{1}
 \begin{solution}
 
-	首先 $f(x)$ 在 $x = 0$ 处连续, $\alpha > 0$, 我们得到:
+	$f(x)$ 在 $x = 0$ 处连续, $\alpha > 0$:
 
 	$$f'(x) = 
 	\begin{cases}
@@ -949,10 +931,10 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们设 $\begin{cases}
+	设 $\begin{cases}
 		F(x,y) = x + y + e^{2xy} = 0\\
 		y = y(x)
-	\end{cases}$, 我们有:
+	\end{cases}$:
 	$$F'_{x} + F'_{y}\dfrac{dy}{dx} = 0\Rightarrow 1+2ye^{2xy}+(1+2xe^{2xy})\dfrac{dy}{dx} =0$$
 
 	在 $(0,-1)$ 邻域附近, $F'_{y}\neq 0\Rightarrow \dfrac{dy}{dx}\big|_{(0,-1)} = -\dfrac{1+2ye^{2xy}}{1+2xe^{2xy}} = 1$
@@ -969,7 +951,7 @@ $$
 \myspace{1}
 \begin{solution}
 
-	(1). 我们利用导数定义得到: $f(x) = u(x)v(x)$
+	(1). 导数定义: $f(x) = u(x)v(x)$
 	\begin{align*}
 		f'(x) = & \lim\limits_{\Delta x\to 0}\dfrac{u(x+\Delta x)v(x+\Delta x)-u(x)v(x)}{\Delta x}\\
 		  	  = & \lim\limits_{\Delta x\to 0}\dfrac{u(x+\Delta x)v(x+\Delta x)-u(x+\Delta x)v(x)+u(x+\Delta x)v(x)-u(x)v(x)}{\Delta x}\\
@@ -989,17 +971,19 @@ $$
 \end{cases}$,$y=f(f(x))$,则 $\dfrac{dy}{dx}\big|_{x=e}$
 \myspace{1}
 \begin{solution}
-
-	(1). 我们得到: $f(f(x)) = 
+\begin{anymark}[方法一]
+	$$f(f(x)) = 
 	\begin{cases}
 		\ln\dfrac{\ln x}{2}, & x\in[e^{2},+\infty)\\
 		\ln x -1, & x\in [1,e^{2})\\
 		4x-3, & x\in(-\infty,1)
-	\end{cases}$
-
+	\end{cases}$$
+\end{anymark}
+	
+\begin{anymark}[方法二]
+	$$\dfrac{dy}{dx}\big|_{x=e} = f'(u)f'(x)\big|_{\substack{x = e\\u = \ln\sqrt{x}}}=2\cdot \dfrac{1}{2e} =\dfrac{1}{e}$$
+\end{anymark}
 	综上所述, $\dfrac{dy}{dx}\big|_{x=e} = \dfrac{1}{e}$
-
-	(2). $$\dfrac{dy}{dx}\big|_{x=e} = f'(u)f'(x)\big|_{\substack{x = e\\u = \ln\sqrt{x}}}=2\cdot \dfrac{1}{2e} =\dfrac{1}{e}$$
 \end{solution}
 \myspace{1}
 
@@ -1007,13 +991,13 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们令: $F(x,y) = xy+e^{y}-x-1 = 0$, 我们有:
+	令 $F(x,y) = xy+e^{y}-x-1 = 0$:
 	$$F'_{x} +F'_{y}\dfrac{dy}{dx} = 0\Rightarrow y-1+(x+e^{y})\dfrac{dy}{dx} = 0$$
 
-	我们令: $G(x,y) = y-1+(x+e^{y})\dfrac{dy}{dx} = 0$, 我们有:
+	令 $G(x,y) = y-1+(x+e^{y})\dfrac{dy}{dx} = 0$:
 	$$\dfrac{dy}{dx}+\dfrac{d^{2}y}{dx^{2}}(x+e^{y})+ (1+e^{y}\dfrac{dy}{dx})\dfrac{dy}{dx}= 0$$
 
-	我们令: $\begin{cases} \dfrac{dy}{dx}\big|_{x=0} =a\\\dfrac{d^{2}y}{dx^{2}}\big|_{x=0} =b \end{cases}$, 我们有:
+	令 $\begin{cases} \dfrac{dy}{dx}\big|_{x=0} =a\\\dfrac{d^{2}y}{dx^{2}}\big|_{x=0} =b \end{cases}$:
 	$$\begin{cases}
 		x = 0,y = 0\\
 		a - 1 = 0\\
@@ -1032,7 +1016,6 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们有:
 	$$\dfrac{dy}{dx} = \dfrac{dy}{dt}\dfrac{dt}{dx} = \dfrac{(3t^{2}+2t)(1+t)}{t} = (3t+2)(1+t)$$
 	$$\dfrac{d^{2}y}{dx^{2}} = \dfrac{d(\dfrac{dy}{dx})}{dt}\dfrac{dt}{dx}=\dfrac{(6t+5)(t+1)}{1+t}$$
 \end{solution}
@@ -1042,7 +1025,8 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们由莱布尼茨求导公式: $(uv)^{(n)} = \sum\limits_{i = 0}^{n}\binom{i}{n}u^{(i)}v^{(n-i)}$, 其中 $u(x) = x^{2}, v(x) = 2^{x}$
+	莱布尼茨求导公式: 
+	$$(uv)^{(n)} = \sum\limits_{i = 0}^{n}\binom{i}{n}u^{(i)}v^{(n-i)},\ u(x) = x^{2}, v(x) = 2^{x}$$
 	\begin{align*}
 		y^{(n)} = & (x^{2}2^{x})^{n}\\
 		        = & \binom{0}{n}(x^{2})^{(0)}(2^{x})^{(n)}+\binom{1}{n}(x^{2})^{(1)}(2^{x})^{(n-1)}+\binom{2}{n}(x^{2})^{(2)}(2^{x})^{(n-2)}\\
@@ -1057,7 +1041,7 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们有: $y = \dfrac{1}{2}\left[\dfrac{1}{x-1}-\dfrac{1}{x+1}\right]$, 且:
+	$y = \dfrac{1}{2}\left[\dfrac{1}{x-1}-\dfrac{1}{x+1}\right]$
 	$$\begin{cases} 
 	f(x) = \dfrac{1}{x-1}\\
 	g(x) =\dfrac{1}{x+1}
@@ -1067,7 +1051,7 @@ $$
 	g^{(n)}(x) = \dfrac{(-1)^{n}n!}{(x+1)^{n+1}}
 	\end{cases}$$
 	
-	我们有: $y^{(n)}(x) = \dfrac{(-1)^{n}n!}{2}\left[\dfrac{1}{(x-1)^{n+1}}-\dfrac{1}{(x+1)^{n+1}}\right]$
+	$y^{(n)}(x) = \dfrac{(-1)^{n}n!}{2}\left[\dfrac{1}{(x-1)^{n+1}}-\dfrac{1}{(x+1)^{n+1}}\right]$
 \end{solution}
 \myspace{1}
 
@@ -1081,7 +1065,6 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们有:
 	$$\begin{cases}
 	f'(x) = [f(x)]^{2}\\
 	f''(x) = 2f(x)f'(x) = 2[f(x)]^{3}\\
@@ -1106,13 +1089,13 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们有: $f'(x)\geq 0$
+	$f'(x)\geq 0$
 	\begin{itemize}
 		\item $[f(-x)]' = -f'(-x)\leq 0$
 		\item $[-f(-x)]' = f'(-x)\geq 0$
 	\end{itemize}
 
-	我们有: $f(-x)$ 单调递减, $-f(-x)$ 单调递增
+	综上所述: $f(-x)$ 单调递减, $-f(-x)$ 单调递增
 \end{solution}
 \myspace{1}
 
@@ -1128,7 +1111,7 @@ $$
 
 	构造辅助函数: $F(x) = \dfrac{f(x)}{g(x)}, x\in (a,b), F'(x) = \dfrac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^{2}} < 0$
 
-	我们得到: $F(x)$ 在 $(a,b)$ 内单调递减, $F(a) > F(x) > F(b)\Rightarrow 
+	$F(x)$ 在 $(a,b)$ 内单调递减, $F(a) > F(x) > F(b)\Rightarrow 
 	\begin{cases}
 		f(a)g(x) > f(x)g(a)\\
 		f(x)g(b) > f(b)g(x)
@@ -1148,10 +1131,10 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们有: $\begin{cases}
+	$$\begin{cases}
 		\lim\limits_{x\to a} f(x)-f(a) = \lim\limits_{x\to a}\dfrac{f(x)-f(a)}{(x-a)^{n}}\lim\limits_{x\to a}(x-a)^{n} = 0\\
 		f'(a) = \lim\limits_{x\to a}\dfrac{f(x)-f(a)}{x-a} =\lim\limits_{x\to a}\dfrac{f(x)-f(a)}{(x-a)^{n}}\lim\limits_{x\to a}(x-a)^{n-1} =0
-	\end{cases}$
+	\end{cases}$$
 
 	(1). 当 $n$ 为偶数时, $x\in (a-\delta,a), f(x) < f(a); x\in (a,a+\delta), f(x) < f(a)$, $x=a$ 是极大值点
 
@@ -1171,7 +1154,7 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们有: $$\begin{cases}
+	$$\begin{cases}
 		f'(a) = \lim\limits_{x\to a} f'(x) = \lim\limits_{x\to a}\dfrac{f'(x)}{x-a}\lim\limits_{x\to a}(x-a) = 0\\
 		x\in (a-\delta,a), f'(x) > 0\\
 		x\in (a,a+\delta), f'(x) < 0
@@ -1187,7 +1170,6 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们有:
 	$$\begin{cases}
 		y' = x^{\frac{2}{3}}+\dfrac{2}{3}(x-5)x^{-\frac{1}{3}} = x^{-\frac{1}{3}}(\dfrac{5}{3}x-\dfrac{10}{3})\\
 		y''= -\dfrac{1}{3}x^{-\frac{4}{3}}(\dfrac{5}{3}x-\dfrac{10}{3})+\dfrac{5}{3}x^{-\frac{1}{3}} = \dfrac{10}{9}x^{-\frac{4}{3}}(x+1) 
@@ -1207,7 +1189,7 @@ $$
 \myspace{1}
 \begin{solution}
 
-	我们得到: $f''(x) = \dfrac{1-e^{-x}}{x} -3[f'(x)]^{2}$
+	$f''(x) = \dfrac{1-e^{-x}}{x} -3[f'(x)]^{2}$
 
 	当 $f'(x_{0}) = 0(x_{0}\neq 0)$ 时, $f''(x_{0}) = \dfrac{1-e^{-x_{0}}}{x_{0}} > 0$
 

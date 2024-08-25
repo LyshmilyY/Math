@@ -1123,102 +1123,113 @@ $$\left| \int_{0}^{2\pi}f(x)\sin nxdx\right|\leq \dfrac{2}{n}[f(2\pi)-f(0)] $$
 
 \hl{\textbf{\textit{June 27}}}
 
-1. 求行列式 $|A|=\left|\begin{matrix}
-	a+x_{1}&a+x_{1}^2&\cdots&a+x_{1}^n\\
-	a+x_{2}&a+x_{2}^2&\cdots&a+x_{2}^n\\
-	\vdots&\vdots&\ddots&\vdots\\
-	a+x_{n}&a+x_{n}^2&\cdots&a+x_{n}^n
-\end{matrix} \right| (a\neq 0)$
+1. 求行列式 
+$$|A| = 
+\begin{vmatrix}
+	a+x_{1} & a+x_{1}^{2} & \cdots & a+x_{1}^n \\
+	a+x_{2} & a+x_{2}^{2} & \cdots & a+x_{2}^n \\
+	\vdots  & \vdots      & \ddots & \vdots \\
+	a+x_{n} & a+x_{n}^2   & \cdots & a+x_{n}^n
+\end{vmatrix}(a\neq 0)$$
 \myspace{1}
 \begin{solution}
 	\begin{eqnarray*}
-		|A|&=&\left|\begin{matrix}
-			1+a-a&0&0&\cdots&0\\
-			a&a+x_{1}&a+x_{1}^2&\cdots&a+x_{1}^n\\
-			a&a+x_{2}&a+x_{2}^2&\cdots&a+x_{2}^n\\
-			\vdots&\vdots&\vdots&\ddots&\vdots\\
-			a&a+x_{n}&a+x_{n}^2&\cdots&a+x_{n}^n
-		\end{matrix} \right|
-		=\left|\begin{matrix}
-			1+a-a&-1&-1&\cdots&-1\\
-			a&x_{1}&x_{1}^2&\cdots&x_{1}^n\\
-			a&x_{2}&x_{2}^2&\cdots&x_{2}^n\\
-			\vdots&\vdots&\vdots&\ddots&\vdots\\
-			a&x_{n}&x_{n}^2&\cdots&x_{n}^n
-		\end{matrix} \right|
+		|A| & = & 
+		\begin{vmatrix}
+			1+a-a  & 0       & 0         & \cdots & 0 \\
+			a      & a+x_{1} & a+x_{1}^2 & \cdots & a+x_{1}^n\\
+			a      & a+x_{2} & a+x_{2}^2 & \cdots & a+x_{2}^n\\
+			\vdots & \vdots  & \vdots    & \ddots & \vdots\\
+			a      & a+x_{n} & a+x_{n}^2 & \cdots & a+x_{n}^n
+		\end{vmatrix}\\
+		    & =& 
+		\begin{vmatrix}
+			1+a-a  & -1     & -1      & \cdots & -1 \\
+			a      & x_{1}  & x_{1}^2 & \cdots & x_{1}^n \\
+			a      & x_{2}  & x_{2}^2 & \cdots & x_{2}^n\\
+			\vdots & \vdots & \vdots  & \ddots & \vdots\\
+			a      & x_{n}  & x_{n}^2 & \cdots & x_{n}^n
+		\end{vmatrix}\\
+		    & = & 
+		\begin{vmatrix}
+			1+a    & -1     & -1      & \cdots & -1\\
+			0      & x_{1}  & x_{1}^2 & \cdots & x_{1}^n\\
+			0      & x_{2}  & x_{2}^2 & \cdots & x_{2}^n\\
+			\vdots & \vdots & \vdots  & \ddots & \vdots\\
+			0      & x_{n}  & x_{n}^2 & \cdots & x_{n}^n
+		\end{vmatrix} + 
+		\begin{vmatrix}
+			a      & -1     & -1      & \cdots & -1 \\
+			a      & x_{1}  & x_{1}^2 & \cdots & x_{1}^n \\
+			a      & x_{2}  & x_{2}^2 & \cdots & x_{2}^n \\
+			\vdots & \vdots & \vdots  & \ddots & \vdots \\
+			a      & x_{n}  & x_{n}^2 & \cdots & x_{n}^n
+		\end{vmatrix}\\
+		& = & (1-a)
+		\begin{vmatrix}
+			x_{1}  & x_{1}^2 & \cdots & x_{1}^n\\
+			x_{2}  & x_{2}^2 & \cdots & x_{2}^n\\
+			\vdots & \vdots  & \ddots & \vdots\\
+			x_{n}  & x_{n}^2 & \cdots & x_{n}^n
+		\end{vmatrix} +
+		(-a)\begin{vmatrix}
+			1      & 1      & 1       & \cdots & 1 \\
+			1      & x_{1}  & x_{1}^2 & \cdots & x_{1}^n\\
+			1      & x_{2}  & x_{2}^2 & \cdots & x_{2}^n\\
+			\vdots & \vdots & \vdots  & \ddots & \vdots\\
+			1      & x_{n}  & x_{n}^2 & \cdots & x_{n}^n
+		\end{vmatrix}\\
+		& = & (1-a)\prod\limits_{k=1}^{n}x_{k}\prod\limits_{1\leq i<j\leq n}(x_{j}-x_{i}) - 
+		a\prod\limits_{k=1}^{n}(x_{k}-1)\prod\limits_{1\leq i<j\leq n}(x_{j}-x_{i})\\
+		& = & \prod\limits_{1\leq i<j\leq n}(x_{j}-x_{i})\left[ (1-a)\prod\limits_{k=1}^{n}x_{k}-a\prod\limits_{k=1}^{n}(x_{k}-1)\right]
 	\end{eqnarray*}
-	\begin{eqnarray*}
-		A&=&\left|\begin{matrix}
-			1+a&-1&-1&\cdots&-1\\
-			0&x_{1}&x_{1}^2&\cdots&x_{1}^n\\
-			0&x_{2}&x_{2}^2&\cdots&x_{2}^n\\
-			\vdots&\vdots&\vdots&\ddots&\vdots\\
-			0&x_{n}&x_{n}^2&\cdots&x_{n}^n
-		\end{matrix} \right|+\left|\begin{matrix}
-			a&-1&-1&\cdots&-1\\
-			a&x_{1}&x_{1}^2&\cdots&x_{1}^n\\
-			a&x_{2}&x_{2}^2&\cdots&x_{2}^n\\
-			\vdots&\vdots&\vdots&\ddots&\vdots\\
-			a&x_{n}&x_{n}^2&\cdots&x_{n}^n
-		\end{matrix} \right|\\
-		&=&(1-a)\left|\begin{matrix}
-			x_{1}&x_{1}^2&\cdots&x_{1}^n\\
-			x_{2}&x_{2}^2&\cdots&x_{2}^n\\
-			\vdots&\vdots&\ddots&\vdots\\
-			x_{n}&x_{n}^2&\cdots&x_{n}^n
-		\end{matrix} \right|+(-a)\left|\begin{matrix}
-			1&1&1&\cdots&1\\
-			1&x_{1}&x_{1}^2&\cdots&x_{1}^n\\
-			1&x_{2}&x_{2}^2&\cdots&x_{2}^n\\
-			\vdots&\vdots&\vdots&\ddots&\vdots\\
-			1&x_{n}&x_{n}^2&\cdots&x_{n}^n
-		\end{matrix} \right|
-	\end{eqnarray*}
-
-	$$A=(1-a)\prod\limits_{k=1}^{n}x_{k}\prod\limits_{1\leq i<j\leq n}(x_{j}-x_{i})-a\prod\limits_{k=1}^{n}(x_{k}-1)\prod\limits_{1\leq i<j\leq n}(x_{j}-x_{i})$$
-	$$A=\prod\limits_{1\leq i<j\leq n}(x_{j}-x_{i})\left[ (1-a)\prod\limits_{k=1}^{n}x_{k}-a\prod\limits_{k=1}^{n}(x_{k}-1)\right]$$
 \end{solution}
+
 \begin{anymark}[范德蒙行列式应用]
-	求行列式: $|A|=\left|\begin{matrix}
-		a+x_{1}&a+x_{2}&\cdots&a+x_{n}\\
-		a^2+x_{1}^2&a^2+x_{2}^2&\cdots&a^2+x_{n}^2\\
-		\vdots&\vdots&\ddots&\vdots\\
-		a^n+x_{1}^n&a^n+x_{2}^n&\cdots&a^n+x_{n}^n
-	\end{matrix} \right| (a\neq 0)$
+	求行列式: 
+	$$|A|=
+	\begin{vmatrix}
+		a+x_{1}     & a+x_{2}     & \cdots & a+x_{n}\\
+		a^2+x_{1}^2 & a^2+x_{2}^2 & \cdots & a^2+x_{n}^2\\
+		\vdots      & \vdots      & \ddots &\vdots\\
+		a^n+x_{1}^n & a^n+x_{2}^n & \cdots & a^n+x_{n}^n
+	\end{vmatrix}(a\neq 0)$$
 \end{anymark}
 \begin{solution}
 	\begin{eqnarray*}
-		|A|&=&\left|\begin{matrix}
-			1&0&0&\cdots&0\\
-			a&a+x_{1}&a+x_{2}&\cdots&a+x_{n}\\
-			a^2&a^2+x_{1}^2&a^2+x_{2}^2&\cdots&a^2+x_{n}^2\\
-			\vdots&\vdots&\vdots&\ddots&\vdots\\
-			a^n&a^n+x_{1}^n&a^n+x_{2}^n&\cdots&a^n+x_{n}^n
-		\end{matrix} \right|
-		=\left|\begin{matrix}
-			1&-1&-1&\cdots&-1\\
-			a&x_{1}&x_{2}&\cdots&x_{n}\\
-			a^2&x_{1}^2&x_{2}^2&\cdots&x_{n}^2\\
-			\vdots&\vdots&\vdots&\ddots&\vdots\\
-			a^n&x_{1}^n&x_{2}^n&\cdots&x_{n}^n
-		\end{matrix} \right|
-	\end{eqnarray*}
-	\begin{eqnarray*}
-		A&=&\left|\begin{matrix}
-			2&0&0&\cdots&0\\
-			a&x_{1}&x_{2}&\cdots&x_{n}\\
-			a^2&x_{1}^2&x_{2}^2&\cdots&x_{n}^2\\
-			\vdots&\vdots&\vdots&\ddots&\vdots\\
-			a^n&x_{1}^n&x_{2}^n&\cdots&x_{n}^n
-		\end{matrix} \right|-\left|\begin{matrix}
-			1&1&1&\cdots&1\\
-			a&x_{1}&x_{2}&\cdots&x_{n}\\
-			a^2&x_{1}^2&x_{2}^2&\cdots&x_{n}^2\\
-			\vdots&\vdots&\vdots&\ddots&\vdots\\
-			a^n&x_{1}^n&x_{2}^n&\cdots&x_{n}^n
-		\end{matrix} \right|\\
-		&=&2\prod\limits_{k=1}^{n}x_{k}\prod\limits_{1<i\leq j<n}(x_{j}-x_{i})-\prod\limits_{k=1}^{n}(x_{k}-a)\prod\limits_{1<i\leq j<n}(x_{j}-x_{i})\\
-		&=&\prod\limits_{1<i\leq j<n}(x_{j}-x_{i})\left[ 2\prod\limits_{k=1}^{n}x_{k}-\prod\limits_{k=1}^{n}(x_{k}-a)\right] 
+		|A| & = & 
+		\begin{vmatrix}
+			1      & 0           & 0           & \cdots & 0\\
+			a      & a+x_{1}     & a+x_{2}     & \cdots & a+x_{n}\\
+			a^2    & a^2+x_{1}^2 & a^2+x_{2}^2 & \cdots & a^2+x_{n}^2\\
+			\vdots & \vdots      & \vdots      & \ddots & \vdots\\
+			a^n    & a^n+x_{1}^n & a^n+x_{2}^n & \cdots & a^n+x_{n}^n
+		\end{vmatrix} \\
+		    & = & 
+		\begin{vmatrix}
+			1      & -1      & -1      & \cdots & -1\\
+			a      & x_{1}   & x_{2}   & \cdots & x_{n}\\
+			a^2    & x_{1}^2 & x_{2}^2 & \cdots & x_{n}^2\\
+			\vdots & \vdots  & \vdots  & \ddots & \vdots\\
+			a^n    & x_{1}^n & x_{2}^n & \cdots & x_{n}^n
+		\end{vmatrix}\\
+		    & = &
+		\begin{vmatrix}
+			2      & 0       & 0       & \cdots & 0\\
+			a      & x_{1}   & x_{2}   & \cdots & x_{n}\\
+			a^2    & x_{1}^2 & x_{2}^2 & \cdots & x_{n}^2\\
+			\vdots & \vdots  & \vdots  & \ddots & \vdots\\
+			a^n    & x_{1}^n & x_{2}^n & \cdots & x_{n}^n
+		\end{vmatrix} -
+		\begin{vmatrix}
+			1      & 1       & 1       & \cdots & 1\\
+			a      & x_{1}   & x_{2}   & \cdots & x_{n}\\
+			a^2    & x_{1}^2 & x_{2}^2 & \cdots & x_{n}^2\\
+			\vdots & \vdots  & \vdots  & \ddots & \vdots\\
+			a^n    & x_{1}^n & x_{2}^n & \cdots & x_{n}^n
+		\end{vmatrix}\\
+		    & = & 2\prod\limits_{k=1}^{n}x_{k}\prod\limits_{1<i\leq j<n}(x_{j}-x_{i})-\prod\limits_{k=1}^{n}(x_{k}-a)\prod\limits_{1<i\leq j<n}(x_{j}-x_{i})\\
+		    & = & \prod\limits_{1<i\leq j<n}(x_{j}-x_{i})\left[ 2\prod\limits_{k=1}^{n}x_{k}-\prod\limits_{k=1}^{n}(x_{k}-a)\right] 
 	\end{eqnarray*}
 \end{solution}
 \myspace{1}

@@ -288,52 +288,80 @@
 \end{definition}
 \section{Exercise}
 \begin{proposition}
-	设$x_{1}=a\geq 0$,$y_{1}=b\geq 0$,$a\leq b$,$x_{n+1}=\sqrt{x_{n}y_{n}},y_{n+1}=\dfrac{x_{n}+y_{n}}{2},(n=1,2,\cdots)$,证明:  $\lim\limits_{n\rightarrow +\infty}x_{n}=\lim\limits_{n\rightarrow +\infty}y_{n}$
+	设$x_{1}=a\geq 0$,$y_{1}=b\geq 0$,$a\leq b$,$x_{n+1}=\sqrt{x_{n}y_{n}},y_{n+1}=\dfrac{x_{n}+y_{n}}{2}(n=1,2,\cdots)$,证明:
+	$\lim\limits_{n\rightarrow +\infty}x_{n}=\lim\limits_{n\rightarrow +\infty}y_{n}$
 \end{proposition}
 \begin{solution}
 	
-	我们由:  $x_{1}=a\geq 0$,$y_{1}=b\geq 0$,$x_{n+1}=\sqrt{x_{n}y_{n}},y_{n+1}=\dfrac{x_{n}+y_{n}}{2}$,由归纳法可知:  
+	$x_{1}=a\geq 0$,$y_{1}=b\geq 0$,$x_{n+1}=\sqrt{x_{n}y_{n}},y_{n+1}=\dfrac{x_{n}+y_{n}}{2}$
+	
+	数学归纳法:  
 	$$x_{n}\geq 0, y_{n}\geq 0$$
 	
-	由基本不等式:  
+	基本不等式:  
 	$$\dfrac{x_{n}+y_{n}}{2}\geq \sqrt{x_{n}y_{n}}\Rightarrow y_{n+1}\geq x_{n+1}$$
 	
-	又因为:  $x_{n+1}=\sqrt{x_{n}y_{n}}\geq x_{n}, y_{n+1}=\dfrac{x_{n}+y_{n}}{2}\leq y_{n}$.
+	$$
+	\begin{cases}
+		x_{n+1}=\sqrt{x_{n}y_{n}}\geq \sqrt{x_{n}x_{n}} = x_{n}\\
+		y_{n+1}=\dfrac{x_{n}+y_{n}}{2}\leq \dfrac{y_{n}+y_{n}}{2} = y_{n}
+	\end{cases}
+	$$
 	
-	$x_{n}$单调递增,$y_{n}$单调递减,$x_{1}\leq x_{n}\leq y_{n}\leq y_{1}$
+	$\{x_{n}\}$ 单调递增,$\{y_{n}\}$ 单调递减, $x_{1}\leq x_{n}\leq y_{n}\leq y_{1}$
 	
-	$x_{n},y_{n}$单调且有界,数列$\{x_{n}\},\{y_{n}\}$均有极限,我们不妨设:  
-	$$\left\lbrace
-	\begin{array}{l}
-		\lim\limits_{n\rightarrow +\infty}x_{n}=a\\
-		\lim\limits_{n\rightarrow +\infty}y_{n}=b
-	\end{array}
-	\right. \Rightarrow \left\lbrace
-	\begin{array}{l}
-		a=\sqrt{ab}\\
-		b=\dfrac{a+b}{2}
-	\end{array}
-	\right. \Rightarrow a=b$$
+	$\{x_{n}\},\{y_{n}\}$ 单调且有界, 数列 $\{x_{n}\},\{y_{n}\}$ 均有极限 
+	$$\begin{cases}
+		\lim\limits_{n\rightarrow +\infty}x_{n} = a\\
+		\lim\limits_{n\rightarrow +\infty}y_{n} = b
+	\end{cases} \Rightarrow 
+	\begin{cases}
+		a = \sqrt{ab}\\
+		b = \dfrac{a+b}{2}
+	\end{cases}\Rightarrow a=b$$
 	
-	综上所述,我们得到:  $\lim\limits_{n\rightarrow +\infty}x_{n}=\lim\limits_{n\rightarrow +\infty}y_{n}$
+	综上所述, $\lim\limits_{n\rightarrow +\infty}x_{n}=\lim\limits_{n\rightarrow +\infty}y_{n}$
 \end{solution}
 
 \begin{proposition}
-	设数列$\{a_{n}\}$满足$\lim\limits_{n\rightarrow+\infty}\dfrac{a_{n+1}}{a_{n}}=q$,且$|q|<1$,证明:  $\lim\limits_{n\rightarrow+\infty}a_{n}=0$
+	设数列 $\{a_{n}\}$ 满足 $\lim\limits_{n\rightarrow+\infty}\dfrac{a_{n+1}}{a_{n}}=q$, 且 $|q|<1$, 证明: $\lim\limits_{n\rightarrow+\infty}a_{n}=0$
 \end{proposition}
 \begin{solution}
 	
-	我们考虑数列$\{|a_{n}|\}$,我们可以得到:  
-	$$\lim\limits_{n\rightarrow +\infty}\dfrac{|a_{n+1}|}{|a_{n}|}=|q|\Rightarrow \exists\ M>0,\ n>M\text{时}, \dfrac{|a_{n+1}|}{|a_{n}|}<1$$
+	考虑数列 $\{|a_{n}|\}$:
+
+	$$\begin{cases}
+		\lim\limits_{n\rightarrow+\infty}\dfrac{a_{n+1}}{a_{n}} = q\\
+		|\dfrac{a_{n+1}}{a_{n}}-q| \geq \big||\dfrac{a_{n+1}}{a_{n}}|-|q|\big| 
+	\end{cases}\Rightarrow
+	\begin{cases}
+		\forall \varepsilon > 0, \exists M > 0, n > M, |\dfrac{a_{n+1}}{a_{n}}-q| < \varepsilon \\
+		\forall \varepsilon > 0, \exists M > 0, n > M, \big||\dfrac{a_{n+1}}{a_{n}}|-|q|\big| < \varepsilon
+	\end{cases}
+	\Rightarrow \lim\limits_{n\rightarrow+\infty}\big|\dfrac{a_{n+1}}{a_{n}}\big| = |q|$$
 	
-	又因为$|a_{n}|\geq 0$,我们可以知道$\{|a_{n}|\}$极限必定存在,我们不妨假设$\lim\limits_{n\rightarrow+\infty}|a_{n}|=a$.
+	取 $\varepsilon > 0 ,\varepsilon + |q| < 1$
+	$$\exists N > 0, n > N, \big|\dfrac{a_{n+1}}{a_{n}}-|q|\big| < \varepsilon \Rightarrow n > N, \big| \dfrac{a_{n+1}}{a_{n}}\big| < \varepsilon + |q| < 1$$
 	
-	假设$a\neq 0$,我们可以得到:  $$\lim\limits_{n\rightarrow  +\infty}\dfrac{|a_{n+1}|}{|a_{n}|}=\dfrac{\lim\limits_{n\rightarrow  +\infty}|a_{n+1}|}{\lim\limits_{n\rightarrow  +\infty}|a_{n}|}=1$$
+	$$\begin{cases}
+		|a_{n}| \geq 0\\
+		|a_{n}| = \big|\dfrac{a_{n}}{a_{n-1}}\big|\cdots\big|\dfrac{a_{N+2}}{a_{N+1}}\big|\cdot|a_{N+1}| <  (|q|+\varepsilon)^{n-N-1}\cdot |a_{N+1}|
+	\end{cases}$$
+
+	夹逼准则:
+	$$
+	\begin{cases} 
+		\lim\limits_{n\to +\infty} 0 = 0\\
+		\lim\limits_{n\to +\infty} (|q|+\varepsilon)^{n-N-1}\cdot |a_{N+1}| = 0
+	\end{cases}\Rightarrow
+	\begin{cases}
+		\lim\limits_{n\to +\infty} |a_{n}| = 0\\
+		\forall \varepsilon > 0, \exists N > 0, n > N, |a_{n}| < \varepsilon
+	\end{cases}
+	\Rightarrow \lim\limits_{n\to +\infty} a_{n} = 0 
+	$$
 	
-	这和$|q|<1$矛盾！！！
-	
-	
-	综上所述,我们可以得到:  $\lim\limits_{n\rightarrow+\infty}a_{n}=0$
+	综上所述, $\lim\limits_{n\rightarrow+\infty}a_{n}=0$
 \end{solution}
 
 \begin{proposition}
@@ -345,28 +373,36 @@
 \end{proposition}
 \begin{solution}
 	
-	我们构造辅助函数:  $G_{n}(x)=\dfrac{1}{2}-(1-\cos x)^{n}$
+	构造辅助函数: $G_{n}(x)=\dfrac{1}{2}-(1-\cos x)^{n}$
 	
 	(1). $$G_{n}'(x)=-n\sin x(1-\cos x)^{n-1}$$
 	
-	当$x\in(0,\dfrac{\pi}{2})$,$G_{n}'(x)<0$,$\ G_{n}(x)$在$(0,\dfrac{\pi}{2})$单调递减.
+	$x\in(0,\dfrac{\pi}{2})$, $G_{n}'(x)<0$, $G_{n}(x)$ 在 $(0,\dfrac{\pi}{2})$ 单调递减
 	
-	$$G_{n}(0)=\dfrac{1}{2}>0,\ G_{n}(\dfrac{\pi}{2})=-\dfrac{\pi}{2}<0$$
+	$$G_{n}(0)=\dfrac{1}{2}>0  G_{n}(\dfrac{\pi}{2})=-\dfrac{\pi}{2}<0$$
 	
-	我们根据零点定理,可以得到:  $\exists \text{唯一的}x_{n}\in(0,\dfrac{\pi}{2}),\ s.t. G_{n}(x_{n})=0$
+	零点定理: $\exists!\ x_{n}\in(0,\dfrac{\pi}{2}),\ s.t.\ G_{n}(x_{n})=0$
 	
-	(2). 我们将$x=\arccos\dfrac{1}{n}$代入$G_{n}(x)$得到:  
-	$$G_{n}(\arccos\dfrac{1}{n})=\dfrac{1}{2}-(1-\dfrac{1}{n})^{n}$$
+	(2). 
+	$$\begin{cases}
+		G_{n}(\arccos\dfrac{1}{n}) = \dfrac{1}{2}-(1-\dfrac{1}{n})^{n} \\
+		G_{n}(\dfrac{\pi}{2}) = -\dfrac{1}{2} < 0
+	\end{cases}$$
 	
-	我们知道:  $\lim\limits_{n\rightarrow+\infty}(1-\dfrac{1}{n})^{n}=\dfrac{1}{e}\Rightarrow G_{n}(\arccos\dfrac{1}{n})>0$
+    构造辅助函数: $h(x) = \dfrac{1}{2} - e^{x\ln(1-\frac{1}{x})},x\geq 2$
 	
-	我们需要证明:  $(1-\dfrac{1}{n})^n$单调性,我们构造辅助函数:  $H(x)=e^{xln(1-\dfrac{1}{x})},x\geq 2$
+	$$\begin{cases}
+		p(x) = \ln(1-\frac{1}{x}) + \dfrac{1}{x-1}, x\geq 2\\
+		\lim\limits_{x\to +\infty} p(x) = 0\\
+		p'(x) = \dfrac{-1}{x(x-1)^{2}} < 0  
+	\end{cases}\Rightarrow 
+	h'(x) = -e^{x\ln(1-\frac{1}{x})}\left[\ln(1-\frac{1}{x})+\dfrac{1}{x-1}\right] < 0$$
 	
-	我们可以得到:  $H'(x)=e^{xln(1-\dfrac{1}{x})}[ln(1-\dfrac{1}{x})+\dfrac{1}{x-1}]>0$,$H(x)$单调递增.
+	$G_{n}(\arccos\dfrac{1}{n})$ 单调递减, 且 $\lim\limits_{n\rightarrow+\infty}G_{n}(\arccos\dfrac{1}{n})=\dfrac{1}{2}-\dfrac{1}{e}>0$
+	零点定理: 
+	$$\exists! x_{n}\in (\arccos \dfrac{1}{n}, \dfrac{\pi}{2}),\ s.t.\ f(x_{n}) = \dfrac{1}{2}$$
 	
-	所以$G_{n}(\arccos\dfrac{1}{n})$单调递减,且$\lim\limits_{n\rightarrow+\infty}G_{n}(\arccos\dfrac{1}{n})=\dfrac{1}{2}-\dfrac{1}{e}>0$,我们得到:  $$\arccos \dfrac{1}{n}<x_{n}<\dfrac{\pi}{2}$$
-	
-	我们再由夹逼定理可以得到:  
+	夹逼定理:  
 	$$\begin{cases}
 		\lim\limits_{n\rightarrow  +\infty}\arccos \dfrac{1}{n}=\dfrac{\pi}{2}\\
 		\lim\limits_{n\rightarrow  +\infty}\dfrac{\pi}{2}=\dfrac{\pi}{2}
@@ -376,207 +412,239 @@
 \end{solution}
 
 \begin{proposition}
-	设$x_{1}>0$,数列$\{x_{n}\}$满足$x_{n+1}=ln(e^{x_{n}}-1)-ln x_{n}$,证明:  $\lim\limits_{n\rightarrow +\infty}x_{n}$存在并求其值
+	设$x_{1}>0$,数列$\{x_{n}\}$满足$x_{n+1}=\ln(e^{x_{n}}-1)-\ln x_{n}$,证明:  $\lim\limits_{n\rightarrow +\infty}x_{n}$存在并求其值
 \end{proposition}
 \begin{solution}
 	
-	我们由:  $x_{n+1}=ln(e^{x_{n}}-1)-ln x_{n}$可以得到:  
-	$$e^{x_{n+1}}=\dfrac{e^{x_{n}}-1}{x_{n}}$$
+	$$x_{n+1}=\ln(e^{x_{n}}-1)-\ln x_{n} \Rightarrow e^{x_{n+1}}=\dfrac{e^{x_{n}}-1}{x_{n}}$$
 	
-	我们构造辅助函数$f(x)=e^x-x-1$,$f'(x)=e^{x}-1$
+	构造辅助函数: $f(x)=e^x-x-1, f'(x)=e^{x}-1$
+	$$\begin{cases}
+		x > 0, f'(x) > 0\\
+		f(x) > f(0) = 0\\
+		\dfrac{e^{x}-1}{x} > 1
+	\end{cases}\Rightarrow 
+	\begin{cases}
+		x_{1} > 0\\
+		x_{2} = \ln(\dfrac{e^{x_{1}}-1}{x_{1}}) > 0
+	\end{cases}
+	$$
 	
-	当$x>0$时,我们知道:  $f'(x)>0$,$f(x)$单调递增,$f(x)>f(0)=0\Rightarrow  x>0,\dfrac{e^x-1}{x}>1$
+	数学归纳法: $x_{n}>0$, 数列 $\{ x_{n}\}$ 有下界
 	
-	我们有$x_{1}>0\Rightarrow e^{x_{2}}>1\Rightarrow x_{2}>0$,我们由归纳法可知:  $x_{n}>0$,数列$\{ x_{n}\}$有下界.
+	拉格朗日中值定理:  
+	$$e^{x_{n+1}}=\dfrac{e^{x_{n}}-1}{x_{n}}=e^{\xi}, \xi\in(0,x_{n})\Rightarrow x_{n+1} = \xi < x_{n}$$
 	
-	我们由拉格朗日中值定理可以得到:  
-	$$e^{x_{n+1}}=\dfrac{e^{x_{n}}-1}{x_{n}}=e^{\xi},\text{其中}\xi\in(0,x_{n})$$
+	数列 $\{x_{n}\}$ 单调递减且有下界, 单调有界准则: 数列 $\{x_{n}\}$ 极限必定存在
 	
-	我们得到:  $x_{n+1}=\xi<x_{n}$,数列$\{x_{n}\}$单调递减,我们由单调有界准则可以得到:  数列$\{x_{n}\}$极限必定存在,我们不妨假设$\lim\limits_{n\rightarrow +\infty}x_{n}=a$,我们有:  
+	不妨设 $\lim\limits_{n\rightarrow +\infty}x_{n}=a$ :  
 	$$e^{a}=\dfrac{e^a-1}{a}\Rightarrow a=0$$
 	
 	综上所述,数列$\{x_{n}\}$极限存在,其值为$0$
 \end{solution}
 \begin{proposition}
-	设$f(x)$在$[a,b]$上可导,且$|f'(x)|<1$,当$x\in[a,b]$时,有$a<f(x)<b$,$F(x)=\dfrac{x+f(x)}{2}$,证明:  
+	设 $f(x)$ 在 $[a,b]$ 上可导, 且 $|f'(x)|<1$, 当 $x\in[a,b]$ 时,有 $a<f(x)<b$,$F(x)=\dfrac{x+f(x)}{2}$,证明:  
 
-(1). $\exists x^{*}\in(a,b),\ s.t. F(x^{*})=x^{*}$
+(1). $\exists!\ x^{*}\in(a,b),\ s.t.\ F(x^{*})=x^{*}$
 
-(2). 对$x_{0}\in[a,b]$,数列$\{x_{n}\}$满足$x_{n+1}=F(x_{n}),(n=0,1,2,\cdots)$,有$\lim\limits_{n\rightarrow+\infty}x_{n}=x^{*}$
+(2). 对 $x_{0}\in[a,b]$, 数列 $\{x_{n}\}$ 满足 $x_{n+1}=F(x_{n})(n=0,1,2,\cdots)$, 有 $\lim\limits_{n\rightarrow+\infty}x_{n}=x^{*}$
 
 \end{proposition}
 \begin{solution}
 	
-	(1). 我们构造辅助函数:  $G(x)=F(x)-x=\dfrac{f(x)-x}{2}$,我们有:  $G'(x)=\dfrac{f'(x)-1}{2}$
+	(1). 
 	
-	又因为:  $|f'(x)|<1\Rightarrow G'(x)<0\Rightarrow G(x)\text{单调递减}$
-	$$\left\lbrace
-	\begin{array}{l}
-		G(a)=\dfrac{f(a)-a}{2}>0\\
-		G(b)=\dfrac{f(b)-b}{2}<0
-	\end{array}
-	\right. \Rightarrow G(a)G(b)<0$$
+	构造辅助函数: $G(x) = F(x)-x = \dfrac{f(x)-x}{2}$, $G'(x)=\dfrac{f'(x)-1}{2}$
 	
-	我们根据零点定理可知:  $\exists x^{*}\in(a,b),\ s.t. G(x^{*})=0\Rightarrow \exists x^{*}\in(a,b),\ s.t. F(x^{*})=x^{*}$
+	$$|f'(x)|<1\Rightarrow G'(x)<0\Rightarrow G(x)\text{单调递减}$$
+
+	$$\begin{cases}
+		G(a) = \frac{f(a)-a}{2}>0\\
+		G(b) = \frac{f(b)-b}{2}<0
+	\end{cases} \Rightarrow G(a)G(b)<0$$
+	
+	零点定理: 
+	$$\exists!\ x^{*}\in(a,b),\ s.t.\ G(x^{*})=0\Rightarrow \exists!\ x^{*}\in(a,b),\ s.t.\ F(x^{*})=x^{*}$$
 	
 	(2). 
-	$F'(x)=\dfrac{1+f'(x)}{2}\geq 0\Rightarrow F(x)\text{单调递增}$
+
+	$$F'(x)=\dfrac{1+f'(x)}{2}\geq 0\Rightarrow F(x)\text{单调递增}$$
 	
-	(i). 当$x_{0}=x^{*}$时,$x_{n}=x^{*}$,此时$\lim\limits_{n\rightarrow +\infty}x_{n}=x^{*}$
+	(i). $x_{0}=x^{*}$,$x_{n}=x^{*}$, $\lim\limits_{n\rightarrow +\infty}x_{n}=x^{*}$
 	
-	(ii). 当$x_{0}>x^{*}$时,我们有$G(x^{*})>G(x_{0})\Rightarrow F(x_{0})<x_{0}\Rightarrow x_{1}<x_{0}$
+	(ii). $x_{0}>x^{*}$, $G(x^{*})>G(x_{0})\Rightarrow F(x_{0})<x_{0}\Rightarrow x_{1}<x_{0}$
+	\begin{enumerate}
+		\item 当 $n=1$ 时, $x_{1}<x_{0}$
+		\item 假设当 $n=k(k\geq 1)$ 时, $x_{k}<x_{k-1}$ 成立
+		\item 当 $n=k+1$ 时, $F(x_{k})<F(x_{k-1})\Rightarrow x_{k+1}<x_{k}$
+	\end{enumerate}
+	$$\begin{cases}
+		x_{n+1}=\frac{x_{n}+f(x_{n})}{2} \\
+		x_{1}\in [a,b] \\
+		f(x_{n})\in (a,b)\\
+	\end{cases}\Rightarrow x_{n}\in [a,b]$$
 	
-	当$n=1$时,$x_{1}<x_{0}$;
+	数列 $\{x_{n}\}$ 单调递减且有下界,极限必定存在
 	
-	当$n=k$时,$x_{k}<x_{k-1}$成立,当$n=k+1$时,我们有$F(x_{k})<F(x_{k-1})\Rightarrow x_{k+1}<x_{k}$
+	不妨设 $\lim\limits_{n\to +\infty}x_{n} = A$
 	
-	我们得到数列$\{x_{n}\}$单调递减,且$x_{0}\in[a,b],\ x_{n}=\dfrac{x_{n}+f(x_{n})}{2},\ a<f(x)<b\Rightarrow x_{n}\in[a,b]$,数列$\{x_{n}\}$单调递减且有下界,极限必定存在.
+	$$A=\dfrac{A+f(A)}{2}\Rightarrow F(A)=A\Rightarrow A=x^{*}$$
 	
-	我们不妨假设数列$\{x_{n}\}$的极限为$A$,我们有:  $A=\dfrac{A+f(A)}{2}\Rightarrow F(A)=A\Rightarrow A=x^{*}$
+	(iii). $x_{0}<x^{*}$, $G(x^{*})<G(x_{0})\Rightarrow F(x_{0})>x_{0}\Rightarrow x_{1}>x_{0}$
+	\begin{enumerate}
+		\item 当 $n=1$ 时, $x_{1}>x_{0}$
+		\item 假设当 $n=k(k\geq 1)$ 时, $x_{k}>x_{k-1}$ 成立
+		\item 当 $n=k+1$ 时, $F(x_{k})>F(x_{k-1})\Rightarrow x_{k+1}>x_{k}$
+	\end{enumerate}
+	$$\begin{cases}
+		x_{n+1}=\frac{x_{n}+f(x_{n})}{2} \\
+		x_{1}\in [a,b] \\
+		f(x_{n})\in (a,b)\\
+	\end{cases}\Rightarrow x_{n}\in [a,b]$$
 	
-	(iii). 当$x_{0}<x_{*}$时,我们有$G(x^{*})<G(x_{0})\Rightarrow F(x_{0})>x_{0}\Rightarrow x_{1}>x_{0}$
+	数列 $\{x_{n}\}$ 单调递增且有上界,极限必定存在
 	
-	当$n=1$时,$x_{1}>x_{0}$;
+	不妨设 $\lim\limits_{n\to +\infty}x_{n} = A$
 	
-	当$n=k$时,$x_{k}>x_{k-1}$成立,当$n=k+1$时,我们有$F(x_{k})>F(x_{k-1})\Rightarrow x_{k+1}>x_{k}$
+	$$A=\dfrac{A+f(A)}{2}\Rightarrow F(A)=A\Rightarrow A=x^{*}$$
 	
-	我们得到数列$\{x_{n}\}$单调递增,且$x_{0}\in[a,b],\ x_{n}=\dfrac{x_{n}+f(x_{n})}{2},\ a<f(x)<b\Rightarrow x_{n}\in[a,b]$,数列$\{x_{n}\}$单调递增且有上界,极限必定存在.
-	
-	我们不妨假设数列$\{x_{n}\}$的极限为$A$,我们有:  $A=\dfrac{A+f(A)}{2}\Rightarrow F(A)=A\Rightarrow A=x^{*}$
-	
-	综上所述,我们得到:  $\lim\limits_{n\rightarrow+\infty}x_{n}=x^{*}$
+	综上所述, $\lim\limits_{n\rightarrow+\infty}x_{n}=x^{*}$
 \end{solution}
 \begin{proposition}
 (1).设$f(x)$是$[0,+\infty)$上单调减少且非负的连续函数,证明:  $$f(k+1)\leq \int_{k}^{k+1}f(x)dx\leq f(k),\ k=1,2,\cdots$$
 
-(2). 证明:  $ln(1+n)\leq 1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}\leq 1+ln n$,求极限$\lim\limits_{n\rightarrow+\infty}\dfrac{1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}}{ln n}$
+(2). 证明:  $\ln(1+n)\leq 1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}\leq 1+\ln n$,求极限$\lim\limits_{n\rightarrow+\infty}\dfrac{1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}}{\ln n}$
 
 \end{proposition}
 \begin{solution}
 	
-	(1). 我们由$f(x)$单调减少且非负得到:  
+	(1). 
+	
+	$f(x)$单调减少且非负:  
 	$$0\leq f(k+1)\leq f(x)\leq f(k),\ x\in[k,k+1]$$
 	
-	我们对上述不等式在$[k,k+1]$上同时求定积分得到:  
+	不等式在 $[k,k+1]$ 上同时求定积分:  
 	$$\int_{k}^{k+1}f(k+1)dx\leq \int_{k}^{k+1}f(x)dx\leq \int_{k}^{k+1}f(k)dx\Rightarrow f(k+1)\leq \int_{k}^{k+1}f(x)dx\leq f(k)$$
 	
-	(2). 我们构造辅助函数$f(x)=\dfrac{1}{x}$,我们可以知道$f(x)$在$(0,+\infty)$上单调递减且非负,我们由(1)可以知道:  
-	$$\left\lbrace
-	\begin{array}{l}
-		\dfrac{1}{2}\leq \int_{1}^{2}\dfrac{1}{x}dx\leq 1\\
-		\dfrac{1}{3}\leq \int_{2}^{3}\dfrac{1}{x}dx\leq \dfrac{1}{2}\\
-		\cdots\\
-		\dfrac{1}{n}\leq \int_{n-1}^{n}\dfrac{1}{x}dx\leq \dfrac{1}{n-1}\\
-		\dfrac{1}{n+1}\leq \int_{n}^{n+1}\dfrac{1}{x}dx\leq \dfrac{1}{n}
-	\end{array}
-	\right. \Rightarrow \left\lbrace
-	\begin{array}{l}
-		\sum\limits_{k=2}^{n+1}\dfrac{1}{k}\leq \int_{1}^{n+1}\dfrac{1}{x}=ln(1+n)\leq \sum\limits_{k=1}^{n}\dfrac{1}{k}\\
-		\sum\limits_{k=2}^{n}\dfrac{1}{k}\leq \int_{1}^{n}\dfrac{1}{x}=ln n\\
-		\sum\limits_{k=1}^{n}\dfrac{1}{k}=1+\sum\limits_{k=2}^{n}\dfrac{1}{k}\leq 1+ln n
-	\end{array}
-	\right. $$
+	(2). 
 	
-	我们由夹逼定理可以得到:  
-	$$\left\lbrace
-	\begin{array}{l}
-		\lim\limits_{n\rightarrow +\infty}\dfrac{ln(1+n)}{ln n}=1\\
-		\lim\limits_{n\rightarrow +\infty}\dfrac{1+ln n}{ln n}=1
-	\end{array}
-	\right. \Rightarrow \lim\limits_{n\rightarrow  +\infty}\dfrac{1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}}{ln n}=1$$
+	构造辅助函数 $f(x)=\dfrac{1}{x}$, $f(x)$ 在 $(0,+\infty)$ 上单调递减且非负:  
+	$$\begin{cases}
+		\displaystyle{\dfrac{1}{2}\leq \int_{1}^{2}\dfrac{1}{x}dx\leq 1} \\
+		\displaystyle{\dfrac{1}{3}\leq \int_{2}^{3}\dfrac{1}{x}dx\leq \dfrac{1}{2}} \\
+		\cdots\\
+		\displaystyle{\dfrac{1}{n}\leq \int_{n-1}^{n}\dfrac{1}{x}dx\leq \dfrac{1}{n-1}}\\
+		\displaystyle{\dfrac{1}{n+1}\leq \int_{n}^{n+1}\dfrac{1}{x}dx\leq \dfrac{1}{n}}
+	\end{cases} \Rightarrow
+	\begin{cases}
+		\displaystyle{\sum\limits_{k=1}^{n}\dfrac{1}{k+1}\leq \int_{1}^{n+1}\dfrac{1}{x}=\ln(1+n)\leq \sum\limits_{k=1}^{n}\dfrac{1}{k}}\\
+		\displaystyle{\sum\limits_{k=1}^{n-1}\dfrac{1}{k+1}\leq \int_{1}^{n}\dfrac{1}{x}=\ln n}\\
+		\displaystyle{\sum\limits_{k=1}^{n}\dfrac{1}{k}=1+\sum\limits_{k=1}^{n-1}\dfrac{1}{k+1}\leq 1+\ln n}
+	\end{cases}$$
+	
+	$$\ln(1+n)\leq \sum\limits_{k=1}^{n}\dfrac{1}{k}\leq 1+\ln n$$
+
+	夹逼定理:  
+	$$\begin{cases}
+		\lim\limits_{n\rightarrow +\infty}\dfrac{\ln(1+n)}{\ln n} = 1\\
+		\lim\limits_{n\rightarrow +\infty}\dfrac{1+\ln n}{\ln n} = 1
+	\end{cases}\Rightarrow 
+	\lim\limits_{n\rightarrow +\infty}\dfrac{1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}}{\ln n}=1$$
 \end{solution}
 
 \begin{proposition}
-	设$f(x)$在$(a,b)$内连续,且$\lim\limits_{x\rightarrow a^{+}}f(x)=\lim\limits_{x\rightarrow b^{-}}f(x)=-\infty$,证明:  $f(x)$在$(a,b)$内有最大值
+	设 $f(x)$ 在 $(a,b)$ 内连续, 且 $\lim\limits_{x\rightarrow a^{+}}f(x)=\lim\limits_{x\rightarrow b^{-}}f(x)=-\infty$, 证明: $f(x)$在$(a,b)$ 内有最大值
 \end{proposition}
 \begin{solution}
 	
-	我们不妨取$M=f(\dfrac{a+b}{2})$,我们有$\lim\limits_{x\rightarrow a^{+}}f(x)=\lim\limits_{x\rightarrow b^{-}}f(x)=-\infty$
+	取 $M=f(\dfrac{a+b}{2})$
 	
-	我们由极限定义可以得到:  
-	$$\left\lbrace
-	\begin{array}{l}
-		\exists a<c<\dfrac{a+b}{2},\ x\in(a,c),\ s.t. f(x)\leq f(\dfrac{a+b}{2})\\
-		\exists \dfrac{a+b}{2}<d<b,\ x\in(d,b),\ s.t. f(x)\leq f(\dfrac{a+b}{2})
-	\end{array}
-	\right. $$
+	极限定义:  
+	$$\begin{cases}
+		\exists a < c < \dfrac{a+b}{2},x\in(a,c),\ s.t.\ f(x)\leq f(\dfrac{a+b}{2})\\
+		\exists \dfrac{a+b}{2} < d < b,x\in(d,b),\ s.t.\ f(x)\leq f(\dfrac{a+b}{2})
+	\end{cases}$$
 	
-	在闭区间$[c,d]$上,$f(x)$连续,$f(x)$必定有最大值为$f(\xi),\ \xi\in[c,d]$,且$f(\xi)\geq f(\dfrac{a+b}{2})$.在区间$(a,c)\cup (d,b)$上,我们有$f(x)\leq f(\dfrac{a+b}{2})$.
+	$$\begin{cases}
+		\exists \xi\in [c,d], \forall x\in [c,d], f(\xi)\geq f(x)\\
+		f(\xi) \geq f(\dfrac{a+b}{2})\\
+		x\in (a,c], f(x) < f(\dfrac{a+b}{2}) \leq f(\xi)\\
+		x\in [d,b), f(x) < f(\dfrac{a+b}{2}) \leq f(\xi)
+	\end{cases}$$
 	
-	综上所述,$f(x)$在区间$(a,b)$内有最大值.
+	综上所述, $f(x)$ 在区间 $(a,b)$ 内有最大值 $f(\xi)$
 \end{solution}
 
 \begin{lemma}[不单调数列极限]
-	(1). 夹逼准则: 从定义出发, 证明: $|x_{n}-a|$ 极限为 $0$
-	
-	(2). 构造无穷级数: $\sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n})$, 证明这个级数收敛即可证明出数列 $\{x_{n}\}$ 极限存在
-	
-	(3). 奇数项和偶数项极限存在且相等: $\lim\limits_{n\to\infty}x_{2n}=\lim\limits_{n\to\infty}x_{2n-1}=A$
+\begin{enumerate}
+	\item 压缩映射原理: 从定义出发, 证明: $|x_{n}-a|$ 极限为 $0$
+	\item 柯西列: $\sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n})$, 证明这个级数收敛即可证明出数列 $\{x_{n}\}$ 极限存在
+	\item 奇数项和偶数项极限存在且相等: $\lim\limits_{n\to\infty}x_{2n}=\lim\limits_{n\to\infty}x_{2n-1}=A$
+\end{enumerate} 
 \end{lemma}
 
 \begin{proposition}
-	设$2x_{1}=1,2x_{n+1}=1-x_{n}^2,\ n=1,2,\cdots$,证明数列$\{x_{n}\}$收敛,
-	并求极限$\lim\limits_{n\rightarrow +\infty}x_{n}$
+	设 $2x_{1}=1,2x_{n+1}=1-x_{n}^2$, 证明数列 $\{x_{n}\}$ 收敛,
+	并求极限 $\lim\limits_{n\rightarrow +\infty}x_{n}$
 \end{proposition}
 \begin{solution}
 	
-	我们有: $x_{1}=\dfrac{1}{2},x_{n+1}=\dfrac{1}{2}-\dfrac{x_{n}^2}{2}\Rightarrow x_{n}\in(0,\dfrac{1}{2})$
+	$$x_{1} = \dfrac{1}{2}, x_{2} = \dfrac{3}{8}, x_{3} = \dfrac{55}{128}\Rightarrow x_{1} > x_{3} > x_{2}$$
 	
-	我们发现数列$\{x_{n}\}$不单调,不能使用单调有界准则来判断.
-	\begin{anymark}[方法一]
+	数列$\{x_{n}\}$不单调, 不能使用单调有界准则来判断
 
-		使用夹逼定理, 先假定极限存在求出后证明: 
+	$$\begin{cases} 
+		x_{n+1} = \dfrac{1-x_{n}^{2}}{2}\\
+		x_{1} = \dfrac{1}{2}\in (0,1)\\
+		x\in(0,1),1-x^{2}\in(0,1)
+	\end{cases}\Rightarrow x_{n}\in (0,\dfrac{1}{2})$$
+	\begin{anymark}[压缩映射原理]
 
-		不妨设 $\lim\limits_{n\rightarrow\infty}x_{n}=A(A>0)$,
-		我们对 $2x_{n+1}=1-x_{n}^2$ 两边同时取极限得到: 
+		不妨设 $\lim\limits_{n\rightarrow\infty}x_{n}=a(a>0)$, 对 $2x_{n+1}=1-x_{n}^2$ 两边同时取极限: 
 	    
-		$$2A=1-A^2\Rightarrow A=\sqrt{2}-1$$
-		
-		$$a=\sqrt{2}-1\Rightarrow a=\dfrac{1-a^2}{2}$$
-		
+		$$2a=1-a^2\Rightarrow 
+		\begin{cases}
+			a=\dfrac{1-a^2}{2} \\
+			a=\sqrt{2}-1
+		\end{cases}$$
+			
 		\begin{eqnarray*}
-			|x_{n}-a| & = & |\dfrac{1-x_{n}^2}{2}-\dfrac{1-a^2}{2}|\\
-					  & = & |\dfrac{x_{x_{n-1}^2-a^2}}{2}|\\
-					  & \leq & \dfrac{\sqrt{2}-\frac{1}{2}}{2}|x_{n-1}-a|\\
-					  & \leq & \cdots\\
-					  & \leq & (\dfrac{\sqrt{2}-\frac{1}{2}}{2})^{n-1}|x_{1}-a|
+			|x_{n+1}-a| &  =   & \big|\dfrac{1-x_{n}^2}{2}-\dfrac{1-a^2}{2}\big|\\
+					    &  =   & \big|\dfrac{x_{n}^{2}-a^2}{2}\big| = \dfrac{(x_{n}+a)}{2}|x_{n}-a|\\
+					    & \leq & \dfrac{2\sqrt{2}-1}{4}|x_{n-1}-a|\\
+					    & \leq & \cdots\\
+					    & \leq & (\dfrac{2\sqrt{2}-1}{4})^{n-1}|x_{1}-a|
 		\end{eqnarray*}
 		
-		$$\lim\limits_{n\to \infty} 0 = \lim\limits_{n\to \infty}(\dfrac{\sqrt{2}-\frac{1}{2}}{2})^{n-1}=0$$
+		$$\lim\limits_{n\to \infty} 0 = \lim\limits_{n\to \infty}(\dfrac{2\sqrt{2}-1}{4})^{n-1}=0$$
 		
-		由夹逼定理: $\lim\limits_{n\to \infty}|x_{n}-a|=0$
+		夹逼定理: $\lim\limits_{n\to \infty}|x_{n}-a|=0 \Rightarrow \lim\limits_{n\rightarrow +\infty}x_{n} = a =\sqrt{2}-1$
 	\end{anymark}
-	\begin{anymark}[方法二]
+	\begin{anymark}[柯西列]
 
-		构造无穷级数$\sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n})$,证明此级数收敛.
+		构造无穷级数: $\sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n})$
 		
 		\begin{eqnarray*}
-			|a_{n+1}-a_{n}| & = & |\dfrac{a_{n-1}^2-a_{n}^2}{2}|\\
-					  		& \leq & \dfrac{1}{2}|a_{n}-a_{n-1}|\\
+			|x_{n+1}-x_{n}| &   =  & \big|\dfrac{x_{n}^2-x_{n-1}^2}{2}\big| = \dfrac{x_{n}+x_{n-1}}{2}|x_{n}-x_{n-1}|\\
+					  		& \leq & \dfrac{1}{2}|x_{n}-x_{n-1}|\\
 					  		& \leq & \cdots\\
-					  		& \leq & \dfrac{1}{2^{n-1}}|a_{2}-a_{1}|
+					  		& \leq & \dfrac{1}{2^{n-1}}|x_{2}-x_{1}|
 		\end{eqnarray*}
 		
-		我们知道级数 $\sum\limits_{n=1}^{+\infty}\dfrac{1}{2^{n-1}}$ 收敛, 
-		由比较判别法我们知道级数 $\sum\limits_{n=1}^{+\infty}|x_{n+1}-x_{n}|$ 收敛,
-		级数 $\sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n})$ 收敛
-		
-		我们得到: 
-		$$\lim\limits_{n\rightarrow \infty}x_{n+1}-x_{1}\text{存在}\Rightarrow \text{数列}\{x_{n}\}\text{极限存在}$$
-	\end{anymark}
-	\begin{anymark}[方法三]
+		级数 $\sum\limits_{n=1}^{+\infty}\dfrac{1}{2^{n-1}}$ 收敛
 
-		用奇数项和偶数项极限相等推出数列 $\{x_{n}\}$ 极限存在
+		比较判别法: 
+		$$\sum\limits_{n=1}^{+\infty}|x_{n+1}-x_{n}|\text{收敛}\Rightarrow \sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n}) \text{收敛}$$ 
 		
-		我们可以证明奇数项和偶数项单调递减, 且有下界, 奇数项和偶数项的极限必定存在
-		
-		我们不妨设: $\lim\limits_{n\rightarrow\infty}x_{2n}=A,\lim\limits_{n\rightarrow\infty}x_{2n-1}=B$
-		
-		我们有: 
 		$$\begin{cases}
-			2A=1-B^2\\
-			2B=1-A^2
-		\end{cases}\Rightarrow A=B=\sqrt{2}-1$$
+			\lim\limits_{n\to +\infty}\sum\limits_{k=1}^{n}(x_{k+1}-x_{k}) = A\\
+			\lim\limits_{n\to +\infty}x_{n+1} - x_{1} =A
+		\end{cases}\Rightarrow 
+		\begin{cases}
+			\lim\limits_{n\to +\infty}x_{n} = a\\
+			2a = 1-a^{2}\\
+			a > 0
+		\end{cases}\Rightarrow a = \sqrt{2} -1$$
 	\end{anymark}
 \end{solution}
 
@@ -585,16 +653,26 @@
 \end{proposition}
 \begin{solution}
 	
-	我们发现: $x_{1}=1,x_{2}=\dfrac{3}{2},x_{3}=\dfrac{7}{5},x_{4}=\dfrac{17}{12}\Rightarrow x_{1}<x_{3},x_{2}>x_{4}$
+	$$ x_{1}=1,x_{2}=\dfrac{3}{2},x_{3}=\dfrac{7}{5},x_{4}=\dfrac{17}{12}\Rightarrow 
+	\begin{cases}
+		x_{1}<x_{3} \\
+		x_{2}>x_{4} \\
+		x_{n} > 0\\
+		x_{n}\in (1,2)
+	\end{cases}$$
+	\begin{enumerate}
+		\item 当 $n = 1$, $x_{1} < x_{3}, x_{2} > x_{4}$
+		\item 假设 $n = k$ 时, $x_{2k-1} < x_{2k+1}, x_{2k} > x_{2k+2}$
+		\item 当 $n = k+1$ 时:
+		$$\begin{cases}
+			x_{2k+3}=1+\dfrac{1}{1+x_{2k+2}}>1+\dfrac{1}{1+x_{2k}}=x_{2k+1} \\
+			x_{2k+4}=1+\dfrac{1}{1+x_{2k+3}}<1+\dfrac{1}{1+x_{2k+1}}=x_{2k+2}
+		\end{cases}$$
+	\end{enumerate}
+
+	$\{x_{2k-1}\}$ 单调递增且有上界，$\{x_{2k}\}$ 单调递减且有下界
 	
-	我们发现$x_{n}$不单调,我们考虑数列$\{x_{n}\}$的奇数项和偶数项.
-	
-	我们不妨假设$x_{2k-1}<x_{2k+1},x_{2k}>x_{2k+2}$
-	
-	我们有: $$x_{2k+3}=1+\dfrac{1}{1+x_{2k+2}}>1+\dfrac{1}{1+x_{2k}}=x_{2k+1}$$
-	$$x_{2k+4}=1+\dfrac{1}{1+x_{2k+3}}<1+\dfrac{1}{1+x_{2k+1}}=x_{2k+2}$$
-	
-	我们得到奇数项单调递增,偶数项单调递减,我们不妨假设: 
+	单调有界准则:
 	$$\begin{cases}
 		\lim\limits_{n\to\infty}x_{2n} = A(A>0)\\
 		\lim\limits_{n\to\infty}x_{2n-1}=B(B>0)
@@ -609,35 +687,70 @@
 	设$x_{1}=1,2x_{n+1}=x_{n}+\sqrt{x_{n}^2+\dfrac{1}{n^2}},(n=1,2,\cdots)$,证明极限数列$\{x_{n}\}$收敛.
 \end{proposition}
 \begin{solution}
+
+	$$\begin{cases}
+		x_{1} = 1 \\ 
+		2x_{n+1} = x_{n} + \sqrt{x_{n}^{2}+\dfrac{1}{n^{2}}}
+	\end{cases}\Rightarrow
+	\begin{cases}
+		x_{n+1} > x_{n} \\
+		x_{n} \geq 1
+	\end{cases} $$
+
+	令 $$\begin{cases}
+		a = \sqrt{x_{n}^{2}+\frac{1}{n^{2}}}\\
+		b = x_{n}
+	\end{cases}\Rightarrow
+	\begin{cases}
+		a^{2} -b^{2} = \dfrac{1}{n^{2}}\\
+		a + b > 2
+	\end{cases}$$
+	\begin{eqnarray*}
+		x_{n+1} - x_{n} & = & \dfrac{\sqrt{x_{n}^{2}+\frac{1}{n^{2}}}-x_{n}}{2} \\
+						& = & \dfrac{a-b}{2}\\
+						& = & \dfrac{a^{2}-b^{2}}{2(a+b)}\\
+						& < & \dfrac{1}{4n^{2}}
+	\end{eqnarray*}
+
+	$$\sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n}) < \sum\limits_{n=1}^{+\infty}\dfrac{1}{4n^{2}}$$
+
+	级数 $\sum\limits_{n=1}^{+\infty}\dfrac{1}{4n^{2}}$ 收敛
+
+	比较判别法:
+	$$\sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n})\text{收敛}\Rightarrow \lim\limits_{n\to +\infty}x_{n+1} - x_{1} = A$$
 	
-	我们有: $x_{1}=1,x_{n}\geq 1$
-	$$2x_{n+1}=x_{n}+\sqrt{x_{n}^2+\dfrac{1}{n^2}}\Rightarrow x_{n}>0,\text{且}x_{n+1}>x_{n}$$
-	
-	我们不好找出$x_{n}$的上界,我们要证明$x_{n}$收敛,可以转化为证明: 
-	$$\text{级数}\sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n})\text{收敛}$$
-	$$x_{n+1}-x_{n}=\dfrac{\frac{1}{n^2}}{2(\sqrt{x_{n}+\frac{1}{n^2}}+x_{n})}\leq \frac{1}{4n^2}$$
-	
-	级数$\sum\limits_{n=1}^{+\infty}\dfrac{1}{4n^2}$收敛,我们由比较判别法得到原级数收敛.
-	
-	数列$\{x_{n}\}$收敛,极限$\lim\limits_{n\rightarrow\infty}x_{n}$存在.
+	综上所述, 极限 $\lim\limits_{n\rightarrow\infty}x_{n}$ 存在
 \end{solution}
 
 \begin{proposition}
-	设$x_{0}=1,x_{n+1}=\dfrac{1}{x_{n}^3+4},(n=0,1,2,\cdots)$,证明极限$\lim\limits_{n\rightarrow\infty}x_{n}$存在并求出此极限
+	设 $x_{0}=1,x_{n+1}=\dfrac{1}{x_{n}^3+4},(n=0,1,2,\cdots)$, 证明极限 $\lim\limits_{n\rightarrow\infty}x_{n}$存在并求出此极限
 \end{proposition}
 \begin{solution}
 	
-	我们有: $x_{1}=\dfrac{1}{5},x_{2}=\dfrac{125}{601},x_{n}\in(0,1)$
+	$$\begin{cases}
+		x_{0} = 1\\
+		x_{n+1} = \dfrac{1}{x_{n}^{3}+4}
+	\end{cases} \Rightarrow x_{n}\in(0,1)$$
+	\begin{eqnarray*}
+		|x_{n+1}-x_{n}| & = & \big|\dfrac{1}{x_{n}^3+4}-\dfrac{1}{x_{n-1}^3+4}\big| \\
+						& = & \dfrac{|x_{n}^{3}-x_{n-1}^{3}|}{(x_{n}^3+4)(x_{n-1}^3+4)} \\
+						& = & \dfrac{|x_{n}^{2}+x_{n-1}^{2}+x_{n}x_{n-1}|}{(x_{n}^3+4)(x_{n-1}^3+4)}|x_{n}-x_{n-1}| \\
+						& < & \dfrac{3}{16}|x_{n}-x_{n-1}|\\
+						& < & \cdots\\
+						& < & (\dfrac{3}{16})^{n}|x_{1}-x_{0}|
+	\end{eqnarray*}
+	$$\sum\limits_{n=1}^{+\infty}|x_{n}-x_{n-1}| < \sum\limits_{n=1}^{+\infty} (\dfrac{3}{16})^{n}|x_{1}-x_{0}|$$
 	
-	$$|x_{n+1}-x_{n}|=\dfrac{1}{x_{n}^3+4}-\dfrac{1}{x_{n-1}^3+4}=\dfrac{|x_{n}-x_{n-1}^3|}{(x_{n}^3+4)(x_{n-1}^3+4)}\leq \dfrac{3}{16}|x_{n}-x_{n-1}|\leq \cdots\leq (\dfrac{3}{16})^{n}|x_{1}-x_{0}|$$
+	级数$\sum\limits_{n=1}^{+\infty}(\dfrac{3}{16})^{n}|x_{1}-x_{0}|$收敛
 	
-	级数$\sum\limits_{n=1}^{+\infty}(\dfrac{3}{16})^{n}$收敛,根据比较判别法,我们得到: 
-	$$\text{级数}\sum\limits_{n=1}^{+\infty}(x_{n}-x_{n-1})\text{收敛}\Rightarrow \lim\limits_{n\rightarrow\infty}x_{n}-x_{0}\text{存在}$$
+	比较判别法: 
+	$$\sum\limits_{n=1}^{+\infty}|x_{n}-x_{n-1}|\text{收敛}\Rightarrow \sum\limits_{n=1}^{+\infty}|x_{n}-x_{n-1}|\text{收敛}
+	\lim\limits_{n\rightarrow\infty}x_{n}-x_{0}\text{存在}$$
 	
-	我们不妨设$\lim\limits_{n\rightarrow\infty}x_{n}=A(A>0)$,我们有: 
+	不妨设 $\lim\limits_{n\rightarrow\infty}x_{n}=A(A>0)$: 
 	$$A=\dfrac{1}{A^3+4}\Rightarrow A^4+4A-1=0$$
 	
-	$A$是方程$x^4+4x-1=0$的唯一正根.
+	$A$ 是方程 $x^4+4x-1=0$ 的唯一正根
 \end{solution}
 \myspace{1}
 
@@ -758,17 +871,18 @@
 	$x\in[x_{1},x_{0})$, 我们有:
 
 	\begin{eqnarray*}
-		|\dfrac{f(x)}{g(x)} -A| &=& |\dfrac{g(x)-g(x_{1})}{g(x)} \left[\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})}-A\right] + \dfrac{f(x_{1})-Ag(x_{1})}{g(x)}|\\
-								&\leq& |1-\dfrac{g(x_{1})}{g(x)}||\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})}-A|+|\dfrac{f(x_{1})-Ag(x_{1})}{g(x)}|\\
-								&\leq& (1+|\dfrac{g(x_{1})}{g(x)}|)|\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})}-A|+|\dfrac{f(x_{1})-Ag(x_{1})}{g(x)}|
+		\big|\dfrac{f(x)}{g(x)} -A\big| &=& \big|\dfrac{g(x)-g(x_{1})}{g(x)} \left[\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})}-A\right] + \dfrac{f(x_{1})-Ag(x_{1})}{g(x)}\big|\\
+								&\leq& \big|1-\dfrac{g(x_{1})}{g(x)}\big|\big|\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})}-A\big|+\big|\dfrac{f(x_{1})-Ag(x_{1})}{g(x)}\big|\\
+								&\leq& (1+\big|\dfrac{g(x_{1})}{g(x)}\big|)\big|\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})}-A\big|+\big|\dfrac{f(x_{1})-Ag(x_{1})}{g(x)}\big|
 	\end{eqnarray*}
 
 	我们有: $\lim\limits_{x\to x_{0}}g(x) =\infty\Rightarrow \begin{cases} \lim\limits_{x\to x_{0}}\dfrac{g(x_{1})}{g(x)} =0 \\ \lim\limits_{x\to x_{0}}\dfrac{f(x_{1})-Ag(x_{1})}{g(x)}=0\end{cases}$
 
 	我们有:
-	$$\forall \varepsilon >0, \exists x_{2}\in(x_{1},x_{0}),\forall x\in(x_{2},x_{0}),\ s.t.\ |\dfrac{g(x_{1})}{g(x)}|< 1 \text{且} |\dfrac{f(x_{1})-Ag(x_{1})}{g(x)}|< \dfrac{\varepsilon}{3}$$
+	$$\forall \varepsilon >0, \exists x_{2}\in(x_{1},x_{0}),\forall x\in(x_{2},x_{0}),\ s.t.\ \big|\dfrac{g(x_{1})}{g(x)}\big|< 1 \text{且}
+	 \big|\dfrac{f(x_{1})-Ag(x_{1})}{g(x)}\big|< \dfrac{\varepsilon}{3}$$
 
-	此时,我们有: $\forall \varepsilon > 0, \exists \delta_{1} = x_{0}-x_{2}, \forall x\in (x_{0}-\delta_{1},x_{0}), |\dfrac{f(x)}{g(x)} -A|<2\cdot \dfrac{\varepsilon}{3}+\dfrac{\varepsilon}{3}=\varepsilon$
+	此时,我们有: $\forall \varepsilon > 0, \exists \delta_{1} = x_{0}-x_{2}, \forall x\in (x_{0}-\delta_{1},x_{0}), \big|\dfrac{f(x)}{g(x)} -A\big|<2\cdot \dfrac{\varepsilon}{3}+\dfrac{\varepsilon}{3}=\varepsilon$
 	
 	(2). 当 $A$ 为 $\infty$ 时, 我们有: $|\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})}| = |\dfrac{f'(\xi)}{g'(\xi)}| > M$
 	
@@ -1085,7 +1199,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	其中 $m,M$ 分别是 $f(x)$ 在 $[a,b]$ 上的最小值和最大值
 
-	$\forall \mu\in [m,M],\ \exists \xi\in[a,b],\ s.t.\ f(\xi)=\mu$
+	$\forall \mu\in [m,M],\exists \xi\in[a,b],\ s.t.\ f(\xi)=\mu$
 \end{theorem}
 \begin{theorem}[平均值定理]
 
@@ -1108,12 +1222,10 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	证明: 我们不妨假设 $f(x)$ 在 $x=x_{0}$ 处取极大值
 
 	我们利用极值点的定义得到:
-	$$ \left\lbrace
-		\begin{array}{l}
-			f'_{-}(x_{0})=\lim\limits_{x\rightarrow x_{0}^{-}}\dfrac{f(x)-f(x_{0})}{x-x_{0}}\leq 0 \\
-			f'_{+}(x_{0})=\lim\limits_{x\rightarrow x_{0}^{+}}\dfrac{f(x_{0})-f(x)}{x_{0}-x}\geq 0
-		\end{array}
-		\right. $$
+	$$\begin{cases}
+		f'_{-}(x_{0})=\lim\limits_{x\rightarrow x_{0}^{-}}\dfrac{f(x)-f(x_{0})}{x-x_{0}}\leq 0 \\
+		f'_{+}(x_{0})=\lim\limits_{x\rightarrow x_{0}^{+}}\dfrac{f(x_{0})-f(x)}{x_{0}-x}\geq 0
+	\end{cases}$$
 
 	$f(x)$ 在 $x=x_{0}$ 处可导, $f'_{+}(x_{0})=f'_{-}(x_{0})=f(x_{0})=0$
 \end{theorem}
@@ -1171,7 +1283,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	(1).一元函数积分中值定理
 
-	$f(x)$ 在 $[a,b]$ 上连续,则 $\exists \xi\in(a,b),\ s.t.\ \int_{a}^{b}f(x)dx=f(\xi)(b-a)$
+	$f(x)$ 在 $[a,b]$ 上连续,则 $\displaystyle{\exists \xi\in(a,b),\ s.t.\ \int_{a}^{b}f(x)dx=f(\xi)(b-a)}$
 
 	证明: 构造函数 $F(x)=\int_{a}^{x}f(t)dt$
 
@@ -1246,26 +1358,24 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \subsection{零点问题}
 
 \begin{proposition}
-	设$f(x)$在$[0,1]$连续,且$\int_{0}^{1}f(x)dx=\int_{0}^{1}xf(x)dx=0$,证明: $f(x)$在$(0,1)$内至少有两个零点
+	设$f(x)$在$[0,1]$连续,且$\displaystyle{\int_{0}^{1}f(x)dx=\int_{0}^{1}xf(x)dx=0}$,证明: $f(x)$ 在 $(0,1)$ 内至少有两个零点
 \end{proposition}
 \begin{solution}
 
-	我们不妨设$F(x)=\int_{0}^{x}f(t)dt$,我们有:
+	令 $F(x)=\int_{0}^{x}f(t)dt$ :
 	$$F'(x)=f(x),\ F(0)=F(1)=0$$
 
-	又因为: $$\int_{0}^{1}xf(x)dx=\int_{0}^{1}xdF(x)=xF(x)|_{x=0}^{x=1}-\int_{0}^{1}F(x)dx=0\Rightarrow \int_{0}^{1}F(x)dx=0$$
+	$$\int_{0}^{1}xf(x)dx=\int_{0}^{1}xdF(x)=xF(x)|_{x=0}^{x=1}-\int_{0}^{1}F(x)dx=0\Rightarrow \int_{0}^{1}F(x)dx=0$$
 
-	我们用积分中值定理得到:
+	积分中值定理:
 	$$\exists c\in(0,1),\ s.t.\ F(c)=\int_{0}^{1}xf(x)dx=0$$
 
-	我们得到: $F(0)=F(c)=F(1)=0$,我们使用两次罗尔定理得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists \xi_{1}\in(0,c),\ s.t. F'(\xi_{1})=f(\xi_{1})=0 \\
-			\exists \xi_{2}\in(c,1),\ s.t. F'(\xi_{2})=f(\xi_{2})=0
-		\end{array}
-		\right.$$
-	我们得到: $f(x)$ 在 $(0,1)$ 内至少有两个零点
+	$F(0)=F(c)=F(1)=0$, 罗尔定理:
+	$$\begin{cases}
+		\exists \xi_{1}\in(0,c),\ s.t. F'(\xi_{1})=f(\xi_{1})=0 \\
+		\exists \xi_{2}\in(c,1),\ s.t. F'(\xi_{2})=f(\xi_{2})=0
+	\end{cases}$$
+	综上所述: $f(x)$ 在 $(0,1)$ 内至少有两个零点
 \end{solution}
 
 \myspace{1}
@@ -1275,396 +1385,372 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \end{proposition}
 \begin{solution}
 
-	我们不妨假设:  $P_{n}(x)=A(x-x_{1})^{r_{1}}(x-x_{2})^{r_{2}}\cdots(x-x_{k})^{r_{k}}$, 其中 $r_{1}+r_{2}+\cdots+r_{k}=n$
+	不妨设:
+	$$P_{n}(x)=A(x-x_{1})^{r_{1}}(x-x_{2})^{r_{2}}\cdots(x-x_{k})^{r_{k}},(r_{1}+r_{2}+\cdots+r_{k}=n, r_{i}\geq 1)$$
 
-	我们得到:
 	\begin{eqnarray*}
-		P'_{n}(x)&=&r_{1}A(x-x_{1})^{r_{1}-1}(x-x_{2})^{r_{2}}+\cdots(x-x_{k})^{r_{k}}\\
-		&+&r_{2}A(x-x_{1})^{r_{1}}(x-x_{2})^{r_{2}-1}\cdots(x-x_{k})^{r_{k}}\\
-		&+&\cdots\\
-		&+&r_{k}A(x-x_{1})^{r_{1}}(x-x_{2})^{r_{2}}\cdots(x-x_{k})^{r_{k}-1}\\
-		&=&A(x-x_{1})^{r_{1}-1}(x-x_{2})^{r_{2}-1}\cdots(x-x_{k})^{r_{k}-1}f(x)
+		P'_{n}(x) & = & r_{1}A(x-x_{1})^{r_{1}-1}(x-x_{2})^{r_{2}}+\cdots(x-x_{k})^{r_{k}}\\
+		          & + & r_{2}A(x-x_{1})^{r_{1}}(x-x_{2})^{r_{2}-1}\cdots(x-x_{k})^{r_{k}}\\
+		          & + & \cdots\\
+		          & + & r_{k}A(x-x_{1})^{r_{1}}(x-x_{2})^{r_{2}}\cdots(x-x_{k})^{r_{k}-1}\\
+		          & = & A(x-x_{1})^{r_{1}-1}(x-x_{2})^{r_{2}-1}\cdots(x-x_{k})^{r_{k}-1}f(x)
 	\end{eqnarray*}
 
-	其中 $f(x)=r_{1}(x-x_{2})\cdots(x-x_{k})+\cdots+r_{k}(x-x_{1})\cdots(x-x_{k-1})$
+	$$f(x) = r_{1}(x-x_{2})\cdots(x-x_{k})+\cdots+r_{k}(x-x_{1})\cdots(x-x_{k-1})$$
 
-	我们得到:  $x_{1},x_{2},\cdots,x_{k}$也为$P'_{n}(x)$的实数根,一共有$r_{1}-1+r_{2}-1+\cdots+r_{k}-1=n-k$个
+	$x_{i}(r_{i} > 2)$ 是 $P'_{n}(x)$ 的实数根, $x_{i}$ 根的重数 $r_{i} - 1$
+	
+	此类实数根个数:
+	$$n_{1} = \sum\limits_{i = 1}^{k}(r_{i}-1) = n - k$$
 
-	我们在区间$(x_{i},x_{i+1}),(i=1,2,\cdots,k-1)$中使用罗尔定理,我们得到$P'_{n}(x)$在区间$(x_{i},x_{i+1}),(i=1,2,\cdots,k-1)$至少存在$k-1$个实数零点
+	$f(x_{1}) = f(x_{2}) = \cdots = f(x_{k}) = 0$, 罗尔定理:
+	$$\exists \xi_{i}\in (x_{i},x_{i+1}),\ s.t.\ f'(\xi_{1}) = 0$$
 
-	综上$P'_{n}(x)$至少存在$n-1$个实数零点,$P'_{n}(x)$至多有$n-1$个实数根,$P'_{n}(x)$的根全为实数根
+	此类实数根个数:
+	$$n_{2} \geq k -1$$
 
-	对于$P''_{n}(x),\cdots,P_{n}^{n-1}(x)$,同理可证
+	$P'_{n}(x)$ 至少存在 $n_{1} + n_{2} \geq n -1$ 个实数零点, $P'_{n}(x)$ 至多有 $n-1$ 个实数根, $P'_{n}(x)$的根全为实数根
+
+	对于 $P''_{n}(x),\cdots,P_{n}^{n-1}(x)$, 同理可证
 
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设 $f(x)$ 在 $[0,4]$ 二阶可导, $f(0)=0,f(1)=1,f(4)=2$,证明: $\exists \xi\in(0,4),\ s.t. f''(\xi)=-\dfrac{1}{3}$
+	设 $f(x)$ 在 $[0,4]$ 二阶可导, $f(0)=0,f(1)=1,f(4)=2$,证明: $\exists \xi\in(0,4),\ s.t.\ f''(\xi)=-\dfrac{1}{3}$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数:  $F(x)=f(x)+\dfrac{x^2}{6}-\dfrac{7x}{6}$
-	$$F(0)=F(1)=F(4)=0$$
+	构造辅助函数: 
+	$$F(x)=f(x)+\dfrac{x^2}{6}-\dfrac{7x}{6}\Rightarrow F(0)=F(1)=F(4)=0$$
 
-	我们在区间$(0,1)$和区间$(1,4)$上使用罗尔定理得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists \xi_{1}\in(0,1),\ s.t. F'(\xi_{1})=f'(\xi_{1})+\dfrac{\xi_{1}}{3}-\dfrac{7}{6}=0 \\
+	$F(0)=F(1)=F(4)=0$, 罗尔定理:
+	$$\begin{cases}
+		\exists \xi_{1}\in(0,1),\ s.t. F'(\xi_{1})=f'(\xi_{1})+\dfrac{\xi_{1}}{3}-\dfrac{7}{6}=0 \\
+		\exists \xi_{2}\in(1,4),\ s.t. F'(\xi_{2})=f'(\xi_{2})+\dfrac{\xi_{2}}{3}-\dfrac{7}{6}=0
+	\end{cases}$$
 
-			\\
-			\exists \xi_{2}\in(1,4),\ s.t. F'(\xi_{2})=f'(\xi_{2})+\dfrac{\xi_{2}}{3}-\dfrac{7}{6}=0
-		\end{array}
-		\right.$$
-
-	我们对$F'(x)$在区间$(\xi_{1},\xi_{2})$上使用罗尔定理,得到:
+	$F'(\xi_{1}) = F'(\xi_{2}) = 0$, 罗尔定理:
 	$$\exists \xi\in(\xi_{1},\xi_{2}),\ s.t. F''(\xi)=f''(\xi)+\dfrac{1}{3}=0\Rightarrow f''(\xi)=-\dfrac{1}{3}$$
 
 	综上所述,$\exists \xi\in(0,4),\ s.t. f''(\xi)=-\dfrac{1}{3}$
 \end{solution}
-\begin{anymark}[注: 泰勒展开]
-	我们将$f(x)$在$x=1$处泰勒展开得到:
+\begin{anymark}[泰勒展开]
+	$f(x)$ 在 $x=1$处的泰勒展开式:
 	$$f(x)=f(1)+f'(1)(x-1)+\dfrac{f''(\xi)}{2}(x-1)^2$$
 
-	我们分别令$x=0$,$x=4$得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			f(0)=f(1)-f'(1)+\dfrac{f''(\xi_{1})}{2}=0,\ \xi_{1}\in(0,1) \\
-			\\
-			f(4)=f(1)+3f'(1)+\dfrac{9f''(\xi_{2})}{2}=2,\ \xi_{2}\in(1,4)
-		\end{array}
-		\right. $$
+	令$x=0$,$x=4$:
+	$$\begin{cases}
+		f(0)=f(1)-f'(1)+\dfrac{1}{2}f''(\xi_{1})=0,\ \xi_{1}\in(0,1) \\
+		f(4)=f(1)+3f'(1)+\dfrac{9}{2}f''(\xi_{2})=2,\ \xi_{2}\in(1,4)
+	\end{cases}$$
 
-	我们将$f'(1)$消去,得到:
-	$$3f''(\xi_{1})+9f''(\xi_{2})=-2$$
+	消去 $f'(1)$ :
+	$$3f''(\xi_{1})+9f''(\xi_{2})=-4$$
 
-	(i). 当$f''(\xi_{1})=f''(\xi_{2})$时,$f''(\xi_{1})=f''(\xi_{2})=-\dfrac{1}{3}$,命题成立
+	(i). 当 $f''(\xi_{1})=f''(\xi_{2})$时, $f''(\xi_{1})=f''(\xi_{2})=-\dfrac{1}{3}$, 命题成立
 
-	(ii). 当$f''(\xi_{1})\neq f''(\xi_{2})$, 我们不妨假设$f''(\xi_{1})<f''(\xi_{2})$,我们可以得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			f''(\xi_{1})<-\dfrac{1}{3} \\
-			f''(\xi_{2})>-\dfrac{1}{3}
-		\end{array}
-		\right. $$
+	(ii). 当 $f''(\xi_{1})\neq f''(\xi_{2})$, 不妨设 $f''(\xi_{1})<f''(\xi_{2})$:
+	$$\begin{cases}
+		3f''(\xi_{1}) + 9f''(\xi_{2}) = -4 < 12f''(\xi_{2})\\
+		3f''(\xi_{1}) + 9f''(\xi_{2}) = -4 > 12f''(\xi_{1})
+	\end{cases}\Rightarrow
+	\begin{cases}
+		f''(\xi_{2}) > -\dfrac{1}{3}\\
+		f''(\xi_{1}) < -\dfrac{1}{3}
+	\end{cases}$$
 
-	我们由达布定理可以知道: $\exists \xi_{3}\in(\xi_{1},\xi_{2}),\ s.t. f''(\xi_{3})=-\dfrac{1}{3}$
+	达布定理: $\exists \xi_{3}\in(\xi_{1},\xi_{2}),\ s.t.\ f''(\xi_{3})=-\dfrac{1}{3}$
 
-	综上所述,我们得到: $\exists\xi\in(0,4),\ s.t. f''(\xi)=-\dfrac{1}{3}$
+	综上所述: $\exists\xi\in(0,4),\ s.t.\ f''(\xi)=-\dfrac{1}{3}$
 \end{anymark}
 \myspace{1}
 
 \begin{proposition}
-	设 $f(x)$在$[0,2]$上连续,在$(0,2)$内三阶可导,且$\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)}{x}=2,f(1)=1,f(2)=6,$证明: $\exists \xi\in(0,2), s.t. f'''(\xi)=9$
+	设 $f(x)$ 在 $[0,2]$ 上连续, 在 $(0,2)$ 内三阶可导,且 $\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)}{x}=2,f(1)=1,f(2)=6$, 证明: $\exists \xi\in(0,2),\ s.t.\ f'''(\xi)=9$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数:  $F(x)=f(x)-\dfrac{3}{2}x^3+\dfrac{5}{2}x^2-2x$
+	构造辅助函数: 
+	$$F(x)=f(x)-\dfrac{3}{2}x^3+\dfrac{5}{2}x^2-2x$$
 
-	$$F(0)=F(1)=F(2)=0,F'(0)=0$$
+	$F(0)=F(1)=F(2)=0$, 罗尔定理:
+	$$\begin{cases}
+		\exists \xi_{1}\in(0,1),\ s.t.\ F'(\xi_{1})=f'(\xi_{1})-\dfrac{9}{2}\xi_{1}^2+5\xi_{1}-2=0 \\
+		\exists \xi_{2}\in(1,2),\ s.t.\ F'(\xi_{2})=f'(\xi_{2})-\dfrac{9}{2}\xi_{2}^2+5\xi_{2}-2=0
+	\end{cases}$$
 
-	我们对$F(x)$在区间$(0,1)$和区间$(1,2)$上使用罗尔定理得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists \xi_{1}\in(0,1),\ s.t. F'(\xi_{1})=f'(\xi_{1})-\dfrac{9}{2}\xi_{1}^2+5\xi_{1}-2=0 \\
-			\\
-			\exists \xi_{2}\in(1,2),\ s.t. F'(\xi_{2})=f'(\xi_{2})-\dfrac{9}{2}\xi_{1}^2+5\xi_{2}-2=0
-		\end{array}
-		\right. $$
+	$F'(0) = F'(\xi_{1}) = F'(\xi_{2}) = 0$, 罗尔定理:
+	$$\begin{cases}
+		\exists \eta_{1}\in(0,\xi_{1}),\ s.t.\ F''(\eta_{1})=f''(\eta_{1})-9\eta_{1}+5=0 \\
+		\exists \eta_{2}\in(\xi_{1},\xi_{2}),\ s.t.\ F''(\eta_{2})=f''(\eta_{2})-9\eta_{2}+5=0
+	\end{cases}$$
 
-	我们对$F'(x)$在区间$(0,\xi_{1})$和区间$(\xi_{1},\xi_{2})$上使用罗尔定理得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists \eta_{1}\in(0,\xi_{1}),\ s.t. F''(\eta_{1})=f''(\eta_{1})-9\eta_{1}+5=0 \\
-			\exists \eta_{2}\in(\xi_{1},\xi_{2}),\ s.t. F'(\eta_{2})=f''(\eta_{2})-9\eta_{2}+5=0
-		\end{array}
-		\right. $$
+	$F''(\eta_{1}) = F''(\eta_{2}) = 0$, 罗尔定理:
+	$$\exists \xi\in(\eta_{1},\eta_{2}),\ s.t.\ F'''(\xi)=f'''(\xi)-9=0$$
 
-	我们对$F''(x)$在区间$(\eta_{1},\eta_{2})$上使用罗尔定理得到:
-	$$\exists \xi\in(\eta_{1},\eta_{2}),\ s.t. F'''(\xi)=f'''(\xi)-9=0$$
-
-	综上所述,$\exists \xi\in(0,2), s.t. f'''(\xi)=9$
+	综上所述, $\exists \xi\in(0,2),\ s.t.\ f'''(\xi)=9$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[0,1]$上二阶可导,$f(0)=0$,$f(1)=1$,$\int_{0}^{1}f(x)dx=1$,证明: $\exists \eta\in(0,1)$, $s.t. f''(\eta)<-2$
+	设 $f(x)$ 在 $[0,1]$ 上二阶可导, $f(0)=0,f(1)=1,\displaystyle{\int_{0}^{1}f(x)dx=1}$,证明: $\exists \eta\in(0,1),\ s.t.\ f''(\eta)<-2$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数:  $F(x)=f(x)+3x^2-4x$
+	构造辅助函数: 
+	$$F(x)=f(x)+3x^2-4x, F(0) = F(1) = 0$$
 
-	$$F(0)=F(1)=0,\int_{0}^{1}F(x)=0$$
+	$\displaystyle{\int_{0}^{1}F(x)=0}$, 积分中值定理:
+	$$\exists c\in(0,1), \ s.t.\ F(c)=0$$
 
-	由积分中值定理,我们得到:
-	$$\exists c\in(0,1), \ s.t. F(c)=0$$
+	$F(0) = F(c) = F(1) = 0$, 罗尔定理:
+	$$\begin{cases}
+		\exists \xi_{1}\in(0,c),\ s.t.\ F'(\xi_{1})=f'(\xi_{1})+6\xi_{1}-4=0 \\
+		\exists \xi_{2}\in(c,1),\ s.t.\ F'(\xi_{2})=f'(\xi_{2})+6\xi_{2}-4=0
+	\end{cases}$$
 
-	我们对$F(x)$在区间$(0,c)$和区间$(c,1)$上使用罗尔定理得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists \xi_{1}\in(0,c),\ s.t. F'(\xi_{1})=f'(\xi_{1})+6\xi_{1}-4=0 \\
-			\exists \xi_{2}\in(c,1),\ s.t. F'(\xi_{2})=f'(\xi_{2})+6\xi_{2}-4=0
-		\end{array}
-		\right. $$
+	$F'(\xi_{1}) = F'(\xi_{2}) = 0$, 罗尔定理:
 
-	我们对$F''(x)$在区间$(\xi_{1},\xi_{2})$上使用罗尔定理得到:
+	$$\exists \xi\in(\xi_{1},\xi_{2}),\ s.t.\ F''(\xi)=f''(\xi)+6=0$$
 
-	$$\exists \xi\in(\xi_{1},\xi_{2}),\ s.t. F''(\xi)=f''(\xi)+6=0$$
-
-	综上所述,$\exists \xi\in(0,1), s.t. f''(\xi)=-6<-2$
+	综上所述, $\exists \xi\in(0,1),\ s.t.\ f''(\xi)=-6<-2$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[0,1]$上二阶可导,$f(0)=f(1)=0$, $[f(x)]_{min}=-1$,证明: $\exists \xi\in(0,1)$, $s.t. f''(\xi)\geq 8$
+	设 $f(x)$ 在 $[0,1]$ 上二阶可导,$f(0)=f(1)=0,[f(x)]_{min}=-1$,证明: $\exists \xi\in(0,1),\ s.t.\ f''(\xi)\geq 8$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数:  $F(x)=f(x)-4x^2+4x$
+	构造辅助函数: $F(x)=f(x)-4x^2+4x$
 
-	$$[f(x)]_{min}=-1\Rightarrow \exists c\in(0,1).\ s.t. f(c)=-1$$
+	$$[f(x)]_{min}=-1\Rightarrow \exists c\in(0,1).\ s.t.\ f(c)=-1$$
 
-	(1). $c=\dfrac{1}{2}$,此时$F(\dfrac{1}{2})=0$
-	\myspace{1}
-	(2). $c\in(0,\dfrac{1}{2})$,此时:
-	$$\left\lbrace
-		\begin{array}{l}
-			F(c)=f(c)-4c^2+4c=4c-4c^2=-(2c-1)^2<0 \\
-			\\
-			F(\dfrac{1}{2})=f(\dfrac{1}{2})+1\geq 0
-		\end{array}
-		\right.
-	$$
+	(1). $c=\dfrac{1}{2}, F(\dfrac{1}{2})=0$
+	
 
-	根据零点定理,我们得到: $\exists c_{1}\in(c,\frac{1}{2}),\ s.t. F(c_{1})=0$
-	\myspace{1}
-	(3). $c\in(\dfrac{1}{2},1)$,此时:
-	$$\left\lbrace
-		\begin{array}{l}
-			F(c)=f(c)-4c^2+4c=4c-4c^2=-(2c-1)^2<0 \\
-			\\
-			F(\dfrac{1}{2})=f(\dfrac{1}{2})+1\geq 0
-		\end{array}
-		\right.
-	$$
+	(2). $c\in(0,\dfrac{1}{2})$
+	$$\begin{cases}
+		F(c) = f(c)-4c^2+4c = -(2c-1)^2<0 \\
+		F(\dfrac{1}{2}) = f(\dfrac{1}{2})+1\geq 0
+	\end{cases}$$
 
-	根据零点定理,我们得到: $\exists c_{2}\in(\frac{1}{2},c),\ s.t. F(c_{2})=0$
+	零点定理: $\exists c_{1}\in(c,\frac{1}{2}),\ s.t. F(c_{1})=0$
 
-	综上三种情况,我们知道: $\exists \eta\in(0,1),\ s.t. F(\eta)=0$
 
-	我们对$F(x)$在区间$(0,\eta)$和区间$(\eta,1)$上使用罗尔定理得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists \xi_{1}\in(0,\eta),\ s.t. F'(\xi_{1})=f'(\xi_{1})-8\xi_{1}+4=0 \\
-			\exists \xi_{2}\in(\eta,1),\ s.t. F'(\xi_{2})=f'(\xi_{2})-8\xi_{1}+4=0
-		\end{array}
-		\right. $$
+	(3). $c\in(\dfrac{1}{2},1)$
+	$$\begin{cases}
+		F(c) = f(c)-4c^2+4c = -(2c-1)^2<0 \\
+		F(\dfrac{1}{2}) = f(\dfrac{1}{2})+1\geq 0
+	\end{cases}$$
 
-	我们对$F'(x)$在区间$(\xi_{1},\xi_{2})$上使用罗尔定理得到:
-	$$\exists \xi\in(\xi_{1},\xi_{2}),\ s.t. F''(\xi)=f''(\xi)-8=0$$
+	零点定理: $\exists c_{2}\in(\frac{1}{2},c),\ s.t. F(c_{2})=0$
 
-	综上所述,$\exists \xi\in(0,1), s.t. f''(\xi)=8\geq 8$
+	综上: $\exists \eta\in(0,1),\ s.t. F(\eta)=0$
+
+	$F(0) = F(\eta) = F(1) =0$, 罗尔定理:
+	$$\begin{cases}
+		\exists \xi_{1}\in(0,\eta),\ s.t.\ F'(\xi_{1})=f'(\xi_{1})-8\xi_{1}+4=0 \\
+		\exists \xi_{2}\in(\eta,1),\ s.t.\ F'(\xi_{2})=f'(\xi_{2})-8\xi_{1}+4=0
+	\end{cases}$$
+
+	$F'(\xi_{1}) = F'(\xi_{2}) = 0$, 罗尔定理:
+	$$\exists \xi\in(\xi_{1},\xi_{2}),\ s.t.\ F''(\xi)=f''(\xi)-8=0$$
+
+	综上所述, $\exists \xi\in(0,1),\ s.t.\ f''(\xi)=8\geq 8$
 \end{solution}
-\begin{anymark}[注: 泰勒展开]
-	我们由$[f(x)]_{min}=-1$,且$f(0)=f(1)=0$得到,$f(x)$一定在$(0,1)$内部取的最小值,我们不妨设$f(c)=-1$,我们由费马定理可得$f'(c)=0$
+\begin{anymark}[泰勒展开]
+	$[f(x)]_{min}=-1$, 且 $f(0)=f(1)=0 \Rightarrow f(x)$一定在 $(0,1)$ 内部取的最小值
+	
+	不妨设 $f(c)=-1$, 费马定理: $f'(c)=0$
 
-	我们将$f(x)$在$x=c$处进行泰勒展开得到:
+	$f(x)$ 在 $x=c$ 处泰勒展开式:
 	$$f(x)=f(c)+f'(c)(x-c)+\dfrac{f''(\xi)}{2}(x-c)^2$$
 
-	我们令$x=0$和$x=1$得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			f(0)=f(c)-f'(c)c+\dfrac{f''(\xi_{1})}{2}c^2=0 \\
-			f(1)=f(c)+f'(c)(1-c)+\dfrac{f''(\xi_{2})}{2}(1-c)^2=0
-		\end{array}
-		\right. $$
+	令$x=0$ 和 $x=1$:
+	$$\begin{cases}
+		f(0) = f(c)-f'(c)c+\dfrac{f''(\xi_{1})}{2}c^2=0 \\
+		f(1) = f(c)+f'(c)(1-c)+\dfrac{f''(\xi_{2})}{2}(1-c)^2=0
+	\end{cases}$$
 
-	我们有: $f(c)=-1,\ f'(c)=0$,上面两个式子:
+	$f(c)=-1,f'(c)=0$:
+
 	$$f''(\xi_{1})=\dfrac{2}{c^2}, f''(\xi_{2})=\dfrac{2}{1-c^2}$$
 
-	当$c\in(0,\dfrac{1}{2}],f'(\xi_{1})\geq 8$; 当$c\in(\dfrac{1}{2},1),f''(\xi_{2})\geq 8$
+	$$\begin{cases}
+		c\in(0,\dfrac{1}{2}],f'(\xi_{1})\geq 8\\
+		c\in(\dfrac{1}{2},1),f''(\xi_{2})\geq 8
+	\end{cases}$$
 
-	综上所述,$\exists \xi\in(0,1), s.t. f''(\xi)\geq 8$
+	综上所述, $\exists \xi\in(0,1), \ s.t.\ f''(\xi)\geq 8$
 \end{anymark}
 \myspace{1}
 
 \begin{proposition}
-	设$f(x),g(x)$在$[a,b]$上连续,在$(a,b)$内二阶可导,$f(a)=g(a)$,$f(b)=g(b)$,并且$f(x)$和$g(x)$在$(a,b)$内存在相等的最大值,证明: $\exists \xi\in(a,b)$, $s.t. f''(\xi)=g''(\xi)$
+	设 $f(x),g(x)$ 在 $[a,b]$ 上连续,在 $(a,b)$ 内二阶可导,$f(a)=g(a),f(b)=g(b)$,且 $f(x)$ 和 $g(x)$ 在 $(a,b)$ 内存在相等的最大值,证明: $\exists \xi\in(a,b),\ s.t.\ f''(\xi)=g''(\xi)$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数:  $F(x)=f(x)-g(x)$
+	构造辅助函数: $F(x)=f(x)-g(x), F(a) = F(b) = 0$
+	
+	不妨设 $f(x),g(x)$ 分别在 $x_{1},x_{2}$ 处取得最大值 $a\Rightarrow f(x_{1})=g(x_{2})=a$
 
-	$$F(a)=F(b)=0$$
+	(1). $x_{1}=x_{2}\Rightarrow F(x_{1})=F(x_{2})=0$
 
-	$f(x),g(x)$在区间$(a,b)$内存在相等的最大值,我们不妨假设$f(x),g(x)$分别在$x_{1},x_{2}$处取得最大值,$f(x_{1})=g(x_{2})=a$
+	(2). $x_{1}<x_{2}$
+	$$\begin{cases}
+		F(x_{1}) = f(x_{1})-g(x_{1})\geq 0\\
+		F(x_{2}) = f(x_{2})-g(x_{2})\leq 0
+	\end{cases}$$
 
-	(1). $x_{1}=x_{2}$,此时$F(x_{1})=F(x_{2})=0$
+	$$\exists x_{3}\in [x_{1},x_{2}] \ s.t.\ F(x_{3})=0$$
 
-	(2). $x_{1}<x_{2}$,此时$F(x_{1})=f(x_{1})-g(x_{1})\geq 0,\ F(x_{2})=f(x_{2})-g(x_{2})\leq 0$
+	(3). $x_{1}>x_{2}$
+	$$\begin{cases}
+		F(x_{1}) = f(x_{1})-g(x_{1})\leq 0\\
+		F(x_{2}) = f(x_{2})-g(x_{2})\geq 0
+	\end{cases}$$
 
-	$\exists x_{3}\in [x_{1},x_{2}] \ s.t. F(x_{3})=0$
+	$$\exists x_{4}\in [x_{2},x_{1}],\ s.t.\ F(x_{4})=0$$
 
-	(3). $x_{1}>x_{2}$,此时$F(x_{1})=f(x_{1})-g(x_{1})\leq 0,\ F(x_{2})=f(x_{2})-g(x_{2})\geq 0$
+	综上: $\exists \eta\in(a,b),\ s.t.\ F(\eta)=0$
 
-	$\exists x_{4}\in [x_{2},x_{1}],\ s.t. F(x_{4})=0$
+	$F(a) = F(\eta) = F(b) = 0$, 罗尔定理:
+	$$\begin{cases}
+		\exists \xi_{1}\in(a,\eta),\ s.t.\ F'(\xi_{1})=f'(\xi_{1})-g'(\xi_{1})=0 \\
+		\exists \xi_{2}\in(\eta,b),\ s.t.\ F'(\xi_{2})=f'(\xi_{2})-g'(\xi_{2})=0
+	\end{cases}$$
 
-	综上三种情况,我们知道: $\exists \eta\in(a,b),\ s.t. F(\eta)=0$
+	$F'(\xi_{1})= F'(\xi_{2}) = 0$, 罗尔定理:
+	$$\exists \xi\in(\xi_{1},\xi_{2}),\ s.t.\ F''(\xi)=f''(\xi)-g''(\xi)=0$$
 
-	我们对$F(x)$在区间$(a,\eta)$和区间$(\eta,b)$上使用罗尔定理得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists \xi_{1}\in(a,\eta),\ s.t. F'(\xi_{1})=f'(\xi_{1})-g'(\xi_{1})=0 \\
-			\exists \xi_{2}\in(\eta,b),\ s.t. F'(\xi_{2})=f'(\xi_{2})-g'(\xi_{2})=0
-		\end{array}
-		\right. $$
-
-	我们对$F'(x)$在区间$(\xi_{1},\xi_{2})$上使用罗尔定理得到:
-	$$\exists \xi\in(\xi_{1},\xi_{2}),\ s.t. F''(\xi)=f''(\xi)-g''(\xi)=0$$
-
-	综上所述,$\exists \xi\in(a,b), s.t. f''(\xi)=g''(\xi)$
+	综上所述,$\exists \xi\in(a,b),\ s.t.\ f''(\xi)=g''(\xi)$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[-1,1]$三阶连续可导,$f(-1)=0$,$f'(0)=0$,$f(1)=1$,证明: $\exists \xi\in(-1,1)$, $s.t. f'''(\xi)=3$
+	设 $f(x)$ 在 $[-1,1]$ 三阶连续可导,$f(-1)=0,f'(0)=0,f(1)=1$,证明: $\exists \xi\in(-1,1),\ s.t.\ f'''(\xi)=3$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数:  $F(x)=f(x)-\dfrac{1}{2}x^3-\left( \dfrac{1}{2}-f(0)\right) x^2-f(0)$
+	构造辅助函数: $F(x)=f(x)-\dfrac{1}{2}x^3-\left( \dfrac{1}{2}-f(0)\right) x^2-f(0)$
 
 	$$F(-1)=F(0)=F(1)=0,F'(0)=0$$
 
-	我们对$F(x)$在区间$(-1,0)$和$(0,1)$上使用罗尔定理:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists \xi_{1}\in(-1,0),\ s.t. F'(\xi_{1})=f'(\xi_{1})-\dfrac{3}{2}\xi_{1}^2-\left( 1-2f(0)\right)\xi_{1}=0 \\
-			\\
-			\exists \xi_{2}\in(0,1),\ s.t. F'(\xi_{2})=f'(\xi_{2})-\dfrac{3}{2}\xi_{2}^2-\left( 1-2f(0)\right)\xi_{2}=0
-		\end{array}
-		\right. $$
+	$F(-1) = F(0) =F(1) = 0$, 罗尔定理:
+	$$\begin{cases}
+		\exists \xi_{1}\in(-1,0),\ s.t.\ F'(\xi_{1})=f'(\xi_{1})-\dfrac{3}{2}\xi_{1}^2-\left( 1-2f(0)\right)\xi_{1}=0 \\
+		\exists \xi_{2}\in(0,1),\ s.t.\ F'(\xi_{2})=f'(\xi_{2})-\dfrac{3}{2}\xi_{2}^2-\left( 1-2f(0)\right)\xi_{2}=0
+	\end{cases}$$
 
-	我们对$F'(x)$在区间$(\xi_{1},0)$和$(0,\xi_{2})$上使用罗尔定理:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists \eta_{1}\in(\xi_{1},0),\ s.t. F''(\eta_{1})=f''(\eta_{1})-3\eta_{1}+2f(0)-1=0 \\
-			\exists \eta_{2}\in(0,\xi_{2}),\ s.t. F''(\eta_{2})=f''(\eta_{2})-3\eta_{2}+2f(0)-1=0
-		\end{array}
-		\right. $$
+	$F'(\xi_{1}) = F'(0) = F'(\xi_{2}) = 0$, 罗尔定理:
+	$$\begin{cases}
+		\exists \eta_{1}\in(\xi_{1},0),\ s.t.\ F''(\eta_{1})=f''(\eta_{1})-3\eta_{1}+2f(0)-1=0 \\
+		\exists \eta_{2}\in(0,\xi_{2}),\ s.t.\ F''(\eta_{2})=f''(\eta_{2})-3\eta_{2}+2f(0)-1=0
+	\end{cases}$$
 
-	我们对$F''(x)$在区间$(\eta_{1},\eta_{2})$上使用罗尔定理:
-	$$\exists \xi\in(\eta_{1},\eta_{2}),\ s.t. F'''(\xi)=f'''(\xi)-3=0\Rightarrow f'''(\xi)=3$$
+	$F''(\eta_{1}) = F''(\eta_{2})$, 罗尔定理:
+	$$\exists \xi\in(\eta_{1},\eta_{2}),\ s.t.\ F'''(\xi)=f'''(\xi)-3=0\Rightarrow f'''(\xi)=3$$
 
-	综上所述,$\exists \xi\in(-1,1)$, $s.t. f'''(\xi)=3$
+	综上所述,$\exists \xi\in(-1,1),\ s.t.\ f'''(\xi)=3$
 \end{solution}
-\begin{anymark}[注: 泰勒展开]
-	我们将$f(x)$在$x=0$处进行泰勒展开得到:
-	$$f(x)=f(0)+f'(0)x+\dfrac{f''(0)}{2}x^2+\dfrac{f'''(\xi)}{6}x^3$$
+\begin{anymark}[泰勒展开]
+	$f(x)$ 在 $x=0$处泰勒展开式:
+	$$f(x) = f(0)+f'(0)x+\dfrac{f''(0)}{2}x^2+\dfrac{f'''(\xi)}{6}x^3$$
 
-	我们令$x=1$和$x=-1$,且$f'(0)=0$,得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			f(1)=f(0)+\dfrac{f''(0)}{2}+\dfrac{f'''(\xi_{1})}{6}=1 \\
-			\\
-			f(-1)=f(0)+\dfrac{f''(0)}{2}-\dfrac{f'''(\xi_{2})}{6}=0
-		\end{array}
-		\right. $$
+	令$x=1$和$x=-1$, 且 $f'(0)=0$
+	$$\begin{cases}
+		f(1) = f(0)+\dfrac{f''(0)}{2}+\dfrac{f'''(\xi_{1})}{6}=1 \\
+		f(-1) = f(0)+\dfrac{f''(0)}{2}-\dfrac{f'''(\xi_{2})}{6}=0
+	\end{cases}\Rightarrow
+	\dfrac{f'''(\xi_{1})+f'''(\xi_{2})}{6}=1$$
 
-	上面两式相减得到:
-	$$\dfrac{f'''(\xi_{1})+f'''(\xi_{2})}{6}=1$$
-
-	我们不妨设$f'''(x)$在$[-1,1]$上最大值$M$,最小值$m$,我们得到:
+	不妨设 $f'''(x)$ 在 $[-1,1]$ 上最大值 $M$,最小值 $m$:
 	$$\dfrac{m}{6}\leq\dfrac{f'''(\xi_{1})+f'''(\xi_{2})}{6}\leq \dfrac{M}{6}\Rightarrow m\leq 3\leq M$$
 
-	由介值定理得到: $\exists \xi\in(-1,1)$, $s.t. f'''(\xi)=3$
+	介值定理: $\exists \xi\in(-1,1),\ s.t.\ f'''(\xi)=3$
 \end{anymark}
 \myspace{1}
 
 \subsection{复合函数零点问题}
 
 \begin{proposition}
-	设$f(x)$在$[a,b]$连续,$(a,b)$可导,$f(a)=f(b)=0$,证明: $\exists \xi\in(a,b),\ s.t. 2f(\xi)+\xi f'(\xi)=0$
+	设 $f(x)$ 在 $[a,b]$ 上连续,$(a,b)$ 内可导,$f(a)=f(b)=0$,证明: $\exists \xi\in(a,b),\ s.t.\ 2f(\xi)+\xi f'(\xi)=0$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数:  $F(x)=x^2f(x)$
-	$$F(a)=F(b)=0$$
+	构造辅助函数: $F(x)=x^2f(x)$
 
-	我们对$F(x)$在区间$(a,b)$上使用罗尔定理得到:
-	$$\exists \xi\in(a,b),\ s.t. F'(\xi)=2\xi f(\xi)+\xi^2f'(\xi)=0$$
+	$F(a) = F(b) = 0$, 罗尔定理:
+	$$\exists \xi\in(a,b),\ s.t.\ F'(\xi)=2\xi f(\xi)+\xi^2f'(\xi)=0$$
 
-	(1). 当$\xi\neq 0\Rightarrow 2f(\xi)+\xi f'(\xi)=0$
+	(1). 当 $\xi\neq 0\Rightarrow 2f(\xi)+\xi f'(\xi)=0$
 
-	(2). 当$\xi=0$时,$F(a)=F(0)=F(b)=0$.
+	(2). 当 $\xi=0, F(a)=F(0)=F(b)=0$
 
-	我们对$F(x)$在区间$(a,0)$和区间$(0,b)$上使用罗尔定理得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists \xi_{1}\in(a,0),\ s.t. F'(\xi_{1})=2\xi_{1} f(\xi_{1})+\xi_{1}^2f'(\xi_{1})=0 \\
-			\exists \xi_{2}\in(0,b),\ s.t. F'(\xi_{2})=2\xi_{2} f(\xi_{2})+\xi_{2}^2f'(\xi_{2})=0
-		\end{array}
-		\right. \Rightarrow\left\lbrace
-		\begin{array}{l}
-			2f(\xi_{1})+\xi_{1}f'(\xi_{1})=0,\ \xi_{1}\in(a,0) \\
-			2f(\xi_{2})+\xi_{2}f'(\xi_{2})=0,\ \xi_{2}\in(0,b)
-		\end{array}
-		\right. $$
+	$F(a) = F(0) = F(b) = 0$, 罗尔定理:
+	$$\begin{cases}
+		\exists \xi_{1}\in(a,0),\ s.t.\ F'(\xi_{1})=2\xi_{1} f(\xi_{1})+\xi_{1}^2f'(\xi_{1})=0 \\
+		\exists \xi_{2}\in(0,b),\ s.t.\ F'(\xi_{2})=2\xi_{2} f(\xi_{2})+\xi_{2}^2f'(\xi_{2})=0
+	\end{cases}\Rightarrow
+	\begin{cases}
+		2f(\xi_{1})+\xi_{1}f'(\xi_{1})=0,\ \xi_{1}\in(a,0) \\
+		2f(\xi_{2})+\xi_{2}f'(\xi_{2})=0,\ \xi_{2}\in(0,b)
+	\end{cases}$$
 
-	综上所述,$\exists \xi\in(a,b),\ s.t. 2f(\xi)+\xi f'(\xi)=0$
+	综上所述,$\exists \xi\in(a,b),\ s.t.\ 2f(\xi)+\xi f'(\xi)=0$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[a,b]$连续,$(a,b)$可导,$f(a)=f(b)=0$,证明: $\exists \xi\in(a,b)$, $s.t. f(\xi)+\xi f'(\xi)=0$
+	设 $f(x)$ 在 $[a,b]$ 上连续,$(a,b)$ 内可导,$f(a)=f(b)=0$,证明: $\exists \xi\in(a,b),\ s.t.\ f(\xi)+\xi f'(\xi)=0$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数:  $F(x)=xf(x)$
-	$$F(a)=F(b)=0$$
+	构造辅助函数: $F(x)=xf(x)$
+	
+	$F(a)=F(b)=0$, 罗尔定理:
+	
+	$$\exists \xi\in(a,b),\ s.t.\ F'(\xi)= f(\xi)+\xi f'(\xi)=0$$
 
-	我们对$F(x)$在区间$(a,b)$上使用罗尔定理得到:
-	$$\exists \xi\in(a,b),\ s.t. F'(\xi)= f(\xi)+\xi f'(\xi)=0$$
-
-	综上所述,$\exists \xi\in(a,b),\ s.t. f(\xi)+\xi f'(\xi)=0$
+	综上所述, $\exists \xi\in(a,b),\ s.t. f(\xi)+\xi f'(\xi)=0$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[a,b]$连续,$(a,b)$可导,$a>0$,$f(a)=0$,证明: $\exists \xi\in(a,b)$, $s.t. f(\xi)=\dfrac{b-\xi}{a}f'(\xi)$
+	设 $f(x)$ 在 $[a,b]$ 上连续,$(a,b)$ 内可导,$a>0,f(a)=0$,证明: $\exists \xi\in(a,b),\ s.t.\ f(\xi)=\dfrac{b-\xi}{a}f'(\xi)$
 \end{proposition}
 \begin{solution}
+    
+	构造辅助函数: $F(x)=(x-b)^af(x)$
+	
+	$F(a)=F(b)=0$, 罗尔定理:
 
-	原命题等价于: $\exists \xi\in(a,b)$, $s.t. \dfrac{a}{\xi-b}f(\xi)-f'(\xi)=0$
+	$$\exists \xi\in(a,b),\ s.t.\ F'(\xi)= a(\xi-b)^{a-1}f(\xi)+(\xi-b)^a f'(\xi)=0\Rightarrow af(\xi)+(\xi-b) f'(\xi)=0$$
 
-	我们构造辅助函数: $F(x)=(x-b)^af(x)$
-	$$F(a)=F(b)=0$$
-
-	我们对$F(x)$在区间$(a,b)$上使用罗尔定理得到:
-	$$\exists \xi\in(a,b),\ s.t. F'(\xi)= a(\xi-b)^{a-1}f(\xi)+(\xi-b)^a f'(\xi)=0\Rightarrow af(\xi)+(\xi-b) f'(\xi)=0$$
-
-	综上所述,$\exists \xi\in(a,b),\ s.t. f(\xi)=\dfrac{b-\xi}{a}f'(\xi)$
+	综上所述,$\exists \xi\in(a,b),\ s.t.\ f(\xi)=\dfrac{b-\xi}{a}f'(\xi)$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[a,b]$连续,$(a,b)$可导,$f(a)=f(b)=0$,证明: $\exists \xi\in(a,b)$, $s.t. f'(\xi)+f^{2}(\xi)=0$
+	设 $f(x)$ 在 $[a,b]$ 上连续,$(a,b)$ 内可导,$f(a)=f(b)=0$,证明: $\exists \xi\in(a,b),\ s.t.\ f'(\xi)+f^{2}(\xi)=0$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $F(x)=f(x)e^{\int_{a}^{x}f(t)dt}$
-	$$F(a)=F(b)=0$$
+	构造辅助函数: $F(x)=f(x)e^{\int_{a}^{x}f(t)dt}$
+	
+	$F(a)=F(b)=0$, 罗尔定理:
+	$$\exists \xi\in(a,b),\ s.t.\ F'(\xi)=e^{\int_{a}^{\xi}f(t)dt}(f'(\xi)+f^2(\xi))=0$$
 
-	我们对$F(x)$在区间$(a,b)$上使用罗尔定理:
-	$$\exists \xi\in(a,b),\ s.t. F'(\xi)=e^{\int_{a}^{\xi}f(t)dt}(f'(\xi)+f^2(\xi))=0$$
-
-	综上,$\exists \xi\in(a,b)$, $s.t. f'(\xi)+f^{2}(\xi)=0$
+	综上,$\exists \xi\in(a,b),\ s.t.\ f'(\xi)+f^{2}(\xi)=0$
 \end{solution}
 
 \myspace{1}
