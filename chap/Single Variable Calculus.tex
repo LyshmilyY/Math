@@ -862,7 +862,7 @@
 	首先考虑 $x\to x_{0}^{-}$:
 
 	(1). 当 $A$ 为常数时, 我们有:
-	$$\forall \varepsilon > 0, \exists \delta > 0, s.t.\ x\in (x_{0}-\delta,x_{0}), |\dfrac{f'(x)}{g'(x)}-A|<\dfrac{\varepsilon}{3}\Rightarrow \text{取定} x_{1}\in (x_{0}-\delta,x_{0})$$
+	$$\forall \varepsilon > 0, \exists \delta > 0,\ s.t.\ x\in (x_{0}-\delta,x_{0}), |\dfrac{f'(x)}{g'(x)}-A|<\dfrac{\varepsilon}{3}\Rightarrow \text{取定} x_{1}\in (x_{0}-\delta,x_{0})$$
 
 	我们考虑 $x\in (x_{1},x)$, 由柯西中值定理我们有:
 
@@ -1189,13 +1189,13 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 \begin{theorem}[有界和最值定理]
 
-	$f(x)$ 在$[a,b]$ 上连续,我们有: $m\leq f(x)\leq M$
+	$f(x)$ 在$[a,b]$ 上连续,有: $m\leq f(x)\leq M$
 
 	其中 $m,M$ 分别是 $f(x)$ 在 $[a,b]$ 上的最小值和最大值
 \end{theorem}
 \begin{theorem}[介值定理]
 
-	$f(x)$ 在 $[a,b]$ 上连续,我们有: $m\leq f(x)\leq M$
+	$f(x)$ 在 $[a,b]$ 上连续, 有: $m\leq f(x)\leq M$
 
 	其中 $m,M$ 分别是 $f(x)$ 在 $[a,b]$ 上的最小值和最大值
 
@@ -1203,7 +1203,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \end{theorem}
 \begin{theorem}[平均值定理]
 
-	$f(x)$ 在 $[a,b]$ 上连续,我们有: $m\leq f(x)\leq M$
+	$f(x)$ 在 $[a,b]$ 上连续,有: $m\leq f(x)\leq M$
 
 	其中$m,M$ 分别是 $f(x)$ 在 $[a,b]$ 上的最小值和最大值
 
@@ -1211,17 +1211,17 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \end{theorem}
 \begin{theorem}[零点定理]
 
-	$f(x)$ 在 $[a,b]$ 上连续,且我们有 $f(a)f(b)<0,\exists \xi\in(a,b),\ s.t.\ f(\xi)=0$
+	$f(x)$ 在 $[a,b]$ 上连续,且 $f(a)f(b)<0,\exists \xi\in(a,b),\ s.t.\ f(\xi)=0$
 \end{theorem}
 
 \section{费马定理}
 \begin{theorem}[费马定理]
 
-	$f(x)$ 在 $x_{0}$ 处可导,且 $x=x_{0}$ 是 $f(x)$ 极值点, 我们有: $f'(x_{0})=0$
+	$f(x)$ 在 $x_{0}$ 处可导,且 $x=x_{0}$ 是 $f(x)$ 极值点, 有: $f'(x_{0})=0$
 
-	证明: 我们不妨假设 $f(x)$ 在 $x=x_{0}$ 处取极大值
+	证明: 不妨设 $f(x)$ 在 $x=x_{0}$ 处取极大值
 
-	我们利用极值点的定义得到:
+	极值点的定义:
 	$$\begin{cases}
 		f'_{-}(x_{0})=\lim\limits_{x\rightarrow x_{0}^{-}}\dfrac{f(x)-f(x_{0})}{x-x_{0}}\leq 0 \\
 		f'_{+}(x_{0})=\lim\limits_{x\rightarrow x_{0}^{+}}\dfrac{f(x_{0})-f(x)}{x_{0}-x}\geq 0
@@ -1234,13 +1234,17 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	$f(x)$ 在 $[a,b]$ 上连续,在 $(a,b)$ 内可导,且 $f(a)=f(b)$,则 $\exists \xi\in(a,b),\ s.t.\ f'(\xi)=0$
 
-	证明: 由最值定理我们可以得到 $m\leq f(x)\leq M$
+	证明: 
+	
+	最值定理: $m\leq f(x)\leq M$
 
 	(1). $m=M$ 时,$f(x) = C \Rightarrow f'(x)=0$
 
-	(2). $m<M$ 时,又因为 $f(a)=f(b)$, 我们知道在区间 $(a,b)$ 中至少存在一个最值 (最大值或者最小值)
+	(2). $m<M$ 时, $f(a)=f(b)$, 在区间 $(a,b)$ 中至少存在一个最值 (最大值或者最小值)
 
-	不妨假设在 $x=\xi$ 时,$f(\xi)$ 取得最值,此时 $x=\xi$ 一定是 $f(x)$ 极值点, 由费马定理我们得到: $f'(\xi)=0$
+	不妨假在 $x=\xi$ 时,$f(\xi)$ 取得最值,此时 $x=\xi$ 一定是 $f(x)$ 极值点
+	
+	费马定理: $f'(\xi)=0$
 
 \end{theorem}
 \section{拉格朗日中值定理}
@@ -1248,11 +1252,11 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	$f(x)$ 在 $[a,b]$ 上连续,在 $(a,b)$ 内可导,则 $\exists \xi\in(a,b),\ s.t.\ \dfrac{f(b)-f(a)}{b-a}=f'(\xi)$
 
-	证明: 构造函数 $g(x)=f(x)(b-a)-[f(b)-f(a)]x$,我们有:
+	证明: 构造辅助函数 $g(x)=f(x)(b-a)-[f(b)-f(a)]x$
 	$$g(a)=g(b)=bf(a)-af(b)$$
 
-	由罗尔定理得到:
-	$\exists \xi\in(a,b),\ s.t.\ g'(\xi)=0$
+	罗尔定理:
+	$$\exists \xi\in(a,b),\ s.t.\ g'(\xi)=0$$
 	$$ f'(\xi)(b-a)=f(b)-f(a)\Leftrightarrow  \frac{f(b)-f(a)}{b-a}=f'(\xi)$$
 \end{theorem}
 \section{柯西中值定理}
@@ -1260,9 +1264,10 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	$f(x),g(x)$ 在 $[a,b]$ 上连续,在 $(a,b)$ 内可导,且$g'(x)\neq 0$,$\exists \xi\in(a,b),\ s.t.\ \dfrac{f(b)-f(a)}{g(b)-g(a)}=\dfrac{f'(\xi)}{g'(\xi)}$
 
-	证明: 构造函数 $F(x)=f(x)-\dfrac{f(b)-f(a)}{g(b)-g(a)}g(x)$
+	证明: 构造辅助函数 $F(x)=f(x)-\dfrac{f(b)-f(a)}{g(b)-g(a)}g(x)$
 	$$F(a)=F(b)=\frac{f(a)g(b)-f(b)g(a)}{g(b)-g(a)}$$
-	由罗尔定理得到: $$\exists \xi\in(a,b),\ s.t.\ F'(\xi)=0$$
+	罗尔定理:
+	$$\exists \xi\in(a,b),\ s.t.\ F'(\xi)=0$$
 	$$ f'(\xi)=\frac{f(b)-f(a)}{g(b)-g(a)}g'(\xi)\Leftrightarrow  \frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\xi)}$$
 \end{theorem}
 \section{泰勒公式}
@@ -1270,12 +1275,12 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	(1).带拉格朗日余项的$n$阶泰勒公式
 
-	设$f(x)$在点$x_{0}$的某个邻域内$n+1$阶导数存在,对邻域内任意一点$x$,我们有:
+	设$f(x)$在点$x_{0}$的某个邻域内$n+1$阶导数存在,对邻域内任意一点$x$,有:
 	$$f(x)=f(x_{0})+f'(x_{0})(x-x_{0})+\cdots+\frac{1}{n!}f^{(n)}(x_{0})(x-x_{0})^{n}+\frac{1}{(n+1)!}f^{(n+1)}(\xi)(x-x_{0})^{n+1}$$
 
 	(2).带佩亚诺余项的$n$阶泰勒公式
 
-	设$f(x)$在点$x_{0}$处$n$阶可导,则存在$x_{0}$的一个邻域,对于该邻域内任意一点$x$,我们有:
+	设$f(x)$在点$x_{0}$处$n$阶可导,则存在$x_{0}$的一个邻域,对于该邻域内任意一点$x$,有:
 	$$f(x)=f(x_{0})+f'(x_{0})(x-x_{0})+\cdots+\frac{1}{n!}f^{(n)}(x_{0})(x-x_{0})^{n}+o((x-x_{0})^n)$$
 \end{theorem}
 \section{积分中值定理}
@@ -1287,7 +1292,8 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	证明: 构造函数 $F(x)=\int_{a}^{x}f(t)dt$
 
-	由拉格朗日中值定理得到: $$\exists \xi\in(a,b),\ s.t.\ F'(\xi)=\frac{F(b)-F(a)}{b-a}$$
+	拉格朗日中值定理: 
+	$$\exists \xi\in(a,b),\ s.t.\ F'(\xi)=\frac{F(b)-F(a)}{b-a}$$
 	$$f(\xi)=\frac{\int_{a}^{b}f(x)dx}{b-a}\Rightarrow \int_{a}^{b}f(x)dx=f(\xi)(b-a)$$
 
 	(2).二元函数积分中值定理
@@ -1296,17 +1302,17 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	(3).广义积分中值定理
 
-	$f(x),g(x)$在$[a,b]$上连续,且$g(x)$不变号,我们有:
-	$$\exists \xi\in[a,b],\ s.t. \int_{a}^{b}f(x)g(x)dx=f(\xi)\int_{a}^{b}g(x)dx$$
+	$f(x),g(x)$在$[a,b]$上连续,且$g(x)$不变号,有:
+	$$\exists \xi\in[a,b],\ s.t.\ \int_{a}^{b}f(x)g(x)dx=f(\xi)\int_{a}^{b}g(x)dx$$
 
-	设$f(x,y)$在平面有界闭区域$D$连续,$g(x,y)$平面有界闭区域$D$可积且不变号,我们有: $$\exists (\xi,\eta)\in D,\ s.t. \iint\limits_{D}f(x,y)g(x,y)d\sigma=f(\xi,\eta)\iint\limits_{D}g(x,y)d\sigma$$
+	设$f(x,y)$在平面有界闭区域$D$连续,$g(x,y)$平面有界闭区域$D$可积且不变号,有: $$\exists (\xi,\eta)\in D,\ s.t. \iint\limits_{D}f(x,y)g(x,y)d\sigma=f(\xi,\eta)\iint\limits_{D}g(x,y)d\sigma$$
 	\begin{anymark}[注]
-		我们构造函数: $F(x)=\int_{a}^{x}f(t)g(t)dt,\ G(x)=\int_{a}^{x}g(t)dt$,$F'(x) =f(x)g(x),G'(x) = g(x)$
+		构造函数: $F(x)=\int_{a}^{x}f(t)g(t)dt,\ G(x)=\int_{a}^{x}g(t)dt$,$F'(x) =f(x)g(x),G'(x) = g(x)$
 
-		我们利用柯西中值定理可以得到:
-		$$\exists \xi\in(a,b),\ s.t. \dfrac{F'(\xi)}{G'(\xi)}=\dfrac{F(b)-F(a)}{G(b)-G(a)}\Rightarrow \dfrac{f(\xi)g(\xi)}{g(\xi)}=\dfrac{\int_{a}^{b}f(x)g(x)dx}{\int_{a}^{b}g(x)dx}$$
+		柯西中值定理:
+		$$\exists \xi\in(a,b),\ s.t.\ \dfrac{F'(\xi)}{G'(\xi)}=\dfrac{F(b)-F(a)}{G(b)-G(a)}\Rightarrow \dfrac{f(\xi)g(\xi)}{g(\xi)}=\dfrac{\int_{a}^{b}f(x)g(x)dx}{\int_{a}^{b}g(x)dx}$$
 
-		我们可以得到: $$f(\xi)\int_{a}^{b}g(x)dx=\int_{a}^{b}f(x)g(x)dx$$
+		$$f(\xi)\int_{a}^{b}g(x)dx=\int_{a}^{b}f(x)g(x)dx$$
 	\end{anymark}
 \end{theorem}
 \section{达布定理}
@@ -1315,43 +1321,39 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	$f(x)$ 在 $[a,b]$ 上可导,且$f'_{+}(a)f'_{-}(b)<0$,则$\exists \xi\in(a,b),\ s.t.\ f'(\xi)=0$
 
-	证明: 我们不妨假设 $f_{+}(a)>0,\ f'_{-}(b)<0$
+	证明: 不妨假设 $f_{+}(a)>0,\ f'_{-}(b)<0$
 
-	由极限定义得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\lim\limits_{x\rightarrow a^{+}}\dfrac{f(x)-f(a)}{x-a}>0 \\
-			\lim\limits_{x\rightarrow b^{-}}\dfrac{f(x)-f(b)}{x-b}<0
-		\end{array}
-		\right. \Rightarrow
-		\left\lbrace
-		\begin{array}{l}
-			f(x)>f(a) \\
-			f(x)>f(b)
-		\end{array}
-		\right. $$
+	极限定义:
+	$$\begin{cases}
+		\lim\limits_{x\rightarrow a^{+}}\dfrac{f(x)-f(a)}{x-a}>0 \\
+		\lim\limits_{x\rightarrow b^{-}}\dfrac{f(x)-f(b)}{x-b}<0
+	\end{cases}\Rightarrow
+	\begin{cases}
+		f(x)>f(a) \\
+		f(x)>f(b)
+	\end{cases}$$
 
-	我们得到 $f(x)$ 一定在 $(a,b)$ 内取得最大值,由费马定理得到: $\exists \xi\in(a,b),\ s.t.\ f'(\xi)=0$
+	$f(x)$ 一定在 $(a,b)$ 内取得最大值,费马定理: $\exists \xi\in(a,b),\ s.t.\ f'(\xi)=0$
 
 	2. 导数介值定理(达布定理)
 
-	$f(x)$ 在 $[a,b]$ 上可导,且$f'_{+}(a)\neq f'_{-}(b)$,对于任意介于 $f'_{+}(a)$ 和 $f'_{-}(b)$ 之间的值 $\eta$,我们都有 $\exists \xi\in(a,b),\ s.t.\ f'(\xi)=\eta$
+	$f(x)$ 在 $[a,b]$ 上可导,且 $f'_{+}(a)\neq f'_{-}(b),\forall \eta \in (f'_{+}(a),f'_{-}(b)),\exists \xi\in(a,b),\ s.t.\ f'(\xi)=\eta$
 
-	证明: 我们不妨假设 $f_{+}(a)=m,\ f'_{-}(b)=M\ (M>m)$
+	证明: 不妨假设 $f_{+}(a)=m, f'_{-}(b)=M(M>m)$
 
 	$g(x)=f(x)-\eta x,\ g'(x)=f'(x)-\eta$
 
 	$g'_{+}(a)=f'_{+}(a)-\eta<0\ g'_{-}(b)=f'_{-}(b)-\eta>0$
 
-	我们利用极限的保号性得到:
+	极限的保号性:
 	$$\begin{cases}
-		\exists \delta_{1}>0, s.t. g(x)<g(a),\ x\in(a,a+\delta_{1}) \\
-		\exists \delta_{2}>0, s.t. g(x)<g(b),\ x\in(b-\delta_{2},b)
+		\exists \delta_{1}>0,\ s.t.\ g(x)<g(a),\ x\in(a,a+\delta_{1}) \\
+		\exists \delta_{2}>0,\ s.t.\ g(x)<g(b),\ x\in(b-\delta_{2},b)
 	\end{cases}$$
 
-	$g(x)$ 是连续可导函数, 由费马定理,我们得到: $g(x)$ 最小值一定在 $(a,b)$ 内取得, 且 $g'(\xi)=0\to f'(\xi) -\eta =0$
+	$g(x)$ 是连续可导函数, 费马定理: $g(x)$ 最小值一定在 $(a,b)$ 内取得, 且 $g'(\xi)=0\to f'(\xi) -\eta =0$
 
-	综上所述, 我们得到 $\exists \xi\in(a,b),\ s.t.\ f'(\xi)=\eta$
+	综上所述: $\exists \xi\in(a,b),\ s.t.\ f'(\xi)=\eta$
 \end{theorem}
 \section{Exercise}
 
@@ -1427,14 +1429,14 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	$F(0)=F(1)=F(4)=0$, 罗尔定理:
 	$$\begin{cases}
-		\exists \xi_{1}\in(0,1),\ s.t. F'(\xi_{1})=f'(\xi_{1})+\dfrac{\xi_{1}}{3}-\dfrac{7}{6}=0 \\
-		\exists \xi_{2}\in(1,4),\ s.t. F'(\xi_{2})=f'(\xi_{2})+\dfrac{\xi_{2}}{3}-\dfrac{7}{6}=0
+		\exists \xi_{1}\in(0,1),\ s.t.\ F'(\xi_{1})=f'(\xi_{1})+\dfrac{\xi_{1}}{3}-\dfrac{7}{6}=0 \\
+		\exists \xi_{2}\in(1,4),\ s.t.\ F'(\xi_{2})=f'(\xi_{2})+\dfrac{\xi_{2}}{3}-\dfrac{7}{6}=0
 	\end{cases}$$
 
 	$F'(\xi_{1}) = F'(\xi_{2}) = 0$, 罗尔定理:
-	$$\exists \xi\in(\xi_{1},\xi_{2}),\ s.t. F''(\xi)=f''(\xi)+\dfrac{1}{3}=0\Rightarrow f''(\xi)=-\dfrac{1}{3}$$
+	$$\exists \xi\in(\xi_{1},\xi_{2}),\ s.t.\ F''(\xi)=f''(\xi)+\dfrac{1}{3}=0\Rightarrow f''(\xi)=-\dfrac{1}{3}$$
 
-	综上所述,$\exists \xi\in(0,4),\ s.t. f''(\xi)=-\dfrac{1}{3}$
+	综上所述,$\exists \xi\in(0,4),\ s.t.\ f''(\xi)=-\dfrac{1}{3}$
 \end{solution}
 \begin{anymark}[泰勒展开]
 	$f(x)$ 在 $x=1$处的泰勒展开式:
@@ -1539,7 +1541,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 		F(\dfrac{1}{2}) = f(\dfrac{1}{2})+1\geq 0
 	\end{cases}$$
 
-	零点定理: $\exists c_{1}\in(c,\frac{1}{2}),\ s.t. F(c_{1})=0$
+	零点定理: $\exists c_{1}\in(c,\frac{1}{2}),\ s.t.\ F(c_{1})=0$
 
 
 	(3). $c\in(\dfrac{1}{2},1)$
@@ -1548,9 +1550,9 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 		F(\dfrac{1}{2}) = f(\dfrac{1}{2})+1\geq 0
 	\end{cases}$$
 
-	零点定理: $\exists c_{2}\in(\frac{1}{2},c),\ s.t. F(c_{2})=0$
+	零点定理: $\exists c_{2}\in(\frac{1}{2},c),\ s.t.\ F(c_{2})=0$
 
-	综上: $\exists \eta\in(0,1),\ s.t. F(\eta)=0$
+	综上: $\exists \eta\in(0,1),\ s.t.\ F(\eta)=0$
 
 	$F(0) = F(\eta) = F(1) =0$, 罗尔定理:
 	$$\begin{cases}
@@ -1719,7 +1721,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	
 	$$\exists \xi\in(a,b),\ s.t.\ F'(\xi)= f(\xi)+\xi f'(\xi)=0$$
 
-	综上所述, $\exists \xi\in(a,b),\ s.t. f(\xi)+\xi f'(\xi)=0$
+	综上所述, $\exists \xi\in(a,b),\ s.t.\ f(\xi)+\xi f'(\xi)=0$
 \end{solution}
 
 \myspace{1}
@@ -1757,99 +1759,131 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 \subsection{罗尔定理 \& 费马定理}
 \begin{proposition}
-	设$f(x)$在$[0,1]$连续,$(0,1)$可导,$f(0)=1$,$f(1)=\frac{1}{2}$,证明: $\exists \xi\in(0,1)$, $s.t. f'(\xi)+f^{2}(\xi)=0$
+	设 $f(x)$ 在 $[0,1]$上连续,$(0,1)$内可导,$f(0)=1,f(1)=\dfrac{1}{2}$,证明: $\exists \xi\in(0,1),\ s.t.\ f'(\xi)+f^{2}(\xi)=0$
 \end{proposition}
 \begin{solution}
 
-	(1).假设$f(x)$在区间$[0,1]$上无零点
+	(1). $f(x)$在$[0,1]$无零点
 
-	我们构造辅助函数: $F(x)=-\dfrac{1}{f(x)}+x$
-	$$F(0)=F(1)=-1$$
+	构造辅助函数: $F(x)=-\dfrac{1}{f(x)}+x$
+	
+	$F(0)=F(1)=-1$, 罗尔定理:
+	
+	$$\exists \xi\in(0,1),\ s.t.\ F'(\xi)=\dfrac{f'(\xi)+f^{2}(\xi)}{f^2(\xi)}=0$$
 
-	我们对$F(x)$在区间$(0,1)$上使用罗尔定理:
-	$$\exists \xi\in(0,1),\ s.t. F'(\xi)=\dfrac{f'(\xi)+f^{2}(\xi)}{f^2(\xi)}=0$$
+	(2). $f(x)$在区间$[0,1]$上至少两个零点, $f(x_{1})=f(x_{2})=\cdots=0$
 
-	(2).假设$f(x)$在区间$[0,1]$上至少两个零点,我们假设: $f(x_{1})=f(x_{2})=\cdots=0$
+	构造辅助函数: $F(x)=f(x)e^{\int_{a}^{x}f(t)dt}$
+	
+	$F(x_{1})=F(x_{2})=0$, 罗尔定理:
+	$$\exists \xi\in(x_{1},x_{2}),\ s.t.\ F'(\xi)=e^{\int_{a}^{\xi}f(t)dt}(f'(\xi)+f^2(\xi))=0$$
 
-	我们构造辅助函数: $F(x)=f(x)e^{\int_{a}^{x}f(t)dt}$
-	$$F(x_{1})=F(x_{2})=0$$
+	(3). $f(x)$在区间$[0,1]$上只有一个零点,$f(x_{0})=0$
 
-	我们对$F(x)$在区间$(x_{1},x_{2})$上使用罗尔定理:
-	$$\exists \xi\in(x_{1},x_{2}),\ s.t. F'(\xi)=e^{\int_{a}^{\xi}f(t)dt}(f'(\xi)+f^2(\xi))=0$$
+	费马定理: $f'(x_{0})=0$
+	$$\exists x_{0}\in(0,1),\ s.t.\ f'(x_{0})+f^{2}(x_{0})=0$$
 
-	(3). 假设$f(x)$在区间$[0,1]$上只有一个零点,$f(x_{0})=0$,$x=x_{0}$一定是最小值点.
-
-	我们由费马定理可得: $f'(x_{0})=0$
-	$$\exists x_{0}\in(0,1),\ s.t. f'(x_{0})+f^{2}(x_{0})=0$$
-
-	综上,$\exists \xi\in(0,1)$, $s.t. f'(\xi)+f^{2}(\xi)=0$
+	综上, $\exists \xi\in(0,1),\ s.t.\ f'(\xi)+f^{2}(\xi)=0$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[a,b]$连续,$(a,b)$可导,且存在 $c\in(a,b)$, $s.t. f'(c)=0$,证明: $\exists \xi\in(a,b)$,$s.t. f'(\xi)=\dfrac{f(\xi)-f(a)}{b-a}$
+	设$f(x)$在$[a,b]$上连续,$(a,b)$内可导,且$\exists c\in(a,b),\ s.t.\ f'(c)=0$,证明: $\exists \xi\in(a,b),\ s.t.\ f'(\xi)=\dfrac{f(\xi)-f(a)}{b-a}$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $F(x)=(f(x)-f(a))e^{\frac{x}{a-b}}$
-	$$F'(x)=e^{\frac{x}{a-b}}[f'(x)+\dfrac{f(x)-f(a)}{a-b}]$$
-	$$F(a)=0,\ F(c)=(f(c)-f(a))e^{\frac{c}{a-b}},\ F'(c)=-e^{\frac{c}{a-b}}\dfrac{f(c)-f(a)}{b-a}$$
+	构造辅助函数: $F(x)=\left[f(x)-f(a)\right]e^{\frac{x}{a-b}}$
 
-	(1). 当$f(a)=f(c)$时,我们对$F(x)$在区间$(a,c)$上使用罗尔定理得到:
-	$$\exists \xi\in(a,c)\ ,s.t. F'(c)=e^{\frac{c}{a-b}}[f(c)-\dfrac{f(c)-f(a)}{a-b}]=0\Rightarrow f'(\xi)=\dfrac{f(\xi)-f(a)}{b-a}$$
+	$$F'(x)=e^{\frac{x}{a-b}}\left[f'(x)+\dfrac{f(x)-f(a)}{a-b}\right]\Rightarrow
+	\begin{cases}
+		F(a)=0\\ 
+		F(c)=[f(c)-f(a)]e^{\frac{c}{a-b}}\\ 
+		F'(c)=-e^{\frac{c}{a-b}}\dfrac{f(c)-f(a)}{b-a}
+	\end{cases}$$
 
-	(2). 当$f(a)\neq f(c)$时,我们不妨假设$f(a)>f(c)$,此时我们有:
+	(1). $f(a)=f(c)\Rightarrow F(a) = F(c) = 0$
+	
+	罗尔定理:
+	$$\exists \xi\in(a,c),\ s.t.\ F'(\xi)=e^{\frac{\xi}{a-b}}[f(\xi)-\dfrac{f(\xi)-f(a)}{b-a}]=0\Rightarrow f'(\xi)=\dfrac{f(\xi)-f(a)}{b-a}$$
+
+	(2). $f(a)\neq f(c)$, 不妨设$f(a)>f(c)$:
 	$$F(a)=0,\ F(c)<0,\ F'(c)>0$$
 
-	此时$F(x)$在区间$[a,c]$上的最小值一定在区间内,我们不妨设$F(x)$在$x=x_{0}$处取得最小值,此时$F'(x_{0})=0$
-	$$\exists x_{0}\in(a,c), s.t. f'(x_{0})=\dfrac{f(x_{0})-f(a)}{b-a}$$
+	$F(x)$在区间$[a,c]$上的最小值一定在区间内,不妨设 $F(x)$ 在 $x=x_{0}$处取得最小值
+	
+	费马定理: $F'(x_{0})=0$
+	$$\exists x_{0}\in(a,c),\ s.t.\ f'(x_{0})=\dfrac{f(x_{0})-f(a)}{b-a}$$
 
-	综上所述,$\exists \xi\in(a,b)$,$s.t. f'(\xi)=\dfrac{f(\xi)-f(a)}{b-a}$
+	综上所述,$\exists \xi\in(a,b),\ s.t.\ f'(\xi)=\dfrac{f(\xi)-f(a)}{b-a}$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	$f(x)$在$[-2,2]$二阶可导,$|f(x)|<1$,$[f(0)]^{2}+[f'(0)]^{2}=4$,证明: $\exists \xi\in(-2,2)$,$s.t. f(\xi)+f''(\xi)=0$
+	$f(x)$ 在 $[-2,2]$ 二阶可导,$|f(x)|<1$,$[f(0)]^{2}+[f'(0)]^{2}=4$,证明: $\exists \xi\in(-2,2),\ s.t.\ f(\xi)+f''(\xi)=0$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $F(x)=f(x)\sin x+f'(x)\cos x$
+	构造辅助函数: 
+	$$F(x)=[f(x)]^{2}+[f'(x)]^{2}\Rightarrow \begin{cases}
+		F'(x) = 2f(x)f'(x)+2f'(x)f''(x) = 2f'(x)\left[f(x)+f''(x)\right]\\
+		F(0) = 4
+	\end{cases}$$
 
-	我们有: $$F(-\frac{\pi}{2})=-f(\frac{\pi}{2}),\ F(\frac{\pi}{2})=f(\frac{\pi}{2}),\ F(0)=f'(0)$$
-	$$F'(x)=f'(x)\sin x+f(x)\cos x+f''(x)\cos x-f'(x)\sin x=\cos x[f(x)+f''(x)]$$
+	拉格朗日中值定理:
+	$$\begin{cases}
+		\exists \xi_{1}\in(-2,0),\ s.t.\ \dfrac{f(0)-f(-2)}{2} = f'(\xi_{1})\\
+		\exists \xi_{2}\in(0,2),\ s.t.\ \dfrac{f(2)-f(0)}{2} = f'(\xi_{2})\\
+		|f(x)| < 1\\
+		-1 < f(x) < 1
+	\end{cases}\Rightarrow 
+	\begin{cases}
+		f'(\xi_{1})\in (-1,1)\\
+		f'(\xi_{2})\in(-1,1)\\
+		F(\xi_{1}) = [f(\xi_{1})]^{2}+[f'(\xi_{1})]^{2} < 2\\
+		F(\xi_{2}) = [f(\xi_{2})]^{2}+[f'(\xi_{2})]^{2} < 2
+	\end{cases}$$
+
+	$F(\xi_{1}) < 2, F(\xi_{2}) < 2, F(0) = 4\Rightarrow F(x)$ 在 $[\xi_{1},\xi_{2}]$ 的最大值一定在区间内部取得,
+	不妨设 $x=\xi$ 处 $F(x)_{\max} = F(\xi) \geq F(0) = 4$
+
+	费马定理: $F'(\xi) = 2f'(\xi)\left[f(\xi)+f''(\xi)\right] = 0$
+
+	(i). $f'(\xi) = 0$, $F(\xi) = [f(\xi)]^{2}+[f'(\xi)]^{2} < 1$, 矛盾
+
+	(ii). $f(\xi)+f''(\xi) = 0$, 满足 $F(\xi) \geq 4$
+
+	综上所述, $\exists \xi\in(-2,2),\ s.t.\ f(\xi)+f''(\xi)=0$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[0,3]$二阶可导,$2f(0)=\int_{0}^{2}f(x)dx=f(2)+f(3)$,证明: $\exists \xi\in(0,3)$,$s.t. f''(\xi)-2f'(\xi)=0$
+	设 $f(x)$ 在 $[0,3]$ 二阶可导,$2f(0)=\int_{0}^{2}f(x)dx=f(2)+f(3)$,证明: $\exists \xi\in(0,3),\ s.t.\ f''(\xi)-2f'(\xi)=0$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $F(x)=e^{-2x}f'(x)$
+	构造辅助函数: $F(x)=e^{-2x}f'(x)$
 
 	$$F'(x)=e^{-2x}[f''(x)-2f'(x)]$$
 
-	根据积分中值定理:
-	$$\exists \xi_{1}\in(0,2),\ s.t. \int_{0}^{2}f(x)dx=2f(\xi_{1})=2f(0)$$
+	积分中值定理:
+	$$\exists \xi_{1}\in(0,2),\ s.t.\ \int_{0}^{2}f(x)dx=2f(\xi_{1})=2f(0)\Rightarrow \exists \xi_{1}\in(0,2),\ s.t.\ f(\xi_{1}) = f(0)$$
 
-	我们得到: $\exists \xi_{1}\in(0,2),\ s.t.f(\xi_{1})=f(0)$
+	$f(0) = f(\xi_{1})$, 罗尔定理:
+	$$\exists \eta_{1}\in(0,\xi_{1}),\ s.t.\ f'(\eta_{1})=0$$
 
-	我们对$f(x)$在区间$(0,\xi_{1})$上使用罗尔定理:
-	$$\exists \eta_{1}\in(0,\xi_{1}),\ s.t. f'(\eta_{1})=0$$
+	介值定理: 
+	$$\exists \xi_{2}\in(2,3),\ s.t.\ f(2)+f(3)=2f(\xi_{2})\Rightarrow f(\xi_{2})=f(\xi_{1})$$
 
-	由介值定理得到: $\exists \xi_{2}\in(2,3),\ s.t. f(2)+f(3)=2f(\xi_{2})=\int_{0}^{2}f(x)dx\Rightarrow f(\xi_{2})=f(\xi_{1})$
+	$f(\xi_{1}) = f(\xi_{2})$, 罗尔定理:
+	$$\exists \eta_{2}\in(\xi_{1},\xi_{2}),\ s.t.\ f'(\eta_{2})=0$$
 
-	我们对$f(x)$在区间$(\xi_{1},\xi_{2})$上使用罗尔定理:
-	$$\exists \eta_{2}\in(\xi_{1},\xi_{2}),\ s.t. f'(\eta_{2})=0$$
-	$$F(\eta_{1})=F(\eta_{2})=0$$
+	$f'(\eta_{1}) = f'(\eta_{2}) = 0\Rightarrow F(\eta_{1}) = F(\eta_{2}) =0$, 罗尔定理:
+	$$\exists \xi\in(\eta_{1},\eta_{2}),\ s.t.\ F'(\xi)=e^{-2\xi}[f''(\xi)-2f'(\xi)]=0$$
 
-	我们对$F(x)$在区间$(\eta_{1},\eta_{2})$上使用罗尔定理:
-	$$\exists \xi\in(\eta_{1},\eta_{2}),\ s.t. F'(\xi)=e^{-2\xi}[f''(\xi)-2f'(\xi)]=0$$
-
-	综上所述,$\exists \xi\in(0,3)$,$s.t. f''(\xi)-2f'(\xi)=0$
+	综上所述,$\exists \xi\in(0,3),\ s.t.\ f''(\xi)-2f'(\xi)=0$
 \end{solution}
 
 \myspace{1}
@@ -1861,359 +1895,304 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $F(x)=e^{-x}[f(x)+f'(x)],\ G(x)=e^{x}f(x)$
-	$$F'(x)=e^{-x}[-f(x)-f'(x)+f'(x)+f''(x)]=e^{-x}[f''(x)-f(x)]$$
+	构造辅助函数: $\begin{cases}
+		F(x)=e^{-x}[f(x)+f'(x)]\\
+		G(x)=e^{x}f(x)
+	\end{cases}$
+	$$\begin{cases}
+		F'(x)=e^{-x}[f''(x)-f(x)]\\
+		G(a) = G(b) = 0
+	\end{cases}$$
 
-	此时: $G(a)=G(b)=0$,又因为$f'_{+}(a)f'_{-}(b)>0$,我们不妨设$f'_{+}(a)>0,f'_{-}(b)>0$
+	$f'_{+}(a)f'_{-}(b)>0$,不妨设 $f'_{+}(a)>0,f'_{-}(b)>0$:
 
-	我们有: $$\left\lbrace
-		\begin{array}{l}
-			f'_{+}(a)=\lim\limits_{x\rightarrow a^{+}}\dfrac{f(x)-f(a)}{x-a}>0 \\
-			f'_{-}(b)=\lim\limits_{x\rightarrow b^{-}}\dfrac{f(x)-f(b)}{x-b}>0
-		\end{array}
-		\right. \Rightarrow \left\lbrace
-		\begin{array}{l}
-			x\in(a,a+\sigma_{1}),f(x)>f(a)=0 \\
-			x\in(b-\sigma_{2},b),f(x)<f(b)=0
-		\end{array}
-		\right. $$
+	$$\begin{cases}
+		f'_{+}(a)=\lim\limits_{x\rightarrow a^{+}}\dfrac{f(x)-f(a)}{x-a}>0 \\
+		f'_{-}(b)=\lim\limits_{x\rightarrow b^{-}}\dfrac{f(x)-f(b)}{x-b}>0
+	\end{cases}\Rightarrow
+	\begin{cases}
+		x\in(a,a+\sigma_{1}),f(x)>f(a)=0 \\
+		x\in(b-\sigma_{2},b),f(x)<f(b)=0
+	\end{cases}$$
 
-	$$\exists c\in(a,b),\ s.t. f(c)=f(a)=f(b)=0$$
+	零点定理: $\exists c\in(a,b),\ s.t.\ f(c) = 0\Rightarrow f(a) = f(c) = f(b) = 0$
 
-	我们对$G(x)$在区间$(a,c)$和区间$(c,b)$上使用罗尔定理得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists x_{1}\in(a,c),\ s.t. G'(x_{1})=e^{x_{1}}(f(x_{1})+f'(x_{1}))=0\Rightarrow \exists x_{1},s.t. F(x_{1})=0 \\
-			\exists x_{2}\in(c,b),\ s.t. G'(x_{2})=e^{x_{2}}(f(x_{2})+f'(x_{2}))=0\Rightarrow \exists x_{2},s.t. F(x_{2})=0
-		\end{array}
-		\right. $$
+	$G(a) = G(c) = G(b) = 0$, 罗尔定理:
+	$$\begin{cases}
+		\exists x_{1}\in(a,c),\ s.t.\ G'(x_{1})=e^{x_{1}}(f(x_{1})+f'(x_{1}))=0 \\
+		\exists x_{2}\in(c,b),\ s.t.\ G'(x_{2})=e^{x_{2}}(f(x_{2})+f'(x_{2}))=0
+	\end{cases}\Rightarrow \exists x_{1}\in(a,c),x_{2}\in(c,b),\ s.t.\ F(x_{1})= F(x_{2}) = 0$$
 
-	我们对$F(x)$在区间$(x_{1},x_{2})$上使用罗尔定理得到:
-	$$\exists \xi\in(x_{1},x_{2}),\ s.t. F'(\xi)=e^{-\xi}[f''(\xi)-f(\xi)]=0\Rightarrow f''(\xi)=f(\xi)$$
+	$F(x_{1}) = F(x_{2}) = 0$, 罗尔定理:
+	$$\exists \xi\in(x_{1},x_{2}),\ s.t.\ F'(\xi)=e^{-\xi}[f''(\xi)-f(\xi)]=0\Rightarrow f''(\xi)=f(\xi)$$
 
-	综上所述,$\exists \xi\in(a,b)$,$s.t. f''(\xi)=f(\xi)$
+	综上所述,$\exists \xi\in(a,b),\ s.t.\ f''(\xi)=f(\xi)$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[0,2\pi]$二阶可导,$f''(x)\neq f(x)$,证明: $\exists \xi\in(0,2\pi)$,$s.t. \tan\xi=\dfrac{2f'(\xi)}{f(\xi)-f''(\xi)}$
+	设 $f(x)$ 在 $[0,2\pi]$ 二阶可导,$f''(x)\neq f(x)$,证明: $\exists \xi\in(0,2\pi),\ s.t.\ \tan\xi=\dfrac{2f'(\xi)}{f(\xi)-f''(\xi)}$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $F(x)=f(x)\sin x$
+	构造辅助函数: 
+	$$F(x)=f(x)\sin x\Rightarrow \begin{cases} 
+		F'(x) = f(x)\cos x + f'(x)\sin x \\
+		F''(x) = -f(x)\sin x +f'(x)\sin x + f'(x)\cos x + f''(x)\sin x
+	\end{cases}$$
 
-	我们有: $F(0)=F(\pi)=F(2\pi)=0$
+	$F(0)=F(\pi)=F(2\pi)=0$, 罗尔定理:
+	$$\begin{cases}
+		\exists x_{1}\in(0,\pi),\ s.t.\ F'(x_{1})=f'(x_{1})\sin x_{1}+f(x_{1})\cos x_{1}=0    \\
+		\exists x_{2}\in(\pi,2\pi),\ s.t.\ F'(x_{2})=f'(x_{2})\sin x_{2}+f(x_{2})\cos x_{2}=0 
+	\end{cases}$$
 
-	我们对$F(x)$在区间$(0,\pi)$和区间$(\pi,2\pi)$上使用罗尔定理得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists x_{1}\in(0,\pi),\ s.t. F'(x_{1})=f'(x_{1})\sin x_{1}+f(x_{1})\cos x_{1}=0    \\
-			\exists x_{2}\in(\pi,2\pi),\ s.t. F'(x_{2})=f'(x_{2})\sin x_{2}+f(x_{2})\cos x_{2}=0 \\
-		\end{array}
-		\right. $$
+	$F'(x_{1}) = F'(x_{2}) = 0$, 罗尔定理:
+	$$\exists \xi\in(x_{1},x_{2}),\ s.t.\ F''(\xi)=\left[f''(\xi)-f(\xi)\right]\sin \xi+ 2f'(\xi)\cos\xi = 0$$
 
-	我们对$F'(x)$在区间$(x_{1},x_{2})$上使用罗尔定理得到:
-	$$\exists \xi\in(x_{1},x_{2}),\ s.t. F''(\xi)=f''(\xi)\sin \xi+f'(\xi)\cos\xi+f'(\xi)\cos\xi-f(\xi)\sin \xi$$ $$\sin\xi(f(\xi)-f''(\xi))=2f'(\xi)\cos \xi$$
+	$f''(x)\neq f(x)\Rightarrow \tan\xi = \dfrac{2f'(\xi)}{f(\xi)-f''(\xi)}$
 
-	当$\xi=\frac{\pi}{2}$或者$\xi=\frac{3\pi}{2}$时,此时$f(\xi)=f''(\xi)$,与题干矛盾.
-
-	综上所述,$\exists \xi\in(0,2\pi)$,$s.t. \tan\xi=\dfrac{2f'(\xi)}{f(\xi)-f''(\xi)}$
+	综上所述,$\exists \xi\in(0,2\pi),\ s.t.\ \tan\xi=\dfrac{2f'(\xi)}{f(\xi)-f''(\xi)}$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$(0,+\infty)$二阶可导,证明: $\forall a>0,\exists c\in(2a,4a)$,$s.t. f(4a)-2f(3a)+f(2a)=a^2f''(c)$
+	设 $f(x)$ 在 $(0,+\infty)$ 二阶可导,证明: $\forall a>0,\exists c\in(2a,4a),\ s.t.\ f(4a)-2f(3a)+f(2a)=a^2f''(c)$
 \end{proposition}
 
 \begin{solution}
 
-	我们构造辅助函数$F(x)=f(x+a)-f(x)$,原命题转化为:
-	$$\exists c\in(2a,4a),\ s.t. F(3a)-F(2a)=a^2f''(c)$$
+	构造辅助函数: $F(x)=f(x+a)-f(x)$
+	
+	$$\exists c\in(2a,4a),\ s.t.\ F(3a)-F(2a)=a^2f''(c)$$
 
-	我们由拉格朗日中值定理得到:
-	$$\exists \xi\in(2a,3a),\ s.t. F(3a)-F(2a)=aF'(\xi)=a[f'(\xi+a)-f'(\xi)]$$
+	拉格朗日中值定理:
+	$$\exists \xi\in(2a,3a),\ s.t.\ F(3a)-F(2a)=aF'(\xi)=a[f'(\xi+a)-f'(\xi)]$$
 
-	由拉格朗日中值定理得到:
-	$$\exists c\in(\xi,\xi+a)\subset (3a,4a),\ s.t. f'(\xi+a)-f'(\xi)=af''(c)$$
+	拉格朗日中值定理:
+	$$\exists c\in(\xi,\xi+a)\subset (3a,4a),\ s.t.\ f'(\xi+a)-f'(\xi)=af''(c)$$
 
-	我们得到:
-	$$\forall a>0,\exists c\in(2a,4a),\ s.t. f(4a)-2f(3a)+f(2a)=a^2f''(c)$$
+	综上:
+	$$\forall a>0,\exists c\in(2a,4a),\ s.t.\ f(4a)-2f(3a)+f(2a)=a^2f''(c)$$
 \end{solution}
 
 \subsection{复合函数构造问题}
 \begin{proposition}
-	设$f(x)$在$[\dfrac{3}{4}\pi,\dfrac{7}{4}\pi]$可导,$f(\frac{3}{4}\pi)=f(\frac{7}{4}\pi)=0$,证明: $\exists \xi\in(\dfrac{3}{4}\pi,\dfrac{7}{4}\pi)$,$s.t. f'(\xi)+f(\xi)=\cos \xi$
+	设 $f(x)$ 在 $[\dfrac{3}{4}\pi,\dfrac{7}{4}\pi]$ 可导,$f(\dfrac{3}{4}\pi)=f(\dfrac{7}{4}\pi)=0$,证明: 
+	$\exists \xi\in(\dfrac{3}{4}\pi,\dfrac{7}{4}\pi),\ s.t.\ f'(\xi)+f(\xi)=\cos \xi$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $F(x)=e^x[f(x)-\frac{1}{2}\sin x-\frac{1}{2}\cos x]$
+	构造辅助函数: $F(x)=e^x\left[f(x)-\dfrac{1}{2}\sin x-\dfrac{1}{2}\cos x\right]$
 
-	$$F(\frac{3\pi}{4})=F(\frac{7\pi}{4})=0$$
+	$F(\frac{3\pi}{4})=F(\frac{7\pi}{4})=0$, 罗尔定理:
+	$$\exists \xi\in(\frac{3\pi}{4},\frac{7\pi}{4}),\ s.t.\ F'(\xi)=e^{\xi}\left[f'(\xi)+f(\xi)-\cos \xi\right]=0$$
 
-	我们对$F(x)$在区间$(\frac{3\pi}{4},\frac{7\pi}{4})$上使用罗尔定理得到:
-	$$\exists \xi\in(\frac{3\pi}{4},\frac{7\pi}{4}),\ s.t. F'(\xi)=e^{\xi}[f'(\xi)+f(\xi)-\cos \xi]=0$$
-
-	综上所述,$\exists \xi\in(\dfrac{3}{4}\pi,\dfrac{7}{4}\pi)$,$s.t. f'(\xi)+f(\xi)=\cos \xi$
+	综上所述,$\exists \xi\in(\dfrac{3}{4}\pi,\dfrac{7}{4}\pi),\ s.t.\ f'(\xi)+f(\xi)=\cos \xi$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[1,2]$可导,证明: $\exists \xi\in(1,2)$,$s.t. \xi f'(\xi)-f(\xi)=f(2)-2f(1)$
+	设$f(x)$在$[1,2]$可导,证明: $\exists \xi\in(1,2),\ s.t.\ \xi f'(\xi)-f(\xi)=f(2)-2f(1)$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $F(x)=\dfrac{f(x)+f(2)-2f(1)}{x}$
+	构造辅助函数: 
+	$$F(x)=\dfrac{f(x)+f(2)-2f(1)}{x}\Rightarrow \begin{cases}
+		F(1) = F(2) = f(2)-f(1)\\
+		F'(x) = \dfrac{xf'(x)-f(x)-f(2)+2f(1)}{x^2}
+	\end{cases}$$
 
-	我们得到: $F(1)=F(2)=f(2)-f(1)$
-	$$F'(x)=\dfrac{xf'(x)-f(x)-f(2)+2f(1)}{x^2}$$
+	$F(1) = F(2) = 0$, 罗尔定理:
+	$$\exists\xi\in(0,1),\ s.t.\ F'(\xi)=0\Rightarrow \xi f'(\xi)-f(\xi)-f(2)+2f(1)=0$$
 
-	我们对$F(x)$在区间$[0,1]$上使用罗尔定理得到:
-	$$\exists\xi\in(0,1),\ s.t. F'(\xi)=0\Rightarrow \xi f'(\xi)-f(\xi)-f(2)+2f(1)=0$$
-
-	综上所述,我们得到: $\exists \xi\in(1,2)$,$s.t. \xi f'(\xi)-f(\xi)=f(2)-2f(1)$
+	综上所述: $\exists \xi\in(1,2),\ s.t.\ \xi f'(\xi)-f(\xi)=f(2)-2f(1)$
 \end{solution}
-\begin{anymark}[注: 柯西中值定理]
-	我们构造辅助函数: $F(x)=\dfrac{f(x)}{x},\ G(x)=\dfrac{1}{x}$
-	$$F'(x)=\dfrac{xf'(x)-f(x)}{x^2},\ G'(x)=-\dfrac{1}{x^2}$$
+\begin{anymark}[柯西中值定理]
+	构造辅助函数:
+	$$\begin{cases}
+		F(x)=\dfrac{f(x)}{x}\\
+		G(x)=\dfrac{1}{x}
+	\end{cases}\Rightarrow
+	\begin{cases}
+		F'(x)=\dfrac{xf'(x)-f(x)}{x^2}\\
+		G'(x)=-\dfrac{1}{x^2}
+	\end{cases}$$
 
-	我们对$F(x),G(x)$在区间$(1,2)$上使用柯西中值定理得到:
+
+	柯西中值定理:
 	$$\exists\xi\in(1,2),\ s.t.\dfrac{F(2)-F(1)}{G(2)-G(1)}=\dfrac{F'(\xi)}{G'(\xi)}$$
 
-	又因为:
-	$$\left\lbrace
-		\begin{array}{l}
-			\dfrac{F(2)-F(1)}{G(2)-G(1)}=2f(1)-f(2) \\
-			\dfrac{F'(\xi)}{G'(\xi)}=f(\xi)-\xi f'(\xi)
-		\end{array}
-		\right. \Rightarrow \exists \xi\in(1,2),s.t. \xi f'(\xi)-f(\xi)=f(2)-2f(1)$$
+	$$\begin{cases}
+		\dfrac{F(2)-F(1)}{G(2)-G(1)}=2f(1)-f(2) \\
+		\dfrac{F'(\xi)}{G'(\xi)}=f(\xi)-\xi f'(\xi)
+	\end{cases}\Rightarrow \exists \xi\in(1,2),\ s.t.\ \xi f'(\xi)-f(\xi)=f(2)-2f(1)$$
 
-	综上所述,我们得到: $\exists \xi\in(1,2)$,$s.t. \xi f'(\xi)-f(\xi)=f(2)-2f(1)$
+	综上所述: $\exists \xi\in(1,2),\ s.t.\ \xi f'(\xi)-f(\xi)=f(2)-2f(1)$
 \end{anymark}
 \myspace{1}
 
 \begin{proposition}
-	设$f(x),g(x)$在$[a,b]$连续,$(a,b)$可导,$g'(x)\neq 0$,证明: $\exists \xi\in(a,b)$,$s.t. \dfrac{f(a)-f(\xi)}{g(\xi)-g(b)}=\dfrac{f'(\xi)}{g'(\xi)}$
+	设 $f(x),g(x)$ 在 $[a,b]$上连续,$(a,b)$内可导,$g'(x)\neq 0$,证明: $\exists \xi\in(a,b),\ s.t.\ \dfrac{f(a)-f(\xi)}{g(\xi)-g(b)}=\dfrac{f'(\xi)}{g'(\xi)}$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $F(x)=[f(x)-f(a)][g(x)-g(b)]$
-
-	我们有: $F(a)=F(b)=0$
+	构造辅助函数: $F(x)=[f(x)-f(a)][g(x)-g(b)]$
+	
 	$$F'(x)=f'(x)[g(x)-g(b)]+g'(x)[f(x)-f(a)]$$
 
-	我们对$F(x)$在区间$(a,b)$上使用罗尔定理得到:
-	$$\exists \xi\in(a,b),\ s.t. F'(\xi)=f'(\xi)[g(\xi)-g(b)]+g'(\xi)[f(\xi)-f(a)]\Rightarrow \dfrac{f(a)-f(\xi)}{g(\xi)-g(b)}=\dfrac{f'(\xi)}{g'(\xi)}$$
+	$F(a) = F(b) = 0$上使用罗尔定理:
+	$$\exists \xi\in(a,b),\ s.t.\ F'(\xi)=f'(\xi)[g(\xi)-g(b)]+g'(\xi)[f(\xi)-f(a)]\Rightarrow \dfrac{f(a)-f(\xi)}{g(\xi)-g(b)}=\dfrac{f'(\xi)}{g'(\xi)}$$
 
-	综上所述,我们得到: $\exists \xi\in(a,b)$,$s.t. \dfrac{f(a)-f(\xi)}{g(\xi)-g(b)}=\dfrac{f'(\xi)}{g'(\xi)}$
+	综上所述: $\exists \xi\in(a,b),\ s.t.\ \dfrac{f(a)-f(\xi)}{g(\xi)-g(b)}=\dfrac{f'(\xi)}{g'(\xi)}$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[0,1]$可导,$f(0)=0$,$\forall x\in(0,1),f(x)>0$,证明: $\exists \xi\in(0,1)$,$s.t. \dfrac{f'(\xi)}{f(\xi)}=\dfrac{f'(1-\xi)}{f(1-\xi)}$
+	设 $f(x)$ 在 $[0,1]$ 可导,$f(0)=0, \forall x\in(0,1),f(x)>0$,证明: $\exists \xi\in(0,1),\ s.t.\ \dfrac{f'(\xi)}{f(\xi)}=\dfrac{f'(1-\xi)}{f(1-\xi)}$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $F(x)=f(x)f(1-x)$
+	构造辅助函数: $F(x)=f(x)f(1-x)$
 
-	我们有: $F(0)=F(1)=0$
 	$$F'(x)=f'(x)f(1-x)-f(x)f'(1-x)$$
 
-	我们对$F(x)$在区间$(0,1)$上使用罗尔定理得到:
-	$$\exists\xi\in(0,1),\ s.t. F'(\xi)=f'(\xi)f(1-\xi)-f(\xi)f'(1-\xi)\Rightarrow \dfrac{f'(\xi)}{f(\xi)}=\dfrac{f'(1-\xi)}{f(1-\xi)}$$
+	$F(0) = F(1) = 0$, 罗尔定理:
+	$$\exists\xi\in(0,1),\ s.t.\ F'(\xi)=f'(\xi)f(1-\xi)-f(\xi)f'(1-\xi)\Rightarrow \dfrac{f'(\xi)}{f(\xi)}=\dfrac{f'(1-\xi)}{f(1-\xi)}$$
 
-	综上所述,我们得到: $\exists \xi\in(0,1)$,$s.t. \dfrac{f'(\xi)}{f(\xi)}=\dfrac{f'(1-\xi)}{f(1-\xi)}$
+	综上所述: $\exists \xi\in(0,1),\ s.t.\ \dfrac{f'(\xi)}{f(\xi)}=\dfrac{f'(1-\xi)}{f(1-\xi)}$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[0,1]$可导,$f(0)=0$,$\forall x\in(0,1),f(x)>0$,证明: $\forall a>0,\exists \xi\in(0,1)$,$s.t. a\dfrac{f'(\xi)}{f(\xi)}=\dfrac{f'(1-\xi)}{f(1-\xi)}$
+	设 $f(x)$ 在 $[0,1]$ 可导,$f(0)=0,\forall x\in(0,1),f(x)>0$,证明: $\forall a>0,\exists \xi\in(0,1),\ s.t.\ a\dfrac{f'(\xi)}{f(\xi)}=\dfrac{f'(1-\xi)}{f(1-\xi)}$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $F(x)=f^{a}(x)f(1-x)$
+	构造辅助函数: $F(x)=f^{a}(x)f(1-x)$
 
-	我们有: $F(0)=F(1)=0$
 	$$F'(x)=af^{a-1}(x)f'(x)f(1-x)-f^{a}(x)f'(1-x)=f^{a-1}(x)[af'(x)f(1-x)-f(x)f'(1-x)]$$
 
-	我们对$F(x)$在区间$(0,1)$上使用罗尔定理得到:
-	$$\exists\xi\in(0,1),\ s.t. F'(\xi)=f^{a-1}(\xi)[af'(\xi)f(1-\xi)-f(\xi)f'(1-\xi)]=0$$
+	$F(0) = F(1) = 0$, 罗尔定理:
+	$$\exists\xi\in(0,1),\ s.t.\ F'(\xi)=f^{a-1}(\xi)[af'(\xi)f(1-\xi)-f(\xi)f'(1-\xi)]=0$$
 
-	由因为$\forall x\in(0,1),\ f(x)>0\Rightarrow f^{a-1}(\xi)>0$
+	$$\forall x\in(0,1),\ f(x)>0\Rightarrow f^{a-1}(\xi)>0$$
 
-	我们得到:
 	$$af'(\xi)f(1-\xi)-f(\xi)f'(1-\xi)=0\Rightarrow a\dfrac{f'(\xi)}{f(\xi)}=\dfrac{f'(1-\xi)}{f(1-\xi)}$$
 
-	综上所述,我们得到: $\forall a>0,\exists \xi\in(0,1)$,$s.t. a\dfrac{f'(\xi)}{f(\xi)}=\dfrac{f'(1-\xi)}{f(1-\xi)}$
+	综上所述: $\forall a>0,\exists \xi\in(0,1),\ s.t.\ a\dfrac{f'(\xi)}{f(\xi)}=\dfrac{f'(1-\xi)}{f(1-\xi)}$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[a,b]$可导,$f(a)=0$,$\forall x\in(a,b],f(x)>0$,证明: $\forall m,n>0,\ \exists \lambda,\mu\in(0,1)$,$s.t. \dfrac{f'(\lambda)}{f(\lambda)}=\dfrac{mf'(\mu)}{nf(\mu)}$
+	设 $f(x)$ 在 $[a,b]$ 可导,$f(a)=0$,$\forall x\in(a,b],f(x)>0$,证明: $\forall m,n>0,\exists \lambda,\mu\in(0,1),\ s.t.\ \dfrac{f'(\lambda)}{f(\lambda)}=\dfrac{mf'(\mu)}{nf(\mu)}$
 \end{proposition}
 \begin{solution}
 
+	构造辅助函数: $F(x)=f^{m}(x)f^{n}(a+b-x)$
 
-	我们构造辅助函数: $F(x)=f^{m}(x)f^{n}(a+b-x)$
-
-	我们得到: $F(a)=F(b)=0$
 	$$F'(x)=mf^{m-1}(x)f'(x)f^{n}(a+b-x)-nf^{m}(x)f^{n-1}(a+b-x)$$
 
-	我们对$F(x)$在区间$(a,b)$上使用罗尔定理得到:
-	$$\exists\xi\in(a,b),\ s.t. F'(\xi)=0\Rightarrow mf'(\xi)f(a+b-\xi)=nf(\xi)f'(a+b-\xi)$$
+	$F(a) = F(b) = 0$, 罗尔定理:
+	$$\exists\xi\in(a,b),\ s.t.\ F'(\xi)=0\Rightarrow mf'(\xi)f(a+b-\xi)=nf(\xi)f'(a+b-\xi)$$
 
-	我们得到: $\exists\xi\in(a,b),\ s.t. \dfrac{mf'(\xi)}{nf(\xi)}=\dfrac{f'(a+b-\xi)}{f(a+b-\xi)}$
+	$$\exists\xi\in(a,b),\ s.t.\ \dfrac{mf'(\xi)}{nf(\xi)}=\dfrac{f'(a+b-\xi)}{f(a+b-\xi)}$$
 
-	我们取$\lambda=a+b-\xi,\ \mu=\xi$,我们可以得到:
-	$$\forall m,n>0,\ \exists \lambda,\mu\in(0,1),\ s.t. \dfrac{f'(\lambda)}{f(\lambda)}=\dfrac{mf'(\mu)}{nf(\mu)}$$
+	取 $\lambda=a+b-\xi, \mu=\xi$:
+	$$\forall m,n>0,\exists \lambda,\mu\in(0,1),\ s.t.\ \dfrac{f'(\lambda)}{f(\lambda)}=\dfrac{mf'(\mu)}{nf(\mu)}$$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x),g(x)$在$[a,b]$二阶可导,$g''(x)\neq 0$,$g(a)=g(b)=f(a)=f(b)=0$,证明: $\exists \xi\in(a,b)$,$s.t. \dfrac{f(\xi)}{g(\xi)}=\dfrac{f''(\xi)}{g''(\xi)}$
+	设$f(x),g(x)$在$[a,b]$二阶可导,$g''(x)\neq 0$,$g(a)=g(b)=f(a)=f(b)=0$,证明: $\exists \xi\in(a,b),\ s.t.\ \dfrac{f(\xi)}{g(\xi)}=\dfrac{f''(\xi)}{g''(\xi)}$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $F(x)=f'(x)g(x)-f(x)g'(x)$
+	构造辅助函数: $F(x)=f'(x)g(x)-f(x)g'(x)$
 
-	我们有: $F(a)=F(b)=0$
 	$$F'(x)=f''(x)g(x)+f'(x)g'(x)-f'(x)g'(x)-f(x)g''(x)=f''(x)g(x)-f(x)g''(x)$$
 
-	我们对$F(x)$在区间$(a,b)$上使用罗尔定理得到:
-	$$\exists\xi\in(a,b),\ s.t. F'(\xi)=0\Rightarrow f''(\xi)g(\xi)-f(\xi)g''(\xi)=0$$
+	$F(a) = F(b) = 0$, 罗尔定理:
+	$$\exists\xi\in(a,b),\ s.t.\ F'(\xi)=0\Rightarrow f''(\xi)g(\xi)-f(\xi)g''(\xi)=0$$
 
-	综上所述,$\exists \xi\in(a,b)$,$s.t. \dfrac{f(\xi)}{g(\xi)}=\dfrac{f''(\xi)}{g''(\xi)}$
+	综上所述: $\exists \xi\in(a,b),\ s.t.\ \dfrac{f(\xi)}{g(\xi)}=\dfrac{f''(\xi)}{g''(\xi)}$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$二阶可导,$f(1)> 0$,$\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)}{x}<0$,证明: $f(x)f''(x)+[f'(x)]^2=0$在$(0,1)$内至少有两个根.
+	设 $f(x)$ 二阶可导,$f(1)> 0,\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)}{x}<0$,证明: $f(x)f''(x)+[f'(x)]^2=0$ 在 $(0,1)$ 内至少有两个根.
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $F(x)=f(x)f'(x)$
+	构造辅助函数: $F(x)=f(x)f'(x)$
 
-	我们有: $F'(x)=f(x)f''(x)+[f'(x)]^2$
+	$$F'(x)=f(x)f''(x)+[f'(x)]^2$$
 
-	我们由$\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)}{x}<0$可以得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			f(0)=\lim\limits_{x\rightarrow 0^{+}}f(x)=0 \\
-			\exists\xi>0,\ x\in(0,\xi),f(x)<0
-		\end{array}
-		\right. $$
+	
+	$$ \lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)}{x}<0\to
+	\begin{cases}
+		f(0)=\lim\limits_{x\rightarrow 0^{+}}f(x)=0 \\
+		\exists\xi>0,\ x\in(0,\xi),f(x)<0
+	\end{cases}
+	$$
 
-	我们由零点定理可以得到:
-	$$\exists c\in(0,1),\ s.t. f(c)=0$$
+	零点定理:
+	$$\exists c\in(0,1),\ s.t.\ f(c)=0$$
 
-	我们对$f(x)$在区间$(0,c)$上使用罗尔定理可以得到:
-	$$\exists\eta\in(0,c),\ s.t. f'(\eta)=0$$
+	$f(0) = f(c) = 0$, 罗尔定理:
+	$$\exists\eta\in(0,c),\ s.t.\ f'(\eta)=0$$
 
-	我们可以得到: $F(0)=F(\eta)=F(c)=0$
 
-	我们对$F(x)$在区间$(0,\eta)$和区间$(\eta,c)$上使用罗尔定理得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists x_{1}\in(0,\eta),\ s.t. F'(x_{1})=0\Rightarrow f(x_{1})f''(x_{1})+[f'(x_{1})]^2=0 \\
-			\exists x_{2}\in(\eta,c),\ s.t. F'(x_{2})=0\Rightarrow f(x_{2})f''(x_{2})+[f'(x_{2})]^2=0
-		\end{array}
-		\right. $$
 
-	综上所述,我们得到$f(x)f''(x)+[f'(x)]^2=0$在$(0,1)$内至少有两个根$x_{1}\in(0,\eta);\ x_{2}\in(\eta,c)$.
+	$F(0) = F(\eta) = F(c) = 0$, 罗尔定理:
+	$$\begin{cases}
+		\exists x_{1}\in(0,\eta),\ s.t.\ F'(x_{1})=0\Rightarrow f(x_{1})f''(x_{1})+[f'(x_{1})]^2=0 \\
+		\exists x_{2}\in(\eta,c),\ s.t.\ F'(x_{2})=0\Rightarrow f(x_{2})f''(x_{2})+[f'(x_{2})]^2=0
+	\end{cases}$$
+
+	综上所述: $f(x)f''(x)+[f'(x)]^2=0$ 在 $(0,1)$ 内至少有两个根 $x_{1}\in(0,\eta),\ x_{2}\in(\eta,c)$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[a,b]$二阶可导,$f'(a)=f'(b)=0$,$f(x)>0$,证明: $\exists \xi\in(a,b)$,$s.t. f(\xi)f''(\xi)-[f'(\xi)]^2=0$
+	设 $f(x)$ 在 $[a,b]$ 二阶可导,$f'(a)=f'(b)=0,f(x)>0$,证明: $\exists \xi\in(a,b),\ s.t.\ f(\xi)f''(\xi)-[f'(\xi)]^2=0$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $F(x)=\dfrac{f'(x)}{f(x)}$
+	构造辅助函数: $F(x)=\dfrac{f'(x)}{f(x)}$
 
-	我们有: $F(a)=F(b)=0$
 	$$F'(x)=\dfrac{f''(x)f(x)-[f'(x)]^2}{f^{2}(x)}$$
 
-	我们对$F(x)$在区间$(a,b)$上使用罗尔定理得到:
-	$$\exists \xi\in(a,b),\ s.t. F'(\xi)=0\Rightarrow f''(\xi)f(\xi)-[f'(\xi)]^2=0$$
+	$F(a) = F(b) = 0$, 罗尔定理:
+	$$\exists \xi\in(a,b),\ s.t.\ F'(\xi)=0\Rightarrow f''(\xi)f(\xi)-[f'(\xi)]^2=0$$
 
-	综上所述,我们得到: $\exists \xi\in(a,b)$,$s.t. f(\xi)f''(\xi)-[f'(\xi)]^2=0$
+	综上所述: $\exists \xi\in(a,b),\ s.t.\ f(\xi)f''(\xi)-[f'(\xi)]^2=0$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[a,b]$二阶可导,$f'(a)=f'(b)=0$,$f(x)>0$,证明: $\exists \xi\in(a,b)$,$s.t. f(\xi)f''(\xi)-2[f'(\xi)]^2=0$
+	设 $f(x)$ 在 $[a,b]$ 二阶可导,$f'(a)=f'(b)=0,f(x)>0$,证明: $\exists \xi\in(a,b),\ s.t.\ f(\xi)f''(\xi)-2[f'(\xi)]^2=0$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $F(x)=\dfrac{f'(x)}{f^{2}(x)}$
+	构造辅助函数: $F(x)=\dfrac{f'(x)}{f^{2}(x)}$
 
-	我们有: $F(a)=F(b)=0$
 	$$F'(x)=\dfrac{f''(x)f(x)-2[f'(x)]^2}{f^{3}(x)}$$
 
-	我们对$F(x)$在区间$(a,b)$上使用罗尔定理得到:
-	$$\exists \xi\in(a,b),\ s.t. F'(\xi)=0\Rightarrow f''(\xi)f(\xi)-2[f'(\xi)]^2=0$$
+	$F(a) = F(b) = 0$, 罗尔定理:
+	$$\exists \xi\in(a,b),\ s.t.\ F'(\xi)=0\Rightarrow f''(\xi)f(\xi)-2[f'(\xi)]^2=0$$
 
-	综上所述,我们得到: $\exists \xi\in(a,b)$,$s.t. f(\xi)f''(\xi)-2[f'(\xi)]^2=0$
-\end{solution}
-
-\myspace{1}
-
-\begin{proposition}
-	设$f(x)$在$[-2,2]$二阶可导,$|f(x)|<1$,$[f(0)]^2+[f'(0)]^2=4$,证明: $\exists \xi\in(-2,2)$,$s.t. f''(\xi)+f(\xi)=0$
-\end{proposition}
-\begin{solution}
-
-	我们构造辅助函数: $F(x)=f^{2}(x)+f'^{2}(x)$
-
-	我们有: $F(0)=4$
-	$$F'(x)=2f(x)f'(x)+2f'(x)f''(x)=2f'(x)[f(x)+f''(x)]$$
-
-	我们利用拉格朗日中值定理可以得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists x_{1}\in(0,2),\ s.t. f(2)-f(0)=2f'(x_{1}) \\
-			\exists x_{2}\in(-2,0),\ s.t. f(-2)-f(0)=-2f'(x_{2})
-		\end{array}
-		\right. $$
-
-	又因为: $|f(x)|<1\Rightarrow -1<f(x)<1\Rightarrow \left\lbrace
-		\begin{array}{l}
-			f(2)-f(0)\in(-2,2) \\
-			f(-2)-f(0)\in(-2,2)
-		\end{array}
-		\right. $
-
-	我们得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			|f'(x_{1})|<1 \\
-			|f'(x_{2})|<1
-		\end{array}
-		\right. \Rightarrow \left\lbrace
-		\begin{array}{l}
-			F(x_{1})=f^{2}(x_{1})+f'^{2}(x_{1})<2 \\
-			F(x_{2})=f^{2}(x_{2})+f'^{2}(x_{2})<2
-		\end{array}
-		\right. $$
-
-	$F(0)=4>F(x_{1}),F(0)=4>F(x_{2})$,我们知道$F(x)$在区间$[x_{1},x_{2}]$最大值一定在区间内部取得,我们不妨假设$F(x)$在$x=x_{0}$处取得最大值,我们由费马定理可以得到:
-	$$F'(x_{0})=0\Rightarrow f'(x_{0})[f'(x_{0})+f(x_{0})]=0$$
-
-	(i). 假设$f'(x_{0})=0$,$F(x_{0})=f^{2}(x_{0})<1$,这与$F(x_{0})=M$是最大值$M\geq 4$矛盾!!!
-
-	(ii). $f'(x_{0})\neq 0\Rightarrow f'(x_{0})+f(x_{0})=0$
-
-	我们取$\xi=x_{0}$,我们得到: $\exists \xi\in(-2,2),s.t. f''(\xi)+f(\xi)=0$
-
+	综上所述: $\exists \xi\in(a,b),\ s.t.\ f(\xi)f''(\xi)-2[f'(\xi)]^2=0$
 \end{solution}
 
 \myspace{1}
@@ -2221,70 +2200,69 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \subsection{拉格朗日中值定理 \& 柯西中值定理}
 
 \begin{proposition}
-	设$a,b>0$,证明: $\exists \xi\in(a,b).\ s.t. ae^b-be^a=(1-\xi)e^{\xi}(a-b)$
+	设 $a,b>0$,证明: $\exists \xi\in(a,b).\ s.t.\ ae^b-be^a=(1-\xi)e^{\xi}(a-b)$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $f(x)=\dfrac{e^{x}}{x},\ g(x)=\dfrac{1}{x}$
+	构造辅助函数: $f(x)=\dfrac{e^{x}}{x},g(x)=\dfrac{1}{x}$
 
-	我们对$f(x)$和$g(x)$在区间$(a,b)$上使用柯西中值定理得到:
-	$$\exists \xi\in(a,b),\ s.t. \dfrac{f(b)-f(a)}{g(b)-g(a)}=\dfrac{f'(\xi)}{g'(\xi)}$$
+	$$\begin{cases}
+		f'(x) = \dfrac{(x-1)e^{x}}{x^{2}}\\
+		g'(x) = -\dfrac{1}{x^{2}}
+	\end{cases}$$
 
-	我们有:
-	$$\left\lbrace
-		\begin{array}{l}
-			\dfrac{f(b)-f(a)}{g(b)-g(a)}=\dfrac{ae^b-be^a}{a-b} \\
-			\dfrac{f'(\xi)}{g'(\xi)}=\dfrac{\frac{e^{\xi}-\xi e^{\xi}}{\xi^2}}{-\frac{1}{\xi^2}}=(1-\xi)e^{\xi}
-		\end{array}
-		\right. $$
+	柯西中值定理:
+	$$\exists \xi\in(a,b),\ s.t.\ \dfrac{f(b)-f(a)}{g(b)-g(a)}=\dfrac{f'(\xi)}{g'(\xi)}$$
 
-	综上所述,我们得到: $\exists \xi\in(a,b).\ s.t. ae^b-be^a=(1-\xi)e^{\xi}(a-b)$
+
+	$$\begin{cases}
+		\dfrac{f(b)-f(a)}{g(b)-g(a)}=\dfrac{ae^b-be^a}{a-b} \\
+		\dfrac{f'(\xi)}{g'(\xi)}=(1-\xi)e^{\xi}
+	\end{cases}$$
+
+	综上所述: $\exists \xi\in(a,b).\ s.t.\ ae^b-be^a=(1-\xi)e^{\xi}(a-b)$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[1,2]$可导,证明: $\exists \xi\in(1,2)$,$s.t. f(2)-f(1)=\frac{1}{2}\xi^2f'(\xi)$
+	设 $f(x)$ 在 $[1,2]$可导,证明: $\exists \xi\in(1,2),\ s.t.\ f(2)-f(1)=\frac{1}{2}\xi^2f'(\xi)$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $g(x)=\dfrac{1}{x}$
+	构造辅助函数: $g(x)=\dfrac{1}{x}$
 
-	我们对$f(x)$和$g(x)$在区间$(1,2)$上使用柯西中值定理得到:
-	$$\exists\xi\in(1,2),\ s.t. \dfrac{f(2)-f(1)}{g(2)-g(1)}=\dfrac{f'(\xi)}{g'(\xi)}$$
+	柯西中值定理:
+	$$\exists\xi\in(1,2),\ s.t.\ \dfrac{f(2)-f(1)}{g(2)-g(1)}=\dfrac{f'(\xi)}{g'(\xi)}$$
 
 	我们有:
-	$$\left\lbrace
-		\begin{array}{l}
-			\dfrac{f(2)-f(1)}{g(2)-g(1)}=-2[f(2)-f(1)] \\
-			\dfrac{f'(\xi)}{g'(\xi)}=-\xi^2f'(\xi)
-		\end{array}
-		\right. \Rightarrow f(2)-f(1)=\frac{1}{2}\xi^2f'(\xi)$$
+	$$\begin{cases}
+		\dfrac{f(2)-f(1)}{g(2)-g(1)}=-2[f(2)-f(1)] \\
+		\dfrac{f'(\xi)}{g'(\xi)}=-\xi^2f'(\xi)
+	\end{cases}\Rightarrow f(2)-f(1)=\frac{1}{2}\xi^2f'(\xi)$$
 
-	综上所述,我们可以得到: $\exists \xi\in(1,2)$,$s.t. f(2)-f(1)=\frac{1}{2}\xi^2f'(\xi)$
+	综上所述: $\exists \xi\in(1,2),\ s.t.\ f(2)-f(1)=\frac{1}{2}\xi^2f'(\xi)$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[a,b]$连续,$(a,b)$可导,证明: $\exists \xi\in(1,2)$,$s.t. 2\xi[f(b)-f(a)]=(b^2-a^2)f'(\xi)$
+	设 $f(x)$ 在 $[a,b]$ 连续,$(a,b)$可导,证明: $\exists \xi\in(1,2),\ s.t.\ 2\xi[f(b)-f(a)]=(b^2-a^2)f'(\xi)$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $g(x)=x^2$
+	构造辅助函数: $g(x)=x^2$
 
-	我们对$f(x)$和$g(x)$在区间$(1,2)$上使用柯西中值定理得到:
-	$$\exists\xi\in(1,2),\ s.t. \dfrac{f(2)-f(1)}{g(2)-g(1)}=\dfrac{f'(\xi)}{g'(\xi)}$$
+	柯西中值定理:
+	$$\exists\xi\in(1,2),\ s.t.\ \dfrac{f(2)-f(1)}{g(2)-g(1)}=\dfrac{f'(\xi)}{g'(\xi)}$$
 
 	我们有:
-	$$\left\lbrace
-		\begin{array}{l}
-			\dfrac{f(2)-f(1)}{g(2)-g(1)}=\dfrac{f(b)-f(a)}{b^2-a^2} \\
-			\dfrac{f'(\xi)}{g'(\xi)}=\dfrac{f'(\xi)}{2\xi}
-		\end{array}
-		\right. \Rightarrow 2\xi[f(b)-f(a)]=(b^2-a^2)f'(\xi)$$
+	$$\begin{cases}
+		\dfrac{f(2)-f(1)}{g(2)-g(1)}=\dfrac{f(b)-f(a)}{b^2-a^2} \\
+		\dfrac{f'(\xi)}{g'(\xi)}=\dfrac{f'(\xi)}{2\xi}
+	\end{cases} \Rightarrow 2\xi[f(b)-f(a)]=(b^2-a^2)f'(\xi)$$
 
-	综上所述,我们可以得到: $\exists \xi\in(1,2)$,$s.t. 2\xi[f(b)-f(a)]=(b^2-a^2)f'(\xi)$
+	综上所述: $\exists \xi\in(1,2),\ s.t.\ 2\xi[f(b)-f(a)]=(b^2-a^2)f'(\xi)$
 \end{solution}
 
 \myspace{1}
@@ -2292,352 +2270,364 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \subsection{双中值问题}
 
 \begin{proposition}
-	设$f(x)$在$[a,b]$可导,$f(a)=f(b)=1$,证明: $\exists \xi_{1},\xi_{2}\in(a,b)$,$s.t. e^{\xi_{2}-\xi_{1}}[f'(\xi_{2})+f(\xi_{2})]=1$
+	设 $f(x)$ 在 $[a,b]$ 可导,$f(a)=f(b)=1$,证明: $\exists \xi_{1},\xi_{2}\in(a,b),\ s.t.\ e^{\xi_{2}-\xi_{1}}[f'(\xi_{2})+f(\xi_{2})]=1$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $F(x)=e^xf(x)$
+	构造辅助函数: $F(x)=e^xf(x)$
 	$$F'(x)=e^x[f'(x)+f(x)]$$
 
-	我们由拉格朗日中值定理得到:
-	$$\exists\xi\in(a,b),\ s.t. F(b)-F(a)=F'(\xi)(b-a)\Rightarrow \dfrac{e^bf(b)-e^af(a)}{b-a}=e^{\xi}[f(\xi)+f'(\xi)]$$
+	拉格朗日中值定理:
+	$$\exists\xi\in(a,b),\ s.t.\ F(b)-F(a)=F'(\xi)(b-a)\Rightarrow \dfrac{e^bf(b)-e^af(a)}{b-a}=e^{\xi}[f(\xi)+f'(\xi)]$$
 
-	我们有: $f(a)=f(b)=1\Rightarrow \dfrac{e^bf(b)-e^af(a)}{b-a}=\dfrac{e^b-e^a}{b-a}$
+	$$f(a)=f(b)=1\Rightarrow \dfrac{e^bf(b)-e^af(a)}{b-a}=\dfrac{e^b-e^a}{b-a}$$
 
-	我们构造辅助函数: $g(x)=e^x$
+	构造辅助函数: $g(x)=e^x$
 
-	我们由拉格朗日中值定理得到:
-	$$\exists\eta\in(a,b),\ s.t. \dfrac{e^b-e^a}{b-a}=g'(\eta)=e^{\eta}$$
+	拉格朗日中值定理:
+	$$\exists\eta\in(a,b),\ s.t.\ \dfrac{e^b-e^a}{b-a}=g'(\eta)=e^{\eta}$$
 
-	我们可以得到:
 	$$e^{\eta}=e^{\xi}[f(\xi)+f'(\xi)]$$
 
-	我们取$\xi_{1}=\eta,\ \xi_{2}=\xi$,我们得到: $\exists \xi_{1},\xi_{2}\in(a,b)$,$s.t. e^{\xi_{2}-\xi_{1}}[f'(\xi_{2})+f(\xi_{2})]=1$
+	取 $\xi_{1}=\eta,\xi_{2}=\xi\to \exists \xi_{1},\xi_{2}\in(a,b),\ s.t.\ e^{\xi_{2}-\xi_{1}}[f'(\xi_{2})+f(\xi_{2})]=1$
 \end{solution}
 \begin{anymark}[注]
-	我们如果取$\xi_{1}=\xi_{2}$,原命题直接转化为: $\exists\xi\in(a,b),\ s.t. f'(x)+f(x)-1=0$
+	取 $\xi_{1}=\xi_{2}\to \exists\xi\in(a,b),\ s.t.\ f'(x)+f(x)-1=0$
 
-	我们构造辅助函数: $F(x)=e^x[f(x)-1]$,$F(a)=F(b)=0$
+	构造辅助函数: $F(x)=e^x[f(x)-1]$
+
 	$$F'(x)=e^{x}[f'(x)+f(x)-1]$$
 
-	我们在区间$[a,b]$上使用罗尔定理得到:
-	$$\exists\xi\in(a,b),\ s.t. F'(\xi)=0\Rightarrow f'(\xi)+f(\xi)-1=0$$
+	$F(a) = F(b) = 0$, 罗尔定理:
 
-	综上所述,我们得到: $\exists \xi_{1}=\xi_{2}\in(a,b)$,$s.t. e^{\xi_{2}-\xi_{1}}[f'(\xi_{2})+f(\xi_{2})]=1$
+	$$\exists\xi\in(a,b),\ s.t.\ F'(\xi)=0\Rightarrow f'(\xi)+f(\xi)-1=0$$
+
+	综上所述: $\exists \xi_{1}=\xi_{2}\in(a,b),\ s.t.\ e^{\xi_{2}-\xi_{1}}[f'(\xi_{2})+f(\xi_{2})]=1$
 \end{anymark}
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[a,b]$连续,$(a,b)$可导,且$a>0$,证明: $\exists \xi,\eta\in(a,b)$,$s.t. f'(\xi)=(a+b)\dfrac{f'(\eta)}{2\eta}$
+	设 $f(x)$ 在 $[a,b]$ 连续,$(a,b)$可导, 且 $a>0$,证明: $\exists \xi,\eta\in(a,b),\ s.t.\ f'(\xi)=(a+b)\dfrac{f'(\eta)}{2\eta}$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $g(x)=x^2$
+	构造辅助函数: $g(x)=x^2$
 
-	我们对$f(x),g(x)$在区间$(a,b)$上使用柯西中值定理得到:
-	$$\exists\eta\in(a,b),\ s.t. \dfrac{f(b)-f(a)}{b^2-a^2}=\dfrac{f'(\eta)}{2\eta}\Rightarrow \dfrac{f(b)-f(a)}{b-a}=(a+b)\dfrac{f'(\eta)}{2\eta}$$
+	柯西中值定理:
+	$$\exists\eta\in(a,b),\ s.t.\ \dfrac{f(b)-f(a)}{b^2-a^2}=\dfrac{f'(\eta)}{2\eta}\Rightarrow \dfrac{f(b)-f(a)}{b-a}=(a+b)\dfrac{f'(\eta)}{2\eta}$$
 
-	我们对$f(x)$在区间$(a,b)$上使用拉格朗日中值定理得到:
-	$$\exists\xi\in(a,b),\ s.t. \dfrac{f(b)-f(a)}{b-a}=f'(\xi)$$
+	拉格朗日中值定理:
+	$$\exists\xi\in(a,b),\ s.t.\ \dfrac{f(b)-f(a)}{b-a}=f'(\xi)$$
 
-	综上所述,我们得到: $\exists \xi,\eta\in(a,b)$,$s.t. f'(\xi)=(a+b)\dfrac{f'(\eta)}{2\eta}$
+	综上所述: $\exists \xi,\eta\in(a,b),\ s.t.\ f'(\xi)=(a+b)\dfrac{f'(\eta)}{2\eta}$
 \end{solution}
 \begin{anymark}[注]
-	我们令$\xi=\eta$,原命题转化为: $\exists \sigma,\ s.t. f'(\sigma)[1-\dfrac{a+b}{2\sigma}]=0$
+	令 $\xi=\eta\to \exists \sigma,\ s.t.\ f'(\sigma)[1-\dfrac{a+b}{2\sigma}]=0$
 
-	我们取$\sigma=\dfrac{a+b}{2}$,原命题得证明
+	取 $\sigma=\dfrac{a+b}{2}$ 证毕
 \end{anymark}
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[1,2]$连续,$(1,2)$可导,且$f'(x)\neq 0$,证明: $\exists \xi,\eta,\gamma\in(1,2)$,$s.t. \dfrac{f'(\gamma)}{f'(\xi)}=\dfrac{\xi}{\eta}$
+	设 $f(x)$ 在 $[1,2]$ 连续,$(1,2)$ 可导,且 $f'(x)\neq 0$,证明: $\exists \xi,\eta,\gamma\in(1,2),\ s.t.\ \dfrac{f'(\gamma)}{f'(\xi)}=\dfrac{\xi}{\eta}$
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $g(x)=\ln x$
+	构造辅助函数: $g(x)=\ln x$
 
-	我们对$f(x)$和$g(x)$在区间$(1,2)$上使用柯西中值定理得到:
-	$$\exists\xi\in(1,2),\ s.t. \dfrac{f(2)-f(1)}{\ln 2-\ln 1}=\dfrac{f'(\xi)}{\frac{1}{\xi}}=\xi f'(\xi)$$
+	柯西中值定理:
+	$$\exists\xi\in(1,2),\ s.t.\ \dfrac{f(2)-f(1)}{\ln 2-\ln 1}=\xi f'(\xi)$$
 
-	我们对$f(x)$在区间$(1,2)$上使用拉格朗日中值定理得到:
-	$$\exists\gamma\in(1,2),\ s.t. \dfrac{f(2)-f(1)}{2-1}=f'(\gamma)$$
+	拉格朗日中值定理:
+	$$\exists\gamma\in(1,2),\ s.t.\ \dfrac{f(2)-f(1)}{2-1}=f'(\gamma)$$
 
-	我们得到: $\dfrac{f'(\gamma)}{f'(\xi)}=\xi \ln 2$
+	$$\dfrac{f'(\gamma)}{f'(\xi)}=\xi \ln 2$$
 
-	综上所述,我们得到: 取$\xi,\gamma\in(1,2),\eta=\dfrac{1}{\ln2}\in(1,2)$,$s.t. \dfrac{f'(\gamma)}{f'(\xi)}=\dfrac{\xi}{\eta}$
+	综上所述: 取 $\xi,\gamma\in(1,2),\eta=\dfrac{1}{\ln2}\in(1,2),\ s.t.\ \dfrac{f'(\gamma)}{f'(\xi)}=\dfrac{\xi}{\eta}$
 \end{solution}
 \begin{anymark}[注]
-	我们取$\xi=\gamma=\eta\in(a,b),\ s.t. \dfrac{f'(\gamma)}{f'(\xi)}=\dfrac{\xi}{\eta}$恒成立
+	取 $\xi=\gamma=\eta\in(a,b),\ s.t.\ \dfrac{f'(\gamma)}{f'(\xi)}=\dfrac{\xi}{\eta} = 1$ 恒成立
 \end{anymark}
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[0,\frac{\pi}{2}]$二阶连续可导,$f'(0)=0$,证明: $\exists \xi,\eta,\omega\in(0,\frac{\pi}{2})$,$s.t. f'(\xi)=\frac{\pi}{2}\eta\cdot \sin 2\xi\cdot f''(\omega)$
+	设 $f(x)$ 在 $[0,\dfrac{\pi}{2}]$ 二阶连续可导,$f'(0)=0$,证明: $\exists \xi,\eta,\omega\in(0,\dfrac{\pi}{2}),\ s.t.\ f'(\xi)=\dfrac{\pi}{2}\eta\cdot \sin 2\xi\cdot f''(\omega)$
 \end{proposition}
 \begin{solution}
 
-	我们将要证的式子进行一些变形:
 	$$\dfrac{f'(\xi)}{\sin 2\xi}=\dfrac{\pi}{2}\eta f''(\omega)$$
 
-	后面的部分我们对$f(x)$在$[0,\dfrac{\pi}{2}]$上使用拉格朗日中值定理得到:
-	$$\exists \eta\in(0,\dfrac{\pi}{2}),\ s.t. f(\frac{\pi}{2})-f(0)=\frac{\pi}{2}f'(\eta)$$
+	拉格朗日中值定理:
+	$$\begin{cases}
+		\exists \eta\in(0,\dfrac{\pi}{2}),\ s.t.\ f(\dfrac{\pi}{2})-f(0)=\dfrac{\pi}{2}f'(\eta)\\
+		\exists \omega\in(0,\eta),\ s.t.\ f'(\eta)=f'(\eta)-f'(0)=\eta f''(\omega)\\
+		f'(0) = 0
+	\end{cases}\Rightarrow \dfrac{\pi}{2}\eta f''(\omega) = f(\dfrac{\pi}{2}) - f(0)$$
 
-	又因为$f'(0)=0$,我们可以得到:
-	$$\exists \omega\in(0,\eta),\ s.t. f'(\eta)=f'(\eta)-f'(0)=\eta f''(\omega)$$
+	构造辅助函数: $g(x)=-\dfrac{1}{2}\cos 2x$
 
-	原命题转化为证明: $\exists\xi\in(0,\dfrac{\pi}{2}),\ s.t. \dfrac{f'(\xi)}{\sin 2\xi}=f(\frac{\pi}{2})-f(0)$
+	柯西中值定理:
+	$$\exists\xi\in(0,\dfrac{\pi}{2}),\ s.t.\ \dfrac{f(\frac{\pi}{2})-f(0)}{g(\frac{\pi}{2})-g(0)}=\dfrac{f'(\xi)}{g'(\xi)}\Rightarrow f(\frac{\pi}{2})-f(0)=\dfrac{f'(\xi)}{\sin 2\xi}$$
 
-	我们构造辅助函数: $g(x)=-\dfrac{1}{2}\cos 2x$
-
-	我们对$f(x)$和$g(x)$在$[0,\frac{\pi}{2}]$上使用柯西中值定理得到:
-	$$\exists\xi\in(0,\frac{\pi}{2}),\ s.t. \dfrac{f(\frac{\pi}{2})-f(0)}{g(\frac{\pi}{2})-g(0)}=\dfrac{f'(\xi)}{g'(\xi)}\Rightarrow f(\frac{\pi}{2})-f(0)=\dfrac{f'(\xi)}{\sin 2\xi}$$
-
-	综上所述,我们得到: $\exists \xi,\eta,\omega\in(0,\frac{\pi}{2})$,$s.t. f'(\xi)=\frac{\pi}{2}\eta\cdot \sin 2\xi\cdot f''(\omega)$
+	综上所述: $\exists \xi,\eta,\omega\in(0,\dfrac{\pi}{2}),\ s.t.\ f'(\xi)=\dfrac{\pi}{2}\eta\cdot \sin 2\xi\cdot f''(\omega)$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[0,1]$连续,$(0,1)$可导,$f(0)=0,\ f(1)=1$,证明:
+	设 $f(x)$ 在 $[0,1]$ 连续,$(0,1)$ 可导,$f(0)=0,f(1)=1$,证明:
 
-	(1).$\exists c\in(0,1),\ s.t. f(c)=1-c$
+	(1). $\exists c\in(0,1),\ s.t.\ f(c)=1-c$
 
-	(2).$\exists \xi,\eta\in(0,1),(\xi\neq \eta)\ s.t. f'(\xi)f'(\eta)=1$
+	(2). $\exists \xi,\eta\in(0,1)(\xi\neq \eta)\ s.t.\ f'(\xi)f'(\eta)=1$
 \end{proposition}
 \begin{solution}
 
-	(1). 我们构造辅助函数: $F(x)=f(x)+x-1$,$F(0)=f(0)-1=-1<0,\ F(1)=F(1)=1>0$
+	(1). 构造辅助函数: $F(x)=f(x)+x-1$
 
-	$F(x)$在$(0,1)$上连续,我们由零点定理可以得到:
-	$$\exists c\in(0,1),\ s.t. F(c)=0\Rightarrow f(c)=1-c$$
+	$$F(0)=f(0)-1=-1<0, F(1)= f(1) = 1 > 0$$
 
-	(2). 我们分别对$F(x)$在区间$(0,c)$和区间$(c,1)$上使用拉格朗日中值定理得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists x_{1}\in(0,c),\ s.t. \dfrac{F(c)-F(0)}{c}=F'(x_{1})\Rightarrow \dfrac{1}{c}=f'(x_{1})+1 \\
-			\exists x_{2}\in(c,1),\ s.t. \dfrac{F(1)-F(c)}{c}=F'(x_{2})\Rightarrow \dfrac{1}{1-c}=f'(x_{2})+1
-		\end{array}
-		\right. $$
+	零点定理:
+	$$\exists c\in(0,1),\ s.t.\ F(c)=0\Rightarrow f(c)=1-c$$
 
-	我们取$\xi=x_{1}\in(0,c),\ \eta=x_{2}\in(c,1),\ s.t. f'(\xi)f'(\eta)=\dfrac{1-c}{c}\dfrac{c}{1-c}=1$
+	(2). 
+	
+	拉格朗日中值定理:
+	$$\begin{cases}
+		\exists \xi\in(0,c),\ s.t.\ \dfrac{F(c)-F(0)}{c}=F'(\xi)\\
+		\exists \eta\in(c,1),\ s.t.\ \dfrac{F(1)-F(c)}{1-c}=F'(\eta)
+	\end{cases}\Rightarrow
+	\begin{cases}
+		f'(\xi) = \dfrac{1-c}{c}\\
+		f'(\eta) = \dfrac{c}{1-c}\\
+		f'(\xi)f'(\eta) = 1
+	\end{cases}$$
 
-	综上所述,我们得到: $\exists \xi,\eta\in(0,1),(\xi\neq \eta)\ s.t. f'(\xi)f'(\eta)=1$
+	综上所述: $\exists \xi,\eta\in(0,1)(\xi\neq \eta),\ s.t.\ f'(\xi)f'(\eta)=1$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[0,1]$连续,$(0,1)$可导,$f(0)=0,\ f(1)=1$,证明:
+	设 $f(x)$ 在 $[0,1]$ 连续,$(0,1)$ 可导,$f(0)=0,f(1)=1$,证明:
 
-	(1).$\exists c\in(0,1),\ s.t. f(c)=\frac{1}{2}$
+	(1). $\exists c\in(0,1),\ s.t.\ f(c)=\dfrac{1}{2}$
 
-	(2).$\exists \xi,\eta\in(0,1),(\xi\neq \eta)\ s.t. \dfrac{1}{f'(\xi)}+\dfrac{1}{f'(\eta)}=2$
+	(2). $\exists \xi,\eta\in(0,1)(\xi\neq \eta),\ s.t.\ \dfrac{1}{f'(\xi)}+\dfrac{1}{f'(\eta)}=2$
 \end{proposition}
 \begin{solution}
 
-	(1). 我们由$f(0)=0,\ f(1)=1$,我们由介值定理得到:
-	$$\exists c\in(0,1),\ s.t. f(c)=\dfrac{1}{2}$$
+	(1). 
+	
+	$f(0)=0,f(1)=1$, 介值定理:
+	$$\exists c\in(0,1),\ s.t.\ f(c)=\dfrac{1}{2}$$
 
-	(2). 我们分别对$f(x)$在区间$(0,c)$和区间$(c,1)$上使用拉格朗日中值定理得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists x_{1}\in(0,c),\ s.t. \dfrac{f(c)-f(0)}{c}=f'(x_{1})\Rightarrow \dfrac{1}{2c}=f'(x_{1}) \\
-			\exists x_{2}\in(\dfrac{1}{2},1),\ s.t. \dfrac{f(1)-f(c)}{1-c}=f'(x_{2})\Rightarrow \dfrac{1}{2-2c}=f'(x_{2})
-		\end{array}
-		\right. $$
+	(2). 拉格朗日中值定理:
+	$$\begin{cases}
+		\exists \xi\in(0,c),\ s.t.\ \dfrac{f(c)-f(0)}{c}=f'(\xi)\\
+		\exists \eta\in(\dfrac{1}{2},1),\ s.t.\ \dfrac{f(1)-f(c)}{1-c}=f'(\eta)
+	\end{cases}\Rightarrow
+	\begin{cases}
+		f'(\xi) = \dfrac{1}{2c}\\
+		f'(\eta) = \dfrac{1}{2-2c}\\
+		\dfrac{1}{f'(\xi)}+\dfrac{1}{f'(\eta)} = 2
+	\end{cases}$$
 
-	我们取$\xi=x_{1}\in(0,c),\ \eta=x_{2}\in(c,1),\ s.t. \dfrac{1}{f'(\xi)}+\dfrac{1}{f'(\eta)}=2c+2-2c=2$
-
-	综上所述,我们得到: $\exists \xi,\eta\in(0,1),(\xi\neq \eta)\ s.t. \dfrac{1}{f'(\xi)}+\dfrac{1}{f'(\eta)}=2$
+	综上所述: $\exists \xi,\eta\in(0,1)(\xi\neq \eta),\ s.t.\ \dfrac{1}{f'(\xi)}+\dfrac{1}{f'(\eta)}=2$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}\label{pro: $n$中值问题}
-	设$f(x)$在$[0,1]$可导,$f(0)=0,\ f(1)=1$,$\lambda_{i}(i=1,2,\cdots,n)$ 均为正数,证明: 存在互不相等的 $\xi_{i}\in(0,1),\ s.t. \dfrac{\lambda_{1}}{f'(\xi_{1})}+\dfrac{\lambda_{2}}{f'(\xi_{2})}+\cdots+\dfrac{\lambda_{n}}{f'(\xi_{n})}=\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n}$
+	设 $f(x)$ 在 $[0,1]$ 可导,$f(0)=0,\ f(1)=1$,$\lambda_{i}(i=1,2,\cdots,n)$ 均为正数,证明: 
+	存在互不相等的 $\xi_{i}\in(0,1),\ s.t.\ \dfrac{\lambda_{1}}{f'(\xi_{1})}+\dfrac{\lambda_{2}}{f'(\xi_{2})}+\cdots+\dfrac{\lambda_{n}}{f'(\xi_{n})}=\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n}$
 \end{proposition}
 \begin{solution}
 
-	由$f(0)=0,\ f(1)=1$,我们由介值定理可以得到: $\exists x_{1},x_{2},\cdots,x_{n-1}\in(0,1)$满足:
-	$$\left\lbrace
-		\begin{array}{l}
-			f(x_{1})=\dfrac{\lambda_{1}}{\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n}}             \\
-			f(x_{2})=\dfrac{\lambda_{1}+\lambda_{2}}{\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n}} \\
-			\cdots\cdots                                                                         \\
-			f(x_{n-1})=\dfrac{\lambda_{1}+\lambda_{2}+\lambda_{n-1}}{\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n}}
-		\end{array}
-		\right. $$
+	$f(0)=0,f(1)=1$, 介值定理:
 
-	在区间$(0,x_{1}),(x_{1},x_{2}),\cdots,(x_{n-1},1)$上使用拉格朗日中值定理得到:
-	$$\dfrac{x_{i+1}-x_{i}}{f(x_{i+1})-f(x_{i})}=\dfrac{1}{f'(\xi_{i})}$$
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists\xi_{1}\in(0,x_{1}),\ s.t. x_{1}-0=\dfrac{\lambda_{1}}{f'(\xi_{1})(\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n})}         \\
-			\exists\xi_{1}\in(x_{1},x_{2}),\ s.t. x_{2}-x_{1}=\dfrac{\lambda_{2}}{f'(\xi_{2})(\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n})} \\
-			\cdots\cdots                                                                                                                   \\
-			\exists\xi_{1}\in(x_{n-1},1),\ s.t. 1-x_{n-1}=\dfrac{\lambda_{n}}{f'(\xi_{n})(\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n})}
-		\end{array}
-		\right. $$
+	$\exists x_{1},x_{2},\cdots,x_{n-1}\in(0,1)$ 满足:
+	$$\begin{cases}
+		f(x_{0}) = f(0) = 0\\
+		f(x_{1})=\dfrac{\lambda_{1}}{\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n}}             \\
+		f(x_{2})=\dfrac{\lambda_{1}+\lambda_{2}}{\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n}} \\
+		\cdots\cdots                                                                         \\
+		f(x_{n-1})=\dfrac{\lambda_{1}+\lambda_{2}+\lambda_{n-1}}{\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n}}\\
+		f(x_{n}) = f(1) = 1
+	\end{cases}$$
 
-	上面$n$个式子相加得到:
-	$$Left=1=\dfrac{\lambda_{1}}{f'(\xi_{1})(\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n})}+\dfrac{\lambda_{2}}{f'(\xi_{2})(\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n})}+\cdots+\dfrac{\lambda_{n}}{f'(\xi_{n})(\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n})}=Right$$
+	拉格朗日中值定理:
+	$$\exists \xi_{i}\in(x_{i-1},x_{i})(i=1,2,\cdots,n),\ s.t.\ \dfrac{f(x_{i})-f(x_{i-1})}{x_{i}-x_{i-1}} = f'(\xi_{i})\Rightarrow x_{i} - x_{i-1} = \dfrac{f(x_{i})-f(x_{i-1})}{f'(\xi_{i})}$$
+	
+	$$\begin{cases}
+		\sum\limits_{i=1}^{n}(x_{i}-x_{i-1}) = x_{n}-x_{0} =1\\
+		f(x_{i})-f(x_{i-1})= \dfrac{\lambda_{i}}{\sum\limits_{j=1}^{n}\lambda_{j}}\\
+		\sum\limits_{i=1}^{n}\dfrac{f(x_{i})-f(x_{i-1})}{f'(\xi_{i})} = \dfrac{1}{\sum\limits_{j=1}^{n}\lambda_{j}}\sum\limits_{i=1}^{n}\dfrac{\lambda_{i}}{f'(\xi_{i})}
+	\end{cases}\Rightarrow
+	\sum\limits_{i=1}^{n}\dfrac{\lambda_{i}}{f'(\xi_{i})} = \sum\limits_{j=1}^{n}\lambda_{j}
+	$$
 
-	两边同时乘以$\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n}$,我们得到原命题.
-
-	综上所述,我们得到: 存在互不相等的 $\xi_{i}\in(0,1),\ s.t. \dfrac{\lambda_{1}}{f'(\xi_{1})}+\dfrac{\lambda_{2}}{f'(\xi_{2})}+\cdots+\dfrac{\lambda_{n}}{f'(\xi_{n})}=\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n}$
+	综上所述: 存在互不相等的 $\xi_{i}\in(0,1),\ s.t.\ \dfrac{\lambda_{1}}{f'(\xi_{1})}+\dfrac{\lambda_{2}}{f'(\xi_{2})}+\cdots+\dfrac{\lambda_{n}}{f'(\xi_{n})}=\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n}$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[0,1]$可导,$f(0)=0,\ f(1)=1$,证明: 存在互不相等的 $\xi_{i}\in(0,1),\ s.t. \sum\limits_{i=1}^{n}\dfrac{1}{f'(\xi_{i})}=n$
+	设 $f(x)$ 在 $[0,1]$ 可导,$f(0)=0,f(1)=1$,证明: 存在互不相等的 $\xi_{i}\in(0,1),\ s.t.\ \sum\limits_{i=1}^{n}\dfrac{1}{f'(\xi_{i})}=n$
 \end{proposition}
 \begin{solution}
 
-	我们令$\lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}=1$,即可证明.
+	$f(0)=0,f(1)=1$, 介值定理:
 
-	由$f(0)=0,\ f(1)=1$,我们由介值定理可以得到: $\exists x_{1},x_{2},\cdots,x_{n-1}\in(0,1)$满足:
-	$$\left\lbrace
-		\begin{array}{l}
-			f(x_{1})=\frac{1}{n} \\
-			f(x_{2})=\frac{2}{n} \\
-			\cdots\cdots         \\
-			f(x_{n-1})=\frac{n-1}{n}
-		\end{array}
-		\right. $$
+	$\exists x_{1},x_{2},\cdots,x_{n-1}\in(0,1)$ 满足:
+	$$\begin{cases}
+		f(x_{0}) = f(0) = 0\\
+		f(x_{1})=\dfrac{1}{n}             \\
+		f(x_{2})=\dfrac{2}{n} \\
+		\cdots\cdots                                                                         \\
+		f(x_{n-1})=\dfrac{n-1}{n}\\
+		f(x_{n}) = f(1) = 1
+	\end{cases}$$
 
-	在区间$(0,x_{1}),(x_{1},x_{2}),\cdots,(x_{n-1},1)$上使用拉格朗日中值定理得到:
-	$$\dfrac{x_{i+1}-x_{i}}{f(x_{i+1})-f(x_{i})}=\dfrac{1}{f'(\xi_{i})}$$
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists\xi_{1}\in(0,x_{1}),\ s.t. x_{1}-0=\dfrac{1}{nf'(\xi_{1})}         \\
-			\exists\xi_{1}\in(x_{1},x_{2}),\ s.t. x_{2}-x_{1}=\dfrac{1}{nf'(\xi_{2})} \\
-			\cdots\cdots                                                              \\
-			\exists\xi_{1}\in(x_{n-1},1),\ s.t. 1-x_{n-1}=\dfrac{1}{nf'(\xi_{n})}
-		\end{array}
-		\right. $$
+	拉格朗日中值定理:
+	$$\exists \xi_{i}\in(x_{i-1},x_{i})(i=1,2,\cdots,n),\ s.t.\ \dfrac{f(x_{i})-f(x_{i-1})}{x_{i}-x_{i-1}} = f'(\xi_{i})\Rightarrow x_{i} - x_{i-1} = \dfrac{f(x_{i})-f(x_{i-1})}{f'(\xi_{i})}$$
+	
+	$$\begin{cases}
+		\sum\limits_{i=1}^{n}(x_{i}-x_{i-1}) = x_{n}-x_{0} =1\\
+		f(x_{i})-f(x_{i-1})= \dfrac{1}{n}\\
+		\sum\limits_{i=1}^{n}\dfrac{f(x_{i})-f(x_{i-1})}{f'(\xi_{i})} = \dfrac{1}{n}\sum\limits_{i=1}^{n}\dfrac{1}{f'(\xi_{i})}
+	\end{cases}\Rightarrow
+	\sum\limits_{i=1}^{n}\dfrac{\lambda_{i}}{f'(\xi_{i})} = \sum\limits_{j=1}^{n}\lambda_{j}
+	$$
 
-	上面$n$个式子相加得到:
-	$$Left=1=\dfrac{1}{nf'(\xi_{1})}+\dfrac{1}{nf'(\xi_{2})}+\cdots+\dfrac{1}{nf'(\xi_{n})}=Right$$
-
-	两边同时乘以$n$,我们得到原命题
-
-	综上所述,我们得到: 存在互不相等的 $\xi_{i}\in(0,1),\ s.t. \sum\limits_{i=1}^{n}\dfrac{1}{f'(\xi_{i})}=n$
+	综上所述,我们得到: 存在互不相等的 $\xi_{i}\in(0,1),\ s.t.\ \sum\limits_{i=1}^{n}\dfrac{1}{f'(\xi_{i})}=n$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[0,1]$可导,$f(0)=0,\ f(1)=1$,证明: $\xi\neq \eta\in(0,1),\ s.t. \dfrac{a}{f'(\xi)}+\dfrac{b}{f'(\eta)}=a+b$
+	设$f(x)$在$[0,1]$可导,$f(0)=0,\ f(1)=1$,证明: $\xi,\eta\in(0,1)(\xi\neq \eta),\ s.t.\ \dfrac{a}{f'(\xi)}+\dfrac{b}{f'(\eta)}=a+b(a,b > 0)$
 \end{proposition}
 \begin{solution}
 
-	由$f(0)=0,\ f(1)=1$,我们由介值定理可以得到: $\exists c\in(0,1)$满足:
-	$$f(c)=\dfrac{a}{a+b}$$
+	$f(0)=0,\ f(1)=1$介值定理:
+	$$\exists c\in(0,1),\ s.t.\ f(c)=\dfrac{a}{a+b}$$
 
-	在区间$(0,c),(c,1)$上使用拉格朗日中值定理得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists\xi\in(0,c),\ s.t. c-0=\dfrac{a}{f'(\xi)(a+b)} \\
-			\exists\eta\in(c,1),\ s.t. 1-c=\dfrac{b}{f'(\eta)(a+b)}
-		\end{array}
-		\right. $$
-
-	上面两个式子相加得到: $\dfrac{a}{f'(\xi)(a+b)}+\dfrac{b}{f'(\eta)(a+b)}=1$
-
-	综上所述,我们得到: $\xi\neq \eta\in(0,1),\ s.t. \dfrac{a}{f'(\xi)}+\dfrac{b}{f'(\eta)}=a+b$
+	拉格朗日中值定理:
+	$$\begin{cases}
+		\exists\xi\in(0,c),\ s.t.\ \dfrac{f(c)-f(0)}{c} = f'(\xi) \\
+		\exists\eta\in(c,1),\ s.t.\ \dfrac{f(1)-f(c)}{1-c} = f'(\eta)
+	\end{cases}\Rightarrow
+	\begin{cases}
+		\dfrac{1}{f'(\xi)} = \dfrac{(a+b)c}{a}\\
+		\dfrac{1}{f'(\eta)} = \dfrac{(1-c)(a+b)}{b}\\
+		\dfrac{a}{f'(\xi)}+\dfrac{b}{f'(\eta)} = (a+b)c+(1-c)(a+b) = a+b
+	\end{cases}$$
+	
+	综上所述: $\xi,\eta\in(0,1)(\xi\neq \eta),\ s.t.\ \dfrac{a}{f'(\xi)}+\dfrac{b}{f'(\eta)}=a+b$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)$在$[0,1]$可导,$f(0)=0,\ f(1)=\frac{1}{4}$,证明: $\xi\neq \eta\in(0,1),\ s.t. f'(\xi)+f'(\eta)=\eta-\xi$
+	设 $f(x)$ 在 $[0,1]$ 可导,$f(0)=0,f(1)=\dfrac{1}{4}$,证明: $\xi,\eta\in(0,1)(\xi\neq \eta),\ s.t.\ f'(\xi)+f'(\eta)=\eta-\xi$
 \end{proposition}
 \begin{solution}
 
-	我们将原命题进行转换:
-	$$\xi\neq \eta\in(0,1),\ s.t. [f'(\xi)+\xi]+[f'(\eta)-\eta]=0$$
+	构造辅助函数: $g(x)=f(x)+\dfrac{1}{2}x^2$,$h(x)=f(x)-\dfrac{1}{2}x^2$
 
-	我们构造两个辅助函数: $g(x)=f(x)+\dfrac{1}{2}x^2$,$h(x)=f(x)-\dfrac{1}{2}x^2$
+	$c\in(0,1)$, 拉格朗日中值定理:
+	$$\begin{cases}
+		\exists\xi\in(0,c),\ s.t.\ \dfrac{g(c)-g(0)}{c} \\
+		\exists\eta\in(c,1),\ s.t.\ \dfrac{h(1)-h(c)}{1-c}=h'(\eta)
+	\end{cases}\Rightarrow
+	\begin{cases}
+		f'(\xi) +\xi = \dfrac{2f(c) + c^{2}}{2c}\\
+		f'(\eta) -\eta = \dfrac{c^{2}-2f(c)-2f(1)}{2-2c}
+ 	\end{cases}$$
 
-	我们在区间$(0,c)$上对$g(x)$用拉格朗日中值定理,在区间$(c,1)$上对$h(x)$用拉格朗日中值定理:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists\xi\in(0,c),\ s.t. \dfrac{g(c)-g(0)}{c}=g'(\xi)\Rightarrow \dfrac{f(c)+\frac{c^2}{2}}{c}=f'(\xi)+\xi \\
-			\exists\eta\in(c,1),\ s.t. \dfrac{h(1)-h(c)}{1-c}=h'(\eta)\Rightarrow \dfrac{\frac{c^2}{2}-f(c)-\frac{1}{4}}{1-c}=f'(\eta)-\eta
-		\end{array}
-		\right. $$
+	令 $c=\dfrac{1}{2}$:
+	$$\begin{cases}
+		f'(\xi) +\xi = 2f(c) + c^{2}\\
+		f'(\eta) -\eta = c^{2}-2f(c)-2f(1)
+	\end{cases}\Rightarrow
+	f'(\xi)+\xi+f'(\eta)-\eta = 2c^{2} - 2f(1) = 0
+	$$
 
-	我们令$c=\dfrac{1}{2}$,上面两式相加得到:
-	$$f'(\xi)+\xi+f'(\eta)-\eta=0$$
-
-	综上所述,我们得到: $\xi\in(0,\frac{1}{2}),\eta\in(\frac{1}{2},1),\ s.t. f'(\xi)+f'(\eta)=\eta-\xi$
+	综上所述: $\xi\in(0,\frac{1}{2}),\eta\in(\frac{1}{2},1),\ s.t.\ f'(\xi)+f'(\eta)=\eta-\xi$
 
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x)\in C[0,1]$,$\int_{0}^{1}f(x)dx\neq 0$,证明: 存在互异的三个数$\xi_{1},\xi_{2},\xi_{3}\in[0,1]$,满足下列不等式:
+	设 $f(x)\in \mathbb{R}[0,1],\displaystyle{\int_{0}^{1}f(x)dx}\neq 0$,证明: 存在互异的三个数$\xi_{1},\xi_{2},\xi_{3}\in[0,1]$,满足下列不等式:
 	\begin{eqnarray*}
-		\frac{\pi}{8}\int_{0}^{1}f(x)dx&=&\left[\dfrac{1}{1+\xi_{1}^2}\int_{0}^{\xi_{1}}f(x)dx+f(\xi_{1})\arctan\xi_{1}\right]\xi_{3}\\
-		&=&\left[\dfrac{1}{1+\xi_{2}^2}\int_{0}^{\xi_{2}}f(x)dx+f(\xi_{2})\arctan\xi_{2}\right](1-\xi_{3})
+		\frac{\pi}{8}\int_{0}^{1}f(x)dx & = & \left[\dfrac{1}{1+\xi_{1}^2}\int_{0}^{\xi_{1}}f(x)dx+f(\xi_{1})\arctan\xi_{1}\right]\xi_{3}\\
+		                                & = & \left[\dfrac{1}{1+\xi_{2}^2}\int_{0}^{\xi_{2}}f(x)dx+f(\xi_{2})\arctan\xi_{2}\right](1-\xi_{3})
 	\end{eqnarray*}
 \end{proposition}
 \begin{solution}
 
-	我们构造辅助函数: $F(x)=\arctan x\int_{0}^{x}f(t)dt$,\ $F(0)=0,\ F(1)=\frac{\pi}{4}\int_{0}^{1}f(x)dx$
+	构造辅助函数:
+	$$F(x) = \displaystyle{\arctan x\int_{0}^{x}f(t)dt}\to 
+	\begin{cases}
+		F(0)=0\\
+		\displaystyle{F(1)=\dfrac{\pi}{4}\int_{0}^{1}f(x)dx}
+	\end{cases}$$ 
 	$$F'(x)=\dfrac{1}{1+x^2}\int_{0}^{x}f(t)dt+f(x)\arctan x$$
 
-	原命题转化为证明:
+	等价命题:
 
-	存在互异的三个数 $\xi_{1},\xi_{2},\xi_{3}\in[0,1],\ s.t. \dfrac{1}{2}F(1)=F'(\xi_{1})\xi_{3}=F'(\xi_{2})(1-\xi_{3})$
+	$$\text{存在互异的三个数} \xi_{1},\xi_{2},\xi_{3}\in[0,1],\ s.t.\ \dfrac{1}{2}F(1) = F'(\xi_{1})\xi_{3} = F'(\xi_{2})(1-\xi_{3})$$
 
-	我们不妨设存在$c\in(0,1)$,我们分别在$(0,c)$和$(c,1)$上对$F(x)$应用拉格朗日中值定理得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists x_{1}\in(0,c),\ s.t. \dfrac{F(c)-F(0)}{c}=F'(x_{1}) \\
-			\exists x_{2}\in(c,1),\ s.t. \dfrac{F(1)-F(c)}{1-c}=F'(x_{2})
-		\end{array}
-		\right. $$
+	介值定理:
+	$$\exists c\in (0,1),\ s.t. F(c) = \dfrac{1}{2}F(1)$$
 
-	我们令$F(c)=\dfrac{1}{2}F(c)\in(0,F(1)),(F(1)>0)$,$\xi_{3}=c\in(0,1)$,$\xi_{1}\in(0,\xi_{3})$,$\xi_{2}\in(\xi_{3},1)$,我们可以得到:
-	$$\dfrac{1}{2}F(1)=F'(\xi_{1})\xi_{3}=F'(\xi_{2})(1-\xi_{3})$$
+	拉格朗日中值定理:
+	$$\begin{cases}
+		\exists x_{1}\in(0,c),\ s.t.\ \dfrac{F(c)-F(0)}{c}=F'(x_{1}) \\
+		\exists x_{2}\in(c,1),\ s.t.\ \dfrac{F(1)-F(c)}{1-c}=F'(x_{2})
+	\end{cases}\Rightarrow
+	\begin{cases}
+		\dfrac{1}{2}F(1) = cF'(x_{1})\\
+		\dfrac{1}{2}F(1) = (1-c)F'(x_{2})
+	\end{cases}$$
 
-	综上所述,我们得到: 存在互异的三个数$\xi_{1},\xi_{2},\xi_{3}\in[0,1]$,满足下列不等式:
+	取 $c = \xi_{3}, \xi_{1} = x_{1}, \xi_{2} = x_{2}$, 证毕
+
+	综上所述: 存在互异的三个数$\xi_{1},\xi_{2},\xi_{3}\in[0,1]$,满足下列不等式:
 	\begin{eqnarray*}
-		\frac{\pi}{8}\int_{0}^{1}f(x)dx&=&\left[\dfrac{1}{1+\xi_{1}^2}\int_{0}^{\xi_{1}}f(x)dx+f(\xi_{1})\arctan\xi_{1}\right]\xi_{3}\\
-		&=&\left[\dfrac{1}{1+\xi_{2}^2}\int_{0}^{\xi_{2}}f(x)dx+f(\xi_{2})\arctan\xi_{2}\right](1-\xi_{3})
+		\frac{\pi}{8}\int_{0}^{1}f(x)dx & = & \left[\dfrac{1}{1+\xi_{1}^2}\int_{0}^{\xi_{1}}f(x)dx+f(\xi_{1})\arctan\xi_{1}\right]\xi_{3}\\
+										& = & \left[\dfrac{1}{1+\xi_{2}^2}\int_{0}^{\xi_{2}}f(x)dx+f(\xi_{2})\arctan\xi_{2}\right](1-\xi_{3})
 	\end{eqnarray*}
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	设$f(x),g(x)$在$[0,1]$上可导,$\int_{0}^{1}f(x)dx=3\int_{\frac{2}{3}}^{1}f(x)dx$,证明: 存在两个不同的点$\xi,\eta\in(0,1)$,$s.t. f'(\xi)=g'(\xi)[f(\eta)-f(\xi)]$
+	设 $f(x),g(x)$ 在 $[0,1]$ 上可导,$\displaystyle{\int_{0}^{1}f(x)dx=3\int_{\frac{2}{3}}^{1}f(x)dx}$,证明: 存在两个不同的点$\xi,\eta\in(0,1),\ s.t.\ f'(\xi)=g'(\xi)[f(\eta)-f(\xi)]$
 \end{proposition}
 \begin{solution}
 
-	我们由$\int_{0}^{1}f(x)dx=3\int_{\frac{2}{3}}^{1}f(x)dx\Rightarrow \int_{0}^{\frac{2}{3}}f(x)dx=2\int_{\frac{2}{3}}^{1}f(x)dx$
+	$$\int_{0}^{1}f(x)dx=3\int_{\frac{2}{3}}^{1}f(x)dx\Rightarrow \int_{0}^{\frac{2}{3}}f(x)dx=2\int_{\frac{2}{3}}^{1}f(x)dx$$
 
-	我们由积分中值定理得到:
-	$$\left\lbrace
-		\begin{array}{l}
-			\exists x_{1}\in(0,\frac{2}{3}),\ s.t. \int_{0}^{\frac{2}{3}}f(x)dx=\frac{2}{3}f(x_{1}) \\
-			\exists x_{2}\in(\frac{2}{3},1),\ s.t. \int_{\frac{2}{3}}^{1}f(x)dx=\frac{1}{3}f(x_{2})
-		\end{array}
-		\right. \Rightarrow f(x_{1})=f(x_{2})$$
+	积分中值定理:
+	$$\begin{cases}
+		\exists x_{1}\in(0,\dfrac{2}{3}),\ s.t.\ \displaystyle{\int_{0}^{\frac{2}{3}}f(x)dx=\frac{2}{3}f(x_{1})} \\
+		\exists x_{2}\in(\dfrac{2}{3},1),\ s.t.\ \displaystyle{\int_{\frac{2}{3}}^{1}f(x)dx=\frac{1}{3}f(x_{2})}
+	\end{cases}\Rightarrow f(x_{1})=f(x_{2})$$
 
-	我们构造辅助函数: $F(x)=[f(x)-f(x_{1})]e^{g(x)}$, $F(x_{1})=F(x_{2})=0$
+	构造辅助函数: $F(x)=[f(x)-f(x_{1})]e^{g(x)}$
 
-	$$F'(x)=e^{g(x)}\{f'(x)+g'(x)[f(x)-f(x_{1})]\}$$
+	$$F'(x)=e^{g(x)}\left[f'(x)+g'(x)[f(x)-f(x_{1})]\right]$$
 
-	我们对$F(x)$在区间$(x_{1},x_{2})$上使用罗尔定理得到:
-	$$\exists \xi\in(x_{1},x_{2}),\ s.t. F'(\xi)=0\Rightarrow f'(\xi)+g'(\xi)[f(\xi)-f(x_{1})]$$
+	$F(x_{1}) = F(x_{2}) = 0$, 罗尔定理:
+	$$\exists \xi\in(x_{1},x_{2}),\ s.t.\ F'(\xi)=0\Rightarrow f'(\xi)+g'(\xi)[f(\xi)-f(x_{1})]$$
 
-	我们令$\eta=x_{1}$,我们得到: $\exists \xi\in(x_{1},x_{2}),\ \eta=x_{1},\ s.t. f'(\xi)=g'(\xi)[f(\eta)-f(\xi)]$
+	令 $\eta=x_{1},\exists \xi\in(x_{1},x_{2}),\ s.t.\ f'(\xi)=g'(\xi)[f(\eta)-f(\xi)]$
 
-	综上所述,我们得到: $\exists \xi,\eta\in(0,1)$,$s.t. f'(\xi)=g'(\xi)[f(\eta)-f(\xi)]$
+	综上所述: $\exists \xi,\eta\in(0,1),\ s.t.\ f'(\xi)=g'(\xi)[f(\eta)-f(\xi)]$
 
 \end{solution}
 
@@ -2659,7 +2649,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 		\right. \Rightarrow f'(x+\theta h)-f'(x)=\frac{f''(\eta)}{2!}h$$
 
 	我们对$f'(x)$在区间$(x,x+\theta h)$上使用拉格朗日中值定理得到:
-	$$\exists\xi\in(x,x+\theta h),\ s.t f'(x+\theta h)-f'(x)=\theta hf''(\xi)\Rightarrow \theta=\dfrac{f''(\eta)}{2f''(\xi)}$$
+	$$\exists\xi\in(x,x+\theta h),\ s.t.\ f'(x+\theta h)-f'(x)=\theta hf''(\xi)\Rightarrow \theta=\dfrac{f''(\eta)}{2f''(\xi)}$$
 	$$\lim\limits_{h\rightarrow 0 }\theta=\lim\limits_{h\rightarrow 0 }\dfrac{f''(\eta)}{2f''(\xi)}=\dfrac{1}{2}$$
 
 	综上所述,我们得到: $\lim\limits_{h\rightarrow 0 }\theta=\dfrac{1}{2}$
@@ -2686,7 +2676,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	$$\dfrac{f^{n}(a+\theta h)}{n!}h^n=\dfrac{f^{n}(a)}{n!}h^n+\dfrac{f^{n+1}(\xi)}{(n+1)!}h^{n+1}\Rightarrow f^{(n)}(a+\theta h)-f^{(n)}(a)=\dfrac{f^{(n+1)}(\xi)}{n+1}h$$
 
 	我们对$f^{(n)}(x)$在区间$(a,a+h)$上使用拉格朗日中值定理得到:
-	$$\exists\eta\in(a,a+h),\ s.t. f^{(n)}(a+\theta h)-f^{(n)}(a)=\theta hf^{(n+1)}(\eta)\Rightarrow \theta=\dfrac{1}{n+1}\dfrac{f^{(n+1)}(\xi)}{f^{(n+1)}(\eta)}$$
+	$$\exists\eta\in(a,a+h),\ s.t.\ f^{(n)}(a+\theta h)-f^{(n)}(a)=\theta hf^{(n+1)}(\eta)\Rightarrow \theta=\dfrac{1}{n+1}\dfrac{f^{(n+1)}(\xi)}{f^{(n+1)}(\eta)}$$
 	$$\lim\limits_{h\rightarrow 0 }\theta=\lim\limits_{h\rightarrow 0 }\dfrac{1}{n+1}\dfrac{f^{(n+1)}(\xi)}{f^{(n+1)}(\eta)}=\dfrac{1}{n+1}$$
 
 \end{solution}
@@ -2766,7 +2756,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \myspace{1}
 
 \begin{proposition}
-	$f(x)$在$[a,b]$三阶连续可导,证明: $$\exists \xi\in(a,b),\ s.t. f(b)=f(a)+f'(\dfrac{a+b}{2})(b-a)+\dfrac{(b-a)^3}{24}f'''(\xi)$$
+	$f(x)$在$[a,b]$三阶连续可导,证明: $$\exists \xi\in(a,b),\ s.t.\ f(b)=f(a)+f'(\dfrac{a+b}{2})(b-a)+\dfrac{(b-a)^3}{24}f'''(\xi)$$
 \end{proposition}
 \begin{solution}
 
@@ -2785,10 +2775,10 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	$$f(b)-f(a)=f'(\frac{a+b}{2})(b-a)+\dfrac{(b-a)^3}{48}[f^{(3)}(\xi_{1})+f^{(3)}(\xi_{2})]$$
 
 	由介值定理我们得到:
-	$$\exists\xi\in(\xi_{1},\xi_{2}),\ s.t. f^{(3)}(\xi)=\dfrac{f^{(3)}(\xi_{1})+f^{(3)}(\xi_{2})}{2}$$
+	$$\exists\xi\in(\xi_{1},\xi_{2}),\ s.t.\ f^{(3)}(\xi)=\dfrac{f^{(3)}(\xi_{1})+f^{(3)}(\xi_{2})}{2}$$
 
 	综上所述,我们得到:
-	$$\exists \xi\in(a,b),\ s.t. f(b)=f(a)+f'(\dfrac{a+b}{2})(b-a)+\dfrac{(b-a)^3}{24}f'''(\xi)$$
+	$$\exists \xi\in(a,b),\ s.t.\ f(b)=f(a)+f'(\dfrac{a+b}{2})(b-a)+\dfrac{(b-a)^3}{24}f'''(\xi)$$
 \end{solution}
 \begin{anymark}[常数$K$值法]
 	我们构造辅助函数: $F(x)=f(x)-f(a)-f'(\frac{a+x}{2})(x-a)+k(x-a)^3$
@@ -2798,16 +2788,16 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	我们有: $F(a)=F(b)=0$
 
 	我们对$F(x)$在区间$(a,b)$上使用罗尔定理得到:
-	$$\exists\xi\in(a,b),\ s.t. F'(\xi)=0\Rightarrow f'(\xi)=\frac{1}{2}f''(\frac{a+\xi}{2})(\frac{\xi-a}{2})+f'(\frac{a+\xi}{2})+3k(\xi-a)^2$$
+	$$\exists\xi\in(a,b),\ s.t.\ F'(\xi)=0\Rightarrow f'(\xi)=\frac{1}{2}f''(\frac{a+\xi}{2})(\frac{\xi-a}{2})+f'(\frac{a+\xi}{2})+3k(\xi-a)^2$$
 
 	我们将$f(x)$在$x=\frac{\xi+a}{2}$处展开:
 	$$f'(\xi)=f'(\frac{\xi+a}{2})+f''(\frac{\xi+a}{2})(\frac{\xi-a}{2})+\frac{f^{(3)}(\eta)}{2}(\frac{\xi-a}{2})^2$$
-	我们对比两式,$\exists \xi\in(a,b),\ s.t. f(b)=f(a)+f'(\frac{a+b}{2})(b-a)+\frac{1}{24}f'''(\xi)(b-a)^3$
+	我们对比两式,$\exists \xi\in(a,b),\ s.t.\ f(b)=f(a)+f'(\frac{a+b}{2})(b-a)+\frac{1}{24}f'''(\xi)(b-a)^3$
 \end{anymark}
 \myspace{1}
 
 \begin{proposition}
-	$f(x)$在$[a,b]$二阶连续可导,证明: $$\exists \xi\in(a,b),\ s.t. f(a)-2f(\dfrac{a+b}{2})+f(b)=\dfrac{(b-a)^2}{4}f''(\xi)$$
+	$f(x)$在$[a,b]$二阶连续可导,证明: $$\exists \xi\in(a,b),\ s.t.\ f(a)-2f(\dfrac{a+b}{2})+f(b)=\dfrac{(b-a)^2}{4}f''(\xi)$$
 \end{proposition}
 \begin{solution}
 
@@ -2826,10 +2816,10 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	$$f(b)+f(a)=2f(\frac{a+b}{2})+\dfrac{(b-a)^2}{8}[f''(\xi_{1})+f''(\xi_{2})]$$
 
 	由介值定理我们得到:
-	$$\exists\xi\in(\xi_{1},\xi_{2}),\ s.t. f''(\xi)=\dfrac{f''(\xi_{1})+f''(\xi_{2})}{2}$$
+	$$\exists\xi\in(\xi_{1},\xi_{2}),\ s.t.\ f''(\xi)=\dfrac{f''(\xi_{1})+f''(\xi_{2})}{2}$$
 
 	综上所述,我们得到:
-	$$\exists \xi\in(a,b),\ s.t. f(a)-2f(\dfrac{a+b}{2})+f(b)=\dfrac{(b-a)^2}{4}f''(\xi)$$
+	$$\exists \xi\in(a,b),\ s.t.\ f(a)-2f(\dfrac{a+b}{2})+f(b)=\dfrac{(b-a)^2}{4}f''(\xi)$$
 \end{solution}
 \begin{anymark}[常数$K$值法]
 	我们构造辅助函数: $F(x)=f(x)+f(a)-2f(\frac{x+a}{2})-k(x-a)^2$
@@ -2839,19 +2829,19 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	我们有: $F(a)=F(b)=0$
 
 	我们对$F(x)$在区间$(a,b)$上使用罗尔定理得到:
-	$$\exists \xi\in(a,b),\ s.t. F'(\xi)=0\Rightarrow f'(\xi)=f'(\frac{\xi+a}{2})+4k(\frac{\xi-a}{2})$$
+	$$\exists \xi\in(a,b),\ s.t.\ F'(\xi)=0\Rightarrow f'(\xi)=f'(\frac{\xi+a}{2})+4k(\frac{\xi-a}{2})$$
 
 	我们将$f'(\xi)$在$x=\frac{\xi+a}{2}$处泰勒展开得到:
-	$$\exists\eta,\ s.t. f'(\xi)=f'(\frac{\xi+a}{2})+f''(\eta)(\xi-\frac{\xi+a}{2})$$
+	$$\exists\eta,\ s.t.\ f'(\xi)=f'(\frac{\xi+a}{2})+f''(\eta)(\xi-\frac{\xi+a}{2})$$
 
 	我们对比上面两个式子可以得到: $k=\dfrac{f''(\eta)}{4}$
 
-	综上所述,我们得到: $\exists \xi\in(a,b),\ s.t. f(a)-2f(\dfrac{a+b}{2})+f(b)=\dfrac{(b-a)^2}{4}f''(\xi)$
+	综上所述,我们得到: $\exists \xi\in(a,b),\ s.t.\ f(a)-2f(\dfrac{a+b}{2})+f(b)=\dfrac{(b-a)^2}{4}f''(\xi)$
 \end{anymark}
 \myspace{1}
 
 \begin{proposition}
-	$f(x)$在$[a,b]\text{上}n(n\geq 2)$阶可导,满足$f^{(i)}(a)=f^{(i)}(b)=0(i=1,2,\cdots,n-1)$,证明: $$\exists \xi\in(a,b),\ s.t. |f^{(n)}(\xi)|\geq \dfrac{2^{n-1}n!}{(b-a)^n}|f(b)-f(a)|$$
+	$f(x)$在$[a,b]\text{上}n(n\geq 2)$阶可导,满足$f^{(i)}(a)=f^{(i)}(b)=0(i=1,2,\cdots,n-1)$,证明: $$\exists \xi\in(a,b),\ s.t.\ |f^{(n)}(\xi)|\geq \dfrac{2^{n-1}n!}{(b-a)^n}|f(b)-f(a)|$$
 \end{proposition}
 \begin{solution}
 
@@ -2875,10 +2865,10 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	$$\dfrac{2^{n-1}n!|f(b)-f(a)|}{(b-a)^n}=\dfrac{|(-1)^nf^{(n)}(\xi_{2})+f^{(n)}(\xi_{1})|}{2}\leq \dfrac{|f^{(n)}(\xi_{2})|+|f^{(n)}(\xi_{1})|}{2}$$
 
 	我们由介值定理可以得到:
-	$$\exists\xi\in(\xi_{1},\xi_{2}),\ s.t. f^{(n)}(\xi)=\dfrac{f^{(n)}(\xi_{1})+f^{(n)}(\xi_{2})}{2}$$
+	$$\exists\xi\in(\xi_{1},\xi_{2}),\ s.t.\ f^{(n)}(\xi)=\dfrac{f^{(n)}(\xi_{1})+f^{(n)}(\xi_{2})}{2}$$
 
 	综上所述,我们得到:
-	$$\exists \xi\in(a,b),\ s.t. |f^{(n)}(\xi)|\geq \dfrac{2^{n-1}n!}{(b-a)^n}|f(b)-f(a)|$$
+	$$\exists \xi\in(a,b),\ s.t.\ |f^{(n)}(\xi)|\geq \dfrac{2^{n-1}n!}{(b-a)^n}|f(b)-f(a)|$$
 \end{solution}
 
 \myspace{1}
@@ -2985,13 +2975,13 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \subsection{广义罗尔定理}
 
 \begin{proposition}
-	1. $f(x)$在$(a,b)$内可导,且$\lim\limits_{x\rightarrow a^{+}}f(x)=\lim\limits_{x\rightarrow b^{-}}f(x)=A$,证明: $\exists \xi\in(a,b),\ s.t. f'(\xi)=0$
+	1. $f(x)$在$(a,b)$内可导,且$\lim\limits_{x\rightarrow a^{+}}f(x)=\lim\limits_{x\rightarrow b^{-}}f(x)=A$,证明: $\exists \xi\in(a,b),\ s.t.\ f'(\xi)=0$
 
-	2. $f(x)$在$[0,+\infty)$内可导,且$f(0)=\lim\limits_{x\rightarrow +\infty}f(x)=A$,证明: $\exists \xi\in(0,+\infty),\ s.t. f'(\xi)=0$
+	2. $f(x)$在$[0,+\infty)$内可导,且$f(0)=\lim\limits_{x\rightarrow +\infty}f(x)=A$,证明: $\exists \xi\in(0,+\infty),\ s.t.\ f'(\xi)=0$
 
-	3.$f(x)$在$[0,+\infty)$内可导,且$0\leq f(x)\leq \frac{x}{1+x^2}$,证明: $\exists \xi>0,\ s.t. f'(\xi)=\dfrac{1-\xi^2}{(1+\xi^2)^2}$
+	3.$f(x)$在$[0,+\infty)$内可导,且$0\leq f(x)\leq \frac{x}{1+x^2}$,证明: $\exists \xi>0,\ s.t.\ f'(\xi)=\dfrac{1-\xi^2}{(1+\xi^2)^2}$
 
-	4.$f(x)$在$[0,+\infty)$内可导,$f(0)=1$,且$|f(x)|\leq e^{-x}$,证明: $\exists \xi>0,\ s.t. f'(\xi)+e^{-\xi}=0$
+	4.$f(x)$在$[0,+\infty)$内可导,$f(0)=1$,且$|f(x)|\leq e^{-x}$,证明: $\exists \xi>0,\ s.t.\ f'(\xi)+e^{-\xi}=0$
 
 \end{proposition}
 \begin{solution}
@@ -3004,9 +2994,9 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 		\right. $
 
 	我们可以得到$g(x)$在$[a,b]$上连续,在$(a,b)$上可导,我们由罗尔定理可得:
-	$$\exists\xi\in(a,b),\ s.t. g'(\xi)=0\Rightarrow f'(\xi)=0$$
+	$$\exists\xi\in(a,b),\ s.t.\ g'(\xi)=0\Rightarrow f'(\xi)=0$$
 
-	综上所述,我们得到: $\exists \xi\in(a,b),\ s.t. f'(\xi)=0$
+	综上所述,我们得到: $\exists \xi\in(a,b),\ s.t.\ f'(\xi)=0$
 
 	\myspace{1}
 
@@ -3020,9 +3010,9 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	我们可以得到$g(x)$在区间$[0,\frac{\pi}{2}]$上连续,$(0,\frac{\pi}{2})$上可导,且$g(0)=g(\frac{\pi}{2})=A$.
 
 	我们对$g(x)$在$(0,\frac{\pi}{2})$上使用罗尔定理可以得到:
-	$$\exists\eta\in(0,\frac{\pi}{2}),\ s.t. f'(\tan \eta)=0\Rightarrow \exists \xi\in(0,+\infty),\ s.t. f'(\xi)=0$$
+	$$\exists\eta\in(0,\frac{\pi}{2}),\ s.t.\ f'(\tan \eta)=0\Rightarrow \exists \xi\in(0,+\infty),\ s.t. f'(\xi)=0$$
 
-	综上所述,我们可以得到: $\exists \xi\in(0,+\infty),\ s.t. f'(\xi)=0$
+	综上所述,我们可以得到: $\exists \xi\in(0,+\infty),\ s.t.\ f'(\xi)=0$
 
 	\myspace{1}
 
@@ -3037,7 +3027,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 		\right. $$
 
 	我们得到: $\lim\limits_{x\rightarrow 0 }g(x)=\lim\limits_{x\rightarrow  +\infty}g(x)=0$,我们由第一问的结论可以得到:
-	$$\exists\xi\in(0,+\infty),\ s.t. g'(\xi)=0\Rightarrow f'(\xi)=\dfrac{1-\xi^2}{(1+\xi^2)^2}$$
+	$$\exists\xi\in(0,+\infty),\ s.t.\ g'(\xi)=0\Rightarrow f'(\xi)=\dfrac{1-\xi^2}{(1+\xi^2)^2}$$
 
 	\myspace{1}
 
@@ -3048,7 +3038,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	$$\lim\limits_{x\rightarrow +\infty}f(x)=0\Rightarrow \lim\limits_{x\rightarrow +\infty}g(x)=0$$
 
 	我们得到: $\lim\limits_{x\rightarrow 0 }g(x)=\lim\limits_{x\rightarrow  +\infty}g(x)=0$,我们由第一问的结论可以得到:
-	$$\exists\xi\in(0,+\infty),\ s.t. g'(\xi)=0\Rightarrow f'(\xi)+e^{-\xi}=0$$
+	$$\exists\xi\in(0,+\infty),\ s.t.\ g'(\xi)=0\Rightarrow f'(\xi)+e^{-\xi}=0$$
 \end{solution}
 
 \myspace{1}
@@ -3056,7 +3046,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \subsection{常数 K 值法}
 
 \begin{proposition}
-	$f(x)$在$(a,b)$上三阶可导,证明: $$\exists\xi\in(a,b),\ s.t. f(b)=f(a)+\dfrac{f'(a)+f'(b)}{2}(b-a)-\frac{1}{12}f'''(\xi)(b-a)^3$$
+	$f(x)$在$(a,b)$上三阶可导,证明: $$\exists\xi\in(a,b),\ s.t.\ f(b)=f(a)+\dfrac{f'(a)+f'(b)}{2}(b-a)-\frac{1}{12}f'''(\xi)(b-a)^3$$
 \end{proposition}
 \begin{solution}
 
@@ -3065,18 +3055,18 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	我们有: $F(a)=F(b)=0$
 
 	我们对$F(x)$在区间$(a,b)$上使用罗尔定理得到:
-	$$\exists\xi\in(a,b),\ s.t. F'(\xi)=0\Rightarrow f'(a)=f'(\xi)+f''(\xi)(a-\xi)-6k(a-\xi)^3$$
+	$$\exists\xi\in(a,b),\ s.t.\ F'(\xi)=0\Rightarrow f'(a)=f'(\xi)+f''(\xi)(a-\xi)-6k(a-\xi)^3$$
 
 	我们将$f'(a)$在$x=\xi$处进行泰勒展开:
 	$$f'(a)=f'(\xi)+f''(\xi)(a-\xi)+f^{(3)}(\xi)(a-\xi)^3$$
 
-	我们取$k=-\dfrac{f^{(3)}(\xi)}{12}$满足上式,$\exists k=-\dfrac{f^{(3)}(\xi)}{12},\ s.t. f(b)=f(a)+\dfrac{f'(a)+f'(b)}{2}(b-a)-\frac{1}{12}f'''(\xi)(b-a)^3$
+	我们取$k=-\dfrac{f^{(3)}(\xi)}{12}$满足上式,$\exists k=-\dfrac{f^{(3)}(\xi)}{12},\ s.t.\ f(b)=f(a)+\dfrac{f'(a)+f'(b)}{2}(b-a)-\frac{1}{12}f'''(\xi)(b-a)^3$
 
 \end{solution}
 
 \myspace{1}
 \begin{proposition}
-	$f(x)$在$(a,b)$上三阶可导,证明: $$\exists\xi\in(a,b),\ s.t. \int_{a}^{b}f(x)dx=\frac{b-a}{4}\left[f(a)+3f(\frac{a+2b}{3}) \right]-\frac{(b-a)^4}{216}f'''(\xi) $$
+	$f(x)$在$(a,b)$上三阶可导,证明: $$\exists\xi\in(a,b),\ s.t.\ \int_{a}^{b}f(x)dx=\frac{b-a}{4}\left[f(a)+3f(\frac{a+2b}{3}) \right]-\frac{(b-a)^4}{216}f'''(\xi) $$
 \end{proposition}
 \begin{solution}
 
@@ -3086,10 +3076,10 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	$$F(a)=F(b)=0$$
 	$$F'(x)=f(x)-\dfrac{f(a)+3f(\frac{a+2x}{3})}{4}-\dfrac{x-a}{2}f'(\dfrac{a+2x}{3})+4k(x-a)^3,\ F'(a)=0$$
 	我们对$F(x)$在区间$(a,b)$上使用罗尔定理得到:
-	$$\exists \xi\in(a,b),\ s.t. F'(\xi)=0$$
+	$$\exists \xi\in(a,b),\ s.t.\ F'(\xi)=0$$
 
 	我们对$F'(x)$在区间$(a,\xi)$上使用罗尔定理得到:
-	$$\exists \eta\in(a,\xi),\ s.t. F''(\eta)=0\Rightarrow f'(\eta)=f'(\dfrac{a+2\eta}{3})+f''(\dfrac{a+2\eta}{3})(\eta-\dfrac{a+2\eta}{3})-12k(x-a)^2$$
+	$$\exists \eta\in(a,\xi),\ s.t.\ F''(\eta)=0\Rightarrow f'(\eta)=f'(\dfrac{a+2\eta}{3})+f''(\dfrac{a+2\eta}{3})(\eta-\dfrac{a+2\eta}{3})-12k(x-a)^2$$
 
 	我们将$f'(\eta)$在$x=\dfrac{a+2\eta}{3}$处进行泰勒展开得到:
 	$$f'(\eta)=f'(\dfrac{a+2\eta}{3})+f''(\eta)(x-\dfrac{a+2\eta}{3})+\dfrac{f'''(c)}{2}(x-\dfrac{a+2\eta}{3})^2$$
@@ -3097,7 +3087,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	我们对比两个式子,可以发现$k=-\dfrac{f'''(c)}{216}$
 
 	我们取$k=-\dfrac{f'''(c)}{216}$满足上式
-	$$\exists\xi\in(a,b),\ s.t. \int_{a}^{b}f(x)dx=\frac{b-a}{4}\left[f(a)+3f(\frac{a+2b}{3}) \right]-\frac{(b-a)^4}{216}f'''(\xi) $$
+	$$\exists\xi\in(a,b),\ s.t.\ \int_{a}^{b}f(x)dx=\frac{b-a}{4}\left[f(a)+3f(\frac{a+2b}{3}) \right]-\frac{(b-a)^4}{216}f'''(\xi) $$
 \end{solution}
 
 \myspace{1}
@@ -3116,17 +3106,17 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	我们发现: $F(x)$一共有$x_{1},x_{2},\cdots,x_{n},c$,共计$n+1$个零点.
 
 	我们多次使用罗尔定理可以得到:
-	$$\exists \xi\in(a_{1},a_{n}),\ s.t. F^{(n)}(\xi)=0\Rightarrow f^{(n)}(\xi)=k$$
+	$$\exists \xi\in(a_{1},a_{n}),\ s.t.\ F^{(n)}(\xi)=0\Rightarrow f^{(n)}(\xi)=k$$
 
 	我们取$k=f^{(n)}(\xi)$,我们可以得到: $f^{(n)}(\xi)=\dfrac{n!f(x)}{(c-a_{1})(c-a_{2})\cdots(c-a_{n})}$
 
-	综上所述,$$\exists \xi\in(a_{1},a_{n}),\ s.t. f(c)=\dfrac{(c-a_{1})(c-a_{2})\cdots(c-a_{n})}{n!}f^{(n)}(\xi)$$
+	综上所述,$$\exists \xi\in(a_{1},a_{n}),\ s.t.\ f(c)=\dfrac{(c-a_{1})(c-a_{2})\cdots(c-a_{n})}{n!}f^{(n)}(\xi)$$
 \end{solution}
 
 \myspace{1}
 
 \begin{proposition}
-	$f(x)$在$(a,b)$上二阶可导,证明: $$\forall c\in(a,b),\exists\xi\in(a,b),\ s.t. \dfrac{f''(\xi)}{2}=\dfrac{f(a)}{(a-b)(a-c)}+\dfrac{f(b)}{(a-b)(c-b)}+\dfrac{f(c)}{(c-a)(c-b)}$$
+	$f(x)$在$(a,b)$上二阶可导,证明: $$\forall c\in(a,b),\exists\xi\in(a,b),\ s.t.\ \dfrac{f''(\xi)}{2}=\dfrac{f(a)}{(a-b)(a-c)}+\dfrac{f(b)}{(a-b)(c-b)}+\dfrac{f(c)}{(c-a)(c-b)}$$
 \end{proposition}
 \begin{solution}
 
@@ -3139,17 +3129,17 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	我们对$F(x)$在区间$(a,c)$和区间$(c,b)$上使用罗尔定理得到:
 	$$\left\lbrace
 		\begin{array}{l}
-			\exists \xi\in(a,c),\ s.t. F'(\xi)=0 \\
-			\exists \eta\in(c,b),\ s.t. F'(\eta)=0
+			\exists \xi\in(a,c),\ s.t.\ F'(\xi)=0 \\
+			\exists \eta\in(c,b),\ s.t.\ F'(\eta)=0
 		\end{array}
 		\right. $$
 
 	我们对$F'(x)$在区间$(\xi,\eta)$上使用罗尔定理得到:
-	$$\exists\gamma\in(\xi,\eta),\ s.t. F''(\gamma)=0\Rightarrow k=f''(\gamma)$$
+	$$\exists\gamma\in(\xi,\eta),\ s.t.\ F''(\gamma)=0\Rightarrow k=f''(\gamma)$$
 
-	我们证明: $\exists \gamma\in(a,b),\ s.t. f''(\gamma)=k=2[\dfrac{f(a)}{(a-b)(a-c)}+\dfrac{f(b)}{(a-b)(c-b)}+\dfrac{f(c)}{(c-a)(c-b)}]$
+	我们证明: $\exists \gamma\in(a,b),\ s.t.\ f''(\gamma)=k=2[\dfrac{f(a)}{(a-b)(a-c)}+\dfrac{f(b)}{(a-b)(c-b)}+\dfrac{f(c)}{(c-a)(c-b)}]$
 
-	综上所述,我们得到: $$\forall c\in(a,b),\exists\xi\in(a,b),\ s.t. \dfrac{f''(\xi)}{2}=\dfrac{f(a)}{(a-b)(a-c)}+\dfrac{f(b)}{(a-b)(c-b)}+\dfrac{f(c)}{(c-a)(c-b)}$$
+	综上所述,我们得到: $$\forall c\in(a,b),\exists\xi\in(a,b),\ s.t.\ \dfrac{f''(\xi)}{2}=\dfrac{f(a)}{(a-b)(a-c)}+\dfrac{f(b)}{(a-b)(c-b)}+\dfrac{f(c)}{(c-a)(c-b)}$$
 \end{solution}
 
 \myspace{1}
