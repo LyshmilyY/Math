@@ -23,7 +23,7 @@
 \DeclareStringOption[answer]{result}
 \DeclareStringOption[fancy]{mode}
 \DeclareStringOption[normal]{device}
-\DeclareStringOption[cm]{math}
+\DeclareStringOption[cm]{maths}
 \DeclareStringOption[marginfalse]{marginpar}
 \DeclareStringOption[onecol]{toc}
 \DeclareStringOption{scheme}
@@ -59,9 +59,9 @@
 \DeclareStringOption[numeric-comp]{citestyle}
 \DeclareStringOption[numeric]{bibstyle}
 
-\DeclareVoidOption{newtx}{\ekv{math=newtx}}
-\DeclareVoidOption{mtpro2}{\ekv{math=mtpro2}}
-\DeclareVoidOption{cm}{\ekv{math=cm}}
+\DeclareVoidOption{newtx}{\ekv{maths=newtx}}
+\DeclareVoidOption{mtpro2}{\ekv{maths=mtpro2}}
+\DeclareVoidOption{cm}{\ekv{maths=cm}}
 
 \DeclareVoidOption{margintrue}{\ekv{marginpar=margintrue}}
 \DeclareVoidOption{marginfalse}{\ekv{marginpar=marginfalse}}
@@ -154,7 +154,7 @@
 
 \RequirePackage{indentfirst,comment}
 % fontsetting
-\ifdefstring{\VIVID@math}{mtpro2}{
+\ifdefstring{\VIVID@maths}{mtpro2}{
   \let\Bbbk\relax
   \RequirePackage[lite]{mtpro2}
 }{\relax}
@@ -244,7 +244,7 @@
 \fi
 
 \RequirePackage{anyfontsize}
-\ifdefstring{\VIVID@math}{newtx}{
+\ifdefstring{\VIVID@maths}{newtx}{
   \let\oldencodingdefault\encodingdefault
   \let\oldrmdefault\rmdefault
   \let\oldsfdefault\sfdefault
