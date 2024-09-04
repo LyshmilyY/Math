@@ -1,9 +1,4 @@
 {
-    "latex-workshop.latex.autoBuild.run": "never",
-    "latex-workshop.showContextMenu": true,
-    "latex-workshop.intellisense.package.enabled": true,
-    "latex-workshop.message.error.show": false,
-    "latex-workshop.message.warning.show": false,
     "latex-workshop.latex.tools": [
         {
             "name": "xelatex",
@@ -34,8 +29,6 @@
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
-                "-pdf",
-                "-outdir=%OUTDIR%",
                 "%DOCFILE%"
             ]
         },
@@ -49,6 +42,12 @@
     ],
     "latex-workshop.latex.recipes": [
         {
+            "name": "xeLaTeX",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {   
             "name": "XeLaTeX",
             "tools": [
                 "xelatex",
@@ -57,8 +56,15 @@
             ]
         },
         {
+            "name": "pdfLaTeX",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
             "name": "PDFLaTeX",
             "tools": [
+                "pdflatex",
                 "pdflatex"
             ]
         },
@@ -69,22 +75,13 @@
             ]
         },
         {
-            "name": "LaTeXmk",
+            "name": "XeLaTeXmk",
             "tools": [
                 "latexmk"
             ]
         },
         {
-            "name": "xelatex -> bibtex -> xelatex*2",
-            "tools": [
-                "xelatex",
-                "bibtex",
-                "xelatex",
-                "xelatex"
-            ]
-        },
-        {
-            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "name": "PDFLaTeXmk",
             "tools": [
                 "pdflatex",
                 "bibtex",
@@ -93,10 +90,15 @@
             ]
         }
     ],
+    "latex-workshop.latex.recipe.default": "XeLaTeX", 
+    "latex-workshop.latex.autoBuild.run": "never", 
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.build.rootfileInStatus": true,
     "latex-workshop.latex.clean.fileTypes": [
         "*.aux",
         "*.bbl",
         "*.blg",
+        "*.dvi",
         "*.idx",
         "*.ind",
         "*.lof",
@@ -117,8 +119,13 @@
         "*.ptc",
         "*.run.xml"
     ],
-    "latex-workshop.latex.autoClean.run": "onBuilt",
-    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.showContextMenu": true,
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.message.error.show": true,
+    "latex-workshop.message.warning.show": true,
+    "latex-workshop.message.log.show": false,
+    "latex-workshop.message.badbox.show": false,
     "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
-    "latex-workshop.view.pdf.viewer": "tab"
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.outline.sync.viewer": true
 }
