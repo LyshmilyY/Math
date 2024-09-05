@@ -1,10 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%
 %% start of file `vavidbook.cls'.
-%% 
-%% Copyright 2023-2024 vavidbook (sx12101184@qq.com)
-%% This work may be distributed and/or modified freely
-%% available at 
-%%%%%%%%%%%%%%%%%%%%%
+%% Copyright (C) 2024 LyshmilyY
 % % !Mode:: "TeX:UTF-8"
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{vavidbook}[2023/09/03 VividBook doc]
@@ -142,7 +138,7 @@
     {\VIVID@Hy@latertrue}
     {\VIVID@Hy@laterfalse}
 
-%% device settings
+%% Device Settings
 \RequirePackage{geometry}
 \ifdefstring{\VIVID@device}{normal}{
   \geometry{
@@ -170,13 +166,14 @@
 
 
 \RequirePackage{indentfirst,comment}
-% fontsetting
+
+%% Font Setting
 \ifdefstring{\VIVID@maths}{mtpro2}{
   \let\Bbbk\relax
   \RequirePackage[lite]{mtpro2}
 }{\relax}
 
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
 \renewcommand{\baselinestretch}{1.2}
 
 \PassOptionsToPackage{no-math}{fontspec}
@@ -286,25 +283,7 @@
 }{\relax}
 
 
-% ----- Handle Colors -----
-%% 章节以及页脚图形
-
 \RequirePackage[table]{xcolor}
-\definecolor{deepBlue}{RGB}{61,124,222}
-\definecolor{lightergray}{gray}{0.99}
-\definecolor{azures1}{RGB}{250, 252, 254}
-\definecolor{azures2}{RGB}{41, 119, 196}
-\definecolor{Beige}{RGB}{245,245,220}
-\definecolor{Rhodamine}{RGB}{239,84,159}
-\definecolor{Magenta}{RGB}{236,0,141}
-\definecolor{RubineRed}{RGB}{236,2,126}
-\definecolor{DarkCyan}{RGB}{0, 140, 140}
-\definecolor{RedViolet}{RGB}{160,34,108}
-\definecolor{finegray}{RGB}{248,248,245}
-\definecolor{magenta5}{RGB}{199, 42, 199}
-\definecolor{Emerald}{RGB}{0, 169, 159}
-\definecolor{DeepPink}{RGB}{255, 20, 147}
-
 \ifdefstring{\VIVID@color}{green}{
   \definecolor{structurecolor}{RGB}{0, 174, 247}%
   \definecolor{main}{RGB}{101, 238, 222}%
@@ -337,20 +316,37 @@
 }{\relax}
 
 % corlor definition
+\definecolor{lightergray}{gray}{0.99}
+\definecolor{azures1}{RGB}{250, 252, 254}
+\definecolor{azures2}{RGB}{41, 119, 196}
+\definecolor{Magenta}{RGB}{236,0,141}
+\definecolor{finegray}{RGB}{248,248,245}
+\definecolor{magenta5}{RGB}{199, 42, 199}
+\definecolor{Emerald}{RGB}{0, 169, 159}
+\definecolor{DeepPink}{RGB}{255, 20, 147}
 \definecolor{winered}{RGB}{212, 51, 131}
 \definecolor{bule}{RGB}{18,29,57}
-\colorlet{coverlinecolor}{second}
+\definecolor{orange}{HTML}{ff9f1a}
+\definecolor{skyblue}{HTML}{0097e6}
+\definecolor{cyan}{HTML}{1289A7}
+\definecolor{slate}{HTML}{7158e2}
+\definecolor{violet}{HTML}{ED4C67}
+\definecolor{turquoise}{HTML}{487eb0}
+\definecolor{purplea}{HTML}{5758BB}
+\definecolor{purpleb}{HTML}{833471}
+\definecolor{purplec}{HTML}{006266}
+\definecolor{crimson}{HTML}{EA2027}
+
+%% 封面中间线颜色
+\colorlet{coverlinecolor}{cyan}
 
 
 % ----- Title Style -----
 \ifdefstring{\VIVID@titlestyle}{hang}{\def\style{hang}}{\relax}
 \ifdefstring{\VIVID@titlestyle}{display}{\def\style{display}}{\relax}
 
-% reference: 
-% https://tex.stackexchange.com/questions/58506/how-to-make-a-new-command-similar-to-author
-% https://pastebin.com/C8W4axzV
+%% 导言区设置
 \newcommand\email[1]{\href{mailto:#1}{\nolinkurl{#1}}}
-
 \global\let\@title\@empty
 \global\let\@author\@empty
 \global\let\@date\@empty
@@ -363,17 +359,20 @@
 \newcommand{\logo}[1]{\gdef\@logo{#1}}
 \newcommand{\cover}[1]{\gdef\@cover{#1}}
 
+%% 问题
 \newcommand{\question}[1]{{\par\citshape #1}\\[0.2ex]}
 
+
 \RequirePackage{enumerate}
-% list/itemize/enumerate setting
 \RequirePackage[shortlabels,inline]{enumitem}
 \setlist{nolistsep}
 
+%% 表格\图片标题设置
 \RequirePackage[labelfont={bf,color=structurecolor}]{caption} 
 \captionsetup[table]{skip=3pt}
 \captionsetup[figure]{skip=3pt}
 
+%% 数学公式设置
 \AtBeginDocument{
   \setlength{\abovedisplayskip}{3pt}
   \setlength{\belowdisplayskip}{3pt}
@@ -384,19 +383,15 @@
 
 
 \RequirePackage{graphicx}
-%\RequirePackage{enumerate}
 \RequirePackage{amsmath,mathrsfs,amsfonts,amssymb}
-% \providecommand\qed{}
-% \renewcommand{\qed}{\hfill\ensuremath{\square}}
 \RequirePackage{booktabs}
 \RequirePackage{multicol,multirow}
-
 \RequirePackage{fancyvrb}
 \RequirePackage{makecell,lipsum,hologo}
-%%中文结构名字
 
 
-%%   章节设置
+
+%%  关键字设置
 \RequirePackage[center,pagestyles]{titlesec}
 \RequirePackage[title,titletoc,header]{appendix}
 
@@ -484,22 +479,20 @@
   \newcommand{\introductionname}{Introduction}
   \renewcommand{\appendixname}{Appendix}
   \newcommand{\ebibname}{Bibliography}
-  % \newcommand{\problemsetname}{Exercise}
   \newcommand\bioinfo[2]{\gdef\@bioinfo{\textbf{#1}: #2}}
   \newcommand{\updatename}{Updates:}
   \newcommand{\historyname}{Version History}
 }{\relax}
 
 
+%% 设置图片路径
+\graphicspath{{./figure/}, {./figures/}, {./image/}, {./images/}, {./picture/}, {./pictures/}}
 
-\graphicspath{{./figure/}}
-
-\RequirePackage{tikz} %% load tikz without tikz
+%% 多级列表符号  \itemize \enumerate
+\RequirePackage{tikz}
 \usetikzlibrary{backgrounds,calc,shadows,positioning,fit}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
-%  https://tex.stackexchange.com/questions/7032/good-way-to-make-textcircled-numbers
-
 \newcommand*{\eitemi}{\tikz \draw [baseline, ball color=structurecolor,draw=none] circle (2pt);}
 \newcommand*{\eitemii}{\tikz \draw [baseline, fill=structurecolor,draw=none,circular drop shadow] circle (2pt);}
 \newcommand*{\eitemiii}{\tikz \draw [baseline, fill=structurecolor,draw=none] circle (2pt);}
@@ -513,14 +506,12 @@
 
 \RequirePackage{apptools}
 
-% appendix chapter:
 
+%% 标题设置
 \ifdefstring{\VIVID@lang}{cn}{
   \ifdefstring{\VIVID@scheme}{chinese}{
     \newcommand{\xchaptertitle}{第\zhnumber{\arabic{chapter}}章} }{
     \newcommand{\xchaptertitle}{第 \thechapter{} 章}}
-% Hyperref 2022/05/16's changelog.txt said
-% * nameref is loaded always and earlier (issue#235) 
     \AtBeginDocument{
       \ifVIVID@Hy@later
         \patchcmd{\NR@chapter}%
@@ -548,26 +539,20 @@
 \titleformat{\subsubsection}[hang]{\bfseries}{
   \large\bfseries\color{structurecolor}\thesubsubsection\enspace}{1pt}{%
   \color{structurecolor}\large\bfseries\filright}
-
 \titlespacing{\chapter}{0pt}{-20pt}{1.3\baselineskip}
-%\titlespacing{\subsection}{0pt}{0.5\baselineskip}{-\baselineskip}
 
 
 
-%%define the 
-%%definition theorem postulate axiom corollary lemma proposition 
-%%and proof environment
+
+%% Math 相关设置
 \RequirePackage{pifont,manfnt,bbding}
 \RequirePackage[many]{tcolorbox}
-% \newlength{\normalparindent}
-% \setlength{\normalparindent}{\parindent}
 \definecolor{axiomcolor}{RGB}{255, 134, 24}%
 \ifdefstring{\VIVID@mode}{fancy}{
   \tcbset{
     common/.style={
       fontupper=\citshape,
       lower separated=false,
-      % before upper={\setlength{\parindent}{\normalparindent}},
       coltitle=black,
       colback=gray!5,
       boxrule=0.5pt,
@@ -660,14 +645,8 @@
       }
     }
   
-  % define an internal control sequence \VIVID@newtheorem for fancy mode's newtheorem
-  % #1 is the environment name, #2 is the prefix of label, #3 is the style
-  % style: thmstyle, defstyle, prostyle
-  % e.g. \VIVID@newtheorem{theorem}{thm}{thmstyle}
-  % will define two environments: numbered ``theorem'' and no-numbered ``theorem*''
-  % WARNING FOR MULTILINGUAL: this cs will automatically find \theoremname's definition,
-  % WARNING FOR MULTILINGUAL: it should be defined in language settings.
-  \newcommand{\VIVID@newtheorem}[3]{
+%% 参数设置
+    \newcommand{\VIVID@newtheorem}[3]{
     \ifcsundef{#1name}{%
       \ClassError{VIVIDbook}{%
         \ #1name undefined, \MessageBreak
@@ -701,49 +680,34 @@
           },
       }
   }
-  % define several environment 
-  % we define headers like \definitionname before
-  \VIVID@newtheorem{definition}{def}{defstyle}
-  \VIVID@newtheorem{theorem}{thm}{thmstyle}
-  \VIVID@newtheorem{postulate}{pos}{prostyle} % prostyle
-  \VIVID@newtheorem{axiom}{axi}{axiostyle}
-  \VIVID@newtheorem{corollary}{cor}{corostyle}
-  
-  \VIVID@newtheorem{lemma}{lem}{lemostyle}
-  \VIVID@newtheorem{proposition}{pro}{propostyle}
+  \VIVID@newtheorem{definition}{def}{defstyle} % 定义
+  \VIVID@newtheorem{theorem}{thm}{thmstyle} % 定理
+  \VIVID@newtheorem{postulate}{pos}{prostyle} % 公设
+  \VIVID@newtheorem{axiom}{axi}{axiostyle} % 公理
+  \VIVID@newtheorem{corollary}{cor}{corostyle} % 推论
+  \VIVID@newtheorem{lemma}{lem}{lemostyle} % 引理
+  \VIVID@newtheorem{proposition}{pro}{propostyle} % 命题
 }{\relax}
 
-
+%% 简单模式
 \ifdefstring{\VIVID@mode}{simple}{
   \let\openbox\relax
   \RequirePackage{amsthm}
   \let\proof\relax
-  % \let\proofname\relax
   \let\endproof\relax
 
-  % declare new theorem styles: defstyle, thmstyle, prostyle
   \newtheoremstyle{defstyle}{3pt}{3pt}{\citshape}{-3pt}{
     \bfseries\color{main}}{}{0.5em}{\thmname{#1} \thmnumber{#2} \thmnote{(#3)}}
   \newtheoremstyle{thmstyle}{3pt}{3pt}{\citshape}{-3pt}{
     \bfseries\color{second}}{}{0.5em}{\thmname{#1} \thmnumber{#2} \thmnote{(#3)}}
   \newtheoremstyle{prostyle}{3pt}{3pt}{\citshape}{-3pt}{
     \bfseries\color{third}}{}{0.5em}{\thmname{#1} \thmnumber{#2} \thmnote{(#3)}}
-
-  % define an internal control sequence \VIVID@newtheorem for simple mode's newtheorem
-  % #1 is the environment name, #2 is the style
-  % style: thmstyle, defstyle, prostyle
-  % e.g. \VIVID@newtheorem{theorem}{thmstyle}
-  % will define two environments: numbered ``theorem'' and no-numbered ``theorem*''
-  % WARNING FOR MULTILINGUAL: this cs will automatically find \theoremname's definition,
-  % WARNING FOR MULTILINGUAL: it should be defined in language settings.
   \newcommand{\VIVID@newtheorem}[2]{
     \theoremstyle{#2}
     \newtheorem{#1}{\csname #1name\endcsname}[\VIVID@thmcnt]
     \newtheorem*{#1*}{\csname #1name\endcsname}
   }
 
-  % define several environment 
-  % we define headers like \definitionname before
   \VIVID@newtheorem{definition}{defstyle}
   \VIVID@newtheorem{theorem}{thmstyle}
   \VIVID@newtheorem{postulate}{prostyle}
@@ -808,20 +772,7 @@
       }{\relax}
   }
 
-% main（green-def): example exercise problem solution
-% second（orange-thm）: proof note remark  
-% third（blue-prop):  assumptions property conclusion custom
-
-%% Example with counter  % 手动注释
-%\newcounter{exam}[chapter]
-%\setcounter{exam}{0}
-%\renewcommand{\theexam}{\thechapter.\arabic{exam}}
-%\newenvironment{example}[1][]{
-%  \refstepcounter{exam}
-%  \par\noindent\textbf{\color{main}{\examplename} \theexam #1 }\rmfamily}{
-%  \par\ignorespacesafterend}
-
-%% Exercise with counter
+%% Exercise
 \newcounter{exer}[chapter]
 \setcounter{exer}{0}
 \renewcommand{\theexer}{\thechapter.\arabic{exer}}
@@ -832,7 +783,7 @@
     \textbf{\color{main}{\exercisename} \theexer #1 }\rmfamily}{
     \par\ignorespacesafterend}
 
-%% Problem with counter
+%% Problem
 \newcounter{prob}[chapter]
 \setcounter{prob}{0}
 \renewcommand{\theprob}{\thechapter.\arabic{prob}}
@@ -841,24 +792,23 @@
   \par\noindent\textbf{\color{main}{\problemname} \theprob #1 }\rmfamily}{
   \par\ignorespacesafterend}
 
+%% Note
 \newenvironment{note}{
   \par\noindent\makebox[-3pt][r]{
     \scriptsize\color{red!90}\textdbend\quad}
     \textbf{\color{second}\notename} \citshape}{\par}
 
+%% Proof
 \newenvironment{proof}{
   \par\noindent\textbf{\color{second}\proofname\;}
   \color{black!90}\cfs}{
-  % \hfill$\Box$\quad
   \par}
 
 \newenvironment{solution}{\par\noindent\textbf{\color{main}\solutionname} \citshape}{\par}
 \newenvironment{remark}{\noindent\textbf{\color{second}\remarkname}}{\par}
-%\newenvironment{assumption}{\par\noindent\textbf{\color{third}\assumptionname} \citshape}{\par}  %这三个暂时移除
-%\newenvironment{conclusion}{\par\noindent\textbf{\color{third}\conclusionname} \citshape}{\par}
-%\newenvironment{property}{\par\noindent\textbf{\color{third}\propertyname} \citshape}{\par}
 \newenvironment{custom}[1]{\par\noindent\textbf{\color{third} #1} \citshape}{\par}
 
+%% Introduction 样式
 \RequirePackage{multicol}
 \tcbset{
   introductionsty/.style={
@@ -879,7 +829,7 @@
   },
 }
 
-
+%% Introduction 关键字
 \newenvironment{introduction}[1][\introductionname]{
   \begin{tcolorbox}[introductionsty,title={#1}]
     \begin{multicols}{2}
@@ -900,9 +850,8 @@
         sharp corners,
         arc=0mm,
         drop lifted shadow={color=black!20!white,opacity=.3,shadow xshift=0.1cm},%盒子阴影
-        overlay = {%
-            %标题盒子
-            \node[rectangle, %opacity=.3,
+        overlay = {
+            \node[rectangle,
             text=white, drop shadow={opacity=.3, shadow xshift=0.1cm},rounded corners=2pt,
             inner sep=1.5mm,fill=azures2,
             anchor=west,
@@ -911,7 +860,7 @@
         },
     }
 }
-%%--------------------------------------------------%%
+
 \newenvironment{introductions}[1][\introductionsname]{\smallskip
     \begin{tcolorbox}[alphasty]
         \begin{multicols}{2}
@@ -919,15 +868,11 @@
             \end{itemize}
         \end{multicols}
     \end{tcolorbox}\smallskip}
-
-%%%%%%%%%%%%%%%%%%
 \RequirePackage{adforn}
-
 \newenvironment{problemset}[1][\xchaptertitle~\exercisename]{
   \vspace*{10pt}
   \begin{center}
     \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{\xchaptertitle~\exercisename}{\exercisename}}
-    % \markboth{#1}{\rightmark}
     \markright{#1}
     \textcolor{structurecolor}{\Large\bfseries\adftripleflourishleft~#1~\adftripleflourishright}
   \end{center}
@@ -937,6 +882,7 @@
 \def\relsec{\endgroup start}
 \def\endrelsec{end\begingroup\def \@currenvir {relsec}}
 
+%% 不显示答案
 \ifdefstring{\VIVID@result}{noanswer}{
   \AtBeginDocument{
   \excludecomment{solution}
@@ -945,15 +891,7 @@
   }
 }{\relax}
 
-
-
-
-
-
-
-%页眉页脚
-
-%%%%%%%%%%%%%%%%%%%%%%%
+%% 页眉页脚
 \RequirePackage{fancyhdr}
 \RequirePackage{fontawesome}
 \RequirePackage{xhfill}
@@ -962,9 +900,9 @@
 \fancyfoot[c]{\color{structurecolor} \faGg 第~\color{black}{\thepage}\color{structurecolor}~页 \faGg}
 
 \if@twoside
-\fancyhead[EL]{\color{structurecolor}{\faPaperPlaneO}\cnormal\leftmark} % E表示偶数页
+\fancyhead[EL]{\color{structurecolor}{\faPaperPlaneO}\cnormal\leftmark}
 \fancyhead[ER]{\color{structurecolor}\cnormal\rightmark}
-\fancyhead[OR]{\color{structurecolor}{\faPaperPlaneO}\cnormal\leftmark} % E表示偶数页
+\fancyhead[OR]{\color{structurecolor}{\faPaperPlaneO}\cnormal\leftmark}
 \fancyhead[OL]{\color{structurecolor}\cnormal\rightmark}
 \fancyfoot[EL]{\color{red}{\faLink} }
 \fancyfoot[ER]{\color{red}{\faLink} }
@@ -972,7 +910,7 @@
 \fancyfoot[OL]{\color{structurecolor}{\faUnlink}}
 \else
 \fancyhead[R]{\color{structurecolor}\cnormal\rightmark}
-\fancyhead[L]{\color{structurecolor}{\faPaperPlaneO}\cnormal\leftmark} % E表示偶数页
+\fancyhead[L]{\color{structurecolor}{\faPaperPlaneO}\cnormal\leftmark}
 \fancyfoot[L]{\color{red}{\faLink}}
 \fancyfoot[R]{\color{cyan}{\faUnlink}}
 \fi
@@ -981,10 +919,10 @@
 \fancypagestyle{plain}{\renewcommand{\headrulewidth}{0pt}\fancyhf{}\renewcommand{\headrule}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\, #1}{}}
 \renewcommand{\chaptermark}[1]{\markboth{\xchaptertitle\, #1}{}}
-%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\renewcommand*{\maketitle}{%
+
+\renewcommand*{\maketitle}{
 \hypersetup{pageanchor=false}
 \pagenumbering{Alph}
 \begin{titlepage}
@@ -1023,10 +961,8 @@
     \color{gray}\normalsize
     {\renewcommand{\arraystretch}{0.618}
     \begin{tabular}{l}
-      % \ifcsname @author\endcsname \authorname \@author\\\fi
       \ifx\@author\empty\else\authorname\cnormal\@author\\ \fi
       \ifcsname @institute\endcsname \institutename \cnormal\@institute\\ \fi
-      % \ifcsname @date\endcsname  \@date\\\fi
       \ifx\@date\empty\else\datename\cnormal\@date \\ \fi
       \ifcsname @version\endcsname \cnormal\versionname\@version\\ \fi
       \ifcsname @bioinfo\endcsname \cnormal\@bioinfo\\ \fi
@@ -1055,71 +991,8 @@
 \thispagestyle{empty}}
 
 
-\newcommand{\dollar}{\mbox{\textdollar}}
-
-\RequirePackage{listings}
-\renewcommand{\ttdefault}{cmtt}
-\lstdefinestyle{mystyle}{
-  basicstyle=%
-    \ttfamily
-    \lst@ifdisplaystyle\small\fi
-}
-
-\lstset{basicstyle=\ttfamily,style=mystyle,breaklines=true}
-
-\definecolor{lightgrey}{rgb}{0.9,0.9,0.9}
-\definecolor{frenchplum}{RGB}{190,20,83}
-\lstset{language=[LaTeX]TeX,
-  texcsstyle=*\color{winered},
-  numbers=none,
-  mathescape=false,
-  breaklines=true,
-  keywordstyle=\color{winered},
-  commentstyle=\color{gray},
-  emph={VIVIDpaper,fontenc,fontspec,xeCJK,citestyle,FiraMono,xunicode,figure,fig,image,img,table,itemize,enumerate,ctex,microtype,description,times,booktabs,tabular,PDFLaTeX,XeLaTeX,type1cm,BibTeX,device,color,mode,lang,amsthm,tcolorbox,titlestyle,cite,ctex,listings,base,math,scheme,toc,esint,chinesefont,amsmath,bibstyle,natbib,pgfornament},
-  emphstyle={\color{frenchplum}},
-  morekeywords={DeclareSymbolFont,SetSymbolFont,toprule,midrule,bottomrule,institute,version,includegraphics,setmainfont,setsansfont,setmonofont ,setCJKmainfont,setCJKsansfont,setCJKmonofont,RequirePackage,figref,tabref,email,maketitle,keywords,definecolor,extrainfo,logo,cover,subtitle,appendix,chapter,section,hypersetup,mainmatter,frontmatter,tableofcontents,VIVIDpar,heiti,kaishu,lstset,pagecolor,zhnumber,marginpar,part,equote,marginnote,bioinfo,datechange,listofchange,lvert,lastpage,songti,heiti,fangsong,setCJKfamilyfont,textbf,VIVIDnewtheorem,thmcnt,colorlet},
-  frame=single,
-  tabsize=2,
-  rulecolor=\color{structurecolor},
-  framerule=0.2pt,
-  columns=flexible,
-  % backgroundcolor=\color{lightgrey}
-}
-
-\newcommand\bmmax{0}
-\RequirePackage{bm}
-
-% add the list of change history
-\newcommand{\dateinfoline}[2]{
-  \noindent\makebox[0pt][r]{%
-  \makebox[-3em][r]{%
-    \small
-    \textbf{\textcolor{structurecolor}{#1}}}\;\;}%
-  {\citshape\updatename\ignorespaces#2}}
-
-\newcommand{\datechange}[2]{%
-  \noindent{\makebox[\textwidth][r]{\color{structurecolor}\rule{1.15\textwidth}{.4pt}}}
-  \dateinfoline{#1}{#2}
-  \addcontentsline{dates}{section}{#1 -- #2}}
-
-\newcommand{\listofchanges}{%
-  \begingroup
-   \renewcommand{\contentsname}{\historyname}
-    \let\old@starttoc\@starttoc
-    \def\@starttoc##1{
-      \old@starttoc{dates}}
-    \tableofcontents%
- \endgroup}
-% https://tex.stackexchange.com/questions/472931/list-of-all-dates-in-a-document
-
-\newenvironment{change}{
-  \begin{enumerate}[label=\small\protect\circled{\arabic*}]}{
-  \end{enumerate}}
-
-
-
-\renewcommand\tableofcontents{%
+%% 生成目录
+\renewcommand\tableofcontents{
   \hypersetup{linktoc=all, linkcolor=black}
     \if@twocolumn
      \@restonecoltrue\onecolumn
@@ -1127,78 +1000,65 @@
     \@restonecolfalse
   \fi
    \chapter*{\contentsname
-       \@mkboth{%
+       \@mkboth{
           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}
  \ifdefstring{\VIVID@toc}{twocol}{
      \setlength{\columnsep}{2em}
-     \begin{multicols}{2}%
+     \begin{multicols}{2}
        \@starttoc{toc}
       \end{multicols}}{
      \@starttoc{toc}}
    \if@restonecol\twocolumn\fi
    \hypersetup{linkcolor=winered}}
 
-
+%% 页面布局
 \renewcommand*{\cleardoublepage}{\clearpage\if@twoside \ifodd\c@page\else
-\hbox{}%
-\thispagestyle{empty}%
-beforechap\newpage%
+\hbox{}
+\thispagestyle{empty}
+beforechap\newpage
 \if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
 
-% https://tex.stackexchange.com/questions/56839/chaptername-is-used-even-for-appendix-chapters-in-toc
+%% 目录格式
 \RequirePackage{calc}
 \RequirePackage[titles]{tocloft}
 \ifdefstring{\VIVID@lang}{cn}{
-  % \renewcommand{\cftchappresnum}{\beforechap\space}
-  % \renewcommand{\cftchapaftersnum}{\space\afterchap}
   \setlength{\cftchapnumwidth}{\widthof{\textbf{附录~999}}}
-  \g@addto@macro\appendix{%
-    % recover \thechapter in the \NR@chapter's \numberline
+  \g@addto@macro\appendix{
     \ifVIVID@Hy@later
-      \patchcmd{\NR@chapter}%
-        {\numberline{\xchaptertitle}}{\numberline{\thechapter}}%
+      \patchcmd{\NR@chapter}
+        {\numberline{\xchaptertitle}}{\numberline{\thechapter}}
         {}{\fail}      
     \else
-      \patchcmd{\Hy@org@chapter}%
-        {\numberline{\xchaptertitle}}{\numberline{\thechapter}}%
+      \patchcmd{\Hy@org@chapter}
+        {\numberline{\xchaptertitle}}{\numberline{\thechapter}}
         {}{\fail}  
     \fi
-    \addtocontents{toc}{%
-      \protect\renewcommand{\protect\cftchappresnum}{\appendixname\space}%
-      \protect\renewcommand{\protect\cftchapaftersnum}{}%
-    }%
+    \addtocontents{toc}{
+      \protect\renewcommand{\protect\cftchappresnum}{\appendixname\space}
+      \protect\renewcommand{\protect\cftchapaftersnum}{}
+    }
   }
 }{
   \renewcommand{\cftchappresnum}{\chaptername\space}
   \renewcommand{\cftchapaftersnum}{\space}
   \setlength{\cftchapnumwidth}{\widthof{\textbf{Appendix~9}}}
-  \g@addto@macro\appendix{%
-    \addtocontents{toc}{%
-      \protect\renewcommand{\protect\cftchappresnum}{\appendixname\space}%
-      \protect\renewcommand{\protect\cftchapaftersnum}{}%
+  \g@addto@macro\appendix{
+    \addtocontents{toc}{
+      \protect\renewcommand{\protect\cftchappresnum}{\appendixname\space}
+      \protect\renewcommand{\protect\cftchapaftersnum}{}
       \setlength{\cftchapnumwidth}{\widthof{\textbf{Appendix~999}}}
-    }%
+    }
   }
 }
 
-% restore the tt default family to lmodern tt family
 \renewcommand\ttdefault{lmtt}
 
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%
+%% Chapter Image
 \RequirePackage{fontawesome}
 \RequirePackage{xhfill}
 \RequirePackage[object=vectorian]{pgfornament} 
 \definecolor{ocre}{RGB}{146, 218, 243}
-%%%%%%%%%%%目录,chapter图片定制开始%%%%%%%%%%%%%%%
 \newif\ifusechapterimage
 \usechapterimagetrue
 \newcommand{\thechapterimage}{}%
@@ -1239,19 +1099,19 @@ beforechap\newpage%
 		\end{tikzpicture}};
 	\end{tikzpicture}
 	\par\vspace*{230\p@}}
-%%%%%%%%%%%目录,chapter图片定制结束%%%%%%%%%%%%%%%
 
+
+
+% part in the table of contents
 \newcommand{\@mptof}[2]{%
 	\setlength\fboxsep{0pt}%
 	\noindent\colorbox{ocre!40}{\strut\parbox[c][.7cm]{1.1cm}{\color{orange}\Large\bfseries\centering#1}}
 \hspace{4pt}
     \colorbox{ocre!40}{\strut\parbox[c][.7cm]{\linewidth-1.3cm}{\partname\Large\centering 第#1部分 * #2}}}%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% unnumbered part in the table of contents
 \newcommand{\@myparttocformat}[1]{%
 	\setlength\fboxsep{0pt}%
 	\noindent\colorbox{ocre!40}{\strut\parbox[c][.7cm]{\linewidth}{\Large\sffamily\centering#1}}}%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \RequirePackage{titletoc}
 \titlecontents{part}
 [-2pt] % Left indentation
@@ -1265,16 +1125,14 @@ beforechap\newpage%
 {\bfseries\hspace{-1pt}} %
 {\contentslabel[\heiti \thecontentslabel]{14mm}}
 {}
-%{[0.5pc]{$\cdot$}\contentspage[{\makebox[0pt][r]{\thecontentspage}}]}
 {\bfseries\ttfamily\titlerule*[0.5pc]{~}\contentspage}
-%%%%%%%%PART,chpter目录样式部分定制结束%%%%%%%%%%%%%%%
+
 
 \titlecontents{section}
 [14mm] % Left indentation
 {\hspace{-2pt}} %
 {\contentslabel[\heiti \thecontentslabel]{7mm}}
 {}
-%{[0.5pc]{$\cdot$}\contentspage[{\makebox[0pt][r]{\thecontentspage}}]}
 {\bfseries\ttfamily\titlerule*[0.5pc]{$.$}\contentspage}
 
 \titlecontents{subsection}
@@ -1282,12 +1140,11 @@ beforechap\newpage%
 {\hspace{-2pt}} %
 {\contentslabel[\heiti \thecontentslabel]{10mm}}
 {}
-%{[0.5pc]{$\cdot$}\contentspage[{\makebox[0pt][r]{\thecontentspage}}]}
 {\bfseries\ttfamily\titlerule*[0.5pc]{$.$}\contentspage}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+%% Part images
 \RequirePackage{wallpaper}
-%%%%%%%%%%%PART页面定制%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\thepartimages}{}%
 \newcommand{\partimages}[1]{\ifusepartimage\renewcommand{\thepartimages}{#1}\fi}%
 
@@ -1321,9 +1178,8 @@ beforechap\newpage%
             toprule=1.5pt,
             bottomrule=1.5pt,
             arc=0mm,
-            overlay = {%
-                %标题盒子
-                \node[rectangle, %opacity=.3,
+            overlay = {
+                \node[rectangle,
                 text=white, drop shadow={opacity=.3, shadow xshift=0.1cm},rounded corners=2pt,
                 inner sep=1.5mm,fill=cyan,
                 anchor=west,
@@ -1337,7 +1193,6 @@ beforechap\newpage%
            \printcontents{l}{0}[1]{}}
         \end{tcolorbox}
      \end{minipage}
-				%   \thispagestyle{empty}
     \vfill
 	}%
 	\@endpart}
@@ -1361,67 +1216,11 @@ beforechap\newpage%
 \usepartsimagetrue
 \newcommand{\thepartsimage}{}%
 \newcommand{\partsimage}[1]{\ifusepartsimage\renewcommand{\thepartsimage}{#1}\fi}%
-%%%%%%%%%%%%%% PART部分定制结束%%%%%%%%%%%%%%%%%%
-
-\definecolor{mlred}{RGB}{253,243,242}
-\definecolor{mred}{RGB}{220,53,69}
-\definecolor{bg}{rgb}{0.99,0.99,0.99}
-\definecolor{mlblue}{RGB}{236,243,255}
-\definecolor{mblue}{RGB}{0,123,255}
-\definecolor{lsp}{RGB}{0,174,247}
-\definecolor{mlblue3}{RGB}{44, 49, 51} % mycmd颜色
-\definecolor{mlblue2}{RGB}{35, 41, 55}
 
 
-%%%%%%%%%%%%%%%%代码抄录定制类%%%%%%%%%%%%%%%%%%%
-\RequirePackage{tcolorbox}
-\tcbuselibrary{listings,breakable}
-
-
-\newcommand{\md}[1]{{\color{purple}#1}}
-\newcommand{\keypoint}[1]{\textbf{\textcolor{red}{#1}}}
-\definecolor{structurecolor}{RGB}{0, 174, 247}%
-
-
-
-
-\RequirePackage{listings}
-\renewcommand{\ttdefault}{cmtt}
-\lstdefinestyle{mystyle}{
-  basicstyle=%
-    \ttfamily
-    \lst@ifdisplaystyle\small\fi
-}
-
-\lstset{basicstyle=\ttfamily,style=mystyle,breaklines=true}
-
-\definecolor{lightgrey}{rgb}{0.9,0.9,0.9}
-\definecolor{frenchplum}{RGB}{190,20,83}
-\lstset{language=[LaTeX]TeX,
-	texcsstyle=*\color{red!40!orange},
-	numbers=none,
-	breaklines=true,
-	keywordstyle=\color{red!40!orange},
-	commentstyle=\color{gray},
-emph={equation,itemize,assumption,solution,math,tcolorbox,lstlisting,dinglist,ctex,VIVIDpaper,microtype,fontspec,base,lemma,description,bibstyle,warning,XeLaTeX,minted,exercise,amsthm,booktabs,device,proposition,ascolorbox5,mode,gather,python,iiint,amsmath,example, conclusion,type1cm,mycmd2,ascolorbox1,corollary,sBox,shell,note,macboxd,toc,cite,ascolorbox4,aligned,FiraMono,scheme,color,problem,macbox,pgfornament,xunicode,ascolorbox0,table,PDFLaTeX,titlestyle,property,iint,theorem,figure,introduction,nginx,ascolorbox3,chinesefont,definition,citestyle,ascolorbox10,fontenc,fig,ascolorbox16,axiom,vim,code,enumerate,ascolorbox17,lang,int,ascolorbox19,img,times,BibTeX,image,tabular,proof,postulate,align,xeCJK,ascolorbox11,natbib,remark,esint,listings},
-morekeywords={DeclareSymbolFont,SetSymbolFont,toprule,midrule,bottomrule,institute,version,includegraphics,setmainfont,setsansfont,setmonofont ,setCJKmainfont,setCJKsansfont,setCJKmonofont,RequirePackage,figref,tabref,email,maketitle,keywords,definecolor,extrainfo,logo,cover,subtitle,appendix,chapter,hypersetup,mainmatter,frontmatter,tableofcontents,VIVIDpar,heiti,kaishu,lstset,pagecolor,zhnumber,marginpar,part,equote,marginnote,bioinfo,datechange,listofchange,lvert,lastpage,songti,heiti,fangsong,setCJKfamilyfont,textbf},
-	emphstyle={\color{cyan}},
-    breakatwhitespace=true,
-	frame=single,
-	rulecolor=\color{structurecolor},
-	framerule=0pt,
-	columns=flexible,
-}
-
+%% Property  Anymark  Example  Assumption  Conclusion 环境
 \setmonofont{CMU Typewriter Text}
-
-%%--------------------------------------------------%%
-
-%%%%% 自定义-----%%%%%%%%%%%%
-\newcommand{\emb}[2][Magenta]{{\bf\color{#1}\uuline{#2}}}
-
-
-%%%%%%%%%%%%%%%%性质
+%% 1. 性质
 \newcounter{property}
 \setcounter{property}{1}
 \renewcommand{\theproperty}{\arabic{property}}
@@ -1430,203 +1229,148 @@ morekeywords={DeclareSymbolFont,SetSymbolFont,toprule,midrule,bottomrule,institu
     arc=0mm,breakable,enhanced,colback=lightergray,boxrule=0pt,top=8mm,drop fuzzy shadow=black!20!white,
     fontupper=\normalsize, 
     overlay unbroken = {
-        %左上边缘细线%更改有效
-        % \draw[color=gray,  line width=0.2pt] (frame.north west)--([xshift=0pt]frame.north east);
-        % \draw[color=gray,  line width=0.2pt] (frame.south west)--([xshift=0pt]frame.south east);
-        %标题%更改有效
-        \node[rectangle, %opacity=.3,
+        \node[rectangle, 
         text=black, drop shadow={opacity=.3, shadow xshift=0.1cm},
         inner sep=1.5mm,fill=structurecolor,
         anchor=west,
         font=\normalsize] at ([xshift=0cm,yshift=-3.mm]frame.north west)%
-        {\bf  \color{white} 性质~\theproperty. ~#2}; %这里可以补计数器
-        %底部 (下边缘)颜色装饰矩形%更改有效
+        {\bf  \color{white} 性质~\theproperty. ~#2}; 
         \fill[fill=structurecolor]  (.9\textwidth,0.2cm) rectangle(\textwidth,-0.0cm);
-    },%上面是实际控制代码,下面的代码仅在跨页分割时生效
-    overlay first = {%跨页时生效
-        % \draw[color=gray,  line width=0.2pt] (frame.north west)--([xshift=0pt]frame.north east);
-        %标题 %跨页时生效
-        \node[rectangle, %opacity=.3,
+    },
+    overlay first = {
+        \node[rectangle,
         text=black, drop shadow={opacity=.3, shadow xshift=0.1cm},
         inner sep=1.5mm,fill=DeepPink,
         anchor=west,
         font=\normalsize] at ([xshift=0cm,yshift=-3.mm]frame.north west)%
         {\bf  \color{white}  性质~\theproperty. #2};
-    },%保持边缘的变化
-    overlay last = {%跨页时生效
-        % \draw[color=gray,  line width=0.2pt] (frame.south west)--([xshift=0pt]frame.south east);
-        %底部%跨页时生效
+    },
+    overlay last = {
         \fill[fill=structurecolor]  (.9\textwidth,0.2cm) rectangle(\textwidth,-0.0cm);
     }
     #1
 }
 \NewDocumentEnvironment{property}{O{} O{} O{}}{\smallskip\begin{wwproposition3}{#1}{#2}#3}{\end{wwproposition3} }
 
-%%%%%%%%%%%%%%%%
+
 \tikzset{
-    wnodeTheorem/.style={%
+    wnodeTheorem/.style={
         rectangle,top color=lightergray, bottom color=lightergray,
         inner sep=1mm,anchor=west,font=\bf\rmfamily},
-    % wnodeminimum/.style={%
-        % 	rectangle,  top color=white, bottom color=white,
-        % 	text=Emerald,inner sep=1mm,anchor=west,font=\bf\rmfamily}
 }
-%评析环境-------------------------------------------------------
-\newtcolorbox{anybox}[2][]{%
+
+%% 2. anymark
+\newtcolorbox{anybox}[2][]{
     arc=0mm,breakable,enhanced,colback=lightergray,boxrule=0pt,
-    top=6mm,fontupper=\normalsize,%step and label={tcbremark}{#3},
+    top=6mm,fontupper=\normalsize,
     overlay unbroken  = {
-        %垂直条%更改有效
         \draw[color=magenta5,  line width=2pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);
-        %标题：定义%更改有效
         \node[wnodeTheorem](title) at ([xshift=4.5pt, yshift=-3mm]frame.north west)
         {\textbf{\color{magenta5} #2}};
-        % \draw[color=magenta5,line width=2pt] ([xshift=3.5pt,yshift=-5.5mm] frame.north west)--([yshift=-5.5mm] frame.north east);
-    }, %overlay
+    },
     overlay first  = {
-        %垂直线段%跨页时生效
         \draw[color=magenta5,  line width=2pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);
-        %标题:定义 %跨页时生效
         \node[wnodeTheorem](title) at ([xshift=4.5pt, yshift=-3mm]frame.north west)
         {\textbf{\color{magenta5} #2}};
-        % \draw[color=magenta5,line width=2pt] ([xshift=3.5pt,yshift=-5.5mm] frame.north west)--([yshift=-5.5mm] frame.north east);
-    }, %overlay
-    % 保持边缘的变化
-    overlay last    = {
-        %垂直线段%跨页时生效
+    }, 
+    overlay last  = {
         \draw[color=magenta5,  line width=2pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);
     },
     #1
 }
-%
 \NewDocumentEnvironment{anymark}{O{} O{} O{}}{\smallskip\begin{anybox}{#1}{#2} #3}{\end{anybox}}
-% 结束评析
-% 例题开始 --------------------------------------------------
-% Example with counter
+
+%% 3. Example
 \newcounter{exam}[chapter]
 \setcounter{exam}{0}
 \renewcommand{\theexam}{\thechapter.\arabic{exam}}
-% 例题环境
+
 \newtcolorbox{wwexample}[3][]{%
     arc=0mm,
     breakable,drop fuzzy shadow=black!20!white,
     enhanced,
     colback=lightergray,
     boxrule=0pt,
-    top=8mm, %分隔垂直-开始文本
-    % enlarge top by=\baselineskip/2+1mm,
-    % enlarge top at break by=0mm,pad at break=2mm,
+    top=8mm, 
     fontupper=\normalsize,
-    step and label={exam}{#3},%标签
-    overlay unbroken = {%
-        %垂直线段%更改有效
-        %\draw[color=gray!5,line width=3pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);
-        %底部装饰矩形%更改有效
+    step and label={exam}{#3},
+    overlay unbroken = {
         \fill[fill=Emerald] (.9\textwidth,0.2cm) rectangle(\textwidth,-0.0cm);
-        % 图像框示例
-        %\node[rectangle,
-        %         text=black, ,fill=ALamarillo!20,
-        %         inner sep=1mm,anchor=west,font=\small\bf\sffamily] at ([xshift=-10.3pt,yshift=-3.2mm]frame.north west)%
-        %{ };
-        %框编号和描述%更改有效
-        \node[rectangle, %opacity=.3,
+        \node[rectangle, 
         text=black, drop shadow={opacity=.3, shadow xshift=0.1cm},
         inner sep=1.5mm,fill=Emerald,
         anchor=west,
         font=\normalsize] at ([xshift=0cm,yshift=-3.mm]frame.north west)%
-        {\bf  \color{black}例题 \theexam. ~#2};%标题
+        {\bf  \color{black}例题 \theexam. ~#2};
     },
-    % fin overlay
-    overlay first  = {%
-        %标题框编号和描述%跨页时生效
-        \node[rectangle, %opacity=.3,
+    overlay first  = {
+        \node[rectangle,
         text=black, drop shadow={opacity=.3, shadow xshift=0.1cm},
         inner sep=1.5mm,fill=Emerald,
         anchor=west,
         font=\normalsize] at ([xshift=0cm,yshift=-3.mm]frame.north west)%
         {\bf \color{white} 例题 \theexam.~#2};
     },
-    % overlay
-    %边缘改变%跨页时生效
     overlay middle={\draw[color=lightergray,line width=3pt] ([xshift=3pt] frame.north west)--([xshift=2pt] frame.south west);
     },
     overlay last={\draw[color=lightergray,line width=3pt] ([xshift=3pt] frame.north west)--([xshift=2pt] frame.south west);
-        %底部装饰矩形%跨页时生效
         \fill[fill=Emerald] (.9\textwidth,0.2cm) rectangle(\textwidth,-0.0cm); }
     #1}
 %
-\NewDocumentEnvironment{example}{O{} O{} O{}}{\smallskip\begin{wwexample}{#1}{#2}%
+\NewDocumentEnvironment{example}{O{} O{} O{}}{\smallskip\begin{wwexample}{#1}{#2}
         #3}{\end{wwexample} }
-%例题结束-----------------------------------------------------------------
 
+%% 4. Assumption
 \newcounter{assumption}
 \setcounter{assumption}{1}
 \renewcommand{\theassumption}{\arabic{assumption}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newtcolorbox{wwproposition}[2][]{
     arc=0mm,breakable,enhanced,colback=lightergray,boxrule=0pt,top=8mm,drop fuzzy shadow=black!20!white,
     fontupper=\normalsize, 
     overlay unbroken = {
-        %左上边缘细线%更改有效
-        % \draw[color=gray,  line width=0.2pt] (frame.north west)--([xshift=0pt]frame.north east);
-        % \draw[color=gray,  line width=0.2pt] (frame.south west)--([xshift=0pt]frame.south east);
-        %标题%更改有效
-        \node[rectangle, %opacity=.3,
+        \node[rectangle,
         text=black, drop shadow={opacity=.3, shadow xshift=0.1cm},
         inner sep=1.5mm,fill=DeepPink,
         anchor=west,
-        font=\normalsize] at ([xshift=0cm,yshift=-3.mm]frame.north west)%
-        {\bf  \color{white} 假设~\theassumption. ~#2}; %这里可以补计数器
-        %底部 (下边缘)颜色装饰矩形%更改有效
+        font=\normalsize] at ([xshift=0cm,yshift=-3.mm]frame.north west)
+        {\bf  \color{white} 假设~\theassumption. ~#2};
         \fill[fill=DeepPink]  (.9\textwidth,0.2cm) rectangle(\textwidth,-0.0cm);
-    },%上面是实际控制代码,下面的代码仅在跨页分割时生效
-    overlay first = {%跨页时生效
-        % \draw[color=gray,  line width=0.2pt] (frame.north west)--([xshift=0pt]frame.north east);
-        %标题 %跨页时生效
-        \node[rectangle, %opacity=.3,
+    },
+    overlay first = {
+        \node[rectangle, 
         text=black, drop shadow={opacity=.3, shadow xshift=0.1cm},
         inner sep=1.5mm,fill=DeepPink,
         anchor=west,
         font=\normalsize] at ([xshift=0cm,yshift=-3.mm]frame.north west)%
         {\bf  \color{white}  假设~\theassumption. #2};
-    },%保持边缘的变化
-    overlay last = {%跨页时生效
-        % \draw[color=gray,  line width=0.2pt] (frame.south west)--([xshift=0pt]frame.south east);
-        %底部%跨页时生效
+    },
+    overlay last = {
         \fill[fill=DeepPink]  (.9\textwidth,0.2cm) rectangle(\textwidth,-0.0cm);
     }
     #1
 }
 \NewDocumentEnvironment{assumption}{O{} O{} O{}}{\smallskip\begin{wwproposition}{#1}{#2}#3}{\end{wwproposition} }
 
-
-\newtcolorbox{keypointbox}[2][]{%
+%% 5. Conclusion
+\newtcolorbox{keypointbox}[2][]{
     arc=0mm,breakable,enhanced,colback=lightergray,boxrule=0pt,
-    top=6mm,fontupper=\normalsize,%step and label={tcbremark}{#3},
+    top=6mm,fontupper=\normalsize,
     overlay unbroken  = {
-        %垂直条%更改有效
         \draw[color=structurecolor,  line width=2pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);
-        %标题：定义%更改有效
         \node[wnodeTheorem](title) at ([xshift=4.5pt, yshift=-3mm]frame.north west)
         {\textbf{\color{magenta5} 性质~#2}};
-        % \draw[color=magenta5,line width=2pt] ([xshift=3.5pt,yshift=-5.5mm] frame.north west)--([yshift=-5.5mm] frame.north east);
-    }, %overlay
+    },
     overlay first  = {
-        %垂直线段%跨页时生效
         \draw[color=structurecolor,  line width=2pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);
-        %标题:定义 %跨页时生效
         \node[wnodeTheorem](title) at ([xshift=4.5pt, yshift=-3mm]frame.north west)
         {\textbf{\color{magenta5} 性质~#2}};
-        % \draw[color=magenta5,line width=2pt] ([xshift=3.5pt,yshift=-5.5mm] frame.north west)--([yshift=-5.5mm] frame.north east);
-    }, %overlay
-    % 保持边缘的变化
-    overlay last    = {
-        %垂直线段%跨页时生效
+    }, 
+    overlay last   = {
         \draw[color=magenta5,  line width=2pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);
     }
     #1
 }
-%
+
 \NewDocumentEnvironment{conclusion}{O{} O{} O{}}{\smallskip\begin{keypointbox}{#1}{#2} #3}{\end{keypointbox}}
 
 

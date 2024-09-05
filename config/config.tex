@@ -1,4 +1,34 @@
 
+%% 宏包
+% 颜色包
+\usepackage{soul, color}
+
+% 箭头选项
+\usepackage{extarrows}
+
+% 表格 `diagbox`(斜对角线)
+\usepackage{array, tabularx, tabularray, longtable, diagbox}
+
+% 消除警告
+\usepackage{silence}
+% 支持插入动画
+\usepackage{animate}
+
+% 子图 浮动体 虚线
+\makeatletter
+\let\c@lofdepth\relax
+\let\c@lotdepth\relax
+\makeatother
+\usepackage{subfigure, float, arydshln}
+
+% 超链接和目录
+\usepackage{tocbibind}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{patterns}
+
+% 图片路径
+\graphicspath{{./figure/Cover/},{./figure/Note/},{./figure/Question/},{./figure/Summary/}}
+
 % 封面设置
 \title{\LaTeX\quad \quad \textbf{\textit{main}}} % 标题
 \subtitle{{\fontspec{Times New Roman}\textit{Sun for morning, moon for night, and you forever.}}} % 副标题
@@ -10,53 +40,11 @@
 \extrainfo{在没有结束前，总要做很多没有意义的事，这样才可以在未来某一天，用这些无意义的事去堵住那些讨厌的缺口} % 箴言
 \logo{pku.jpg} % 徽标
 \cover{coverc.jpg} % 封面
-% 颜色包
-\usepackage{soul, color, xcolor}
-% 表格, `diagbox` 斜对角线, `makecell` 格式化单元格
-\usepackage{array, tabularx, tabularray, longtable, diagbox, makecell,tcolorbox}
-% 文字字体段落
-\usepackage{silence}
-\WarningFilter{latexfont}{Font shape}
-\WarningFilter{latexfont}{Some font}
-% 支持插入动画
-\usepackage{animate}
-% 支持插入图片, 子图, 控制浮动体位置, 虚线
-\makeatletter
-\let\c@lofdepth\relax
-\let\c@lotdepth\relax
-\makeatother
-\usepackage{graphicx, subfigure, float, arydshln}
-% 数学包和箭头选项
-\usepackage{amsmath, amssymb, extarrows}
-% 页眉页脚
-\usepackage{fancyhdr}
-% 超链接和目录
-\usepackage{hyperref, tocbibind}
-% tikz 绘图
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta}
-\usetikzlibrary{patterns}
 
 %% 设置
-\setcounter{tocdepth}{2} % 目录深度
-\graphicspath{ {figure/},{../figure/}, {figure/cover}, {../config/} } % 图片位置
 \renewcommand{\arraystretch}{1.2} % 表格行高
 
-% 自定义颜色
-\definecolor{orange}{HTML}{ff9f1a}
-\definecolor{skyblue}{HTML}{0097e6}
-\definecolor{cyan}{HTML}{1289A7}
-\definecolor{slate}{HTML}{7158e2}
-\definecolor{violet}{HTML}{ED4C67}
-\definecolor{turquoise}{HTML}{487eb0}
-\definecolor{purplea}{HTML}{5758BB}
-\definecolor{purpleb}{HTML}{833471}
-\definecolor{purplec}{HTML}{006266}
-\definecolor{crimson}{HTML}{EA2027}
-\colorlet{coverlinecolor}{cyan}
-
 %% 自定义命令
-
 \def\d{\textup{d}} % 直立体 d 用于微分符号 dx
 \def\artanh{\operatorname{artanh}}  % 定义artanh函数
 \def\arsinh{\operatorname{arsinh}}  % 定义arsinh函数

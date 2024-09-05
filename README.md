@@ -39,7 +39,8 @@
 
 ## 打赏
 如果您觉得本项目对您有所帮助, 欢迎打赏, 以激励作者继续努力, 生活不易, 鼠鼠叹气, 感谢支持!
-![|200](https://yjl0928-image-1328687625.cos.ap-beijing.myqcloud.com/Image/README-%E6%94%AF%E4%BB%98%E5%AE%9D.jpg)
-
-![|200](https://yjl0928-image-1328687625.cos.ap-beijing.myqcloud.com/Image/README-%E5%BE%AE%E4%BF%A1.png)
+<center class="half">
+<img src="https://yjl0928-image-1328687625.cos.ap-beijing.myqcloud.com/Image/README-%E6%94%AF%E4%BB%98%E5%AE%9D.jpg" width=250/>
+<img src="https://yjl0928-image-1328687625.cos.ap-beijing.myqcloud.com/Image/README-%E5%BE%AE%E4%BF%A1.png" width=250/>
+</center>
 
