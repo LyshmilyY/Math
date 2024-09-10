@@ -583,3 +583,33 @@ $$Y_{i}X_{j}=\left\lbrace
 		我们得到$F'(x)\geq 0\Rightarrow F(x)\text{单调递增}$,$F(x)\geq F(a)=0$
 	\end{proof}
 \end{theorem}
+
+% 平面
+\begin{tikzpicture}
+
+    % Draw the coordinate axes
+    \draw[thick,->] (1,0) -- (2,0) node[anchor=north east] {$y$};
+    \draw[thick,->] (-0.75,-0.75) -- (-1.2,-1.2) node[anchor=north east] {$x$};
+    \draw[thick,->] (0,1) -- (0,2) node[anchor=south east] {$z$};
+
+    % Draw the points and labels
+    \node at (0,0) [anchor=south west] {$O$};  % Origin
+    \node at (-0.75,-0.75) [anchor=north west] {$a$}; % Point a
+    \node at (1,0) [anchor=north east] {$b$};   % Point b
+    \node at (0,1) [anchor=south east] {$c$}; % Point c
+    
+    
+    % Draw dashed lines for internal guides
+    \draw[dashed] (0,0) -- (-0.75,-0.75);  % O to a
+    \draw[dashed] (0,0) -- (1,0);    % O to b
+    \draw[dashed] (0,0) -- (0,1);  % O to c
+
+    \draw[thick] (1,0) -- (-0.75,-0.75);
+    \draw[thick] (-0.75,-0.75) -- (0,1);
+    \draw[thick] (0,1) -- (1,0);
+    
+    \node at (0,-2) {\scriptsize $\frac{x}{a}+\frac{y}{b}+\frac{z}{c}=1,a,b,c>0$};
+    \node at (0,-2.3) {\scriptsize $x,y,z \geq 0$};
+\end{tikzpicture}
+
+% 
