@@ -277,16 +277,29 @@ $$
 \section{二重积分解决一元积分}
 几个比较经典的例子:
 
-1. $\int_{0}^{+\infty}e^{-x^{2}}dx$
+1. $\displaystyle{\int_{0}^{+\infty}e^{-x^{2}}dx}$
 \begin{anymark}[注]
-	我们有: $I = \int_{0}^{+\infty}e^{-x^{2}}dx = \int_{0}^{+\infty}e^{-y^{2}}dy$
+	$I = \int_{0}^{+\infty}e^{-x^{2}}dx = \int_{0}^{+\infty}e^{-y^{2}}dy$
 
 	\begin{eqnarray*}
-		I^{2} &=& \int_{0}^{+\infty}e^{-x^{2}}dx\int_{0}^{+\infty}e^{-y^{2}}dy\\
-			  &=& \int_{0}^{+\infty}dx\int_{0}^{+\infty}e^{-(x^{2}+y^{2})}dy\\
+		I^{2} & = & \int_{0}^{+\infty}e^{-x^{2}}dx\int_{0}^{+\infty}e^{-y^{2}}dy\\
+			  & = & \int_{0}^{+\infty}dx\int_{0}^{+\infty}e^{-(x^{2}+y^{2})}dy\\
+			  & = & \int_{0}^{\frac{\pi}{2}}d \theta \int_{0}^{+\infty}re^{-r^{2}}dr\\
+			  & = \dfrac{\pi}{4}& 
 	\end{eqnarray*}
 \end{anymark}
-2. $\int_{0}^{a}f(x)dx\int_{0}^{a}\frac{1}{f(x)}dx\geq a^{2}$
+2. $\displaystyle{\int_{0}^{a}f(x)dx\int_{0}^{a}\frac{1}{f(x)}dx\geq a^{2}}$
+\begin{anymark}[注]
+	$$I = \int_{0}^{a}f(x)dx\int_{0}^{a}\dfrac{1}{f(x)}dx = \iint\limits_{\substack{0\leq x\leq a\\0\leq y\leq a}}\dfrac{f(x)}{f(y)}dxdy$$
+
+	\begin{eqnarray*}
+		2I    & = & \iint\limits_{\substack{0\leq x\leq a\\0\leq y\leq a}}\dfrac{f(x)}{f(y)}dxdy 
+				+   \iint\limits_{\substack{0\leq x\leq a\\0\leq y\leq a}}\dfrac{f(y)}{f(x)}dxdy\\
+			  & \geq & \iint\limits_{\substack{0\leq x\leq a\\0\leq y\leq a}} 2dxdy\\
+			  &  =   & 2a^{2}\\
+		 I	  & = a^{2}& 
+	\end{eqnarray*}
+\end{anymark}
 
 \chapterimage{chap9.jpg}
 \chapter{常微分方程}
@@ -294,9 +307,9 @@ $$
 	\item 微分方程概念、解和通解
 	\item 一阶微分方程
 	\item 伯努利方程
-	\item 高阶线性微分方程
 	\item (非)齐次二阶常系数线性微分方程
 	\item 欧拉方程
+	\item 高阶线性微分方程
 \end{introduction}
 \begin{definition}[微分方程及其阶]
 	表示未知函数及其导数(或者微分)与自变量之间关系的方程称为微分方程, 一般写为:
@@ -460,19 +473,37 @@ $$\dfrac{dy}{dx} = \varphi(\dfrac{y}{x})\Rightarrow
 	$$\dfrac{d^{2}y}{dt^2}+p\dfrac{dy}{dt}+qy=f(-e^t)$$
 \end{definition}
 \subsection{高阶常系数齐次线性微分方程}
+\begin{definition}[高阶常系数齐次线性微分方程]
+	$n(n\geq 3)$ 阶常系数齐次线性微分方程称为高阶常系数齐次线性微分方程。
+\end{definition}
+
+\begin{proposition}[$n$ 阶常系数线性微分方程解]
+	特征方程:
+	$$a_{0} + a_{1}x + \cdots + a_{n-1}x^{n-1} + a_{n}x^{n} = 0$$
+
+	\begin{enumerate}
+		\item $r$ 是单实数根, 通解包含 $Ce^{rx}$
+		\item $r$ 是 $k$ 重实数根, 通解包含 $(C_{1} + C_{2}x + C_{3}x^{2} + \cdots + C_{k}x^{k-1})e^{rx}$
+		\item $r$ 是单复根, 通解包括 $e^{rx}(C_{1}\cos \beta x+C_{2}\sin \beta x)$
+		\item $r$ 是二重复根, 通解包括 $e^{rx}(C_{1}\cos \beta x+C_{2}\sin \beta x+C_{3}x\cos \beta x+C_{4}x\sin \beta x)$
+	\end{enumerate}
+\end{proposition}
 
 \chapterimage{chap10.jpg}	
 \chapter{无穷级数}
 \begin{introduction}
 	\item 常数项级数
-	\item 收敛半径和收敛域
+	\item 敛散性判别
+	\item 收敛域和收敛半径
+	\item 函数项级数
 	\item 幂级数
-	\item 和函数
-	\item 函数展开式
+	\item 和函数和函数展开式
 	\item 傅里叶级数
 \end{introduction}
-\begin{definition}
-	给定一个无穷数列 $u_{1},u_{2},u_{3},\dots,u_{n},\dots$,将其各项相加得到 $\sum\limits_{n=1}^{+\infty}u_{n}$,即:
+\section{常数项级数}
+
+\begin{definition}[级数定义]
+	给定一个无穷数列 $u_{1},u_{2},u_{3},\dots,u_{n},\dots$,将其各项相加得到 $\sum\limits_{n=1}^{+\infty}u_{n}$
 	$$u_{1}+u_{2}+u_{3}+\dots+u_{n}+\dots=\sum_{n=1}^{+\infty}u_{n}$$
 	我们将 $\sum\limits_{n=1}^{+\infty}u_{n}$ 称为无穷级数,简称为级数,其中 $u_{n}$ 是无穷级数的通项,如果 $u_{n}$ 是常数项,则称为常数项级数;如果 $u_{n}$ 是函数,则称为函数项级数
 \end{definition}
@@ -485,38 +516,46 @@ $$\dfrac{dy}{dx} = \varphi(\dfrac{y}{x})\Rightarrow
 	\myspace{1}
 	(2). 当 $\lim\limits_{n\rightarrow +\infty}S_{n}=\infty$ 或者不存在时,我们称级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 发散.
 \end{definition}
+
 \begin{corollary}
 	(1). 当 $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛时,我们有:  $\lim\limits_{n\rightarrow +\infty}u_{n}=0$ (必要条件)
 	\myspace{1}
 	(2). 当 $\sum\limits_{n=1}^{+\infty}u_{n},\sum\limits_{n=1}^{+\infty}v_{n}$ 收敛时,且这两个级数的和分别为 $S,T$, $\forall \alpha ,\beta \in \mathbb{R} ,\sum\limits_{n=1}^{+\infty}(\alpha u_{n}+\beta v_{n})$ 收敛,且级数和为 $\alpha S+\beta T$
 	\myspace{1}
-	(3). 如果存在去掉 $m$ 项的级数 $\sum\limits_{n=m}^{+\infty}u_{n}$ 收敛,原级数收敛;反之亦然
+	(3). 改变级数任意有限项, 不会改变该级数的敛散性
+	\myspace{1}
+	(4). 收敛级数的任意项加括号所得到的新级数仍收敛, 且其和不变
 \end{corollary}
-\section{常数项级数}
-常数项级数敛散性判别方法
 
-1. 正项级数判别
+\section{敛散性判别}
+\subsection{正项级数判别}\label{the: 正向级数敛散性的判别方法}
 
 (1). 定义法\label{定义法}
-\begin{theorem}[收敛原则]\label{the: 正向级数敛散性的判别方法}
-	$\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛 $\Leftrightarrow$ $\lim\limits_{n\rightarrow +\infty}S_{n}$ 有界
+\begin{theorem}[收敛原则]
+	$\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛 $\Leftrightarrow S_{n}$ 有界
 \end{theorem}
-\begin{anymark}[证明]
-	$\sum\limits_{n=1}^{+\infty}u_{n}$ 是正项级数,$u_{n}>0$,$S_{n}$ 单调递增
 
-	如果 $S_{n}$ 有界,$\lim\limits_{n\rightarrow+\infty}S_{n}$ 存在,原级数收敛;反之亦然
-\end{anymark}
+\begin{proof}
+	$\sum\limits_{n=1}^{+\infty}u_{n}$ 是正项级数,$u_{n}\geq 0, S_{n}$ 单调递增
+
+	$S_{n}$ 有界, 单调有界准则: $\lim\limits_{n\rightarrow+\infty}S_{n}$ 存在, 原级数收敛
+\end{proof}
+\myspace{1}
+
 (2). 比较判别法
-\begin{theorem}
-	存在无穷级数 $\sum\limits_{n=1}^{+\infty}u_{n},\sum\limits_{n=1}^{+\infty}v_{n}$,若从某一项起满足 $u_{n}<v_{n}$,我们有下面的推论:
+
+\begin{theorem}[比较判别法]
+	两个正项级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 和 $\sum\limits_{n=1}^{+\infty}v_{n}$, 若从某一项起满足 $u_{n} \leq v_{n}$:
 	\myspace{1}
 	若 $\sum\limits_{n=1}^{+\infty}u_{n}$ 发散, $\sum\limits_{n=1}^{+\infty}v_{n}$ 发散
 	\myspace{1}
 	若 $\sum\limits_{n=1}^{+\infty}v_{n}$ 收敛, $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛
 \end{theorem}
+
 (3). 比较判别法的极限形式
-\begin{theorem}\label{the: 比较判别法的极限形式}
-	$\lim\limits_{n\rightarrow+\infty}\dfrac{u_{n}}{v_{n}}=A$
+
+\begin{theorem}[比较判别法的极限形式]\label{the: 比较判别法的极限形式}
+	两个正项级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 和 $\sum\limits_{n=1}^{+\infty}v_{n}(v_{n}\neq 0)$, 且 $\lim\limits_{n\rightarrow+\infty}\dfrac{u_{n}}{v_{n}}=A$
 	\myspace{1}
 	(i). $A=0$,若 $\sum\limits_{n=1}^{+\infty}v_{n}$ 收敛,$\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛
 
@@ -524,9 +563,11 @@ $$\dfrac{dy}{dx} = \varphi(\dfrac{y}{x})\Rightarrow
 
 	(iii). $A=+\infty$,若 $\sum\limits_{n=1}^{+\infty}v_{n}$ 发散,$\sum\limits_{n=1}^{+\infty}u_{n}$ 发散
 \end{theorem}
-(4). 比值判别法
-\begin{theorem}
-	$\lim\limits_{n\rightarrow+\infty}\dfrac{u_{n+1}}{u_{n}}=\rho$
+
+(4). 比值判别法(达朗贝尔判别法)
+
+\begin{theorem}[比值判别法]
+	正项级数 $\sum\limits_{n=1}^{+\infty}u_{n}$, 且 $\lim\limits_{n\rightarrow+\infty}\dfrac{u_{n+1}}{u_{n}}=\rho$
 	\myspace{1}
 	(i). $\rho<1$, $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛
 
@@ -534,9 +575,11 @@ $$\dfrac{dy}{dx} = \varphi(\dfrac{y}{x})\Rightarrow
 
 	(iii). $\rho=1$, $\sum\limits_{n=1}^{+\infty}u_{n}$ 敛散性不确定
 \end{theorem}
+
 (5). 根值判别法(柯西判别法)
-\begin{theorem}
-	$\lim\limits_{n\rightarrow+\infty}\sqrt[n]{u_{n}}=\rho$
+
+\begin{theorem}[根值判别法]
+	正项级数 $\sum\limits_{n=1}^{+\infty}u_{n}$, 且$\lim\limits_{n\rightarrow+\infty}\sqrt[n]{u_{n}}=\rho$
 	\myspace{1}
 	(i). $\rho<1$, $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛
 
@@ -544,11 +587,21 @@ $$\dfrac{dy}{dx} = \varphi(\dfrac{y}{x})\Rightarrow
 
 	(iii). $\rho=1$, $\sum\limits_{n=1}^{+\infty}u_{n}$ 敛散性不确定
 \end{theorem}
-2. 交错级数判别
+
+(6). 积分判别法
+
+\begin{theorem}[积分判别法]
+	正项级数 $\sum\limits_{n=1}^{+\infty}u_{n}$, 若存在在 $[1,+\infty)$ 上单调减少的非负函数 $f(x)$, 
+	使得 $u_{n} = f(n)$, 则级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 与反常积分 $\int_{1}^{+\infty}f(x)dx$ 敛散性相同
+
+\end{theorem}
+\subsection{交错级数判别}
+
 \begin{theorem}[莱布尼茨判别法]
 	$u_{n}$ 单调不增且 $\lim\limits_{n\rightarrow +\infty}u_{n}=0$  $\Rightarrow\sum\limits_{n=1}^{+\infty}(-1)^{n-1}u_{n}$ 收敛
 \end{theorem}
-3. 任意项级数判别
+
+\subsection{一般项级数判别}
 \begin{definition}
 	$\sum\limits_{n=1}^{+\infty}|u_{n}|$ 是原级数的绝对值级数
 	\myspace{1}
@@ -556,361 +609,890 @@ $$\dfrac{dy}{dx} = \varphi(\dfrac{y}{x})\Rightarrow
 	\myspace{1}
 	(ii). 如果 $\sum\limits_{n=1}^{+\infty}|u_{n}|$ 发散,$\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛,称其\textbf{条件收敛}
 \end{definition}
-\begin{theorem}
-	1. $\sum\limits_{n=1}^{+\infty}|u_{n}|$ 收敛 $\Rightarrow\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛
+\subsection{常见级数敛散性推论}
+\begin{corollary}
+	设 $\sum\limits_{n=1}^{+\infty} u_{n}, \sum\limits_{n=1}^{+\infty}v_{n}, \sum\limits_{n=1}^{+\infty}w_{n}$ 是任意项级数
 
-	2. $\sum\limits_{n=1}^{+\infty}u_{n}(u_{n}>0)$ 收敛 $\Rightarrow\sum\limits_{n=1}^{+\infty}u_{n}^2$ 收敛
-\end{theorem}
-\begin{anymark}[证明]
+	$$\begin{cases}
+  		v_{n} = \dfrac{u_{n} + |u_{n}|}{2} \\
+  		w_{n} = \dfrac{|u_{n}| - u_{n}}{2}
+	\end{cases}$$
 
-	1. 我们构造级数$v_{n}=\sum\limits_{n=1}^{+\infty}\frac{1}{2}(u_{n}+|u_{n}|)$,我们发现当$u_{n}<0$时,$v_{n}=0$;当$u_{n}>0$时,$v_{n}=u_{n}$,我们得到:
-	$$0\leq v_{n}\leq |u_{n}|$$
+	(1). $a, b, c$ 是非零常数, 且 $au_{n} + bv_{n} + cw_{n} = 0$, 在 $\sum\limits_{n=1}^{+\infty} u_{n}, \sum\limits_{n=1}^{+\infty}v_{n}, \sum\limits_{n=1}^{+\infty}w_{n}$ 
+	中只要有两个级数收敛, 另一个级数必收敛
 
-	我们得到$v_{n}=\sum\limits_{n=1}^{+\infty}\frac{1}{2}(u_{n}+|u_{n}|)$收敛,由收敛级数的可加性得到:
+	(2). 级数 $\sum\limits_{n=1}^{+\infty}|u_{n}|$ 收敛 $\Rightarrow$ 级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛; 级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 发散 $\Rightarrow$ 级数 $\sum\limits_{n=1}^{+\infty}|u_{n}|$ 发散
 
-	级数$\sum\limits_{n=1}^{+\infty}(2v_{n}-|u_{n}|)$ 收敛
+	(3). 级数 $\sum\limits_{n=1}^{+\infty}u^{2}_{n}$ 收敛 $\Rightarrow$ 级数 $\sum\limits_{n=1}^{+\infty}\dfrac{u_{n}}{n}$ 绝对收敛 $\qquad \big|\dfrac{u_{n}}{n}\big| \leq \dfrac{1}{2}(u^{2}+\dfrac{1}{n^{2}})$
 
-	综上,$\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛
+	(4).  级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛, 级数 $\sum\limits_{n=1}^{+\infty}|u_{n}|$ 和级数 $\sum\limits_{n=1}^{+\infty}u^{2}_{n}$ 收敛性不确定 $\qquad u_{n} = (-1)^{n-1}\dfrac{1}{n}$
 
+	(5). 级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛, 级数 $\sum\limits_{n=1}^{+\infty}(-1)^{n}u_{n}$ 收敛性不确定 $\qquad u_{n} = (-1)^{n}\dfrac{1}{n}$
 
-	2. 我们由$\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛 可以得到:
-	$$\exists M>0,\ s.t. |u_{n}|<M\Rightarrow 0<u_{n}^2<Mu_{n}$$
+	(6). 级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛, 级数 $\sum\limits_{n=1}^{+\infty}(-1)^{n}\dfrac{u_{n}}{n}$ 收敛性不确定 $\qquad u_{n} = (-1)^{n}\dfrac{1}{\ln n}$
 
-	我们得到$\sum\limits_{n=1}^{+\infty}u_{n}^2$收敛
-\end{anymark}
+	(7). 级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛, 级数 $\sum\limits_{n=1}^{+\infty}(u_{2n-1}+u_{2n})$ 收敛; 级数 $\sum\limits_{n=1}^{+\infty}u_{2n}$ 和级数 $\sum\limits_{n=1}^{+\infty}u_{2n-1}$ 收敛性不确定
+\end{corollary}
 \myspace{1}
-\section{幂级数}
-\begin{definition}[幂级数]
+\section{函数项级数}
+\begin{definition}[函数项级数]
+	设函数列 $\{u_{n}(x)\}$ 定义在区间 $I$ 上, 称 
+	
 	$$\sum\limits_{n=1}^{+\infty}u_{n}(x)=u_{1}(x)+u_{2}(x)+u_{3}(x)+\dots+u_{n}(x)+\dots$$
-	级数的每一项都是函数项,函数的定义域 $I$,当 $x=x_{0}$ 时, $\sum\limits_{n=1}^{+\infty}u_{n}(x_{0})$ 就是常数项级数.
-	\myspace{1}
-	$\sum\limits_{n=1}^{+\infty}u_{n}(x_{0})$ 收敛的 $x_{0}$ 点被称为\textbf{收敛点},所有收敛点的集合被称为\textbf{收敛域}
+	
+	为定义在区间 $I$ 上的 \textbf{函数项级数}, 记作 $\sum\limits_{n=1}^{+\infty}u_{n}(x)$, 当 $x$ 取确定的值 $x_{0}$ 时, 
+	$\sum\limits_{n=1}^{+\infty}u_{n}(x)$ 成为常数项级数 $\sum\limits_{n=1}^{+\infty}u_{n}(x_{0})$
 \end{definition}
-\begin{definition}
-	幂级数标准形式:
+\begin{definition}[收敛点和发散点]
+	(1). 若给定 $x_{0}\in I$, 有 $\sum\limits_{n=1}^{+\infty}u_{n}(x_{0})$ 收敛, 
+	则称 $x=x_{0}$ 是函数项级数 $\sum\limits_{n=1}^{+\infty}u_{n}(x)$ 的\textbf{收敛点}
+
+	(2). 若 $\sum\limits_{n=1}^{+\infty}u_{n}(x_{0})$ 发散, 则称  $x = x_{0}$ 是函数项级数 $\sum\limits_{n=1}^{+\infty}u_{n}(x)$ 的\textbf{发散点}
+\end{definition}
+
+\begin{definition}[收敛域]
+	函数项级数 $\sum\limits_{n=1}^{+\infty}u_{n}(x)$ 的所有收敛点的集合称为函数项级数 $\sum\limits_{n=1}^{+\infty}u_{n}(x)$ 的 \textbf{收敛域}
+\end{definition}
+\subsection{幂级数}
+
+\begin{definition}[幂级数]
+	若 $\sum\limits_{n=0}^{+\infty}u_{n}(x)$ 的一般项 $u_{n}(x)$ 是 $x$ 的 $n$ 次幂函数, 
+	则称 $\sum\limits_{n=0}^{+\infty}u_{n}(x)$ 为\textbf{幂级数}
+	\myspace{1}
+	标准形式:
 	$$\sum\limits_{n=0}^{+\infty}u_{n}(x)=a_{0}+a_{1}x+a_{2}x^{2}+\dots+a_{n}x^{n}+\dots$$
-	幂级数的一般形式:
+	
+	一般形式:
 	$$\sum\limits_{n=0}^{+\infty}u_{n}(x)=a_{0}+a_{1}(x-x_{0})+a_{2}(x-x_{0})^{2}+\dots+a_{n}(x-x_{0})^{n}+\dots$$
+
+	其中 $a_{n}(n=0,1,2\cdots)$ 为\textbf{幂级数的系数}  
 \end{definition}
 
-
-\begin{theorem}[阿贝尔定理]\label{the: 幂级数收敛区间(收敛半径)和收敛域}
-	\textbf{幂级数收敛域判定\ (阿贝尔定理)}:
+\subsection{幂级数收敛域}
+\begin{theorem}[阿贝尔定理]
+	\textbf{阿贝尔定理}
 	\myspace{1}
-	当幂级数 $\sum\limits_{n=0}^{+\infty}u_{n}(x)$ 在 $x=x_{1}$ 处收敛时, $\forall x<|x_{1}|$,幂级数 $\sum\limits_{n=0}^{+\infty}u_{n}(x)$ 都收敛
+	当幂级数 $\sum\limits_{n=0}^{+\infty}a_{n}x^{n}$ 在 $x=x_{1}(x_{1}\neq 0)$ 处收敛时, $\forall x < |x_{1}|$, 幂级数 $\sum\limits_{n=0}^{+\infty}a_{n}x^{n}$ 都收敛
 
-	当幂级数 $\sum\limits_{n=0}^{+\infty}u_{n}(x)$ 在 $x=x_{2}$ 处发散时, $\forall x>|x_{2}|$,幂级数 $\sum\limits_{n=0}^{+\infty}u_{n}(x)$ 都发散.
+	当幂级数 $\sum\limits_{n=0}^{+\infty}a_{n}x^{n}$ 在 $x=x_{2}(x_{2}\neq 0)$ 处发散时, $\forall x > |x_{2}|$, 幂级数 $\sum\limits_{n=0}^{+\infty}a_{n}x^{n}$ 都发散
 \end{theorem}
-对于标准幂级数求收敛域,我们利用公式法:
-\begin{theorem}
-	$\lim\limits_{n\rightarrow +\infty}|\dfrac{a_{n+1}}{a_{n}}|=\rho$
-	$$R=\left\lbrace \begin{matrix}
-			\frac{1}{\rho},\rho \neq 0 \\
-			0,\rho = \infty            \\
-			\infty,\rho = 0
-		\end{matrix}\right. $$
-\end{theorem}
-我们将 $(-R,R)$ 称为幂级数的收敛区间
 
-幂级数的收敛域为$(-R,R) \ or \ [-R,R]\ or\ (-R,R] \ or\ [-R,R) $
+\begin{theorem}[收敛域和收敛半径]
+	(1). 不缺项幂级数(\textbf{充分条件}): 
+	$$\lim\limits_{n\rightarrow +\infty}|\dfrac{a_{n+1}}{a_{n}}|=\rho$$
+	
+	$$R = \begin{cases}
+		\dfrac{1}{\rho},\rho \neq 0 \\
+		0,\rho = \infty            \\
+		\infty,\rho = 0
+	\end{cases}$$
+
+	区间 $(-R,R)$ 是幂级数 $\sum\limits_{n=0}^{+\infty}a_{n}x^{n}$ 的收敛区间; 
+	幂级数的收敛域为 $(-R,R) \ or \ [-R,R]\ or\ (-R,R] \ or\ [-R,R) $
+
+	(2). 缺项幂级数或一般项级数 $\sum\limits_{n=1}^{+\infty}u_{n}(x)$, 利用正项级数判别法中的比值判别法(\textbf{充分条件}):
+	$$\rho(x) = \begin{cases}
+		\lim\limits_{n \to +\infty} \big|\dfrac{u_{n+1}(x)}{u_{n}(x)}\big| < 1\\
+		\lim\limits_{n \to +\infty}\sqrt[n]{u_{n}(x)} < 1
+	\end{cases}\Rightarrow
+	x\in (a,b)
+	$$
+	$$\sum\limits_{n=1}^{+\infty}u_{n}(a)\text{和}\sum\limits_{n=1}^{+\infty}u_{n}(b) \text{敛散性}$$
+
+	(3). 对级数提出或者乘以因式 $(x-x_{0})^{k}$ 或者平移, 收敛半径不变
+
+	(4). 对级数逐项求导, 收敛半径不变, 收敛域可能缩小
+
+	(5). 对级数逐项积分, 收敛半径不变, 收敛域可能扩大
+\end{theorem}
+
 \myspace{1}
-\section{幂级数求和函数}
 
-
-\begin{definition}[幂级数的和函数]\label{def: 幂级数求和函数}
-	在幂级数收敛域上,我们称 $S(x)$ 是幂级数的和函数:
+\subsection{幂级数求和函数}
+\begin{definition}[幂级数的和函数]
+	在幂级数收敛域上, 记 $S(x)$ 是幂级数的和函数:
 	$$S(x)=\sum\limits_{n=0}^{+\infty}u_{n}(x)$$
 \end{definition}
-\begin{theorem}[可积性与可导性]
+\begin{theorem}[运算法则]
+	幂级数 $\sum\limits_{n=0}^{+\infty}a_{n}x^{n}$ 与 $\sum\limits_{n=0}^{+\infty}b_{n}x^{n}$ 的收敛半径分别为 $R_{a}$ 和 $R_{b}$, 且 $R_{a}\neq R_{b}$
 
-	(i). 幂级数和函数 $S(x)=\sum\limits_{n=0}^{+\infty}u_{n}(x)$ 在收敛域上连续
+	(i). $$k \sum\limits_{n=0}^{n}a_{n}x^{n} = \sum\limits_{n=0}^{n}ka_{n}x^{n}, |x| < R_{a}$$
 
-	(ii). 幂级数在收敛域 $I$ 上可积,有逐项积分公式(收敛域 $I'\geq I$)
-	$$\int_{0}^{x}S(t)dt=\int_{0}^{x}(\sum\limits_{n=0}^{+\infty}a_{n}t^{n})dt=\sum\limits_{n=0}^{+\infty}\frac{a_{n}}{n+1}x^{n+1},x\in I$$
+	(ii). $$\sum\limits_{n=0}^{n}a_{n}x^{n} \pm \sum\limits_{n=0}^{n}b_{n}x^{n} = \sum\limits_{n=0}^{n}(a_{n}\pm b_{n})x^{n}, |x| < \min\{R_{a}, R_{b}\}$$
 
-	(iii). 幂级数在收敛域 $I$ 上可导,有逐项求导公式(收敛域 $I'\leq I$)
-	$$S'(x)=(\sum\limits_{n=0}^{+\infty}a_{n}x^{n})'=\sum\limits_{n=0}^{+\infty}na_{n}x^{n-1},x\in I$$
+	(iii). $$\sum\limits_{n=0}^{n}a_{n}x^{n}\sum\limits_{n=0}^{n}b_{n}x^{n} = \sum\limits_{n=0}^{n} \left(\sum\limits_{i=0}^{n}a_{i}b_{n-i}\right) x^{n}$$
 \end{theorem}
+
+\begin{corollary}
+	
+	(i). 幂级数 $\sum\limits_{n=0}^{+\infty}a_{n}x^{n}$ 的和函数 $S(x)$ 在其收敛域 $I$ 上连续
+
+	(ii). 幂级数 $\sum\limits_{n=0}^{+\infty}a_{n}x^{n}$ 的和函数 $S(x)$ 在其收敛域 $I$ 上可积分, 且有逐项积分公式, 收敛半径不变, 收敛域可能变大 
+	$$\int_{0}^{x}S(t)dt = \int_{0}^{x}\left(\sum\limits_{n=0}^{+\infty}a_{n}t^{n}\right)dt = \sum\limits_{n=0}^{+\infty}a_{n}\int_{0}^{x}t^{n}dt = \sum\limits_{n=0}^{+\infty}\dfrac{a_{n}}{n+1}x^{n+1}(x\in I)$$
+	
+	(iii). 幂级数 $\sum\limits_{n=0}^{+\infty}a_{n}x^{n}$ 的和函数 $S(x)$ 在其收敛区间 $(-R,R)$ 上可导, 且有逐项求导公式, 收敛半径不变, 收敛域可能变小 
+	$$S'(x) = \left(\sum\limits_{n=0}^{+\infty}a_{n}x^{n}\right)' = \sum\limits_{n=0}^{+\infty}\left(a_{n}x^{n}\right)' = \sum\limits_{n=1}^{+\infty}na_{n}x^{n-1}(|x| < R)$$
+\end{corollary}
+
 \subsection{重要展开式}
+
 \begin{theorem}\label{the: 重要幂级数展开式}
-	$$e^{x}=1+x+\frac{x^2}{2!}+\dots+\frac{x^n}{n!}+\dots ,-\infty<x<+\infty$$
-	$$\frac{1}{1-x}=1+x+x^2+\dots+x^{n}+\dots,-1<x<1$$
-	$$\frac{1}{1+x}=1-x+x^2-x^3+\dots+(-1)^{n}x^{n}+\dots,-1<x<1$$
-	$$\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\dots+\frac{(-1)^nx^{n+1}}{n+1}+\dots=\sum\limits_{n=1}^{+\infty}(-1)^{n-1}\frac{x^{n}}{n},-1<x\leq 1$$
-	$$\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dots+\frac{(-1)^{n}x^{2n+1}}{(2n+1)!}+\dots=\sum\limits_{n=0}^{+\infty}(-1)^{n}\frac{x^{2n+1}}{(2n+1)!},-\infty<x<+\infty$$
-	$$\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}+\dots+\frac{(-1)^nx^{2n}}{2n!}+\dots=\sum\limits_{n=0}^{+\infty}(-1)^{n}\frac{x^{2n}}{(2n)!},-\infty<x<+\infty$$
-	$$(1+x)^{\alpha}=1+\alpha x+\frac{\alpha (\alpha-1)}{2!}x^2+\frac{\alpha (\alpha-1)(\alpha-2)}{3!}x^3+\dots+\frac{\alpha (\alpha-1)(\alpha-2)\dots(\alpha-n+1)}{n!}x^n+\dots$$
+	$$e^{x}=1+x+\dfrac{x^2}{2!}+\cdots+\dfrac{x^n}{n!}+\cdots = 
+	\sum\limits_{n=0}^{+\infty}\dfrac{x^{n}}{n!}, -\infty<x<+\infty$$
+
+	$$\dfrac{1}{1-x}=1+x+x^2+\cdots+x^{n}+\cdots = 
+	\sum\limits_{n=0}^{+\infty}x^{n}, -1<x<1$$
+
+	$$\dfrac{1}{1+x}=1-x+x^2-x^3+\cdots+(-1)^{n}x^{n}+\cdots = 
+	\sum\limits_{n=0}^{+\infty}(-1)^{n}x^{n},-1<x<1$$
+
+	$$\ln(1+x)=x-\dfrac{x^2}{2}+\dfrac{x^3}{3}-\cdots + \dfrac{(-1)^{n-1}x^{n}}{n}+\cdots
+	= \sum\limits_{n=1}^{+\infty}(-1)^{n-1}\dfrac{x^{n}}{n},-1<x\leq 1$$
+	
+	$$\sin x=x-\dfrac{x^3}{3!}+\dfrac{x^5}{5!}-\cdots+\dfrac{(-1)^{n}x^{2n+1}}{(2n+1)!}+\cdots=\sum\limits_{n=0}^{+\infty}(-1)^{n}\dfrac{x^{2n+1}}{(2n+1)!}, -\infty<x<+\infty$$
+	
+	$$\cos x=1-\dfrac{x^2}{2!}+\dfrac{x^4}{4!}+\cdots+\dfrac{(-1)^nx^{2n}}{2n!}+\cdots=\sum\limits_{n=0}^{+\infty}(-1)^{n}\dfrac{x^{2n}}{(2n)!}, -\infty<x<+\infty$$
+	
+	$$\tan x=\sum\limits_{n=0}^{+\infty}(-1)^{n}\dfrac{x^{2n+1}}{2n+1}, -1\leq x\leq 1 $$
+	\begin{eqnarray*}
+		(1+x)^{\alpha} & = & 1+\alpha x+\dfrac{\alpha (\alpha-1)}{2!}x^2+ \cdots + \dfrac{\alpha (\alpha-1)(\alpha-2)\dots(\alpha-n+1)}{n!}x^n+\cdots\\
+		               & = & \begin{cases}
+						 x\in (-1,1), & \alpha \leq -1\\
+						 x\in (-1,1], & -1 < \alpha < 0\\
+						 x\in [-1,1], & \alpha > 0\ \&\ \alpha \notin \mathbb{N}_{+}\\
+						 x\in (-\infty,+\infty), & \alpha \in \mathbb{N}_{+}  
+					   \end{cases}
+	\end{eqnarray*}
 \end{theorem}
-\section{函数展开成幂级数}
+\subsection{函数展开成幂级数}
 
 \begin{definition}\label{函数展开成幂级数}
-	泰勒级数:  ( $f(x)$ 在点 $x=x_{0}$ 处存在任意阶导数 )
+	\textbf{泰勒级数}: $f(x)$ 在点 $x=x_{0}$ 处存在任意阶导数
 	$$f(x)=\sum\limits_{n=0}^{+\infty}\frac{f^{(n)}(x_{0})}{n!}(x-x_{0})^n$$
-	麦克劳林级数:  ( $f(x)$ 在点 $x=0$ 处存在任意阶导数 )
+	\textbf{麦克劳林级数}: $f(x)$ 在点 $x=0$ 处存在任意阶导数
 	$$f(x)=\sum\limits_{n=0}^{+\infty}\frac{f^{(n)}(0)}{n!}x^n$$
 \end{definition}
 \section{傅里叶级数}
-将满足特定条件的周期函数用一个序列的正弦函数叠加表示,这种表示我们称为傅里叶级或者三角级数
+
 \begin{definition}[傅里叶级数]\label{def: 傅里叶级数}
-	设 $f(x)$是周期函数且满足狄利克雷收敛定律
+	考虑到三角函数是周期函数, 任意一个以 $2\pi$ 为周期的函数 $f(x)$, 能写成一系列三角函数 $\sin (nx)$ 和 $\cos (nx)$ 的线性组合:
 
-	$f(x)=A_{0}+\sum\limits_{n=1}^{+\infty}A_{n}\sin (n\omega t+\varphi_{n})$是函数的傅里叶展开,展开式是傅里叶级数.
-	通过一些变量代换,可以得到:
-	$$f(x)=A_{0}+\sum\limits_{n=1}^{+\infty}(a_{n}\cos nx+b_{n}\sin nx)$$
+	$$f(x) = \dfrac{a_{0}}{2} + \sum\limits_{n=1}^{+\infty}(a_{n}\cos (nx)+b_{n}\sin (nx))$$
+
+	$f(x)$ 三角函数分解被称为傅里叶级数或傅里叶展开, 也被称为三角级数 
 \end{definition}
-\textbf{三角函数族的正交性}
-\begin{definition}
-	$\{1,\sin x,\cos x,\sin 2x,\cos 2x,\dots,\sin nx,\cos nx\dots\}$被称为三角函数族,满足任意两个不同的函数之积在 $[-\pi,\pi]$ 上的定积分 $\int_{-\pi}^{\pi}f(x)g(x)dx=0$
+\subsection{三角函数集 $\Gamma$ 的归一正交性}
+\begin{definition}[内积、正交和范数]
+	考虑 $[-\pi,\pi]$ 上的函数 $f(x)$ 构成的无限维空间, 我们希望用正交的向量组来表示一般的向量(函数), 我们定义函数内积、正交和范数概念
+
+	(1). 内积
+	
+	$$\forall f,g \in V, (f\cdot g) = \int_{-\pi}^{\pi}f(x)g(x)dx $$
+
+	(2). 正交
+
+	$$\forall f,g \in V, (f\cdot g) = \int_{-\pi}^{\pi}f(x)g(x)dx = 0\Rightarrow f \bot g $$
+
+	(3). 范数
+
+	$$\forall f \in V, \parallel f \parallel  = \left(\int_{-\pi}^{\pi}f^{2}(x)dx\right)^{\frac{1}{2}}$$
 \end{definition}
-利用三角函数族的正交性这一性质,我们可以求出傅里叶级数的傅里叶系数:
-$$\int_{-\pi}^{\pi}f(x)\sin nxdx=\int_{-\pi}^{\pi}A_{0}\sin nxdx+\int_{-\pi}^{\pi}b_{n}\sin^{2}nxdx \Rightarrow b_{n}=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin nxdx$$
-$$\int_{-\pi}^{\pi}f(x)\cos nxdx=\int_{-\pi}^{\pi}A_{0}\cos nxdx+\int_{-\pi}^{\pi}a_{n}\cos^{2}nxdx \Rightarrow a_{n}=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos nxdx$$
-$$\int_{-\pi}^{\pi}f(x)=\int_{-\pi}^{\pi}A_{0}dx\Rightarrow A_{0}=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x)dx$$
-\begin{theorem}
-	$$f(x)~\frac{a_{0}}{2}+\sum\limits_{n=1}^{+\infty}(a_{n}\cos nx+b_{n}\sin nx)$$
-	其中傅里叶系数 $a_{n},b_{n}$ 表达式:
-	$$\left\lbrace \begin{array}{l}
-			a_{n}=\dfrac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos nxdx,n=0,1,2,\cdots \\
-			b_{n}=\dfrac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin nxdx,n=1,2,\cdots
-		\end{array}\right. $$
+
+\begin{definition}[三角函数集 $\Gamma$ 的归一正交性]
+	定义在 $[-\pi,\pi]$ 上的函数空间中存在一系列范数为 $1$ 且正交的向量组, 考虑 $[-\pi,\pi]$ 上的三角函数组
+	
+	$$\Gamma = \left\{\dfrac{1}{\sqrt{2}}, \dfrac{1}{\sqrt{\pi}}\cos x, \dfrac{1}{\sqrt{\pi}}\sin x, \cdots, \dfrac{1}{\sqrt{\pi}}\sin nx, \dfrac{1}{\sqrt{\pi}}\cos nx, \cdots\right\}$$
+	
+	$$\forall f \in \Gamma, \parallel f \parallel = 1, \forall f,g \in \Gamma, f \cdot g = 0\Rightarrow f \bot g$$
+
+	不妨设 $$\begin{cases}
+		f_{1} = \dfrac{1}{\sqrt{\pi}}\sin mx\\
+		f_{2} = \dfrac{1}{\sqrt{\pi}}\sin nx
+	\end{cases}\qquad 
+	\begin{cases}
+	  g_{1} = \dfrac{1}{\sqrt{\pi}} \cos mx\\
+	  g_{2} = \dfrac{1}{\sqrt{\pi}} \cos nx
+	\end{cases}$$
+
+	$$ \begin{cases}
+		\parallel f_{1} \parallel = \left(\displaystyle{\int_{-\pi}^{\pi}\sin^{2} nxdx}\right)^{\frac{1}{2}} = 1\\
+		\parallel g_{1} \parallel = \left(\displaystyle{\int_{-\pi}^{\pi}\cos^{2} mxdx}\right)^{\frac{1}{2}} = 1
+	\end{cases} \qquad
+	 \begin{cases}
+		f_{1} \cdot g_{1} = \dfrac{1}{\pi}\displaystyle{\int_{-\pi}^{\pi}\sin mx\cos mxdx} = 0 \\
+		f_{1} \cdot f_{2} = \dfrac{1}{\pi}\displaystyle{\int_{-\pi}^{\pi}\sin mx\sin nxdx} = 0 (m\neq n)\\
+		g_{1} \cdot g_{2} = \dfrac{1}{\pi}\displaystyle{\int_{-\pi}^{\pi}\cos mx\cos nxdx} = 0 (m\neq n)
+	 \end{cases}$$
+\end{definition}
+
+\subsection{周期函数的傅里叶级数}
+\begin{theorem}[周期为 $2\pi$ 函数的傅里叶级数]
+	$$f(x) = \dfrac{a_{0}}{2} + \sum\limits_{n=1}^{+\infty}(a_{n}\cos (nx)+b_{n}\sin (nx))$$
+
+	三角函数分解, $a_{n}, b_{n}$ 是傅里叶级数系数:
+	$$\begin{cases}
+	  \displaystyle{\int_{-\pi}^{\pi}f(x)\cos nx dx = \int_{-\pi}^{\pi}a_{n}\cos^{2} nxdx} \\
+	  \displaystyle{\int_{-\pi}^{\pi}f(x)\sin nx dx = \int_{-\pi}^{\pi}b_{n}\sin^{2} nxdx}
+	\end{cases}\Rightarrow 
+	\begin{cases}
+	  \displaystyle{a_{n} = \dfrac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos nxdx} \\
+	  \displaystyle{b_{n} = \dfrac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin nxdx}
+	\end{cases}$$
+
+	记作: \textbf{$2\pi$ 周期函数 $f(x)$ 的傅里叶级数}
+	 $$f(x) \sim\dfrac{a_{0}}{2} + \sum\limits_{n=1}^{+\infty}(a_{n}\cos (nx)+b_{n}\sin (nx))$$
 \end{theorem}
-\begin{theorem}
-	$$S(x)=\frac{a_{0}}{2}+\sum\limits_{n=1}^{+\infty}(a_{n}\cos nx+b_{n}\sin nx)$$
-	$$S(x)=\left\lbrace \begin{array}{l}
-			f(x),x\ is\ contiue \\
-			\\
-			\dfrac{\lim\limits_{x\rightarrow x^{+}}f(x)+\lim\limits_{x\rightarrow x^{-}}f(x)}{2},x\ is\ uncontiue
-			\\
-			\\
-			\dfrac{\lim\limits_{x\rightarrow x^{+}}f(x)+\lim\limits_{x\rightarrow x^{-}}f(x)}{2},x=\pm\pi
-		\end{array}\right. $$
+
+\begin{theorem}[周期为 $2\pi$ 奇偶函数的傅里叶级数]
+	
+	(1). $f(x)$ 在 $[-\pi,\pi]$ 为奇函数, 傅里叶级数为\textbf{正弦级数}:
+	$$f(x) \sim \sum\limits_{n=1}^{+\infty}b_{n}\sin nx\Rightarrow b_{n} = \dfrac{2}{\pi}\int_{0}^{\pi}f(x)\sin nxdx$$
+
+	(2). $f(x)$ 在 $[-\pi,\pi]$ 为偶函数, 傅里叶级数为\textbf{余弦级数}:
+	$$f(x) \sim \dfrac{a_{0}}{2} + \sum\limits_{n=1}^{+\infty}a_{n}\cos nx\Rightarrow a_{n} = \dfrac{2}{\pi}\int_{0}^{\pi}f(x)\cos nxdx$$
 \end{theorem}
-\textbf{任意对称区间中的傅里叶展开}
-\begin{definition}
-	设 $f(x)$ 定义域为 $[-l,l]$,我们令 $t=\frac{x\pi}{l},t\in[-\pi,\pi]$
 
-	我们得到:
-	$$g(t)=\frac{a_{0}}{2}+\sum\limits_{n=1}^{+\infty}(a_{n}\cos nt+b_{n}\sin nt)\rightarrow f(x)=\frac{a_{0}}{2}+\sum\limits_{n=1}^{+\infty}(a_{n}\cos \dfrac{\pi nx}{l}+b_{n}\sin \dfrac{\pi nx}{l})$$
-	$$\left\lbrace \begin{array}{l}
-			a_{n}=\dfrac{1}{\pi}\int_{-\pi}^{\pi}g(t)\cos ntdt,n=0,1,2,\cdots \\
-			b_{n}=\dfrac{1}{\pi}\int_{-\pi}^{\pi}g(t)\sin ntdt,n=1,2,\cdots
-		\end{array}\right. $$
-	我们进行变量代换:
-	$$\left\lbrace \begin{array}{l}
-			a_{n}=\dfrac{1}{l}\int_{-l}^{l}f(x)\cos \dfrac{\pi nx}{l}dx,n=0,1,2,\cdots \\
-			\\
-			b_{n}=\dfrac{1}{l}\int_{-l}^{l}f(x)\sin \dfrac{\pi nx}{l}dx,n=1,2,\cdots
-		\end{array}\right. $$
+\subsection{任意对称区间中的傅里叶展开}
+
+\begin{definition}[任意对称区间中的傅里叶展开]
+	设 $f(x)$ 定义域为 $[-l,l]$, 令 $y = \dfrac{x\pi}{l},y\in[-\pi,\pi]$
+
+	$$g(y) = \dfrac{a_{0}}{2} + \sum\limits_{n=1}^{+\infty}(a_{n}\cos ny+b_{n}\sin ny)\Rightarrow 
+	f(x) = \frac{a_{0}}{2}+\sum\limits_{n=1}^{+\infty}(a_{n}\cos \dfrac{n\pi}{l}x+b_{n}\sin \dfrac{n\pi}{l}x)$$
+	
+	傅里叶系数:
+	
+	$$\begin{cases}
+		\displaystyle{a_{n}=\dfrac{1}{l}\int_{-l}^{l}f(x)\cos \dfrac{n\pi}{l}xdx}, &n=0,1,2,\cdots \\
+		\displaystyle{b_{n}=\dfrac{1}{l}\int_{-l}^{l}f(x)\sin \dfrac{n\pi}{l}xdx}, &n=1,2,\cdots
+	\end{cases}$$
 \end{definition}
-\textbf{正弦级数和余弦级数}
 
-当 $f(x)$ 有奇偶性时,$a_{n}=0 \ or\ b_{n}=0$;
-$$f(x)=f(-x),b_{n}=0,a_{n}=\dfrac{2}{l}\int_{-l}{l}f(x)\cos \dfrac{n\pi}{l}xdx$$
-$$f(x)=-f(-x),a_{n}=0,b_{n}=\dfrac{2}{l}\int_{-l}{l}f(x)\sin \dfrac{n\pi}{l}xdx$$
-\begin{anymark}[总结]\label{mark: $p$级数}
-	1. p级数 $\sum\limits_{n=1}^{+\infty}\dfrac{1}{n^{p}}$,当 $p>1$ 时,级数收敛;当 $p\leq 1$ 时,级数发散
+\subsection{周期延拓}
+\begin{definition}[周期延拓]
+	(1). 周期延拓: $[-\pi,\pi] \rightarrow (-\infty,+\infty)$
 
-	2. 级数 $\sum\limits_{n=1}^{+\infty}\dfrac{1}{n!}$ 收敛,$\lim\limits_{n\rightarrow+\infty}S_{n}=e$
-\end{anymark}
+	(2). 奇延拓: $[0,\pi] \rightarrow [-\pi,\pi]$ 且 $f(x)$ 为奇函数, 正弦级数
 
+	(3). 偶延拓: $[0,\pi] \rightarrow [-\pi,\pi]$ 且 $f(x)$ 为偶函数, 余弦级数
+\end{definition}
 
+\subsection{逐点收敛性理论}
+\begin{theorem}[狄利克雷收敛定理]
+$f(x)$ 以 $2l$ 为周期的可积函数, 在 $[-l,l]$ 上 $f(x)$ 满足条件:
 
+(1). 连续或者只有有限个第一类间断点
 
+(2). 至多有有限个极值点
 
+$f(x)$ 的傅里叶级数在 $[-l,l]$ 上处处收敛, 其和函数 $S(x)$ 满足 
+
+$$S(x) = \begin{cases}
+			f(x),                          & x\text{为连续点}\\
+			\dfrac{f(x_{-})+f(x_{+})}{2},  & x \text{为间断点}\\
+			\dfrac{f(-l_{+})+f(l_{-})}{2}, & x = \pm l  
+		\end{cases}$$
+\end{theorem}
+\begin{theorem}[帕塞瓦尔公式]
+	$f(x)$ 是 $2\pi$ 周期函数, $f(x)$ 在 $[-\pi,\pi]$ 有界可积, 傅里叶系数满足:
+	$$\dfrac{a_{0}^{2}}{2} + \sum\limits_{n=1}^{+\infty}(a_{n}^{2}+b_{n}^{2}) = \dfrac{1}{\pi}\int_{-\pi}^{\pi}f^{2}(x)dx$$
+\end{theorem}
+
+\begin{corollary}[常见级数和]
+(1). $\sum\limits_{n=0}^{+\infty}\dfrac{1}{n!} = e$
+
+(2). $\sum\limits_{n=1}^{+\infty}\dfrac{1}{n^{2}} = \dfrac{\pi^{2}}{6}$
+
+(3). $\sum\limits_{n=1}^{+\infty}\dfrac{1}{n\cdot 2^{n}} = \ln 2$
+
+(4). $\sum\limits_{n=1}^{+\infty}\dfrac{n}{2^{n}} = 2$
+
+(5). $\sum\limits_{n=1}^{+\infty}\dfrac{1}{(2n)!} = \dfrac{e+e^{-1}}{2}$
+
+(6). $\sum\limits_{n=0}^{+\infty}\dfrac{(-1)^{n}}{2n+1} = \dfrac{\pi}{4}$
+
+(7). $\sum\limits_{n=0}^{+\infty}(-1)^{n}\dfrac{2n+2}{(2n+1)!} = \sin 1 + \cos 1$
+\end{corollary}
 
 \chapterimage{chap11.jpg}
 \chapter{空间解析几何}
 \section{向量代数}
-\begin{definition}
-	1. 方向角: 非零向量 $a$ 与$x,y,z$ 轴所成夹角 $\alpha,\beta,\gamma$ 称为向量 $a$ 的方向角. 
+\begin{definition}[向量代数]
+	(1). 方向角: 非零向量 $\boldsymbol{a} = (a_{x},a_{y},a_{z})$ 与 $x,y,z$ 轴所成夹角 $\alpha,\beta,\gamma$ 称为向量 $\boldsymbol{a}$ 的方向角 
 	
-	2. 方向余弦: $\cos \alpha,\cos \beta,\cos\gamma$ 称为向量 $a$ 的方向余弦.
-	$$\cos \alpha=\frac{a_{x}}{|a|},\quad \cos \beta=\frac{a_{y}}{|a|},\quad \cos \gamma=\frac{a_{z}}{|a|}$$
+	(2). 方向余弦: $\cos \alpha,\cos \beta,\cos\gamma$ 称为向量 $a$ 的方向余弦, $\boldsymbol{a} = x\boldsymbol{i} + y\boldsymbol{j} + z\boldsymbol{k}$
+	$$\begin{cases}
+		\cos \alpha=\dfrac{a_{x}}{|a|} = \dfrac{x}{\sqrt{x^{2}+y^{2}+z^{2}}}\\
+		\cos \beta=\dfrac{a_{y}}{|a|} = \dfrac{y}{\sqrt{x^{2}+y^{2}+z^{2}}}\\
+		\cos \gamma=\dfrac{a_{z}}{|a|} = \dfrac{z}{\sqrt{x^{2}+y^{2}+z^{2}}}
+	\end{cases}$$
+
+	设 $\boldsymbol{a} = (a_{x},a_{y},a_{z}), \boldsymbol{b} = (b_{x},b_{y},b_{z})$
+
+	(3). 夹角
+	$$\boldsymbol{a}\cdot \boldsymbol{b} = |\boldsymbol{a}||\boldsymbol{b}|\cos \theta = a_{x}b_{x}+a_{y}b_{y}+a_{z}b_{z}$$
+	$$\cos \theta = \dfrac{\boldsymbol{a}\cdot \boldsymbol{b}}{|a||b|} = \dfrac{a_{x}b_{x}+a_{y}b_{y}+a_{z}b_{z}}{\sqrt{a_{x}^2+a_{y}^2+a_{z}^2}\sqrt{b_{x}^2+b_{y}^2+b_{z}^2}}$$
 	
-	3. 投影: 
-	$$Prj_{b}a=\frac{\textbf{a}\bullet\textbf{b}}{|b|}=\frac{a_{x}b_{x}+a_{y}b_{y}+a_{z}b_{z}}{\sqrt{b_{x}^2+b_{y}^2+b_{z}^2}}$$
+	(4). 投影
+
+	$$\textbf{Prj}_{b}\boldsymbol{a}=\dfrac{\boldsymbol{a}\cdot \boldsymbol{b}}{|b|}=\dfrac{a_{x}b_{x}+a_{y}b_{y}+a_{z}b_{z}}{\sqrt{b_{x}^2+b_{y}^2+b_{z}^2}}$$\
+
+	(5). 叉积
+
+	$$\boldsymbol{a}\times \boldsymbol{b} = \begin{vmatrix}
+		\boldsymbol{i} & \boldsymbol{j} & \boldsymbol{k} \\
+		a_{x} & a_{y} & a_{z} \\
+		b_{x} & b_{y} & b_{z}
+	\end{vmatrix}$$
+	
+	$$|\boldsymbol{a}\times \boldsymbol{b}| = |\boldsymbol{a}||\boldsymbol{b}|\sin\theta$$
 \end{definition}
+
 \section{空间平面和直线}
+
 \subsection{平面}
-\begin{definition}[	平面方程]
+
+\begin{definition}[平面方程]
 	
-	1. 一般式:  $Ax+By+Cz+D=0$
-	\myspace{1}
+	假设平面的法向量 $\boldsymbol{n} = (A, B. C)$
+
+	(1). 一般式
 	
-	2. 点法式:  $A(x-x_{0})+B(y-y_{0}+C(z-z_{0})=0$
-	\myspace{1}
+	$$Ax+By+Cz+D=0$$
+
 	
-	3. 截距式:  $\dfrac{x}{a}+\dfrac{y}{b}+\dfrac{z}{c}=1$
-	\myspace{1}	
+	(2). 点法式
 	
-	4. 三点式 : $\left|\begin{array}{lll}
-		x-x_{1}&y-y_{1}&z-z_{1}\\
-		x-x_{2}&y-y_{2}&z-z_{2}\\
-		x-x_{3}&y-y_{3}&z-z_{3}
-	\end{array}\right|=0$,(平面过不共线的三点 $P(x_{i},y_{i},z_{i})$)
+	$$A(x-x_{0})+B(y-y_{0}+C(z-z_{0})=0$$
+	
+	(3). 截距式, 平面过 $(a,0,0), (0,b,0), (0,0,c)$ 三点
+	
+	$$\dfrac{x}{a}+\dfrac{y}{b}+\dfrac{z}{c}=1$$	
+	
+	(4). 三点式 $P_{i} (x_{i}, y_{i}, x_{i})(i = 1,2,3)$ 不共线  
+	
+	$$\begin{vmatrix}
+		x-x_{1} & y-y_{1} & z-z_{1}\\
+		x-x_{2} & y-y_{2} & z-z_{2}\\
+		x-x_{3} & y-y_{3} & z-z_{3}
+	\end{vmatrix} = 0$$
 \end{definition}
+
 \subsection{直线}
+
 \begin{definition}[直线方程]
 	
-	1. 一般式:  $\left\lbrace \begin{array}{c}
-		A_{1}x+B_{1}y+C_{1}z=0,n_{1}=(A_{1},B_{1},C_{1})\\A_{2}x+B_{2}y+C_{2}z=0,n_{2}=(A_{2},B_{2},C_{2})
-	\end{array}\right. $,$n_{1},n_{2}$ 不平行
-	\myspace{1}
+	假设直线的方向向量 $\boldsymbol{\tau} = (l,m,n)$, $P(x_{0},y_{0},z_{0})$ 是直线上的一点
+
+	(1). 一般式
 	
-	2. 点向式:  $\dfrac{x-x_{0}}{l}=\dfrac{y-y_{0}}{m}=\dfrac{z-z_{0}}{n}$,$(x_{0},y_{0},z_{0})$ 是直线上的点,$(l,m,n)$ 是直线的方向向量
-	\myspace{1}
+	$$\begin{cases}
+		A_{1}x+B_{1}y+C_{1}z = 0, & \boldsymbol{n}_{1}=(A_{1},B_{1},C_{1})\\
+		A_{2}x+B_{2}y+C_{2}z = 0, & \boldsymbol{n}_{2}=(A_{2},B_{2},C_{2})\\
+		\boldsymbol{\tau} = \boldsymbol{n}_{1}\times \boldsymbol{n}_{2} 
+	\end{cases}$$
 	
-	3. 参数式:  $\left\lbrace\begin{array}{l}
-		x=x_{0}+lt\\
-		y=y_{0}+mt\\
-		z=z_{0}+nt
-	\end{array} \right. $,$(x_{0},y_{0},z_{0})$ 是直线上的点,$(l,m,n)$ 是直线的方向向量
-	\myspace{1}	
+	(2). 点向式
 	
-	4.两点式: $\dfrac{x-x_{1}}{x_{1}-x_{2}}=\dfrac{y-y_{1}}{y_{1}-y_{2}}=\dfrac{z-z_{0}}{z_{1}-z_{2}}$,$(x_{1},y_{1},z_{1})$和$(x_{2},y_{2},z_{2})$ 是直线上的点
+	$$\dfrac{x-x_{0}}{l}=\dfrac{y-y_{0}}{m}=\dfrac{z-z_{0}}{n}$$
+	
+	(3). 参数式
+	
+	$$\begin{cases}
+		x = x_{0} + lt\\
+		y = y_{0} + mt\\
+		z = z_{0} + nt
+	\end{cases}$$
+	
+	(4). 两点式
+	
+	$$\dfrac{x-x_{0}}{x_{1}-x_{2}}=\dfrac{y-y_{0}}{y_{1}-y_{2}}=\dfrac{z-z_{0}}{z_{1}-z_{2}}$$
 \end{definition}
+
+\begin{theorem}[位置关系]
+
+	(1). 点到直线的距离公式
+
+	点 $M(x, y, z)$ 到直线 $L: \dfrac{x-x_{0}}{l} = \dfrac{y-y_{0}}{m} = \dfrac{z-z_{0}}{n}$ 的距离
+
+	$$d=\dfrac{|\boldsymbol{\tau}\times \overrightarrow{M_{0}M}|}{|\boldsymbol{\tau}|} = \dfrac{\begin{Vmatrix}
+		\boldsymbol{i} & \boldsymbol{j} & \boldsymbol{k} \\
+		l & m & n \\
+		x-x_{0} & y-y_{0} & z-z_{0}
+	\end{Vmatrix}}{\sqrt{l^2+m^2+n^2}}$$
+	二维平面: $$d = \dfrac{|Ax + By + C |}{\sqrt{A^{2}+B^{2}}}$$
+	
+	(2). 点到平面距离公式
+
+	点 $P_{0}(x_{0}, y_{0}, z_{0})$ 到平面 $Ax+By+Cz+D=0$ 的距离, $P(x,y,z)$ 是平面上任意一点
+
+	$$d = |\textbf{Prj}_{n}\overrightarrow{P_{0}P}| = \dfrac{|A(x-x_{0})+B(y-y_{0})+C(z-z_{0})|}{\sqrt{A^{2}+B^{2}+C^{2}}} = \dfrac{|A(x)+B(y)+C(z)+D|}{\sqrt{A^{2}+B^{2}+C^{2}}}{}$$
+
+	(3). 直线和直线
+
+	设 $\boldsymbol{\tau}_{1}(l_{1},m_{1},n_{1}), \boldsymbol{\tau}_{2}(l_{2},m_{2},n_{2})$ 分别是 $L_{1}, L_{2}$ 的方向向量
+
+	$$\begin{cases}
+		L_{1} \perp L_{2}\Leftrightarrow \boldsymbol{\tau}_{1} \perp \boldsymbol{\tau}_{2}\Leftrightarrow l_{1}l_{2}+m_{1}m_{2}+n_{1}n_{2}=0\\
+		L_{1} \parallel L_{2}\Leftrightarrow \boldsymbol{\tau}_{1} \parallel \boldsymbol{\tau}_{2}\Leftrightarrow \dfrac{l_{1}}{l_{2}} = \dfrac{m_{1}}{m_{2}} = \dfrac{n_{1}}{n_{2}}
+	\end{cases}$$
+
+	$L_{1}, L_{2}$ 的夹角 $\theta = \arccos \dfrac{|\boldsymbol{\tau}_{1}\cdot\boldsymbol{\tau}_{2}|}{|\boldsymbol{\tau}_{1}||\boldsymbol{\tau}_{2}|}, \theta \in [0, \dfrac{\pi}{2}]$
+
+	(4). 平面和平面
+
+	设 $\boldsymbol{n}_{1}(A_{1},B_{1},C_{1}), \boldsymbol{n}_{2}(A_{2},B_{2},C_{2})$ 分别是 $\pi_{1}, \pi_{2}$ 
+	
+	$$\begin{cases}
+		\pi_{1} \perp \pi_{2}\Leftrightarrow \boldsymbol{n}_{1} \perp \boldsymbol{n}_{2}\Leftrightarrow A_{1}A_{2}+B_{1}B_{2}+C_{1}C_{2}=0\\
+		\pi_{1} \parallel \pi_{2}\Leftrightarrow \boldsymbol{n}_{1} \parallel \boldsymbol{n}_{2}\Leftrightarrow \dfrac{A_{1}}{A_{2}} = \dfrac{B_{1}}{B_{2}} = \dfrac{C_{1}}{C_{2}}\\
+	\end{cases}$$
+
+	$\pi_{1}, \pi_{2}$ 的夹角 $\theta = \arcsin \dfrac{|\boldsymbol{n}_{1}\cdot\boldsymbol{n}_{2}|}{|\boldsymbol{n}_{1}||\boldsymbol{n}_{2}|}, \theta\in[0,\dfrac{\pi}{2}]$
+\end{theorem}
+
 \section{空间曲面和曲线}
-\begin{definition}[空间曲面和曲线]
-	1. 空间曲线: 
+
+\begin{definition}[空间曲面] 
+	(1). 一般式
 	
-	(i). 一般式: $\left\lbrace\begin{array}{l}
-		F(x,y,z)=0\\G(x,y,z)=0
-	\end{array} \right. $, 是两个曲面的交线
+	$$\begin{cases}
+		F(x,y,z) = 0 \\
+		G(x,y,z) = 0
+	\end{cases}$$
 	
-	(ii). 参数方程式: $\left\lbrace\begin{array}{l}
-		x=f(t)\\y=g(t)\\z=h(t)
-	\end{array} \right. $,$t\in[\alpha,\beta]$ 为参数
+	(2). 参数方程式
 	
-	(iii). 空间曲线在坐标面的投影: 
-	$$\left\lbrace\begin{array}{l}
-		F(x,y,z)=0\\G(x,y,z)=0
-	\end{array} \right. \Rightarrow \left\lbrace\begin{array}{l}
-		H(x,y)=0\\z=0
-	\end{array} \right.$$
+	$$\begin{cases}
+		x = f(t)\\
+		y = g(t)\\
+		z = h(t)
+	\end{cases},  t\in[\alpha,\beta]$$
 	
-	2. 空间曲面
+	(3). 空间曲线在坐标面的投影
+	
+	$$\begin{cases}
+		F(x,y,z) = 0\\
+		G(x,y,z) = 0
+	\end{cases}\Rightarrow
+	\begin{cases}
+		H(x,y) = 0\\
+		z = 0
+	\end{cases}$$
+\end{definition}
+
+\begin{definition}[空间曲面]
+	
+	(1). 一般曲面方程
 	$$F(x,y,z)=0$$
+	
+	(2). 二次曲面
+
+	(a). 椭球面 $\dfrac{x^{2}}{a^{2}} +\dfrac{y^{2}}{b^{2}}+\dfrac{z^{2}}{c^{2}}=1$
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=3]
+			\draw[red,->] (0.8,0) -- (1,0) node[anchor=north west]{$y$};
+			\draw[red,->] (0,0.5) -- (0,1) node[anchor=south]{$z$};
+			\draw[red,->] (-0.19,-0.19) -- (-0.6,-0.6) node[anchor=north]{$x$};
+			\node at (0.05,-0.05) {$o$};
+			\draw[densely dotted] (0.2,0) arc[start angle=0, end angle=90, x radius=0.2, y radius=0.5];
+			\draw[densely dotted] (0,-0.5) arc[start angle=270, end angle=360, x radius=0.2, y radius=0.5];
+			\draw (0,0.5) arc[start angle=90, end angle=270, x radius=0.2, y radius=0.5];
+			\draw (0.8,0) arc[start angle=0, end angle=360, x radius=0.8, y radius=0.5];
+			\draw[densely dotted] (0.8,0) arc[start angle=0, end angle=180, x radius=0.8, y radius=0.2];
+			\draw (-0.8,0) arc[start angle=180, end angle=360, x radius=0.8, y radius=0.2];
+			\draw[red,densely dotted] (-0.8,0) -- (0.8,0);
+			\draw[red,densely dotted] (0,-0.5) -- (0,0.8);
+			\draw[red,densely dotted] (0.19,0.19) -- (-0.19,-0.19);
+		\end{tikzpicture}
+	\end{figure}
+
+	(b). 单叶双曲面 $\dfrac{x^{2}}{a^{2}} +\dfrac{y^{2}}{b^{2}} - \dfrac{z^{2}}{c^{2}}=1$
+
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=3]
+			\draw[red,->] (0.2,0) -- (1,0) node[right]{$x$};
+			\draw[red,->] (0,0.6) -- (0,1) node[above]{$z$};
+			\draw[red,->] (0.3,0.3) -- (0.7,0.7) node[right]{$y$};
+			
+			\draw (0.4,0.6) arc[start angle=0, end angle=360, x radius=0.4, y radius=0.15];
+			\draw[densely dotted] (0.4,-0.6) arc[start angle=0, end angle=180, x radius=0.4, y radius=0.15];
+			\draw (-0.4,-0.6) arc[start angle=180, end angle=360, x radius=0.4, y radius=0.15];
+			
+			\draw[densely dotted] (0.2,0) arc[start angle=0, end angle=180, x radius=0.2, y radius=0.1];
+			\draw (-0.2,0) arc[start angle=180, end angle=360, x radius=0.2, y radius=0.1];
+			
+			\draw (0.4,0.6) arc[start angle=143, end angle=217, x radius=1, y radius=1];
+			\draw (-0.4,-0.6) arc[start angle=323, end angle=360, x radius=1, y radius=1];
+			\draw (-0.2,0) arc[start angle=0, end angle=37, x radius=1, y radius=1];
+			
+			\draw[red] (-0.8,0) -- (-0.2,0);
+			\draw (-0.4,0.6) -- (0.4,0.6);
+			\draw[red] (0,-0.8) -- (0,-0.9);
+			\draw (-0.15,0.45) -- (0.15,0.75);
+			\draw[densely dotted] (-0.4,-0.6) -- (0.4,-0.6);
+			\draw[densely dotted] (-0.15,-0.75) -- (0.15,-0.45);
+			\draw[red,densely dotted] (-0.2,0) -- (0.2,0);
+			\draw[red,densely dotted] (0,-0.8) -- (0,0.6);
+			\draw[red,densely dotted] (-0.1,-0.1) -- (0.3,0.3);
+			\node at (-0.02,0.03) [below right] {$O$};
+		\end{tikzpicture}
+	\end{figure}
+
+	(c). 双叶双曲面 $\dfrac{x^{2}}{a^{2}} - \dfrac{y^{2}}{b^{2}} - \dfrac{z^{2}}{c^{2}} = 1$
+
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=3]
+			\draw[red,->] (1.1,0) -- (1.4,0) node[right] {$x$};
+			\draw[red,->] (0,-1.2) -- (0,1.2) node[above] {$z$}; 
+			\draw[red,->] (-0.4,-0.5) -- (0.4,0.5) node[right] {$y$}; 
+			
+			\draw[densely dotted] (-0.9,0) arc[start angle=0, end angle=90, x radius=0.2, y radius=0.5];
+			\draw[densely dotted] (-1.1,-0.5) arc[start angle=270, end angle=360, x radius=0.2, y radius=0.5];
+			\draw (-1.1,0.5) arc[start angle=90, end angle=270, x radius=0.2, y radius=0.5];
+			\draw (-0.4,0) arc[start angle=0, end angle=90, x radius=0.7, y radius=0.5];
+			\draw (-1.1,-0.5) arc[start angle=270, end angle=360, x radius=0.7, y radius=0.5];
+			\draw (-1.26,-0.25) arc[start angle=270, end angle=360, x radius=0.86, y radius=0.25];
+			\draw[densely dotted] (-0.4,0) arc[start angle=0, end angle=90, x radius=0.54, y radius=0.25];
+			\draw (1.3,0) arc[start angle=0, end angle=360, x radius=0.2, y radius=0.5];
+			\draw (1.1,0.5) arc[start angle=90, end angle=270, x radius=0.7, y radius=0.5];
+			\draw (0.4,0) arc[start angle=180, end angle=270, x radius=0.54, y radius=0.25];
+			\draw[densely dotted] (1.26,0.25) arc[start angle=90, end angle=180, x radius=0.86, y radius=0.25];
+			\draw[red] (-1.4,0) -- (-1.3,0);
+			\draw[red] (-0.4,0) -- (0.4,0);
+			\draw[densely dotted] (-1.1,0.5) -- (-1.1,-0.5);
+			\draw[densely dotted] (-0.94,0.25) -- (-1.26,-0.25);
+			\draw[red,densely dotted] (0.4,0) -- (1.1,0);
+			\draw (0.94,-0.25) -- (1.26,0.25);
+			\draw (1.1,0.5) -- (1.1,-0.5);
+			\draw[red,densely dotted] (-1.3,0) -- (-0.4,0);
+			\node at (0,0) [below right] {$O$};
+		\end{tikzpicture}
+	\end{figure}
+
+	(d). 椭圆抛物面 $\dfrac{x^{2}}{2p} + \dfrac{y^{2}}{2q} = z (p,q > 0)$
+
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=3]
+			\draw[red,->] (0,0) -- (-0.5,-0.5) node[right] {$x$};
+			\draw[red,->] (0,0) -- (0.7,0) node[right] {$y$}; 
+			\draw[red,->] (0,0.6) -- (0,1) node[right] {$z$}; 
+			\draw (0.4,0.6) arc[start angle=0, end angle=360, x radius=0.4, y radius=0.15];
+			\draw (-0.4,0.6) arc[start angle=180, end angle=360, x radius=0.4, y radius=0.6];
+			\draw (-0.15,0.45) arc[start angle=180, end angle=270, x radius=0.15, y radius=0.45];
+			\draw[densely dotted] (0,0) arc[start angle=270, end angle=360, x radius=0.15, y radius=0.75];
+			\draw (-0.4,0.6) -- (0.4,0.6);
+			\draw[red,densely dotted] (0,0) -- (0,0.6);
+			\draw (-0.15,0.46) -- (0.15,0.74);
+			\node at (-0.1,-0.1) [right] {$o$};
+		\end{tikzpicture}
+	\end{figure}
+	
+	(f). 椭圆锥面 $\dfrac{x^{2}}{a^{2}} + \dfrac{y^{2}}{b^{2}} = \dfrac{z^{2}}{c^{2}}$
+
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=3]
+			\draw[red,->] (0,0) -- (-0.5,-0.5) node[left] {$x$};
+			\draw[red,,->] (0,0) -- (0.7,0) node[right] {$y$}; 
+			\draw[red,->] (0,0.6) -- (0,1) node[right] {$z$}; 
+			\draw (0.4,0.6) arc[start angle=0, end angle=360, x radius=0.4, y radius=0.15];
+			\draw[densely dotted] (0.4,-0.6) arc[start angle=0, end angle=180, x radius=0.4, y radius=0.15];
+			\draw (-0.4,-0.6) arc[start angle=180, end angle=360, x radius=0.4, y radius=0.15];
+			\draw (-0.4,0.6) -- (0.4,-0.6);
+			\draw (0.4,0.6) -- (-0.4,-0.6);
+			\draw (-0.4,0.6) -- (0.4,0.6);
+			\draw[densely dotted] (-0.4,-0.6) -- (0.4,-0.6);
+			\draw[densely dotted] (-0.14,-0.73) -- (0.14,-0.47);
+			\draw[densely dotted] (0,-0.6) -- (0,0.6);
+			\draw (-0.14,0.46) -- (0.14,0.74);
+			\node at (0,0) [left] {$o$};
+		\end{tikzpicture}
+	\end{figure}
+
+	(g). 双曲抛物面 $ - \dfrac{x^{2}}{2p} + \dfrac{y^{2}}{2q} = z (p,q > 0)$
+
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=3]
+			\draw[red,->] (0.4,0) -- (1,0) node[right] {$y$};
+			\draw[red,->] (0,0) -- (0,1) node[above] {$z$};
+			\draw[red,->] (0,0) -- (-0.6,-0.6) node[below] {$x$};
+			\draw (-0.2,0.4) arc[start angle=180, end angle=360, x radius=0.2, y radius=0.4];
+			\draw (-0.2,0.4) arc[start angle=0, end angle=90, x radius=0.15, y radius=0.15];
+			\draw (-0.5,0.25) arc[start angle=270, end angle=360, x radius=0.3, y radius=0.15];
+			\draw (0.4,0.5) arc[start angle=90, end angle=180, x radius=0.2, y radius=0.1];
+			\draw (0.2,0.4) arc[start angle=180, end angle=270, x radius=0.25, y radius=0.1];
+			\draw (0.2,-0.8) arc[start angle=0, end angle=180, x radius=0.32, y radius=0.2];
+			\draw[densely dotted] (0.1,-0.4) arc[start angle=0, end angle=90, x radius=0.1, y radius=0.4];
+			\draw (0,0) arc[start angle=90, end angle=210, x radius=0.1, y radius=0.4];
+			\draw[densely dotted] (-0.35,0.3) -- (-0.35,-0.4);
+			\draw[densely dotted] (-0.35,-0.4) -- (0.35,-0.4);
+			\draw[densely dotted] (0.4,0.5) -- (0.4,-0.4);
+			\draw[red,densely dotted] (0,0) -- (0.4,0);
+			\draw (0.4,0.5) -- (0.4,0.32);
+			\draw (-0.35,0.55) -- (-0.35,0.3);
+			\draw (-0.5,0.25) -- (-0.44,-0.8);
+			\draw (0.45,0.3) -- (0.2,-0.8);
+			\node at (-0.02, -0.05) [left]{$o$};
+		\end{tikzpicture}
+	\end{figure}
+
+	(h). 双曲抛物面 $z = xy$
+	
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=3]
+			\draw[red,->] (0.5,0.5) -- (1,1) node[right] {$y$};
+			\draw[red,->] (0,0) -- (0,1) node[above] {$z$};
+			\draw[red,->] (0,0) -- (0.6,-0.6) node[below] {$x$};
+			\draw (-0.2,0.4) arc[start angle=180, end angle=360, x radius=0.2, y radius=0.4];
+			\draw (-0.2,0.4) arc[start angle=0, end angle=90, x radius=0.15, y radius=0.15];
+			\draw (-0.5,0.25) arc[start angle=270, end angle=360, x radius=0.3, y radius=0.15];
+			\draw (0.4,0.5) arc[start angle=90, end angle=180, x radius=0.2, y radius=0.1];
+			\draw (0.2,0.4) arc[start angle=180, end angle=270, x radius=0.25, y radius=0.1];
+			\draw (0.2,-0.8) arc[start angle=0, end angle=180, x radius=0.32, y radius=0.2];
+			\draw[densely dotted] (0.1,-0.4) arc[start angle=0, end angle=90, x radius=0.1, y radius=0.4];
+			\draw (0,0) arc[start angle=90, end angle=210, x radius=0.1, y radius=0.4];
+			\draw[densely dotted] (-0.35,0.3) -- (-0.35,-0.4);
+			\draw[densely dotted] (-0.35,-0.4) -- (-0.09,-0.4);
+			\draw (-0.09,-0.4) -- (0.4,-0.4);
+			\draw (0.4,0.5) -- (0.4,-0.4);
+			\draw[red,densely dotted] (0,0) -- (0.5,0.5);
+			\draw (0.4,0.5) -- (0.4,0.32);
+			\draw (-0.35,0.55) -- (-0.35,0.3);
+			\draw (-0.5,0.25) -- (-0.44,-0.8);
+			\draw (0.45,0.3) -- (0.2,-0.8);
+			\node at (-0.02, -0.05) [left]{$o$};
+		\end{tikzpicture}
+	\end{figure}
+
+	(i). 椭圆柱面 $\dfrac{x^{2}}{a^{2}}+\dfrac{y^{2}}{b^{2}} = 1$
+	
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=3]
+			\draw[red,->] (0,0.6) -- (0,1) node[right] {$z$};
+			\draw[red,->] (0.3,0) -- (1,0) node[above] {$y$};
+			\draw[red,->] (-0.1,-0.1) -- (-0.6,-0.6) node[below] {$x$};
+			\draw (0.3,0.6) arc[start angle=0, end angle=360, x radius=0.3, y radius=0.1];
+			\draw (-0.3,0) arc[start angle=180, end angle=360, x radius=0.3, y radius=0.1];
+			\draw (-0.3,-0.4) arc[start angle=180, end angle=360, x radius=0.3, y radius=0.1];
+			\draw[densely dotted] (0.3,0) arc[start angle=0, end angle=180, x radius=0.3, y radius=0.1];
+			\draw[densely dotted] (0.3,-0.4) arc[start angle=0, end angle=180, x radius=0.3, y radius=0.1];
+			\draw (-0.3,-0.4) -- (-0.3,0.6);
+			\draw (0.3,-0.4) -- (0.3,0.6);
+			\draw[red,densely dotted] (0,-0.5) -- (0,0.6);
+			\draw[red,densely dotted] (-0.1,-0.1) -- (0.1,0.1);
+			\draw[red,densely dotted] (-0.3,0) -- (0.3,0);
+			\node at (0.1, -0.1) [below]{$o$};
+		\end{tikzpicture}
+	\end{figure}
+	
+
+	(j). 双曲柱面 $\dfrac{x^{2}}{a^{2}} - \dfrac{y^{2}}{b^{2}} = 1$
+
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=3]
+			\draw[red,->] (0,0) -- (0,1) node[right] {$z$};
+			\draw[red,->] (0,0) -- (1,0) node[above] {$x$};
+			\draw[red,->] (-0.4,-0.4) -- (0.3,0.3) node[left] {\small{$y$}};
+			\draw (0.8,0.6) arc[start angle=90, end angle=180, x radius=0.4, y radius=0.2];
+			\draw (0.4,0.4) arc[start angle=180, end angle=270, x radius=0.1, y radius=0.1];
+			\draw (-0.4,0.3) arc[start angle=0, end angle=90, x radius=0.1, y radius=0.1];
+			\draw (-0.8,0.1) arc[start angle=270, end angle=360, x radius=0.4, y radius=0.2];
+			\draw (-0.8,-0.25) arc[start angle=270, end angle=360, x radius=0.4, y radius=0.25];
+			\draw (-0.8,-0.6) arc[start angle=270, end angle=360, x radius=0.4, y radius=0.25];
+			\draw[densely dotted] (-0.4,-0.35) arc[start angle=0, end angle=90, x radius=0.1, y radius=0.1];
+			\draw[densely dotted] (-0.4,0) arc[start angle=0, end angle=90, x radius=0.1, y radius=0.1];
+			\draw (0.4,0) arc[start angle=180, end angle=270, x radius=0.1, y radius=0.1];
+			\draw (0.4,-0.4) arc[start angle=180, end angle=270, x radius=0.1, y radius=0.1];
+			\draw[densely dotted] (0.8,0.3) arc[start angle=90, end angle=180, x radius=0.4, y radius=0.3];
+			\draw[densely dotted] (0.8,-0.1) arc[start angle=90, end angle=180, x radius=0.4, y radius=0.3];
+			\draw[densely dotted] (-0.5,-0.25) -- (-0.5,0.16);
+			\draw[red,densely dotted] (-0.7,0) -- (-0.4,0);
+			\draw[red] (-0.4,0) -- (0,0);
+			\draw (-0.5,0.16) -- (-0.5,0.4);
+			\draw (0.4,-0.4) -- (0.4,0.4);
+			\draw (0.8,-0.1) -- (0.8,0.6);
+			\draw (-0.4,0.3) -- (-0.4,-0.4);
+			\draw (-0.8,0.1) -- (-0.8,-0.6);
+			\draw (0.5,-0.5) -- (0.5,0.3);
+			\node at (0.1, -0.1) [below]{$o$};
+		\end{tikzpicture}
+	\end{figure}
+	
+
+	(k). 抛物柱面 $ y = ax^{2}$
+
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=3]
+			\draw[red,->] (0,-0.6) -- (0,1) node[right] {$z$};
+			\draw[red,->] (-0.3,0) -- (1,0) node[above] {$x$};
+			\draw[red,->] (0.7,0.7) -- (1,1) node[left] {\small{$y$}};
+			\draw[red,densely dotted] (0,0) -- (0.7,0.7);
+			\draw[red] (-0.4,-0.4) -- (0,0);
+			\draw (0.7,0.9) arc[start angle=90, end angle=180, x radius=0.7, y radius=0.4];
+			\draw (0,0.5) arc[start angle=180, end angle=270, x radius=0.3, y radius=0.1];
+			\draw (0,0) arc[start angle=180, end angle=270, x radius=0.3, y radius=0.1];
+			\draw (0,-0.5) arc[start angle=180, end angle=270, x radius=0.3, y radius=0.1];
+			\draw[densely dotted] (0.7,0.4) arc[start angle=90, end angle=180, x radius=0.7, y radius=0.4];
+			\draw[densely dotted] (0.7,-0.1) arc[start angle=90, end angle=180, x radius=0.7, y radius=0.4];
+			\draw (0.3,0.4) -- (0.3,-0.6);
+			\draw (0.7,-0.1) -- (0.7,0.9);
+			\node at (0.1, 0.1) [left]{$o$};
+		\end{tikzpicture}
+	\end{figure}
+
+	(3). 旋转曲面
+
+	曲线 $\Gamma : \begin{cases}
+	  F(x,y,z) = 0\\
+	  G(x,y,z) = 0
+	\end{cases}$ 绕直线 $L: \dfrac{x-x_{0}}{l} = \dfrac{y-y_{0}}{m} = \dfrac{z-z_{0}}{n}$ 旋转一周形成的旋转曲面, 直线 $L$ 的方向向量 
+	$\boldsymbol{\tau} = (l,m,n)$
+
+	设 $M_{1}(x_{1},y_{1},z_{1})$ 是曲线 $\Gamma$ 上任意一点, $P(x,y,z)$ 是 $M_{1}$ 绕直线 $L$ 旋转一周形成的纬圆上异于 $M_{1}$ 的一点:
+	$$\begin{cases}
+	  \boldsymbol{\tau} \perp \overrightarrow{M_{1}P} \\
+	  |\overrightarrow{M_{1}M_{0}}| = |\overrightarrow{PM_{0}}|\\
+	  F(x_{1},y_{1},z_{1}) = 0\\
+	  G(x_{1},y_{1},z_{1}) = 0
+	\end{cases}$$
 \end{definition}
 \subsection{空间曲线的切线和法平面}
 \begin{definition}[曲线切线和法平面]
 	
-	(i).参数方程式: $\left\lbrace\begin{array}{l}
-		x=f(t)\\y=g(t)\\z=h(t)
-	\end{array} \right. $ 在 $t=t_{0}$ 时,点 $P_{0}(x_{0},y_{0},z_{0})$ 处
-	\myspace{1}
+	(1).参数方程
+	$$\begin{cases}
+		x = f(t)\\
+		y = g(t)\\
+		z = h(t)
+	\end{cases}, t \in [\alpha,\beta]$$
 	
-	切线的方向向量: $\textbf{n}=(f'(t_{0}),g'(t_{0}),h'(t_{0}))$
-	\myspace{1}
+	在 $t=t_{0}$ 时,点 $P_{0}(x(t_{0}),y(t_{0}),z(t_{0}))$ 处切线的方向向量 $\boldsymbol{n}=(f'(t_{0}),g'(t_{0}),h'(t_{0}))$
 	
-	切线方程为: $ \dfrac{x-x_{0}}{f'(t_{0})}=\dfrac{y-y_{0}}{g'(t_{0})}=\dfrac{z-z_{0}}{h'(t_{0})}$
-	\myspace{1}
+	\textcolor{cyan}{切线方程}
 	
-	曲线法平面: $f'(t_{0})(x-x_{0})+g'(t_{0})(y-y_{0})+h'(t_{0})(z-z_{0})=0 $
-	\myspace{1}
+	$$\dfrac{x-x_{0}}{f'(t_{0})}=\dfrac{y-y_{0}}{g'(t_{0})}=\dfrac{z-z_{0}}{h'(t_{0})}$$
 	
-	(ii). 一般式: $\left\lbrace\begin{array}{l}
-		F(x,y,z)=0\\G(x,y,z)=0
-	\end{array} \right. $
-	\myspace{1}
+	\textcolor{purplea}{法平面方程}
 	
-	切线的方向向量: $(\left| \begin{array}{ll}
-		F_{y}'&F_{z}'\\G_{y}'&G_{z}'
-	\end{array}\right| ,\left|\begin{array}{ll}
-		F_{z}'&F_{x}'\\G_{z}'&G_{x}'
-	\end{array} \right|,\left|\begin{array}{ll}
-		F_{x}'&F_{y}'\\G_{x}'&G_{y}'
-	\end{array} \right|)$
-	\myspace{1}
+	$$f'(t_{0})(x-x_{0})+g'(t_{0})(y-y_{0})+h'(t_{0})(z-z_{0})=0$$
 	
-	切线方程为: $\dfrac{x-x_{0}}{\left| \begin{array}{ll}
-			F_{y}'&F_{z}'\\G_{y}'&G_{z}'
-		\end{array}\right|}=\dfrac{y-y_{0}}{\left|\begin{array}{ll}
-			F_{z}'&F_{x}'\\G_{z}'&G_{x}'
-		\end{array} \right|}=\dfrac{z-z_{0}}{\left|\begin{array}{ll}
-			F_{x}'&F_{y}'\\G_{x}'&G_{y}'
-		\end{array} \right|}$
-	\myspace{1}
+	(2). 一般式
+	$$\begin{cases}
+		F(x,y,z) = 0\\
+		G(x,y,z) = 0
+	\end{cases}$$
 	
-	曲线法平面: $\left| \begin{array}{ll}
-		F_{y}'&F_{z}'\\G_{y}'&G_{z}'
-	\end{array}\right|(x-x_{0})+\left|\begin{array}{ll}
-		F_{z}'&F_{x}'\\G_{z}'&G_{x}'
-	\end{array} \right|(y-y_{0})+\left|\begin{array}{ll}
-		F_{x}'&F_{y}'\\G_{x}'&G_{y}'
-	\end{array} \right|(z-z_{0})=0$
+	点 $P_{0}(x_{0},y_{0},z_{0})$ 处切线的方向向量
+	$$\boldsymbol{\tau} = 
+	\begin{vmatrix}
+	  \boldsymbol{i} & \boldsymbol{j} & \boldsymbol{k}\\
+	  F_{x}' & F_{y}' & F_{z}'\\
+	  G_{x}' & G_{y}' & G_{z}'
+	\end{vmatrix} = (A,B,C)$$
+
+	
+	\textcolor{cyan}{切线方程}
+	
+	$$\dfrac{x-x_{0}}{A} = \dfrac{y-y_{0}}{B} = \dfrac{z-z_{0}}{C}$$
+	
+	\textcolor{purplea}{法平面方程}
+	
+	$$A(x-x_{0}) + B(y-y_{0}) + C(z-z_{0}) = 0$$
 	
 	
 \end{definition}
+
 \subsection{空间曲面的切平面和法线}
 \begin{definition}
-	曲面的切平面和法线
 	
-	1. 曲面方程:  $F(x,y,z)=0$
-	\myspace{1}
+	(1). $F(x,y,z)=0$, 点 $P(x_{0},y_{0},z_{0})$ 处切平面法向量 $\boldsymbol{n} = \{F_{x}'(x_{0},y_{0},z_{0}),F_{y}'(x_{0},y_{0},z_{0}),F_{z}'(x_{0},y_{0},z_{0})\}$
 	
-	法向量: $\textbf{n}=(F_{x}'(x,y,z),F_{y}'(x,y,z),F_{z}'(x,y,z))$
-	\myspace{1}
+	\textcolor{cyan}{切平面方程}
 	
-	切平面方程: $F_{x}'(x,y,z)(x-x_{0})+F_{y}'(x,y,z)(y-y_{0})+F_{z}'(x,y,z)(z-z_{0})=0$
-	\myspace{1}
+	$$F_{x}'(x_{0},y_{0},z_{0})(x-x_{0}) + F_{y}'(x_{0},y_{0},z_{0})(y-y_{0}) + F_{z}'(x_{0},y_{0},z_{0})(z-z_{0}) = 0$$
+
+	\textcolor{purplea}{法线方程}
 	
-	法线方程: $\dfrac{x-x_{0}}{F_{x}'(x,y,z)}=\dfrac{y-y_{0}}{F_{y}'(x,y,z)}=\dfrac{z-z_{0}}{F_{z}'(x,y,z)}$
-	\myspace{1}
+	$$\dfrac{x-x_{0}}{F_{x}'(x_{0},y_{0},z_{0})} = \dfrac{y-y_{0}}{F_{y}'(x_{0},y_{0},z_{0})}=\dfrac{z-z_{0}}{F_{z}'(x_{0},y_{0},z_{0})}$$
 	
-	2. 曲面方程:  $z=f(x,y)$
-	\myspace{1}
+	(2). $z=f(x,y)$, 点 $P(x_{0},y_{0},z_{0})$ 处切平面法向量 $\boldsymbol{n} = \{f_{x}'(x_{0},y_{0}),f_{y}'(x_{0},y_{0}),-1\}$
 	
-	法向量: $\textbf{n}=(f_{x}'(x,y),f_{y}'(x,y),-1)$
-	\myspace{1}
 	
-	切平面方程: $f_{x}'(x,y)(x-x_{0})+f_{y}'(x,y)(y-y_{0})-(z-z_{0})=0$
-	\myspace{1}
+	\textcolor{cyan}{切平面方程}
+
+	$$f_{x}'(x_{0},y_{0})(x-x_{0}) + f_{y}'(x_{0},y_{0})(y-y_{0}) - (z-z_{0}) = 0$$
 	
-	法线方程: $\dfrac{x-x_{0}}{f_{x}'(x,y)}=\dfrac{y-y_{0}}{f_{y}'(x,y)}=\dfrac{z-z_{0}}{-1}$
+	\textcolor{purplea}{法线方程}
+	
+	$$\dfrac{x-x_{0}}{f_{x}'(x_{0},y_{0})} = \dfrac{y-y_{0}}{f_{y}'(x_{0},y_{0})} = \dfrac{z-z_{0}}{-1}$$
 \end{definition}
+
 \section{场论初步}
+
 \subsection{方向导数}
 \begin{definition}[方向导数]
 	
-	设三元函数 $u=u(x,y,z)$ 在点 $P(x_{0},y_{0},z_{0})$ 的某空间邻域内 $U\subset R^3$ 有定义,$l$ 是从 $P_{0}$ 出发的一条射线,$P(x,y,z)$ 为 $l$ 上且在 $U$ 中的任意一点,我们有: 
-	$$\left\lbrace \begin{array}{l}
+	设三元函数 $u=u(x,y,z)$ 在点 $P(x_{0},y_{0},z_{0})$ 的某空间邻域内 $U\subset R^3$ 有定义,$l$ 是从 $P_{0}$ 出发的一条射线,$P(x,y,z)$ 为 $l$ 上且在 $U$ 中的任意一点: 
+	$$\begin{cases}
 		x-x_{0}=\Delta x=t\cos \alpha\\
 		y-y_{0}=\Delta y=t\cos \beta\\
 		z-z_{0}=\Delta z=t\cos \gamma
-	\end{array}\right. $$ 
+	\end{cases}$$ 
 	
-	$t=\sqrt{(\Delta x)^2+(\Delta y)^2+(\Delta z)^2}$ 表示$|PP_{0}|$,如果下面极限存在: 
+	$t=\sqrt{(\Delta x)^2+(\Delta y)^2+(\Delta z)^2}$ 表示 $|PP_{0}|$,如果下面极限存在: 
+
 	$$\lim\lim\limits_{t\rightarrow 0}\frac{u(P)-u(P_{0})}{t}=\lim\lim\limits_{t\rightarrow 0}\frac{u(x_{0}+t\cos \alpha,y_{0}+t\cos \beta,z_{0}+t\cos \gamma)-u(x_{0},y_{0},z_{0})}{t}$$
 	
-	我们将此极限称为 $u=f(x,y,z)$ 在$P_{0}$ 处沿着 $l$ 的方向导数,记作 $\frac{\partial u}{\partial l}|_{P_{0}}$
+	我们将此极限称为 $u=f(x,y,z)$ 在$P_{0}$ 处沿着 $l$ 的方向导数,记作 $\dfrac{\partial u}{\partial l}|_{P_{0}}$
 \end{definition}
+
 \begin{theorem}[方向导数计算公式]
-	$$\frac{\partial u}{\partial l}|_{P_{0}}=u_{x}'\cos \alpha+u_{y}'\cos \beta+u_{z}'\cos \gamma$$
+	$$\dfrac{\partial u}{\partial \boldsymbol{l}}|_{P_{0}}=u_{x}'\cos \alpha+u_{y}'\cos \beta+u_{z}'\cos \gamma$$
 	
-	其中$\cos \alpha,\cos \beta,\cos \gamma$ 为方向 $l$ 的方向余弦.
+	其中$\cos \alpha,\cos \beta,\cos \gamma$ 为方向 $\boldsymbol{l}$ 的方向余弦
 \end{theorem}
+
 \subsection{梯度}
+
 \begin{definition}[梯度]
 	
-	设三元函数$u=u(x,y,z)$ 在点 $P(x_{0},y_{0},z_{0})$ 处具有一阶偏导数,定义下面为$u=u(x,y,z)$ 在 $ P_{0}(x_{0},y_{0},z_{0})$ 处的梯度: 
-	$$\textbf{guad}\ u|_{P_{0}}=(u_{x}'(P_{0}),u_{y}'(P_{0}),u_{z}'(P_{0}))$$
+	设三元函数 $u=u(x,y,z)$ 在点 $P(x_{0},y_{0},z_{0})$ 处具有一阶偏导数,定义下面为 $u=u(x,y,z)$ 在 $ P_{0}(x_{0},y_{0},z_{0})$ 处的梯度: 
+	
+	$$\boldsymbol{guad}\ u|_{P_{0}}=(u_{x}'(P_{0}),u_{y}'(P_{0}),u_{z}'(P_{0}))$$
 	
 	
 	梯度和方向导数之间的关系: 
-	$$\frac{\partial u}{\partial l}|_{P_{0}}=\textbf{guad}\ u|_{P_{0}}\bullet \textbf{l}=|\textbf{guad}\ u|_{P_{0}}|l|\cos \theta$$
+
+	$$\dfrac{\partial u}{\partial l}|_{P_{0}}=\boldsymbol{guad}\ u|_{P_{0}}\cdot \boldsymbol{l}=\big|\boldsymbol{guad}\ u|_{P_{0}}\big| |l|\cos \theta$$
 \end{definition}
+
 \subsection{散度和旋度}
+
 \begin{definition}[散度和旋度]
-	设向量场 $A(x,y,z)=(P(x,y,z),Q(x,y,z),R(x,y,z))$
+	设向量场 $\boldsymbol{A}(x,y,z)=P(x,y,z)\boldsymbol{i} + Q(x,y,z)\boldsymbol{j} + R(x,y,z)\boldsymbol{k}$
 	
-	散度: 
-	$$div\ A=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}$$
+	\textcolor{cyan}{散度} 
+	$$div\ \boldsymbol{A}=\dfrac{\partial P}{\partial x}+\dfrac{\partial Q}{\partial y}+\dfrac{\partial R}{\partial z}$$
 	
-	旋度: 
-	$$rot \ A=\left| \begin{array}{lll}
-		i&j&k\\\dfrac{\partial}{\partial x}&\dfrac{\partial}{\partial y}&\dfrac{\partial}{\partial z}\\P&Q&R
-	\end{array}\right| $$
+	\textcolor{purplea}{旋度}
+	$$rot \ \boldsymbol{A} = 
+	\begin{vmatrix}
+		\boldsymbol{i} & \boldsymbol{j} & \boldsymbol{k}\\
+		\dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
+		P & Q & R
+	\end{vmatrix}$$
 \end{definition}
+
 \chapterimage{chap12.jpg}
 \chapter{三重积分}
 \begin{definition}[三重积分]
