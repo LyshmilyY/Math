@@ -199,19 +199,60 @@ $|f(x,y)-A|<\varepsilon$, 那么称函数 $f(x,y)$ 当 $(x,y)\to(x_{0},y_{0})$ �
 	\item 变量替换
 \end{introduction}
 
-\section{概念和性质}
+\section{二重积分概念和性质}
 \begin{definition}[二重积分]
-	设 $f(x,y)$ 在有界闭区域 $D$ 上有界, $D$ 的面积为 $S_{D}$, $D$ 上的一个分割为 $D=\bigcup\limits_{i=1}^{n}D_{i}$, $\Delta \sigma_{i}$ 是 $D_{i}$ 的面积, 任取 $(\varepsilon_{i},\eta_{i})\in D_{i}$, 作乘积 $f(\varepsilon_{i},\eta_{i})\sigma_{i}$,
-并求和 $\sum\limits_{i=1}^{n}f(\varepsilon_{i},\eta_{i})\sigma_{i}$, 如果当 $\max\{d_{i}|d_{i}\text{是}D_{i}\text{区域的直径}\}\to 0$,极限 $\lim\limits_{n\to +\infty}\sum\limits_{i=1}^{n}f(\varepsilon_{i},\eta_{i})\sigma_{i}$ 存在, 且与 $D$ 的分割方法和 $(\varepsilon_{i},\eta_{i})$ 的取法无关, 
-那么称此极限为 $f(x,y)$ 在区域 $D$ 上的二重积分, 记作 $\iint\limits_{D}f(x,y)d\sigma$
-\end{definition}
-\begin{definition}[性质]
-	1. 二重积分的几何意义: 二重积分 $\iint\limits_{D}f(x,y)d\sigma$ 表示区域 $D$ 上以 $f(x,y)$ 为曲顶的曲顶柱体的体积
+	$f(x,y)$ 是有界闭区域 $D$ 上的有界函数,  将有界闭区域 $D$ 任意分割为 $n$ 个小闭区域
+	$$D=\bigcup\limits_{i=1}^{n}D_{i}$$
+	$\Delta \sigma_{i}$ 是 $D_{i}$ 的面积, 任取 $(\varepsilon_{i},\eta_{i})\in D_{i}$, 
+	作乘积 $f(\varepsilon_{i},\eta_{i})\sigma_{i}$,并求和 $\sum\limits_{i=1}^{n}f(\varepsilon_{i},\eta_{i})\sigma_{i}$, 
+	当 $\lim\limits_{n \to +\infty}\{\lambda |\lambda = \max\{d_{i}(i=1,2,\cdots,n)\}, d_{i}\text{是}D_{i}\text{区域的直径}\} = 0$ 时, 极限 $\lim\limits_{\lambda\to 0}\sum\limits_{i=1}^{n}
+	f(\varepsilon_{i},\eta_{i})\sigma_{i}$ 存在, 且与 $D$ 的分割方法和 $(\varepsilon_{i},\eta_{i})$ 的取法无关, 那么称此极限
+	为 $f(x,y)$ 在区域 $D$ 上的二重积分, 记作 $\iint\limits_{D}f(x,y)d\sigma$
 
-	2. 二重积分的线性性质: $\iint\limits_{D}(\alpha f(x,y)+\beta g(x,y))d\sigma=\alpha\iint\limits_{D}f(x,y)d\sigma+\beta\iint\limits_{D}g(x,y)d\sigma$
+	$$\iint\limits_{D} f(x,y) d\sigma = \lim\limits_{\lambda \to 0}\sum\limits_{i=1}^{n}f(\varepsilon_{i},\eta_{i})\sigma_{i}$$
+
+	其中 $f(x,y)$ 称为被积函数, $f(x,y)ds$ 称为被积表达式, $x,y$ 是积分变量, $D$ 是积分区域
+
+	\textcolor{cyan}{二重积分的几何意义} 
 	
-	3. 类比于一元积分学,我们有: $$\int_{a}^{b}1dx=b-a\to \iint\limits_{D}1d\sigma=S_{D}$$
+	二重积分 $\iint\limits_{D}f(x,y)d\sigma$ 表示区域 $D$ 上以 $f(x,y)$ 为曲顶的曲顶柱体的体积
 \end{definition}
+\begin{corollary}
+
+	(1). $\iint\limits_{D}1d\sigma = \iint\limits_{D}d\sigma = S_{D}$, $S_{D}$ 是 $D$ 的面积
+
+	(2). $f(x,y)$ 在有界闭区域 $D$ 上可积, $f(x,y)$ 在 $D$ 上必有界
+
+	(3). 积分的线性性质
+
+	$$\iint\limits_{D}\left[k_{1}f(x,y)+k_{2}g(x,y)\right]d\sigma = k_{1}\iint\limits_{D}f(x,y)d\sigma + k_{2}\iint\limits_{D}g(x,y)d\sigma$$
+
+	(4). 积分的可加性
+
+	设 $f(x,y)$ 在有界闭区域 $D$ 内可积, 且 $D_{1}\cup D_{2} = D, D_{1}\cap D_{2} = \emptyset$
+
+	$$\iint\limits_{D}f(x,y)d\sigma = \iint\limits_{D_{1}}f(x,y)d\sigma + \iint\limits_{D_{2}}f(x,y)d\sigma$$
+
+	(5). 积分的保号性
+	设 $f(x,y),g(x,y)$ 在有界闭区域 $D$ 内可积, 且 $f(x,y)\leq g(x,y)$
+
+	$$\iint\limits_{D}f(x,y)d\sigma\leq \iint\limits_{D}g(x,y)d\sigma \Rightarrow \big|\iint\limits_{D}f(x,y)d\sigma\big| = \iint\limits_{D}\big|f(x,y)\big|d\sigma$$
+
+	(6). 估值定理
+
+	设 $M,m$ 分别是 $f(x,y)$ 在有界闭区域 $D$ 内的最大值和最小值
+
+	$$mS_{D} \leq \iint\limits_{D}f(x,y)d\sigma \leq M S_{D}$$
+
+	(7). 中值定理
+
+	设 $f(x,y)$ 在有界闭区域 $D$ 内连续
+
+	$$\exists (\xi,\eta)\in D,\ s.t.\ \iint\limits_{D}f(x,y)d\sigma = f(\xi,\eta)S_{D}$$
+\end{corollary}
+
+\section{二重积分的对称性}
+
 \begin{theorem}[对称性]
 	1. 普通对称性
 
@@ -234,31 +275,36 @@ $|f(x,y)-A|<\varepsilon$, 那么称函数 $f(x,y)$ 当 $(x,y)\to(x_{0},y_{0})$ �
 	3. 区域 $D$ 关于原点对称, 我们有:
 	$$\iint\limits_{D} f(x,y)d\sigma = \begin{cases} 2\iint\limits_{D_{1}} f(x,y)d\sigma, & f(-x,-y) = f(x,y) \\ 0, & f(-x,-y) = -f(x,y)  \end{cases}$$
 \end{theorem}
-\section{计算}
+\section{二重积分计算}
 
-1. 直角坐标(重要的是积分次序)\label{def: 积分次序}
+\begin{definition}[直角坐标系]
+	$$\iint\limits_{D}f(x,y)d\sigma = 
+	\begin{cases} 
+		\int_{a}^{b}dx\int_{h(x)}^{g(x)}f(x,y)dy \\
+		\int_{a}^{b}dy\int_{p(y)}^{q(y)}f(x,y)dx
+	\end{cases}$$
+\end{definition}
 
-$$\iint\limits_{D}f(x,y)d\sigma=
-\begin{cases} \int_{a}^{b}dx\int_{h(x)}^{g(x)}f(x,y)dy \\
-	\int_{a}^{b}dy\int_{p(y)}^{q(y)}f(x,y)dx\end{cases}$$
+\begin{definition}[极坐标系]
+	$$\iint\limits_{D}f(x,y)d\sigma=\iint\limits_{D'}rf(r\cos \theta,r\sin \theta)drd\theta$$
+\end{definition}
 
-2. 极坐标计算(二重积分变量替换公式)\label{def: 极坐标计算二重积分}
-$$\iint\limits_{D}f(x,y)d\sigma=\iint\limits_{D'}rf(r\cos \theta,r\sin \theta)drd\theta$$
+\begin{definition}[换元法]
+	令 $\begin{cases}
+	  x = x(u,v)\\
+	  y = y(u,v)
+	\end{cases}$, 是 $(x,y)$ 面 到 $(u,v)$ 面的一对一映射, 且 $x = x(u,v), y = y(u,v)$ 有一阶连续偏导数
+	
+	$$J = \big|\dfrac{\partial (x,y)}{\partial (u,v)}\big| = 
+	\begin{Vmatrix}
+	  \dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\
+	  \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v}
+	\end{Vmatrix}
+	$$
+	$$\iint\limits_{D_{xy}} f(x,y)dxdy = \iint\limits_{D_{uv}} f\left[x(u,v),y(u,v)\right]\cdot Jdudv$$
+\end{definition}
 
-3. 变量替换\label{def: 变量替换}
-
-设 $D$ 和 $D^{'}$ 是平面上两个(有界)区域, $D$ 到 $D^{'}$ 的对应 $\varphi :(u,v)\rightarrow(x,y)$ (这里 $x=x(u,v),y=y(u,v)$ 连续可微),
-称为变量替换,要求 $\varphi$ 在一个面积为 $0$ 的集合外是 $1\sim 1$
-
-$$dxdy = J_{\varphi}(u,v)dudv$$ 
-$$J_{\varphi}(u,v)=|\dfrac{D(x,y)}{D(u,v)}|=
-\begin{Vmatrix}
-	\dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\
-	\dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v}
-\end{Vmatrix}
-$$
-
-\begin{anymark}[注]
+\begin{anymark}[变量替换]
 	$$d\sigma_{1}=dudv \qquad d\sigma_{2}=|l\times m|$$
 	$$\begin{cases}
 		x(u,v+dv)-x(u,v)=x'_{v}dv \\
@@ -275,22 +321,28 @@ $$
 			y'_{u} & y'_{v}
 		\end{Vmatrix}d\sigma_{1}$$
 \end{anymark}
-\section{二重积分解决一元积分}
-几个比较经典的例子:
 
-1. $\displaystyle{\int_{0}^{+\infty}e^{-x^{2}}dx}$
-\begin{anymark}[注]
+\textcolor{cyan}{Example}
+\begin{example}[][Exam: 8.3.1]
+	$\displaystyle{\int_{0}^{+\infty}e^{-x^{2}}dx}$
+\end{example}
+\begin{anymark}[证明]
 	$I = \int_{0}^{+\infty}e^{-x^{2}}dx = \int_{0}^{+\infty}e^{-y^{2}}dy$
 
 	\begin{eqnarray*}
 		I^{2} & = & \int_{0}^{+\infty}e^{-x^{2}}dx\int_{0}^{+\infty}e^{-y^{2}}dy\\
 			  & = & \int_{0}^{+\infty}dx\int_{0}^{+\infty}e^{-(x^{2}+y^{2})}dy\\
 			  & = & \int_{0}^{\frac{\pi}{2}}d \theta \int_{0}^{+\infty}re^{-r^{2}}dr\\
-			  & = \dfrac{\pi}{4}& 
+			  & = & \dfrac{\pi}{4} \\
+		I	  & = & \dfrac{\sqrt{\pi}}{2}
 	\end{eqnarray*}
 \end{anymark}
-2. $\displaystyle{\int_{0}^{a}f(x)dx\int_{0}^{a}\frac{1}{f(x)}dx\geq a^{2}}$
-\begin{anymark}[注]
+
+
+\begin{example}[][Exam: 8.3.2]
+	$\displaystyle{\int_{0}^{a}f(x)dx\int_{0}^{a}\frac{1}{f(x)}dx\geq a^{2}}$
+\end{example} 
+\begin{anymark}[证明]
 	$$I = \int_{0}^{a}f(x)dx\int_{0}^{a}\dfrac{1}{f(x)}dx = \iint\limits_{\substack{0\leq x\leq a\\0\leq y\leq a}}\dfrac{f(x)}{f(y)}dxdy$$
 
 	\begin{eqnarray*}
@@ -298,7 +350,7 @@ $$
 				+   \iint\limits_{\substack{0\leq x\leq a\\0\leq y\leq a}}\dfrac{f(y)}{f(x)}dxdy\\
 			  & \geq & \iint\limits_{\substack{0\leq x\leq a\\0\leq y\leq a}} 2dxdy\\
 			  &  =   & 2a^{2}\\
-		 I	  & = a^{2}& 
+		 I	  & \geq a^{2}& 
 	\end{eqnarray*}
 \end{anymark}
 
@@ -531,7 +583,7 @@ $$\dfrac{dy}{dx} = \varphi(\dfrac{y}{x})\Rightarrow
 \section{敛散性判别}
 \subsection{正项级数判别}\label{the: 正向级数敛散性的判别方法}
 
-(1). 定义法\label{定义法}
+(1). 定义法
 \begin{theorem}[收敛原则]
 	$\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛 $\Leftrightarrow S_{n}$ 有界
 \end{theorem}
@@ -767,7 +819,7 @@ $$\dfrac{dy}{dx} = \varphi(\dfrac{y}{x})\Rightarrow
 \end{theorem}
 \subsection{函数展开成幂级数}
 
-\begin{definition}\label{函数展开成幂级数}
+\begin{definition}
 	\textbf{泰勒级数}: $f(x)$ 在点 $x=x_{0}$ 处存在任意阶导数
 	$$f(x)=\sum\limits_{n=0}^{+\infty}\frac{f^{(n)}(x_{0})}{n!}(x-x_{0})^n$$
 	\textbf{麦克劳林级数}: $f(x)$ 在点 $x=0$ 处存在任意阶导数
@@ -1108,7 +1160,6 @@ $$S(x) = \begin{cases}
 			\draw[red,densely dotted] (0.19,0.19) -- (-0.19,-0.19);
 		\end{tikzpicture}
 		\caption{$\dfrac{x^{2}}{a^{2}} +\dfrac{y^{2}}{b^{2}}+\dfrac{z^{2}}{c^{2}}=1$}
-		\label{Figure: 椭球面}
 	\end{figure}
 
 	(b). 单叶双曲面 $\dfrac{x^{2}}{a^{2}} +\dfrac{y^{2}}{b^{2}} - \dfrac{z^{2}}{c^{2}}=1$
@@ -1143,7 +1194,6 @@ $$S(x) = \begin{cases}
 			\node at (-0.02,0.03) [below right] {$O$};
 		\end{tikzpicture}
 		\caption{$\dfrac{x^{2}}{a^{2}} +\dfrac{y^{2}}{b^{2}} - \dfrac{z^{2}}{c^{2}}=1$}
-		\label{Figure: 单叶双曲面}
 	\end{figure}
 
 	(c). 双叶双曲面 $\dfrac{x^{2}}{a^{2}} - \dfrac{y^{2}}{b^{2}} - \dfrac{z^{2}}{c^{2}} = 1$
@@ -1177,7 +1227,6 @@ $$S(x) = \begin{cases}
 			\node at (0,0) [below right] {$O$};
 		\end{tikzpicture}
 		\caption{$\dfrac{x^{2}}{a^{2}} - \dfrac{y^{2}}{b^{2}} - \dfrac{z^{2}}{c^{2}} = 1$}
-		\label{Figure: 双叶双曲面}
 	\end{figure}
 
 	(d). 椭圆抛物面 $\dfrac{x^{2}}{2p} + \dfrac{y^{2}}{2q} = z (p,q > 0)$
@@ -1198,7 +1247,6 @@ $$S(x) = \begin{cases}
 			\node at (-0.1,-0.1) [right] {$o$};
 		\end{tikzpicture}
 		\caption{$\dfrac{x^{2}}{2p} + \dfrac{y^{2}}{2q} = z (p,q > 0)$}
-		\label{Figure: 椭圆抛物面}
 	\end{figure}
 	
 	(f). 椭圆锥面 $\dfrac{x^{2}}{a^{2}} + \dfrac{y^{2}}{b^{2}} = \dfrac{z^{2}}{c^{2}}$
@@ -1222,7 +1270,6 @@ $$S(x) = \begin{cases}
 			\node at (0,0) [left] {$o$};
 		\end{tikzpicture}
 		\caption{$\dfrac{x^{2}}{a^{2}} + \dfrac{y^{2}}{b^{2}} = \dfrac{z^{2}}{c^{2}}$}
-		\label{Figure: 椭圆锥面}
 	\end{figure}
 
 	(g). 双曲抛物面 $ - \dfrac{x^{2}}{2p} + \dfrac{y^{2}}{2q} = z (p,q > 0)$
@@ -1252,7 +1299,6 @@ $$S(x) = \begin{cases}
 			\node at (-0.02, -0.05) [left]{$o$};
 		\end{tikzpicture}
 		\caption{$- \dfrac{x^{2}}{2p} + \dfrac{y^{2}}{2q} = z (p,q > 0)$}
-		\label{Figure: 双曲抛物面(1)}
 	\end{figure}
 
 	(h). 双曲抛物面 $z = xy$
@@ -1283,7 +1329,6 @@ $$S(x) = \begin{cases}
 			\node at (-0.02, -0.05) [left]{$o$};
 		\end{tikzpicture}
 		\caption{$z = xy$}
-		\label{Figure: 双曲抛物面(2)}
 	\end{figure}
 
 	(i). 椭圆柱面 $\dfrac{x^{2}}{a^{2}}+\dfrac{y^{2}}{b^{2}} = 1$
@@ -1307,7 +1352,6 @@ $$S(x) = \begin{cases}
 			\node at (0.1, -0.1) [below]{$o$};
 		\end{tikzpicture}
 		\caption{$\dfrac{x^{2}}{a^{2}}+\dfrac{y^{2}}{b^{2}} = 1$}
-		\label{Figure: 椭圆柱面}
 	\end{figure}
 	
 
@@ -1343,7 +1387,6 @@ $$S(x) = \begin{cases}
 			\node at (0.1, -0.1) [below]{$o$};
 		\end{tikzpicture}
 		\caption{$\dfrac{x^{2}}{a^{2}} - \dfrac{y^{2}}{b^{2}} = 1$}
-		\label{Figure: 双曲柱面}
 	\end{figure}
 	
 
@@ -1368,7 +1411,6 @@ $$S(x) = \begin{cases}
 			\node at (0.1, 0.1) [left]{$o$};
 		\end{tikzpicture}
 		\caption{$y = ax^{2}$}
-		\label{Figure: 抛物柱面}
 	\end{figure}
 
 	(3). 旋转曲面
@@ -1876,12 +1918,19 @@ $$S(x) = \begin{cases}
 \end{theorem}
 
 \section{第一型曲面积分}
-
+\subsection{第一型曲面积分定义和性质}
 \begin{definition}[第一型曲面积分]
-	$$\iint_{\Sigma}f(x,y,z)dS$$
-	我们将 $f(x,y,z)$ 称为曲面的面密度,第一型曲面积分的意义是求曲面的质量,类比二重积分,二重积分是在平面上积分,曲面积分则是在曲面上积分.
-	
-	特别的,我们有: $\iint_{\Sigma}dS=S_{\Sigma}$
+	设 $L$ 是 $xoy$ 平面内一条光滑曲线弧, 函数 $f(x,y)$ 在 $L$ 上有界, 在 $L$ 上任意插入一系列的点 $M_{1}, M_{2}, \cdots, M_{n-1}$ 将 $L$ 分成 $n$ 小段, 设第 $i$ 段的弧长为 $\Delta s_{i}$, 
+	在 第 $i$ 段上任意取一点 $(\zeta_{i},\eta_{i})$, 作乘积 $f(\zeta_{i},\eta_{i})\Delta s_{i}(i=1,2,\cdots,n)$, 并求和 $\sum\limits_{i=1}^{n}f(\zeta_{i},\eta_{i})\Delta s_{i}$, 当 
+	$\lim\limits_{n \to +\infty}\{\lambda|\lambda = \max\{\Delta s_{i}\}, i =1,2,\cdots,n\} = 0$ 时, 求和极限存在, 
+	且与 $\Delta s_{i}$ 的分法以及 $(\zeta_{i},\eta_{i})$ 的取法无关, 称此极限为函数 $f(x,y)$ 在曲线 $L$ 上对弧长的曲线积分
+	或第一型曲线积分, 记作 $\int_{L}f(x,y)ds$
+	$$\int_{L}f(x,y)ds = \lim\limits_{\lambda \to 0}\sum\limits_{i=1}^{n}f(\zeta_{i},\eta_{i})\Delta s_{i}$$ 
+
+	其中 $f(x,y)$ 称为被积函数, $f(x,y)ds$ 称为被积表达式, $x,y$ 是积分变量, $L$ 是积分弧
+
+	对于函数 $f(x,y,z)$ 在空间曲线 $\Gamma$ 上的第一型曲线积分
+	$$\int_{\Gamma}f(x,y,z)ds = \lim\limits_{\lambda \to 0}\sum\limits_{i=1}^{n}f(\xi_{i},\eta_{i},\zeta_{i})\Delta s_{i}$$
 \end{definition}
 \begin{theorem}
 	$$z=f(x,y)\quad F(x,y,z)=0$$
@@ -1890,10 +1939,14 @@ $$S(x) = \begin{cases}
 	
 	$$\iint_{\Sigma}f(x,y,z)dS=\iint_{D_{xy}}f(x,y,z)\sqrt{1+(z_{x}')^2+(z_{y}')^2}d\sigma$$
 \end{theorem}
+\subsection{第一型曲面积分的对称性}
+
+\subsection{第一型曲面积分计算}
 
 \section{第一型曲线积分和曲面积分应用}
+1. \textcolor{purplec}{曲线长度和曲面面积}
 
-1. \textcolor{cyan}{重心}
+2. \textcolor{cyan}{重心}
 \begin{theorem}[重心公式]
 
 	(1). 光滑曲线, 对于光滑曲线 $\Gamma$, 线密度 $\rho(x,y,z)$, 重心 $O(\overline{x}, \overline{y}, \overline{z})$
@@ -1938,7 +1991,7 @@ $$S(x) = \begin{cases}
 	\end{cases}$$
 \end{theorem}
 
-2. \textcolor{purplea}{转动惯量}
+3. \textcolor{purplea}{转动惯量}
 \begin{definition}[转动惯量: $I=mr^2$]
 	
 	(1). 光滑曲线, 对于光滑曲线 $\Gamma$, 线密度 $\rho(x,y,z)$
@@ -1963,7 +2016,7 @@ $$S(x) = \begin{cases}
 	
 \end{definition}
 
-3. \textcolor{purpleb}{万有引力}
+4. \textcolor{purpleb}{万有引力}
 \begin{definition}[引力公式: $F=\dfrac{GMm}{r^2}$]	
 
 	(1). 光滑曲线, 对于光滑曲线 $\Gamma$, 线密度 $\rho(x,y,z)$

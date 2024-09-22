@@ -2,25 +2,26 @@
 \chapter{January}
 \section{Week \Rmnum{1}}
 
-\hl{\textbf{\textit{January 1}}}
-
-1. 已知 $f(x+1)$ 的定义域为$[0,a]$,($a>0$),求 $f(x)$ 定义域
-\myspace{1}
+\textcolor{orange}{\textbf{January 1}}
+\begin{example}[][Exam: 27.1.1]
+	已知 $f(x+1)$ 的定义域为$[0,a]$,($a>0$),求 $f(x)$ 定义域
+\end{example}
 \begin{solution}
 	
 	$f(x+1)$ 的定义域为$[0,a]$,则 $f(x)$ 的定义域为$[-1,a-1]$
 \end{solution}
-\myspace{1}
 
-2. 已知 $f(x)=e^{x^{2}},f[\varphi(x)]=1-x$ 且 $\varphi(x)\geq 0$,求 $\varphi(x)$ 并求出定义域
-\myspace{1}
+\begin{example}[][Exam: 27.1.2]
+	已知 $f(x)=e^{x^{2}},f[\varphi(x)]=1-x$ 且 $\varphi(x)\geq 0$,求 $\varphi(x)$ 并求出定义域
+\end{example}
+
 \begin{solution}
 	
 	$f[\varphi(x)]=1-x\Rightarrow e^{\varphi^{2}(x)}=1-x$, 因此: $\varphi(x)=\sqrt{\ln (1-x)}, x\ge 1$
 \end{solution}
-\myspace{1}
 
-3. 设 
+\begin{example}[][Exam: 27.1.3]
+	设 
 	$$g(x)=
 	\begin{cases}
 		2-x,x\leq 0\\ x+2,x>0
@@ -30,7 +31,8 @@
 	\end{cases}
 	$$
 求 $g[f(x)]$
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	$$
@@ -41,9 +43,9 @@
 	\end{cases}
 	$$
 \end{solution}
-\myspace{1}
 
-4. 设函数 $$f(x)=
+\begin{example}[][Exam: 27.1.4]
+	设函数 $$f(x)=
 \begin{cases}
 	1-2x^{2},x<-1\\
 	x^{3},-1\leq x\leq 2\\
@@ -51,7 +53,8 @@
 \end{cases}
 $$
 求 $f(x)$ 的反函数 $g(x)$ 的表达式
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	$$
 	g(x) = 
@@ -62,10 +65,11 @@ $$
 	\end{cases}
 	$$
 \end{solution}
-\myspace{1}
 
-5. 证明:定义在 $[-a,a]$ 上的任意一个函数 $f(x)$ 都可以表示为一个奇函数和一个偶函数之和
-\myspace{1}
+\begin{example}[][Exam: 27.1.5]
+	证明:定义在 $[-a,a]$ 上的任意一个函数 $f(x)$ 都可以表示为一个奇函数和一个偶函数之和
+\end{example}
+
 \begin{solution}
 
 	令 $g(x)= \dfrac{f(x)+f(-x)}{2}\quad h(x)=\dfrac{f(x)-f(-x)}{2}$
@@ -79,10 +83,11 @@ $$
 	
 	其中 $g(x)$ 是偶函数, $h(x)$ 是奇函数
 \end{solution}
-\myspace{1}
 
-6. 判断函数 $f(x)=x\tan x\cdot e^{\sin x}$的奇偶性、单调性、周期性和有界性
-\myspace{1}
+\begin{example}[][Exam: 27.1.6]
+	判断函数 $f(x)=x\tan x\cdot e^{\sin x}$的奇偶性、单调性、周期性和有界性
+\end{example}
+
 \begin{solution}
 
 	$f(x)$ 定义域为 $(-\dfrac{\pi}{2}+k\pi,\dfrac{\pi}{2}+k\pi),k\in \mathbb{Z}$, 关于原点对称
@@ -103,17 +108,17 @@ $$
 
 	$f(x)$ 不是周期函数
 \end{solution}
-\myspace{1}
 
-7. 函数 $f(x)=\dfrac{|x|\sin(x-2)}{x(x-1)(x-2)^{2}}$ 在下列哪个区间内有界
-
+\begin{example}[][Exam: 27.1.7]
+	函数 $f(x)=\dfrac{|x|\sin(x-2)}{x(x-1)(x-2)^{2}}$ 在下列哪个区间内有界
 \begin{itemize}
 	\item A. $(-1,0)$
 	\item B. $(0,1)$
 	\item C. $(1,2)$
 	\item D. $(2,3)$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	(1). $x\to 0^{-}, f(x)\to -\dfrac{\sin 2}{4}; x\to 0^{+}, f(x)\to \dfrac{\sin 2}{4}$
@@ -124,12 +129,14 @@ $$
 
 	$f(x)$ 在区间 $(-1,0)$ 有界
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{January 2}}}
-
-1. 求$\lim\limits_{n\to\infty}\left[\sqrt{1+2+\cdots+n}-\sqrt{1+2+\cdots+(n-1)}\right]$
 \myspace{1}
+\textcolor{orange}{\textbf{January 2}}
+
+\begin{example}[][Exam: 27.1.8]
+	求$\lim\limits_{n\to\infty}\left[\sqrt{1+2+\cdots+n}-\sqrt{1+2+\cdots+(n-1)}\right]$
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -140,10 +147,10 @@ $$
 		  = & \dfrac{1}{\sqrt{2}} 
 	\end{align*}
 \end{solution}
-\myspace{1}
+\begin{example}[][Exam: 27.1.9]
+	求极限 $\lim\limits_{x\to-\infty}\dfrac{\sqrt{4x^{2}+x-1}+x+1}{\sqrt{x^{2}+\sin x}}$
+\end{example}
 
-2. 求极限 $\lim\limits_{x\to-\infty}\dfrac{\sqrt{4x^{2}+x-1}+x+1}{\sqrt{x^{2}+\sin x}}$
-\myspace{1}
 \begin{solution}
 
 	\begin{align*}
@@ -153,12 +160,14 @@ $$
 		  = & 1
 	\end{align*}
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{January 3}}}
-
-1. 求极限 $\lim\limits_{x\to 0}\left(\dfrac{2+e^{\frac{1}{x}}}{1+e^{\frac{4}{x}}}+\dfrac{\sin x}{|x|}\right)$
 \myspace{1}
+\textcolor{orange}{\textbf{January 3}}
+
+\begin{example}[][Exam: 27.1.10]
+	 求极限 $\lim\limits_{x\to 0}\left(\dfrac{2+e^{\frac{1}{x}}}{1+e^{\frac{4}{x}}}+\dfrac{\sin x}{|x|}\right)$
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -171,10 +180,11 @@ $$
 	\end{align*}
 	综上所述, 原极限 $I =1$
 \end{solution}
-\myspace{1}
 
-2. 求极限 $\lim\limits_{x\to+\infty}(\sqrt{x^{2}+x}-\sqrt{x^{2}-x})$
-\myspace{1}
+\begin{example}[][Exam: 27.1.11]
+	求极限 $\lim\limits_{x\to+\infty}(\sqrt{x^{2}+x}-\sqrt{x^{2}-x})$
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -186,12 +196,14 @@ $$
 		  = & 1
 	\end{align*}
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{January 4}}}
-
-1. 求极限 $\lim\limits_{x\to 0}\dfrac{\sqrt{1+\tan x}-\sqrt{1+\sin x}}{x(1-\cos x)}$
 \myspace{1}
+\textcolor{orange}{\textbf{January 4}}
+
+\begin{example}[][Exam: 27.1.12]
+	求极限 $\lim\limits_{x\to 0}\dfrac{\sqrt{1+\tan x}-\sqrt{1+\sin x}}{x(1-\cos x)}$
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -203,10 +215,11 @@ $$
 		  = & \dfrac{1}{2}
 	\end{align*}
 \end{solution}
-\myspace{1}
 
-2. 已知 $\lim\limits_{x\to 0}\dfrac{e^{x^{2}}-\cos 2x}{ax^{b}}=1$,求 $a,b$
-\myspace{1}
+\begin{example}[][Exam: 27.1.13]
+	已知 $\lim\limits_{x\to 0}\dfrac{e^{x^{2}}-\cos 2x}{ax^{b}}=1$,求 $a,b$
+\end{example}
+
 \begin{solution}
 
 	泰勒展开式:
@@ -218,26 +231,29 @@ $$
 	\end{align*}
 	因此: $a = 3, b = 2$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{January 5}}}
-
-1. 已知 $\lim\limits_{x\to x_{0}}\varphi(x)=0$,下列结论正确的个数为
-\begin{itemize}
-	\item A. $\lim\limits_{x\to x_{0}}\dfrac{\sin\varphi(x)}{\varphi(x)}=1$
-	\item B. $\lim\limits_{x\to x_{0}}[1+\varphi(x)]^{\frac{1}{\varphi}}=e$
-	\item C. 当$x\to x_{0}$时,$\sin \varphi(x)\sim \varphi(x)$
-	\item D. 若$\lim\limits_{u\to 0}f(u)=A$,则 $\lim\limits_{x\to x_{0}}f[\varphi(x)]=A$
-\end{itemize}
 \myspace{1}
+\textcolor{orange}{\textbf{January 5}}
+
+\begin{example}[][Exam: 27.1.14]
+	已知 $\lim\limits_{x\to x_{0}}\varphi(x)=0$,下列结论正确的个数为
+	\begin{itemize}
+		\item A. $\lim\limits_{x\to x_{0}}\dfrac{\sin\varphi(x)}{\varphi(x)}=1$
+		\item B. $\lim\limits_{x\to x_{0}}[1+\varphi(x)]^{\frac{1}{\varphi}}=e$
+		\item C. 当$x\to x_{0}$时,$\sin \varphi(x)\sim \varphi(x)$
+		\item D. 若$\lim\limits_{u\to 0}f(u)=A$,则 $\lim\limits_{x\to x_{0}}f[\varphi(x)]=A$
+	\end{itemize}
+\end{example}
+
 \begin{solution}
 
 	正确的个数: $0$, 令 $\varphi(x) = 0,x\in \mathring{U}(x_{0},\delta)$, $A,B,C,D$ 四个选项均不正确
 \end{solution}
-\myspace{1}
 
-2. 求极限 $\lim\limits_{x\to 0}\dfrac{\arcsin x-\arctan x}{\sin x-\tan x}$
-\myspace{1}
+\begin{example}[][Exam: 27.1.15]
+	求极限 $\lim\limits_{x\to 0}\dfrac{\arcsin x-\arctan x}{\sin x-\tan x}$
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -246,11 +262,14 @@ $$
 		  = & -1 
 	\end{align*}
 \end{solution}
-\myspace{1}
-\hl{\textbf{\textit{January 6}}}
 
-1. 求极限 $\lim\limits_{x\to 0}\dfrac{\ln\dfrac{x}{\ln(1+x)}}{x}$
 \myspace{1}
+\textcolor{orange}{\textbf{January 6}}
+
+\begin{example}[][Exam: 27.1.16]
+	求极限 $\lim\limits_{x\to 0}\dfrac{\ln\dfrac{x}{\ln(1+x)}}{x}$
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -260,10 +279,11 @@ $$
 		  = & \dfrac{1}{2}
 	\end{align*}
 \end{solution}
-\myspace{1}
 
-2. 求极限 $\lim\limits_{x\to +\infty}\dfrac{e^{x}}{(1+\dfrac{1}{x})^{x^{2}}}$
-\myspace{1}
+\begin{example}[][Exam: 27.1.17]
+	求极限 $\lim\limits_{x\to +\infty}\dfrac{e^{x}}{(1+\dfrac{1}{x})^{x^{2}}}$
+\end{example}
+
 \begin{solution}
 	
 	\begin{align*}
@@ -275,11 +295,14 @@ $$
 		  = & e^{\frac{1}{2}}
 	\end{align*}
 \end{solution}
-\myspace{1}
-\hl{\textbf{\textit{January 7}}}
 
-1. 求极限 $\lim\limits_{x\to 0}\dfrac{\cos x-\cos(\sin x)}{x^{4}}$
 \myspace{1}
+\textcolor{orange}{\textbf{January 7}}
+
+\begin{example}[][Exam: 27.1.18]
+	求极限 $\lim\limits_{x\to 0}\dfrac{\cos x-\cos(\sin x)}{x^{4}}$
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -293,10 +316,11 @@ $$
 	$$\sin \xi \in (\sin x\sim x)\to \lim\limits_{x\to 0}\dfrac{\sin x}{x} = \lim\limits_{x\to 0}\dfrac{x}{x}=1\Rightarrow \lim\limits_{x\to 0}\dfrac{\sin \xi}{x} = 1$$
 
 \end{solution}
-\myspace{1}
 
-2. 求极限 $\lim\limits_{x\to +\infty}x^{2}\left[\arctan(x+1)-\arctan x\right]$
-\myspace{1}
+\begin{example}[][Exam: 27.1.19]
+	求极限 $\lim\limits_{x\to +\infty}x^{2}\left[\arctan(x+1)-\arctan x\right]$
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -309,13 +333,15 @@ $$
 	$$\xi\in (x, x+1)\to \lim\limits_{x\to +\infty}\frac{x^{2}}{1+(x^{2})} = \lim\limits_{x\to +\infty}\frac{x^{2}}{1+(x+1)^{2}}=1
 	\Rightarrow \lim\limits_{x\to +\infty}\frac{x^{2}}{1+\xi^{2}} = 1$$
 \end{solution}
-\myspace{1}
+
 
 \section{Week \Rmnum{2}}
-\hl{\textbf{\textit{January 8}}}
+\textcolor{blue}{\textbf{January 8}}
 
-1. 求极限 $\lim\limits_{n\to \infty}n^{2}\left[\arctan\dfrac{a}{n}-\arctan \dfrac{a}{n+1}\right]$
-\myspace{1}
+\begin{example}[][Exam: 27.2.1]
+	求极限 $\lim\limits_{n\to \infty}n^{2}\left[\arctan\dfrac{a}{n}-\arctan \dfrac{a}{n+1}\right]$
+\end{example}
+
 \begin{solution}
 	
 	归结原理:
@@ -328,10 +354,11 @@ $$
 	夹逼定理: 
 	$$\xi\in (\dfrac{a}{x},\dfrac{a}{x+1})\to \lim\limits_{x\to \infty}\dfrac{a}{x} = \lim\limits_{x\to \infty}\dfrac{a}{x+1}=0\Rightarrow \lim\limits_{x\to \infty}\xi = 0$$
 \end{solution}
-\myspace{1}
 
-2. 求极限 $\lim\limits_{x\to +\infty}[\sin\sqrt{x+1}-\sin\sqrt{x}]$
-\myspace{1}
+\begin{example}[][Exam: 27.2.2]
+	求极限 $\lim\limits_{x\to +\infty}[\sin\sqrt{x+1}-\sin\sqrt{x}]$
+\end{example}
+
 \begin{solution}
 	
 	\begin{align*}
@@ -341,12 +368,14 @@ $$
 		  = & 0
 	\end{align*}
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{January 9}}}
-
-1. 求极限 $\lim\limits_{x\to 0}\left[\dfrac{1}{\ln(1+x^{2})}-\dfrac{1}{\ln(1+\tan^{2}x)}\right]$
 \myspace{1}
+\textcolor{blue}{\textbf{January 9}}
+
+\begin{example}[][Exam: 27.2.3]
+	求极限 $\lim\limits_{x\to 0}\left[\dfrac{1}{\ln(1+x^{2})}-\dfrac{1}{\ln(1+\tan^{2}x)}\right]$
+\end{example}
+
 \begin{solution}
 	
 	\begin{align*}
@@ -360,10 +389,11 @@ $$
 	夹逼定理: 
 	$$\xi\in(1+x^{2},1+\tan^{2}x)\to \lim\limits_{x\to 0}(1+x^{2}) = \lim\limits_{x\to 0} (1+\tan^{2}x) = 1\Rightarrow \lim\limits_{x\to 0}\xi = 1$$
 \end{solution}
-\myspace{1}
 
-2. 求极限 $\lim\limits_{x\to 0}\left[\dfrac{1}{\ln(1+x^{2})}-\dfrac{1}{\sin^{2}x}\right]$
-\myspace{1}
+\begin{example}[][Exam: 27.2.4]
+	求极限 $\lim\limits_{x\to 0}\left[\dfrac{1}{\ln(1+x^{2})}-\dfrac{1}{\sin^{2}x}\right]$
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -379,11 +409,14 @@ $$
 	夹逼定理: 
 	$$\xi\in(1+\sin^{2}x,1+x^{2})\to \lim\limits_{x\to 0}(1+\sin^{2}x) = \lim\limits_{x\to 0} (1+x^{2}) = 1\Rightarrow \lim\limits_{x\to 0}\xi = 1$$
 \end{solution}
-\myspace{1}
-\hl{\textbf{\textit{January 10}}}
 
-1. 求极限 $\lim\limits_{x\to 0}\left(x+2^{x}\right)^{\frac{2}{x}}$
 \myspace{1}
+\textcolor{blue}{\textbf{January 10}}
+
+\begin{example}[][Exam: 27.2.5]
+	求极限 $\lim\limits_{x\to 0}\left(x+2^{x}\right)^{\frac{2}{x}}$
+\end{example}
+
 \begin{solution}
 	
 	\begin{align*}
@@ -396,10 +429,11 @@ $$
 		  = & 4e^{2}
 	\end{align*}
 \end{solution}
-\myspace{1}
 
-2. 若 $\lim\limits_{x\to 0}\left(\dfrac{1-\tan x}{1+\tan x}\right)^{\frac{1}{\sin kx}}=e$,求 $k$
-\myspace{1}
+\begin{example}[][Exam: 27.2.6]
+	若 $\lim\limits_{x\to 0}\left(\dfrac{1-\tan x}{1+\tan x}\right)^{\frac{1}{\sin kx}}=e$,求 $k$
+\end{example}
+
 \begin{solution}
 	
 	\begin{align*}
@@ -413,11 +447,14 @@ $$
 
 	综上所述, $k = -2$
 \end{solution}
-\myspace{1}
-\hl{\textbf{\textit{January 11}}}
 
-1.  若 $\lim\limits_{x\to 0}(e^{x}+ax^{2}+bx)^{\frac{1}{x^{2}}}=1$,求 $a,b$
 \myspace{1}
+\textcolor{blue}{\textbf{January 11}}
+
+\begin{example}[][Exam: 27.2.7]
+	若 $\lim\limits_{x\to 0}(e^{x}+ax^{2}+bx)^{\frac{1}{x^{2}}}=1$,求 $a,b$
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -430,10 +467,11 @@ $$
 
 	综上所述, $a = -\dfrac{1}{2}, b = -1$
 \end{solution}
-\myspace{1}
 
-2. 求极限 $\lim\limits_{x\to 0}\left(\dfrac{\arctan x}{x}\right)^{\frac{1}{1-\cos x}}$
-\myspace{1}
+\begin{example}[][Exam: 27.2.8]
+	求极限 $\lim\limits_{x\to 0}\left(\dfrac{\arctan x}{x}\right)^{\frac{1}{1-\cos x}}$
+\end{example}
+
 \begin{solution}
 	
 	\begin{align*}
@@ -446,11 +484,14 @@ $$
 		  = & e^{-\frac{2}{3}}
 	\end{align*}
 \end{solution}
-\myspace{1}
-\hl{\textbf{\textit{January 12}}}
 
-1. 求极限 $\lim\limits_{n\to \infty}\left(n\tan\frac{1}{n}\right)^{n^{2}}$
 \myspace{1}
+\textcolor{blue}{\textbf{January 12}}
+
+\begin{example}[][Exam: 27.2.9]
+	求极限 $\lim\limits_{n\to \infty}\left(n\tan\frac{1}{n}\right)^{n^{2}}$
+\end{example}
+
 \begin{solution}
 	
 	归结原理:
@@ -463,10 +504,11 @@ $$
 		  = & e^{\frac{1}{3}}
 	\end{align*}
 \end{solution}
-\myspace{1}
 
-2. 求极限 $\lim\limits_{n\to \infty}\tan^{n}\left( \dfrac{\pi}{4}+\dfrac{1}{n}\right)$
-\myspace{1}
+\begin{example}[][Exam: 27.2.10]
+	求极限 $\lim\limits_{n\to \infty}\tan^{n}\left( \dfrac{\pi}{4}+\dfrac{1}{n}\right)$
+\end{example}
+
 \begin{solution}
 	
 	归结原理:
@@ -477,11 +519,14 @@ $$
 		  = & e^{2}
 	\end{align*}
 \end{solution}
-\myspace{1}
-\hl{\textbf{\textit{January 13}}}
 
-1. 求极限 $\lim\limits_{x\to 0}\left( \dfrac{\ln(1+x)}{x}\right)^{\frac{1}{e^{x}-1}}$
 \myspace{1}
+\textcolor{blue}{\textbf{January 13}}
+
+\begin{example}[][Exam: 27.2.11]
+	求极限 $\lim\limits_{x\to 0}\left( \dfrac{\ln(1+x)}{x}\right)^{\frac{1}{e^{x}-1}}$
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -490,10 +535,11 @@ $$
 		  = & e^{\frac{1}{2}}
 	\end{align*}
 \end{solution}
-\myspace{1}
 
-2. 求极限 $\lim\limits_{x\to 0}\left( \dfrac{(1+x)^{\frac{1}{x}}}{e}\right)^{\frac{1}{x}}$
-\myspace{1}
+\begin{example}[][Exam: 27.2.12]
+	求极限 $\lim\limits_{x\to 0}\left( \dfrac{(1+x)^{\frac{1}{x}}}{e}\right)^{\frac{1}{x}}$
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -501,11 +547,14 @@ $$
 		  = & e^{\frac{1}{2}}
 	\end{align*}
 \end{solution}
-\myspace{1}
-\hl{\textbf{\textit{January 14}}}
 
-1. 求极限 $\lim\limits_{x\to 0}(\cos 2x+2x\sin x)^{\frac{1}{x^{4}}}$
 \myspace{1}
+\textcolor{blue}{\textbf{January 14}}
+
+\begin{example}[][Exam: 27.2.13]
+	求极限 $\lim\limits_{x\to 0}(\cos 2x+2x\sin x)^{\frac{1}{x^{4}}}$
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -514,10 +563,11 @@ $$
 		  = & e^{\frac{1}{3}}
 	\end{align*}
 \end{solution}
-\myspace{1}
 
-2. 求极限 $\lim\limits_{x\to \frac{\pi}{4}}\left( \tan x\right) ^{\frac{1}{\cos x-\sin x}}$
-\myspace{1}
+\begin{example}[][Exam: 27.2.14]
+	 求极限 $\lim\limits_{x\to \frac{\pi}{4}}\left( \tan x\right) ^{\frac{1}{\cos x-\sin x}}$
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -527,12 +577,15 @@ $$
 		  = & e^{-\sqrt{2}}
 	\end{align*}
 \end{solution}
-\myspace{1}
-\section{Week \Rmnum{3}}
-\hl{\textbf{\textit{January 15}}}
 
-1. 求极限 $\lim\limits_{x\to 0}\left(\dfrac{(e^{x}+e^{2x}+\cdots +e^{nx})}{n} \right)^{\frac{1}{x}} $
-\myspace{1}
+
+\section{Week \Rmnum{3}}
+\textcolor{cyan}{\textbf{January 15}}
+
+\begin{example}[][Exam: 27.3.1]
+	求极限 $\lim\limits_{x\to 0}\left(\dfrac{(e^{x}+e^{2x}+\cdots +e^{nx})}{n} \right)^{\frac{1}{x}} $
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -542,10 +595,12 @@ $$
 		  = & e^{\frac{n+1}{2}}
 	\end{align*}
 \end{solution}
-\myspace{1}
 
-2. 求极限 $\lim\limits_{x\to \infty}\left(\dfrac{x^{n}}{(x+1)(x+2)\cdots(x+n)} \right)^{x} $
+\begin{example}[][Exam: 27.3.2]
+	求极限 $\lim\limits_{x\to \infty}\left(\dfrac{x^{n}}{(x+1)(x+2)\cdots(x+n)} \right)^{x} $
 \myspace{1}
+\end{example}
+ 
 \begin{solution}
 
 	\begin{align*}
@@ -555,11 +610,14 @@ $$
 		  = & e^{-\frac{n(n+1)}{2}}
 	\end{align*}
 \end{solution}
-\myspace{1}
-\hl{\textbf{\textit{January 16}}}
 
-1. 求极限 $\lim\limits_{x\to \infty}\left(\sin\frac{1}{x}+\cos\frac{1}{x} \right)^{x} $
 \myspace{1}
+\textcolor{cyan}{\textbf{January 16}}
+
+\begin{example}[][Exam: 27.3.3]
+	求极限 $\lim\limits_{x\to \infty}\left(\sin\frac{1}{x}+\cos\frac{1}{x} \right)^{x} $
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -570,10 +628,11 @@ $$
 		  = & e
 	\end{align*}
 \end{solution}
-\myspace{1}
 
-2. 求极限 $\lim\limits_{n\to \infty}n\left[e\left(1+\dfrac{1}{n} \right)^{-n}-1 \right]$
-\myspace{1}
+\begin{example}[][Exam:27.3.4]
+	求极限 $\lim\limits_{n\to \infty}n\left[e\left(1+\dfrac{1}{n} \right)^{-n}-1 \right]$
+\end{example}
+
 \begin{solution}
 	
 	归结原理:
@@ -585,11 +644,14 @@ $$
 		  = & e^{\frac{1}{2}}
 	\end{align*}
 \end{solution}
-\myspace{1}
-\hl{\textbf{\textit{January 17}}}
 
-1. 设 $a>0,a\neq 1$,且 $\lim\limits_{x\to +\infty}x^{p}(a^{\frac{1}{x}}-a^{\frac{1}{x+1}})=\ln a$,求 $p$
 \myspace{1}
+\textcolor{cyan}{\textbf{January 17}}
+
+\begin{example}[][Exam: 27.3.5]
+	设 $a>0,a\neq 1$,且 $\lim\limits_{x\to +\infty}x^{p}(a^{\frac{1}{x}}-a^{\frac{1}{x+1}})=\ln a$,求 $p$
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -604,10 +666,11 @@ $$
 
 	综上所述, 我们有: $p = 2$
 \end{solution}
-\myspace{1}
 
-2. 求极限 $\lim\limits_{x\to 0}\dfrac{(1-\sqrt{\cos x})(1-\sqrt[3]{\cos x})\cdots(1-\sqrt[n]{\cos x})}{(1-\cos x)^{n-1}}$
-\myspace{1} 
+\begin{example}[][Exam: 27.3.6]
+	求极限 $\lim\limits_{x\to 0}\dfrac{(1-\sqrt{\cos x})(1-\sqrt[3]{\cos x})\cdots(1-\sqrt[n]{\cos x})}{(1-\cos x)^{n-1}}$
+\end{example}
+
 \begin{solution}
 	
 	等价无穷小: 
@@ -618,11 +681,14 @@ $$
 		  = & \dfrac{1}{n!}
 	\end{align*}
 \end{solution}
-\myspace{1}
-\hl{\textbf{\textit{January 18}}}
 
-1. 求极限 $\lim\limits_{x\to 0}\dfrac{\ln(\sin^{2}x+e^{x})-x}{\ln(x^{2}+e^{2x})-2x}$
-\myspace{1} 
+\myspace{1}
+\textcolor{cyan}{\textbf{January 18}}
+
+\begin{example}[][Exam: 27.3.7]
+	求极限 $\lim\limits_{x\to 0}\dfrac{\ln(\sin^{2}x+e^{x})-x}{\ln(x^{2}+e^{2x})-2x}$
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -632,10 +698,11 @@ $$
 		  = & 1
 	\end{align*}
 \end{solution}
-\myspace{1}
 
-2. 已知极限 $\lim\limits_{x\to 0}\dfrac{x-\tan x}{x^{k}}=c$,其中 $k,c$ 为常数,且 $c\neq 0$,求 $k,c$
-\myspace{1}
+\begin{example}[][Exam: 27.3.8]
+	已知极限 $\lim\limits_{x\to 0}\dfrac{x-\tan x}{x^{k}}=c$,其中 $k,c$ 为常数,且 $c\neq 0$,求 $k,c$
+\end{example}
+
 \begin{solution}
 
 	\begin{align*}
@@ -646,18 +713,20 @@ $$
 
 	综上所述: $k = 3, c = -\dfrac{1}{3}$
 \end{solution}
+
 \myspace{1}
+\textcolor{cyan}{\textbf{January 19}}
 
-\hl{\textbf{\textit{January 19}}}
-
-1. 若 $\lim\limits_{x\to 0}\left(\dfrac{\sin x^{4}}{x^{4}}-\dfrac{f(x)}{x^{3}}\right)=2$,则当 $x\to 0$ 时,$f(x)$ 是 $x$ 的:
+\begin{example}[][Exam: 27.3.9]
+	若 $\lim\limits_{x\to 0}\left(\dfrac{\sin x^{4}}{x^{4}}-\dfrac{f(x)}{x^{3}}\right)=2$,则当 $x\to 0$ 时,$f(x)$ 是 $x$ 的:
 \begin{itemize}
 	\item A. 等价无穷小
 	\item B. 同阶但非等价无穷小
-	\item \hl{\textbf{C}}. 高阶无穷小
+	\item C. 高阶无穷小
 	\item D. 低阶无穷小
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	令 
@@ -670,10 +739,11 @@ $$
 
 	综上所述, $f(x)$ 是 $x$ 的 高阶无穷小.
 \end{solution}
-\myspace{1}
 
-2. 当 $x\to 0$ 时,$\alpha(x)=kx^{2}$ 与 $\beta(x)=\sqrt{1+x\arcsin x}-\sqrt{\cos x}$ 时等价无穷小,求 $k$
-\myspace{1}
+\begin{example}[][Exam: 27.3.10]
+	当 $x\to 0$ 时,$\alpha(x)=kx^{2}$ 与 $\beta(x)=\sqrt{1+x\arcsin x}-\sqrt{\cos x}$ 时等价无穷小,求 $k$
+\end{example}
+
 \begin{solution}
 
 	等价无穷小定义:
@@ -688,18 +758,20 @@ $$
 
 	综上所述, 我们有: $k = \dfrac{3}{4}$
 \end{solution}
+
 \myspace{1}
+\textcolor{cyan}{\textbf{January 20}}
 
-\hl{\textbf{\textit{January 20}}}
-
-1. 当 $x\to 0^{+}$ 时,与 $\sqrt{x}$ 等价的无穷小量为:
+\begin{example}[][Exam: 27.3.11]
+	当 $x\to 0^{+}$ 时,与 $\sqrt{x}$ 等价的无穷小量为:
 \begin{itemize}
 	\item A. $1-e^{\sqrt{x}}$
-	\item \hl{\textbf{B}}. $\ln\dfrac{1+x}{1-\sqrt{x}}$
+	\item B. $\ln\dfrac{1+x}{1-\sqrt{x}}$
 	\item C. $\sqrt{1+\sqrt{x}}-1$
 	\item D. $1-\cos \sqrt{x}$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	$$\begin{cases} 
@@ -711,16 +783,17 @@ $$
 
 	因此: $\ln \dfrac{1-x}{1-\sqrt{x}}\sim \sqrt{x}$
 \end{solution}
-\myspace{1}
 
-2. 设 $\alpha_{1}=x(\cos\sqrt{x}-1),\alpha_{2}=\sqrt{x}\ln(1+\sqrt[3]{x}),\alpha_{3}=\sqrt[3]{x+1}-1$,当 $x\to 0^{+}$时,以上 $3$ 个无穷小量从低阶到高阶的排序为:
+\begin{example}[][Exam: 27.3.12]
+	设 $\alpha_{1}=x(\cos\sqrt{x}-1),\alpha_{2}=\sqrt{x}\ln(1+\sqrt[3]{x}),\alpha_{3}=\sqrt[3]{x+1}-1$,当 $x\to 0^{+}$时,以上 $3$ 个无穷小量从低阶到高阶的排序为:
 \begin{itemize}
 	\item A. $\alpha_{1},\alpha_{2},\alpha_{3}$
-	\item \hl{\textbf{B}}. $\alpha_{2},\alpha_{3},\alpha_{1}$
+	\item B. $\alpha_{2},\alpha_{3},\alpha_{1}$
 	\item C. $\alpha_{2},\alpha_{1},\alpha_{3}$
 	\item D. $\alpha_{3},\alpha_{2},\alpha_{1}$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	$$\begin{cases}
@@ -731,18 +804,20 @@ $$
 
 	因此: $\alpha_{2} < \alpha_{3} < \alpha_{1}$
 \end{solution}
+
 \myspace{1}
+\textcolor{cyan}{\textbf{January 21}}
 
-\hl{\textbf{\textit{January 21}}}
-
-1. 函数 $f(x)=\dfrac{(e^{\frac{1}{x}}+e)\tan x}{x(e^{\frac{1}{x}}-e)}$ 在 $[-\pi,\pi]$上的第一类间断点是:
+\begin{example}[][Exam: 27.3.13]
+	函数 $f(x)=\dfrac{(e^{\frac{1}{x}}+e)\tan x}{x(e^{\frac{1}{x}}-e)}$ 在 $[-\pi,\pi]$上的第一类间断点是:
 \begin{itemize}
-	\item \hl{\textbf{A}}. $0$
+	\item A. $0$
 	\item B. $1$
 	\item C. $-\dfrac{\pi}{2}$
 	\item D. $\dfrac{\pi}{2}$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	$f(x)$ 在 $[-\pi,\pi]$ 上无定义的点有 $x=0, x=1, x=\pm\dfrac{\pi}{2}$
@@ -756,16 +831,17 @@ $$
 
 	综上所述, $x=0$ 是 $f(x)$ 的跳跃间断点, 是第一类间断点
 \end{solution}
-\myspace{1}
 
-2. 设函数 $f(x)=\dfrac{\ln|x|}{|x-1|}\sin x$,则$f(x)$ 有
+\begin{example}[][Exam: 27.3.14]
+	设函数 $f(x)=\dfrac{\ln|x|}{|x-1|}\sin x$,则$f(x)$ 有
 \begin{itemize}
-	\item \hl{\textbf{A}}. $1$ 个可去间断点,$1$ 个跳跃间断点
+	\item A. $1$ 个可去间断点,$1$ 个跳跃间断点
 	\item B. $1$ 个可去间断点,$1$ 个无穷间断点
 	\item C. $2$ 个跳跃间断点
 	\item D. $2$ 个无穷间断点
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	$f(x)$ 在定义域上无定义的点有 $x=0, x=1$
@@ -776,19 +852,21 @@ $$
 
 	综上所述, $f(x)$ 有 $1$ 个可去间断点, $1$ 个跳跃间断点
 \end{solution}
-\myspace{1}
+
 
 \section{Week \Rmnum{4}}
-\hl{\textbf{\textit{January 22}}}
+\textcolor{purplea}{\textbf{January 22}}
 
-1. 函数 $f(x)=\dfrac{x^{2}-x}{x^{2}-1}\sqrt{1+\dfrac{1}{x^{2}}}$ 的无穷间断点的个数为:
+\begin{example}[][Exam: 27.4.1]
+	函数 $f(x)=\dfrac{x^{2}-x}{x^{2}-1}\sqrt{1+\dfrac{1}{x^{2}}}$ 的无穷间断点的个数为:
 \begin{itemize}
 	\item A. $0$
-	\item \hl{\textbf{B}}. $1$
+	\item B. $1$
 	\item C. $2$
 	\item D. $3$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	$f(x)$ 在定义域上无定义的点有 $x=0, x=\pm 1$
@@ -800,16 +878,17 @@ $$
 
 	综上所述, $f(x)$ 有 $1$ 个可去间断点, $1$ 个跳跃间断点, $1$ 个无穷间断点
 \end{solution}
-\myspace{1}
 
-2. 函数 $f(x)=\dfrac{|x|^{x}-1}{x(x+1)\ln|x|}$ 的可去间断点的个数为:
+\begin{example}[][Exam: 27.4.2]
+	函数 $f(x)=\dfrac{|x|^{x}-1}{x(x+1)\ln|x|}$ 的可去间断点的个数为:
 \begin{itemize}
 	\item A. $0$
 	\item B. $1$
-	\item \hl{\textbf{C}}. $2$
+	\item C. $2$
 	\item D. $3$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	$f(x)$ 在定义域上无定义的点有 $x=0, x=\pm 1$
@@ -821,18 +900,20 @@ $$
 
 	综上所述, $f(x)$ 有 $2$ 个可去间断点, $1$ 个无穷间断点
 \end{solution}
+
 \myspace{1}
+\textcolor{purplea}{\textbf{January 23}}
 
-\hl{\textbf{\textit{January 23}}}
-
-1. 设函数 $f(x)=\lim\limits_{n\to \infty}\dfrac{1+x}{1+x^{2n}}$,讨论函数的间断点,其结论为:
+\begin{example}[][Exam: 27.4.3]
+	设函数 $f(x)=\lim\limits_{n\to \infty}\dfrac{1+x}{1+x^{2n}}$,讨论函数的间断点,其结论为:
 \begin{itemize}
 	\item A. 不存在间断点
-	\item \hl{\textbf{B}}. 存在间断点 $x=1$
+	\item B. 存在间断点 $x=1$
 	\item C. 存在间断点 $x=0$
 	\item D. 存在间断点 $x=-1$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	$$f(x) = \begin{cases}
@@ -845,16 +926,17 @@ $$
 
 	综上所述, $f(x)$ 存在唯一的跳跃间断点 $x = 1$
 \end{solution}
-\myspace{1}
 
-2. 设函数 $f(x)$ 在 $x=0$ 处连续,且 $\lim\limits_{h\to 0}\dfrac{f(h^{2})}{h^{2}}=1$,则:
+\begin{example}[][Exam: 27.4.4]
+	设函数 $f(x)$ 在 $x=0$ 处连续,且 $\lim\limits_{h\to 0}\dfrac{f(h^{2})}{h^{2}}=1$,则:
 \begin{itemize}
 	\item A. $f(0)=0$ 且 $f_{-}^{'}(0)$ 存在
 	\item B. $f(0)=1$ 且 $f_{-}^{'}(0)$ 存在
-	\item \hl{\textbf{C}}. $f(0)=0$ 且 $f_{+}^{'}(0)$ 存在
+	\item C. $f(0)=0$ 且 $f_{+}^{'}(0)$ 存在
 	\item D. $f(0)=1$ 且 $f_{+}^{'}(0)$ 存在
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	$f(x)$ 在 $x=0$ 处连续:
@@ -869,17 +951,18 @@ $$
 	综上所述，$f(0) = 0$ 且 $f'_{+}(0)$ 存在 
 \end{solution}
 \myspace{1}
+\textcolor{purplea}{\textbf{January 24}}
 
-\hl{\textbf{\textit{January 24}}}
-
-1. 设函数 $f(x)$ 在区间 $(-\delta,\delta)$内有定义,若当 $x\in(-\delta,\delta)$时,恒有$|f(x)|\leq x^{2}$,则$x=0$ 必是$f(x)$的:
+\begin{example}[][Exam: 27.4.5]
+	设函数 $f(x)$ 在区间 $(-\delta,\delta)$内有定义,若当 $x\in(-\delta,\delta)$时,恒有$|f(x)|\leq x^{2}$,则$x=0$ 必是$f(x)$的:
 \begin{itemize}
 	\item A. 间断点
 	\item B. 连续而不可导的点
-	\item \hl{\textbf{C}}. 可导的点,且 $f'(0)=0$
+	\item C. 可导的点,且 $f'(0)=0$
 	\item D. 可导的点,且 $f'(0)\neq 0$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	(1). 连续性: $f(x)$ 在 $x = 0$ 处连续
@@ -897,19 +980,20 @@ $$
 		\item $f'(0) = \lim\limits_{x\to 0} \dfrac{f(x)-f(0)}{x} = 0$
 	\end{itemize}
 \end{solution}
-\myspace{1}
 
-2. 设函数 $f(x)=\begin{cases}
-	x^{\alpha}\cos\dfrac{1}{x^{\beta}}, & x>0\\
-	0,& x\leq 0
-\end{cases}(\alpha>0,\beta>0)$,若 $f'(x)$ 在 $x=0$ 处连续,则:
-\begin{itemize}
-	\item \hl{\textbf{A}}. $\alpha-\beta>1$
-	\item B. $0<\alpha-\beta\leq 1$
-	\item C. $\alpha-\beta>2$
-	\item D. $0<\alpha-\beta\leq 2$
-\end{itemize}
-\myspace{1}
+\begin{example}[][Exam: 27.4.6]
+	设函数 $f(x)=\begin{cases}
+		x^{\alpha}\cos\dfrac{1}{x^{\beta}}, & x>0\\
+		0,& x\leq 0
+	\end{cases}(\alpha>0,\beta>0)$,若 $f'(x)$ 在 $x=0$ 处连续,则:
+	\begin{itemize}
+		\item A. $\alpha-\beta>1$
+		\item B. $0<\alpha-\beta\leq 1$
+		\item C. $\alpha-\beta>2$
+		\item D. $0<\alpha-\beta\leq 2$
+	\end{itemize}
+\end{example}
+
 \begin{solution}
 
 	$f(x)$ 在 $x = 0$ 处连续, $\alpha > 0$:
@@ -924,11 +1008,13 @@ $$
 	$f'(x)$ 在 $x = 0$ 处连续 $\Rightarrow \begin{cases} \alpha - 1 >0\\ \alpha - \beta - 1 > 0\end{cases}\Rightarrow \alpha - \beta > 1$
 \end{solution}
 \myspace{1}
-
-\hl{\textbf{\textit{January 25}}}
-
-1. 曲线 $x+y+e^{2xy}=0$ 在点 $(0,-1)$ 处的切线方程
 \myspace{1}
+\textcolor{purplea}{\textbf{January 25}}
+
+\begin{example}[][Exam: 27.4.7]
+	曲线 $x+y+e^{2xy}=0$ 在点 $(0,-1)$ 处的切线方程
+\end{example}
+
 \begin{solution}
 
 	设 $\begin{cases}
@@ -941,14 +1027,13 @@ $$
 
 	综上所述, $(0,-1)$ 处的切线方程为: $x - y - 1 = 0$
 \end{solution}
-\myspace{1}
 
-2.
+\begin{example}[][Exam: 27.4.8]
+	(1). 设函数 $u(x),v(x)$ 可导,利用导数定义证明:$[u(x)v(x)]'=u'(x)v(x)+u(x)v'(x)$
 
-(1). 设函数 $u(x),v(x)$ 可导,利用导数定义证明:$[u(x)v(x)]'=u'(x)v(x)+u(x)v'(x)$
+	(2). 设函数$u_{1}(x),u_{2}(x),\cdots,u_{n}(x)$可导,$f(x)=u_{1}(x)u_{2}(x)\cdots u_{n}(x)$,写出$f(x)$ 的求导公式
+\end{example}
 
-(2). 设函数$u_{1}(x),u_{2}(x),\cdots,u_{n}(x)$可导,$f(x)=u_{1}(x)u_{2}(x)\cdots u_{n}(x)$,写出$f(x)$ 的求导公式
-\myspace{1}
 \begin{solution}
 
 	(1). 导数定义: $f(x) = u(x)v(x)$
@@ -962,14 +1047,16 @@ $$
 
 	(2). $f'(x) = \sum\limits_{i=1}^{n}u'_{i}(x)\prod\limits_{\substack{1\leq j\leq n\\ i\neq j }}u_{j}$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{January 26}}}
-
-1. 设函数 $f(x)=\begin{cases}
-	\ln\sqrt{x},x\geq 1\\2x-1,x<1
-\end{cases}$,$y=f(f(x))$,则 $\dfrac{dy}{dx}\big|_{x=e}$
 \myspace{1}
+\textcolor{purplea}{\textbf{January 26}}
+
+\begin{example}[][Exam: 27.4.9]
+	设函数 $f(x)=\begin{cases}
+		\ln\sqrt{x},x\geq 1\\2x-1,x<1
+	\end{cases}$,$y=f(f(x))$,则 $\dfrac{dy}{dx}\big|_{x=e}$
+\end{example}
+
 \begin{solution}
 \begin{anymark}[方法一]
 	$$f(f(x)) = 
@@ -985,10 +1072,11 @@ $$
 \end{anymark}
 	综上所述, $\dfrac{dy}{dx}\big|_{x=e} = \dfrac{1}{e}$
 \end{solution}
-\myspace{1}
 
-2. 设 $y=y(x)$ 是由方程 $xy+e^{y}=x+1$确定的隐函数,则 $\dfrac{d^{2}y}{dx^{2}}\big|_{x=0}$
-\myspace{1}
+\begin{example}[][Exam: 27.4.10]
+	设 $y=y(x)$ 是由方程 $xy+e^{y}=x+1$确定的隐函数,则 $\dfrac{d^{2}y}{dx^{2}}\big|_{x=0}$
+\end{example}
+
 \begin{solution}
 
 	令 $F(x,y) = xy+e^{y}-x-1 = 0$:
@@ -1007,22 +1095,24 @@ $$
 	综上所述, $\dfrac{d^{2}y}{dx^{2}}\big|_{x=0} = -3$
 \end{solution}
 \myspace{1}
+\textcolor{purplea}{\textbf{January 27}}
 
-\hl{\textbf{\textit{January 27}}}
+\begin{example}[][Exam: 27.4.11]
+	设函数 $y=y(x)$ 由参数方程$\begin{cases}
+		x=t-\ln(1+t)\\y=t^{3}+t^{2}
+	\end{cases}$所确定,则 $\dfrac{d^{2}y}{dx^{2}}$
+\end{example}
 
-1. 设函数 $y=y(x)$ 由参数方程$\begin{cases}
-	x=t-\ln(1+t)\\y=t^{3}+t^{2}
-\end{cases}$所确定,则 $\dfrac{d^{2}y}{dx^{2}}$
-\myspace{1}
 \begin{solution}
 
 	$$\dfrac{dy}{dx} = \dfrac{dy}{dt}\dfrac{dt}{dx} = \dfrac{(3t^{2}+2t)(1+t)}{t} = (3t+2)(1+t)$$
 	$$\dfrac{d^{2}y}{dx^{2}} = \dfrac{d(\dfrac{dy}{dx})}{dt}\dfrac{dt}{dx}=\dfrac{(6t+5)(t+1)}{1+t}$$
 \end{solution}
-\myspace{1}
 
-2. 设 $y=x^{2}2^{x}$,求 $y^{(n)}$
-\myspace{1}
+\begin{example}[][Exam: 27.4.12]
+	设 $y=x^{2}2^{x}$,求 $y^{(n)}$
+\end{example}
+
 \begin{solution}
 
 	莱布尼茨求导公式: 
@@ -1034,11 +1124,13 @@ $$
 	\end{align*}
 \end{solution}
 \myspace{1}
-
-\hl{\textbf{\textit{January 28}}}
-
-1. 设 $y=\dfrac{1}{x^{2}-1}$,求 $y^{(n)}$
 \myspace{1}
+\textcolor{purplea}{\textbf{January 28}}
+
+\begin{example}[][Exam: 27.4.13]
+	设 $y=\dfrac{1}{x^{2}-1}$,求 $y^{(n)}$
+\end{example}
+
 \begin{solution}
 
 	$y = \dfrac{1}{2}\left[\dfrac{1}{x-1}-\dfrac{1}{x+1}\right]$
@@ -1053,16 +1145,17 @@ $$
 	
 	$y^{(n)}(x) = \dfrac{(-1)^{n}n!}{2}\left[\dfrac{1}{(x-1)^{n+1}}-\dfrac{1}{(x+1)^{n+1}}\right]$
 \end{solution}
-\myspace{1}
 
-2. 已知函数 $f(x)$ 具有任意阶导数,且 $f'(x)=[f(x)]^{2}$,则当 $n$ 为大于 $2$ 的正整数时,$f(x)$ 的 $n$ 阶导数 $f^{(n)}(x)$ 是:
+\begin{example}[][Exam: 27.4.14]
+	已知函数 $f(x)$ 具有任意阶导数,且 $f'(x)=[f(x)]^{2}$,则当 $n$ 为大于 $2$ 的正整数时,$f(x)$ 的 $n$ 阶导数 $f^{(n)}(x)$ 是:
 \begin{itemize}
-	\item \hl{\textbf{A}}. $n![f(x)]^{n+1}$
+	\item A. $n![f(x)]^{n+1}$
 	\item B. $n[f(x)]^{n+1}$
 	\item C. $[f(x)^{2n}]$
 	\item D. $n![f(x)]^{2n}$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	$$\begin{cases}
@@ -1075,18 +1168,20 @@ $$
 
 	综上所述, $f^{(n)}(x) = n![f(x)]^{n+1}$
 \end{solution}
+
 \myspace{1}
+\textcolor{purplea}{\textbf{January 29}}
 
-\hl{\textbf{\textit{January 29}}}
-
-1. 设 $f(x)$ 在 $(-\infty,+\infty)$ 内可导,且对任意 $x_{1},x_{2}$,当 $x_{1}>x_{2}$ 时,都有 $f(x_{1})>f(x_{2})$,则:
+\begin{example}[][Exam: 27.4.15]
+	设 $f(x)$ 在 $(-\infty,+\infty)$ 内可导,且对任意 $x_{1},x_{2}$,当 $x_{1}>x_{2}$ 时,都有 $f(x_{1})>f(x_{2})$,则:
 \begin{itemize}
 	\item A. 对任意 $x$,$f'(x)>0$
 	\item B. 对任意 $x$,$f'(-x)\leq 0$
 	\item C. 函数 $f(-x)$ 单调增加
-	\item \hl{\textbf{D}}. 函数 $-f(-x)$ 单调增加
+	\item D. 函数 $-f(-x)$ 单调增加
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	$f'(x)\geq 0$
@@ -1097,16 +1192,17 @@ $$
 
 	综上所述: $f(-x)$ 单调递减, $-f(-x)$ 单调递增
 \end{solution}
-\myspace{1}
 
-2. 设 $f(x),g(x)$是恒大于零的可导函数,且 $f'(x)g(x)-f(x)g'(x)<0$,当 $a<x<b$ 时,有:
+\begin{example}[][Exam: 27.4.16]
+	设 $f(x),g(x)$是恒大于零的可导函数,且 $f'(x)g(x)-f(x)g'(x)<0$,当 $a<x<b$ 时,有:
 \begin{itemize}
-	\item \hl{\textbf{A}}. $f(x)g(b)>f(b)g(x)$
+	\item A. $f(x)g(b)>f(b)g(x)$
 	\item B. $f(x)g(a)>f(a)g(x)$
 	\item C. $f(x)g(x)>f(b)g(b)$
 	\item D. $f(x)g(x)>f(a)g(a)$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	构造辅助函数: $F(x) = \dfrac{f(x)}{g(x)}, x\in (a,b), F'(x) = \dfrac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^{2}} < 0$
@@ -1119,16 +1215,18 @@ $$
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{January 30}}}
+\textcolor{purplea}{\textbf{January 30}}
 
-1. 设 $\lim\limits_{x\to a}\dfrac{f(x)-f(a)}{(x-a)^{n}}=-1$,其中 $n$ 为 大于 $1$ 的整数,则在点 $x=a$ 处:
+\begin{example}[][Exam: 27.4.17]
+	设 $\lim\limits_{x\to a}\dfrac{f(x)-f(a)}{(x-a)^{n}}=-1$,其中 $n$ 为 大于 $1$ 的整数,则在点 $x=a$ 处:
 \begin{itemize}
 	\item A. $f(x)$ 的导数存在,且 $f'(a)\neq 0$
 	\item B. $f(x)$ 取得极大值
 	\item C. $f(x)$ 取得极小值
-	\item \hl{\textbf{D}}. $f(x)$ 是否取得极值与 $n$ 的取值有关
+	\item D. $f(x)$ 是否取得极值与 $n$ 的取值有关
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	$$\begin{cases}
@@ -1142,16 +1240,17 @@ $$
 
 	综上所述, $f(x)$ 是否取极值点与 $n$ 的取值有关
 \end{solution}
-\myspace{1}
 
-2. 设 $f(x)$ 的导数在 $x=a$处连续,又 $\lim\limits_{x\to a}\dfrac{f'(x)}{x-a}=-1$,则:
+\begin{example}[][Exam: 27.4.18]
+	设 $f(x)$ 的导数在 $x=a$处连续,又 $\lim\limits_{x\to a}\dfrac{f'(x)}{x-a}=-1$,则:
 \begin{itemize}
 	\item A. $x=a$ 是 $f(x)$的极小值点
-	\item \hl{\textbf{B}}. $x=a$ 是 $f(x)$的极大值点
+	\item B. $x=a$ 是 $f(x)$的极大值点
 	\item C. $(a,f(a))$ 是曲线 $y=f(x)$ 的拐点
 	\item D. $x=a$ 不是 $f(x)$ 的极值点,$(a,f(a))$也不是曲线 $y=f(x)$ 的拐点
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	$$\begin{cases}
@@ -1162,12 +1261,14 @@ $$
 
 	综上所述, $x = a$ 是 $f(x)$ 的极大值点, $(a,f(a))$ 不是曲线 $f(x)$ 的拐点.
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{January 31}}}
-
-1. 曲线 $y=(x-5)x^{\frac{2}{3}}$的拐点坐标为:
 \myspace{1}
+\textcolor{purplea}{\textbf{January 31}}
+
+\begin{example}[][Exam: 27.4.19]
+	曲线 $y=(x-5)x^{\frac{2}{3}}$的拐点坐标为:
+\end{example}
+
 \begin{solution}
 
 	$$\begin{cases}
@@ -1177,16 +1278,17 @@ $$
 
 	令 $y''(x) = 0\Rightarrow x =-1$, 因此拐点坐标 $(-1,-6)$
 \end{solution}
-\myspace{1}
 
-2. 已知函数 $y=f(x)$ 对一切 $x$ 满足 $xf''(x)+3x[f'(x)]^{2}=1-e^{-x}$,若 $f'(x_{0})=0(x_{0}\neq 0)$,则:
+\begin{example}[][Exam: 27.4.20]
+	已知函数 $y=f(x)$ 对一切 $x$ 满足 $xf''(x)+3x[f'(x)]^{2}=1-e^{-x}$,若 $f'(x_{0})=0(x_{0}\neq 0)$,则:
 \begin{itemize}
 	\item A. $f(x_{0})$ 是 $f(x)$ 的极大值
-	\item \hl{\textbf{B}}. $f(x_{0})$ 是 $f(x)$ 的极小值
+	\item B. $f(x_{0})$ 是 $f(x)$ 的极小值
 	\item C. $(x_{0},f(x_{0}))$ 是曲线 $y=f(x)$ 的拐点
 	\item D. $f(x_{0})$ 不是 $f(x)$ 的极值,$(x_{0},f(x_{0}))$ 也不是曲线 $y=f(x)$ 的拐点
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	$f''(x) = \dfrac{1-e^{-x}}{x} -3[f'(x)]^{2}$
@@ -1195,4 +1297,3 @@ $$
 
 	综上所述, $x = x_{0}$ 是 $f(x)$ 的极小值点, 点 $(x_{0},f(x_{0}))$ 不是 $f(x)$ 的拐点.
 \end{solution}
-\myspace{1}

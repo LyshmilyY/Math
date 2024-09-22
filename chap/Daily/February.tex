@@ -1,28 +1,28 @@
 \chapterimage{chap28.jpg}
 \chapter{February}
 \section{Week \Rmnum{1}}
-\hl{\textbf{\textit{February 1}}}
+\textcolor{orange}{\textbf{February 1}}
 
-1. 设函数 $f(x)$ 满足关系式 $f''(x)+[f'(x)]^{2}=x$ 且 $f'(0)=0$,则:
+\begin{example}[][Exam: 28.1.1]
+	设函数 $f(x)$ 满足关系式 $f''(x)+[f'(x)]^{2}=x$ 且 $f'(0)=0$,则:
 \begin{itemize}
 	\item A. $f(0)$ 是 $f(x)$ 的极大值
 	\item B. $f(0)$ 是 $f(x)$ 的极小值
-	\item \hl{\textbf{C}}. $(0,f(0))$ 是曲线 $y=f(x)$ 的拐点
+	\item C. $(0,f(0))$ 是曲线 $y=f(x)$ 的拐点
 	\item D. $f(0)$ 不是 $f(x)$ 的极值,$(0,f(0))$ 也不是曲线 $y=f(x)$ 的拐点
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
-	我们有: $f''(x) = x - [f'(x)]^{2}, f'(0) = 0\Rightarrow f''(0) = 0$
+	$$f''(x) = x - [f'(x)]^{2}, f'(0) = 0\Rightarrow f''(0) = 0$$
 	
-	我们求 $f(x)$ 的三阶导: $f^{(3)}(x) = 1 - 2f'(x)f''(x), f^{(3)}(0) = 1\neq 0$
+	$$f^{(3)}(x) = 1 - 2f'(x)f''(x), f^{(3)}(0) = 1\neq 0$$
 
-	综上所述, 我们得到: $x=0$ 不是 $f(x)$ 的极值点, 点 $(0,f(0))$ 是 曲线 $f(x)$ 的拐点. 
+	综上所述: $x=0$ 不是 $f(x)$ 的极值点, 点 $(0,f(0))$ 是 曲线 $f(x)$ 的拐点
 \end{solution}
-\myspace{1}
-
-2. 设函数 $f(x)$ 在 $(-\infty,+\infty)$ 上连续,其导函数图形如图所示,则:
-
+\begin{example}[][Exam: 28.1.2]
+	设函数 $f(x)$ 在 $(-\infty,+\infty)$ 上连续,其导函数图形如图所示,则:
 \begin{tikzpicture}
     \draw[->] (-2,0) -- (3,0) node[right] {$x$};
     \draw[->] (0,-2) -- (0,2) node[above] {$y$};
@@ -33,14 +33,15 @@
 \end{tikzpicture}
 \begin{itemize}
 	\item A. 函数 $f(x)$ 有 $2$ 个极值点,曲线 $y=f(x)$ 有 $2$ 个拐点
-	\item \hl{\textbf{B}}. 函数 $f(x)$ 有 $2$ 个极值点,曲线 $y=f(x)$ 有 $3$ 个拐点
+	\item B. 函数 $f(x)$ 有 $2$ 个极值点,曲线 $y=f(x)$ 有 $3$ 个拐点
 	\item C. 函数 $f(x)$ 有 $3$ 个极值点,曲线 $y=f(x)$ 有 $1$ 个拐点
 	\item D. 函数 $f(x)$ 有 $3$ 个极值点,曲线 $y=f(x)$ 有 $2$ 个拐点
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
-	$f'(x)$ 在 $(-\infty,+\infty)$ 上有 $3$ 个零点 $x_{1},x_{2},x_{3}$,我们有:
+	$f'(x)$ 在 $(-\infty,+\infty)$ 上有 $3$ 个零点 $x_{1},x_{2},x_{3}$
 	$$\begin{cases}
 	x\in(-\infty,x_{1})\cup (x_{2},+\infty), f'(x) > 0\\
 	x\in(x_{1},x_{2}), f'(x) < 0
@@ -50,20 +51,22 @@
 	x = x_{2}\text{是} f(x) \text{极小值点}
 	\end{cases}$$
 
-	我们来观察到函数 $f'(x)$ 的单调性, $f'(x)$ 在 $(-\infty,a)$ 上单调减少;$(a,b)$ 上单调增加, $(b,c)$ 上单调减少; $(c,+\infty)$ 上单调增加;
+	观察函数 $f'(x)$ 的单调性, $f'(x)$ 在 $(-\infty,a)$ 上单调减少;$(a,b)$ 上单调增加, $(b,c)$ 上单调减少; $(c,+\infty)$ 上单调增加;
 	$f(x)$ 有拐点 $(a,f(a))$ 和 $(b,f(b))$以及 $(c,f(c))$
 
 	综上所述, $f(x)$ 有 $2$ 个极值点和 $3$ 个拐点
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{February 2}}}
+\textcolor{orange}{\textbf{February 2}}
 
-1. 曲线 $y=x\ln\left( e+\dfrac{1}{x}\right)(x>0) $ 的渐近线方程为:
-\myspace{1}
+\begin{example}[][Exam: 28.1.3]
+	曲线 $y=x\ln\left( e+\dfrac{1}{x}\right)(x>0) $ 的渐近线方程为:
+\end{example}
+
 \begin{solution}
 
-	(i). 铅锤渐近线: $x\to 0, f(x)\to 0$, 无铅锤渐近线
+	(i). 铅垂渐近线: $x\to 0, f(x)\to 0$, 无铅垂渐近线
 
 	(ii). 水平渐近线和斜渐进线: $x\to +\infty, f(x)\to +\infty$, 无水平渐近线
 
@@ -74,16 +77,17 @@
 
 	综上所述, $f(x)$ 有且仅有一条斜渐近线: $x-y+\dfrac{1}{e} = 0$
 \end{solution}
-\myspace{1}
 
-2. 曲线 $y=\dfrac{x^{2}+x}{x^{2}-1}$ 渐近线的条数为:
+\begin{example}[][Exam: 28.1.4]
+	曲线 $y=\dfrac{x^{2}+x}{x^{2}-1}$ 渐近线的条数为:
 \begin{itemize}
 	\item A. $0$
 	\item B. $1$
-	\item \hl{\textbf{C}}. $2$
+	\item C. $2$
 	\item D. $3$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	令 $f(x) = \dfrac{x(x+1)}{(x+1)(x-1)}=\dfrac{x}{x-1},x\neq \pm 1$, 我们有: 
@@ -93,17 +97,18 @@
 	x\to 1^{-}, f(x)\to -\infty
 	\end{cases}$
 
-	(i). 铅锤渐近线: $x = 1$
+	(i). 铅垂渐近线: $x = 1$
 
 	(ii). 水平渐近线和斜渐近线: $x\to \infty, f(x)\to 1$, 无斜渐近线
 
-	综上所述, $f(x)$ 有且仅有两条渐近线, $1$ 条铅锤渐近线, $1$ 条水平渐近线
+	综上所述, $f(x)$ 有且仅有 $2$ 条渐近线, $1$ 条铅垂渐近线, $1$ 条水平渐近线
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{February 3}}}
+\textcolor{orange}{\textbf{February 3}}
 
-1. 设函数 $y=\dfrac{x^{3}+4}{x^{2}}$,求
+\begin{example}[][Exam: 28.1.5]
+	设函数 $y=\dfrac{x^{3}+4}{x^{2}}$,求
 
 (1). 函数的增减区间及极值
 
@@ -112,10 +117,11 @@
 (3). 渐近线
 
 (4). 作出其图形
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
-	我们令: $f(x) = \dfrac{x^{3}+4}{x^{2}} = x+\dfrac{4}{x^{2}},x\neq 0$
+	令 $f(x) = \dfrac{x^{3}+4}{x^{2}} = x+\dfrac{4}{x^{2}},x\neq 0$
 
 	(1). $f'(x) = 1-\dfrac{8}{x^{3}}\Rightarrow 
 	\begin{cases}
@@ -129,7 +135,7 @@
 
 	(3). 
 	
-	(i). 铅锤渐近线: $x\to 0, f(x)\to +\infty$, $f(x)$ 有铅锤渐近线 $x=0$
+	(i). 铅垂渐近线: $x\to 0, f(x)\to +\infty$, $f(x)$ 有铅垂渐近线 $x=0$
 
 	(ii). 水平渐近线和斜渐近线: $x\to \infty, f(x)\to \infty$, 无水平渐近线
 	$$\begin{cases}
@@ -137,11 +143,11 @@
 	b = \lim\limits_{x\to \infty} f(x)-ax = 0
 	\end{cases}\Rightarrow y = x$$
 
-	综上所述, $f(x)$ 有 $2$ 条渐近线, $1$ 条铅锤渐近线 $x=0$, 一条斜渐近线 $y = x$
+	综上所述, $f(x)$ 有 $2$ 条渐近线, $1$ 条铅垂渐近线 $x=0$, 一条斜渐近线 $y = x$
 
 	(4). 如下图所示:
 
-	\begin{tikzpicture}
+	\begin{tikzpicture}[scale=0.6]
 		\draw[->] (-5,0) -- (5,0) node[right] {$x$};
 		\draw[->] (0,-5) -- (0,5) node[above] {$y$};
 		\draw[thick, domain=-3:-1, smooth, variable=\x] plot ({\x},{(\x+4/(\x*\x))});
@@ -150,16 +156,17 @@
 		\node at (-0.2,-0.2) {O};
 	\end{tikzpicture}
 \end{solution}
-\myspace{1}
 
-2. 在区间 $(-\infty,+\infty)$ 内,方程 $|x|^{\frac{1}{4}}+|x|^{\frac{1}{2}}-\cos x=0$: 
+\begin{example}[][Exam: 28.1.6]
+	在区间 $(-\infty,+\infty)$ 内,方程 $|x|^{\frac{1}{4}}+|x|^{\frac{1}{2}}-\cos x=0$: 
 \begin{itemize}
 	\item A. 无实根
 	\item B. 有且仅有一个实根
-	\item \hl{\textbf{C}}. 有且仅有两个实根
+	\item C. 有且仅有两个实根
 	\item D. 有无穷多个实根
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	令 $f(x) = |x|^{\frac{1}{4}}+|x|^{\frac{1}{2}}-\cos x$, $f(x)$ 是偶函数, 取 $x > 0$, $f(x) = x^{\frac{1}{4}}+x^{\frac{1}{2}}-\cos x$
@@ -175,21 +182,23 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{February 4}}}
+\textcolor{orange}{\textbf{February 4}}
 
-1. 函数 $f(x)=\ln|(x-1)(x-2)(x-3)|$ 的驻点个数为:
+\begin{example}[][Exam: 28.1.7]
+	函数 $f(x)=\ln|(x-1)(x-2)(x-3)|$ 的驻点个数为:
 \begin{itemize}
 	\item A. $0$
 	\item B. $1$
-	\item \hl{\textbf{C}}. $2$
+	\item C. $2$
 	\item D. $3$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	令 $g(x) =|(x-1)(x-2)(x-3)|$, $f(x)$ 和 $g(x)$ 同单调性,令 $h(x) = (x-1)(x-2)(x-3)$
 
-	由罗尔定理得到: $\exists x_{1}\in(1,2), x_{2}\in (2,3),\ s.t.\ f'(x_{1}) =f'(x_{2}) =0$, 我们得到:
+	罗尔定理: $\exists x_{1}\in(1,2), x_{2}\in (2,3),\ s.t.\ f'(x_{1}) =f'(x_{2}) =0$
 
 	$$\begin{cases}
 	x\in(-\infty,x_{1]})\cup (x_{2},+\infty), f'(x) > 0\\
@@ -199,39 +208,42 @@
 
 	$f(x)$ 的驻点只有$2$个驻点, 分别是 $x=x_{1}$ 和 $x=x_{2}$ 
 \end{solution}
-\myspace{1}
 
-2. 设 $f(x)=x^{2}(1-x)^{2}$,则方程 $f''(x)=0$在 $(0,1)$ 上:
+\begin{example}[][Exam: 28.1.8]
+	设 $f(x)=x^{2}(1-x)^{2}$,则方程 $f''(x)=0$在 $(0,1)$ 上:
 \begin{itemize}
 	\item A. 无实根
 	\item B. 有且仅有一个实根
-	\item \hl{\textbf{C}}. 有且仅有两个实根
+	\item C. 有且仅有两个实根
 	\item D. 有且仅有三个实根
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
-	我们有: $f'(x) = 2x(x-1)^{2}+2x^{2}(x-1) = 2x(x-1)(3x-1)$ 且 $f'(0) = f'(\dfrac{1}{3}) = f(1) = 0$
+	$f'(x) = 2x(x-1)^{2}+2x^{2}(x-1) = 2x(x-1)(3x-1)$ 且 $f'(0) = f'(\dfrac{1}{3}) = f(1) = 0$
 
-	由罗尔定理得到: $\exists x_{1}\in (0,\dfrac{1}{3}), x_{1}\in(\dfrac{1}{3}),\ s.t.\ f''(x_{i}) = 0(i = 1,2)$
+	罗尔定理: $\exists x_{1}\in (0,\dfrac{1}{3}), x_{1}\in(\dfrac{1}{3}),\ s.t.\ f''(x_{i}) = 0(i = 1,2)$
 
-	我们得到: $f''(x)$ 是一个二次多项式, 至多存在 $2$ 个实数根, 综上, $f''(x)$ 有且仅有 $2$ 个实数根.
+	$f''(x)$ 是一个二次多项式, 至多存在 $2$ 个实数根, 综上, $f''(x)$ 有且仅有 $2$ 个实数根.
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{February 5}}}
+\textcolor{orange}{\textbf{February 5}}
 
-1. 设常数 $k>0$,设函数 $f(x)=\ln x-\dfrac{x}{e}+k$ 在 $(0,+\infty)$ 内零点个数为:
+\begin{example}[][Exam: 28.1.9]
+	设常数 $k>0$,设函数 $f(x)=\ln x-\dfrac{x}{e}+k$ 在 $(0,+\infty)$ 内零点个数为:
 \begin{itemize}
 	\item A. $3$
-	\item \hl{\textbf{B}}. $2$
+	\item B. $2$
 	\item C. $1$
 	\item D. $0$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
-	我们得到: $f'(x) = \dfrac{1}{x}-\dfrac{1}{e} = \dfrac{e-x}{ex}, x > 0$
+	$$f'(x) = \dfrac{1}{x}-\dfrac{1}{e} = \dfrac{e-x}{ex}, x > 0$$
 
 	当 $x\in(0,e)$, $f'(x) > 0$; 当 $x\in(e,+\infty)$, $f'(x) < 0$; $f(x)$ 在 $x = e$ 处取得最大值 $f(e) = k > 0$
 
@@ -239,45 +251,51 @@
 		x\to 0, f(x)\to -\infty\\
 		x\to +\infty, f(x)\to -\infty
 	\end{cases}$$
-	根据零点定理,$\exists x_{1}\in(0,e),x_{2}\in(e,+\infty),\ s.t.\ f(x_{i}) = 0(i = 1,2)$
 
-	综上所述, $f(x)$ 在 $(0,+\infty)$ 内有且仅有 $2$ 个零点.
+	零点定理: $\exists x_{1}\in(0,e),x_{2}\in(e,+\infty),\ s.t.\ f(x_{i}) = 0(i = 1,2)$
+
+	综上所述, $f(x)$ 在 $(0,+\infty)$ 内有且仅有 $2$ 个零点
 \end{solution}
-\myspace{1}
 
-2. 证明:当 $x>0$ 时,有不等式 $\ln(1+\dfrac{1}{x})>\dfrac{1}{1+x}$
-\myspace{1}
+\begin{example}[][Exam: 28.1.10]
+	证明:当 $x>0$ 时,有不等式 $\ln(1+\dfrac{1}{x})>\dfrac{1}{1+x}$
+\end{example}
+
 \begin{solution}
 	
 	构造辅助函数: $f(x) = \ln x, \ln(1+\dfrac{1}{x}) = \ln(1+x) -\ln x = f(x+1)-f(x)$
 
-	我们利用拉格朗日中值定理: $$f(x+1)-f(x) = \dfrac{1}{\xi}, \xi\in(x,x+1)\Rightarrow \dfrac{1}{x+1}< f(x+1)-f(x) < \dfrac{1}{x}$$
+	拉格朗日中值定理: $$f(x+1)-f(x) = \dfrac{1}{\xi}, \xi\in(x,x+1)\Rightarrow \dfrac{1}{x+1}< f(x+1)-f(x) < \dfrac{1}{x}$$
 
 	综上所述, 我们有: $\dfrac{1}{1+x} < \ln(1+\dfrac{1}{x}) < \dfrac{1}{x}$
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{February 6}}}
+\textcolor{orange}{\textbf{February 6}}
 
-1. 证明:当 $x>0$ 时,有不等式 $\arctan x+\dfrac{1}{x}>\dfrac{\pi}{2}$
-\myspace{1}
+\begin{example}[][Exam: 28.1.11]
+	证明:当 $x>0$ 时,有不等式 $\arctan x+\dfrac{1}{x}>\dfrac{\pi}{2}$
+\end{example}
 \begin{solution}
 
-	构造辅助函数: $f(x) = \arctan x +\dfrac{1}{x}, f'(x) = \dfrac{1}{1+x^{2}}-\dfrac{1}{x^{2}} = -\dfrac{1}{(1+x^{2})x^{2}} < 0, x>0$
+	构造辅助函数: 
+	$$f(x) = \arctan x +\dfrac{1}{x}, f'(x) = \dfrac{1}{1+x^{2}}-\dfrac{1}{x^{2}} = -\dfrac{1}{(1+x^{2})x^{2}} < 0, x>0$$
 
 	$f(x)$ 在 $(0,+\infty)$ 上单调递减, $f(x) > \lim\limits_{x\to +\infty}f(x)$
 
-	我们有: $\lim\limits_{x\to +\infty}f(x) = \lim\limits_{x\to +\infty}(\arctan x +\dfrac{1}{x}) =\dfrac{\pi}{2}$
+	$$\lim\limits_{x\to +\infty}f(x) = \lim\limits_{x\to +\infty}(\arctan x +\dfrac{1}{x}) =\dfrac{\pi}{2}$$
 
 	综上所述, $f(x) > \dfrac{\pi}{2}$
 \end{solution}
-\myspace{1}
 
-2. 设 $p,q$ 是大于 $1$ 的常数,并且 $\dfrac{1}{p}+\dfrac{1}{q}=1$,证明:对于任意的 $x>0$,有 $\dfrac{1}{p}x^{p}+\dfrac{1}{q}\geq x$
-\myspace{1}
+\begin{example}[][Exam: 28.1.12]
+	设 $p,q$ 是大于 $1$ 的常数,并且 $\dfrac{1}{p}+\dfrac{1}{q}=1$,
+	证明:对于任意的 $x>0$,有 $\dfrac{1}{p}x^{p}+\dfrac{1}{q}\geq x$
+\end{example}
+
 \begin{solution}
 
-	原不等式等价于: $\forall x > 0, \dfrac{1}{p}x^{p} -x +1-\dfrac{1}{p} \geq 0$
+	$\forall x > 0, \dfrac{1}{p}x^{p} -x +1-\dfrac{1}{p} \geq 0$
 	
 	构造辅助函数: $f(x) = \dfrac{1}{p}(x^{p}-1) - (x-1), x > 0$
 
@@ -288,27 +306,31 @@
 	\begin{cases}
 		x\in (-\infty,1), f'(x) < 0\\
 		x\in(1,+\infty), f'(x) > 0
-	\end{cases}\Rightarrow f(x)\text{在} x=1\text{取最小值} f(x)_{\min} = f(1) =0$$
+	\end{cases}$$
+	$$f(x)\text{在} x=1\text{取最小值} f(x)_{\min} = f(1) =0$$
 
 	综上所述, $f(x)\geq 0\Rightarrow \forall x > 0, \dfrac{1}{p}x^{p}+\dfrac{1}{q}\geq x$
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{February 7}}}
+\textcolor{orange}{\textbf{February 7}}
 
-1. 设函数 $f(x)$ 在 $[0,3]$ 上连续,在 $(0,3)$内可导,且 $f(0)+f(1)+f(2)=3,f(3)=1$,试证明:必存在$\xi\in(0,3),s.t.\ f'(\xi)=0$
-\myspace{1}
+\begin{example}[][Exam: 28.1.13]
+	设函数 $f(x)$ 在 $[0,3]$ 上连续,在 $(0,3)$内可导,且 $f(0)+f(1)+f(2)=3,f(3)=1$,试证明:必存在$\xi\in(0,3),s.t.\ f'(\xi)=0$
+\end{example}
+ 
 \begin{solution}
 
-	我们不妨设 $f(x)$ 在 $[0,2]$ 上最大值为 $M$, 最小值为 $m$, 由介值定理:
+	不妨设 $f(x)$ 在 $[0,2]$ 上最大值为 $M$, 最小值为 $m$, 介值定理:
 	$$\begin{cases}
 		m\leq f(0)\leq M\\
 		m\leq f(1)\leq M\\
 		m\leq f(2)\leq M
-	\end{cases}\Rightarrow m\leq \dfrac{f(0)+f(1)+f(2)}{3}\leq M
+	\end{cases}$$
+	$$m\leq \dfrac{f(0)+f(1)+f(2)}{3}\leq M
 	\Rightarrow \exists \eta\in(0,2),\ s.t.\ f(\eta) = \dfrac{f(0)+f(1)+f(2)}{3}=1$$
 
-	我们利用罗尔定理:
+	罗尔定理:
 	$$\begin{cases} 
 		f(\eta) = 1,\eta\in[0,2]\\
 		f(3) =1
@@ -316,13 +338,14 @@
 
 	综上所述, 必存在$\xi\in(0,3),s.t.\ f'(\xi)=0$
 \end{solution}
-\myspace{1}
 
-2. 设 $f(x)$在区间 $[a,b]$ 上具有二阶导数,且 $f(a)=f(b)=0$,$f'(a)f'(b)>0$,试证明:存在 $\xi\in(a,b)$ 和 $\eta\in(a,b)$,$s.t.\ f(\xi)=0$ 且 $f''(\eta)=0$
-\myspace{1}
+\begin{example}[][Exam: 28.1.14]
+	设 $f(x)$在区间 $[a,b]$ 上具有二阶导数,且 $f(a)=f(b)=0$,$f'(a)f'(b)>0$,试证明:存在 $\xi\in(a,b)$ 和 $\eta\in(a,b)$,$s.t.\ f(\xi)=0$ 且 $f''(\eta)=0$
+\end{example}
+
 \begin{solution}
 
-	由极限保号性: 不妨设 $f'(a) > 0$
+	极限保号性: 不妨设 $f'(a) > 0$
 	$$\begin{cases}
 	f'(a) = \lim\limits_{x\to a} \dfrac{f(x)-f(a)}{x-a}\\
 	f'(b) = \lim\limits_{x\to a} \dfrac{f(x)-f(b)}{x-b}\\
@@ -337,9 +360,9 @@
 	f(x_{2}) > 0, x_{2}\in(b-\delta,b)
 	\end{cases}\Rightarrow f(x_{1})\cdot f(x_{2}) < 0$$
 
-	由零点定理: $\exists \xi\in(a,b),\ s.t.\ f(\xi) = 0$
+	零点定理: $\exists \xi\in(a,b),\ s.t.\ f(\xi) = 0$
 
-	由罗尔定理: $f(a) = f(\xi) =f(b) =0$
+	罗尔定理: $f(a) = f(\xi) =f(b) =0$
 	$$\begin{cases}
 	\exists x_{3}\in (a,\xi),\ s.t.\ f'(x_{3}) = 0\\
 	\exists x_{4}\in (\xi,b),\ s.t.\ f'(x_{4}) = 0
@@ -347,97 +370,104 @@
 
 	综上所述, 存在 $\xi\in(a,b)$ 和 $\eta\in(a,b)$,$s.t.\ f(\xi)=0$ 且 $f''(\eta)=0$
 \end{solution}
-\myspace{1}
 
 \section{Week \Rmnum{2}}
-\hl{\textbf{\textit{February 8}}}
+\textcolor{blue}{\textbf{February 8}}
 
-1. 设 $f(x)$ 在 $[a,b]$ 上连续,在 $(a,b)$ 内可导,且 $f(a)=f(b)=0$,试证明:
+\begin{example}[][Exam: 28.2.1]
+	设 $f(x)$ 在 $[a,b]$ 上连续,在 $(a,b)$ 内可导,且 $f(a)=f(b)=0$,试证明:
 
 (1). $\exists \xi\in(a,b),s.t.\ f'(\xi)+f(\xi)=0$
 
 (2). $\exists \eta\in(a,b),s.t.\ f'(\eta)-f(\eta)=0$
 
 (3). $\exists \zeta\in(a,b),s.t.\ f'(\zeta)+\lambda f(\zeta)=0$
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	(1). 构造辅助函数: $g(x) = e^{x}f(x), g'(x) = e^{x}\left[f'(x) + f(x)\right]$, 且 $g(a) = g(b) = 0$
 
-	由罗尔定理: $\exists \xi\in(a,b),\ s.t.\ g'(\xi) = e^{\xi}\left[f'(\xi) + f(\xi)\right] = 0\Rightarrow f'(\xi) + f(\xi) = 0$
+	罗尔定理: $\exists \xi\in(a,b),\ s.t.\ g'(\xi) = e^{\xi}\left[f'(\xi) + f(\xi)\right] = 0\Rightarrow f'(\xi) + f(\xi) = 0$
 
-	\myspace{1}
+	
 
 	(2). 构造辅助函数: $g(x) = e^{-x}f(x), g'(x) = e^{-x}\left[f'(x) - f(x)\right]$, 且 $g(a) = g(b) = 0$
 
-	由罗尔定理: $\exists \eta\in(a,b),\ s.t.\ g'(\eta) = e^{-\eta}\left[f'(\eta) - f(\eta)\right] = 0\Rightarrow f'(\eta) - f(\eta) = 0$
+	罗尔定理: $\exists \eta\in(a,b),\ s.t.\ g'(\eta) = e^{-\eta}\left[f'(\eta) - f(\eta)\right] = 0\Rightarrow f'(\eta) - f(\eta) = 0$
 
-	\myspace{1}
+	
 
 	(3). 构造辅助函数: $g(x) = e^{\lambda x}f(x), g'(x) = e^{\lambda x}\left[f'(x) + \lambda f(x)\right]$, 且 $g(a) = g(b) = 0$
 
-	由罗尔定理: $\exists \zeta\in(a,b),\ s.t.\ g'(\zeta) = e^{\lambda\zeta}\left[f'(\zeta) + \lambda f(\zeta)\right] = 0\Rightarrow f'(\zeta) + \lambda f(\zeta) = 0$
+	罗尔定理: $\exists \zeta\in(a,b),\ s.t.\ g'(\zeta) = e^{\lambda\zeta}\left[f'(\zeta) + \lambda f(\zeta)\right] = 0\Rightarrow f'(\zeta) + \lambda f(\zeta) = 0$
 \end{solution}
-\myspace{1}
 
-2. 设 $f(x)$ 在 $[0,1]$ 上连续,在 $(0,1)$ 内可导,且 $f(1)=0$,试证明:$\exists \xi\in(0,1),s.t.\ \xi f'(\xi) + f(\xi) = 0$
-\myspace{1}
+\begin{example}[][Exam: 28.2.2]
+	设 $f(x)$ 在 $[0,1]$ 上连续,在 $(0,1)$ 内可导,且 $f(1)=0$,试证明:$\exists \xi\in(0,1),s.t.\ \xi f'(\xi) + f(\xi) = 0$
+\end{example}
+
 \begin{solution}
 
 	构造辅助函数: $g(x) = xf(x), g'(x) = f(x) +xf'(x)$, 且 $g(1) = g(0) = 0$
 
-	由罗尔定理得到: $\exists \xi\in(0,1),\ s.t.\ g'(\xi) = 0\Rightarrow \xi f'(\xi) + f(\xi) = 0$
+	罗尔定理: $\exists \xi\in(0,1),\ s.t.\ g'(\xi) = 0\Rightarrow \xi f'(\xi) + f(\xi) = 0$
 
 	综上所述, $\exists \xi\in(0,1),s.t.\ \xi f'(\xi) + f(\xi) = 0$
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{February 9}}}
+\textcolor{blue}{\textbf{February 9}}
 
-1. 设函数 $f(x)$ 在闭区间 $[0,1]$ 上连续,在开区间$(0,1)$ 内可导,且$f(0)=0,f(1)=\dfrac{1}{3}$,证明:存在 $\xi\in\left(0,\dfrac{1}{2}\right),\eta\in\left( \dfrac{1}{2},1\right),s.t.\ f'(\xi)+f'(\eta)=\xi^{2}+\eta^{2}$
-\myspace{1}
+\begin{example}[][Exam: 28.2.3]
+	设函数 $f(x)$ 在闭区间 $[0,1]$ 上连续,在开区间$(0,1)$ 内可导,且$f(0)=0,f(1)=\dfrac{1}{3}$,
+	证明:存在 $\xi\in\left(0,\dfrac{1}{2}\right),\eta\in\left( \dfrac{1}{2},1\right),s.t.\ f'(\xi)+f'(\eta)=\xi^{2}+\eta^{2}$
+\end{example}
 \begin{solution}
 
 	构造辅助函数: $g(x) = f(x) - \dfrac{1}{3}x^{3}$, $g(0) = g(1) = 0$, $g'(x) =f'(x) -x^{2}$
 
-	由拉格朗日中值定理:
+	拉格朗日中值定理:
 	$$\begin{cases}
-		2\left[g(\dfrac{1}{2})-g(0)\right] = g'(\xi), \xi\in(0,\dfrac{1}{2})\\
-		2\left[g(1)-g(\dfrac{1}{2})\right] = g'(\eta), \eta\in(\dfrac{1}{2},1)\\
+		2[g(\dfrac{1}{2})-g(0)] = g'(\xi), \xi\in(0,\dfrac{1}{2})\\
+		2[g(1)-g(\dfrac{1}{2})] = g'(\eta), \eta\in(\dfrac{1}{2},1)\\
 		g(1) = g(0) = 0
 	\end{cases}\Rightarrow g'(\xi) + g'(\eta) = 0\Rightarrow f'(\xi) + f'(\eta) =\xi^{2} +\eta^{2}$$
 
 	综上所述, 存在 $\xi\in\left(0,\dfrac{1}{2}\right),\eta\in\left( \dfrac{1}{2},1\right),s.t.\ f'(\xi)+f'(\eta)=\xi^{2}+\eta^{2}$
 \end{solution}
-\myspace{1}
 
-2. 设 $f(x)$ 在区间 $[a,b]$ 上连续,在 $(a,b)$ 内可导,且 $a,b$ 同号,证明:存在$\xi,\eta\in(a,b),s.t.\ abf'(\xi)=\eta^{2}f'(\eta)$
-\myspace{1}
+\begin{example}[][Exam: 28.2.4]
+	设 $f(x)$ 在区间 $[a,b]$ 上连续,在 $(a,b)$ 内可导,且 $a,b$ 同号,证明:存在$\xi,\eta\in(a,b),s.t.\ abf'(\xi)=\eta^{2}f'(\eta)$
+\end{example}
+
 \begin{solution}
 
-	由拉格朗日中值定理:
+	拉格朗日中值定理:
 	$$\exists \xi\in (a,b),\ s.t.\ \dfrac{f(b)-f(a)}{b-a} = f'(\xi)$$
 
-	由柯西中值定理: $g(x) = \dfrac{1}{x}$
+	柯西中值定理: $g(x) = \dfrac{1}{x}$
 	$$\exists \eta\in(a,b),\ s.t.\ \dfrac{ab[f(b)-f(a)]}{a-b} = \eta^{2}f'(\eta)$$
 
-	综合上面两个式子, 得到: $abf'(\xi) = \eta^{2}f'(\eta)$
+	综上: $abf'(\xi) = \eta^{2}f'(\eta)$
 
 	综上所述, 存在$\xi,\eta\in(a,b),s.t.\ abf'(\xi)=\eta^{2}f'(\eta)$
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{February 10}}}
+\textcolor{blue}{\textbf{February 10}}
 
-1. 求下列的不定积分
+\begin{example}[][Exam: 28.2.5]
+	求下列的不定积分
 
 (1). $\int \dfrac{1}{\cos x}dx$
 
 (2). $\int \dfrac{1}{\sin x}dx$
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
-	(1). 原不定积分:
+	(1). 
 	\begin{eqnarray*}
 		I & = & \int \dfrac{\cos x}{\cos ^{2}x}dx\\
 		  & = & \int \dfrac{1}{1-\sin^{2}x}d(\sin x)\\
@@ -447,7 +477,7 @@
 		  & = & \ln \big|\sec x + \tan x\big| +C 
 	\end{eqnarray*}
 
-	(2). 原不定积分:
+	(2). 
 	\begin{eqnarray*}
 		I & = & \int \dfrac{\sin x}{\sin ^{2}x}dx\\
 		  & = & -\int \dfrac{1}{1-\cos^{2}x}d(\cos x)\\
@@ -458,17 +488,18 @@
 	\end{eqnarray*}
 
 \end{solution}
-\myspace{1}
 
-2. 求下列的不定积分
+\begin{example}[][Exam: 28.2.6]
+	求下列的不定积分
 
 (1). $\int \dfrac{x+1}{x(1+xe^{x})}dx$
 
 (2). $\int (1+\ln x)(\ln x+\ln\ln x)dx$
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
-	(1). 原不定积分:
+	(1). 
 	\begin{eqnarray*}
 		I & = & \int \dfrac{(x+1)e^{x}}{xe^{x}(1+xe^{x})}dx\\
 		  & = & \int \dfrac{1}{xe^{x}(1+xe^{x})}d(xe^{x})\\
@@ -486,7 +517,6 @@
 		g'(x) = \dfrac{1+\ln x}{x\ln x}
 	\end{cases}$$
 	
-	原不定积分:
 	\begin{eqnarray*}
 		I & = & \int f'(x)g(x)dx\\
 		  & = & f(x)g(x) - \int g'(x)f(x)dx\\
@@ -496,194 +526,268 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{February 11}}}
-
-1. 求下列的不定积分
+\textcolor{blue}{\textbf{February 11}}
+\begin{example}[][Exam: 28.2.7]
+	求下列的不定积分
 
 (1). $\int \dfrac{1+x}{1+x^{3}}dx$
 
 (2). $\int \dfrac{1-x}{1+x^{3}}dx$
-\myspace{1}
+\end{example}
 
-2. 求下列的不定积分
+\begin{example}[][Exam: 28.2.8]
+	求下列的不定积分
 
 (1). $\int \dfrac{dx}{1+x^{3}}$
 
 (2). $\int \dfrac{x}{1+x^{3}}dx$
-\myspace{1}
-\hl{\textbf{\textit{February 12}}}
-
-1. 已知 $f(x)$ 的一个原函数为 $\ln^{2}x$,求 $\int xf'(x)dx$
+\end{example}
 \myspace{1}
 
-2. 设 $f(\ln x)=\dfrac{\ln(1+x)}{x}$,求 $\int f(x)dx$
-\myspace{1}
-\hl{\textbf{\textit{February 13}}}
+\textcolor{blue}{\textbf{February 12}}
 
-1. 计算不定积分 $\int \max(1,x^{2})dx$
+\begin{example}[][Exam: 28.2.9]
+	已知 $f(x)$ 的一个原函数为 $\ln^{2}x$,求 $\int xf'(x)dx$
+\end{example}
+
+\begin{example}[][Exam: 28.2.10]
+	设 $f(\ln x)=\dfrac{\ln(1+x)}{x}$,求 $\int f(x)dx$
+\end{example}
 \myspace{1}
 
-2. 设 $M=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\dfrac{\sin x}{1+x^{2}}\cos^{4}xdx,N=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}(\sin^{3}x+\cos^{4}x)dx,P=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}(x^{2}\sin^{3}x-\cos^{4}x)dx$,则有: 
+\textcolor{blue}{\textbf{February 13}}
+
+\begin{example}[][Exam: 28.2.11]
+	计算不定积分 $\int \max(1,x^{2})dx$
+\end{example}
+
+\begin{example}[][Exam: 28.2.12]
+	设 $M=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\dfrac{\sin x}{1+x^{2}}\cos^{4}xdx,N=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}(\sin^{3}x+\cos^{4}x)dx,P=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}(x^{2}\sin^{3}x-\cos^{4}x)dx$,则有: 
 \begin{itemize}
 	\item A. $N<P<M$
 	\item B. $M<P<N$
 	\item C. $N<M<P$
 	\item D. $P<M<N$
 \end{itemize}
+\end{example}
 \myspace{1}
-\hl{\textbf{\textit{February 14}}}
 
-1. 设 $M=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\dfrac{(1+x)^{2}}{1+x^{2}}dx,N=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\dfrac{1+x}{e^{x}}dx,K=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}(1+\sqrt{\cos x})dx$,则有: 
+\textcolor{blue}{\textbf{February 14}}
+
+\begin{example}[][Exam: 28.2.13]
+	设 $M=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\dfrac{(1+x)^{2}}{1+x^{2}}dx,N=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\dfrac{1+x}{e^{x}}dx,K=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}(1+\sqrt{\cos x})dx$,则有: 
 \begin{itemize}
 	\item A. $M>N>K$
 	\item B. $M>K>N$
 	\item C. $K>M>N$
 	\item D. $K>N>M$
 \end{itemize}
-\myspace{1}
+\end{example}
 
-2. 设 $I_{1}=\int_{0}^{\frac{\pi}{4}}\dfrac{\tan x}{x}dx,I_{2}=\int_{0}^{\frac{\pi}{4}}\dfrac{x}{\tan x}dx$,则:
+\begin{example}[][Exam: 28.2.14]
+	设 $I_{1}=\int_{0}^{\frac{\pi}{4}}\dfrac{\tan x}{x}dx,I_{2}=\int_{0}^{\frac{\pi}{4}}\dfrac{x}{\tan x}dx$,则:
 \begin{itemize}
 	\item A. $I_{1}>I_{2}>1$
 	\item B. $1>I_{1}>I_{2}$
 	\item C. $I_{2}>I_{1}>1$
 	\item D. $1>I_{2}>I_{1}$
 \end{itemize}
+\end{example}
 \myspace{1}
+
 \section{Week \Rmnum{3}}
-\hl{\textbf{\textit{February 15}}}
+\textcolor{cyan}{\textbf{February 15}}
 
-1. 求定积分 $\int_{-2}^{2}[\ln(x+\sqrt{1+x^{2}})+\sqrt{1-\dfrac{x^{2}}{4}}]dx$
+\begin{example}[][Exam: 28.3.1]
+	求定积分 $\int_{-2}^{2}[\ln(x+\sqrt{1+x^{2}})+\sqrt{1-\dfrac{x^{2}}{4}}]dx$
+\end{example}
+
+\begin{example}[][Exam: 28.3.2]
+	求定积分 $\int_{-\pi}^{\pi}|x|[x^{3}+\sin^{2}x]\cos^{2}xdx$
+\end{example}
 \myspace{1}
 
-2. 求定积分 $\int_{-\pi}^{\pi}|x|[x^{3}+\sin^{2}x]\cos^{2}xdx$
-\myspace{1}
-\hl{\textbf{\textit{February 16}}}
+\textcolor{cyan}{\textbf{February 16}}
 
-1. 求定积分 $\int_{0}^{\pi}\sqrt{1-\sin x}dx$
-\myspace{1}
+\begin{example}[][Exam: 28.3.3]
+	求定积分 $\int_{0}^{\pi}\sqrt{1-\sin x}dx$
+\end{example}
 
-2. 求定积分 $\int_{\sqrt{e}}^{e^{\frac{3}{4}}}\dfrac{dx}{x\sqrt{\ln x(1-\ln x)}}$
-\myspace{1}
-\hl{\textbf{\textit{February 17}}}
-
-1. 求定积分 $\int_{0}^{1}\dfrac{\arcsin \sqrt{x}}{\sqrt{x(1-x)}}dx$
-\myspace{1}
-\hl{\textbf{\textit{February 18}}}
-
-1. 求定积分 $\int_{0}^{1}\dfrac{\ln(1+x)}{(2-x)^{2}}dx$
+\begin{example}[][Exam: 28.3.4]
+	求定积分 $\int_{\sqrt{e}}^{e^{\frac{3}{4}}}\dfrac{dx}{x\sqrt{\ln x(1-\ln x)}}$
+\end{example}
 \myspace{1}
 
-2. 已知函数 $f(x)=\int_{1}^{x}\sqrt{1+t^{4}}dt$,则 $\int_{0}^{1}x^{2}f(x)dx$
-\myspace{1}
-\hl{\textbf{\textit{February 19}}}
+\textcolor{cyan}{\textbf{February 17}}
 
-1. 已知 $f(x)$ 连续,$\int_{0}^{x}tf(x-t)dt=1-\cos x$,求 $\int_{0}^{\frac{\pi}{2}}f(x)dx$
-\myspace{1}
-
-2. 设 $f(x)=\begin{cases}
-	x^{2},0\leq x\leq 1\\2-x, 1<x\leq 2 
-\end{cases}$,记 $F(x)=\int_{0}^{x}f(t)dt(0\leq x\leq 2)$,则有:
-\begin{itemize}
-	\item A. $F(x)=\begin{cases}
-		\dfrac{x^{3}}{3},0\leq x\leq 1\\
-		2x-\dfrac{x^{2}}{2}, 1<x\leq 2
-	\end{cases}$
-	\item B. $F(x)=\begin{cases}
-		\dfrac{x^{3}}{3},0\leq x\leq 1\\
-		\dfrac{1}{3}+2x-\dfrac{x^{2}}{2}, 1<x\leq 2
-	\end{cases}$
-	\item C. $F(x)=\begin{cases}
-		\dfrac{x^{3}}{3},0\leq x\leq 1\\
-		-\dfrac{7}{6}+2x-\dfrac{x^{2}}{2}, 1<x\leq 2
-	\end{cases}$
-	\item D. $F(x)=\begin{cases}
-		\dfrac{x^{3}}{3},0\leq x\leq 1\\
-		\dfrac{x^{3}}{3}+2x-\dfrac{x^{2}}{2}, 1<x\leq 2
-	\end{cases}$
-\end{itemize}
-\myspace{1}
-\hl{\textbf{\textit{February 20}}}
-
-1. 设 $x\geq -1$,求 $\int_{-1}^{x}(1-|t|)dt$
+\begin{example}[][Exam: 28.3.5]
+	求定积分 $\int_{0}^{1}\dfrac{\arcsin \sqrt{x}}{\sqrt{x(1-x)}}dx$
+\end{example}
 \myspace{1}
 
-2. 设 $x=x(t)$ 由方程 $\sin t-\int_{1}^{x-t}e^{-u^{2}}du=0$ 所确定,试求 $\dfrac{d^{2}x}{dt^{2}}|_{t=0}$
-\myspace{1}
-\hl{\textbf{\textit{February 21}}}
+\textcolor{cyan}{\textbf{February 18}}
 
-1. 设函数 $f(x)=\int_{0}^{1}|t(t-x)|dt(0<x<1)$,求 $f(x)$ 的极值、单调区间及曲线 $y=f(x)$ 的凹凸区间
+\begin{example}[][Exam: 28.3.6]
+	求定积分 $\int_{0}^{1}\dfrac{\ln(1+x)}{(2-x)^{2}}dx$
+\end{example}
+
+\begin{example}[][Exam: 28.3.7]
+	已知函数 $f(x)=\int_{1}^{x}\sqrt{1+t^{4}}dt$,则 $\int_{0}^{1}x^{2}f(x)dx$
+\end{example}
 \myspace{1}
 
-2. 下列反常积分中发散的是:
+\textcolor{cyan}{\textbf{February 19}}
+
+\begin{example}[][Exam: 28.3.8]
+	已知 $f(x)$ 连续,$\int_{0}^{x}tf(x-t)dt=1-\cos x$,求 $\int_{0}^{\frac{\pi}{2}}f(x)dx$
+\end{example}
+
+\begin{example}[][Exam: 28.3.9]
+	设 $f(x)=\begin{cases}
+		x^{2},0\leq x\leq 1\\2-x, 1<x\leq 2 
+	\end{cases}$,记 $F(x)=\int_{0}^{x}f(t)dt(0\leq x\leq 2)$,则有:
+	\begin{itemize}
+		\item A. $F(x)=\begin{cases}
+			\dfrac{x^{3}}{3},0\leq x\leq 1\\
+			2x-\dfrac{x^{2}}{2}, 1<x\leq 2
+		\end{cases}$
+		\item B. $F(x)=\begin{cases}
+			\dfrac{x^{3}}{3},0\leq x\leq 1\\
+			\dfrac{1}{3}+2x-\dfrac{x^{2}}{2}, 1<x\leq 2
+		\end{cases}$
+		\item C. $F(x)=\begin{cases}
+			\dfrac{x^{3}}{3},0\leq x\leq 1\\
+			-\dfrac{7}{6}+2x-\dfrac{x^{2}}{2}, 1<x\leq 2
+		\end{cases}$
+		\item D. $F(x)=\begin{cases}
+			\dfrac{x^{3}}{3},0\leq x\leq 1\\
+			\dfrac{x^{3}}{3}+2x-\dfrac{x^{2}}{2}, 1<x\leq 2
+		\end{cases}$
+	\end{itemize}
+\end{example}
+\myspace{1}
+
+\textcolor{cyan}{\textbf{February 20}}
+
+\begin{example}[][Exam: 28.3.10]
+	设 $x\geq -1$,求 $\int_{-1}^{x}(1-|t|)dt$
+\end{example}
+
+\begin{example}[][Exam: 28.3.11]
+	设 $x=x(t)$ 由方程 $\sin t-\int_{1}^{x-t}e^{-u^{2}}du=0$ 所确定,试求 $\dfrac{d^{2}x}{dt^{2}}|_{t=0}$
+\end{example}
+\myspace{1}
+
+\textcolor{cyan}{\textbf{February 21}}
+
+\begin{example}[][Exam: 28.3.12]
+	设函数 $f(x)=\int_{0}^{1}|t(t-x)|dt(0<x<1)$,求 $f(x)$ 的极值、单调区间及曲线 $y=f(x)$ 的凹凸区间
+\end{example}
+
+\begin{example}[][Exam: 28.3.13]
+	下列反常积分中发散的是:
 \begin{itemize}
 	\item A. $\int_{0}^{+\infty}xe^{-x}dx$
 	\item B. $\int_{0}^{+\infty}xe^{-x^{2}}dx$
 	\item C. $\int_{0}^{+\infty}\dfrac{\arctan x}{1+x^{2}}dx$
 	\item D. $\int_{0}^{+\infty}\dfrac{x}{1+x^{2}}dx$
 \end{itemize}
+\end{example}
 \myspace{1}
+
 \section{Week \Rmnum{4}}
-\hl{\textbf{\textit{February 22}}}
+\textcolor{purplea}{\textbf{February 22}}
 
-1. 求 $I=\int_{5}^{+\infty}\dfrac{dx}{x^{2}-4x+3}$
+\begin{example}[][Exam: 28.4.1]
+求 $I=\int_{5}^{+\infty}\dfrac{dx}{x^{2}-4x+3}$
+\end{example}
+
+\begin{example}[][Exam: 28.4.2]
+	求 $I=\int_{1}^{+\infty}\dfrac{dx}{e^{1+x}+e^{3-x}}$
+\end{example}
 \myspace{1}
 
-2. 求 $I=\int_{1}^{+\infty}\dfrac{dx}{e^{1+x}+e^{3-x}}$
-\myspace{1}
-\hl{\textbf{\textit{February 23}}}
+\textcolor{purplea}{\textbf{February 23}}
 
-1. 求 $\int_{0}^{+\infty}\dfrac{\ln(1+x)}{(1+x)^{2}}dx$
-\myspace{1}
+\begin{example}[][Exam: 28.4.3]
+	求 $\int_{0}^{+\infty}\dfrac{\ln(1+x)}{(1+x)^{2}}dx$
+\end{example}
 
-2. 已知抛物线通过 $x$ 轴上的两点 $A(1,0),B(3,0)$
+\begin{example}[][Exam: 28.4.4]
+	已知抛物线通过 $x$ 轴上的两点 $A(1,0),B(3,0)$
 
 (1). 求证: 两坐标轴与该抛物线所围图形的面积等于 $x$ 轴与该抛物线所围图形的面积
 
 (2). 计算上述两平面图形绕 $x$ 轴旋转一周所产生的两个旋转体体积之比
-\myspace{1}
-\hl{\textbf{\textit{February 24}}}
-
-1. 求心形线 $r=a(1+\cos\theta)\ (a>0)$ 所围图形的面积
+\end{example}
 \myspace{1}
 
-2. 已知平面区域 $D=\{(x,y)|0\leq y\leq \dfrac{1}{x\sqrt{1+x^{2}}},x\geq 1\}$
+\textcolor{purplea}{\textbf{February 24}}
 
+\begin{example}[][Exam: 28.4.5]
+	求心形线 $r=a(1+\cos\theta)\ (a>0)$ 所围图形的面积
+\end{example}
+
+\begin{example}[][Exam: 28.4.6]
+	已知平面区域 $D=\{(x,y)|0\leq y\leq \dfrac{1}{x\sqrt{1+x^{2}}},x\geq 1\}$
+\myspace{1}
 (1). 求 $D$ 的面积
+
 (2). 求 $D$ 绕 $x$ 轴旋转所成旋转体的体积
-\myspace{1}
-\hl{\textbf{\textit{February 25}}}
-
-1. 某水库的闸门形状为等腰梯形, 它的两条底边各长 $10m$ 和 $6m$, 高为 $20m$,较长的底边与水面相齐,求闸门的一侧所受水的压力
+\end{example}
 \myspace{1}
 
-2. 一个半径为 $R(m)$ 的球形贮水箱盛满了水,如果把箱中的水从顶部全部抽出,需要作的功
-\myspace{1}
-\hl{\textbf{\textit{February 26}}}
+\textcolor{purplea}{\textbf{February 25}}
 
-1. 方程 $(xy^{2}+x)dx+(y-x^{2}y)dy=0$ 的通解
-\myspace{1}
+\begin{example}[][Exam: 28.4.7]
+	某水库的闸门形状为等腰梯形, 它的两条底边各长 $10m$ 和 $6m$, 高为 $20m$,较长的底边与水面相齐,求闸门的一侧所受水的压力
+\end{example}
 
-2. 方程 $y'=1+x+y^{2}+xy^{2}$ 的通解
-\myspace{1}
-\hl{\textbf{\textit{February 27}}}
-
-1. 方程 $(y+\sqrt{x^{2}+y^{2}})dx-xdy=0$ 满足条件 $y|_{x=1}=0$ 的特解
+\begin{example}[][Exam: 28.4.8]
+	一个半径为 $R(m)$ 的球形贮水箱盛满了水,如果把箱中的水从顶部全部抽出,需要作的功
+\end{example}
 \myspace{1}
 
-2. 方程 $\dfrac{dy}{dx}=\dfrac{y}{x+y^{4}}$ 的通解
-\myspace{1}
-\hl{\textbf{\textit{February 28}}}
+\textcolor{purplea}{\textbf{February 26}}
 
-1. 求不定积分 $\int\dfrac{x\ln x+x\ln^{2}x}{2+x\ln x}dx$
-\myspace{1}
+\begin{example}[][Exam: 28.4.9]
+	方程 $(xy^{2}+x)dx+(y-x^{2}y)dy=0$ 的通解
+\end{example}
 
-2. 求不定积分 $\int\dfrac{\sin 2x\sin^{2}x}{2+\cos^{4} x}dx$
-\myspace{1}
-\hl{\textbf{\textit{February 29}}}
-
-1. 求不定积分 $\int\dfrac{\sin x}{\sin x+\cos x}dx$
+\begin{example}[][Exam: 28.4.10]
+	方程 $y'=1+x+y^{2}+xy^{2}$ 的通解
+\end{example}
 \myspace{1}
 
-2. 求不定积分 $\int\dfrac{\cos 2x}{\cos^{2} x(1+\sin^{2} x)}dx$
+\textcolor{purplea}{\textbf{February 27}}
+
+\begin{example}[][Exam: 28.4.11]
+	方程 $(y+\sqrt{x^{2}+y^{2}})dx-xdy=0$ 满足条件 $y|_{x=1}=0$ 的特解
+\end{example}
+
+\begin{example}[][Exam: 28.4.12]
+	方程 $\dfrac{dy}{dx}=\dfrac{y}{x+y^{4}}$ 的通解
+\end{example}
 \myspace{1}
+
+\textcolor{purplea}{\textbf{February 28}}
+
+\begin{example}[][Exam: 28.4.13]
+	求不定积分 $\int\dfrac{x\ln x+x\ln^{2}x}{2+x\ln x}dx$
+\end{example}
+
+\begin{example}[][Exam: 28.4.14]
+	求不定积分 $\int\dfrac{\sin 2x\sin^{2}x}{2+\cos^{4} x}dx$
+\end{example}
+\myspace{1}
+
+\textcolor{purplea}{\textbf{February 29}}
+\begin{example}[][Exam: 28.4.15]
+	求不定积分 $\int\dfrac{\sin x}{\sin x+\cos x}dx$
+\end{example}
+
+\begin{example}[][Exam: 28.4.16]
+	求不定积分 $\int\dfrac{\cos 2x}{\cos^{2} x(1+\sin^{2} x)}dx$
+\end{example}
+
+
