@@ -1,51 +1,57 @@
 \chapterimage{chap38.jpg}
 \chapter{December}
 \section{Week \Rmnum{1}}
-\hl{\textbf{\textit{December 1}}}
+\textcolor{orange}{December 1}
 
-1. 计算曲线积分 $\displaystyle{I=\oint_{L}\dfrac{xdy-ydx}{x^{2}+xy+y^{2}}}$, 其中 $L$为$|x|+|y|=1$, 其方向为逆时针方向
-\myspace{1}
+\begin{example}[][Exam: 38.1.1]
+	计算曲线积分 $\displaystyle{I=\oint_{L}\dfrac{xdy-ydx}{x^{2}+xy+y^{2}}}$, 其中 $L$ 为 $|x|+|y|=1$, 其方向为逆时针方向
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 计算曲线积分 $\displaystyle{I=\oint_{L}\left[\dfrac{4x-y}{4x^{2}+y^{2}}-\dfrac{y}{(x-1)^{2}+y^{2}} \right]dx+\left[\dfrac{x+y}{4x^{2}+y^{2}}+\dfrac{x-1}{(x-1)^{2}+y^{2}} \right]dy}$,
-其中 $L$是$x^{2}+y^{2}=4$, 方向为逆时针方向
-\myspace{1}
+\begin{example}[][Exam: 38.1.2]
+	计算曲线积分 $\displaystyle{I=\oint_{L}\left[\dfrac{4x-y}{4x^{2}+y^{2}}-\dfrac{y}{(x-1)^{2}+y^{2}} \right]dx+\left[\dfrac{x+y}{4x^{2}+y^{2}}+\dfrac{x-1}{(x-1)^{2}+y^{2}} \right]dy}$,
+	其中 $L$是$x^{2}+y^{2}=4$, 方向为逆时针方向
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 2}}}
 
-1. 设$\Omega$是由平面曲线$
-\begin{cases}
-	4y^{2}+z^{2}=4\\
-	x=0
-\end{cases}(z\geq 0)$ 绕 $z$ 轴旋转一周形成的空间曲面, 取上侧, 计算曲面积分:
+\textcolor{orange}{December 2 }
 
-$$I=\iint\limits_{\Omega}\dfrac{x^{2}ydydz+y^{2}zdzdx+(z^{2}+1)dxdy}{\sqrt{x^{2}+y^{2}+(\frac{z}{2})^{2}+3}}$$
-\myspace{1}
+\begin{example}[][Exam: 38.1.3]
+	设 $\Omega$ 是由平面曲线 $
+	\begin{cases}
+		4y^{2}+z^{2}=4\\
+		x=0
+	\end{cases}(z\geq 0)$ 绕 $z$ 轴旋转一周形成的空间曲面, 取上侧, 计算曲面积分:
+	
+	$$I=\iint\limits_{\Omega}\dfrac{x^{2}ydydz+y^{2}zdzdx+(z^{2}+1)dxdy}{\sqrt{x^{2}+y^{2}+(\frac{z}{2})^{2}+3}}$$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设函数 $f(x,y,z)$ 在区域 $\Omega=\{(x,y,z)|x^{2}+y^{2}+z^{2}\leq 1\}$ 上具有连续一阶偏导数,且满足 $\dfrac{\partial^{2}f}{\partial x^{2}}+\dfrac{\partial^{2}f}{\partial y^{2}}+\dfrac{\partial^{2}f}{\partial z^{2}}=\sqrt{x^{2}+y^{2}+z^{2}}$, 
-计算: 
+\begin{example}[][Exam: 38.1.4]
+	设函数 $f(x,y,z)$ 在区域 $\Omega=\{(x,y,z)|x^{2}+y^{2}+z^{2}\leq 1\}$ 上具有连续一阶偏导数,
+	且满足 $\dfrac{\partial^{2}f}{\partial x^{2}}+\dfrac{\partial^{2}f}{\partial y^{2}}+\dfrac{\partial^{2}f}{\partial z^{2}}=\sqrt{x^{2}+y^{2}+z^{2}}$, 计算: 
+	$$\iiint\limits_{\Omega}(x\dfrac{\partial f}{\partial x}+y\dfrac{\partial f}{\partial y}+z\dfrac{\partial f}{\partial z})dxdydz$$
+\end{example}
 
-$$\iiint\limits_{\Omega}(x\dfrac{\partial f}{\partial x}+y\dfrac{\partial f}{\partial y}+z\dfrac{\partial f}{\partial z})dxdydz$$
-\myspace{1}
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 3}}}
 
-1. 设 $A$ 为三阶方阵, 并有可逆矩阵 $P=(p_{1},p_{2},p_{3})$,$p_{i}(i=1,2,3)$ 为三维列向量, 使得
+\textcolor{orange}{December 3}
+
+\begin{example}[][Exam: 38.1.5]
+	设 $A$ 为三阶方阵, 并有可逆矩阵 $P=(p_{1},p_{2},p_{3}), p_{i}(i=1,2,3)$ 为三维列向量, 使得
 $$ P^{-1}AP =
 \begin{pmatrix}
 	1 & 0 & 0\\
@@ -67,115 +73,133 @@ $$
 	0 & 1 & 1\\
 	0 & 0 & 1
 \end{pmatrix}$
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 已知 $\lim\limits_{x\to 0}\dfrac{e^{x}f(x)+\sin x}{x^{2}}=1$, 求 $\lim\limits_{x\to 0}\dfrac{f(x)+\sin x}{x^{2}}$
-\myspace{1}
+\begin{example}[][Exam: 38.1.6]
+	已知 $\lim\limits_{x\to 0}\dfrac{e^{x}f(x)+\sin x}{x^{2}}=1$, 求 $\lim\limits_{x\to 0}\dfrac{f(x)+\sin x}{x^{2}}$
+\end{example}
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 4}}}
+\textcolor{orange}{December 4}
 
-1. 设 $f(x)$ 在 $x=0$ 的某邻域内可导,$f(0)+3f'(0)=1$,求: 
-$$\lim\limits_{x\to 0}\dfrac{\int_{x}^{\ln(1+x)}f(x+t)dt+[\sin x-\ln(1+x)]f(x)}{x^{3}}$$
-\myspace{1}
+\begin{example}[][Exam: 38.1.7]
+	设 $f(x)$ 在 $x=0$ 的某邻域内可导, 且 $f(0)+3f'(0)=1$, 求:
+	$$\lim\limits_{x\to 0}\dfrac{\int_{x}^{\ln(1+x)}f(x+t)dt+\left[\sin x-\ln(1+x)\right]f(x)}{x^{3}}$$
+\end{example}
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 求极限 $\lim\limits_{x\rightarrow 0^{+}}\left(\dfrac{x}{(e^{x}-1)\cos\sqrt{x}}\right)^{\frac{1}{(1+\sin x^{2})^{\frac{1}{x}}-1}}$
-\myspace{1}
+\begin{example}[][Exam: 38.1.8]
+    $$\lim\limits_{x\to 0^{+}}\left(\dfrac{x}{(e^{x}-1)\cos\sqrt{x}}\right)^{\frac{1}{(1+\sin x^{2})^{\frac{1}{x}}-1}}$$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 5}}}
 
-1. 设 $f(x)$ 连续, 且 $f(0)\neq 0$, 且 $\lim\limits_{x\to 0}\left[1+\int_{0}^{x}(x-t)f(t)dt \right]^{\frac{1}{x\int_{0}^{x}f(x-t)dt}}$
-\myspace{1}
+\textcolor{orange}{December 5}
+
+\begin{example}[][Exam: 38.1.9]
+	设 $f(x)$ 连续, 且 $f(0)\neq 0$, 求 $\lim\limits_{x\to 0}\left[1+\int_{0}^{x}(x-t)f(t)dt \right]^{\frac{1}{x\int_{0}^{x}f(x-t)dt}}$
+
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设函数 $f(x)$ 在 $(-\infty,+\infty)$ 上二阶导数连续,$f(1)\leq 0$,$\lim\limits_{x\rightarrow \infty}\left[ f(x)-|x|\right]=0$, 证明:
+\begin{example}[][Exam: 38.1.10]
+	设函数 $f(x)$ 在 $(-\infty,+\infty)$ 上二阶导数连续, $f(1)\leq 0, \lim\limits_{x\to \infty}\left[ f(x)-|x|\right]=0$, 证明:
 
 (1). $\exists \xi\in(1,+\infty),\ s.t.\ f'(\xi)>1$
 
 (2). $\exists \eta\in(-\infty,+\infty),\ s.t.\ f''(\eta)=0$
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 6}}}
 
-1. 求 $\displaystyle{\lim\limits_{x\rightarrow 0}\dfrac{\int_{0}^{2x}|t-x|\sin tdt}{|x|^{3}}}$
-\myspace{1}
+\textcolor{orange}{December 6}
+
+\begin{example}[][Exam: 38.1.11]
+	$$\lim\limits_{x\to 0}\dfrac{\int_{0}^{2x}|t-x|\sin tdt}{|x|^{3}}$$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 求使得 $\displaystyle{\oint_{L}(2y^{3}-3y)dx-x^{3}dy}$ 的值最大的平面正向边界曲线 $L$
-\myspace{1}
+\begin{example}[][Exam: 38.1.12]
+	求使得 $\displaystyle{\oint_{L}(2y^{3}-3y)dx-x^{3}dy}$ 的值最大的平面正向边界曲线 $L$
+
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 7}}}
 
-1. $\lim\limits_{x\rightarrow 0}\dfrac{e^{(1+x)^{\frac{1}{x}}}-(1+x)^{\frac{e}{x}}}{x^{2}}$
-\myspace{1}
+\textcolor{orange}{December 7}
+
+\begin{example}[][Exam: 38.1.13]
+	$$\lim\limits_{x\to 0}\dfrac{e^{(1+x)^{\frac{1}{x}}}-(1+x)^{\frac{e}{x}}}{x^{2}}$$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设曲面 $z=\sqrt{1-x^{2}-y^{2}}$ 与平面 $z=x$ 的交线为 $L$,起点为 $A(0,1,0)$,终点为 $B(0,-1,0)$,求 $\displaystyle{\oint_{L}(x+y-z)dx+|y|dz}$
-\myspace{1}
+\begin{example}[][Exam: 38.1.14]
+	设曲面 $z=\sqrt{1-x^{2}-y^{2}}$ 与平面 $z=x$ 的交线为 $L$,起点为 $A(0,1,0)$,终点为 $B(0,-1,0)$,求 $\displaystyle{\oint_{L}(x+y-z)dx+|y|dz}$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
+
 
 \section{Week \Rmnum{2}}
-\hl{\textbf{\textit{December 8}}}
+\textcolor{blue}{December 8}
 
-1. 求 $\lim\limits_{n\rightarrow \infty}\sum\limits_{k=1}^{n}\left(1-\dfrac{k}{n}\right)\ln(1+\dfrac{k}{n^{2}})$
-\myspace{1}
+\begin{example}[][Exam: 38.2.1]
+	$$\lim\limits_{n\to \infty}\sum\limits_{k=1}^{n}\left(1-\dfrac{k}{n}\right)\ln(1+\dfrac{k}{n^{2}})$$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 求 $\lim\limits_{n\rightarrow +\infty}\left[\dfrac{n}{n^{2}+n+\ln1}+\dfrac{n}{n^{2}+n+\ln2}+\cdots+\dfrac{n}{n^{2}+n+\ln n} \right]^{n}$
-\myspace{1}
+\begin{example}[][Exam: 38.2.2]
+	$$\lim\limits_{n\to +\infty}\left[\dfrac{n}{n^{2}+n+\ln1}+\dfrac{n}{n^{2}+n+\ln2}+\cdots+\dfrac{n}{n^{2}+n+\ln n} \right]^{n}$$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 9}}}
 
-1. 求 $\lim\limits_{n\rightarrow +\infty}\left[ \dfrac{1}{\sqrt{n^{2}+1^{2}}}+\dfrac{1}{\sqrt{n^{2}+2^{2}}}+\cdots+\dfrac{1}{\sqrt{n^{2}+n^{2}}}\right]^{n}$
-\myspace{1}
+\textcolor{blue}{December 9}
+
+\begin{example}[][Exam: 38.2.3]
+	$$\lim\limits_{n\to +\infty}\left[ \dfrac{1}{\sqrt{n^{2}+1^{2}}}+\dfrac{1}{\sqrt{n^{2}+2^{2}}}+\cdots+\dfrac{1}{\sqrt{n^{2}+n^{2}}}\right]^{n}$$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 以下两个矩阵,可以用同一个可逆矩阵 $\mathbf{P}$ 相似对角化的是:
+\begin{example}[][Exam: 38.2.4]
+	以下两个矩阵,可以用同一个可逆矩阵 $\mathbf{P}$ 相似对角化的是:
 \begin{itemize}
 	\item A.\quad 
 	$\begin{pmatrix}
@@ -214,354 +238,404 @@ $$\lim\limits_{x\to 0}\dfrac{\int_{x}^{\ln(1+x)}f(x+t)dt+[\sin x-\ln(1+x)]f(x)}{
 		1 & 0
 	\end{pmatrix}$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 10}}}
 
-1. 设函数 $f(x)$ 在 $[0,2]$ 上一阶可导,$f(0)=0$,$f(x)$在$x=x_{0}$ 处取得最大值 $Mx_{0},x_{0}\in(0,2)$,且 $f'(x)\leq M$,证明:
+\textcolor{blue}{December 10}
 
-(1).当 $x\in[0,x_{0}]$ 时,有 $f(x)=Mx$
+\begin{example}[][Exam: 38.2.5]
+	设函数 $f(x)$ 在 $[0,2]$ 上一阶可导, $f(0)=0,f(x)$ 在 $x=x_{0}$ 处取得最大值 $M, x_{0}\in(0,2)$, 且 $f'(x)\leq M$, 证明:
 
-(2).$M=0$
-\myspace{1}
+(1). 当 $x\in[0,x_{0}]$ 时,有 $f(x)=Mx$
+
+(2). $M=0$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设数列 $\{a_{n}\},\{b_{n}\}$ 对任意的正整数,满足 $a_{n}<b_{n}<a_{n+1}$,则:
-\begin{itemize}
-	\item A.数列 $\{a_{n}\},\{b_{n}\}$ 均收敛,且 $\lim\limits_{n\rightarrow  \infty}a_{n}=\lim\limits_{n\rightarrow \infty}b_{n}$
-	\item B.数列 $\{a_{n}\},\{b_{n}\}$ 均发散,且 $\lim\limits_{n\rightarrow  \infty}a_{n}=\lim\limits_{n\rightarrow \infty}b_{n}=\infty$
-	\item C.数列 $\{a_{n}\},\{b_{n}\}$ 具有相同的敛散性
-	\item D.数列 $\{a_{n}\},\{b_{n}\}$ 具有不同的敛散性
-\end{itemize}
-\myspace{1}
+\begin{example}[][Exam: 38.2.6]
+	设数列 $\{a_{n}\},\{b_{n}\}$ 对任意的正整数,满足 $a_{n}<b_{n}<a_{n+1}$,则:
+	\begin{itemize}
+		\item A.数列 $\{a_{n}\},\{b_{n}\}$ 均收敛,且 $\lim\limits_{n\to  \infty}a_{n}=\lim\limits_{n\to \infty}b_{n}$
+		\item B.数列 $\{a_{n}\},\{b_{n}\}$ 均发散,且 $\lim\limits_{n\to  \infty}a_{n}=\lim\limits_{n\to \infty}b_{n}=\infty$
+		\item C.数列 $\{a_{n}\},\{b_{n}\}$ 具有相同的敛散性
+		\item D.数列 $\{a_{n}\},\{b_{n}\}$ 具有不同的敛散性
+	\end{itemize}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 11}}}
 
-1. 若可逆线性变换 $\mathbf{x=Py}$ 可将二次型 $f(x_{1},x_{2})=x_{1}^{2}+2x_{2}^{2}+2x_{1}x_{2}$ 化为规范型 $y_{1}^{2}+y_{2}^{2}$,
-同时将二次型 $g(x_{1},x_{2})=-x_{1}^{2}+2x_{2}^{2}+2x_{1}x_{2}$ 化为标准型 $k_{1}y_{1}^{2}+k_{2}y_{2}^{2}$, 求可逆矩阵 $\mathbf{P}$ 及 $k_{1},k_{2}$ 的值
-\myspace{1}
+\textcolor{blue}{December 11}
+
+\begin{example}[][Exam: 38.2.7]
+	若可逆线性变换 $\mathbf{x=Py}$ 可将二次型 $f(x_{1}, x_{2})=x_{1}^{2}+2x_{2}^{2}+2x_{1}x_{2}$ 化为规范型 $y_{1}^{2}+y_{2}^{2}$,
+	同时将二次型 $g(x_{1},x_{2})=-x_{1}^{2}+2x_{2}^{2}+2x_{1}x_{2}$ 化为标准型 $k_{1}y_{1}^{2}+k_{2}y_{2}^{2}$, 
+	求可逆矩阵 $\mathbf{P}$ 及 $k_{1},k_{2}$ 的值
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设有数列 $\{x_{n}\}$,已知 $\lim\limits_{n\rightarrow +\infty}(x_{n+1}-x_{n})=0$,求下列说法正确的个数:
+\begin{example}[][Exam: 38.2.8]
+	设有数列 $\{x_{n}\}$, 已知 $\lim\limits_{n\to +\infty}(x_{n+1}-x_{n})=0$, 求下列说法正确的个数:
 \begin{itemize}
 	\item (1). $\{x_{n}\}$ 必收敛
-	\item (2).若 $\{x_{n}\}$ 单调, 则 $\{x_{n}\}$ 必收敛
-	\item (3).若 $\{x_{n}\}$ 有界, 则 $\{x_{n}\}$ 必收敛
-	\item (4).若 $\{x_{3n}\}$ 收敛, 则 $\{x_{n}\}$ 必收敛
+	\item (2). 若 $\{x_{n}\}$ 单调, 则 $\{x_{n}\}$ 必收敛
+	\item (3). 若 $\{x_{n}\}$ 有界, 则 $\{x_{n}\}$ 必收敛
+	\item (4). 若 $\{x_{3n}\}$ 收敛, 则 $\{x_{n}\}$ 必收敛
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 12}}}
 
-1. 设 $f(x)$ 有连续一阶导数, 且 $0<f'(x)\leq\dfrac{\ln(2+x^{2})}{2(1+x^{2})}$, 数列 $x_{0}=a,x_{n}=f(x_{n-1})(n=1,2,\cdots )$
+\textcolor{blue}{December 12}
 
-证明:
+\begin{example}[][Exam: 38.2.9]
+	设 $f(x)$ 有连续一阶导数, 且 $0<f'(x)\leq\dfrac{\ln(2+x^{2})}{2(1+x^{2})}$, 数列 $x_{0}=a,x_{n}=f(x_{n-1})(n=1,2,\cdots )$,
+	证明:
 
-(1). 极限 $\lim\limits_{x\rightarrow \infty}x_{n}$ 存在且是方程 $f(x)=x$ 的唯一实根 
+(1). 极限 $\lim\limits_{x\to \infty}x_{n}$ 存在且是方程 $f(x)=x$ 的唯一实根 
 
 (2). 级数 $\sum\limits_{n=1}^{\infty}\left[f(x_{n})-x_{n}\right]$ 收敛
 
-(3). 级数 $\sum\limits_{n=1}^{\infty}\left[x_{n}-A\right]$ 绝对收敛, 其中 $\lim\limits_{x\rightarrow\infty}x_{n}=A$
-\myspace{1}
+(3). 级数 $\sum\limits_{n=1}^{\infty}\left[x_{n}-A\right]$ 绝对收敛, 其中 $\lim\limits_{x\to\infty}x_{n}=A$
+
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设 $f(x)=x+a\ln(1+x)+\dfrac{bx\sin x}{1+x^{2}},g(x)=cx^{3}$, 若 $f(x)$ 与 $g(x)$ 在 $x\to 0$ 时是等价无穷小,则:
+\begin{example}[][Exam: 38.2.10]
+	设 $f(x)=x+a\ln(1+x)+\dfrac{bx\sin x}{1+x^{2}},g(x)=cx^{3}$, 若 $f(x)$ 与 $g(x)$ 在 $x\to 0$ 时是等价无穷小
 \begin{itemize}
 	\item A. $a=1,b=-\dfrac{1}{2},c=\dfrac{1}{3}$ 
 	\item B. $a=1,b=-\dfrac{1}{2},c=-\dfrac{1}{3}$
 	\item C. $a=-1,b=\dfrac{1}{2},c=-\dfrac{1}{3}$
 	\item D. $a=-1,b=-\dfrac{1}{2},c=-\dfrac{1}{3}$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 13}}}
 
-1. 设 $f(x)$ 为连续函数,$\lim\limits_{x\rightarrow 0}\dfrac{xf(x)-\ln(1+x)}{x^{2}}=2$,$F(x)=\int_{0}^{x}tf(x-t)dt$, 当 $x\to 0$ 时,
-$F(x)-\dfrac{1}{2}x^{2}$与$bx^{k}$ 为等价无穷小, 其中常数 $b\neq 0$,$k$ 为正整数,求 $k,b,f(0),f'(0)$
-\myspace{1}
+\textcolor{blue}{December 13}
+
+\begin{example}[][Exam: 38.2.11]
+	设 $f(x)$ 为连续函数,$\lim\limits_{x\to 0}\dfrac{xf(x)-\ln(1+x)}{x^{2}}=2, F(x)=\int_{0}^{x}tf(x-t)dt$, 当 $x\to 0$ 时,
+	$F(x)-\dfrac{1}{2}x^{2}$与$bx^{k}$ 为等价无穷小, 其中常数 $b\neq 0$,$k$ 为正整数,求 $k,b,f(0),f'(0)$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设 $f(x)=\lim\limits_{n\rightarrow\infty}\dfrac{2e^{(n+1)x}+1}{e^{nx}+x^{n}+1}$, 则 $f(x)$
+\begin{example}[][Exam: 38.2.12]
+	设 $f(x)=\lim\limits_{n\to\infty}\dfrac{2e^{(n+1)x}+1}{e^{nx}+x^{n}+1}$, $f(x)$
 \begin{itemize}
 	\item A. 仅有一个可去间断点 
 	\item B. 仅有一个跳跃间断点
 	\item C. 有两个可去间断点
 	\item D. 有两个跳跃间断点
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 14}}}
 
-1. 下列命题成立的是:
+\textcolor{blue}{December 14}
+
+\begin{example}[][Exam: 38.2.13]
+	下列命题成立的是:
 \begin{itemize}
-	\item A. 若 $\lim\limits_{x\rightarrow 0}\varphi(x)=0$, 且 $\lim\limits_{x\rightarrow 0}\dfrac{f\left[\varphi(x)\right]-f(0)}{\varphi(x)}$, 则 $f(x)$ 在 $x=0$ 处可导
-	\item B. 若 $f(x)$ 在 $x=0$ 处可导, 且$\lim\limits_{x\rightarrow 0}\varphi(x)=0$,则$\lim\limits_{x\rightarrow 0}\dfrac{f\left[\varphi(x)\right]-f(0)}{\varphi(x)}=f'(0)$
-	\item C. 若 $\lim\limits_{x\rightarrow 0}\dfrac{f(\sin x)-f(0)}{\sqrt{x^{2}}}$ 存在,则 $f(x)$ 在 $x=0$ 处可导
-	\item D. 若 $\lim\limits_{x\rightarrow 0}\dfrac{f(\sqrt[3]{x})-f(0)}{\sqrt{x^{2}}}$ 存在,则 $f(x)$ 在 $x=0$ 处可导
+	\item A. 若 $\lim\limits_{x\to 0}\varphi(x)=0$, 且 $\lim\limits_{x\to 0}\dfrac{f\left[\varphi(x)\right]-f(0)}{\varphi(x)}$, 则 $f(x)$ 在 $x=0$ 处可导
+	\item B. 若 $f(x)$ 在 $x=0$ 处可导, 且$\lim\limits_{x\to 0}\varphi(x)=0$,则$\lim\limits_{x\to 0}\dfrac{f\left[\varphi(x)\right]-f(0)}{\varphi(x)}=f'(0)$
+	\item C. 若 $\lim\limits_{x\to 0}\dfrac{f(\sin x)-f(0)}{\sqrt{x^{2}}}$ 存在,则 $f(x)$ 在 $x=0$ 处可导
+	\item D. 若 $\lim\limits_{x\to 0}\dfrac{f(\sqrt[3]{x})-f(0)}{\sqrt{x^{2}}}$ 存在,则 $f(x)$ 在 $x=0$ 处可导
 \end{itemize}
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
+\end{example}
 
-2. 设 $\Sigma$ 为 $x^{2}+y^{2}+z^{2}=1$ 的外侧,求 $\displaystyle{\oiint\limits_{\Sigma}\dfrac{dydz}{x}+\dfrac{dzdx}{y}+\dfrac{dxdy}{z}}$
-\myspace{1}
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
+
+\begin{example}[][Exam: 38.2.14]
+	设 $\Sigma$ 为 $x^{2}+y^{2}+z^{2}=1$ 的外侧,求 $\displaystyle{\oiint\limits_{\Sigma}\dfrac{dydz}{x}+\dfrac{dzdx}{y}+\dfrac{dxdy}{z}}$
+\end{example}
+\begin{solution}
+	
+\end{solution}
+
 
 \section{Week \Rmnum{3}}
-\hl{\textbf{\textit{December 15}}}
+\textcolor{cyan}{December 15}
 
-1. 设 $f(x)$ 在 $x_{0}$ 点可导,$\alpha_{n},\beta_{n}$ 为趋于零的正项数列, 求极限 $\lim\limits_{n\rightarrow\infty}\dfrac{f(x_{0}+\alpha_{n})-f(x_{0}-\beta_{n})}{\alpha_{n}+\beta_{n}}$
-\myspace{1}
+\begin{example}[][Exam: 38.3.1]
+	设 $f(x)$ 在 $x_{0}$ 点可导,$\alpha_{n},\beta_{n}$ 为趋于零的正项数列, 
+	求 $\lim\limits_{n\to\infty}\dfrac{f(x_{0}+\alpha_{n})-f(x_{0}-\beta_{n})}{\alpha_{n}+\beta_{n}}$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设函数 $\displaystyle{\varphi(x)=\int_{0}^{\sin x}f(tx^{2})dt}$, 其中 $f(x)$ 是连续函数,且 $f(0)=2$
+\begin{example}[][Exam: 38.3.2]
+	设函数 $\displaystyle{\varphi(x)=\int_{0}^{\sin x}f(tx^{2})dt}$, 其中 $f(x)$ 是连续函数,且 $f(0)=2$
 
 (1). 求 $\varphi'(x)$
 
 (2). 讨论 $\varphi'(x)$ 的连续性
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 16}}}
 
-1. 设 $x=\int_{0}^{1}e^{tu^{2}}du,y=y(t)$ 由方程 $\displaystyle{t-\int_{1}^{y+t}e^{-u^{2}}du=0}$ 所确定,求:
+\textcolor{cyan}{December 16}
 
-(1). $\dfrac{dy}{dt}|_{t=0},\dfrac{d^{2}y}{dt^{2}}|_{t=0},\dfrac{dx}{dt}|_{t=0},\dfrac{d^{2}x}{dt^{2}}|_{t=0}$
+\begin{example}[][Exam: 38.3.3]
+	设 $x=\int_{0}^{1}e^{tu^{2}}du,y=y(t)$ 由方程 $\displaystyle{t-\int_{1}^{y+t}e^{-u^{2}}du=0}$ 所确定,求:
 
-(2). $\dfrac{dy}{dx}|_{t=0},\dfrac{d^{2}y}{dx^{2}}|_{t=0}$
-\myspace{1}
+(1). $\dfrac{dy}{dt}\big|_{t=0},\dfrac{d^{2}y}{dt^{2}}\big|_{t=0},\dfrac{dx}{dt}\big|_{t=0},\dfrac{d^{2}x}{dt^{2}}\big|_{t=0}$
+
+(2). $\dfrac{dy}{dx}\big|_{t=0},\dfrac{d^{2}y}{dx^{2}}\big|_{t=0}$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)=
-\begin{cases}
-	\dfrac{x-\sin x}{x^{3}}, &x\neq 0\\
-	a, &x=0
-\end{cases}$ 处处连续,求 $f''(0)$
-\begin{itemize}
-	\item A. $0$
-	\item B. 不存在
-	\item C. $\dfrac{1}{60}$
-	\item D. $-\dfrac{a}{10}$
-\end{itemize}
-\myspace{1}
+\begin{example}[][Exam: 38.3.4]
+	设 $f(x)=
+	\begin{cases}
+		\dfrac{x-\sin x}{x^{3}} & x\neq 0\\
+		a & x=0
+	\end{cases}$ 处处连续,求 $f''(0)$
+	\begin{itemize}
+		\item A. $0$
+		\item B. 不存在
+		\item C. $\dfrac{1}{60}$
+		\item D. $-\dfrac{a}{10}$
+	\end{itemize}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 17}}}
 
-1. 设方程 $a^{x}=bx(a>1)$ 有两个不同的实根,求常数 $a,b$ 应满足的关系式
-\myspace{1}
+\textcolor{cyan}{December 17}
+
+\begin{example}[][Exam: 38.3.5]
+	设方程 $a^{x}=bx(a>1)$ 有两个不同的实根,求常数 $a,b$ 应满足的关系式
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设 $y(x)$ 满足 $y''+2ay'+b^{2}y=0(a>b>0),y(0)=1,y'(0)=1$,求 $\displaystyle{\int_{0}^{+\infty}y(x)dx}$
-\myspace{1}
+\begin{example}[][Exam: 38.3.6]
+	设 $y(x)$ 满足 $y''+2ay'+b^{2}y=0(a>b>0),y(0)=1,y'(0)=1$,求 $\displaystyle{\int_{0}^{+\infty}y(x)dx}$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 18}}}
 
-1. 设 $f(x)$ 在 $[0,+\infty]$ 上二阶可导, 且 $f(0)=0,f''(x)<0$, 则当 $0<a<x<b$ 时,下面哪个选项正确:
+\textcolor{cyan}{December 18}
+
+\begin{example}[][Exam: 38.3.7]
+	设 $f(x)$ 在 $[0,+\infty]$ 上二阶可导, 且 $f(0)=0,f''(x)<0$, 则当 $0<a<x<b$ 时,下面哪个选项正确:
 \begin{itemize}
 	\item A. $af(x)>xf(a)$
 	\item B. $bf(x)>xf(b)$
 	\item C. $xf(x)<bf(b)$
 	\item D. $xf(x)>af(a)$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
+\begin{example}[][Exam: 38.3.8]
+	设 $f(x)$ 二阶可导, 且 $f(1)=6,f'(1)=0$, 且当 $x\geq 1, x^{2}f''(x)-3xf'(x)-5f(x)\geq 0$, 证明: 当 $x\geq 1$ 时,$f(x)\geq x^{5}+\dfrac{5}{x}$
+\end{example}
 
-2. 设 $f(x)$ 二阶可导, 且 $f(1)=6,f'(1)=0$, 且当 $x\geq 1, x^{2}f''(x)-3xf'(x)-5f(x)\geq 0$, 证明: 当 $x\geq 1$ 时,$f(x)\geq x^{5}+\dfrac{5}{x}$
-\myspace{1}
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 19}}}
 
-1. 设 $f(x)=\int_{0}^{x}t|x-t|dt-\dfrac{x^{2}}{6}$, 求:
+\textcolor{cyan}{December 19}
+
+\begin{example}[][Exam: 38.3.9]
+	设 $f(x)=\int_{0}^{x}t|x-t|dt-\dfrac{x^{2}}{6}$, 求:
 
 (1). 函数 $f(x)$ 的极值和曲线 $y=f(x)$ 的凹凸区间和拐点
 
 (2). 曲线 $y=f(x)$ 与 $x$ 轴围成的区域的面积及绕 $y$ 轴旋转所得旋转体的体积
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 曲线 $y=e^{\frac{1}{x}}\sqrt{1+x^{2}}$ 的渐近线有多少条?
-\myspace{1}
+\begin{example}[][Exam: 38.3.10]
+	求曲线 $y=e^{\frac{1}{x}}\sqrt{1+x^{2}}$ 的渐近线
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 20}}}
 
-1. 设 $f(x)$ 在 $[-2,2]$ 上二阶可导, 且 $|f(x)|\leq 1$, 又 $[f(0)]^{2}+[f'(0)]^{2}=4$,证明在 $(-2,2)$ 内至少存在一点 $\xi$,使得 $f''(\xi)+f(\xi)=0$
-\myspace{1}
+\textcolor{cyan}{December 20}
+
+\begin{example}[][Exam: 38.3.11]
+	设 $f(x)$ 在 $[-2,2]$ 上二阶可导, 且 $|f(x)|\leq 1$, 又 $[f(0)]^{2}+[f'(0)]^{2}=4$,证明: 
+	$\exists \xi \in (-2,2), \ s.t.\ f''(\xi)+f(\xi)=0$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设 $f(x)$ 在 $[a,b]$ 上有 $n+1$ 阶导数,且 $f^{(k)}(a)=f^{(k)}(b)=0 (k=0,1,2,\cdots,n)$, 证明: 存在 $\xi\in(a,b),s.t.\ f^{(n+1)}(\xi)=f(\xi)$
-\myspace{1}
+\begin{example}[][Exam: 38.3.12]
+	设 $f(x)$ 在 $[a,b]$ 上有 $n+1$ 阶导数,且 $f^{(k)}(a)=f^{(k)}(b)=0 (k=0,1,2,\cdots,n)$, 证明: $\exists \xi\in(a,b),\ s.t.\ f^{(n+1)}(\xi)=f(\xi)$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 21}}}
 
-1. 设 $f(x)$ 在 $[0,1]$ 上连续, 在 $(0,1)$ 内可导,且 $f(0)=0,f(1)=1$, 试证明:
+\textcolor{cyan}{December 21}
+
+\begin{example}[][Exam: 38.3.13]
+	设 $f(x)$ 在 $[0,1]$ 上连续, 在 $(0,1)$ 内可导,且 $f(0)=0,f(1)=1$, 证明:
 
 (1). $\exists \xi,\eta\in(0,1),\ s.t.\ [1+\eta f(\eta)] f'(\xi)= f'(\eta)+f^{2}(\eta)$
 
 (2). $\exists \xi,\eta\in(0,1),\xi < \eta,\ s.t.\ f'(xi)+f'(\eta)=2$
-\myspace{1}
-\begin{solution}
-	
-\end{solution}
-\myspace{1}
+\end{example}
 
-2. 设函数 $f(x),g(x)$ 在 $[0,1]$ 上二阶可导,且 $f(1)>g(1),f(0)>g(0)$,$\displaystyle{\int_{0}^{1}f(x)dx=\int_{0}^{1}g(x)dx}$, 试证明: $\exists \xi\in(0,1),\ s.t.\ f''(\xi)>g''(\xi)$
-\myspace{1}
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
+
+\begin{example}[][Exam: 38.3.14]
+	设函数 $f(x),g(x)$ 在 $[0,1]$ 上二阶可导,且 $f(1)>g(1),f(0)>g(0), \displaystyle{\int_{0}^{1}f(x)dx=\int_{0}^{1}g(x)dx}$, 证明: 
+	$\exists \xi\in(0,1),\ s.t.\ f''(\xi)>g''(\xi)$
+\end{example}
+
+\begin{solution}
+	
+\end{solution}
+
 
 \section{Week \Rmnum{4}}
-\hl{\textbf{\textit{December 22}}}
+\textcolor{purplea}{December 22}
 
-1. 设 $\alpha$ 为正整数, 且反常积分 $\displaystyle{\int_{0}^{+\infty}\dfrac{\ln(1+x^{2})}{x^{\alpha}}dx}$ 收敛,求 $\displaystyle{\int_{0}^{+\infty}\dfrac{\ln(1+x^{2})}{x^{\alpha}}dx}$
-\myspace{1}
+\begin{example}[][Exam: 38.4.1]
+	设 $\alpha$ 为正整数, 且反常积分 $\displaystyle{\int_{0}^{+\infty}\dfrac{\ln(1+x^{2})}{x^{\alpha}}dx}$ 收敛,
+	求 $\displaystyle{\int_{0}^{+\infty}\dfrac{\ln(1+x^{2})}{x^{\alpha}}dx}$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设 $f(x)$ 在 $[0,+\infty)$ 连续且单调,$f(x+2)-f(x)=4(x+2),f(0)=1$,$\displaystyle{\int_{1}^{9}f^{-1}(x)dx=\dfrac{28}{3}}$,其中 $f^{-1}(x)$ 为 $f(x)$ 的反函数,
-求 $\displaystyle{\int_{1}^{3}f(x)dx}$
-\myspace{1}
+\begin{example}[][Exam: 38.4.2]
+	设 $f(x)$ 在 $[0,+\infty)$ 连续且单调,$f(x+2)-f(x)=4(x+2),f(0)=1, \displaystyle{\int_{1}^{9}f^{-1}(x)dx=\dfrac{28}{3}}$,
+	其中 $f^{-1}(x)$ 为 $f(x)$ 的反函数,求 $\displaystyle{\int_{1}^{3}f(x)dx}$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 23}}}
 
-1. 求曲线 $y=\dfrac{1}{x}$ 与直线 $y=x$ 及 $y=2$ 所围区域绕 $y=2$ 旋转所得旋转体的体积
-\myspace{1}
+\textcolor{purplea}{December 23}
+
+\begin{example}[][Exam: 38.4.3]
+	求曲线 $y=\dfrac{1}{x}$ 与直线 $y=x$ 及 $y=2$ 所围区域绕 $y=2$ 旋转所得旋转体的体积
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设曲线 $y=\sin x(0\leq x\leq n\pi,n=1,2,\cdots)$ 和 $x$ 轴围成的区域为 $A$,区域 $A$ 绕 $y$ 轴旋转所得旋转体体积为 $S_{n}$
+\begin{example}[][Exam: 38.4.4]
+	设曲线 $y=\sin x(0\leq x\leq n\pi,n=1,2,\cdots)$ 和 $x$ 轴围成的区域为 $A$,区域 $A$ 绕 $y$ 轴旋转所得旋转体体积为 $S_{n}$
 
 (1). 求 $S_{n}$
 
 (2). 求极限 $\lim\limits_{n\to\infty}[\dfrac{S_{1}}{n^{3}+1^{3}}+\dfrac{S_{2}}{n^{3}+2^{3}}+\cdots+\dfrac{S_{n}}{n^{3}+n^{3}}]$
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 24}}}
 
-1. 设 $f(x),g(x)$ 在 $[0,1]$ 上连续,在 $(0,1)$ 内可导,且 $\displaystyle{\int_{0}^{1}f(x)dx=3\int_{\frac{2}{3}}^{1}f(x)dx}$,试证明:$\exists \xi,\eta\in(0,1),\xi\neq \eta,\ s.t.\ f'(\xi)=g'(\xi)[f(\eta)-f(\xi)]$
-\myspace{1}
+\textcolor{purplea}{December 24}
+
+\begin{example}[][Exam: 38.4.5]
+	设 $f(x),g(x)$ 在 $[0,1]$ 上连续,在 $(0,1)$ 内可导,且 $\displaystyle{\int_{0}^{1}f(x)dx=3\int_{\frac{2}{3}}^{1}f(x)dx}$,证明:
+	$$\exists \xi,\eta\in(0,1),\xi\neq \eta,\ s.t.\ f'(\xi)=g'(\xi)[f(\eta)-f(\xi)]$$
+\end{example}
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设函数 $f(x)$ 在闭区间 $[a,b]$ 上有连续导数,证明:
+\begin{example}[][Exam: 38.4.6]
+	设函数 $f(x)$ 在闭区间 $[a,b]$ 上有连续导数,证明:
 $$\lim\limits_{n\to\infty}n[\int_{a}^{b}f(x)dx-\dfrac{b-a}{n}\sum\limits_{k=1}^{n}f(a+\dfrac{k(b-a)}{n})]=\dfrac{b-a}{2}[f(a)-f(b)]$$
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 25}}}
 
-1. 设函数 $f(x)$ 在 $[0,\pi]$ 上连续
+\textcolor{purplea}{December 25}
+
+\begin{example}[][Exam: 38.4.7]
+	设函数 $f(x)$ 在 $[0,\pi]$ 上连续
 
 (1). 证明 $\displaystyle{\lim\limits_{n\to +\infty}\int_{0}^{\pi}f(x)|\sin nx|dx=\dfrac{\pi}{2}\int_{0}^{\pi}f(x)dx}$
 
 (2). 求极限 $\displaystyle{\lim\limits_{n\to +\infty}\int_{0}^{\pi}|\sin nx|\ln(1+x)dx}$ 
-\myspace{1}
+\end{example}
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设函数 $f(x,y)=
+\begin{example}[][Exam: 38.4.8]
+	设函数 $f(x,y)=
 \begin{cases}
-	\dfrac{(x+y)\sqrt{|xy|}}{\sqrt{x^{2}+y^{2}}}, &(x,y)\neq (0,0)\\
-	0, &(x,y)=(0,0)
+	\dfrac{(x+y)\sqrt{|xy|}}{\sqrt{x^{2}+y^{2}}} & (x,y)\neq (0,0)\\
+	0 & (x,y)=(0,0)
 \end{cases}$,则 $f(x)$ 在点 $(0,0)$处
 \begin{itemize}
 	\item A. 不连续
@@ -569,171 +643,194 @@ $$\lim\limits_{n\to\infty}n[\int_{a}^{b}f(x)dx-\dfrac{b-a}{n}\sum\limits_{k=1}^{
 	\item C. 两个偏导数存在但不可微
 	\item D. 可微
 \end{itemize} 
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 26}}}
 
-1. $\lim\limits_{x\to 0\\y\to 0}\dfrac{f(x,y)-f(0,0)}{\sqrt{x^{2}+y^{2}}}=0$ 是函数 $f(x,y)$ 在 $(0,0)$ 点可微的:
+\textcolor{purplea}{December 26}
+
+\begin{example}[][Exam: 38.4.9]
+	$\lim\limits_{x\to 0\\y\to 0}\dfrac{f(x,y)-f(0,0)}{\sqrt{x^{2}+y^{2}}}=0$ 是函数 $f(x,y)$ 在 $(0,0)$ 点可微的:
 \begin{itemize}
 	\item A. 充分必要条件
 	\item B. 必要条件但非充分条件
 	\item C. 充分条件但非必要条件
 	\item D. 既非充分也非必要条件
 \end{itemize} 
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设 $f_{x}(x_{0},y_{0})$ 存在,$f_{y}(x_{0},y_{0})$ 在点 $(x_{0},y_{0})$ 处连续, 证明: $f(x,y)$ 在点 $(x_{0},y_{0})$ 处可微
-\myspace{1}
+\begin{example}[][Exam: 38.4.10]
+	设 $f_{x}(x_{0},y_{0})$ 存在,$f_{y}(x_{0},y_{0})$ 在点 $(x_{0},y_{0})$ 处连续, 证明: $f(x,y)$ 在点 $(x_{0},y_{0})$ 处可微
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 27}}}
 
-1. 设 $u=u(\sqrt{x^{2}+y^{2}})$ 具有连续的二阶偏导数,且满足 $\dfrac{\partial^{2} u}{\partial x^{2}}+\dfrac{\partial^{2} u}{\partial x^{2}}-\dfrac{1}{x}\dfrac{\partial u}{\partial x}+u=x^{2}+y^{2}$,
-试求函数 $u$ 的表达式 
-\myspace{1}
+\textcolor{purplea}{December 27}
+
+\begin{example}[][Exam: 38.4.11]
+	设 $u=u(\sqrt{x^{2}+y^{2}})$ 具有连续的二阶偏导数, 且满足 
+	$\dfrac{\partial^{2} u}{\partial x^{2}}+\dfrac{\partial^{2} u}{\partial x^{2}}-\dfrac{1}{x}\dfrac{\partial u}{\partial x}+u=x^{2}+y^{2}$,
+	试求函数 $u$ 的表达式 
+\end{example}
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设 $f(x,y)$ 有二阶连续导数,$g(x,y)=f(e^{xy},x^{2}+y^{2})$ 且 $\lim\limits_{\substack{x\to 1\\ y\to 0}}\dfrac{f(x,y)+x+y-1}{\sqrt{(x-1)^{2}+y^{2}}}=0$,
-证明: $g(x,y)$ 在 $(0,0)$ 点取得极值,判断此极值是极大值还是极小值, 并求出此极值
-\myspace{1}
+\begin{example}[][Exam: 38.4.12]
+	设 $f(x,y)$ 有二阶连续导数,$g(x,y)=f(e^{xy},x^{2}+y^{2})$ 且 $\lim\limits_{\substack{x\to 1\\ y\to 0}}\dfrac{f(x,y)+x+y-1}{\sqrt{(x-1)^{2}+y^{2}}}=0$,
+	证明: $g(x,y)$ 在 $(0,0)$ 点取得极值,判断此极值是极大值还是极小值, 并求出此极值
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
 
-\hl{\textbf{\textit{December 28}}}
+\textcolor{purplea}{December 28}
 
-1. 设区域 $D$ 由 $x^{2}+y^{2}\leq 2x+2y$ 所确定,求 $\displaystyle{\iint\limits_{D}[x(1-y^{3})+y(1+x^{3})]d\sigma}$
-\myspace{1}
+\begin{example}[][Exam: 38.4.13]
+	设区域 $D$ 由 $x^{2}+y^{2}\leq 2x+2y$ 所确定,求 $\displaystyle{\iint\limits_{D}[x(1-y^{3})+y(1+x^{3})]d\sigma}$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设 $D=\{(x,y)|0\leq x\leq 2,0\leq y\leq 2\}$
+\begin{example}[][Exam: 38.4.14]
+	设 $D=\{(x,y)|0\leq x\leq 2,0\leq y\leq 2\}$
 
 (1). 计算 $\displaystyle{b=\iint\limits_{D}|xy-1|d\sigma}$
 
-(2). 设 $f(x,y)$ 在 $D$ 上连续,且 $\displaystyle{\iint\limits_{D}f(x,y)d\sigma=0,\iint\limits_{D}xyf(x,y)d\sigma=1}$,证明: $\exists (\xi,\eta)\in D,\ s.t.\ |f(\xi,\eta)|\geq \dfrac{1}{b}$
-\myspace{1}
+(2). 设 $f(x,y)$ 在 $D$ 上连续,且 $\displaystyle{\iint\limits_{D}f(x,y)d\sigma=0,\iint\limits_{D}xyf(x,y)d\sigma=1}$,
+证明: $\exists (\xi,\eta)\in D,\ s.t.\ |f(\xi,\eta)|\geq \dfrac{1}{b}$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-3. 求 $\displaystyle{I=\oint\limits_{L}(y^{2}+z^{2})dx+(z^{2}+x^{2})dy+(x^{2}+y^{2})dz}$, 其中 $L$ 是球面 $x^{2}+y^{2}+z^{2}=2bx$ 与柱面 $x^{2}+y^{2}=2ax(b>a>0)$ 的交线($z\geq 0$),
-$L$ 的方向规定为沿 $L$ 的方向运动时,从 $z$ 轴正往下看,曲线 $L$ 所围球面部分总在左边
-\myspace{1}
+\begin{example}[][Exam: 38.4.15]
+	求 $\displaystyle{I=\oint\limits_{L}(y^{2}+z^{2})dx+(z^{2}+x^{2})dy+(x^{2}+y^{2})dz}$, 
+	其中 $L$ 是球面 $x^{2}+y^{2}+z^{2}=2bx$ 与柱面 $x^{2}+y^{2}=2ax(b>a>0)$ 的交线($z\geq 0$),
+	$L$ 的方向规定为沿 $L$ 的方向运动时,从 $z$ 轴正往下看,曲线 $L$ 所围球面部分总在左边
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 29}}}
 
-1. 设 $f(x)$ 有一阶连续导数,$(xy-yf(x))dx+(f(x)+y^{2})dy=du(x,y)$,其中 $f(0)=-1,u(0,0)=0$,则函数 $u(x,y)$ 在条件 $xy=1,x>0$ 下最值情况:
+\textcolor{purplea}{December 29}
+
+\begin{example}[][Exam: 38.4.16]
+	设 $f(x)$ 有一阶连续导数,$(xy-yf(x))dx+(f(x)+y^{2})dy=du(x,y)$,其中 $f(0)=-1,u(0,0)=0$,则函数 $u(x,y)$ 在条件 $xy=1,x>0$ 下最值情况:
 \begin{itemize}
 	\item A. 最大值为 $\dfrac{5}{3}$
 	\item B. 最大值为 $5$
 	\item C. 最小值为 $-3$
 	\item D. 最小值为 $\dfrac{1}{3}$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设函数 $f(x)$ 在 $[0,+\infty)$ 上可导,区域 $D$ 由不等式 $x^{2}+y^{2}\leq t^{2}(t\geq 0),x\geq 0,y\geq 0$ 所确定,
+\begin{example}[][Exam: 38.4.17]
+	设函数 $f(x)$ 在 $[0,+\infty)$ 上可导,区域 $D$ 由不等式 $x^{2}+y^{2}\leq t^{2}(t\geq 0),x\geq 0,y\geq 0$ 所确定,
 且 $\displaystyle{f(t)=2\iint\limits_{D}[(x-1)^{2}+(y+1)^{2}]f(\sqrt{x^{2}+y^{2}})dxdy+\dfrac{t^{4}}{4}+t^{2}}$, 求 $f(x)$
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-3. 设 $f(x,y)$ 连续,且 $\displaystyle{f(x,y)=x^{2}-y^{2}+\int\limits_{L}\dfrac{yf(x,y)dx+xf(x,y)dy}{x^{2}+y^{2}}}$,其中 $L$ 是从点 $A(-1,0)$ 到 $B(1,0)$ 的上半圆周 $y=\sqrt{1-x^{2}}$,求 $f(x,y)$
-\myspace{1}
+\begin{example}[][Exam: 38.4.18]
+	设 $f(x,y)$ 连续,且 $\displaystyle{f(x,y)=x^{2}-y^{2}+\int\limits_{L}\dfrac{yf(x,y)dx+xf(x,y)dy}{x^{2}+y^{2}}}$,
+	其中 $L$ 是从点 $A(-1,0)$ 到 $B(1,0)$ 的上半圆周 $y=\sqrt{1-x^{2}}$,求 $f(x,y)$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 30}}}
 
-1. 设函数 $f(x)$ 满足 $xf'(x)-3f(x)+6x^{2}=0$,且由曲线 $y=f(x)$,直线 $x=1$ 与 $x$ 轴围成的平面图形 $D$ 绕 $x$ 轴旋转一周所得旋转体体积最小,求 $D$ 的面积
-\myspace{1}
+\textcolor{purplea}{December 30}
+
+\begin{example}[][Exam: 38.4.19]
+	设函数 $f(x)$ 满足 $xf'(x)-3f(x)+6x^{2}=0$,且由曲线 $y=f(x)$,直线 $x=1$ 与 $x$ 轴围成的平面图形 $D$ 绕 $x$ 轴旋转一周所得旋转体体积最小,求 $D$ 的面积
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 下列级数中条件收敛的是:
+\begin{example}[][Exam: 38.4.20]
+	下列级数中条件收敛的是:
 \begin{itemize}
 	\item A. $\sum\limits_{n=1}^{\infty}\ln(1+\dfrac{(-1)^{n}}{\sqrt{n}})$
 	\item B. $\sum\limits_{n=1}^{\infty}\dfrac{(-1)^{n}}{\sqrt{n}}\ln(1+\dfrac{1}{n})$
 	\item C. $\sum\limits_{n=1}^{\infty}\dfrac{(-1)^{n}[(-1)^{n}+\ln n]}{n}$
 	\item D. $\sum\limits_{n=1}^{\infty}\dfrac{(-1)^{n}}{n\ln n}$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-3. 已知函数 $f(x,y)$ 在点 $(1,1)$ 处的梯度 $\mathbf{grad} f(1,1)=2i-j$,求函数 $f(x,y)$ 在该点沿曲线 $e^{x-1}+xy=2$ 在该点处切线方向(与 $y$ 轴正向夹角小于 $\frac{\pi}{2}$)的方向导数
-\myspace{1}
+\begin{example}[][Exam: 38.4.21]
+	已知函数 $f(x,y)$ 在点 $(1,1)$ 处的梯度 $\mathbf{grad} f(1,1)=2i-j$,
+	求函数 $f(x,y)$ 在该点沿曲线 $e^{x-1}+xy=2$ 在该点处切线方向(与 $y$ 轴正向夹角小于 $\frac{\pi}{2}$)的方向导数
+\end{example}
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{December 31}}}
 
-1. 下列结论正确的是:
-\begin{itemize}
-	\item A. 若 $\sum\limits_{n=0}^{\infty}a_{n}x^{n},\sum\limits_{n=0}^{\infty}b_{n}x^{n}$ 的收敛半径分别是 $R_{1},R_{2}$,则 $\sum\limits_{n=0}^{\infty}(a_{n}\pm b_{n})x^{n}$ 的收敛半径为 $R=\min\{R_{1},R_{2}\}$
-	\item B. 若幂级数 $\sum\limits_{n=0}^{\infty}a_{n}x^{n}$ 的收敛半径为 $R=2$, 则 $\lim\limits_{n\to\infty}|\dfrac{a_{n+1}}{a_{n}}|=\dfrac{1}{2}$
-	\item C. 若幂级数 $\sum\limits_{n=0}^{\infty}a_{n}x^{n}$ 的收敛半径为 $R$, 则幂级数 $\sum\limits_{n=0}^{\infty}a_{2n}x^{2n}$ 的收敛半径为 $\sqrt{R}$
-	\item D. 若幂级数 $\sum\limits_{n=0}^{\infty}a_{n}x^{n}$ 的收敛半径为 $R$, 则幂级数 $\sum\limits_{n=0}^{\infty}a_{n}x^{2n}$ 的收敛半径为 $\sqrt{R}$
-\end{itemize}
-\myspace{1}
+\textcolor{purplea}{December 31}
+
+\begin{example}[][Exam: 38.4.22]
+	下列结论正确的是:
+	\begin{itemize}
+		\item A. 若 $\sum\limits_{n=0}^{\infty}a_{n}x^{n},\sum\limits_{n=0}^{\infty}b_{n}x^{n}$ 的收敛半径分别是 $R_{1},R_{2}$,则 $\sum\limits_{n=0}^{\infty}(a_{n}\pm b_{n})x^{n}$ 的收敛半径为 $R=\min\{R_{1},R_{2}\}$
+		\item B. 若幂级数 $\sum\limits_{n=0}^{\infty}a_{n}x^{n}$ 的收敛半径为 $R=2$, 则 $\lim\limits_{n\to\infty}|\dfrac{a_{n+1}}{a_{n}}|=\dfrac{1}{2}$
+		\item C. 若幂级数 $\sum\limits_{n=0}^{\infty}a_{n}x^{n}$ 的收敛半径为 $R$, 则幂级数 $\sum\limits_{n=0}^{\infty}a_{2n}x^{2n}$ 的收敛半径为 $\sqrt{R}$
+		\item D. 若幂级数 $\sum\limits_{n=0}^{\infty}a_{n}x^{n}$ 的收敛半径为 $R$, 则幂级数 $\sum\limits_{n=0}^{\infty}a_{n}x^{2n}$ 的收敛半径为 $\sqrt{R}$
+	\end{itemize}
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设 $a_{0}=0.a_{1}=1.a_{n+1}=3a_{n}+4a_{n-1}(n=1,2,3,\cdots)$
+\begin{example}[][Exam: 38.4.23]
+	设 $a_{0}=0, a_{1}=1, a_{n+1}=3a_{n}+4a_{n-1}(n=1,2,3,\cdots)$
 
 (1). 求极限 $\lim\limits_{n\to\infty}\dfrac{a_{n+1}}{a_{n}}$
 
 (2). 求幂级数 $\sum\limits_{n=1}^{\infty}\dfrac{a_{n}}{n!}x^{n}$ 的收敛域以及和函数
-\myspace{1}
+\end{example}
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
+\begin{example}[][Exam: 38.4.24]
+	设 $f(x)$ 在 $[0,+\infty)$ 上连续,且 $\displaystyle{\int_{0}^{+\infty}f^{2}(x)dx}$ 收敛,
+	令 $\displaystyle{a_{n}=\int_{0}^{1}f(nx)dx}$,
+	证明: $\sum\limits_{n=1}^{\infty}\dfrac{a_{n}^{2}}{n^{\alpha}}(\alpha>0)$ 收敛
+\end{example}
 
-3. 设 $f(x)$ 在 $[0,+\infty)$ 上连续,且 $\displaystyle{\int_{0}^{+\infty}f^{2}(x)dx}$ 收敛,令 $\displaystyle{a_{n}=\int_{0}^{1}f(nx)dx}$,
-证明: $\sum\limits_{n=1}^{\infty}\dfrac{a_{n}^{2}}{n^{\alpha}}(\alpha>0)$ 收敛
-\myspace{1}
 \begin{solution}
 	
 \end{solution}
-\myspace{1}

@@ -1,24 +1,23 @@
 \chapterimage{chap33.jpg}
 \chapter{July}
 \section{Week \Rmnum{1}}
+\textcolor{orange}{July 1}
 
-\hl{\textbf{\textit{July 1}}}
-
-1. 求极限 $\lim\limits_{x\rightarrow +\infty}\left[ \dfrac{\ln(x+\sqrt{x^2+1})}{\ln(x+\sqrt{x^2-1})}\right]^{x^2\ln x} $
+1. 求极限 $\lim\limits_{x\to +\infty}\left[ \dfrac{\ln(x+\sqrt{x^2+1})}{\ln(x+\sqrt{x^2-1})}\right]^{x^2\ln x} $
 \myspace{1}
 \begin{solution}
 	
 	原极限等价于: 
 	\begin{eqnarray*}
-		I&=&\lim\limits_{x\rightarrow+\infty}e^{x^2\ln x\ln\left[1+\dfrac{\ln(x+\sqrt{x^2+1})-\ln(x+\sqrt{x^2-1})}{\ln(x+\sqrt{x^2-1})} \right] }\\
-		I_{1}&=&\lim\limits_{x\rightarrow+\infty}x^2\ln x\ln\left[1+\dfrac{\ln(x+\sqrt{x^2+1})-\ln(x+\sqrt{x^2-1})}{\ln(x+\sqrt{x^2-1})} \right] \\
-		&=&\lim\limits_{x\rightarrow+\infty}x^2\ln x(\dfrac{\ln(x+\sqrt{x^2+1})-\ln(x+\sqrt{x^2-1})}{\ln(x+\sqrt{x^2-1})})\\
-		&=&\lim\limits_{x\rightarrow+\infty}x^2\ln x(\dfrac{(\sqrt{x^2+1}-\sqrt{x^2-1})}{\xi \ln(2x)}), \xi\in(x+\sqrt{x^2-1},x+\sqrt{x^2+1})\\
-		&=&\lim\limits_{x\rightarrow+\infty}\dfrac{x}{\xi}\dfrac{2x}{(\sqrt{x^2+1}+\sqrt{x^2-1})}\\
-		&=&\lim\limits_{x\rightarrow+\infty}\dfrac{x}{\xi}
+		I&=&\lim\limits_{x\to+\infty}e^{x^2\ln x\ln\left[1+\dfrac{\ln(x+\sqrt{x^2+1})-\ln(x+\sqrt{x^2-1})}{\ln(x+\sqrt{x^2-1})} \right] }\\
+		I_{1}&=&\lim\limits_{x\to+\infty}x^2\ln x\ln\left[1+\dfrac{\ln(x+\sqrt{x^2+1})-\ln(x+\sqrt{x^2-1})}{\ln(x+\sqrt{x^2-1})} \right] \\
+		&=&\lim\limits_{x\to+\infty}x^2\ln x(\dfrac{\ln(x+\sqrt{x^2+1})-\ln(x+\sqrt{x^2-1})}{\ln(x+\sqrt{x^2-1})})\\
+		&=&\lim\limits_{x\to+\infty}x^2\ln x(\dfrac{(\sqrt{x^2+1}-\sqrt{x^2-1})}{\xi \ln(2x)}), \xi\in(x+\sqrt{x^2-1},x+\sqrt{x^2+1})\\
+		&=&\lim\limits_{x\to+\infty}\dfrac{x}{\xi}\dfrac{2x}{(\sqrt{x^2+1}+\sqrt{x^2-1})}\\
+		&=&\lim\limits_{x\to+\infty}\dfrac{x}{\xi}
 	\end{eqnarray*}
 	
-	我们用夹逼定理: $\lim\limits_{x\rightarrow+\infty}\dfrac{x}{\xi}=\dfrac{1}{2}$
+	我们用夹逼定理: $\lim\limits_{x\to+\infty}\dfrac{x}{\xi}=\dfrac{1}{2}$
 	
 	原极限$I=e^{\dfrac{1}{2}}$
 \end{solution}
@@ -55,17 +54,17 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 2}}}
+\textcolor{orange}{July 2}
 
-1. 设$f(x)$连续,$\lim\limits_{x\rightarrow 0}\dfrac{f(x)}{x}=1$,求极限$\lim\limits_{x\rightarrow 0 }\left[ 1+\int_{0}^{x}tf(x^2-t^2)dt\right]^{\frac{1}{(\tan x-x)\ln(1+x)}} $
+1. 设$f(x)$连续,$\lim\limits_{x\to 0}\dfrac{f(x)}{x}=1$,求极限$\lim\limits_{x\to 0 }\left[ 1+\int_{0}^{x}tf(x^2-t^2)dt\right]^{\frac{1}{(\tan x-x)\ln(1+x)}} $
 \myspace{1}
 \begin{solution}
 	
 	原极限等价于: 
 	\begin{eqnarray*}
-		I&=&\lim\limits_{x\rightarrow 0}e^{\dfrac{3\int_{0}^{x^2}-\frac{1}{2}f(x^2-t^2)d(x^2-t^2)}{x^4}}\\
-		&=&\lim\limits_{x\rightarrow 0}e^{\dfrac{\dfrac{3}{2}\int_{0}^{x^2}f(u)du}{x^4}}\\
-		&=&\lim\limits_{x\rightarrow 0}e^{\dfrac{3f(x^2)}{4x^2}}\\
+		I&=&\lim\limits_{x\to 0}e^{\dfrac{3\int_{0}^{x^2}-\frac{1}{2}f(x^2-t^2)d(x^2-t^2)}{x^4}}\\
+		&=&\lim\limits_{x\to 0}e^{\dfrac{\dfrac{3}{2}\int_{0}^{x^2}f(u)du}{x^4}}\\
+		&=&\lim\limits_{x\to 0}e^{\dfrac{3f(x^2)}{4x^2}}\\
 		&=&e^{\frac{3}{4}}
 	\end{eqnarray*}
 \end{solution}
@@ -103,7 +102,7 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 3}}}
+\textcolor{orange}{July 3}
 
 1. 设$D=\{(x,y)|0\leq x\leq 2,0\leq y\leq 2\}$,$f(x,y)$在$D$上连续,$\iint\limits_{D}f(x,y)dxdy=0$,$\iint\limits_{D}xyf(x,y)dxdy=1$,证明: $\exists (\xi,\eta)\in D,\ s.t. |f'(\xi,\eta)|\geq \dfrac{2}{4\ln 2+3}$
 \myspace{1}
@@ -162,15 +161,15 @@
 \end{solution}
 \myspace{1}
 
-2. 求极限: $\lim\limits_{x\rightarrow+\infty}(x^{\frac{1}{x}}-1)^{\frac{1}{\ln x}}$
+2. 求极限: $\lim\limits_{x\to+\infty}(x^{\frac{1}{x}}-1)^{\frac{1}{\ln x}}$
 \myspace{1}
 \begin{solution}
 	
 	原极限等价于: 
 	\begin{eqnarray*}
-		I&=&\lim\limits_{x\rightarrow+\infty}e^{\dfrac{\ln(e^{\frac{\ln x}{x}}-1)}{\ln x}}\\
-		&\overset{L}{=}&\lim\limits_{x\rightarrow+\infty}e^{\dfrac{(1-\ln x)e^{\frac{\ln x}{x}}}{x(e^{\frac{\ln x}{x}}-1)}}\\
-		&=&\lim\limits_{x\rightarrow+\infty}e^{\dfrac{(1-\ln x)e^{\frac{\ln x}{x}}}{\ln x}}\\
+		I&=&\lim\limits_{x\to+\infty}e^{\dfrac{\ln(e^{\frac{\ln x}{x}}-1)}{\ln x}}\\
+		&\overset{L}{=}&\lim\limits_{x\to+\infty}e^{\dfrac{(1-\ln x)e^{\frac{\ln x}{x}}}{x(e^{\frac{\ln x}{x}}-1)}}\\
+		&=&\lim\limits_{x\to+\infty}e^{\dfrac{(1-\ln x)e^{\frac{\ln x}{x}}}{\ln x}}\\
 		&=&e^{-1}
 	\end{eqnarray*}
 	\begin{anymark}[注]
@@ -181,13 +180,13 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 4}}}
+\textcolor{orange}{July 4}
 
-1. 已知$a_{n}=\sum\limits_{k=1}^{n}\dfrac{1}{k^2}$,$b_{n}=\sum\limits_{k=1}^{n}\dfrac{1}{(2k-1)^2}$,且$\lim\limits_{n\rightarrow +\infty}a_{n}=\dfrac{\pi^2}{6}$
+1. 已知$a_{n}=\sum\limits_{k=1}^{n}\dfrac{1}{k^2}$,$b_{n}=\sum\limits_{k=1}^{n}\dfrac{1}{(2k-1)^2}$,且$\lim\limits_{n\to +\infty}a_{n}=\dfrac{\pi^2}{6}$
 
 (1). 证明: $a_{2n}=\dfrac{1}{4}a_{n}+b_{n},\ (n=1,2,\cdots)$
 
-(2). 求$\lim\limits_{n\rightarrow+\infty}n\left( \dfrac{b_{n}}{a_{n}}-\dfrac{3}{4}\right) $
+(2). 求$\lim\limits_{n\to+\infty}n\left( \dfrac{b_{n}}{a_{n}}-\dfrac{3}{4}\right) $
 \myspace{1}
 \begin{solution}
 	
@@ -202,10 +201,10 @@
 	
 	(2).原极限等价于: 
 	\begin{eqnarray*}
-		I&=&\lim\limits_{n\rightarrow+\infty}n\left( \dfrac{a_{2n}-a_{n}}{a_{n}}\right)\\
-		&=&\dfrac{\lim\limits_{n\rightarrow+\infty}n(a_{2n}-a_{n})}{\lim\limits_{n\rightarrow+\infty}a_{n}}\\
-		&=&\dfrac{6}{\pi^2}\lim\limits_{n\rightarrow+\infty}n\left[ \dfrac{1}{(n+1)^2}+\dfrac{1}{(n+2)^2}+\cdots+\dfrac{1}{(n+k)^2}+\cdots+\dfrac{1}{(n+n)^2}\right]\\
-		&=& \dfrac{6}{\pi^2}\lim\limits_{n\rightarrow+\infty}\sum\limits_{k=1}^{n}\dfrac{1}{(1+\frac{k}{n})^2}\\
+		I&=&\lim\limits_{n\to+\infty}n\left( \dfrac{a_{2n}-a_{n}}{a_{n}}\right)\\
+		&=&\dfrac{\lim\limits_{n\to+\infty}n(a_{2n}-a_{n})}{\lim\limits_{n\to+\infty}a_{n}}\\
+		&=&\dfrac{6}{\pi^2}\lim\limits_{n\to+\infty}n\left[ \dfrac{1}{(n+1)^2}+\dfrac{1}{(n+2)^2}+\cdots+\dfrac{1}{(n+k)^2}+\cdots+\dfrac{1}{(n+n)^2}\right]\\
+		&=& \dfrac{6}{\pi^2}\lim\limits_{n\to+\infty}\sum\limits_{k=1}^{n}\dfrac{1}{(1+\frac{k}{n})^2}\\
 		&=&\dfrac{6}{\pi^2}(-\dfrac{1}{1+x})|_{0}^{1}\\
 		&=&\dfrac{3}{\pi^2}
 	\end{eqnarray*}
@@ -219,14 +218,14 @@
 \end{anymark}
 \myspace{1}
 
-2. 若$\lim\limits_{x\rightarrow 0}\dfrac{\cos(xe^x)-e^{-\frac{x^2}{2}e^{2x}}}{x^{\alpha}}=\beta\neq0$,求$\alpha,\beta$
+2. 若$\lim\limits_{x\to 0}\dfrac{\cos(xe^x)-e^{-\frac{x^2}{2}e^{2x}}}{x^{\alpha}}=\beta\neq0$,求$\alpha,\beta$
 \myspace{1}
 \begin{solution}
 	
 	原极限等价于: 
 	\begin{eqnarray*}
-		I&=&\lim\limits_{x\rightarrow 0}\dfrac{1-\frac{1}{2}x^2e^{2x}+\frac{1}{24}x^4e^{4x}-(1-\frac{1}{2}x^2e^{2x}+\frac{1}{8}x^4e^{4x})}{x^{\alpha}}\\
-		&=&\lim\limits_{x\rightarrow 0}\dfrac{-\frac{1}{12}x^4e^{4x}}{x^{\alpha}}\\
+		I&=&\lim\limits_{x\to 0}\dfrac{1-\frac{1}{2}x^2e^{2x}+\frac{1}{24}x^4e^{4x}-(1-\frac{1}{2}x^2e^{2x}+\frac{1}{8}x^4e^{4x})}{x^{\alpha}}\\
+		&=&\lim\limits_{x\to 0}\dfrac{-\frac{1}{12}x^4e^{4x}}{x^{\alpha}}\\
 		&=&\beta
 	\end{eqnarray*}
 	
@@ -234,7 +233,7 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 5}}}
+\textcolor{orange}{July 5}
 
 1. 求$\int_{0}^{+\infty}\dfrac{\ln x}{x^2+a^2}dx\ (a>0)$
 \myspace{1}
@@ -260,16 +259,16 @@
 \end{anymark}
 \myspace{1}
 
-2. 若$\lim\limits_{x\rightarrow 0}\dfrac{\cos 2x-\cos x\sqrt{\cos 2x}}{x^{\alpha}}=\beta\neq0$,求$\alpha,\beta$
+2. 若$\lim\limits_{x\to 0}\dfrac{\cos 2x-\cos x\sqrt{\cos 2x}}{x^{\alpha}}=\beta\neq0$,求$\alpha,\beta$
 \myspace{1}
 \begin{solution}
 	
 	原极限等价于: 
 	\begin{eqnarray*}
-		I&=&\lim\limits_{x\rightarrow 0}\dfrac{\cos^2 2x-\cos^2 x\cos 2x}{(\cos x+\cos x\sqrt{\cos 2x})x^{\alpha}}\\
-		&=&\lim\limits_{x\rightarrow 0}\dfrac{-\cos2x\sin^2 x}{(\cos x+\cos x\sqrt{\cos 2x})x^{\alpha}}\\
-		&=&\lim\limits_{x\rightarrow 0}\dfrac{-\cos 2x}{\cos x+\cos x\sqrt{\cos 2x}}\lim\limits_{x\rightarrow 0}\dfrac{\sin^2 x}{x^{\alpha}}\\
-		&=&-\dfrac{1}{2}\lim\limits_{x\rightarrow 0}\dfrac{\sin^2 x}{x^{\alpha}}\\
+		I&=&\lim\limits_{x\to 0}\dfrac{\cos^2 2x-\cos^2 x\cos 2x}{(\cos x+\cos x\sqrt{\cos 2x})x^{\alpha}}\\
+		&=&\lim\limits_{x\to 0}\dfrac{-\cos2x\sin^2 x}{(\cos x+\cos x\sqrt{\cos 2x})x^{\alpha}}\\
+		&=&\lim\limits_{x\to 0}\dfrac{-\cos 2x}{\cos x+\cos x\sqrt{\cos 2x}}\lim\limits_{x\to 0}\dfrac{\sin^2 x}{x^{\alpha}}\\
+		&=&-\dfrac{1}{2}\lim\limits_{x\to 0}\dfrac{\sin^2 x}{x^{\alpha}}\\
 		&=&\beta
 	\end{eqnarray*}
 	
@@ -277,7 +276,7 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 6}}}
+\textcolor{orange}{July 6}
 
 1. 设$f(x)=\dfrac{1}{1+3x+9x^2}$,求$f^{(100)}(0)$
 \myspace{1}
@@ -303,14 +302,14 @@
 \end{solution}
 \myspace{1}
 
-2. 如果$\lim\limits_{x\rightarrow 0}\dfrac{ax^2+bx+1-e^{x^2-2x}}{x^2}=2$,求$a,b$
+2. 如果$\lim\limits_{x\to 0}\dfrac{ax^2+bx+1-e^{x^2-2x}}{x^2}=2$,求$a,b$
 \myspace{1}
 \begin{solution}
 	
 	原极限等价于: 
 	\begin{eqnarray*}
-		I&=&\lim\limits_{x\rightarrow 0}\dfrac{ax^2+bx+1-(1+x^2-2x+\frac{1}{2}(x^2-2x)^2)}{x^2}\\
-		&=&\lim\limits_{x\rightarrow 0}\dfrac{(b+2)x+(a-3)x^2}{x^2}\\
+		I&=&\lim\limits_{x\to 0}\dfrac{ax^2+bx+1-(1+x^2-2x+\frac{1}{2}(x^2-2x)^2)}{x^2}\\
+		&=&\lim\limits_{x\to 0}\dfrac{(b+2)x+(a-3)x^2}{x^2}\\
 		&=&a-3
 	\end{eqnarray*}
 	
@@ -328,19 +327,19 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 7}}}
+\textcolor{orange}{July 7}
 
-1. 求极限$\lim\limits_{x\rightarrow 0}\dfrac{n!x^n-\sin x\sin 2x\cdots\sin nx}{x^{n+2}}$
+1. 求极限$\lim\limits_{x\to 0}\dfrac{n!x^n-\sin x\sin 2x\cdots\sin nx}{x^{n+2}}$
 \myspace{1}
 \begin{solution}
 	
 	原极限等价于: 
 	\begin{eqnarray*}
-		I&=&n!\lim\limits_{x\rightarrow 0}\dfrac{1-\frac{\sin x\sin 2x\cdots\sin nx}{n!x^n}}{x^2}\\
-		&=&n!\lim\limits_{x\rightarrow 0}\dfrac{1-\frac{\sin x}{x}\frac{\sin 2x}{2x}\cdots\frac{\sin nx}{nx}}{x^2}\\
-		&=&-n!\lim\limits_{x\rightarrow 0}\dfrac{\ln(\frac{\sin x}{x}\frac{\sin 2x}{2x}\cdots\frac{\sin nx}{nx})}{x^2}\\
-		&=&-n!\sum\limits_{k=1}^{n}\lim\limits_{x\rightarrow 0}\dfrac{\ln(1+\frac{\sin kx-kx}{kx})}{x^2}\\
-		&=&n!\sum\limits_{k=1}^{n}\lim\limits_{x\rightarrow 0}\dfrac{kx-\sin kx}{kx^3}\\
+		I&=&n!\lim\limits_{x\to 0}\dfrac{1-\frac{\sin x\sin 2x\cdots\sin nx}{n!x^n}}{x^2}\\
+		&=&n!\lim\limits_{x\to 0}\dfrac{1-\frac{\sin x}{x}\frac{\sin 2x}{2x}\cdots\frac{\sin nx}{nx}}{x^2}\\
+		&=&-n!\lim\limits_{x\to 0}\dfrac{\ln(\frac{\sin x}{x}\frac{\sin 2x}{2x}\cdots\frac{\sin nx}{nx})}{x^2}\\
+		&=&-n!\sum\limits_{k=1}^{n}\lim\limits_{x\to 0}\dfrac{\ln(1+\frac{\sin kx-kx}{kx})}{x^2}\\
+		&=&n!\sum\limits_{k=1}^{n}\lim\limits_{x\to 0}\dfrac{kx-\sin kx}{kx^3}\\
 		&=&n!\sum\limits_{k=1}^{n}(\dfrac{k^2}{6})\\
 		&=&n!\dfrac{n(n+1)(2n+1)}{36}\\
 		&=&\dfrac{n(2n+1)(n+1)!}{36}
@@ -348,16 +347,16 @@
 \end{solution}
 \myspace{1}
 
-2. 若$\lim\limits_{x\rightarrow 0}\left(\dfrac{\ln(x+\sqrt{x^2+1})+ax^2+bx^3}{x} \right)^{\frac{1}{x^2}}=e^2$,求$a,b$
+2. 若$\lim\limits_{x\to 0}\left(\dfrac{\ln(x+\sqrt{x^2+1})+ax^2+bx^3}{x} \right)^{\frac{1}{x^2}}=e^2$,求$a,b$
 \myspace{1}
 \begin{solution}
 	
 	原极限等价于: 
 	\begin{eqnarray*}
-		I&=&\lim\limits_{x\rightarrow 0}e^{\dfrac{\ln(\frac{\ln(x+\sqrt{1+x^2})+ax^2+bx^3-x}{x}+1)}{x^2}}\\
-		&=&\lim\limits_{x\rightarrow 0}e^{\dfrac{\ln(x+\sqrt{1+x^2})+ax^2+bx^3-x}{x^3}}\\
-		&=&e^{\lim\limits_{x\rightarrow 0}\dfrac{x-\frac{1}{6}x^3+o(x^3)+ax^2+bx^3-x}{x^3}}\\
-		&=&e^{\lim\limits_{x\rightarrow 0}\dfrac{(b-\frac{1}{6})x^3+o(x^3)+ax^2}{x^3}}\\
+		I&=&\lim\limits_{x\to 0}e^{\dfrac{\ln(\frac{\ln(x+\sqrt{1+x^2})+ax^2+bx^3-x}{x}+1)}{x^2}}\\
+		&=&\lim\limits_{x\to 0}e^{\dfrac{\ln(x+\sqrt{1+x^2})+ax^2+bx^3-x}{x^3}}\\
+		&=&e^{\lim\limits_{x\to 0}\dfrac{x-\frac{1}{6}x^3+o(x^3)+ax^2+bx^3-x}{x^3}}\\
+		&=&e^{\lim\limits_{x\to 0}\dfrac{(b-\frac{1}{6})x^3+o(x^3)+ax^2}{x^3}}\\
 		&=&e^2
 	\end{eqnarray*}
 	
@@ -374,7 +373,7 @@
 	\right. $
 \end{solution}
 \begin{anymark}[注]
-	$x\rightarrow 0,\ x\sim \ln(x+\sqrt{x^2+1})$
+	$x\to 0,\ x\sim \ln(x+\sqrt{x^2+1})$
 	
 	我们可以得到: 
 	$$[\ln(x+\sqrt{x^2+1})]'=\dfrac{1}{\sqrt{1+x^2}}=(1+x^2)^{\frac{1}{2}}=1-\dfrac{1}{2}x^2+\dfrac{3}{8}x^3+\cdots$$
@@ -386,7 +385,7 @@
 
 \section{Week \Rmnum{2}}
 
-\hl{\textbf{\textit{July 8}}}
+\textcolor{blue}{July 8}
 
 1. 设$n$阶矩阵$A,B$满足$AB+aA+bB+cE=O$,其中$ab\neq c$,证明: 
 
@@ -421,14 +420,14 @@
 \end{solution}
 \myspace{1}
 
-2. 已知常数$a>0,\ bc\neq 0$,使得$\lim\limits_{x\rightarrow+\infty}[x^a\ln(1+\frac{x}{b})-x]=c$,求$a,b,c$
+2. 已知常数$a>0,\ bc\neq 0$,使得$\lim\limits_{x\to+\infty}[x^a\ln(1+\frac{x}{b})-x]=c$,求$a,b,c$
 \myspace{1}
 \begin{solution}
 	
 	原极限等价于: 
 	\begin{eqnarray*}
-		I&=&\lim\limits_{x\rightarrow 0 }\dfrac{\ln(1+bx)-x^{a-1}}{x^a}\\
-		&=&\lim\limits_{x\rightarrow 0 }\dfrac{bx-\frac{1}{2}b^2x^2-x^{a-1}}{x^a}\\
+		I&=&\lim\limits_{x\to 0 }\dfrac{\ln(1+bx)-x^{a-1}}{x^a}\\
+		&=&\lim\limits_{x\to 0 }\dfrac{bx-\frac{1}{2}b^2x^2-x^{a-1}}{x^a}\\
 		&=&c
 	\end{eqnarray*}
 	
@@ -448,17 +447,17 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 9}}}
+\textcolor{blue}{July 9}
 
 1. 求极限
-$$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\dfrac{\sin y}{y}dy+\int_{\frac{1}{3}}^{\frac{3}{6n}}\dfrac{\sin y}{y}dy+\cdots+\int_{\frac{1}{3}}^{\frac{(2n-1)}{6n}}\dfrac{\sin y}{y}dy \right]$$
+$$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\dfrac{\sin y}{y}dy+\int_{\frac{1}{3}}^{\frac{3}{6n}}\dfrac{\sin y}{y}dy+\cdots+\int_{\frac{1}{3}}^{\frac{(2n-1)}{6n}}\dfrac{\sin y}{y}dy \right]$$
 \myspace{1}
 \begin{solution}
 	
 	原极限等价于: 
 	\begin{eqnarray*}
-		I&=&\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\sum\limits_{k=1}^{n}\int_{\frac{1}{3}}^{\frac{2k-1}{6n}}\dfrac{\sin y}{y}dy\\
-		&=&\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\sum\limits_{k=1}^{n}f(\frac{2k-1}{2n})\\
+		I&=&\lim\limits_{n\to +\infty}\dfrac{1}{n}\sum\limits_{k=1}^{n}\int_{\frac{1}{3}}^{\frac{2k-1}{6n}}\dfrac{\sin y}{y}dy\\
+		&=&\lim\limits_{n\to +\infty}\dfrac{1}{n}\sum\limits_{k=1}^{n}f(\frac{2k-1}{2n})\\
 		&=&\int_{0}^{1}[\int_{\frac{1}{3}}^{\frac{1}{3}x}\dfrac{\sin y}{y}dy]dx\\
 		&=&-\int_{0}^{\frac{1}{3}}dy\int_{0}^{3y}\dfrac{\sin y}{y}dx\\
 		&=&-\int_{0}^{\frac{1}{3}}3\sin ydy\\
@@ -477,7 +476,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 10}}}
+\textcolor{blue}{July 10}
 
 1. $s>0$,证明: $\dfrac{n^{s+1}}{s+1}<1^s+2^s+\cdots+n^s<\dfrac{(n+1)^{s+1}}{s+1}$
 \myspace{1}
@@ -559,22 +558,22 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-2. 求极限$\lim\limits_{n\rightarrow +\infty}\dfrac{1^{p+1}+2^{p+1}+\cdots+n^{p+1}}{n(1^p+2^p+\cdots+n^p)}(p>0)$
+2. 求极限$\lim\limits_{n\to +\infty}\dfrac{1^{p+1}+2^{p+1}+\cdots+n^{p+1}}{n(1^p+2^p+\cdots+n^p)}(p>0)$
 \myspace{1}
 \begin{solution}
 	
 	原极限等价于: 
 	\begin{eqnarray*}
-		I&=&\lim\limits_{n\rightarrow +\infty}\dfrac{(\frac{1}{n})^{p+1}+(\frac{2}{n})^{p+1}+\cdots+(\frac{n}{n})^{p+1}}{(\frac{1}{n})^{p}+(\frac{2}{n})^{p}+\cdots+(\frac{n}{n})^{p}}\\
-		&=&\lim\limits_{n\rightarrow +\infty}\dfrac{\frac{1}{n}[(\frac{1}{n})^{p+1}+(\frac{2}{n})^{p+1}+\cdots+(\frac{n}{n})^{p+1}]}{\frac{1}{n}[(\frac{1}{n})^{p}+(\frac{2}{n})^{p}+\cdots+(\frac{n}{n})^{p}]}\\
-		&=&\lim\limits_{n\rightarrow +\infty}\dfrac{\frac{1}{n}\sum\limits_{k=1}^{n}(\frac{k}{n})^{p+1}}{\frac{1}{n}\sum\limits_{k=1}^{n}(\frac{k}{n})^{p}}\\
+		I&=&\lim\limits_{n\to +\infty}\dfrac{(\frac{1}{n})^{p+1}+(\frac{2}{n})^{p+1}+\cdots+(\frac{n}{n})^{p+1}}{(\frac{1}{n})^{p}+(\frac{2}{n})^{p}+\cdots+(\frac{n}{n})^{p}}\\
+		&=&\lim\limits_{n\to +\infty}\dfrac{\frac{1}{n}[(\frac{1}{n})^{p+1}+(\frac{2}{n})^{p+1}+\cdots+(\frac{n}{n})^{p+1}]}{\frac{1}{n}[(\frac{1}{n})^{p}+(\frac{2}{n})^{p}+\cdots+(\frac{n}{n})^{p}]}\\
+		&=&\lim\limits_{n\to +\infty}\dfrac{\frac{1}{n}\sum\limits_{k=1}^{n}(\frac{k}{n})^{p+1}}{\frac{1}{n}\sum\limits_{k=1}^{n}(\frac{k}{n})^{p}}\\
 		&=&\dfrac{\int_{0}^{1}\dfrac{x^{p+2}}{p+2}dx}{\int_{0}^{1}\dfrac{x^{p+1}}{p+1}dx}\\
 		&=&\dfrac{p+1}{p+2}
 	\end{eqnarray*}
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 11}}}
+\textcolor{blue}{July 11}
 
 1. 已知矩阵$A=\left[ \begin{matrix}
 	0&-1&1\\
@@ -694,7 +693,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 12}}}
+\textcolor{blue}{July 12}
 
 1. 设$A$是任意的$m\times n$矩阵,证明: $\text{方程组}A^{T}Ax=A^{T}b$一定有解.
 \myspace{1}
@@ -743,7 +742,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 13}}}
+\textcolor{blue}{July 13}
 
 1. 求$f(x)=\sqrt{4x^2+x}\ln(2+\dfrac{1}{x})$的斜渐近线.
 \myspace{1}
@@ -754,32 +753,32 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 	(1).
 	$$\left\lbrace
 	\begin{array}{l}
-		a=\lim\limits_{x\rightarrow+\infty}\dfrac{f(x)}{x}\\
-		b=\lim\limits_{x\rightarrow+\infty}(f(x)-ax)
+		a=\lim\limits_{x\to+\infty}\dfrac{f(x)}{x}\\
+		b=\lim\limits_{x\to+\infty}(f(x)-ax)
 	\end{array}
 	\right. $$
 	
 	我们得到: 
 	$$\left\lbrace
 	\begin{array}{l}
-		a=\lim\limits_{x\rightarrow+\infty}\sqrt{4+\dfrac{1}{x}}\ln(2+\dfrac{1}{x})=2\ln 2\\
-		b=\lim\limits_{x\rightarrow+\infty}[\sqrt{4x^2+x}\ln(2+\dfrac{1}{x})-2\ln 2 x]=\lim\limits_{t\rightarrow 0^{+}}\dfrac{\sqrt{4+t}\ln(2+t)-2\ln 2}{t}=\lim\limits_{t\rightarrow 0^{+}}(\dfrac{\ln(2+t)}{2\sqrt{4+t}}+\dfrac{\sqrt{4+t}}{t+2})=\dfrac{\ln 2}{4}+1
+		a=\lim\limits_{x\to+\infty}\sqrt{4+\dfrac{1}{x}}\ln(2+\dfrac{1}{x})=2\ln 2\\
+		b=\lim\limits_{x\to+\infty}[\sqrt{4x^2+x}\ln(2+\dfrac{1}{x})-2\ln 2 x]=\lim\limits_{t\to 0^{+}}\dfrac{\sqrt{4+t}\ln(2+t)-2\ln 2}{t}=\lim\limits_{t\to 0^{+}}(\dfrac{\ln(2+t)}{2\sqrt{4+t}}+\dfrac{\sqrt{4+t}}{t+2})=\dfrac{\ln 2}{4}+1
 	\end{array}
 	\right. $$
 	
 	(2). 
 	$$\left\lbrace
 	\begin{array}{l}
-		a=\lim\limits_{x\rightarrow-\infty}\dfrac{f(x)}{x}\\
-		b=\lim\limits_{x\rightarrow-\infty}(f(x)-ax)
+		a=\lim\limits_{x\to-\infty}\dfrac{f(x)}{x}\\
+		b=\lim\limits_{x\to-\infty}(f(x)-ax)
 	\end{array}
 	\right. $$
 	
 	我们得到: 
 	$$\left\lbrace
 	\begin{array}{l}
-		a=\lim\limits_{x\rightarrow-\infty}-\sqrt{4+\dfrac{1}{x}}\ln(2+\dfrac{1}{x})=-2\ln 2\\
-		b=\lim\limits_{x\rightarrow-\infty}[\sqrt{4x^2+x}\ln(2+\dfrac{1}{x})+2\ln 2 x]=\lim\limits_{t\rightarrow 0^{-}}\dfrac{2\ln 2-\sqrt{4+t}\ln(2+t)}{t}=-\dfrac{\ln 2}{4}-1
+		a=\lim\limits_{x\to-\infty}-\sqrt{4+\dfrac{1}{x}}\ln(2+\dfrac{1}{x})=-2\ln 2\\
+		b=\lim\limits_{x\to-\infty}[\sqrt{4x^2+x}\ln(2+\dfrac{1}{x})+2\ln 2 x]=\lim\limits_{t\to 0^{-}}\dfrac{2\ln 2-\sqrt{4+t}\ln(2+t)}{t}=-\dfrac{\ln 2}{4}-1
 	\end{array}
 	\right. $$
 	
@@ -791,15 +790,15 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 		$f(x)=\sqrt{4x^2+x}\ln(2+\frac{1}{x})$,我们利用泰勒展开式得到: 
 		$$\left\lbrace
 		\begin{array}{l}
-			x\rightarrow +\infty,\ f(x)\sim 2x\sqrt{1+\frac{1}{4x}}[\ln2+\ln(1+\frac{1}{2x})]=2x(1+\frac{1}{8x})(\ln 2+\frac{1}{2x})=2\ln 2\ x+\frac{\ln 2}{4}+1\\
-			x\rightarrow -\infty,\ f(x)\sim -2x\sqrt{1+\frac{1}{4x}}[\ln2+\ln(1+\frac{1}{2x})]=-2x(1+\frac{1}{8x})(\ln 2+\frac{1}{2x})=-2\ln 2\ x-\frac{\ln 2}{4}-1\\
+			x\to +\infty,\ f(x)\sim 2x\sqrt{1+\frac{1}{4x}}[\ln2+\ln(1+\frac{1}{2x})]=2x(1+\frac{1}{8x})(\ln 2+\frac{1}{2x})=2\ln 2\ x+\frac{\ln 2}{4}+1\\
+			x\to -\infty,\ f(x)\sim -2x\sqrt{1+\frac{1}{4x}}[\ln2+\ln(1+\frac{1}{2x})]=-2x(1+\frac{1}{8x})(\ln 2+\frac{1}{2x})=-2\ln 2\ x-\frac{\ln 2}{4}-1\\
 		\end{array}
 		\right. $$
 	\end{anymark}
 \end{solution}
 \myspace{1}
 
-2. 当$x\rightarrow 0$时,下列无穷小量最高阶的是: 
+2. 当$x\to 0$时,下列无穷小量最高阶的是: 
 \begin{itemize}
 	\item A. $(1+x)^{x^2}-1$
 	\item B. $e^{x^4-2x}-1$
@@ -819,13 +818,13 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 14}}}
+\textcolor{blue}{July 14}
 
-1. 求曲线$y=\sqrt{x^4-3x^3+4}$在$x\rightarrow +\infty$方向的渐进二次曲线.
+1. 求曲线$y=\sqrt{x^4-3x^3+4}$在$x\to +\infty$方向的渐进二次曲线.
 \myspace{1}
 \begin{solution}
 	\begin{eqnarray*}
-		\text{当}x\rightarrow +\infty,\ f(x)&=&x^2\sqrt{1+\dfrac{4-3x^3}{x^4}}\\
+		\text{当}x\to +\infty,\ f(x)&=&x^2\sqrt{1+\dfrac{4-3x^3}{x^4}}\\
 		&=&x^2[1+\dfrac{4-3x^3}{2x^4}-\dfrac{(4-3x^3)^2}{8x^8}]\\
 		&=&x^2-\dfrac{3}{2}x-\dfrac{9}{8}+o(\dfrac{1}{x})
 	\end{eqnarray*}
@@ -855,9 +854,9 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 
 \section{Week \Rmnum{3}}
 
-\hl{\textbf{\textit{July 15}}}
+\textcolor{cyan}{July 15}
 
-1. 当$x\rightarrow 0^{+}$时,下列无穷小量中最高阶的是: 
+1. 当$x\to 0^{+}$时,下列无穷小量中最高阶的是: 
 \begin{itemize}
 	\item A. $\int_{0}^{1-\cos x}\dfrac{\sin t}{t}dt$
 	\item B. $\int_{0}^{x}t\tan \sqrt{x^2-t^2}dt$
@@ -949,7 +948,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{proposition}
 \myspace{1}
 
-\hl{\textbf{\textit{July 16}}}
+\textcolor{cyan}{July 16}
 
 1. 设$A=(a_{ij})_{3\times 3}$,$A$的每行元素之和为$a$,且$|A|=b$,将$A$中的每个元素加$k$得到矩阵$B=(a_{ij}+k)_{3\times 3}$,求$|B|$
 \myspace{1}
@@ -1002,7 +1001,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 17}}}
+\textcolor{cyan}{July 17}
 
 1. 设$A$是$3$阶矩阵,且满足$|A-2E|=|A-3E|=|A-4E|=3$,求$|A-E|$
 \myspace{1}
@@ -1021,7 +1020,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-2. 设$f(x)$连续,且$\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)}{x}=1$,$\alpha(x)=\int_{0}^{\sqrt{x}}\dfrac{\ln(1+t^4)}{f(t)}dt$,$\beta(x)=\int_{0}^{\sin x}\dfrac{\sqrt{1+t^3}-1}{f(t)}dt$,则当$x\rightarrow 0^{+}$时,$\alpha(x)$是$\beta(x)$的: 
+2. 设$f(x)$连续,且$\lim\limits_{x\to 0^{+}}\dfrac{f(x)}{x}=1$,$\alpha(x)=\int_{0}^{\sqrt{x}}\dfrac{\ln(1+t^4)}{f(t)}dt$,$\beta(x)=\int_{0}^{\sin x}\dfrac{\sqrt{1+t^3}-1}{f(t)}dt$,则当$x\to 0^{+}$时,$\alpha(x)$是$\beta(x)$的: 
 \begin{itemize}
 	\item A. 等价无穷小
 	\item B. 同阶但非等价无穷小
@@ -1031,9 +1030,9 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \myspace{1}
 \begin{solution}
 	\begin{eqnarray*}
-		\lim\limits_{x\rightarrow 0}\dfrac{\alpha(x)}{\beta(x)}&=&\lim\limits_{x\rightarrow 0}\dfrac{\int_{0}^{\sqrt{x}}\dfrac{\ln(1+t^4)}{f(t)}dt}{\int_{0}^{\sin x}\dfrac{\sqrt{1+t^3}-1}{f(t)}dt}\\
-		&=&\lim\limits_{x\rightarrow 0}\dfrac{\dfrac{\ln(1+x^2)}{2\sqrt{x}f(\sqrt{x})}}{\dfrac{\cos x[\sqrt{1+(\sin x)^3}-1]}{f(\sin x)}}\\
-		&=&\lim\limits_{x\rightarrow 0}\dfrac{f(\sin x)}{\sin x}\dfrac{\sqrt{x}}{f(\sqrt{x})}\dfrac{1}{x}\\
+		\lim\limits_{x\to 0}\dfrac{\alpha(x)}{\beta(x)}&=&\lim\limits_{x\to 0}\dfrac{\int_{0}^{\sqrt{x}}\dfrac{\ln(1+t^4)}{f(t)}dt}{\int_{0}^{\sin x}\dfrac{\sqrt{1+t^3}-1}{f(t)}dt}\\
+		&=&\lim\limits_{x\to 0}\dfrac{\dfrac{\ln(1+x^2)}{2\sqrt{x}f(\sqrt{x})}}{\dfrac{\cos x[\sqrt{1+(\sin x)^3}-1]}{f(\sin x)}}\\
+		&=&\lim\limits_{x\to 0}\dfrac{f(\sin x)}{\sin x}\dfrac{\sqrt{x}}{f(\sqrt{x})}\dfrac{1}{x}\\
 		&=&+\infty
 	\end{eqnarray*}
 	
@@ -1041,14 +1040,14 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 18}}}
+\textcolor{cyan}{July 18}
 
 1. 证明: $\sum\limits_{n=1}^{+\infty}\dfrac{1+\frac{1}{2}+\cdots+\frac{1}{n}}{(n+1)(n+2)}$收敛,并求其和.
 \myspace{1}
 \begin{solution}
 	
 	我们不妨设$a_{n}=1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}$,我们可以得到: 
-	$$x\rightarrow a_{n}\sim \ln n$$
+	$$x\to a_{n}\sim \ln n$$
 	\begin{eqnarray*}
 		S_{n}&=&\sum\limits_{k=1}^{n}\dfrac{1+\frac{1}{2}+\cdots+\frac{1}{k}}{(k+1)(k+2)}\\
 		&=&\sum\limits_{k=1}^{n}\dfrac{a_{k}}{(k+1)(k+2)}\\
@@ -1057,13 +1056,13 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 		&=&\dfrac{1}{1\times 2}+\dfrac{1}{2\times 3}+\dfrac{1}{3\times 4}+\cdots+\dfrac{1}{n\times (n+1)}-\dfrac{a_{n}}{n+2}\\
 		&=&1-\dfrac{1}{n+1}-\dfrac{a_{n}}{n+2}
 	\end{eqnarray*}
-	$$\lim\limits_{n\rightarrow+\infty}S_{n}=\lim\limits_{n\rightarrow+\infty}(1-\dfrac{1}{n+1}-\dfrac{\ln n}{n+2})=1$$
+	$$\lim\limits_{n\to+\infty}S_{n}=\lim\limits_{n\to+\infty}(1-\dfrac{1}{n+1}-\dfrac{\ln n}{n+2})=1$$
 	
 	原级数收敛,其和$S=1$.
 \end{solution}
 \myspace{1}
 
-2. 当$x\rightarrow 0$时,$2\arctan x-\ln\dfrac{1+x}{1-x}$是$x$的$n$阶无穷小,求$n$.
+2. 当$x\to 0$时,$2\arctan x-\ln\dfrac{1+x}{1-x}$是$x$的$n$阶无穷小,求$n$.
 \myspace{1}
 \begin{solution}
 	
@@ -1076,7 +1075,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 	\end{array}
 	\right. $$
 	\begin{eqnarray*}
-		x\rightarrow 0, f(x)&=&2\arctan x-\ln(1+x)+\ln(1-x)\\
+		x\to 0, f(x)&=&2\arctan x-\ln(1+x)+\ln(1-x)\\
 		&=&2(x-\dfrac{x^3}{3}+o(x^3))-(x-\dfrac{x^2}{2}+\dfrac{x^3}{3}+o(x^3))-(x+\dfrac{x^2}{2}+\dfrac{x^3}{3}+o(x^3))\\
 		&=&-\dfrac{4}{3}x^3+o(x^3)
 	\end{eqnarray*}
@@ -1085,7 +1084,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 19}}}
+\textcolor{cyan}{July 19}
 
 1. 关于函数$f(x,y)=\left\lbrace
 \begin{array}{l}
@@ -1095,13 +1094,13 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \begin{itemize}
 	\item \hl{A}. $\dfrac{\partial f}{\partial x}|_{(0,0)}=1$
 	\item B. $\dfrac{\partial^2 f}{\partial x\partial y}|_{(0,0)}=1$
-	\item \hl{C}. $\lim\limits_{(x,y)\rightarrow (0,0)}f(x,y)=0$
-	\item \hl{D}. $\lim\limits_{x\rightarrow 0}\lim\limits_{y\rightarrow 0}f(x,y)=0$
+	\item \hl{C}. $\lim\limits_{(x,y)\to (0,0)}f(x,y)=0$
+	\item \hl{D}. $\lim\limits_{x\to 0}\lim\limits_{y\to 0}f(x,y)=0$
 \end{itemize}
 \myspace{1}
 \begin{solution}
 	
-	$A$. $\dfrac{\partial f}{\partial x}|_{(0,0)}\lim\limits_{x\rightarrow 0 +\infty}\dfrac{f(x,0)-f(0,0)}{x}=1$
+	$A$. $\dfrac{\partial f}{\partial x}|_{(0,0)}\lim\limits_{x\to 0 +\infty}\dfrac{f(x,0)-f(0,0)}{x}=1$
 	
 	$B$.$\dfrac{\partial f}{\partial x}_{(0,y)}=\left\lbrace
 	\begin{array}{l}
@@ -1109,13 +1108,13 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 	\end{array}
 	\right. $
 	
-	$C$. $\lim\limits_{(x,y)\rightarrow (0,0)}f(x,y)=0$
+	$C$. $\lim\limits_{(x,y)\to (0,0)}f(x,y)=0$
 	
-	$D$. $\lim\limits_{y\rightarrow 0}f(x,y)=\left\lbrace
+	$D$. $\lim\limits_{y\to 0}f(x,y)=\left\lbrace
 	\begin{array}{l}
 		xy=0,\ x\neq 0\\y=0,\ x=0
 	\end{array}
-	\right.\Rightarrow  \lim\limits_{x\rightarrow 0}\lim\limits_{y\rightarrow 0}f(x,y)=0$
+	\right.\Rightarrow  \lim\limits_{x\to 0}\lim\limits_{y\to 0}f(x,y)=0$
 \end{solution}
 \myspace{1}
 
@@ -1124,7 +1123,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \begin{solution}
 	
 	我们先求收敛区间: 
-	$$\rho=\lim\limits_{n\rightarrow +\infty}|\dfrac{a_{n+1}}{a_{n}}|=x^2<1\Rightarrow x\in(-1,1)$$
+	$$\rho=\lim\limits_{n\to +\infty}|\dfrac{a_{n+1}}{a_{n}}|=x^2<1\Rightarrow x\in(-1,1)$$
 	
 	我们对$S(x)$求导得到: 
 	$$S'(x)=2\sum\limits_{n=0}^{+\infty}\dfrac{(2n)!!}{(2n+1)!!}x^{2n+1}=2f(x)$$
@@ -1163,15 +1162,15 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 20}}}
+\textcolor{cyan}{July 20}
 
-1. 当$x\rightarrow 0^{+}$时,$(1+x)^{\frac{1}{x}}-(e+ax+bx^2)$是比$x^2$高阶的无穷小,求$a,b$
+1. 当$x\to 0^{+}$时,$(1+x)^{\frac{1}{x}}-(e+ax+bx^2)$是比$x^2$高阶的无穷小,求$a,b$
 \myspace{1}
 \begin{solution}
 	
 	我们利用泰勒展开得到: 
 	\begin{eqnarray*}
-		x\rightarrow 0^{+},f(x)&=&e^{\frac{\ln(1+x)}{x}}-(e+ax+bx^2)\\
+		x\to 0^{+},f(x)&=&e^{\frac{\ln(1+x)}{x}}-(e+ax+bx^2)\\
 		&=&e(1+\dfrac{\ln(1+x)-x}{x}+\dfrac{[\ln(1+x)-x]^2}{2x^2}+o(x^2))-(e+ax+bx^2)\\
 		&=&(-a-\dfrac{e}{2})x+(\dfrac{11e}{24}-b)x^2+o(x^2)
 	\end{eqnarray*}
@@ -1215,7 +1214,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 21}}}
+\textcolor{cyan}{July 21}
 
 1. 设函数$f(x)=\dfrac{\sin x}{1+x^2}$在$x=0$处的$3$次泰勒多项式为$ax+bx^2+cx^3$,求$a,b,c$
 \myspace{1}
@@ -1230,7 +1229,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 	
 	我们可以得到: 
 	\begin{eqnarray*}
-		x\rightarrow 0, f(x)&=&\dfrac{\sin x}{1+x^2}\\
+		x\to 0, f(x)&=&\dfrac{\sin x}{1+x^2}\\
 		&=&(x-\dfrac{x^3}{6})(1-x^2)\\
 		&=&x-\dfrac{7}{6}x^3+o(x^3)
 	\end{eqnarray*}
@@ -1243,22 +1242,22 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-2. 求极限$\lim\limits_{x\rightarrow 0}\dfrac{e^{(1+x)^{\frac{1}{x}}}-(1+x)^{\frac{e}{x}}}{x^2}$
+2. 求极限$\lim\limits_{x\to 0}\dfrac{e^{(1+x)^{\frac{1}{x}}}-(1+x)^{\frac{e}{x}}}{x^2}$
 \myspace{1}
 \begin{solution}
 	
 	原极限等价于: 
 	\begin{eqnarray*}
-		I&=&\lim\limits_{x\rightarrow 0}e^{\frac{e\ln(1+x)}{x}}\dfrac{e^{e^{\frac{\ln(1+x)}{x}}-\frac{e\ln(1+x)}{x}}-1}{x^2}\\
-		&=&e^{e+1}\lim\limits_{x\rightarrow 0}\dfrac{e^{\frac{\ln(1+x)-x}{x}}-\frac{\ln(1+x)-x}{x}-1}{x^2}\\
-		&=&e^{e+1}\lim\limits_{x\rightarrow 0}\dfrac{\dfrac{(\ln(1+x)-x)^2}{2x^2}}{x^2}\\
+		I&=&\lim\limits_{x\to 0}e^{\frac{e\ln(1+x)}{x}}\dfrac{e^{e^{\frac{\ln(1+x)}{x}}-\frac{e\ln(1+x)}{x}}-1}{x^2}\\
+		&=&e^{e+1}\lim\limits_{x\to 0}\dfrac{e^{\frac{\ln(1+x)-x}{x}}-\frac{\ln(1+x)-x}{x}-1}{x^2}\\
+		&=&e^{e+1}\lim\limits_{x\to 0}\dfrac{\dfrac{(\ln(1+x)-x)^2}{2x^2}}{x^2}\\
 		&=&\dfrac{e^{e+1}}{8}
 	\end{eqnarray*}
 \end{solution}
 \myspace{1}
 
 \section{Week \Rmnum{4}}
-\hl{\textbf{\textit{July 22}}}
+\textcolor{purple}{July 22}
 
 1. 设函数$f(x)=\sec x$在$x=0$处的$2$次泰勒多项式为$1+ax+bx^2$,求$a,b$
 \myspace{1}
@@ -1304,7 +1303,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 23}}}
+\textcolor{purple}{July 23}
 
 1.函数$f(x)=\dfrac{(x+1)|x-1|}{e^{\frac{1}{x-2}}\ln|x|}$的可去间断点个数.
 \myspace{1}
@@ -1313,26 +1312,26 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 	我们发现可能的间断点为$x=0,\ x=1,\ x=-1,\ x=2$
 	$$\left\lbrace
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow 0^{+}}f(x)=e^{\frac{1}{2}}\lim\limits_{x\rightarrow 0^{+}}\dfrac{1}{\ln x}=0\\
-		\lim\limits_{x\rightarrow 0^{-}}f(x)=e^{\frac{1}{2}}\lim\limits_{x\rightarrow 0^{-}}\dfrac{1}{\ln(-x)}=0
+		\lim\limits_{x\to 0^{+}}f(x)=e^{\frac{1}{2}}\lim\limits_{x\to 0^{+}}\dfrac{1}{\ln x}=0\\
+		\lim\limits_{x\to 0^{-}}f(x)=e^{\frac{1}{2}}\lim\limits_{x\to 0^{-}}\dfrac{1}{\ln(-x)}=0
 	\end{array}
 	\right. \Rightarrow x=0\text{是}f(x)\text{的可去间断点}$$
 	$$\left\lbrace
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow 1^{+}}f(x)=2e\lim\limits_{x\rightarrow 1^{+}}\dfrac{x-1}{\ln x}=2e\\
-		\lim\limits_{x\rightarrow 1^{-}}f(x)=2e\lim\limits_{x\rightarrow 1^{-}}\dfrac{1-x}{\ln(-x)}=-2e
+		\lim\limits_{x\to 1^{+}}f(x)=2e\lim\limits_{x\to 1^{+}}\dfrac{x-1}{\ln x}=2e\\
+		\lim\limits_{x\to 1^{-}}f(x)=2e\lim\limits_{x\to 1^{-}}\dfrac{1-x}{\ln(-x)}=-2e
 	\end{array}
 	\right. \Rightarrow x=1\text{不是}f(x)\text{的可去间断点}$$
 	$$\left\lbrace
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow -1^{+}}f(x)=2e^{\frac{1}{3}}\lim\limits_{x\rightarrow -1^{+}}\dfrac{x+1}{\ln(-x)}=-2e^{\frac{1}{3}}\\
-		\lim\limits_{x\rightarrow -1^{-}}f(x)=2e^{\frac{1}{3}}\lim\limits_{x\rightarrow -1^{-}}\dfrac{1+x}{\ln(-x)}=-2e^{\frac{1}{3}}
+		\lim\limits_{x\to -1^{+}}f(x)=2e^{\frac{1}{3}}\lim\limits_{x\to -1^{+}}\dfrac{x+1}{\ln(-x)}=-2e^{\frac{1}{3}}\\
+		\lim\limits_{x\to -1^{-}}f(x)=2e^{\frac{1}{3}}\lim\limits_{x\to -1^{-}}\dfrac{1+x}{\ln(-x)}=-2e^{\frac{1}{3}}
 	\end{array}
 	\right. \Rightarrow x=-1\text{是}f(x)\text{的可去间断点}$$
 	$$\left\lbrace
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow 2^{+}}f(x)=\dfrac{3}{\ln 2}\lim\limits_{x\rightarrow 2^{+}}\dfrac{1}{+\infty}=0\\
-		\lim\limits_{x\rightarrow 2^{-}}f(x)=\dfrac{3}{\ln 2}\lim\limits_{x\rightarrow 2^{-}}\dfrac{1}{0}=+\infty
+		\lim\limits_{x\to 2^{+}}f(x)=\dfrac{3}{\ln 2}\lim\limits_{x\to 2^{+}}\dfrac{1}{+\infty}=0\\
+		\lim\limits_{x\to 2^{-}}f(x)=\dfrac{3}{\ln 2}\lim\limits_{x\to 2^{-}}\dfrac{1}{0}=+\infty
 	\end{array}
 	\right. \Rightarrow x=2\text{不是}f(x)\text{的可去间断点}$$
 	
@@ -1362,7 +1361,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 24}}}
+\textcolor{purple}{July 24}
 
 1. 设$\lambda_{1},\lambda_{2},\cdots,\lambda_{m}$是$n$阶矩阵$A$的$m$个两两互异的特征值$(m\leq n)$,对应的特征向量分别为$\xi_{1},\xi_{2},\cdots,\xi_{m}$,令$\eta=\sum\limits_{k=1}^{m}\xi_{k}$,证明: $$\eta,A\eta,A^2\eta,\cdots,A^{m-1}\eta\text{线性无关}$$
 \myspace{1}
@@ -1401,7 +1400,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-2. 设$f(x)=\lim\limits_{n\rightarrow+\infty}\dfrac{x^{n+2}}{\sqrt{2^{2n}+x^{2n}}}$,则$f(x)$在其定义域内: 
+2. 设$f(x)=\lim\limits_{n\to+\infty}\dfrac{x^{n+2}}{\sqrt{2^{2n}+x^{2n}}}$,则$f(x)$在其定义域内: 
 \begin{itemize}
 	\item A. 连续
 	\item B. 有$1$个可去间断点
@@ -1422,7 +1421,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 25}}}
+\textcolor{purple}{July 25}
 
 1. 求积分$\int_{0}^{1}dx\int_{0}^{\sqrt{x}}(\dfrac{e^x}{x}-\dfrac{e^{y^2}}{\sqrt{x}})dy$
 \myspace{1}
@@ -1438,7 +1437,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-2. 设$f(x)=\lim\limits_{n\rightarrow +\infty}\dfrac{x^{n+2}-x^{-n}}{x^n+x^{-n}}$,则函数$f(x)$: 
+2. 设$f(x)=\lim\limits_{n\to +\infty}\dfrac{x^{n+2}-x^{-n}}{x^n+x^{-n}}$,则函数$f(x)$: 
 \begin{itemize}
 	\item A. 仅有$1$个间断点
 	\item B. 仅有$2$个间断点,其中$1$个可去,$1$个无穷
@@ -1461,7 +1460,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 26}}}
+\textcolor{purple}{July 26}
 
 1. $\int_{0}^{1}\dfrac{x^b-x^a}{\ln x}dx$
 \myspace{1}
@@ -1498,23 +1497,23 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 27}}}
+\textcolor{purple}{July 27}
 
 1. 设$f(x)$在$x=1$处连续,且$\dfrac{f(x)-2x}{e^{x-1}-1}-\dfrac{1}{\ln x}$在$x=1$的某去心邻域有界,求$f(1)$
 \myspace{1}
 \begin{solution}
 	
 	我们由题意可得: 
-	$$\lim\limits_{x\rightarrow 1}[\dfrac{f(x)-2x}{e^{x-1}-1}-\dfrac{1}{\ln x}](e^{x-1}-1)=0$$
+	$$\lim\limits_{x\to 1}[\dfrac{f(x)-2x}{e^{x-1}-1}-\dfrac{1}{\ln x}](e^{x-1}-1)=0$$
 	
 	上述极限等价于: 
 	\begin{eqnarray*}
-		I&=&\lim\limits_{x\rightarrow 1}[f(x)-2x-\dfrac{e^{x-1}-1}{\ln x}]\\
-		&=&\lim\limits_{x\rightarrow 1}(f(x)-2x)-1\\
+		I&=&\lim\limits_{x\to 1}[f(x)-2x-\dfrac{e^{x-1}-1}{\ln x}]\\
+		&=&\lim\limits_{x\to 1}(f(x)-2x)-1\\
 		&=&0
 	\end{eqnarray*}
 	
-	我们知道: $$\lim\limits_{x\rightarrow 1}[f(x)-2x]=1\Rightarrow \lim\limits_{x\rightarrow 1}f(x)=3$$
+	我们知道: $$\lim\limits_{x\to 1}[f(x)-2x]=1\Rightarrow \lim\limits_{x\to 1}f(x)=3$$
 	
 	综上所述,$f(1)=3$.
 \end{solution}
@@ -1582,7 +1581,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 	\end{solution}
 \end{anymark}
 
-\hl{\textbf{\textit{July 28}}}
+\textcolor{purple}{July 28}
 
 1. 已知函数$f(x)=\dfrac{(x^2+a^2)(x-1)}{e^{\frac{1}{x}}+b}$在$(-\infty,+\infty)$上有一个可去间断点和一个跳跃间断点,求$a,b$
 \myspace{1}
@@ -1591,16 +1590,16 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 	我们发现$f(x)$的间断点为$x=0$和$x=\dfrac{1}{\ln(-b)}$,我们有: 
 	$$\left\lbrace
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow 0^{+}}f(x)=0\\
-		\lim\limits_{x\rightarrow 0^{-}}f(x)=-\dfrac{a^2}{b}
+		\lim\limits_{x\to 0^{+}}f(x)=0\\
+		\lim\limits_{x\to 0^{-}}f(x)=-\dfrac{a^2}{b}
 	\end{array}
 	\right. a\neq 0\Rightarrow x=0\text{是}f(x)\text{跳跃间断点}$$
 	
 	我们进而得到$x=\dfrac{1}{\ln(-b)}$是$f(x)$可去间断点,我们得到: 
 	$$\left\lbrace
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow \ln(-b)^{+}}f(x)=\dfrac{\ln^2(-b)+a^2}{-b}\lim\limits_{x\rightarrow \ln(-b)^{+}}\dfrac{x-1}{x-\ln(-b)}=a\\
-		\lim\limits_{x\rightarrow 0\ln(-b)^{-}}f(x)=\dfrac{\ln^2(-b)+a^2}{-b}\lim\limits_{x\rightarrow \ln(-b)^{-}}\dfrac{x-1}{x-\ln(-b)}=a
+		\lim\limits_{x\to \ln(-b)^{+}}f(x)=\dfrac{\ln^2(-b)+a^2}{-b}\lim\limits_{x\to \ln(-b)^{+}}\dfrac{x-1}{x-\ln(-b)}=a\\
+		\lim\limits_{x\to 0\ln(-b)^{-}}f(x)=\dfrac{\ln^2(-b)+a^2}{-b}\lim\limits_{x\to \ln(-b)^{-}}\dfrac{x-1}{x-\ln(-b)}=a
 	\end{array}
 	\right. \Rightarrow b=-e$$
 	
@@ -1623,7 +1622,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 29}}}
+\textcolor{purple}{July 29}
 
 1. 函数$f(x)=\left\lbrace
 \begin{array}{l}
@@ -1634,17 +1633,17 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \myspace{1}
 \begin{solution}
 	
-	首先判断连续性: $$\lim\limits_{x\rightarrow 0^{+}}f(x)=\lim\limits_{x\rightarrow 0^{-}}f(x)=1=f(0)\Rightarrow f(x)\text{在}x=0\text{处连续}$$
+	首先判断连续性: $$\lim\limits_{x\to 0^{+}}f(x)=\lim\limits_{x\to 0^{-}}f(x)=1=f(0)\Rightarrow f(x)\text{在}x=0\text{处连续}$$
 	
 	可导性: 
-	$$f'(0)=\lim\limits_{x\rightarrow 0}\dfrac{f(x)-f(0)}{x}=\lim\limits_{x\rightarrow 0}\dfrac{e^x-1-x}{x^2}=\dfrac{1}{2}$$
+	$$f'(0)=\lim\limits_{x\to 0}\dfrac{f(x)-f(0)}{x}=\lim\limits_{x\to 0}\dfrac{e^x-1-x}{x^2}=\dfrac{1}{2}$$
 	
 	$$f'(x)=\left\lbrace
 	\begin{array}{l}
 		\dfrac{xe^x-e^x+1}{x^2},\ x\neq 0\\
 		\dfrac{1}{2},\ x=0
 	\end{array}
-	\right. \Rightarrow \lim\limits_{x\rightarrow 0}f'(0)=\dfrac{1}{2}=f'(0)$$
+	\right. \Rightarrow \lim\limits_{x\to 0}f'(0)=\dfrac{1}{2}=f'(0)$$
 	
 	我们得到$f(x)$在$x=0$处连续可导,且导函数连续.
 \end{solution}
@@ -1670,7 +1669,7 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 30}}}
+\textcolor{purple}{July 30}
 
 1. 下列函数在$x=0$处不可导的是: 
 \begin{itemize}
@@ -1691,22 +1690,22 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 	
 	$B. \left\lbrace
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)}{x}=0\\
-		\lim\limits_{x\rightarrow 0^{-}}\dfrac{f(x)}{x}=0
+		\lim\limits_{x\to 0^{+}}\dfrac{f(x)}{x}=0\\
+		\lim\limits_{x\to 0^{-}}\dfrac{f(x)}{x}=0
 	\end{array}
 	\right. f(x)\text{在}x=0\text{处可导}$
 	
 	$C. \left\lbrace
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)}{x}=0\\
-		\lim\limits_{x\rightarrow 0^{-}}\dfrac{f(x)}{x}=0
+		\lim\limits_{x\to 0^{+}}\dfrac{f(x)}{x}=0\\
+		\lim\limits_{x\to 0^{-}}\dfrac{f(x)}{x}=0
 	\end{array}
 	\right. f(x)\text{在}x=0\text{处可导}$
 	
 	$D. \left\lbrace
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)}{x}=+\infty\\
-		\lim\limits_{x\rightarrow 0^{-}}\dfrac{f(x)}{x}=-\infty
+		\lim\limits_{x\to 0^{+}}\dfrac{f(x)}{x}=+\infty\\
+		\lim\limits_{x\to 0^{-}}\dfrac{f(x)}{x}=-\infty
 	\end{array}
 	\right. f(x)\text{在}x=0\text{处不可导}$
 \end{solution}
@@ -1739,27 +1738,27 @@ $$\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{July 31}}}
+\textcolor{purple}{July 31}
 
-1. 已知$f(x)$在$x=0$的某邻域内有定义,且$\lim\limits_{x\rightarrow 0}\varphi(x)=0$,则$\lim\limits_{x\rightarrow 0}\dfrac{f[\varphi(x)]-f(0)}{\varphi(x)}$存在和$f(x)$在$x=0$处可导之间关系
+1. 已知$f(x)$在$x=0$的某邻域内有定义,且$\lim\limits_{x\to 0}\varphi(x)=0$,则$\lim\limits_{x\to 0}\dfrac{f[\varphi(x)]-f(0)}{\varphi(x)}$存在和$f(x)$在$x=0$处可导之间关系
 \myspace{1}
 \begin{solution}
 	
 	(1). 必要性
 	
 	$f(x)$在$x=0$处可导: 
-	$$\lim\limits_{x\rightarrow 0}\dfrac{f(x)-f(0)}{x}=A\Rightarrow \lim\limits_{\varphi(x)\rightarrow 0}\dfrac{f[\varphi(x)]-f(0)}{\varphi(x)}=A$$
+	$$\lim\limits_{x\to 0}\dfrac{f(x)-f(0)}{x}=A\Rightarrow \lim\limits_{\varphi(x)\to 0}\dfrac{f[\varphi(x)]-f(0)}{\varphi(x)}=A$$
 	
 	当$\varphi(x)\equiv 0$时,充分性不成立.
 	
 	(2). 充分性
 	
 	我们不妨取$\varphi(x)=|x|$,我们可以得到: 
-	$$\lim\limits_{x\rightarrow 0}\dfrac{f[\varphi(x)]-f(0)}{\varphi(x)}=A\Rightarrow \lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)-f(0)}{x}=f_{+}'(0)$$
+	$$\lim\limits_{x\to 0}\dfrac{f[\varphi(x)]-f(0)}{\varphi(x)}=A\Rightarrow \lim\limits_{x\to 0^{+}}\dfrac{f(x)-f(0)}{x}=f_{+}'(0)$$
 	
 	充分性不成立.
 	
-	综上所述,$\lim\limits_{x\rightarrow 0}\dfrac{f[\varphi(x)]-f(0)}{\varphi(x)}$存在是$f(x)$在$x=0$处可导的既不充分也不必要条件.
+	综上所述,$\lim\limits_{x\to 0}\dfrac{f[\varphi(x)]-f(0)}{\varphi(x)}$存在是$f(x)$在$x=0$处可导的既不充分也不必要条件.
 \end{solution}
 \myspace{1}
 

@@ -2,7 +2,7 @@
 \chapterimage{chap34.jpg}
 \chapter{August}
 \section{Week \Rmnum{1}}
-\hl{\textbf{\textit{August 1}}}
+\textcolor{orange}{August 1}
 
 1. 已知$f(x)$为奇函数,则$f_{+}'(0)$存在和$f(x)$在$x=0$处可导关系
 \myspace{1}
@@ -10,18 +10,18 @@
 	
 	(1). 充分性
 	
-	$$\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)-f(0)}{x}=A\Rightarrow \lim\limits_{x\rightarrow 0^{+}}f(x)=0$$
+	$$\lim\limits_{x\to 0^{+}}\dfrac{f(x)-f(0)}{x}=A\Rightarrow \lim\limits_{x\to 0^{+}}f(x)=0$$
 	
 	我们可以得到: 
-	$$\lim\limits_{x\rightarrow 0^{-}}\dfrac{f(x)-f(0)}{x}=\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(-x)-f(0)}{-x}=\lim\limits_{x\rightarrow 0^{+}}\dfrac{-f(x)-f(0)}{-x}=A$$
+	$$\lim\limits_{x\to 0^{-}}\dfrac{f(x)-f(0)}{x}=\lim\limits_{x\to 0^{+}}\dfrac{f(-x)-f(0)}{-x}=\lim\limits_{x\to 0^{+}}\dfrac{-f(x)-f(0)}{-x}=A$$
 	
-	我们得到: $$\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)-f(0)}{x}=\lim\limits_{x\rightarrow 0^{-}}\dfrac{f(x)-f(0)}{x}=A$$
+	我们得到: $$\lim\limits_{x\to 0^{+}}\dfrac{f(x)-f(0)}{x}=\lim\limits_{x\to 0^{-}}\dfrac{f(x)-f(0)}{x}=A$$
 	
 	充分性成立
 	
 	(2). 必要性
 	
-	$$f(x)\text{在}x=0\text{处可导}\Rightarrow \lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)-f(0)}{x}=\lim\limits_{x\rightarrow 0^{-}}\dfrac{f(x)-f(0)}{x}=A$$
+	$$f(x)\text{在}x=0\text{处可导}\Rightarrow \lim\limits_{x\to 0^{+}}\dfrac{f(x)-f(0)}{x}=\lim\limits_{x\to 0^{-}}\dfrac{f(x)-f(0)}{x}=A$$
 	
 	必要性成立
 	
@@ -48,14 +48,14 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 2}}}
+\textcolor{orange}{August 2}
 
 1. 已知函数$f(x)$在$x=x_{0}$的邻域内可导,则$f'(x_{0})>0$是$f(x)$在$x=x_{0}$的某邻域内单调递增之间关系
 \myspace{1}
 \begin{solution}
 	
 	(1). 充分性
-	$$\lim\limits_{x\rightarrow x_{0}}\dfrac{f(x)-f(x_{0})}{x-x_{0}}=A>0$$
+	$$\lim\limits_{x\to x_{0}}\dfrac{f(x)-f(x_{0})}{x-x_{0}}=A>0$$
 	
 	我们可以得出,$x\in(x_{0}-\delta,x_{0}),f(x)<f(x_{0})$;$x\in(x_{0},x_{0}+\delta),f(x)>f(x_{0})$,并不能得出函数的单调性.
 	
@@ -67,7 +67,7 @@
 \end{solution}
 \myspace{1}
 
-2. $I_{n}=\int_{1}^{+\infty}\dfrac{\sqrt{t-1}}{t^n}dt\ (n\geq 2)$,求$\lim\limits_{n\rightarrow+\infty}\dfrac{I_{n+1}}{I_{n}}$
+2. $I_{n}=\int_{1}^{+\infty}\dfrac{\sqrt{t-1}}{t^n}dt\ (n\geq 2)$,求$\lim\limits_{n\to+\infty}\dfrac{I_{n+1}}{I_{n}}$
 \myspace{1}
 \begin{solution}
 	
@@ -100,18 +100,18 @@
 	我们得到: 
 	$$\dfrac{I_{n+1}}{I_{n}}=\dfrac{J_{2n-2}-J_{2n}}{J_{2n-4}-J_{2n-2}}=\dfrac{\frac{2}{2n}J_{2n-2}}{\frac{2}{2n-2}J_{2n-4}}=\dfrac{n-1}{n}\dfrac{2n-4}{2n-2}=\dfrac{n-2}{n}$$
 	
-	$$\lim\limits_{n\rightarrow+\infty}\dfrac{I_{n+1}}{I_{n}}=\lim\limits_{n\rightarrow+\infty}\dfrac{n-2}{n}=1$$
+	$$\lim\limits_{n\to+\infty}\dfrac{I_{n+1}}{I_{n}}=\lim\limits_{n\to+\infty}\dfrac{n-2}{n}=1$$
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 3}}}
+\textcolor{orange}{August 3}
 
 1. 设函数$f(x)$在$x=x_{0}$的某个邻域内有定义,下列命题中正确的个数:  
 \begin{itemize}
 	\item \hl{A}. 若$f'(x_{0})$存在,则$f(x)$在$x=x_{0}$处连续
 	\item \hl{B}. 若$f'_{-}(x_{0})$和$f'_{+}(x_{0})$都存在,则$f(x)$在$x=x_{0}$处连续
-	\item C. 若$\lim\limits_{x\rightarrow x_{0}^{-}}f'(x)$,$\lim\limits_{x\rightarrow x_{0}^{+}}f'(x)$都存在,则$f(x)$在$x=x_{0}$处连续
-	\item D. 若$\lim\limits_{x\rightarrow x_{0}}f'(x)$存在,则$f(x)$在$x=x_{0}$处连续
+	\item C. 若$\lim\limits_{x\to x_{0}^{-}}f'(x)$,$\lim\limits_{x\to x_{0}^{+}}f'(x)$都存在,则$f(x)$在$x=x_{0}$处连续
+	\item D. 若$\lim\limits_{x\to x_{0}}f'(x)$存在,则$f(x)$在$x=x_{0}$处连续
 \end{itemize}
 \myspace{1}
 \begin{solution}
@@ -121,10 +121,10 @@
 	$B$. 左右导数存在,我们得到:  
 	$$\left\lbrace
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow x_{0}^{+}}\dfrac{f(x)-f(x_{0})}{x-x_{0}}=A\\
-		\lim\limits_{x\rightarrow x_{0}^{-}}\dfrac{f(x)-f(x_{0})}{x-x_{0}}=B
+		\lim\limits_{x\to x_{0}^{+}}\dfrac{f(x)-f(x_{0})}{x-x_{0}}=A\\
+		\lim\limits_{x\to x_{0}^{-}}\dfrac{f(x)-f(x_{0})}{x-x_{0}}=B
 	\end{array}
-	\right. \Rightarrow \lim\limits_{x\rightarrow x_{0}}f(x)=f(x_{0})$$
+	\right. \Rightarrow \lim\limits_{x\to x_{0}}f(x)=f(x_{0})$$
 	
 	函数$f(x)$在$x=x_{0}$处连续.
 	
@@ -134,7 +134,7 @@
 		0,\ x=0\\
 		-1,\ x<0
 	\end{array}
-	\right. $,此时$\lim\limits_{x\rightarrow 0^{-}}f'(x)=\lim\limits_{x\rightarrow 0^{-}}f'(x)=0$,函数在$x=x_{0}$处间断.
+	\right. $,此时$\lim\limits_{x\to 0^{-}}f'(x)=\lim\limits_{x\to 0^{-}}f'(x)=0$,函数在$x=x_{0}$处间断.
 	
 	综上所述,上述命题正确的个数为$2$个.
 \end{solution}
@@ -172,17 +172,17 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 4}}}
+\textcolor{orange}{August 4}
 
-1. 设曲线$y=f(x)$与$y=\sqrt{\dfrac{(1+x^2)\sqrt{x}}{e^{x-1}}}+\arctan\dfrac{x^2-1}{\sqrt{1+x^2}}$在点$(1,\sqrt{2})$处相切,求$\lim\limits_{x\rightarrow1}(f(x)+1-\sqrt{2})^{\frac{1}{\ln x}}$
+1. 设曲线$y=f(x)$与$y=\sqrt{\dfrac{(1+x^2)\sqrt{x}}{e^{x-1}}}+\arctan\dfrac{x^2-1}{\sqrt{1+x^2}}$在点$(1,\sqrt{2})$处相切,求$\lim\limits_{x\to1}(f(x)+1-\sqrt{2})^{\frac{1}{\ln x}}$
 \myspace{1}
 \begin{solution}
 
 	原极限可以化为:  
 	\begin{eqnarray*}
-		I&=&e^{\lim\limits_{x\rightarrow1}\dfrac{\ln(f(x)+1-\sqrt{2})}{\ln x}}\\
-		&=&e^{\lim\limits_{x\rightarrow1}\dfrac{f(x)-\sqrt{2}}{x-1}}\\
-		&=&e^{\lim\limits_{x\rightarrow1}f'(x)}
+		I&=&e^{\lim\limits_{x\to1}\dfrac{\ln(f(x)+1-\sqrt{2})}{\ln x}}\\
+		&=&e^{\lim\limits_{x\to1}\dfrac{f(x)-\sqrt{2}}{x-1}}\\
+		&=&e^{\lim\limits_{x\to1}f'(x)}
 	\end{eqnarray*}
 
 	我们有:  $$\left\lbrace
@@ -194,7 +194,7 @@
 	$$\left\lbrace
 	\begin{array}{l}
 		\ln(g(x))=\dfrac{1}{2}[\dfrac{1}{2}\ln x+\ln(1+x^2)-x+1]\\
-		h'(1)=\lim\limits_{x\rightarrow 1}\dfrac{h(x)-h(1)}{x-1}=\sqrt{2}\\
+		h'(1)=\lim\limits_{x\to 1}\dfrac{h(x)-h(1)}{x-1}=\sqrt{2}\\
 	\end{array}
 	\right. \Rightarrow \left\lbrace
 	\begin{array}{l}
@@ -238,7 +238,7 @@
 \end{solution}
 \myspace{1} 
 
-\hl{\textbf{\textit{August 5}}}
+\textcolor{orange}{August 5}
 
 1. 确定函数$g(x)=|x^3-x-\sin x|$不可导的点的个数
 \myspace{1}
@@ -353,7 +353,7 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 6}}}
+\textcolor{orange}{August 6}
 
 1. 设$f(x)=\left\lbrace
 \begin{array}{l}
@@ -427,7 +427,7 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 7}}}
+\textcolor{orange}{August 7}
 
 1. 设$\varphi(x)=\left\lbrace
 \begin{array}{l}
@@ -438,7 +438,7 @@
 \myspace{1}
 \begin{solution}
 
-	我们有$\varphi'(0)=\lim\limits_{x\rightarrow 0}\dfrac{\varphi(x)}{x}=0$,我们可以得到:  
+	我们有$\varphi'(0)=\lim\limits_{x\to 0}\dfrac{\varphi(x)}{x}=0$,我们可以得到:  
 	$$F'(x)=\left\lbrace
 	\begin{array}{l}
 		f'(x^3\sin\frac{1}{x})(3x^2\sin\frac{1}{x}-x\cos\frac{1}{x}),\ x\neq 0\\
@@ -482,7 +482,7 @@
 \myspace{1}
 
 \section{Week \Rmnum{2}}
-\hl{\textbf{\textit{August 8}}}
+\textcolor{blue}{August 8}
 
 1. 设$A$是$n$阶矩阵,则下列说法错误的是:  
 \begin{itemize}
@@ -509,15 +509,15 @@
 \end{solution}
 \myspace{1}
 
-2. 设函数$f(x)$在$(\dfrac{1}{2},+\infty)$上可导,且$\lim\limits_{h\rightarrow 0}\dfrac{f[(x+h)^2]-f(x^2+h)}{h}=1$,$f(1)=1$,求$f(x)$
+2. 设函数$f(x)$在$(\dfrac{1}{2},+\infty)$上可导,且$\lim\limits_{h\to 0}\dfrac{f[(x+h)^2]-f(x^2+h)}{h}=1$,$f(1)=1$,求$f(x)$
 \myspace{1}
 \begin{solution}
 
 	原极限等价于:  
 	\begin{eqnarray*}
-		I&=&\lim\limits_{h\rightarrow 0}\dfrac{f[(x+h)^2]-f(x^2+h)}{h}\\
-		&=&\lim\limits_{h\rightarrow 0}\dfrac{f[(x+h)^2]-f(x^2)+f(x^2)-f(x^2+h)}{h}\\
-		&=&\lim\limits_{h\rightarrow 0}\dfrac{f[(x+h)^2]-f(x^2)}{h}+\lim\limits_{h\rightarrow 0}\dfrac{f(x^2)-f(x^2+h)}{h}\\
+		I&=&\lim\limits_{h\to 0}\dfrac{f[(x+h)^2]-f(x^2+h)}{h}\\
+		&=&\lim\limits_{h\to 0}\dfrac{f[(x+h)^2]-f(x^2)+f(x^2)-f(x^2+h)}{h}\\
+		&=&\lim\limits_{h\to 0}\dfrac{f[(x+h)^2]-f(x^2)}{h}+\lim\limits_{h\to 0}\dfrac{f(x^2)-f(x^2+h)}{h}\\
 		&=&[f(x^2)]'-f'(x^2)\\
 		&=&(2x-1)f'(x^2)\\
 		&=&1
@@ -532,7 +532,7 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 9}}}
+\textcolor{blue}{August 9}
 
 1. $f(x)$在$[0,1]$上导函数连续,$f(0)=f(1)=0$,证明:  $\int_{0}^{1}f^{2}(x)dx\leq \dfrac{1}{8}\int_{0}^{1}[f'(x)]^2dx$
 \myspace{1}
@@ -587,21 +587,21 @@
 \end{solution}
 \myspace{1}
 
-2. 求$\lim\limits_{n\rightarrow+\infty}\left[\sqrt{n}(\sqrt{n+1}-\sqrt{n})+\dfrac{1}{2} \right]^{\dfrac{\sqrt{n+1}+\sqrt{n}}{\sqrt{n+1}-\sqrt{n}}} $
+2. 求$\lim\limits_{n\to+\infty}\left[\sqrt{n}(\sqrt{n+1}-\sqrt{n})+\dfrac{1}{2} \right]^{\dfrac{\sqrt{n+1}+\sqrt{n}}{\sqrt{n+1}-\sqrt{n}}} $
 \myspace{1}
 \begin{solution}
 
 	原极限等价于:  
 	\begin{eqnarray*}
-		I&=&e^{\lim\limits_{n\rightarrow+\infty}\dfrac{\ln\left( 1+\dfrac{\sqrt{n}-\sqrt{n+1}}{2(\sqrt{n+1}+\sqrt{n})}\right)}{(\sqrt{n+1}-\sqrt{n})^2}}\\
-		&=&e^{\lim\limits_{n\rightarrow+\infty}\dfrac{\dfrac{\sqrt{n}-\sqrt{n+1}}{2(\sqrt{n+1}+\sqrt{n})}}{(\sqrt{n+1}-\sqrt{n})^2}}\\
-		&=&e^{\lim\limits_{n\rightarrow+\infty}-\dfrac{1}{2}}\\
+		I&=&e^{\lim\limits_{n\to+\infty}\dfrac{\ln\left( 1+\dfrac{\sqrt{n}-\sqrt{n+1}}{2(\sqrt{n+1}+\sqrt{n})}\right)}{(\sqrt{n+1}-\sqrt{n})^2}}\\
+		&=&e^{\lim\limits_{n\to+\infty}\dfrac{\dfrac{\sqrt{n}-\sqrt{n+1}}{2(\sqrt{n+1}+\sqrt{n})}}{(\sqrt{n+1}-\sqrt{n})^2}}\\
+		&=&e^{\lim\limits_{n\to+\infty}-\dfrac{1}{2}}\\
 		&=&e^{-\frac{1}{2}}
 	\end{eqnarray*}
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 10}}}
+\textcolor{blue}{August 10}
 
 1. 设可导函数$y=y(x)$由方程$\sin x-\int_{x}^{y}\varphi(u)du=0$所确定,其中可导函数$\varphi(u)>0$,且$\varphi(0)=\varphi'(0)=1$,求$y''(0)$
 \myspace{1}
@@ -661,7 +661,7 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 11}}}
+\textcolor{blue}{August 11}
 
 1. 设$x=x(y)$是函数$y=\ln x+e^x$的反函数,求$\dfrac{d^2x}{dy^2}$.
 \myspace{1}
@@ -719,7 +719,7 @@
 	\right. \Rightarrow a_{n}=\sum\limits_{k=0}^{n}\dfrac{(-1)^k}{k!}$
 	
 	我们利用根值审敛法:  
-	$$\rho=\lim\limits_{n\rightarrow+\infty}\sqrt[n]{a_{n}}=e^{\lim\limits_{n\rightarrow +\infty}\dfrac{\ln(\sum\limits_{k=0}^{n}\dfrac{(-1)^k}{k!})}{n}}=1$$
+	$$\rho=\lim\limits_{n\to+\infty}\sqrt[n]{a_{n}}=e^{\lim\limits_{n\to +\infty}\dfrac{\ln(\sum\limits_{k=0}^{n}\dfrac{(-1)^k}{k!})}{n}}=1$$
 		
 	我们得到级数的收敛半径:  $r=\dfrac{1}{\rho}=1$,幂级数$\sum\limits_{n=0}^{+\infty}a_{n}x^n$的收敛半径不小于$1$.
 
@@ -751,7 +751,7 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 12}}}
+\textcolor{blue}{August 12}
 
 1. 设$y=y(x)$由$e^y\sin t-y+1=0$和$x=\left\lbrace
 \begin{array}{l}
@@ -819,12 +819,12 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 13}}}
+\textcolor{blue}{August 13}
 
 1. 已知$f(x)=\left\lbrace
 \begin{array}{l}
-	\lim\limits_{n\rightarrow +\infty}\left( 1+\dfrac{2nx+x^2}{2n^2}\right)^{-n},\ x\neq 0\\
-	\lim\limits_{n\rightarrow +\infty}2\left[ \dfrac{n}{(n+1)^2}+\dfrac{n}{(n+2)^2}+\cdots+\dfrac{n}{(n+n)^2}\right],\ x=0  
+	\lim\limits_{n\to +\infty}\left( 1+\dfrac{2nx+x^2}{2n^2}\right)^{-n},\ x\neq 0\\
+	\lim\limits_{n\to +\infty}2\left[ \dfrac{n}{(n+1)^2}+\dfrac{n}{(n+2)^2}+\cdots+\dfrac{n}{(n+n)^2}\right],\ x=0  
 \end{array}
 \right. $,求$\int f(x)dx$
 \myspace{1}
@@ -832,15 +832,15 @@
 
 	当$x\neq 0$时:  
 	\begin{eqnarray*}
-		f(x)&=&\lim\limits_{n\rightarrow +\infty}\left( 1+\dfrac{2nx+x^2}{2n^2}\right)^{-n}\\
-		&=&e^{\lim\limits_{n\rightarrow +\infty}(-n)\dfrac{2nx+x^2}{2n^2}}\\
+		f(x)&=&\lim\limits_{n\to +\infty}\left( 1+\dfrac{2nx+x^2}{2n^2}\right)^{-n}\\
+		&=&e^{\lim\limits_{n\to +\infty}(-n)\dfrac{2nx+x^2}{2n^2}}\\
 		&=&e^{-x}
 	\end{eqnarray*}
 
 	当$x=0$时:  
 	\begin{eqnarray*}
-		f(x)&=&\lim\limits_{n\rightarrow +\infty}2\left[ \dfrac{n}{(n+1)^2}+\dfrac{n}{(n+2)^2}+\cdots+\dfrac{n}{(n+n)^2}\right]\\
-		&=&2\lim\limits_{n\rightarrow +\infty}\dfrac{1}{n}\left[ \dfrac{1}{(1+\dfrac{1}{n})^2}+\dfrac{1}{(1+\dfrac{2}{n})^2}+\cdots+\dfrac{1}{(1+\dfrac{n}{n})^2}\right]\\
+		f(x)&=&\lim\limits_{n\to +\infty}2\left[ \dfrac{n}{(n+1)^2}+\dfrac{n}{(n+2)^2}+\cdots+\dfrac{n}{(n+n)^2}\right]\\
+		&=&2\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[ \dfrac{1}{(1+\dfrac{1}{n})^2}+\dfrac{1}{(1+\dfrac{2}{n})^2}+\cdots+\dfrac{1}{(1+\dfrac{n}{n})^2}\right]\\
 		&=&2\int_{0}^{1}\dfrac{1}{(1+x)^2}dx\\
 		&=&2(1-\dfrac{1}{2})\\
 		&=&1
@@ -873,7 +873,7 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 14}}}
+\textcolor{blue}{August 14}
 
 1. 设$f(x)$在$[0,1]$上可导,$f(0)=f(1)=-2$,证明:  $\exists \xi\in(0,1),\ s.t. f'(\xi)-f(\xi)=\xi$
 \myspace{1}
@@ -934,8 +934,8 @@
 	
 	我们不妨假设:  $$\left\lbrace
 	\begin{array}{l}
-		\lim\limits_{k\rightarrow +\infty}u_{2k-1}=A\\
-		\lim\limits_{k\rightarrow +\infty}u_{2k}=B\\
+		\lim\limits_{k\to +\infty}u_{2k-1}=A\\
+		\lim\limits_{k\to +\infty}u_{2k}=B\\
 	\end{array}
 	\right. \Rightarrow \left\lbrace
 	\begin{array}{l}
@@ -957,7 +957,7 @@
 \myspace{1}
 
 \section{Week \Rmnum{3}}
-\hl{\textbf{\textit{August 15}}}
+\textcolor{cyan}{August 15}
 
 1. $f(x)=\int_{1}^{x}\dfrac{\arctan t}{(1+t^2)^{\frac{3}{2}}\ln(1+t^2)}dt$,求$\int_{0}^{1}\dfrac{x}{1+x^2}f(x)dx$
 \myspace{1}
@@ -990,7 +990,7 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 16}}}
+\textcolor{cyan}{August 16}
 
 1. 证明:  在区间$(0,2)$内存在三个不同的点$x_{1},x_{2},x_{3}$,使得$\dfrac{1-\ln(1+x_{1})}{(1+x_{1})^2}x_{3}=\dfrac{1-\ln(1+x_{2})}{(1+x_{2})^2}(2-x_{3})$
 \myspace{1}
@@ -1057,29 +1057,29 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 17}}}
+\textcolor{cyan}{August 17}
 
-1. 已知极限$\lim\limits_{t\rightarrow x}\left(\dfrac{\sin t}{\sin x} \right)^{\dfrac{x}{\sin t-\sin x}}$,记此极限为$f(x)$,求函数$f(x)$的间断点,并指出其类型.
+1. 已知极限$\lim\limits_{t\to x}\left(\dfrac{\sin t}{\sin x} \right)^{\dfrac{x}{\sin t-\sin x}}$,记此极限为$f(x)$,求函数$f(x)$的间断点,并指出其类型.
 \myspace{1}
 \begin{solution}
 
-	$$f(x)=e^{\lim\limits_{t\rightarrow x}\frac{x}{\sin t-\sin x}\ln(1+\frac{\sin t-\sin x}{\sin x})}=e^{\frac{x}{\sin x}}$$
+	$$f(x)=e^{\lim\limits_{t\to x}\frac{x}{\sin t-\sin x}\ln(1+\frac{\sin t-\sin x}{\sin x})}=e^{\frac{x}{\sin x}}$$
 	
 	我们发现$f(x)$的间断点为$x=k\pi,\ k\in\mathbb{Z}$.
 	
 	(1). 当$k=0$时,我们有:
 	$$\left\lbrace 
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow 0^{+}}f(x)=e\\
-		\lim\limits_{x\rightarrow 0^{-}}f(x)=e
+		\lim\limits_{x\to 0^{+}}f(x)=e\\
+		\lim\limits_{x\to 0^{-}}f(x)=e
 	\end{array}
 	\right. \Rightarrow x=0\text{是}f(x)\text{可去间断点}$$
 	
 	(2). 当$k\neq 0$时,我们有:
 	$$\left\lbrace 
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow k\pi^{+}}f(x)=+\infty\text{或者}0\\
-		\lim\limits_{x\rightarrow 0^{-}}f(x)=0\text{或者}+\infty
+		\lim\limits_{x\to k\pi^{+}}f(x)=+\infty\text{或者}0\\
+		\lim\limits_{x\to 0^{-}}f(x)=0\text{或者}+\infty
 	\end{array}
 	\right. \Rightarrow x=k\pi\text{是}f(x)\text{无穷间断点}$$
 \end{solution}
@@ -1108,7 +1108,7 @@
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 18}}}
+\textcolor{cyan}{August 18}
 
 1. 设函数$f(x)=\left\lbrace
 \begin{array}{l}
@@ -1122,16 +1122,16 @@
 	当$x=0$时,我们有$f(0)=0$,且我们有:  
 	$$\left\lbrace
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow 0^{+}}f(x)=\lim\limits_{x\rightarrow 0^{+}}x\ln x=0\\
-		\lim\limits_{x\rightarrow 0^{-}}f(x)=\lim\limits_{x\rightarrow 0^{-}}(-x^2)=0
+		\lim\limits_{x\to 0^{+}}f(x)=\lim\limits_{x\to 0^{+}}x\ln x=0\\
+		\lim\limits_{x\to 0^{-}}f(x)=\lim\limits_{x\to 0^{-}}(-x^2)=0
 	\end{array}
-	\right. \Rightarrow \lim\limits_{x\rightarrow 0}f(x)=f(0)\Rightarrow f(x)\text{在}x=0\text{处连续}$$
+	\right. \Rightarrow \lim\limits_{x\to 0}f(x)=f(0)\Rightarrow f(x)\text{在}x=0\text{处连续}$$
 	
 	我们有:  
 	$$\left\lbrace
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)-f(0)}{x}=\ln x=-\infty\\
-		\lim\limits_{x\rightarrow 0^{-}}\dfrac{f(x)-f(0)}{x}=-x=0
+		\lim\limits_{x\to 0^{+}}\dfrac{f(x)-f(0)}{x}=\ln x=-\infty\\
+		\lim\limits_{x\to 0^{-}}\dfrac{f(x)-f(0)}{x}=-x=0
 	\end{array}
 	\right. \Rightarrow f(x)\text{在}x=0\text{处不可导}$$
 	
@@ -1146,7 +1146,7 @@ $$f'(x)=\dfrac{\pi}{4\cos^2\frac{\pi x}{4}}g(x)+g'(x)(\tan\dfrac{\pi x}{4}-1)$$
 $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-100)=-\dfrac{\pi}{2}99!$$
 \myspace{1}
 
-\hl{\textbf{\textit{August 19}}}
+\textcolor{cyan}{August 19}
 
 1. 已知函数$f(x)=\left\lbrace
 \begin{array}{l}
@@ -1157,12 +1157,12 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 \myspace{1}
 \begin{solution}
 
-	我们有:$\lim\limits_{x\rightarrow 0}f(x)=f(0)=0$,我们根据导数的定义可以得到:  
+	我们有:$\lim\limits_{x\to 0}f(x)=f(0)=0$,我们根据导数的定义可以得到:  
 	\begin{eqnarray*}
-		f'(0)&=&\lim\limits_{x\rightarrow 0}\dfrac{\int_{0}^{x}\cos\dfrac{1}{t}dt}{x}\\
-		&=&\lim\limits_{x\rightarrow 0}-\dfrac{\int_{0}^{x}t^2d\sin\dfrac{1}{t}}{x}\\
-		&=&\lim\limits_{x\rightarrow 0}\left[ -t\sin\dfrac{1}{t}|_{t=0}^{t=x}\right]+\lim\limits_{x\rightarrow 0}\dfrac{\int_{0}^{x}2t\sin\dfrac{1}{t}dt}{x}\\
-		&=&0+2\lim\limits_{x\rightarrow 0}x\sin\dfrac{1}{x}\\
+		f'(0)&=&\lim\limits_{x\to 0}\dfrac{\int_{0}^{x}\cos\dfrac{1}{t}dt}{x}\\
+		&=&\lim\limits_{x\to 0}-\dfrac{\int_{0}^{x}t^2d\sin\dfrac{1}{t}}{x}\\
+		&=&\lim\limits_{x\to 0}\left[ -t\sin\dfrac{1}{t}|_{t=0}^{t=x}\right]+\lim\limits_{x\to 0}\dfrac{\int_{0}^{x}2t\sin\dfrac{1}{t}dt}{x}\\
+		&=&0+2\lim\limits_{x\to 0}x\sin\dfrac{1}{x}\\
 		&=&0
 	\end{eqnarray*}
 
@@ -1210,19 +1210,19 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 20}}}
+\textcolor{cyan}{August 20}
 
 1. 设函数$f(x)=\int_{-1}^{x}t\ln|t|dt$,\ $x=0$处$f(x)$的可导性判断、$x=0$是否为$f(x)$的极值点
 \myspace{1}
 \begin{solution}
 
-	我们有$g(x)=x\ln|x|$在$x=0$处可去间断,且$\lim\limits_{x\rightarrow 0}g(x)=0$,我们得到$f(x)$在$x=0$处连续
+	我们有$g(x)=x\ln|x|$在$x=0$处可去间断,且$\lim\limits_{x\to 0}g(x)=0$,我们得到$f(x)$在$x=0$处连续
 	
 	我们有:
 	$$\left\lbrace
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)-f(0)}{x}=\dfrac{\int_{0}^{x}t\ln tdt}{x}=\lim\limits_{x\rightarrow 0^{+}}x\ln x=0\\
-		\lim\limits_{x\rightarrow 0^{-}}\dfrac{f(x)-f(0)}{x}=\dfrac{\int_{x}^{0}t\ln(-t)dt}{x}=\lim\limits_{x\rightarrow 0^{+}}(-x)\ln(-x)=0
+		\lim\limits_{x\to 0^{+}}\dfrac{f(x)-f(0)}{x}=\dfrac{\int_{0}^{x}t\ln tdt}{x}=\lim\limits_{x\to 0^{+}}x\ln x=0\\
+		\lim\limits_{x\to 0^{-}}\dfrac{f(x)-f(0)}{x}=\dfrac{\int_{x}^{0}t\ln(-t)dt}{x}=\lim\limits_{x\to 0^{+}}(-x)\ln(-x)=0
 	\end{array}
 	\right. \Rightarrow f'(0)=0$$
 	
@@ -1274,28 +1274,28 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 21}}}
+\textcolor{cyan}{August 21}
 
-1. 已知函数$f(x)$在$x=0$的某个邻域内二阶可导,且$\lim\limits_{x\rightarrow 0 }\left[ \dfrac{\sin x}{x^3}+\dfrac{f(x)}{x^2}\right]=\dfrac{1}{3}$,求$f(0)$、$f'(0)$及$f''(0)$
+1. 已知函数$f(x)$在$x=0$的某个邻域内二阶可导,且$\lim\limits_{x\to 0 }\left[ \dfrac{\sin x}{x^3}+\dfrac{f(x)}{x^2}\right]=\dfrac{1}{3}$,求$f(0)$、$f'(0)$及$f''(0)$
 \myspace{1}
 \begin{solution}
 
 	原极限等价于:  
 	\begin{eqnarray*}
-		I&=&\lim\limits_{x\rightarrow 0 } \dfrac{\sin x-x+xf(x)+x}{x^3}\\
-		&=&\lim\limits_{x\rightarrow 0 } \dfrac{\sin x-x}{x^3}+\lim\limits_{x\rightarrow 0 } \dfrac{f(x)+1}{x^2}\\
-		&=&-\dfrac{1}{6}+\lim\limits_{x\rightarrow 0 } \dfrac{f(x)+1}{x^2}\\
+		I&=&\lim\limits_{x\to 0 } \dfrac{\sin x-x+xf(x)+x}{x^3}\\
+		&=&\lim\limits_{x\to 0 } \dfrac{\sin x-x}{x^3}+\lim\limits_{x\to 0 } \dfrac{f(x)+1}{x^2}\\
+		&=&-\dfrac{1}{6}+\lim\limits_{x\to 0 } \dfrac{f(x)+1}{x^2}\\
 		&=&\dfrac{1}{3}
 	\end{eqnarray*}
 
-	我们得到:  $\lim\limits_{x\rightarrow 0 } \dfrac{f(x)+1}{x^2}=\dfrac{1}{2}$
+	我们得到:  $\lim\limits_{x\to 0 } \dfrac{f(x)+1}{x^2}=\dfrac{1}{2}$
 	
 	我们得到:  
 	$$\left\lbrace
 	\begin{array}{l}
 		f(0)=-1\\
-		\lim\limits_{x\rightarrow 0}\dfrac{f'(x)}{2x}=\dfrac{1}{2}\\
-		\lim\limits_{x\rightarrow 0}\dfrac{f''(x)}{2}=\dfrac{1}{2}
+		\lim\limits_{x\to 0}\dfrac{f'(x)}{2x}=\dfrac{1}{2}\\
+		\lim\limits_{x\to 0}\dfrac{f''(x)}{2}=\dfrac{1}{2}
 	\end{array}
 	\right. \Rightarrow \left\lbrace
 	\begin{array}{l}
@@ -1333,9 +1333,9 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 \myspace{1}
 
 \section{Week \Rmnum{4}}
-\hl{\textbf{\textit{August 22}}}
+\textcolor{purplea}{August 22}
 
-1. 设$f(x)$有二阶连续导数,且$f'(0)=0$,$\lim\limits_{x\rightarrow 0}\dfrac{f''(x)+f(x)-f(-x)}{|x|}=1$,下列说法正确的是:
+1. 设$f(x)$有二阶连续导数,且$f'(0)=0$,$\lim\limits_{x\to 0}\dfrac{f''(x)+f(x)-f(-x)}{|x|}=1$,下列说法正确的是:
 \begin{itemize}
 	\item A. $f(0)$是$f(x)$极大值
 	\item B. $f''(0)>0$,$f(0)$是$f(x)$极小值
@@ -1347,10 +1347,10 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 
 	原极限等价于:  
 	\begin{eqnarray*}
-		I&=&\lim\limits_{x\rightarrow 0}\dfrac{f''(x)+f(x)-f(-x)}{|x|}\\
-		&=&\lim\limits_{x\rightarrow 0}\dfrac{f''(x)+\left[f(0)+f'(0)x+o(x)\right] -\left[ f(0)-f'(0)x+o(x)\right]}{|x|}\\
-		&=&\lim\limits_{x\rightarrow 0}\dfrac{f''(x)+2f'(0)x+o(x)}{|x|}\\
-		&=&\lim\limits_{x\rightarrow 0}\dfrac{f''(x)}{|x|}\\
+		I&=&\lim\limits_{x\to 0}\dfrac{f''(x)+f(x)-f(-x)}{|x|}\\
+		&=&\lim\limits_{x\to 0}\dfrac{f''(x)+\left[f(0)+f'(0)x+o(x)\right] -\left[ f(0)-f'(0)x+o(x)\right]}{|x|}\\
+		&=&\lim\limits_{x\to 0}\dfrac{f''(x)+2f'(0)x+o(x)}{|x|}\\
+		&=&\lim\limits_{x\to 0}\dfrac{f''(x)}{|x|}\\
 		&=&1
 	\end{eqnarray*}
 
@@ -1358,22 +1358,22 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 \end{solution}
 \myspace{1}
 
-2. 计算极限$$\lim\limits_{t\rightarrow 0^{+}}\dfrac{1}{t^3}\int_{0}^{\frac{\pi}{4}}d\theta\int_{0}^{\frac{t}{\cos \theta}}\dfrac{\sin(r^2\sin\theta\cos\theta)}{\sin\theta}dr$$
+2. 计算极限$$\lim\limits_{t\to 0^{+}}\dfrac{1}{t^3}\int_{0}^{\frac{\pi}{4}}d\theta\int_{0}^{\frac{t}{\cos \theta}}\dfrac{\sin(r^2\sin\theta\cos\theta)}{\sin\theta}dr$$
 \myspace{1}
 \begin{solution}
 
 	原极限等价于:  
 	\begin{eqnarray*}
-		I&=&\lim\limits_{t\rightarrow 0^{+}}\dfrac{1}{t^3}\int_{0}^{\frac{\pi}{4}}d\theta\int_{0}^{\frac{t}{\cos \theta}}\dfrac{\sin(r^2\sin\theta\cos\theta)}{r\sin\theta}rdr\\
-		&=&\lim\limits_{t\rightarrow 0^{+}}\dfrac{\int_{0}^{t}dx\int_{0}^{x}\dfrac{\sin(xy)}{y}dy}{t^3}\\
-		&=&\lim\limits_{t\rightarrow 0^{+}}\dfrac{\int_{0}^{t^2}\dfrac{\sin u}{u}du}{3t^2}\\
-		&=&\lim\limits_{t\rightarrow 0^{+}}\dfrac{2t\sin(t^2)}{6t^3}\\
+		I&=&\lim\limits_{t\to 0^{+}}\dfrac{1}{t^3}\int_{0}^{\frac{\pi}{4}}d\theta\int_{0}^{\frac{t}{\cos \theta}}\dfrac{\sin(r^2\sin\theta\cos\theta)}{r\sin\theta}rdr\\
+		&=&\lim\limits_{t\to 0^{+}}\dfrac{\int_{0}^{t}dx\int_{0}^{x}\dfrac{\sin(xy)}{y}dy}{t^3}\\
+		&=&\lim\limits_{t\to 0^{+}}\dfrac{\int_{0}^{t^2}\dfrac{\sin u}{u}du}{3t^2}\\
+		&=&\lim\limits_{t\to 0^{+}}\dfrac{2t\sin(t^2)}{6t^3}\\
 		&=&\dfrac{1}{3}
 	\end{eqnarray*}
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 23}}}
+\textcolor{purplea}{August 23}
 
 1. 设$f(x)$连续,且$f(x)\neq 0,f(1)=\sqrt{2}$,若对任意$x,y\in(-\infty,+\infty)$,有$f(x+y)-f(x)=\int_{x}^{x+y}\dfrac{t}{f(t)}(t^2+1)dt$,求$f(x)$
 \myspace{1}
@@ -1381,9 +1381,9 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 
 	我们可以得到:
 	\begin{eqnarray*}
-		f'(x)&=&\lim\limits_{\Delta x\rightarrow 0}\dfrac{f(x+\Delta)-f(x)}{\Delta x}\\
-		&=&\lim\limits_{\Delta x\rightarrow 0}\dfrac{\int_{x}^{x+\Delta x}\dfrac{t}{f(t)}(t^2+1)dt}{\Delta x}\\
-		&=&\lim\limits_{\Delta x\rightarrow 0}\dfrac{(x+\Delta x)}{f(x+\Delta x)}\left[ (x+\Delta x)^2+1\right] \\
+		f'(x)&=&\lim\limits_{\Delta x\to 0}\dfrac{f(x+\Delta)-f(x)}{\Delta x}\\
+		&=&\lim\limits_{\Delta x\to 0}\dfrac{\int_{x}^{x+\Delta x}\dfrac{t}{f(t)}(t^2+1)dt}{\Delta x}\\
+		&=&\lim\limits_{\Delta x\to 0}\dfrac{(x+\Delta x)}{f(x+\Delta x)}\left[ (x+\Delta x)^2+1\right] \\
 		&=&\dfrac{x(x^2+1)}{f(x)}
 	\end{eqnarray*}
 
@@ -1409,12 +1409,12 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	
 	我们有:$$F'(x)\leq 3^{\frac{2}{3}}[F(x)]^{\frac{2}{3}}\Rightarrow f^{2}(x)\leq x^2\Rightarrow f(x)\leq x$$
 
-	我们补充$\lim\limits_{x\rightarrow 0}f(x)=0$,综上所述,我们得到:  $x\geq 0\text{时,均有}f(x)\leq x$	
+	我们补充$\lim\limits_{x\to 0}f(x)=0$,综上所述,我们得到:  $x\geq 0\text{时,均有}f(x)\leq x$	
 	
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 24}}}
+\textcolor{purplea}{August 24}
 
 1. 已知$f(x)=\dfrac{x|x|}{1+x}$,求$f(x)$的凹凸区间以及渐近线
 \myspace{1}
@@ -1436,8 +1436,8 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	$f'(0)=0$,我们利用导数定义得到:  
 	$$\left\lbrace
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow 0^{+}}\dfrac{f'(x)}{x}=2\\
-		\lim\limits_{x\rightarrow 0^{-}}\dfrac{f'(x)}{x}=-2
+		\lim\limits_{x\to 0^{+}}\dfrac{f'(x)}{x}=2\\
+		\lim\limits_{x\to 0^{-}}\dfrac{f'(x)}{x}=-2
 	\end{array}
 	\right. \Rightarrow f''(x)\text{在}x=0\text{跳跃间断}$$
 	
@@ -1454,8 +1454,8 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	(1).
 	$$\left\lbrace
 	\begin{array}{l}
-		a=\lim\limits_{x\rightarrow+\infty}\dfrac{f(x)}{x}\\
-		b=\lim\limits_{x\rightarrow+\infty}(f(x)-ax)
+		a=\lim\limits_{x\to+\infty}\dfrac{f(x)}{x}\\
+		b=\lim\limits_{x\to+\infty}(f(x)-ax)
 	\end{array}
 	\right. \Rightarrow\left\lbrace
 	\begin{array}{l}
@@ -1467,8 +1467,8 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	(2).
 	$$\left\lbrace
 	\begin{array}{l}
-		a=\lim\limits_{x\rightarrow-\infty}\dfrac{f(x)}{x}\\
-		b=\lim\limits_{x\rightarrow-\infty}(f(x)-ax)
+		a=\lim\limits_{x\to-\infty}\dfrac{f(x)}{x}\\
+		b=\lim\limits_{x\to-\infty}(f(x)-ax)
 	\end{array}
 	\right. \Rightarrow\left\lbrace
 	\begin{array}{l}
@@ -1498,7 +1498,7 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 25}}}
+\textcolor{purplea}{August 25}
 
 1. 设$(X,Y)$的概率密度为$f(x,y)=\left\lbrace
 \begin{array}{l}
@@ -1524,8 +1524,8 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	
 	$$\left\lbrace
 	\begin{array}{l}
-		a=\lim\limits_{x\rightarrow+\infty}\dfrac{f(x)}{x}=\lim\limits_{x\rightarrow+\infty}(1+\arctan\dfrac{2}{x})\\
-		b=\lim\limits_{x\rightarrow+\infty}(f(x)-ax)=\lim\limits_{x\rightarrow+\infty}x\arctan\dfrac{2}{x}
+		a=\lim\limits_{x\to+\infty}\dfrac{f(x)}{x}=\lim\limits_{x\to+\infty}(1+\arctan\dfrac{2}{x})\\
+		b=\lim\limits_{x\to+\infty}(f(x)-ax)=\lim\limits_{x\to+\infty}x\arctan\dfrac{2}{x}
 	\end{array}
 	\right. \Rightarrow \left\lbrace
 	\begin{array}{l}
@@ -1538,8 +1538,8 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	
 	$$\left\lbrace
 	\begin{array}{l}
-		a=\lim\limits_{x\rightarrow-\infty}\dfrac{f(x)}{x}=\lim\limits_{x\rightarrow -\infty}(1+\arctan\dfrac{2}{x})\\
-		b=\lim\limits_{x\rightarrow-\infty}(f(x)-ax)=\lim\limits_{x\rightarrow-\infty}x\arctan\dfrac{2}{x}
+		a=\lim\limits_{x\to-\infty}\dfrac{f(x)}{x}=\lim\limits_{x\to -\infty}(1+\arctan\dfrac{2}{x})\\
+		b=\lim\limits_{x\to-\infty}(f(x)-ax)=\lim\limits_{x\to-\infty}x\arctan\dfrac{2}{x}
 	\end{array}
 	\right. \Rightarrow \left\lbrace
 	\begin{array}{l}
@@ -1552,7 +1552,7 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 26}}}
+\textcolor{purplea}{August 26}
 
 1. $\int_{0}^{1}\dfrac{\arcsin\sqrt{x}}{x^2-x+1}dx$
 \myspace{1}
@@ -1594,7 +1594,7 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 27}}}
+\textcolor{purplea}{August 27}
 
 1. 设$f(x)=\arctan x$,求$f^{(n)}(0)$($n$为奇数)
 \myspace{1}
@@ -1627,14 +1627,14 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	我们可以知道$f(x)$在$x=0$处可导:
 	$$\left\lbrace
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow 0^{+}}f(x)=b\\
-		\lim\limits_{x\rightarrow 0^{-}}f(x)=1
+		\lim\limits_{x\to 0^{+}}f(x)=b\\
+		\lim\limits_{x\to 0^{-}}f(x)=1
 	\end{array}
 	\right. \Rightarrow b=1$$
 	$$\left\lbrace
 	\begin{array}{l}
-		\lim\limits_{x\rightarrow 0^{+}}f'(x)=b\\
-		\lim\limits_{x\rightarrow 0^{-}}f'(x)=a
+		\lim\limits_{x\to 0^{+}}f'(x)=b\\
+		\lim\limits_{x\to 0^{-}}f'(x)=a
 	\end{array}
 	\right.\Rightarrow a=b=1$$
 	
@@ -1654,7 +1654,7 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 28}}}
+\textcolor{purplea}{August 28}
 
 1. 设$f(x)$在$[a,b]$上可导,$f(a)=a$,$\int_{a}^{b}f(x)dx=\dfrac{1}{2}(b^2-a^2)$,证明:$\exists\xi\in(a,b),\ s.t. f'(\xi)=f(\xi)-\xi+1$
 \myspace{1}
@@ -1696,7 +1696,7 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 29}}}
+\textcolor{purplea}{August 29}
 
 1. 求$\int_{0}^{1}\dfrac{\arctan e^{2x-1}}{\sqrt{x}+\sqrt{1-x}}dx$
 \myspace{1}
@@ -1723,8 +1723,8 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	
 	(1). $\left\lbrace
 	\begin{array}{l}
-		a=\lim\limits_{x\rightarrow+\infty}\dfrac{f(x)}{x}=\lim\limits_{t\rightarrow 0^{+}}e^{t}\sqrt{1+t^2}=1\\
-		b=\lim\limits_{x\rightarrow+\infty}\left[ f(x)-ax\right]=\lim\limits_{t\rightarrow 0^{+}}\dfrac{e^{t}\sqrt{1+t^2}-1}{t}=1\\
+		a=\lim\limits_{x\to+\infty}\dfrac{f(x)}{x}=\lim\limits_{t\to 0^{+}}e^{t}\sqrt{1+t^2}=1\\
+		b=\lim\limits_{x\to+\infty}\left[ f(x)-ax\right]=\lim\limits_{t\to 0^{+}}\dfrac{e^{t}\sqrt{1+t^2}-1}{t}=1\\
 	\end{array}
 	\right. $
 	
@@ -1732,8 +1732,8 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	
 	(2). $\left\lbrace
 	\begin{array}{l}
-		a=\lim\limits_{x\rightarrow-\infty}\dfrac{f(x)}{x}=\lim\limits_{t\rightarrow 0^{-}}-e^{t}\sqrt{1+t^2}=-1\\
-		b=\lim\limits_{x\rightarrow-\infty}\left[ f(x)-ax\right]=\lim\limits_{t\rightarrow 0^{-}}\dfrac{1-e^{t}\sqrt{1+t^2}}{t}=-1\\
+		a=\lim\limits_{x\to-\infty}\dfrac{f(x)}{x}=\lim\limits_{t\to 0^{-}}-e^{t}\sqrt{1+t^2}=-1\\
+		b=\lim\limits_{x\to-\infty}\left[ f(x)-ax\right]=\lim\limits_{t\to 0^{-}}\dfrac{1-e^{t}\sqrt{1+t^2}}{t}=-1\\
 	\end{array}
 	\right. $
 	
@@ -1743,7 +1743,7 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 30}}}
+\textcolor{purplea}{August 30}
 
 1. 随机变量$X$服从分布$X\sim E(1)$,随机变量$Y$服从分布$Y\sim B(1,\dfrac{1}{2})$,$X,Y$相互独立,随机变量$Z=X-Y$,求$f_{z}(Z)$
 \myspace{1}
@@ -1771,7 +1771,7 @@ $$\int_{-\frac{\pi}{2}}^{f(x)}g(t)dt=\int_{-\frac{\pi}{2}}^{x}\left(\dfrac{1}{1+
 \end{solution}
 \myspace{1}
 
-\hl{\textbf{\textit{August 31}}}
+\textcolor{purplea}{August 31}
 
 1. 设$f(x)=\arctan x \cdot e^{ax}$,且$f'''(0)=2$,求$a^2$
 \myspace{1}

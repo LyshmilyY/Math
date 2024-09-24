@@ -26,27 +26,28 @@ $|f(x,y)-A|<\varepsilon$, 那么称函数 $f(x,y)$ 当 $(x,y)\to(x_{0},y_{0})$ �
 \end{definition}
 \begin{definition}[偏导数]
 	
-	设函数 $f(x,y)$ 在 $(x_{0},y_{0})$ 邻域内有定义, 若极限 $\lim\limits_{\Delta x\rightarrow 0}\dfrac{f(x_{0}+\Delta x,y_{0})-f(x_{0},y_{0})}{\Delta x}$ 存在,
+	设函数 $f(x,y)$ 在 $(x_{0},y_{0})$ 邻域内有定义, 若极限 $\lim\limits_{\Delta x\to 0}\dfrac{f(x_{0}+\Delta x,y_{0})-f(x_{0},y_{0})}{\Delta x}$ 存在,
 	我们将这记作 $f(x,y)$ 在 $(x_{0},y_{0})$ 处对 $x$ 的偏导数,记作: 
 	$$\dfrac{\partial z}{\partial x}\big|_{\substack{x=x_{0}\\y=y_{0}}}\qquad\qquad 
 	\dfrac{\partial f}{\partial x}\big|_{\substack{x=x_{0}\\y=y_{0}}}\qquad\qquad
 	z_{x}'\big|_{\substack{x=x_{0}\\y=y_{0}}}$$
 
-	类似地, 我们可以定义 $f(x,y)$ 在 $(x_{0},y_{0})$ 处对 $y$ 的偏导数, 记作:
+	类似地, 可以定义 $f(x,y)$ 在 $(x_{0},y_{0})$ 处对 $y$ 的偏导数, 记作:
 	$$\dfrac{\partial z}{\partial y}\big|_{\substack{x=x_{0}\\y=y_{0}}}\qquad\qquad
 	\dfrac{\partial f}{\partial y}\big|_{\substack{x=x_{0}\\y=y_{0}}}\qquad\qquad
 	z_{y}'\big|_{\substack{x=x_{0}\\y=y_{0}}}$$
 
-	$$f_{x}'(x_{0},y_{0}) = \lim\limits_{\Delta x\rightarrow 0}\dfrac{f(x_{0}+\Delta x,y_{0})-f(x_{0},y_{0})}{\Delta x}$$
-	$$f_{y}'(x_{0},y_{0}) = \lim\limits_{\Delta y\rightarrow 0}\dfrac{f(x_{0},y_{0}+\Delta y)-f(x_{0},y_{0})}{\Delta y}$$
-	对偏导数进一步求偏导数,我们可以得到高阶偏导数: $f''_{xx}(x,y),f''_{yy}(x,y),f''_{xy}(x,y),f''_{yx}(x,y)$
+	$$f_{x}'(x_{0},y_{0}) = \lim\limits_{\Delta x\to 0}\dfrac{f(x_{0}+\Delta x,y_{0})-f(x_{0},y_{0})}{\Delta x}$$
+	$$f_{y}'(x_{0},y_{0}) = \lim\limits_{\Delta y\to 0}\dfrac{f(x_{0},y_{0}+\Delta y)-f(x_{0},y_{0})}{\Delta y}$$
+	
+	对偏导数进一步求偏导数,可以得到高阶偏导数: $f''_{xx}(x,y),f''_{yy}(x,y),f''_{xy}(x,y),f''_{yx}(x,y)$
 \end{definition}
 \begin{definition}[可微]
 	
 	函数 $f(x,y)$ 在点 $(x,y)$ 处的全增量 $\Delta z=f(x+\Delta x,y+\Delta y)-f(x,y)$ 可表示为: 
 	$$\Delta z=A\Delta x+B\Delta y+o(\rho)\qquad \rho=\sqrt{(\Delta x)^2+(\Delta y)^2}$$
 	
-	其中 $A,B$ 只与 $x,y$ 相关, 我们称 $f(x,y)$ 在点 $(x,y)$ 处可微,$A\Delta x+B\Delta y$ 是 $f(x,y)$ 在点 $(x,y)$ 处的全微分.
+	其中 $A,B$ 只与 $x,y$ 相关, 称 $f(x,y)$ 在点 $(x,y)$ 处可微,$A\Delta x+B\Delta y$ 是 $f(x,y)$ 在点 $(x,y)$ 处的全微分.
 	$$dz=A\Delta x+B\Delta y=Adx+Bdy$$
 	\begin{enumerate}
 		\item 可微必要条件: $f(x,y)$ 在点 $(x,y)$ 处可微 $\Rightarrow$ $f(x,y)$ 在点 $(x,y)$ 处偏导数必定存在且 $\begin{cases} A = \dfrac{\partial z}{\partial x}  \\ B = \dfrac{\partial z}{\partial y}\end{cases}$
@@ -56,18 +57,18 @@ $|f(x,y)-A|<\varepsilon$, 那么称函数 $f(x,y)$ 当 $(x,y)\to(x_{0},y_{0})$ �
 \begin{definition}[偏导数连续性]
 	
 	$$\begin{cases}
-	f'_{x}(x_{0},y_{0}) = \lim\limits_{\Delta x\rightarrow 0}\dfrac{f(x_{0}+\Delta x,y_{0})-f(x_{0},y_{0})}{\Delta x} = \lim\limits_{x\to x_{0}} f'_{x}(x,y_{0})\\
-	f'_{y}(x_{0},y_{0}) = \lim\limits_{\Delta y\rightarrow 0}\dfrac{f(x_{0},y_{0}+\Delta y)-f(x_{0},y_{0})}{\Delta y} = \lim\limits_{y\to y_{0}} f'_{y}(x_{0},y)
+	f'_{x}(x_{0},y_{0}) = \lim\limits_{\Delta x\to 0}\dfrac{f(x_{0}+\Delta x,y_{0})-f(x_{0},y_{0})}{\Delta x} = \lim\limits_{x\to x_{0}} f'_{x}(x,y_{0})\\
+	f'_{y}(x_{0},y_{0}) = \lim\limits_{\Delta y\to 0}\dfrac{f(x_{0},y_{0}+\Delta y)-f(x_{0},y_{0})}{\Delta y} = \lim\limits_{y\to y_{0}} f'_{y}(x_{0},y)
 	\end{cases}$$
 	
-	如果这两个极限相等,我们就称偏导数在此点连续
+	如果这两个极限相等, 就称偏导数在此点连续
 \end{definition}
 \section{链式法则}
 
 \begin{definition}[链式法则]\label{def: 链式法则}
 	$$z=f(u,v),u=\varphi(x,y),v=\phi(x,y)$$
 	
-	我们可以得到偏导数: 
+	偏导数: 
 	$$\dfrac{\partial z}{\partial x}=\dfrac{\partial z}{\partial u}\dfrac{\partial u}{\partial x}+\dfrac{\partial z}{\partial v}\dfrac{\partial v}{\partial x}$$
 	$$\dfrac{\partial z}{\partial y}=\dfrac{\partial z}{\partial u}\dfrac{\partial u}{\partial y}+\dfrac{\partial z}{\partial v}\dfrac{\partial v}{\partial y}$$
 	
@@ -565,13 +566,13 @@ $$\dfrac{dy}{dx} = \varphi(\dfrac{y}{x})\Rightarrow
 	\myspace{1}
 	引入 $S_{n}=\sum\limits_{i=1}^{n}u_{i}$,我们称 $S_{n}$ 是无穷级数的部分和,我们定义:
 	\myspace{1}
-	(1). 当 $\lim\limits_{n\rightarrow +\infty}S_{n}=S$ 时,我们称级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛.
+	(1). 当 $\lim\limits_{n\to +\infty}S_{n}=S$ 时,我们称级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛.
 	\myspace{1}
-	(2). 当 $\lim\limits_{n\rightarrow +\infty}S_{n}=\infty$ 或者不存在时,我们称级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 发散.
+	(2). 当 $\lim\limits_{n\to +\infty}S_{n}=\infty$ 或者不存在时,我们称级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 发散.
 \end{definition}
 
 \begin{corollary}
-	(1). 当 $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛时,我们有:  $\lim\limits_{n\rightarrow +\infty}u_{n}=0$ (必要条件)
+	(1). 当 $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛时,我们有:  $\lim\limits_{n\to +\infty}u_{n}=0$ (必要条件)
 	\myspace{1}
 	(2). 当 $\sum\limits_{n=1}^{+\infty}u_{n},\sum\limits_{n=1}^{+\infty}v_{n}$ 收敛时,且这两个级数的和分别为 $S,T$, $\forall \alpha ,\beta \in \mathbb{R} ,\sum\limits_{n=1}^{+\infty}(\alpha u_{n}+\beta v_{n})$ 收敛,且级数和为 $\alpha S+\beta T$
 	\myspace{1}
@@ -591,7 +592,7 @@ $$\dfrac{dy}{dx} = \varphi(\dfrac{y}{x})\Rightarrow
 \begin{proof}
 	$\sum\limits_{n=1}^{+\infty}u_{n}$ 是正项级数,$u_{n}\geq 0, S_{n}$ 单调递增
 
-	$S_{n}$ 有界, 单调有界准则: $\lim\limits_{n\rightarrow+\infty}S_{n}$ 存在, 原级数收敛
+	$S_{n}$ 有界, 单调有界准则: $\lim\limits_{n\to+\infty}S_{n}$ 存在, 原级数收敛
 \end{proof}
 \myspace{1}
 
@@ -608,7 +609,7 @@ $$\dfrac{dy}{dx} = \varphi(\dfrac{y}{x})\Rightarrow
 (3). 比较判别法的极限形式
 
 \begin{theorem}[比较判别法的极限形式]\label{the: 比较判别法的极限形式}
-	两个正项级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 和 $\sum\limits_{n=1}^{+\infty}v_{n}(v_{n}\neq 0)$, 且 $\lim\limits_{n\rightarrow+\infty}\dfrac{u_{n}}{v_{n}}=A$
+	两个正项级数 $\sum\limits_{n=1}^{+\infty}u_{n}$ 和 $\sum\limits_{n=1}^{+\infty}v_{n}(v_{n}\neq 0)$, 且 $\lim\limits_{n\to+\infty}\dfrac{u_{n}}{v_{n}}=A$
 	\myspace{1}
 	(i). $A=0$,若 $\sum\limits_{n=1}^{+\infty}v_{n}$ 收敛,$\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛
 
@@ -620,7 +621,7 @@ $$\dfrac{dy}{dx} = \varphi(\dfrac{y}{x})\Rightarrow
 (4). 比值判别法(达朗贝尔判别法)
 
 \begin{theorem}[比值判别法]
-	正项级数 $\sum\limits_{n=1}^{+\infty}u_{n}$, 且 $\lim\limits_{n\rightarrow+\infty}\dfrac{u_{n+1}}{u_{n}}=\rho$
+	正项级数 $\sum\limits_{n=1}^{+\infty}u_{n}$, 且 $\lim\limits_{n\to+\infty}\dfrac{u_{n+1}}{u_{n}}=\rho$
 	\myspace{1}
 	(i). $\rho<1$, $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛
 
@@ -632,7 +633,7 @@ $$\dfrac{dy}{dx} = \varphi(\dfrac{y}{x})\Rightarrow
 (5). 根值判别法(柯西判别法)
 
 \begin{theorem}[根值判别法]
-	正项级数 $\sum\limits_{n=1}^{+\infty}u_{n}$, 且$\lim\limits_{n\rightarrow+\infty}\sqrt[n]{u_{n}}=\rho$
+	正项级数 $\sum\limits_{n=1}^{+\infty}u_{n}$, 且$\lim\limits_{n\to+\infty}\sqrt[n]{u_{n}}=\rho$
 	\myspace{1}
 	(i). $\rho<1$, $\sum\limits_{n=1}^{+\infty}u_{n}$ 收敛
 
@@ -651,7 +652,7 @@ $$\dfrac{dy}{dx} = \varphi(\dfrac{y}{x})\Rightarrow
 \subsection{交错级数判别}
 
 \begin{theorem}[莱布尼茨判别法]
-	$u_{n}$ 单调不增且 $\lim\limits_{n\rightarrow +\infty}u_{n}=0$  $\Rightarrow\sum\limits_{n=1}^{+\infty}(-1)^{n-1}u_{n}$ 收敛
+	$u_{n}$ 单调不增且 $\lim\limits_{n\to +\infty}u_{n}=0$  $\Rightarrow\sum\limits_{n=1}^{+\infty}(-1)^{n-1}u_{n}$ 收敛
 \end{theorem}
 
 \subsection{一般项级数判别}
@@ -732,7 +733,7 @@ $$\dfrac{dy}{dx} = \varphi(\dfrac{y}{x})\Rightarrow
 
 \begin{theorem}[收敛域和收敛半径]
 	(1). 不缺项幂级数(\textbf{充分条件}): 
-	$$\lim\limits_{n\rightarrow +\infty}|\dfrac{a_{n+1}}{a_{n}}|=\rho$$
+	$$\lim\limits_{n\to +\infty}|\dfrac{a_{n+1}}{a_{n}}|=\rho$$
 	
 	$$R = \begin{cases}
 		\dfrac{1}{\rho},\rho \neq 0 \\
@@ -923,11 +924,11 @@ $$\dfrac{dy}{dx} = \varphi(\dfrac{y}{x})\Rightarrow
 
 \subsection{周期延拓}
 \begin{definition}[周期延拓]
-	(1). 周期延拓: $[-\pi,\pi] \rightarrow (-\infty,+\infty)$
+	(1). 周期延拓: $[-\pi,\pi] \to (-\infty,+\infty)$
 
-	(2). 奇延拓: $[0,\pi] \rightarrow [-\pi,\pi]$ 且 $f(x)$ 为奇函数, 正弦级数
+	(2). 奇延拓: $[0,\pi] \to [-\pi,\pi]$ 且 $f(x)$ 为奇函数, 正弦级数
 
-	(3). 偶延拓: $[0,\pi] \rightarrow [-\pi,\pi]$ 且 $f(x)$ 为偶函数, 余弦级数
+	(3). 偶延拓: $[0,\pi] \to [-\pi,\pi]$ 且 $f(x)$ 为偶函数, 余弦级数
 \end{definition}
 
 \subsection{逐点收敛性理论}
@@ -1514,7 +1515,7 @@ $$S(x) = \begin{cases}
 	
 	$t=\sqrt{(\Delta x)^2+(\Delta y)^2+(\Delta z)^2}$ 表示 $|PP_{0}|$,如果下面极限存在: 
 
-	$$\lim\lim\limits_{t\rightarrow 0}\frac{u(P)-u(P_{0})}{t}=\lim\lim\limits_{t\rightarrow 0}\frac{u(x_{0}+t\cos \alpha,y_{0}+t\cos \beta,z_{0}+t\cos \gamma)-u(x_{0},y_{0},z_{0})}{t}$$
+	$$\lim\lim\limits_{t\to 0}\frac{u(P)-u(P_{0})}{t}=\lim\lim\limits_{t\to 0}\frac{u(x_{0}+t\cos \alpha,y_{0}+t\cos \beta,z_{0}+t\cos \gamma)-u(x_{0},y_{0},z_{0})}{t}$$
 	
 	我们将此极限称为 $u=f(x,y,z)$ 在$P_{0}$ 处沿着 $l$ 的方向导数,记作 $\dfrac{\partial u}{\partial l}|_{P_{0}}$
 \end{definition}
@@ -2043,14 +2044,14 @@ $$S(x) = \begin{cases}
 \end{definition}
 \subsection{格林公式}
 \begin{theorem}
-	格林公式: (第二型曲线积分 $\rightarrow$ 二重积分 )
+	格林公式: (第二型曲线积分 $\to$ 二重积分 )
 	$$\oint_{L}P(x,y)dx+Q(x,y)dy=\oiint\limits_{D}(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})d\sigma$$
 	
 	前提条件: $L$取正向,左手在内侧,$L$闭合.一般适用于平面曲线
 \end{theorem}
 \subsection{斯托克斯公式}
 \begin{theorem}[斯托克斯公式]
-	斯托克斯公式: (第二型曲线积分 $\rightarrow$ 第一型曲面积分 )
+	斯托克斯公式: (第二型曲线积分 $\to$ 第一型曲面积分 )
 	$$\oint_{\Gamma}Pdx+Qdy+Rdz=\iint\limits_{\Sigma}\left| \begin{array}{lll}
 		\cos\alpha&\cos\beta&\cos\gamma\\
 		\dfrac{\partial}{\partial x}&\dfrac{\partial }{\partial y}&\dfrac{\partial}{\partial z}\\
@@ -2065,6 +2066,6 @@ $$S(x) = \begin{cases}
 \end{definition}
 \subsection{高斯公式}
 \begin{theorem}[高斯公式]
-	高斯公式: (第二型曲面积分 $\rightarrow$ 三重积分)
+	高斯公式: (第二型曲面积分 $\to$ 三重积分)
 	$$\iint\limits_{\Omega}P(x,y,z)dydz+Q(x,y,z)dxdz+R(x,y,z)dxdy=\iiint\limits_{\Omega}(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z})d\nu$$
 \end{theorem}

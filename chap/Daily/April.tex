@@ -1,66 +1,72 @@
 \chapterimage{chap30.jpg}
 \chapter{April}
 \section{Week \Rmnum{1}}
-\hl{\textbf{\textit{April 1}}}
+\textcolor{orange}{April 1}
 
-1. 级数 $\sum\limits_{n=1}^{+\infty}(\dfrac{1}{\sqrt{n}}-\dfrac{1}{\sqrt{n+1}}\sin(n+k))$ 敛散性
-\myspace{1}
+\begin{example}[][Exam: 30.1.1]
+	判断级数 $\sum\limits_{n=1}^{+\infty}\left[\dfrac{1}{\sqrt{n}}-\dfrac{1}{\sqrt{n+1}}\sin(n+k)\right]$ 敛散性
+\end{example}
+
 \begin{solution}
 	
 	设 $a_{n}=\dfrac{1}{\sqrt{n}}-\dfrac{1}{\sqrt{n+1}}$,$u_{n}<a_{n}$
 	
 	$\sum\limits_{n=1}^{+\infty}a_{n}$ 部分和 $S_{n}=1-\dfrac{1}{\sqrt{n+1}}$
 	
-	$$\lim\limits_{n\rightarrow +\infty}S_{n}=1$$
+	$$\lim\limits_{n\to +\infty}S_{n}=1$$
 	
 	原级数绝对收敛.
 \end{solution}
-\myspace{1}
 
-2. $\lim\limits_{x\rightarrow 0^{+}}\dfrac{\sqrt{2(\sec x-1)}-\sqrt[3]{6(x-\sin x)}}{\int_{0}^{x^2}\arctan (e^{\sqrt{t}}-1)dt}$
-\myspace{1}
+\begin{example}[][Exam: 30.1.2]
+	$$\lim\limits_{x\to 0^{+}}\dfrac{\sqrt{2(\sec x-1)}-\sqrt[3]{6(x-\sin x)}}{\int_{0}^{x^2}\arctan (e^{\sqrt{t}}-1)dt}$$
+\end{example}
+
 \begin{solution}
 	
-	对于变上限积分,当 $x\rightarrow 0,g(x)\rightarrow 0,h(x)\rightarrow 0$,我们有: 
-	$$\lim\limits_{x\rightarrow 0^{+}}\int_{0}^{g(x)}h(t)dt\Rightarrow \lim\limits_{x\rightarrow 0^{+}}\int_{0}^{G(x)}H(t)dt,x\rightarrow 0,f(x)\sim F(x),h(x)\sim H(x)$$
+	对于变上限积分,当 $x\to 0,g(x)\to 0,h(x)\to 0$,我们有: 
+	$$\lim\limits_{x\to 0^{+}}\int_{0}^{g(x)}h(t)dt\Rightarrow \lim\limits_{x\to 0^{+}}\int_{0}^{G(x)}H(t)dt,x\to 0,f(x)\sim F(x),h(x)\sim H(x)$$
 	
 	我们得到原极限等价于: 
-	$$\lim\limits_{x\rightarrow 0^{+}}\frac{\sqrt{2(\sec x-1)}-\sqrt[3]{6(x-\sin x)}}{\frac{2}{3}x^3}=\lim\limits_{x\rightarrow 0^{+}}\frac{\sqrt{2(\sec x-1)}-\sqrt{2\frac{1}{2}x^2}+\sqrt[3]{6\frac{1}{6}x^3}-\sqrt[3]{6(x-\sin x)}}{\frac{2}{3}x^3}$$
+	$$\lim\limits_{x\to 0^{+}}\frac{\sqrt{2(\sec x-1)}-\sqrt[3]{6(x-\sin x)}}{\frac{2}{3}x^3}=\lim\limits_{x\to 0^{+}}\frac{\sqrt{2(\sec x-1)}-\sqrt{2\frac{1}{2}x^2}+\sqrt[3]{6\frac{1}{6}x^3}-\sqrt[3]{6(x-\sin x)}}{\frac{2}{3}x^3}$$
 	
-	前一个极限: $$\lim\limits_{x\rightarrow 0^{+}}\frac{\sqrt{2(\sec x-1)}-\sqrt{2\frac{1}{2}x^2}}{\frac{2}{3}x^3}=\lim\limits_{x\rightarrow 0^{+}}\frac{2(\sec x-1-\frac{1}{2}x^2)}{\frac{2}{3}x^3(\sqrt{2(\sec x-1)}+x)}$$
+	前一个极限: $$\lim\limits_{x\to 0^{+}}\frac{\sqrt{2(\sec x-1)}-\sqrt{2\frac{1}{2}x^2}}{\frac{2}{3}x^3}=\lim\limits_{x\to 0^{+}}\frac{2(\sec x-1-\frac{1}{2}x^2)}{\frac{2}{3}x^3(\sqrt{2(\sec x-1)}+x)}$$
 	
-	我们有: $\lim\limits_{x\rightarrow 0^{+}}\dfrac{\sqrt{2(\sec x-1)}+x}{2x}=1$
+	我们有: $\lim\limits_{x\to 0^{+}}\dfrac{\sqrt{2(\sec x-1)}+x}{2x}=1$
 	
 	前一个极限: $$I_{1}=\frac{3}{2}\frac{1-\cos x-\frac{1}{2}x^2\cos x}{x^4\cos x}=\frac{5}{16}$$
 	
-	同理可得: $$I_{2}=-\lim\limits_{x\rightarrow 0^{+}}\frac{3}{2}\frac{\sqrt[3]{6\dfrac{x-\sin x}{x^3}}-1}{x^2}=-\lim\limits_{x\rightarrow 0^{+}}\frac{1}{2}\frac{6(x-\sin x)-x^3}{x^5}=\frac{1}{40}$$
+	同理可得: $$I_{2}=-\lim\limits_{x\to 0^{+}}\frac{3}{2}\frac{\sqrt[3]{6\dfrac{x-\sin x}{x^3}}-1}{x^2}=-\lim\limits_{x\to 0^{+}}\frac{1}{2}\frac{6(x-\sin x)-x^3}{x^5}=\frac{1}{40}$$
 	
 	原极限为: $I=I_{1}+I_{2}=\dfrac{27}{80}$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 2}}}
 
-1. 级数 $\sum\limits_{n=2}^{+\infty}[sin \frac{1}{n}-k\ln(1-\frac{1}{n})]$ 收敛,求 $k$ 的值.
-\myspace{1}
+\textcolor{orange}{April 2}
+
+\begin{example}[][Exam: 30.1.3]
+	级数 $\sum\limits_{n=2}^{+\infty}[sin \frac{1}{n}-k\ln(1-\frac{1}{n})]$ 收敛,求 $k$ 的值
+\end{example}
+
 \begin{solution}
 	
 	泰勒公式和级数的比较判别法极限形式
 	
-	$$\lim\limits_{n\rightarrow+\infty}\dfrac{sin \frac{1}{n}-k\ln(1-\frac{1}{n})}{\frac{1}{n}}=\lim\limits_{x\rightarrow+0}\dfrac{sin x-k\ln(1-x)}{x}$$
+	$$\lim\limits_{n\to+\infty}\dfrac{sin \frac{1}{n}-k\ln(1-\frac{1}{n})}{\frac{1}{n}}=\lim\limits_{x\to+0}\dfrac{sin x-k\ln(1-x)}{x}$$
 	
 	分子利用泰勒展开式得到: 
-	$$x\rightarrow 0, \sin x-k\ln(1-x)\sim x-\dfrac{x^3}{6}+o(x^3)+kx+k\dfrac{x^2}{2}+o(x^2)\sim (1+k)x+o(x)$$
+	$$x\to 0, \sin x-k\ln(1-x)\sim x-\dfrac{x^3}{6}+o(x^3)+kx+k\dfrac{x^2}{2}+o(x^2)\sim (1+k)x+o(x)$$
 	
 	我们得到: 
-	$$\lim\limits_{n\rightarrow+\infty}\dfrac{sin \dfrac{1}{n}-k\ln(1-\dfrac{1}{n})}{\dfrac{1}{n}}=1+k$$
+	$$\lim\limits_{n\to+\infty}\dfrac{sin \dfrac{1}{n}-k\ln(1-\dfrac{1}{n})}{\dfrac{1}{n}}=1+k$$
 	
 	当且仅当 $k=-1$ 时,级数收敛,因为当 $k\neq -1$时,原级数敛散性和$\sum\limits_{n=1}^{+\infty}\dfrac{1}{n}$一致,级数发散.
 \end{solution}
-\myspace{1}
 
-2. $\int_{0}^{\frac{\pi}{4}}\left(\dfrac{\sin x-\cos x}{\sin x+\cos x} \right)^3dx $
-\myspace{1}
+\begin{example}[][Exam: 30.1.4]
+	$$\int_{0}^{\frac{\pi}{4}}\left(\dfrac{\sin x-\cos x}{\sin x+\cos x} \right)^3dx$$
+\end{example}
+
 \begin{solution}
 	
 	原定积分: 
@@ -69,12 +75,13 @@
 	令 $tan x=t,x=\arctan t,dx=\dfrac{1}{1+t^2}dt,t\in[0,1]$,原定积分为: 
 	$$I=-\frac{1}{2}\int_{0}^{1}\frac{t^2}{1+t^2}dt^2=-\frac{1}{2}\int_{0}^{1}\frac{t}{1+t}dt=\frac{\ln2-1}{2}$$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 3}}}
+\textcolor{orange}{April 3}
 
-1. 级数 $\sum\limits_{n=1}^{+\infty}a_{n}$ 收敛,判断级数 $\sum\limits_{n=1}^{+\infty}|a_{n}|$,$\sum\limits_{n=1}^{+\infty}(-1)^{n}a_{n}$,$\sum\limits_{n=1}^{+\infty}a_{n}a_{n+1}$,$\sum\limits_{n=1}^{+\infty}\dfrac{a_{n}+a_{n+1}}{2}$ 敛散性
-\myspace{1}
+\begin{example}[][Exam: 30.1.5]
+	级数 $\sum\limits_{n=1}^{+\infty}a_{n}$ 收敛, 判断级数 $\sum\limits_{n=1}^{+\infty}|a_{n}|$,$\sum\limits_{n=1}^{+\infty}(-1)^{n}a_{n}$、
+	$\sum\limits_{n=1}^{+\infty}a_{n}a_{n+1}$ 和 $\sum\limits_{n=1}^{+\infty}\dfrac{a_{n}+a_{n+1}}{2}$ 敛散性
+\end{example}
 \begin{solution}
 	
 	$$a_{n}=(-1)^n\frac{1}{n}\quad b_{n}=(-1)^n\frac{1}{n^{\frac{1}{2}}}$$
@@ -85,10 +92,10 @@
 	
 	$b_{n}$ 收敛,$b_{n}b_{n+1}$发散;
 \end{solution}
-\myspace{1}
 
-2. $\int_{0}^{\frac{\pi}{2}}\dfrac{1}{\sin x-\cos x}dx$
-\myspace{1}
+\begin{example}[][Exam: 30.1.6]
+	$$\int_{0}^{\frac{\pi}{2}}\dfrac{1}{\sin x-\cos x}dx$$
+\end{example}
 \begin{solution}
 	
 	原定积分内有瑕点,原积分等价于: 
@@ -98,37 +105,39 @@
 	
 	我们可以得到原反常积分发散.
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 4}}}
 
-1. $\lim\limits_{x\rightarrow 0}\left( -\dfrac{\cot x}{e^{-2x}}+\dfrac{1}{e^{-x}\sin^2 x}-\dfrac{1}{x^2}\right) $
-\myspace{1}
+\textcolor{orange}{April 4}
+
+\begin{example}[][Exam: 30.1.7]
+	$$\lim\limits_{x\to 0}\left( -\dfrac{\cot x}{e^{-2x}}+\dfrac{1}{e^{-x}\sin^2 x}-\dfrac{1}{x^2}\right)$$
+\end{example}
 \begin{solution}
 	
 	原极限等价于: 
-	$$\lim\limits_{x\rightarrow 0}\frac{x^2e^{x}-\frac{1}{2}x^2\sin 2xe^{2x}-\sin^2 x}{x^4}=-\frac{7}{6}$$
+	$$\lim\limits_{x\to 0}\frac{x^2e^{x}-\frac{1}{2}x^2\sin 2xe^{2x}-\sin^2 x}{x^4}=-\frac{7}{6}$$
 \end{solution}
-\myspace{1}
 
-2. 判断下列命题是否正确 
+\begin{example}[][Exam: 30.1.8]
+	判断下列命题是否正确 
 
-(i). $\sum\limits_{n=0}^{+\infty}(u_{2n+1}+u_{2n})$ 收敛,$\sum\limits_{n=0}^{+\infty}u_{n}$ 收敛
+(i). $\sum\limits_{n=0}^{+\infty}(u_{2n+1}+u_{2n})$ 收敛, $\sum\limits_{n=0}^{+\infty}u_{n}$ 收敛
 
-(ii). $\lim\limits_{n\rightarrow +\infty}\dfrac{u_{n+1}}{u_{n}}>1$,则 $\sum\limits_{n=0}^{+\infty}u_{n}$发散.
-\myspace{1}
+(ii). $\lim\limits_{n\to +\infty}\dfrac{u_{n+1}}{u_{n}}>1$, 则 $\sum\limits_{n=0}^{+\infty}u_{n}$发散
+\end{example}
 \begin{solution}
 	
 	(i). $u_{n}=(-1)^{n}$, 第一个排除
 	
 	(ii). 正项级数比较判别法
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 5}}}
+\textcolor{orange}{April 5}
 
-1. $(1+\sqrt{3})^{n}=a_{n}+b_{n}\sqrt{3}$,求$\lim\limits_{n\rightarrow +\infty}\dfrac{a_{n}}{b_{n}}$
-\myspace{1}
+\begin{example}[][Exam: 30.1.9]
+	$(1+\sqrt{3})^{n}=a_{n}+b_{n}\sqrt{3}$,求$\lim\limits_{n\to +\infty}\dfrac{a_{n}}{b_{n}}$
+\end{example}
+
 \begin{solution}
 	
 	我们有: 
@@ -150,23 +159,26 @@
 	化简得: 
 	$$0<|x_{n+1}-\sqrt{3}|<\frac{1}{\sqrt{3}+1}|x_{n}-\sqrt{3}|=\frac{1}{(\sqrt{3}+1)^{n-1}}a_{1}$$
 	
-	夹逼定理得到: $\lim\limits_{n\rightarrow +\infty}|x_{n}-\sqrt{3}|=0\Rightarrow \lim\limits_{n\rightarrow +\infty}\dfrac{a_{n}}{b_{n}}=\sqrt{3}$
+	夹逼定理得到: $\lim\limits_{n\to +\infty}|x_{n}-\sqrt{3}|=0\Rightarrow \lim\limits_{n\to +\infty}\dfrac{a_{n}}{b_{n}}=\sqrt{3}$
 \end{solution}
-\myspace{1}
 
-2. $\int_{1}^{+\infty}\dfrac{dx}{x^2\sqrt{x^{2}-1}}$
-\myspace{1}
+\begin{example}[][Exam: 30.1.10]
+	$$\int_{1}^{+\infty}\dfrac{dx}{x^2\sqrt{x^{2}-1}}$$
+\end{example}
+
 \begin{solution}
 	
 	令 $x=\sec t,t\in [1,\frac{\pi}{2}], dx=\tan t\sec tdt$,我们有: 
 	$$I=\int_{0}^{\frac{\pi}{2}}\frac{\sec t\tan t}{\sec^2 t\tan t}dt=\int_{0}^{\frac{\pi}{2}}\cos tdt=1$$	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 6}}}
 
-1. $\int_{0}^{1}\dfrac{xdx}{(2-x^2)\sqrt{1-x^2}}$
-\myspace{1}
+\textcolor{orange}{April 6}
+
+\begin{example}[][Exam: 30.1.11]
+	$$\int_{0}^{1}\dfrac{xdx}{(2-x^2)\sqrt{1-x^2}}$$
+\end{example}
+
 \begin{solution}
 	
 	令 $x=\sin t,t\in[0,\frac{\pi}{2}],dx=\cos tdt$,我们有: 
@@ -174,20 +186,24 @@
 	=\int_{0}^{\frac{\pi}{2}}\frac{\sin t}{2-\sin^2 t}dt=
 	-\int_{0}^{\frac{\pi}{2}}\frac{d\cos t}{\cos^2 t+1}=-\arctan(\cos t)|_{0}^{\frac{\pi}{2}}=\frac{\pi}{4}$$
 \end{solution}
-\myspace{1}
 
-2. $y=x^2$ 与$y=mx$ 围成的部分绕着 $y=mx(m>0)$ 旋转一周得到的旋转体体积 $V$
-\myspace{1}
+\begin{example}[][Exam: 30.1.12]
+	$y=x^2$ 与$y=mx$ 围成的部分绕着 $y=mx(m>0)$ 旋转一周得到的旋转体体积 $V$
+\end{example}
+
 \begin{solution}
 	
 	$$V=\int_{0}^{L}\pi r^2dl=\int_{0}^{m}\pi r^2\sqrt{1+m^2}dx=\frac{\pi}{\sqrt{1+m^2}}\int_{0}^{m}x^2(m-x)^2dx
 	=\frac{m^5\pi}{30\sqrt{1+m^2}}$$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 7}}}
-1. $f(x)$ 在 $(2,4)$上二阶导数连续,$f(3)=0$,求证: $f''(\varepsilon)=3\int_{2}^{4}f(x)dx$
-\myspace{1}
+
+\textcolor{orange}{April 7}
+
+\begin{example}[][Exam: 30.1.13]
+	 $f(x)$ 在 $(2,4)$上二阶导数连续,$f(3)=0$,求证: $f''(\varepsilon)=3\int_{2}^{4}f(x)dx$
+\end{example}
+
 \begin{solution}
 	
 	设 $ F(x)=\int_{2}^{x}f(x)dx$,原命题转化为证明: $$\text{已知}F(2)=0,F'(3)=0,\text{求证}F^{'''}(\varepsilon)=3F(4)$$
@@ -209,10 +225,11 @@
 	我们得到: $F(4)=\dfrac{F^{'''}(\varepsilon_{3})}{3}$,证毕
 	
 \end{solution}
-\myspace{1}
 
-2. $f(x)$在$[0,+\infty)$上可导,$f(0)=0$,其反函数为 $g(x)$,若 $\int_{0}^{f(x)}g(t)dt=x^2e^x$,求$f(x)$
-\myspace{1}
+\begin{example}[][Exam: 30.1.14]
+	$f(x)$ 在 $[0,+\infty)$ 上可导, $f(0)=0$, 其反函数为 $g(x)$, 若 $\int_{0}^{f(x)}g(t)dt=x^2e^x$, 求 $f(x)$
+\end{example}
+
 \begin{solution}
 	
 	我们对 $\int_{0}^{f(x)}g(t)dt=x^2e^x$左右两边同时对 $x$ 求导: 
@@ -222,31 +239,33 @@
 	
 	$$f(x)=(x+1)e^{x}-1$$
 \end{solution}
-\myspace{1}
 
 \section{Week \Rmnum{2}}
-\hl{\textbf{\textit{April 8}}}
+\textcolor{blue}{April 8}
 
-1. 求幂级数$\sum\limits_{n=1}^{+\infty}(-1)^{n}\dfrac{\ln n}{2^{n}}(x+1)^{2n+1}$ 收敛区间
-\myspace{1}
+\begin{example}[][Exam: 30.2.1]
+	求幂级数$\sum\limits_{n=1}^{+\infty}(-1)^{n}\dfrac{\ln n}{2^{n}}(x+1)^{2n+1}$ 收敛区间
+\end{example}
+
 \begin{solution}
 	
 	求解收敛半径的两种方法: 
 	
-	(i).$\rho=\lim\limits_{n\rightarrow +\infty}\frac{|a_{n+1}|}{|a_{n}|}$
+	(i).$\rho=\lim\limits_{n\to +\infty}\frac{|a_{n+1}|}{|a_{n}|}$
 	
-	(ii).$\rho=\lim\limits_{n\rightarrow +\infty}\sqrt[n]{|a_{n}|}$
+	(ii).$\rho=\lim\limits_{n\to +\infty}\sqrt[n]{|a_{n}|}$
 	
-	本题中采用第二种方法: $\rho=\lim\limits_{n\rightarrow +\infty}\sqrt[n]{|a_{n}|}=\lim\limits_{n\rightarrow +\infty}\dfrac{1}{2}\sqrt[n]{\ln n}=\dfrac{1}{2}$
+	本题中采用第二种方法: $\rho=\lim\limits_{n\to +\infty}\sqrt[n]{|a_{n}|}=\lim\limits_{n\to +\infty}\dfrac{1}{2}\sqrt[n]{\ln n}=\dfrac{1}{2}$
 	
 	此题中幂级数只有奇数项,收敛半径 $R=\sqrt{\dfrac{1}{\rho}}=\sqrt{2}$
 	
 	原幂级数收敛区间: $(-1-\sqrt{2},-1+\sqrt{2})$
 \end{solution}
-\myspace{1}
 
-2. 证明: $\int_{0}^{\frac{\pi}{2}}\left( \dfrac{\sin nx}{\sin x}\right) ^2dx=\dfrac{n\pi}{2}$
-\myspace{1}
+\begin{example}[][Exam: 30.2.2]
+	证明: $$\int_{0}^{\frac{\pi}{2}}\left( \dfrac{\sin nx}{\sin x}\right) ^2dx=\dfrac{n\pi}{2}$$
+\end{example}
+
 \begin{solution}
 	
 	我们不妨设 $a_{n}=\int_{0}^{\frac{\pi}{2}}(\frac{\sin nx}{\sin x})^2dx$,我们有: 
@@ -262,12 +281,14 @@
 	
 	我们得到: $a_{n}$是等差数列,$a_{n}=\dfrac{n\pi}{2}$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 9}}}
 
-1. 由方程$F(cx-az,cy-bz)=0$确立了函数$z=z(x,y)$,求 $a\dfrac{\partial z}{\partial x}+b\dfrac{\partial z}{\partial y}$
-\myspace{1}
+\textcolor{blue}{April 9}
+
+\begin{example}[][Exam: 30.2.3]
+	方程 $F(cx-az,cy-bz)=0$ 确立了函数 $z=z(x,y)$, 求 $a\dfrac{\partial z}{\partial x}+b\dfrac{\partial z}{\partial y}$
+\end{example}
+
 \begin{solution}
 	
 	隐函数求导法则: 
@@ -280,10 +301,11 @@
 	\end{array} \right. $$
 	$$a\dfrac{\partial z}{\partial x}+b\dfrac{\partial z}{\partial y}=c$$
 \end{solution}
-\myspace{1}
 
-2. 设函数 $f,g$均可微,且$z=f[xy,\ln x+g(xy)]$,求$x\frac{\partial z}{\partial x}-y\frac{\partial z}{\partial y}$
-\myspace{1}
+\begin{example}[][Exam: 30.2.4]
+	设函数 $f,g$ 均可微, 且 $z=f\left[xy,\ln x+g(xy)\right]$, 求 $x\dfrac{\partial z}{\partial x}-y\dfrac{\partial z}{\partial y}$
+\end{example}
+
 \begin{solution}
 	$$\left\lbrace 
 	\begin{array}{l}
@@ -292,12 +314,15 @@
 	\end{array}\right. $$
 	$$x\frac{\partial z}{\partial x}-y\frac{\partial z}{\partial y}=f_{2}'$$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 10}}}
 
-1. $f'(x)$连续,\quad$|f'(x)|\leq M,\ \int_{0}^{1}f(x)dx=0$,证明: $\forall a\in [0,1],\ |\int_{0}^{a}f(x)dx|\leq \dfrac{M}{8}$
-\myspace{1}
+\textcolor{blue}{April 10}
+
+\begin{example}[][Exam: 30.2.5]
+	$f'(x)$ 连续, $|f'(x)|\leq M,\int_{0}^{1}f(x)dx=0$, 证明: 
+	$$\forall a\in [0,1], \big|\int_{0}^{a}f(x)dx\big| \leq \dfrac{M}{8}$$
+\end{example}
+
 \begin{solution}
 	
 	我们令: $F(x)=\int_{0}^{x}f(t)dt$,原命题等价于: 
@@ -314,14 +339,15 @@
 	$$F(x)=-\frac{F''(\varepsilon_{1})}{2}x^2(1-x)-\frac{F''(\varepsilon_{2})}{2}x(1-x)^2$$
 	$$|F(x)|\leq \frac{M}{2}[x^2(1-x)+x(1-x)^2]=\frac{M}{8}$$
 \end{solution}
-\myspace{1}
 
-2. 幂级数 $\sum\limits_{n=1}^{+\infty}\frac{3^n+(-2)^n}{n}(x-1)^n$ 的收敛域
-\myspace{1}
+\begin{example}[][Exam: 30.2.6]
+	求幂级数 $\sum\limits_{n=1}^{+\infty}\dfrac{3^n+(-2)^n}{n}(x-1)^n$ 的收敛域
+\end{example}
+
 \begin{solution}
 	
 	先求幂级数收敛半径: 
-	$$\rho=\lim\limits_{n\rightarrow +\infty}\sqrt[n]{\frac{3^n+(-2)^n}{n}}=3\Rightarrow r=\frac{1}{3}$$
+	$$\rho=\lim\limits_{n\to +\infty}\sqrt[n]{\frac{3^n+(-2)^n}{n}}=3\Rightarrow r=\frac{1}{3}$$
 	
 	原幂级数中心点$x=1$,收敛区间为 $(\frac{2}{3},\frac{4}{3})$,我们验证端点值$x=\frac{2}{3},x=\frac{4}{3}$
 	
@@ -331,39 +357,42 @@
 	
 	幂级数收敛域为 $[\dfrac{2}{3},\dfrac{4}{3})$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 11}}}
+\textcolor{blue}{April 11}
 
-1. 设幂级数 $\sum\limits_{n=1}^{+\infty}a_{n}x^{n}$与 $\sum\limits_{n=1}^{+\infty}b_{n}x^{n}$的收敛半径分别为$\dfrac{\sqrt{5}}{3}$和 $\dfrac{1}{3}$,则幂级数 $\sum\limits_{n=1}^{+\infty}\dfrac{a_{n}^{2}}{b_{n}^{2}}x^{n}$收敛半径为
-\myspace{1}
+\begin{example}[][Exam: 30.2.7]
+	设幂级数 $\sum\limits_{n=1}^{+\infty}a_{n}x^{n}$ 与 $\sum\limits_{n=1}^{+\infty}b_{n}x^{n}$ 的收敛半径分别为 $\dfrac{\sqrt{5}}{3}$和 $\dfrac{1}{3}$,
+	求幂级数 $\sum\limits_{n=1}^{+\infty}\dfrac{a_{n}^{2}}{b_{n}^{2}}x^{n}$收敛半径
+\end{example}
+
 \begin{solution}
 	由题意知: 
 	$$\left\lbrace 
 	\begin{array}{l}
-		\lim\limits_{n\rightarrow+\infty}|\dfrac{a_{n+1}}{a_{n}}|=\frac{3}{\sqrt{5}}\\
-		\lim\limits_{n\rightarrow+\infty}|\dfrac{b_{n+1}}{b_{n}}|=3
+		\lim\limits_{n\to+\infty}|\dfrac{a_{n+1}}{a_{n}}|=\frac{3}{\sqrt{5}}\\
+		\lim\limits_{n\to+\infty}|\dfrac{b_{n+1}}{b_{n}}|=3
 	\end{array}
 	\right. $$
 	
 	后面幂级数收敛半径 $R=\dfrac{1}{\rho}$,我们有: 
-	$$\rho=\lim\limits_{n\rightarrow+\infty}|\frac{a^{2}_{n+1}b_{n}^{2}}{a^{2}_{n}b_{n+1}^{2}}|=\frac{9}{5}\frac{1}{9}=\frac{1}{5}\Rightarrow R=5$$
+	$$\rho=\lim\limits_{n\to+\infty}|\frac{a^{2}_{n+1}b_{n}^{2}}{a^{2}_{n}b_{n+1}^{2}}|=\frac{9}{5}\frac{1}{9}=\frac{1}{5}\Rightarrow R=5$$
 	
 	(\textbf{有些许问题})
 \end{solution}
-\myspace{1}
 
-2. $f(x,y)=\left\lbrace
-\begin{array}{l}
-	xy\dfrac{x^2-y^2}{x^2+y^2},(x,y)\neq (0,0)\\
-	0,(x,y)=(0,0)
-\end{array} \right. $,计算 $f''_{xy}(0,0)$和 $f''_{yx}(0,0)$
-\myspace{1}
+\begin{example}[][Exam: 30.2.8]
+	$f(x,y) = 
+	\begin{cases}
+		xy\dfrac{x^2-y^2}{x^2+y^2} & (x,y)\neq (0,0)\\
+		0 & (x,y)=(0,0)  
+	\end{cases}$, 计算 $f''_{xy}(0,0)$ 和 $f''_{yx}(0,0)$
+\end{example}
+
 \begin{solution}
 	$$\left\lbrace
 	\begin{array}{l}
-		f'_{x}(0,0)=\lim\limits_{x\rightarrow 0}\dfrac{f(x,0)-f(0,0)}{x}=0\\
-		f'_{y}(0,0)=\lim\limits_{y\rightarrow 0}\dfrac{f(0,y)-f(0,0)}{y}=0
+		f'_{x}(0,0)=\lim\limits_{x\to 0}\dfrac{f(x,0)-f(0,0)}{x}=0\\
+		f'_{y}(0,0)=\lim\limits_{y\to 0}\dfrac{f(0,y)-f(0,0)}{y}=0
 	\end{array}
 	\right. $$
 	$$\left\lbrace 
@@ -374,17 +403,20 @@
 	\right. $$
 	$$\left\lbrace
 	\begin{array}{l}
-		f''_{xy}(0,0)=\lim\limits_{y\rightarrow 0}\dfrac{f'_{x}(0,y)-f'_{x}(0,0)}{y}=-1\\
-		f''_{yx}(0,0)=\lim\limits_{x\rightarrow 0}\dfrac{f'_{y}(x,0)-f'_{y}(0,0)}{x}=1
+		f''_{xy}(0,0)=\lim\limits_{y\to 0}\dfrac{f'_{x}(0,y)-f'_{x}(0,0)}{y}=-1\\
+		f''_{yx}(0,0)=\lim\limits_{x\to 0}\dfrac{f'_{y}(x,0)-f'_{y}(0,0)}{x}=1
 	\end{array}
 	\right. $$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 12}}}
 
-1. 设函数$f(x)$ 在$[0,1]$ 上二阶可导,且$f(0)=f(1)=0$,$\underset{x\in [0,1]}{min \{f(x)\}=-1}$,证明: $\exists \varepsilon \in(0,1)$,使得$f''(\varepsilon)\geq 8$
-\myspace{1}
+\textcolor{blue}{April 12}
+
+\begin{example}[][Exam: 30.2.9]
+	设函数 $f(x)$ 在 $[0,1]$ 上二阶可导, 且 $f(0)=f(1)=0,\underset{x\in [0,1]}{\min \{f(x)\}=-1}$, 证明: 
+	$$\exists \varepsilon \in(0,1), \ s.t.\ f''(\varepsilon)\geq 8$$
+\end{example}
+
 \begin{solution}
 	
 	$f(0)=f(1)=0$,$\underset{x\in [0,1]}{min \{f(x)\}=-1}$,由费马定理我们得到: 
@@ -402,17 +434,18 @@
 	
 	我们得到: $\exists \varepsilon=\eta \in(0,1)$,使得$f''(\varepsilon)\geq 8$
 \end{solution}
-\myspace{1}
 
-2. 设 $m,n$均是正整数,证明: $\int_{0}^{1}\frac{\sqrt[m]{\ln^{2}(1-x)}}{\sqrt[n]{x}}dx$ 收敛性与$m,n$无关
-\myspace{1}
+\begin{example}[][Exam: 30.2.10]
+	设 $m,n$ 均是正整数,证明: $\displaystyle{\int_{0}^{1}\dfrac{\sqrt[m]{\ln^{2}(1-x)}}{\sqrt[n]{x}}dx}$ 收敛性与 $m,n$ 无关
+\end{example}
+
 \begin{solution}
 	
 	令$f(x)=\dfrac{\sqrt[m]{\ln^{2}(1-x)}}{\sqrt[n]{x}}=x^{-\frac{1}{n}}[\ln(1-x)]^{-\frac{2}{m}}$
 	
-	我们需要讨论$x\rightarrow 0^{+}$和 $x\rightarrow 1^{-}$两个可能的瑕点
+	我们需要讨论$x\to 0^{+}$和 $x\to 1^{-}$两个可能的瑕点
 	
-	(i).$\lim\limits_{x\rightarrow 0^{+}}f(x)=x^{\frac{2}{m}-\frac{1}{n}}=
+	(i).$\lim\limits_{x\to 0^{+}}f(x)=x^{\frac{2}{m}-\frac{1}{n}}=
 	\left\lbrace
 	\begin{array}{l}
 		0,\frac{2}{m}>\frac{1}{n}\\
@@ -421,7 +454,7 @@
 	\end{array}
 	\right. $
 	
-	(ii).$\lim\limits_{x\rightarrow 1^{-}}f(x)=-\infty$
+	(ii).$\lim\limits_{x\to 1^{-}}f(x)=-\infty$
 	
 	
 	综合 (i)(ii),我们知道$x=1$一定是 $f(x)$的瑕点,$x=0$在一定情况下是$f(x)$的瑕点.
@@ -430,28 +463,31 @@
 	
 	(1).我们讨论 $I_{2}$的收敛性,我们比较 $f(x)$和$\dfrac{1}{\sqrt[m]{1-x}}$: 
 	
-	$$\lim\limits_{x\rightarrow 1^{-}}\frac{f(x)}{\frac{1}{\sqrt[m]{1-x}}}=\sqrt[m]{\frac{\ln^{2}(1-x)}{\frac{1}{1-x}}}\overset{t=1-x}{\Rightarrow}\lim\limits_{t\rightarrow 0^{+}}\sqrt[m]{t\ln^2 t}=0$$
+	$$\lim\limits_{x\to 1^{-}}\frac{f(x)}{\frac{1}{\sqrt[m]{1-x}}}=\sqrt[m]{\frac{\ln^{2}(1-x)}{\frac{1}{1-x}}}\overset{t=1-x}{\Rightarrow}\lim\limits_{t\to 0^{+}}\sqrt[m]{t\ln^2 t}=0$$
 	$$\int_{\frac{1}{2}}^{1}f(x)dx<\int_{\frac{1}{2}}^{1}\frac{1}{\sqrt[m]{1-x}}dx$$
 	
 	后面的定积分收敛,$I_{2}$收敛
 	
 	(2).我们讨论 $I_{1}$的收敛性,我们比较$f(x)$和 $\dfrac{1}{\sqrt[n]{x}}$
-	$$\lim\limits_{x\rightarrow 0^{+}}\frac{f(x)}{\frac{1}{\sqrt[n]{x}}}=\lim\limits_{x\rightarrow 0^{+}}\sqrt[m]{\ln^{2}(1-x)}=0$$
+	$$\lim\limits_{x\to 0^{+}}\frac{f(x)}{\frac{1}{\sqrt[n]{x}}}=\lim\limits_{x\to 0^{+}}\sqrt[m]{\ln^{2}(1-x)}=0$$
 	$$\int_{0}^{\frac{1}{2}}f(x)dx<\int_{0}^{\frac{1}{2}}\frac{1}{\sqrt[n]{x}}dx$$
 	
 	后面的定积分收敛,$I_{1}$收敛.
 	
 	$I$积分收敛,与$m,n$的取值无关.	
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 13}}}
 
-1. 设数列${a_{n}}$单调减少,$\lim\limits_{n\rightarrow +\infty}a_{n}=0$,$S_{n}=\sum\limits_{k=1}^{n}a_{k}(n=1,2\dots)$无界,求幂级数 $\sum\limits_{n=1}^{+\infty}a_{n}(x-1)^{n}$收敛域.
-\myspace{1}
+\textcolor{blue}{April 13}
+
+\begin{example}[][Exam: 30.2.11]
+	设数列 ${a_{n}}$ 单调减少, $\lim\limits_{n\to +\infty}a_{n}=0, S_{n}=\sum\limits_{k=1}^{n}a_{k}(n=1,2\dots)$ 无界,
+	求幂级数 $\sum\limits_{n=1}^{+\infty}a_{n}(x-1)^{n}$收敛域
+\end{example}
+
 \begin{solution}
 	
-	我们不难发现幂级数的中心点为$x=1$,数列${a_{n}}$单调减少,$\lim\limits_{n\rightarrow +\infty}a_{n}=0\Rightarrow a_{n}$是正项级数.
+	我们不难发现幂级数的中心点为$x=1$,数列${a_{n}}$单调减少,$\lim\limits_{n\to +\infty}a_{n}=0\Rightarrow a_{n}$是正项级数.
 	
 	(i).当 $x=0$时,我们得到幂级数为 $\sum\limits_{n=1}^{+\infty}(-1)^na_{n}$,莱布尼兹判别法得到级数收敛,由阿贝尔定理我们得到: $x\in(0,2)$,级数收敛.
 	
@@ -459,27 +495,25 @@
 	
 	综合 (i)(ii),我们的得到幂级数收敛域为$[0,2)$
 \end{solution}
-\myspace{1}
 
-2.多元函数连续、偏导数、可微、一阶偏导数连续
+\begin{example}[][Exam: 30.2.12]
+	判断函数 $f(x,y) = 
+	\begin{cases}
+		y\arctan\dfrac{1}{\sqrt{x^2+y^2}} & (x,y)\neq 0\\
+		0 & (x,y)=(0,0)  
+	\end{cases}$ 在 $(0,0)$ 处是否连续, 是否可微, 一阶偏导数是否连续
+\end{example}
 
-验证函数$f(x,y)=\left\lbrace
-\begin{array}{l}
-	y\arctan\dfrac{1}{\sqrt{x^2+y^2}},(x,y)\neq 0\\
-	0,(x,y)=(0,0)
-\end{array}
-\right. $在 $(0,0)$ 处是否连续,是否可微,一阶偏导数的值和是否连续.
-\myspace{1}
 \begin{solution}
-	$$\lim\limits_{\substack{x\rightarrow 0\\ y\rightarrow 0}}f(x,y)=\lim\limits_{\substack{x\rightarrow 0\\ y\rightarrow 0}}y\frac{1}{\sqrt{x^2+y^2}}=\lim\limits_{\substack{x\rightarrow 0\\ y\rightarrow 0}}y\frac{\pi}{2}=0=f(0,0)$$
+	$$\lim\limits_{\substack{x\to 0\\ y\to 0}}f(x,y)=\lim\limits_{\substack{x\to 0\\ y\to 0}}y\frac{1}{\sqrt{x^2+y^2}}=\lim\limits_{\substack{x\to 0\\ y\to 0}}y\frac{\pi}{2}=0=f(0,0)$$
 	
 	(i).$f(x,y)$在$(0,0)$处连续.
-	$$f'_{x}(0,0)=\lim\limits_{x\rightarrow 0}\frac{f(x,0)-f(0,0)}{x}=0$$
-	$$f'_{y}(0,0)=\lim\limits_{y\rightarrow 0}\frac{f(0,y)-f(0,0)}{y}=\arctan\frac{1}{|y|}=\frac{\pi}{2}$$
+	$$f'_{x}(0,0)=\lim\limits_{x\to 0}\frac{f(x,0)-f(0,0)}{x}=0$$
+	$$f'_{y}(0,0)=\lim\limits_{y\to 0}\frac{f(0,y)-f(0,0)}{y}=\arctan\frac{1}{|y|}=\frac{\pi}{2}$$
 	
 	(ii).$f(x,y)$在$(0,0)$处偏导数为$f'_{x}(0,0)=0,f'_{y}(0,0)=\dfrac{\pi}{2}$
 	
-	$$\lim\limits_{\substack{x\rightarrow 0\\ y\rightarrow 0}}\frac{f(x,y)-f'_{x}(0,0)(x-0)-f'_{y}(0,0)(y-0)}{\sqrt{x^2+y^2}}=y\dfrac{\arctan\frac{1}{\sqrt{x^2+y^2}}-\dfrac{\pi}{2}}{\sqrt{x^2+y^2}}=0$$
+	$$\lim\limits_{\substack{x\to 0\\ y\to 0}}\frac{f(x,y)-f'_{x}(0,0)(x-0)-f'_{y}(0,0)(y-0)}{\sqrt{x^2+y^2}}=y\dfrac{\arctan\frac{1}{\sqrt{x^2+y^2}}-\dfrac{\pi}{2}}{\sqrt{x^2+y^2}}=0$$
 	
 	(iii).$f(x,y)$在 $(0,0)$处可微.
 	
@@ -491,18 +525,20 @@
 	
 	我们得到一阶偏导数在$(0,0)$处的极限: 
 	$$\left\lbrace \begin{array}{l}
-		\lim\limits_{x\rightarrow0}f'_{x}(x,0)=0=f'_{x}(0,0)\\
-		\lim\limits_{y\rightarrow0}f'_{y}(0,y)=\dfrac{\pi}{2}=f'_{y}(0,0)
+		\lim\limits_{x\to0}f'_{x}(x,0)=0=f'_{x}(0,0)\\
+		\lim\limits_{y\to0}f'_{y}(0,y)=\dfrac{\pi}{2}=f'_{y}(0,0)
 	\end{array}\right. $$
 	
 	(iiii).原函数一阶偏导数在$(0,0)$处连续.
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 14}}}
 
-1. 将 $f(x)=\dfrac{5x-12}{x^2+5x-6}$展开为$x$的幂级数.
-\myspace{1}
+\textcolor{blue}{April 14}
+
+\begin{example}[][Exam: 30.2.13]
+	将 $f(x)=\dfrac{5x-12}{x^2+5x-6}$ 展开为 $x$ 的幂级数
+\end{example}
+
 \begin{solution}
 	$$\frac{5x-12}{x^2+5x-6}=\frac{6}{x+6}+\frac{1}{1-x}=\dfrac{1}{1+\dfrac{x}{6}}+\frac{1}{1-x}$$
 	
@@ -517,17 +553,18 @@
 	$$f(x)=\sum\limits_{n=0}^{+\infty}(-1)^{n}(\frac{x}{6})^{n}+\sum\limits_{n=0}^{+\infty}x^{n}=\sum\limits_{n=1}^{+\infty}(1+\frac{(-1)^n}{6^n})x^n,-1<x<1$$
 	
 \end{solution}
-\myspace{1}
 
-2. 证明: $f'_{x}(x,y)$和$f'_{y}(x,y)$在$(x_{0},y_{0})$处连续,$f(x,y)$在$(x_{0},y_{0})$处可微.
-\myspace{1}
+\begin{example}[][Exam: 30.2.14]
+	证明: $f'_{x}(x,y)$ 和 $f'_{y}(x,y)$ 在 $(x_{0},y_{0})$ 处连续, $f(x,y)$在$(x_{0},y_{0})$ 处可微
+\end{example}
+
 \begin{solution}
 	
 	由题意得: 
 	$$\left\lbrace 
 	\begin{array}{l}
-		\lim\limits_{\substack{x\rightarrow x_{0}\\ y\rightarrow y_{0}}}\dfrac{f(x,y_{0})-f(x_{0},y_{0})}{x-x_{0}}=f'_{x}(x_{0},y_{0})\Rightarrow f(x,y_{0})-f(x_{0},y_{0})=f'_{x}(x_{0},y_{0})(x-x_{0})+\alpha(x,y)\\
-		\lim\limits_{\substack{x\rightarrow x_{0}\\ y\rightarrow y_{0}}}\dfrac{f(x_{0},y)-f(x_{0},y_{0})}{y-y_{0}}=f'_{y}(x_{0},y_{0})\Rightarrow f(x_{0},y)-f(x_{0},y_{0})=f'_{y}(x_{0},y_{0})(y-y_{0})+\beta(x,y)
+		\lim\limits_{\substack{x\to x_{0}\\ y\to y_{0}}}\dfrac{f(x,y_{0})-f(x_{0},y_{0})}{x-x_{0}}=f'_{x}(x_{0},y_{0})\Rightarrow f(x,y_{0})-f(x_{0},y_{0})=f'_{x}(x_{0},y_{0})(x-x_{0})+\alpha(x,y)\\
+		\lim\limits_{\substack{x\to x_{0}\\ y\to y_{0}}}\dfrac{f(x_{0},y)-f(x_{0},y_{0})}{y-y_{0}}=f'_{y}(x_{0},y_{0})\Rightarrow f(x_{0},y)-f(x_{0},y_{0})=f'_{y}(x_{0},y_{0})(y-y_{0})+\beta(x,y)
 	\end{array}
 	\right.$$
 	
@@ -541,16 +578,17 @@
 		&=&dz+\alpha_{1}(x,y)+\beta_{1}(x,y)
 	\end{eqnarray*}
 	我们有: 
-	$$\lim\limits_{\substack{x\rightarrow x_{0}\\ y\rightarrow y_{0}}}\alpha_{1}(x,y)=0\ \lim\limits_{\substack{x\rightarrow x_{0}\\ y\rightarrow y_{0}}}\beta_{1}(x,y)=0$$
+	$$\lim\limits_{\substack{x\to x_{0}\\ y\to y_{0}}}\alpha_{1}(x,y)=0\ \lim\limits_{\substack{x\to x_{0}\\ y\to y_{0}}}\beta_{1}(x,y)=0$$
 	证毕.
 \end{solution}
-\myspace{1}
 
 \section{Week \Rmnum{3}}
-\hl{\textbf{\textit{April 15}}}
+\textcolor{cyan}{April 15}
 
-1. 将函数 $f(x)=\ln(1-x-2x^2)$展开为$x$的幂级数,并指出其收敛区间.
-\myspace{1}
+\begin{example}[][Exam: 30.3.1]
+	将函数 $f(x)=\ln(1-x-2x^2)$ 展开为 $x$ 的幂级数,并指出其收敛区间
+\end{example}
+
 \begin{solution}
 	$$\ln(1-x-2x^2)=\ln(1+x)+\ln(1-2x)$$
 	
@@ -566,11 +604,12 @@
 	
 	函数$f(x)$的收敛区间为 $(-\dfrac{1}{2},\dfrac{1}{2})$
 \end{solution}
-\myspace{1}
 
-2. 设 $f(x),g(x)$在 $x\in[0,1]$ 上的导数连续,且 $f(0)=0,f'(x)\geq 0,g'(x)\geq 0$,证明: 
-$\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a)g(1)$
-\myspace{1}
+\begin{example}[][Exam: 30.3.2]
+	设 $f(x), g(x)$ 在 $x\in[0,1]$ 上的导数连续, 且 $f(0)=0,f'(x)\geq 0,g'(x)\geq 0$, 证明: 
+	$$\forall a\in[0,1], \int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a)g(1)$$
+\end{example}
+
 \begin{solution}
 	
 	我们设 $F(x)=\int_{0}^{x}g(t)f'(t)dt+\int_{0}^{1}f(t)g'(t)dt-f(x)g(1)$.
@@ -585,12 +624,14 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	原命题得证,证毕.
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 16}}}
+\textcolor{cyan}{April 16}
 
-1. 设 $f(x)$在$[0,1]$上连续且单调递减,证明: $\lambda\in (0,1),\int_{0}^{\lambda}f(x)dx>\lambda\int_{0}^{1}f(x)dx$
-\myspace{1}
+\begin{example}[][Exam: 30.3.3]
+	设 $f(x)$ 在 $[0,1]$ 上连续且单调递减, 证明: 
+	$$\forall \lambda\in (0,1),\int_{0}^{\lambda}f(x)dx>\lambda\int_{0}^{1}f(x)dx$$
+\end{example}	
+
 \begin{solution}
 	
 	我们构造: $F(x)=\dfrac{\int_{0}^{x}f(t)dt}{x}$
@@ -611,10 +652,11 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	即$\forall \lambda\in(0,1),\int_{0}^{\lambda}f(x)dx>\lambda\int_{0}^{1}f(x)dx$
 \end{solution}
-\myspace{1}
 
-4. $z=(x^2+y^2)f(x^2+y^2),\dfrac{\partial^2 z}{\partial x^2}+\dfrac{\partial^2 z}{\partial y^2}=0,f(1)=0,f'(1)=1$,求$f(x)$表达式
-\myspace{1}
+\begin{example}[][Exam: 30.3.4]
+	$z=(x^2+y^2)f(x^2+y^2),\dfrac{\partial^2 z}{\partial x^2}+\dfrac{\partial^2 z}{\partial y^2}=0,f(1)=0,f'(1)=1$, 求 $f(x)$ 表达式
+\end{example}
+
 \begin{solution}
 	$$\left\lbrace 
 	\begin{array}{l}
@@ -645,12 +687,14 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	我们得到: $f(x)=\dfrac{\ln x }{x}$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 17}}}
 
-1. 将 $f(x)=\arctan\dfrac{1+x}{1-x}$展开为$x$的幂级数
-\myspace{1}
+\textcolor{cyan}{April 17}
+
+\begin{example}[][Exam: 30.3.5]
+	将 $f(x)=\arctan\dfrac{1+x}{1-x}$ 展开为 $x$ 的幂级数
+\end{example}
+
 \begin{solution}
 	\begin{eqnarray*}
 		f'(x)=\frac{1}{1+x^2}=\sum\limits_{n=0}^{+\infty}(-1)^nx^{2n}, -1<x^2<1
@@ -664,10 +708,11 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	$f(0)=\dfrac{\pi}{4}$,我们有: $f(x)=\dfrac{\pi}{4}+\sum\limits_{n=0}^{+\infty}(-1)^n\dfrac{x^{2n+1}}{2n+1},-1<x<1$
 	
 \end{solution}
-\myspace{1}
 
-2.微分方程$y'=\frac{y(1-x)}{x}$通解
-\myspace{1}
+\begin{example}[][Exam: 30.3.6]
+	微分方程 $y'=\dfrac{y(1-x)}{x}$ 通解
+\end{example}
+
 \begin{solution}
 	
 	分离变量
@@ -683,15 +728,17 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	综合(i)(ii),我们得到微分方程通解: $y=Cxe^{-x},C\in \mathbb{R}$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 18}}}
 
-1. 隐函数渐近线 $x^3+y^3=3axy,a>0$,求$y=y(x)$的斜渐近线.
-\myspace{1}
+\textcolor{cyan}{April 18}
+
+\begin{example}[][Exam: 30.3.7]
+	方程 $x^3+y^3=3axy(a>0)$ 确定隐函数 $y=y(x)$, 求 $y=y(x)$ 的斜渐近线
+\end{example}
+
 \begin{solution}
 	
-	令 $t=\dfrac{y}{x}\rightarrow y=tx$
+	令 $t=\dfrac{y}{x}\to y=tx$
 	
 	我们得到: $\left\lbrace 
 	\begin{array}{l}
@@ -699,28 +746,30 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 		y=\dfrac{3at^2}{1+t^3}
 	\end{array}
 	\right. $
-	当 $x\rightarrow \infty,t\rightarrow -1$
+	当 $x\to \infty,t\to -1$
 	
 	我们得到: 
 	
 	(i).
 	\begin{eqnarray*}
-		a&=&\lim\limits_{x\rightarrow +\infty}\frac{y}{x}=\lim\limits_{t\rightarrow -1^{-} }t=-1\\
-		b&=&\lim\limits_{x\rightarrow +\infty}(y-ax)=\lim\limits_{t\rightarrow -1^{-}}(\frac{3at^2}{1+t^3}+\frac{3at}{1+t^3})=-a
+		a&=&\lim\limits_{x\to +\infty}\frac{y}{x}=\lim\limits_{t\to -1^{-} }t=-1\\
+		b&=&\lim\limits_{x\to +\infty}(y-ax)=\lim\limits_{t\to -1^{-}}(\frac{3at^2}{1+t^3}+\frac{3at}{1+t^3})=-a
 	\end{eqnarray*}
 	
 	(ii).
 	\begin{eqnarray*}
-		a&=&\lim\limits_{x\rightarrow -\infty}\frac{y}{x}=\lim\limits_{t\rightarrow -1^{+} }t=-1\\
-		b&=&\lim\limits_{x\rightarrow -\infty}(y-ax)=\lim\limits_{t\rightarrow -1^{+}}(\frac{3at^2}{1+t^3}+\frac{3at}{1+t^3})=-a
+		a&=&\lim\limits_{x\to -\infty}\frac{y}{x}=\lim\limits_{t\to -1^{+} }t=-1\\
+		b&=&\lim\limits_{x\to -\infty}(y-ax)=\lim\limits_{t\to -1^{+}}(\frac{3at^2}{1+t^3}+\frac{3at}{1+t^3})=-a
 	\end{eqnarray*}
 	
 	斜渐近线为: $y=-x-a$
 \end{solution}
-\myspace{1}
 
-2. 已知函数 $y=y(x)$在任意点$x$处的增量 $\Delta y=\dfrac{y\Delta x}{1+x^2}+\alpha$,当$\Delta x\rightarrow 0$,$\alpha$是$\Delta x$的高阶无穷小,$y(0)=\pi$,求$y(1)$
-\myspace{1}
+\begin{example}[][Exam: 30.3.8]
+	已知函数 $y=y(x)$ 在任意点 $x$ 处的增量 $\Delta y=\dfrac{y\Delta x}{1+x^2}+\alpha$,
+	当 $\Delta x\to 0,\alpha$ 是 $\Delta x$ 的高阶无穷小, $y(0)=\pi$, 求 $y(1)$
+\end{example}
+
 \begin{solution}
 	
 	我们由题意得到微分方程: 
@@ -728,16 +777,18 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	由 $y(0)=\pi,\Rightarrow C=\pi,\text{我们得到}y(x)\text{表达式}: y(x)=\pi e^{\arctan x}\Rightarrow y(1)=\pi e^{\frac{\pi}{4}}$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 19}}}
 
-1. 求幂级数 $\sum\limits_{n=0}^{+\infty}(2n+1)x^n$的收敛域,并求其和函数.
-\myspace{1}
+\textcolor{cyan}{April 19}
+
+\begin{example}[][Exam: 30.3.9]
+	求幂级数 $\sum\limits_{n=0}^{+\infty}(2n+1)x^n$ 收敛域,并求其和函数
+\end{example}
+
 \begin{solution}
 	
 	(i).先求幂级数收敛半径: 
-	$$\rho=\lim\limits_{n\rightarrow +\infty}\frac{a_{n+1}}{a_{n}}=\frac{2n+3}{2n+1}=1\Rightarrow R=\frac{1}{\rho}=1$$
+	$$\rho=\lim\limits_{n\to +\infty}\frac{a_{n+1}}{a_{n}}=\frac{2n+3}{2n+1}=1\Rightarrow R=\frac{1}{\rho}=1$$
 	
 	(ii).验证两个端点
 	
@@ -747,10 +798,12 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	$$S(x)=2\sum\limits_{n=0}^{+\infty}nx^n+\sum\limits_{n=0}^{+\infty}x^n=2x[\sum\limits_{n=1}^{+\infty}x^n]'+\frac{1}{1-x}=\frac{1+x}{(1-x)^2},-1<x<1$$
 \end{solution}
-\myspace{1}
 
-2. 微分方程 $\dfrac{dy}{dx}=\dfrac{y}{x}-\dfrac{1}{2}(\dfrac{y}{x})^3$,满足$y|_{x=1}=1$的特解
-\myspace{1}
+\begin{example}[][Exam: 30.3.10]
+	微分方程 $\dfrac{dy}{dx}=\dfrac{y}{x}-\dfrac{1}{2}(\dfrac{y}{x})^3$, 满足 $y\big|_{x=1} = 1$ 的特解
+\end{example}
+
+
 \begin{solution}
 	
 	令 $z=\dfrac{y}{x},\text{我们得到}: y=xz\Rightarrow \dfrac{dy}{dx}=z+x\dfrac{dz}{dx}$
@@ -764,12 +817,14 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	我们得到: $\dfrac{dy}{dx}|_{(1,1)}=\dfrac{1}{2}>0\Rightarrow y=\dfrac{x}{\sqrt{1+\ln x}}$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 20}}}
 
-1. 求微分方程 $(x+y)dx+(y-x)dy=0\text{满足条件}y(1)=-1\text{的特解}$
-\myspace{1}
+\textcolor{cyan}{April 20}
+
+\begin{example}[][Exam: 30.3.11]
+	求微分方程 $(x+y)dx+(y-x)dy=0$ 满足 $y(1)=-1$ 的特解
+\end{example}
+
 \begin{solution}
 	
 	我们对微分方程进行一些简单的变形: 
@@ -784,27 +839,30 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	我们得到微分方程的特解为: $\ln\sqrt{x^2+y^2}-\arctan \dfrac{y}{x}=\dfrac{1}{2}\ln 2+\dfrac{\pi}{4}$
 \end{solution}
-\myspace{1}
 
-2. $f(x,y)\text{连续}\lim\limits_{(x,y)\rightarrow (0,0)}\dfrac{f(x,y)-xy}{x^2+y^2}=1,f(0,0)\text{是极大值还是极小值？}$ 
-\myspace{1}
+\begin{example}[][Exam: 30.3.12]
+	$f(x,y)$ 连续, 且 $\lim\limits_{(x,y)\to (0,0)}\dfrac{f(x,y)-xy}{x^2+y^2}=1$, 判断 $f(0,0)$ 是极大值还是极小值 
+\end{example}
+
 \begin{solution}
 	
 	极小值点,理由如下: 
-	$\lim\limits_{(x,y)\rightarrow (0,0)}\dfrac{f(x,y)-xy}{x^2+y^2}=1$,我们可以得到在$(0,0)$的一个去心邻域内,我们有: 
+	$\lim\limits_{(x,y)\to (0,0)}\dfrac{f(x,y)-xy}{x^2+y^2}=1$,我们可以得到在$(0,0)$的一个去心邻域内,我们有: 
 	\begin{eqnarray*}
 		f(x,y)&=&xy+(x^2+y^2)(1+\alpha)=\frac{1}{2}(x+y)^2+(x^2+y^2)(\frac{1}{2}+\alpha)\\
-		&\text{其中}&\lim\limits_{(x,y)\rightarrow (0,0)}\alpha=0
+		&\text{其中}&\lim\limits_{(x,y)\to (0,0)}\alpha=0
 	\end{eqnarray*}
 
 	我们得到在$(0,0)$的一个邻域内,$f(x,y)\geq 0,f(0,0)\text{是极小值}$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 21}}}
 
-1.求幂级数 $\sum\limits_{n=1}^{+\infty}(\dfrac{1}{2n+1}-1)x^{2n}\text{在区间}(-1,1)\text{内的和函数} S(x)$
-\myspace{1}
+\textcolor{cyan}{April 21}
+
+\begin{example}[][Exam: 30.3.13]
+	求幂级数 $\sum\limits_{n=1}^{+\infty}(\dfrac{1}{2n+1}-1)x^{2n}$ 在区间 $(-1,1)$ 内的和函数 $S(x)$
+\end{example}
+
 \begin{solution}
 	
 	$$S(x)=\sum\limits_{n=1}^{+\infty}\frac{x^{2n}}{2n+1}-\sum\limits_{n=1}^{+\infty}x^{2n}=\sum\limits_{n=1}^{+\infty}\frac{x^{2n}}{2n+1}-\frac{x^2}{1-x^2}$$
@@ -822,10 +880,11 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	\end{array}
 	\right.$
 \end{solution}
-\myspace{1}
 
-2. 微分方程 $(y+x^3)dx-2xdy=0\text{满足}y|_{x=1}=\dfrac{6}{5}\text{的特解为}$
-\myspace{1}
+\begin{example}[][Exam: 30.3.14]
+	求微分方程 $(y+x^3)dx-2xdy=0$ 满足 $y\big|_{x=1}=\dfrac{6}{5}$ 的特解
+\end{example}
+
 \begin{solution}
 	
 	我们对微分方程化简: $y'-\dfrac{1}{2x}y=\dfrac{x}{2}\Rightarrow (\frac{y}{\sqrt{x}})'=\dfrac{x^{\frac{3}{2}}}{2}$
@@ -834,13 +893,15 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	原微分方程的解: $y=\dfrac{x^3+5\sqrt{x}}{5}$
 \end{solution}
-\myspace{1}
+
 
 \section{Week \Rmnum{4}}
-\hl{\textbf{\textit{April 22}}}
+\textcolor{purplea}{April 22}
 
-1. 微分方程 $xy'+2y=x\ln x\text{满足}y(1)=-\frac{1}{9}\text{的特解为}$
-\myspace{1}
+\begin{example}[][Exam: 30.4.1]
+	求微分方程 $xy'+2y=x\ln x$ 满足 $y(1)=-\frac{1}{9}$ 的特解
+\end{example}
+
 \begin{solution}
 	
 	原微分方程可化为: $y'+\dfrac{2}{x}y=\ln x\Rightarrow (x^2y)'=x^2\ln x$
@@ -849,10 +910,11 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	我们由$y(1)=-\dfrac{1}{9}$ 得到: $y=\dfrac{x(3\ln x-1)}{9}$
 \end{solution}
-\myspace{1}
 
-2.$f(x,y)=x^4+2y^2-3x^2y,f(0,0)\text{是极大值还是极小值？}$
-\myspace{1}
+\begin{example}[][Exam: 30.4.2]
+	$f(x,y)=x^4+2y^2-3x^2y$ 判断 $f(0,0)$ 处极值情况
+\end{example}
+
 \begin{solution}
 	
 	$f(0,0)$ 不是极值点,理由如下: 
@@ -862,17 +924,19 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	(ii).当 $x^2=\dfrac{3}{2}y,f(x,y)\leq 0$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 23}}}
 
-1.$\int_{0}^{+\infty}\left[ \dfrac{\sqrt{\pi}}{2}-\int_{0}^{x}e^{-t^2}dt\right]dx$
-\myspace{1}
+\textcolor{purplea}{April 23}
+
+\begin{example}[][Exam: 30.4.3]
+	$$\int_{0}^{+\infty}\left[ \dfrac{\sqrt{\pi}}{2}-\int_{0}^{x}e^{-t^2}dt\right]dx$$
+\end{example}
+
 \begin{solution}
 	
 	方法 1:  分部积分法
 	$$\int_{0}^{+\infty}\left[ \frac{\sqrt{\pi}}{2}-\int_{0}^{x}e^{-t^2}dt\right]dx=x\left[ \frac{\sqrt{\pi}}{2}-\int_{0}^{x}e^{-t^2}dt\right]_{0}^{+\infty}-\int_{0}^{+\infty}xe^{-x^2}dx$$
-	$$\lim\limits_{x\rightarrow +\infty}\frac{\frac{\sqrt{\pi}}{2}-\int_{0}^{x}e^{-t^2}dt}{\frac{1}{x}}-\frac{1}{2}d(e^{-x^2})=\frac{1}{2}$$
+	$$\lim\limits_{x\to +\infty}\frac{\frac{\sqrt{\pi}}{2}-\int_{0}^{x}e^{-t^2}dt}{\frac{1}{x}}-\frac{1}{2}d(e^{-x^2})=\frac{1}{2}$$
 	
 	
 	方法 2:  二重积分交换积分次序
@@ -881,14 +945,16 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	我们得到: 
 	$$\int_{0}^{+\infty}(\int_{x}^{+\infty}e^{-t^2}dt)dx=\int_{0}^{+\infty}dt\int_{0}^{t}e^{-t^2}dx=\int_{0}^{+\infty}te^{-t^2}dt=\frac{1}{2}$$
 \end{solution}
-\myspace{1}
 
-2. 设 $F(x)=f(x)g(x)$,其中函数$f(x),g(x)$在$(-\infty,+\infty)$内满足以下条件: $f'(x)=g(x),g'(x)=f'(x)$,且 $f(0)=0$,$f(x)+g(x)=2e^x$
+\begin{example}[][Exam: 30.4.4]
+	设 $F(x)=f(x)g(x)$, 其中函数 $f(x),g(x)$ 在 $(-\infty,+\infty)$ 内满足以下条件: $f'(x)=g(x), g'(x)=f'(x)$, 且 $f(0)=0, f(x)+g(x)=2e^x$
 
-(i).求$F(x)$ 满足的一阶微分方程
+(i). 求 $F(x)$ 满足的一阶微分方程
 
-(ii).求$F(x)$ 表达式
-\myspace{1}
+(ii). 求 $F(x)$ 表达式
+\end{example}
+
+
 \begin{solution}
 	
 	(i).我们有: 
@@ -901,12 +967,14 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	由$f(0)=0\Rightarrow F(0)=1+C=0\Rightarrow C=-1$,$F(x)=e^{2x}-e^{-2x}$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 24}}}
 
-1. 求级数 $\sum\limits_{n=2}^{+\infty}\dfrac{1}{(n^2-1)2^n}$
-\myspace{1}
+\textcolor{purplea}{April 24}
+
+\begin{example}[][Exam: 30.4.5]
+	求级数 $\sum\limits_{n=2}^{+\infty}\dfrac{1}{(n^2-1)2^n}$
+\end{example}
+
 \begin{solution}
 	
 	我们引入幂级数: 
@@ -922,10 +990,11 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	我们得到: $S(\dfrac{1}{2})=\dfrac{5}{8}-\dfrac{3\ln 2}{4}$
 \end{solution}
-\myspace{1}
 
-2. 已知 $f(x)=\lim\limits_{n\rightarrow  +\infty}\sqrt[n]{2+(2x)^{n}+x^{2n}}\quad (x\geq 0)$,$g(x)=\lim\limits_{n\rightarrow +\infty}\dfrac{1-x^{2n+1}}{1+x^{2n}}$,求$f(g(x))$
-\myspace{1}
+\begin{example}[][Exam: 30.4.6]
+	已知 $f(x)=\lim\limits_{n\to +\infty}\sqrt[n]{2+(2x)^{n}+x^{2n}}(x\geq 0), g(x)=\lim\limits_{n\to +\infty}\dfrac{1-x^{2n+1}}{1+x^{2n}}$, 求 $f(g(x))$
+\end{example}
+
 \begin{solution}
 	
 	我们易得到: $f(x)=\left\lbrace 
@@ -952,12 +1021,14 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	\end{array}
 	\right. $$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 25}}}
 
-1. 已知 $y_{1}=(1+x^2)^2-\sqrt{1+x^2}$,$y_{2}=(1+x^2)^2+\sqrt{1+x^2}$是微分方程$y'+p(x)y=q(x)$的两个解,求$q(x)$
-\myspace{1}
+\textcolor{purplea}{April 25}
+
+\begin{example}[][Exam: 30.4.7]
+	已知 $y_{1}=(1+x^2)^2-\sqrt{1+x^2}, y_{2}=(1+x^2)^2+\sqrt{1+x^2}$ 是微分方程 $y'+ p(x)y = q(x)$ 的两个解, 求 $q(x)$
+\end{example}
+
 \begin{solution}
 	
 	由题意得: 
@@ -972,10 +1043,12 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	任意带入一个方程: $q(x)=y_{1}'+p(x)y_{1}=3x(1+x^2)$
 \end{solution}
-\myspace{1}
 
-2. 设 $z=f(x,y)$具有二阶连续偏导数,$f'_{y}\neq 0$,证明: 对任意的常数 $k$,曲线$f(x,y)=k$ 是直线的充分必要条件为$(f'_{y})^2f''_{xx}-2f'_{x}f'_{y}f''_{xy}+(f'_{x})^2f''_{yy}=0$
-\myspace{1}
+\begin{example}[][Exam: 30.4.8]
+	设 $z=f(x,y)$ 具有二阶连续偏导数,$f'_{y}\neq 0$,证明: 对任意的常数 $k$, 曲线 $f(x,y)=k$ 是直线的充分必要条件为 
+	$$(f'_{y})^2f''_{xx}-2f'_{x}f'_{y}f''_{xy}+(f'_{x})^2f''_{yy}=0$$
+\end{example}
+
 \begin{solution}
 	
 	$f(x,y)=k\text{为直线}\Rightarrow f(x,y)=ax+by+c=k$
@@ -1010,12 +1083,14 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	令分子为$0$即可: 
 	$$(f''_{2})^2f''_{11}-2f'_{1}f'_{2}f''_{12}+(f'_{1})^2f''_{22}=0\Rightarrow(f'_{y})^2f''_{xx}-2f'_{x}f'_{y}f''_{xy}+(f'_{x})^2f''_{yy}=0$$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 26}}}
 
-1.判断级数的敛散性 $\sum\limits_{n=1}^{+\infty}(\sqrt{n+2}-2\sqrt{n+1}+\sqrt{n})$
-\myspace{1}
+\textcolor{purplea}{April 26}
+
+\begin{example}[][Exam: 30.4.9]
+	判断级数 $\sum\limits_{n=1}^{+\infty}(\sqrt{n+2}-2\sqrt{n+1}+\sqrt{n})$ 敛散性
+\end{example}
+
 \begin{solution}
 	
 	我们不妨记$u_{n}=(\sqrt{n+2}-\sqrt{n+1})-(\sqrt{n+1}-\sqrt{n})$
@@ -1027,17 +1102,18 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 		&=&(\sqrt{n+2}-\sqrt{n+1})-(\sqrt{2}-\sqrt{1})
 	\end{eqnarray*}
 	
-	我们得到: $\lim\limits_{n\rightarrow +\infty}S_{n}=1-\sqrt{2}$,原级数收敛
+	我们得到: $\lim\limits_{n\to +\infty}S_{n}=1-\sqrt{2}$,原级数收敛
 \end{solution}
-\myspace{1}
 
-2. 判断级数的敛散性 $\sum\limits_{n=1}^{+\infty}\dfrac{\sqrt{n+1}-\sqrt{n}}{n^{\alpha}}$
-\myspace{1}
+\begin{example}[][Exam: 30.4.10]
+	判断级数 $\sum\limits_{n=1}^{+\infty}\dfrac{\sqrt{n+1}-\sqrt{n}}{n^{\alpha}}$ 敛散性
+\end{example} 
+
 \begin{solution}
 	我们有: 
 	$$\sqrt{n+1}-\sqrt{n}=\dfrac{1}{\sqrt{n+1}+\sqrt{n}}$$
 	
-	$$n\rightarrow  +\infty,\quad \frac{1}{\sqrt{n+1}+\sqrt{n}}\sim\frac{1}{2\sqrt{n}}$$
+	$$n\to  +\infty,\quad \frac{1}{\sqrt{n+1}+\sqrt{n}}\sim\frac{1}{2\sqrt{n}}$$
 	$$\sum\limits_{n=0}^{+\infty}\frac{\sqrt{n+1}-\sqrt{n}}{n^{\alpha}}\sim\sum\limits_{n=0}^{+\infty}\frac{1}{2}\frac{1}{n^{\alpha+\frac{1}{2}}}$$
 	
 	我们可以得到: 
@@ -1048,18 +1124,20 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	\end{array}
 	\right. $$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 27}}}
 
-1. 设连续函数 $f(x)$ 在 $(-\infty,+\infty)$ 上单调增加,下列说法正确的是: 
+\textcolor{purplea}{April 27}
+
+\begin{example}[][Exam: 30.4.11]
+	设连续函数 $f(x)$ 在 $(-\infty,+\infty)$ 上单调增加,下列说法正确的是: 
 \begin{itemize}
 	\item A. $\tan f(x)$ 在 $(-\infty,+\infty)$ 上单调增加
-	\item B. $f'(x)>0,\quad x\in(-\infty,+\infty)$
-	\item C. $\int_{-1}^{x}\dfrac{f(t)}{1+f^{2}(t)}dt$在$(-\infty,+\infty)$上单调增加
-	\item \hl{\textbf{D}}. $\int_{-1}^{e^x}\dfrac{1}{1+f^{2}(t)}dt$在$(-\infty,+\infty)$上单调增加
+	\item B. $f'(x)>0, x\in(-\infty,+\infty)$
+	\item C. $\int_{-1}^{x}\dfrac{f(t)}{1+f^{2}(t)}dt$ 在 $(-\infty,+\infty)$上单调增加
+	\item D. $\int_{-1}^{e^x}\dfrac{1}{1+f^{2}(t)}dt$ 在 $(-\infty,+\infty)$上单调增加
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 (i). 对于$f(x)=x^3$: $f'(x)\geq 0$,$tan f(x)$在$(-\infty,+\infty)$ 上不单调,$A\text{、}B$错误
@@ -1070,16 +1148,17 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 正确答案: $D$
 \end{solution}
-\myspace{1}
 
-2. 下列微分方程是以$y=C_{1}e^x+C_{2}\cos 2x+C_{3}\sin 2x,(C_{1},C_{2},C_{3}\in \mathbb{R})$ 为通解的微分方程为: 
+\begin{example}[][Exam: 30.4.12]
+	下列微分方程是以 $y=C_{1}e^x+C_{2}\cos 2x+C_{3}\sin 2x,(C_{1},C_{2},C_{3}\in \mathbb{R})$ 为通解的微分方程为: 
 \begin{itemize}
 	\item A. $y'''+y''-4y'-4y=0$
 	\item B. $y'''+y''+4y'+4y=0$
 	\item C. $y'''-y''-4y'+4y=0$
-	\item \hl{D}. $y'''-y''+4y'-4y=0$
+	\item D. $y'''-y''+4y'-4y=0$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 	我们易得: $y=C_{1}e^{x}+C_{4}e^{0}(A\cos 2x+B\sin 2x)$
@@ -1088,12 +1167,15 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	我们得到微分方程表达式为: $y'''-y''+4y'-4y=0$,故答案选$D$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 28}}}
 
-1. 设 $f(x)$ 在 $[0,a]$连续可导,证明: $\int_{0}^{a}dx\int_{0}^{x}\dfrac{f'(y)}{\sqrt{(a-x)(x-y)}}dy=\pi[f(a)-f(0)]$
-\myspace{1}
+\textcolor{purplea}{April 28}
+
+\begin{example}[][Exam: 30.4.13]
+	 设 $f(x)$ 在 $[0,a]$ 连续可导,证明: 
+	 $$\int_{0}^{a}dx\int_{0}^{x}\dfrac{f'(y)}{\sqrt{(a-x)(x-y)}}dy=\pi[f(a)-f(0)]$$
+\end{example}
+
 \begin{solution}
 	
 	原二重积分等价于: 
@@ -1103,16 +1185,17 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	\end{eqnarray*}
 	
 \end{solution}
-\myspace{1}
 
-2. $f(x)$ 连续且为奇函数,下列函数一定是偶函数的是: 
+\begin{example}[][Exam: 30.4.14]
+	$f(x)$ 连续且为奇函数,下列函数一定是偶函数的是: 
 \begin{itemize}
 	\item A. $\int_{0}^{x}du\int_{a}^{u}tf(t)dt$ 
 	\item B. $\int_{a}^{x}du\int_{0}^{u}f(t)dt$ 
 	\item C. $\int_{0}^{x}du\int_{a}^{u}f(t)dt$ 
-	\item \hl{D}. $\int_{a}^{x}du\int_{0}^{u}tf(t)dt$ 
+	\item D. $\int_{a}^{x}du\int_{0}^{u}tf(t)dt$ 
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 	(i).对于$A\text{、}C$,我们交换二重积分的积分次序: 
@@ -1126,12 +1209,13 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	此题答案为: $D$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 29}}}
 
-1. 证明:  $\int_{0}^{1}dx\int_{0}^{1}(xy)^{xy}dy=\int_{0}^{1}x^{x}dx$
-\myspace{1}
+\textcolor{purplea}{April 29}
+
+\begin{example}[][Exam: 30.4.15]
+	证明: $\int_{0}^{1}dx\int_{0}^{1}(xy)^{xy}dy=\int_{0}^{1}x^{x}dx$
+\end{example}
 \begin{solution}
 	
 	我们令$xy=t,y=\dfrac{1}{x}t$,我们得到原二重积分为: $\int_{0}^{1}dx\int_{0}^{x}\dfrac{1}{x}t^{t}dt$.
@@ -1144,16 +1228,17 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	证毕.
 \end{solution}
-\myspace{1}
 
-2.微分方程 $y''-4y'+8y=e^{2x}(1+\cos 2x)$ 的特解可以设为哪种形式: 
+\begin{example}[][Exam: 30.4.16]
+	微分方程 $y''-4y'+8y=e^{2x}(1+\cos 2x)$ 的特解可以设为哪种形式: 
 \begin{itemize}
 	\item A. $Ae^{2x}+e^{2x}(B\cos 2x+C\sin 2x)$ 
 	\item B. $Axe^{2x}+e^{2x}(B\cos 2x+C\sin 2x)$ 
-	\item \hl{C}. $Ae^{2x}+xe^{2x}(B\cos 2x+C\sin 2x)$ 
+	\item C. $Ae^{2x}+xe^{2x}(B\cos 2x+C\sin 2x)$ 
 	\item D. $Axe^{2x}+xe^{2x}(B\cos 2x+C\sin 2x)$ 
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 	原微分方程对应的特征方程为: $r^2-4r+8=0\Rightarrow r_{1}=2+2i,\ r_{2}=2-2i$
@@ -1166,18 +1251,20 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	我们得到方程的特解形式为: $y=C_{1}e^{2x}+xe^{2x}(C_{2}\cos 2x+C_{3}\sin 2x)$,故此答案选$C$
 \end{solution}
-\myspace{1}
 
-\hl{\textbf{\textit{April 30}}}
 
-1. $f(x)$ 连续且为偶函数,下列函数一定是偶函数的是: 
+\textcolor{purplea}{April 30}
+
+\begin{example}[][Exam: 30.4.17]
+	$f(x)$ 连续且为偶函数, 下列函数一定是偶函数的是: 
 \begin{itemize}
 	\item A. $\int_{0}^{x}(x-t^2)f(t)dt$ 
 	\item B. $\int_{a}^{x}f(x-t)dt$ 
-	\item \hl{C}. $\int_{0}^{x}(x-2t)f(t)dt$ 
+	\item C. $\int_{0}^{x}(x-2t)f(t)dt$ 
 	\item D. $\int_{a}^{x}(x-2t)f(t)dt$ 
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 	令$f(x)=1$,我们得到: 
@@ -1192,11 +1279,12 @@ $\forall a\in[0,1]$,有 $\int_{0}^{a}g(x)f'(x)dx+\int_{0}^{1}f(x)g'(x)dx\geq f(a
 	
 	故答案为: $C$
 \end{solution}
-\myspace{1}
 
-2. $\lim\limits_{x\rightarrow +\infty}\dfrac{\int_{1}^{x}t^{-5}dt}{\int_{1}^{x}t^{-3}dt}$
-\myspace{1}
+\begin{example}[][Exam: 30.4.18]
+	$$\lim\limits_{x\to +\infty}\dfrac{\int_{1}^{x}t^{-5}dt}{\int_{1}^{x}t^{-3}dt}$$
+\end{example}
+
 \begin{solution}
 	
-	原极限为: $\lim\limits_{x\rightarrow +\infty}\dfrac{\frac{1}{4}-\frac{1}{4x^4}}{\frac{1}{2}-\frac{1}{2x^2}}=\lim\limits_{x\rightarrow +\infty}\dfrac{1}{2}+\dfrac{1}{2x^2}=\dfrac{1}{2}$
+	原极限为: $\lim\limits_{x\to +\infty}\dfrac{\frac{1}{4}-\frac{1}{4x^4}}{\frac{1}{2}-\frac{1}{2x^2}}=\lim\limits_{x\to +\infty}\dfrac{1}{2}+\dfrac{1}{2x^2}=\dfrac{1}{2}$
 \end{solution}

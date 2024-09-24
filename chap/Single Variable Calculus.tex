@@ -47,21 +47,21 @@
 
 \begin{corollary}[周期性、中心对称性、轴对称性]
 	
-	1. $f(x)$有对称中心$(a,c)$,且关于直线$x=b$轴对称,我们可以推出$f(x)$的一个周期$T=4|b-a|$.
+	(1). $f(x)$有对称中心$(a,c)$,且关于直线$x=b$轴对称,我们可以推出$f(x)$的一个周期$T=4|b-a|$.
 	
-	2. $f(x)$有两个对称中心$(a,c)$和$(b,c)$,我们可以推出$f(x)$的一个周期$T=2|b-a|$.
+	(2). $f(x)$有两个对称中心$(a,c)$和$(b,c)$,我们可以推出$f(x)$的一个周期$T=2|b-a|$.
 	
-	3. $f(x)$有两个对称轴直线$x=a$和直线$x=b$,我们可以推出$f(x)$的一个周期$T=2|b-a|$.
+	(3). $f(x)$有两个对称轴直线$x=a$和直线$x=b$,我们可以推出$f(x)$的一个周期$T=2|b-a|$.
 
 \end{corollary}
 \begin{anymark}[证明]
-	1. 我们得到: 
+	(1).
 	$$\begin{cases} f(2a-x)+f(x)=2c  \\ f(2b-x) = f(x)\end{cases}\to \begin{cases} f(2a-x) + f(2b-x) =2c\\ f(2a-2b+x) +f(x) =2c  \end{cases}\to f(x) = f(x+4a-4b)$$
 
-	2. 我们得到:
+	(2).
 	$$\begin{cases} f(2a-x) = f(2b-x)  \\ f(2a-2b+x) = f(x) \end{cases}\to f(x) = f(x+2a-2b)$$
 
-	3. 我们得到:
+	(3).
 	$$\begin{cases} f(2a-x) = f(x)  \\ f(2b-x) = f(x)\end{cases}\to \begin{cases} f(2a-x) = f(2b-x) \\ f(2a-2b+x) = f(x)   \end{cases}\to f(x) = f(x+2a-2b)$$
 \end{anymark}
 
@@ -139,15 +139,21 @@
 	调和平均值:
 	$$H_{n}=\dfrac{n}{\sum\limits_{i=1}^{k}\dfrac{1}{a_{i}}}$$
 	平均值不等式:
-	$$Q_{n}\geq A_{n}\geq G_{n}\geq H_{n}, a_{1} = a_{2} = \cdots = a_{n} \text{等号成立}$$
+	$$Q_{n}\geq A_{n}\geq G_{n}\geq H_{n}, \text{当且仅当} a_{1} = a_{2} = \cdots = a_{n} \text{等号成立}$$
 \end{theorem}
 
 \begin{theorem}[柯西不等式]
 	二维形式:
+	
 	$$(a^{2}+b^{2})(c^{2}+d^{2})\geq (ac+bd)^{2}, \text{当且仅当} ad =bc \text{时等号成立}$$
+	
 	$n$ 维形式:
+	
 	$$\left(\sum_{i=1}^{n}a_{i}b_{i}\right)^{2}\leq \left(\sum_{i=1}^{n}a_{i}^{2}\right)\left(\sum_{i=1}^{n}b_{i}^{2}\right),\text{当且仅当} \dfrac{a_{i}}{b_{i}}=c\text{时等号成立}$$
-	$$\text{向量形式: } (\alpha,\beta)^{2}\leq (\alpha,\alpha)(\beta,\beta)$$
+	
+	向量形式:
+
+	$$(\alpha,\beta)^{2}\leq (\alpha,\alpha)(\beta,\beta)$$
 \end{theorem}
 \begin{theorem}[重要不等式]
 	\begin{enumerate}
@@ -170,15 +176,16 @@
 \section{函数的表示方法}
 \subsection{显式表达}
 \begin{definition}[显示表达]
-	$y = f(x)$ 的形式, 初等函数都是显性表达.
+	$y = f(x)$ 初等函数都是显性表达
 \end{definition}
 \subsection{隐式表达}
 \begin{definition}[隐式表达]
-	$f(x,y) = 0$ 的形式, 一般不能用 $x$ 表示 $y$, 也不能用 $y$ 表示 $x$
+	$f(x,y) = 0$ 一般不能用 $x$ 表示 $y$, 也不能用 $y$ 表示 $x$
 \end{definition}
 \subsection{极坐标}
 \begin{definition}[极坐标]
-	极坐标系是平面直角坐标系的一种推广, 它是由一个原点 $O$ 和一个射线 $Ox$ 组成的, 其中 $O$ 称为极点, $Ox$ 称为极轴, 任意一点 $P$ 到极点 $O$ 的距离 $r$ 叫做点 $P$ 的极径, 点 $P$ 到极轴的角 $\theta$ 叫做点 $P$ 的极角, 记为 $P(r,\theta)$
+	极坐标系是平面直角坐标系的一种推广, 它是由一个原点 $O$ 和一个射线 $Ox$ 组成的, 其中 $O$ 称为极点, $Ox$ 称为极轴, 
+	任意一点 $P$ 到极点 $O$ 的距离 $r$ 叫做点 $P$ 的极径, 点 $P$ 到极轴的角 $\theta$ 叫做点 $P$ 的极角, 记为 $P(r,\theta)$
 \end{definition}
 
 \begin{definition}[重要极坐标方程]
@@ -192,7 +199,10 @@
 \end{definition}
 \subsection{参数方程}
 \begin{definition}[参数方程]
-	设 $x=x(t),y=y(t)$, 如果 $x,y$ 都是 $t$ 的函数, 那么称 $x=x(t),y=y(t)$ 为参数方程, $t$ 称为参数
+	$$\begin{cases}
+		x = f(t)\\
+		y = g(t)
+	\end{cases} \qquad t\in[\alpha,\beta]$$
 \end{definition}
 \begin{definition}[重要参数方程]
 	\begin{enumerate}
@@ -202,9 +212,10 @@
 \end{definition}
 
 \begin{anymark}[注]
-	1. 关于双曲函数以及反双曲函数, 在 $\mathbf{def:}$ \ref{def: 双曲函数} 有详细介绍
-	
-	2. 有关极坐标和参数方程常见曲线的方程, 在 $\mathbf{def:}$ \ref{def: 常用曲线} 有详细介绍 
+	\begin{itemize}
+		\item 双曲函数和反双曲函数的定义和性质 $\mathbf{def:}$ \ref{def: 双曲函数}
+		\item 常见曲线极坐标和参数方程 $\mathbf{def:}$ \ref{def: 常用曲线}
+	\end{itemize} 
 \end{anymark}
 
 
@@ -237,17 +248,18 @@
 	若数列 $\{x_{n}\}$ 的极限 $a>0(a<0)$, 则存在正整数 $N_{0}$, 当 $n>N_{0}$ 时, $x_{n}>0(x_{n}<0)$, 取 $\epsilon = \pm a$ 即可
 \end{corollary}
 \begin{anymark}[注]
-	1. 若数列的任意子列发散, 数列极限不存在
-
-	2. 若数列的任意两个子列极限存在但不相等, 数列极限不存在
+	\begin{itemize}
+		\item 若数列的任意子列发散, 数列极限不存在
+		\item 若数列的任意两个子列极限存在但不相等, 数列极限不存在
+	\end{itemize}
 \end{anymark}
 \begin{corollary}[数列极限]
 	\begin{itemize}
 		\item 如果数列从某项起有 $x_{n}\geq 0$ 且 $\lim\limits_{n\to\infty}x_{n} = a$, 则 $a\geq 0$
 		\item 如果 $\lim\limits_{n\to\infty} x_{n} = A$, 则 $\lim\limits_{n\to\infty} |x_{n}| = |A|$
-		\item $\lim\limits_{n\rightarrow +\infty}x_{n}=a\to \begin{cases} \lim\limits_{n\rightarrow +\infty}\dfrac{x_{n+1}}{x_{n}}=1, & a\neq 0\\ \lim\limits_{n\rightarrow +\infty}\dfrac{x_{n+1}}{x_{n}} \text{不一定存在}, & a=0  \end{cases}$
-		\item $\lim\limits_{n\rightarrow +\infty}\dfrac{x_{n+1}}{x_{n}}=a\to \begin{cases} \lim\limits_{n\rightarrow +\infty}x_{n}=\infty,& |a|>1  \\ \lim\limits_{n\rightarrow +\infty}x_{n}=0,&|a|<1\\  \lim\limits_{n\rightarrow +\infty}x_{n}\text{不确定},&|a|=1 \end{cases}$
-		\item $\lim\limits_{n\rightarrow +\infty}\dfrac{x_{n+1}}{x_{n}}\text{存在且}x_{n}>0\to \lim\limits_{n\rightarrow +\infty}\sqrt[n]{x_{n}}=\lim\limits_{n\rightarrow +\infty}\dfrac{x_{n+1}}{x_{n}}$
+		\item $\lim\limits_{n\to +\infty}x_{n}=a\to \begin{cases} \lim\limits_{n\to +\infty}\dfrac{x_{n+1}}{x_{n}}=1, & a\neq 0\\ \lim\limits_{n\to +\infty}\dfrac{x_{n+1}}{x_{n}} \text{不一定存在}, & a=0  \end{cases}$
+		\item $\lim\limits_{n\to +\infty}\dfrac{x_{n+1}}{x_{n}}=a\to \begin{cases} \lim\limits_{n\to +\infty}x_{n}=\infty,& |a|>1  \\ \lim\limits_{n\to +\infty}x_{n}=0,&|a|<1\\  \lim\limits_{n\to +\infty}x_{n}\text{不确定},&|a|=1 \end{cases}$
+		\item $\lim\limits_{n\to +\infty}\dfrac{x_{n+1}}{x_{n}}\text{存在且}x_{n}>0\to \lim\limits_{n\to +\infty}\sqrt[n]{x_{n}}=\lim\limits_{n\to +\infty}\dfrac{x_{n+1}}{x_{n}}$
 	\end{itemize}
 \end{corollary}
 
@@ -272,24 +284,25 @@
 \end{definition}
 
 \begin{corollary}[夹逼准则]
-	$\lim\limits_{n\rightarrow +\infty}\sqrt[n]{u_{1}^{n}+u_{2}^{n}+u_{3}^{n}+\cdots+u_{m}^{n}}=\max\{ u_{1},u_{2},\cdots,u_{m}\}$
+	$\lim\limits_{n\to +\infty}\sqrt[n]{u_{1}^{n}+u_{2}^{n}+u_{3}^{n}+\cdots+u_{m}^{n}}=\max\{ u_{1},u_{2},\cdots,u_{m}\}$
 	\begin{anymark}[证明]
-		$$[\max\{ u_{1},u_{2},\cdots,u_{m}\}]^{n}\leq u_{1}^{n}+u_{2}^{n}+u_{3}^{n}+\cdots+u_{m}^{n}\leq m[\cdot\max\{ u_{1},u_{2},\cdots,u_{m}\}]^{n}$$
-	
-		我们将$[\max\{ u_{1},u_{2},\cdots,u_{m}\}]^{n}$记作$a$,$m\cdot[\max\{ u_{1},u_{2},\cdots,u_{m}\}]^{n}$记作$b$,我们利用夹逼准则:
+		令 $a = \max\{u_{1},u_{2},\cdots,u_{m}\}$
 
-	$$\lim\limits_{n\rightarrow +\infty}\sqrt[n]{a}=\lim\limits_{n\rightarrow +\infty}\sqrt[n]{b}=\text{max}\{ u_{1},u_{2},\cdots,u_{m}\}$$
+		$$a^{n}\leq u_{1}^{n}+u_{2}^{n}+u_{3}^{n}+\cdots+u_{m}^{n}\leq ma^{n}$$
+
+		夹逼准则:
+		$$\lim\limits_{n\to +\infty}\sqrt[n]{a^{n}}=\lim\limits_{n\to +\infty}\sqrt[n]{(ma^{n})} = a =\max\{ u_{1},u_{2},\cdots,u_{m}\}$$
 	\end{anymark}
 \end{corollary}
 
 \subsection{单调有界准则}
 \begin{definition}[单调有界准则]
-	单调有界数列必有极限, 详细证明见 $\mathbf{the:}$ \ref{the: 柯西收敛准则}.
+	单调有界数列必有极限 $\mathbf{the:}$ \ref{the: 柯西收敛准则}
 \end{definition}
 \section{Exercise}
 \begin{proposition}
 	设$x_{1}=a\geq 0$,$y_{1}=b\geq 0$,$a\leq b$,$x_{n+1}=\sqrt{x_{n}y_{n}},y_{n+1}=\dfrac{x_{n}+y_{n}}{2}(n=1,2,\cdots)$,证明:
-	$\lim\limits_{n\rightarrow +\infty}x_{n}=\lim\limits_{n\rightarrow +\infty}y_{n}$
+	$\lim\limits_{n\to +\infty}x_{n}=\lim\limits_{n\to +\infty}y_{n}$
 \end{proposition}
 \begin{solution}
 	
@@ -312,33 +325,33 @@
 	
 	$\{x_{n}\},\{y_{n}\}$ 单调且有界, 数列 $\{x_{n}\},\{y_{n}\}$ 均有极限 
 	$$\begin{cases}
-		\lim\limits_{n\rightarrow +\infty}x_{n} = a\\
-		\lim\limits_{n\rightarrow +\infty}y_{n} = b
+		\lim\limits_{n\to +\infty}x_{n} = a\\
+		\lim\limits_{n\to +\infty}y_{n} = b
 	\end{cases} \Rightarrow 
 	\begin{cases}
 		a = \sqrt{ab}\\
 		b = \dfrac{a+b}{2}
 	\end{cases}\Rightarrow a=b$$
 	
-	综上所述, $\lim\limits_{n\rightarrow +\infty}x_{n}=\lim\limits_{n\rightarrow +\infty}y_{n}$
+	综上所述, $\lim\limits_{n\to +\infty}x_{n}=\lim\limits_{n\to +\infty}y_{n}$
 \end{solution}
 
 \begin{proposition}
-	设数列 $\{a_{n}\}$ 满足 $\lim\limits_{n\rightarrow+\infty}\dfrac{a_{n+1}}{a_{n}}=q$, 且 $|q|<1$, 证明: $\lim\limits_{n\rightarrow+\infty}a_{n}=0$
+	设数列 $\{a_{n}\}$ 满足 $\lim\limits_{n\to+\infty}\dfrac{a_{n+1}}{a_{n}}=q$, 且 $|q|<1$, 证明: $\lim\limits_{n\to+\infty}a_{n}=0$
 \end{proposition}
 \begin{solution}
 	
 	考虑数列 $\{|a_{n}|\}$:
 
 	$$\begin{cases}
-		\lim\limits_{n\rightarrow+\infty}\dfrac{a_{n+1}}{a_{n}} = q\\
+		\lim\limits_{n\to+\infty}\dfrac{a_{n+1}}{a_{n}} = q\\
 		|\dfrac{a_{n+1}}{a_{n}}-q| \geq \big||\dfrac{a_{n+1}}{a_{n}}|-|q|\big| 
 	\end{cases}\Rightarrow
 	\begin{cases}
 		\forall \varepsilon > 0, \exists M > 0, n > M, |\dfrac{a_{n+1}}{a_{n}}-q| < \varepsilon \\
 		\forall \varepsilon > 0, \exists M > 0, n > M, \big||\dfrac{a_{n+1}}{a_{n}}|-|q|\big| < \varepsilon
 	\end{cases}
-	\Rightarrow \lim\limits_{n\rightarrow+\infty}\big|\dfrac{a_{n+1}}{a_{n}}\big| = |q|$$
+	\Rightarrow \lim\limits_{n\to+\infty}\big|\dfrac{a_{n+1}}{a_{n}}\big| = |q|$$
 	
 	取 $\varepsilon > 0 ,\varepsilon + |q| < 1$
 	$$\exists N > 0, n > N, \big|\dfrac{a_{n+1}}{a_{n}}-|q|\big| < \varepsilon \Rightarrow n > N, \big| \dfrac{a_{n+1}}{a_{n}}\big| < \varepsilon + |q| < 1$$
@@ -361,7 +374,7 @@
 	\Rightarrow \lim\limits_{n\to +\infty} a_{n} = 0 
 	$$
 	
-	综上所述, $\lim\limits_{n\rightarrow+\infty}a_{n}=0$
+	综上所述, $\lim\limits_{n\to+\infty}a_{n}=0$
 \end{solution}
 
 \begin{proposition}
@@ -369,7 +382,7 @@
 
 (1). 证明:  方程$f_{n}(x)=\dfrac{1}{2}$在$(0,\dfrac{\pi}{2})$内有且只有一个实数根$x_{n}$
 
-(2). 设$x_{n}\in(0,\dfrac{\pi}{2})$,满足$f_{n}(x)=\dfrac{1}{2}$,证明:  $$\arccos \dfrac{1}{n}<x_{n}<\dfrac{\pi}{2},\text{且}\lim\limits_{n\rightarrow +\infty}x_{n}=\dfrac{\pi}{2}$$
+(2). 设$x_{n}\in(0,\dfrac{\pi}{2})$,满足$f_{n}(x)=\dfrac{1}{2}$,证明:  $$\arccos \dfrac{1}{n}<x_{n}<\dfrac{\pi}{2},\text{且}\lim\limits_{n\to +\infty}x_{n}=\dfrac{\pi}{2}$$
 \end{proposition}
 \begin{solution}
 	
@@ -398,21 +411,21 @@
 	\end{cases}\Rightarrow 
 	h'(x) = -e^{x\ln(1-\frac{1}{x})}\left[\ln(1-\frac{1}{x})+\dfrac{1}{x-1}\right] < 0$$
 	
-	$G_{n}(\arccos\dfrac{1}{n})$ 单调递减, 且 $\lim\limits_{n\rightarrow+\infty}G_{n}(\arccos\dfrac{1}{n})=\dfrac{1}{2}-\dfrac{1}{e}>0$
+	$G_{n}(\arccos\dfrac{1}{n})$ 单调递减, 且 $\lim\limits_{n\to+\infty}G_{n}(\arccos\dfrac{1}{n})=\dfrac{1}{2}-\dfrac{1}{e}>0$
 	零点定理: 
 	$$\exists! x_{n}\in (\arccos \dfrac{1}{n}, \dfrac{\pi}{2}),\ s.t.\ f(x_{n}) = \dfrac{1}{2}$$
 	
 	夹逼定理:  
 	$$\begin{cases}
-		\lim\limits_{n\rightarrow  +\infty}\arccos \dfrac{1}{n}=\dfrac{\pi}{2}\\
-		\lim\limits_{n\rightarrow  +\infty}\dfrac{\pi}{2}=\dfrac{\pi}{2}
+		\lim\limits_{n\to  +\infty}\arccos \dfrac{1}{n}=\dfrac{\pi}{2}\\
+		\lim\limits_{n\to  +\infty}\dfrac{\pi}{2}=\dfrac{\pi}{2}
 	\end{cases}
-	\Rightarrow \lim\limits_{n\rightarrow +\infty}x_{n}=\dfrac{\pi}{2}$$
+	\Rightarrow \lim\limits_{n\to +\infty}x_{n}=\dfrac{\pi}{2}$$
 	
 \end{solution}
 
 \begin{proposition}
-	设$x_{1}>0$,数列$\{x_{n}\}$满足$x_{n+1}=\ln(e^{x_{n}}-1)-\ln x_{n}$,证明:  $\lim\limits_{n\rightarrow +\infty}x_{n}$存在并求其值
+	设$x_{1}>0$,数列$\{x_{n}\}$满足$x_{n+1}=\ln(e^{x_{n}}-1)-\ln x_{n}$,证明:  $\lim\limits_{n\to +\infty}x_{n}$存在并求其值
 \end{proposition}
 \begin{solution}
 	
@@ -437,7 +450,7 @@
 	
 	数列 $\{x_{n}\}$ 单调递减且有下界, 单调有界准则: 数列 $\{x_{n}\}$ 极限必定存在
 	
-	不妨设 $\lim\limits_{n\rightarrow +\infty}x_{n}=a$ :  
+	不妨设 $\lim\limits_{n\to +\infty}x_{n}=a$ :  
 	$$e^{a}=\dfrac{e^a-1}{a}\Rightarrow a=0$$
 	
 	综上所述,数列$\{x_{n}\}$极限存在,其值为$0$
@@ -447,7 +460,7 @@
 
 (1). $\exists!\ x^{*}\in(a,b),\ s.t.\ F(x^{*})=x^{*}$
 
-(2). 对 $x_{0}\in[a,b]$, 数列 $\{x_{n}\}$ 满足 $x_{n+1}=F(x_{n})(n=0,1,2,\cdots)$, 有 $\lim\limits_{n\rightarrow+\infty}x_{n}=x^{*}$
+(2). 对 $x_{0}\in[a,b]$, 数列 $\{x_{n}\}$ 满足 $x_{n+1}=F(x_{n})(n=0,1,2,\cdots)$, 有 $\lim\limits_{n\to+\infty}x_{n}=x^{*}$
 
 \end{proposition}
 \begin{solution}
@@ -470,7 +483,7 @@
 
 	$$F'(x)=\dfrac{1+f'(x)}{2}\geq 0\Rightarrow F(x)\text{单调递增}$$
 	
-	(i). $x_{0}=x^{*}$,$x_{n}=x^{*}$, $\lim\limits_{n\rightarrow +\infty}x_{n}=x^{*}$
+	(i). $x_{0}=x^{*}$,$x_{n}=x^{*}$, $\lim\limits_{n\to +\infty}x_{n}=x^{*}$
 	
 	(ii). $x_{0}>x^{*}$, $G(x^{*})>G(x_{0})\Rightarrow F(x_{0})<x_{0}\Rightarrow x_{1}<x_{0}$
 	\begin{enumerate}
@@ -508,12 +521,12 @@
 	
 	$$A=\dfrac{A+f(A)}{2}\Rightarrow F(A)=A\Rightarrow A=x^{*}$$
 	
-	综上所述, $\lim\limits_{n\rightarrow+\infty}x_{n}=x^{*}$
+	综上所述, $\lim\limits_{n\to+\infty}x_{n}=x^{*}$
 \end{solution}
 \begin{proposition}
 (1).设$f(x)$是$[0,+\infty)$上单调减少且非负的连续函数,证明:  $$f(k+1)\leq \int_{k}^{k+1}f(x)dx\leq f(k),\ k=1,2,\cdots$$
 
-(2). 证明:  $\ln(1+n)\leq 1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}\leq 1+\ln n$,求极限$\lim\limits_{n\rightarrow+\infty}\dfrac{1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}}{\ln n}$
+(2). 证明:  $\ln(1+n)\leq 1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}\leq 1+\ln n$,求极限$\lim\limits_{n\to+\infty}\dfrac{1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}}{\ln n}$
 
 \end{proposition}
 \begin{solution}
@@ -546,14 +559,14 @@
 
 	夹逼定理:  
 	$$\begin{cases}
-		\lim\limits_{n\rightarrow +\infty}\dfrac{\ln(1+n)}{\ln n} = 1\\
-		\lim\limits_{n\rightarrow +\infty}\dfrac{1+\ln n}{\ln n} = 1
+		\lim\limits_{n\to +\infty}\dfrac{\ln(1+n)}{\ln n} = 1\\
+		\lim\limits_{n\to +\infty}\dfrac{1+\ln n}{\ln n} = 1
 	\end{cases}\Rightarrow 
-	\lim\limits_{n\rightarrow +\infty}\dfrac{1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}}{\ln n}=1$$
+	\lim\limits_{n\to +\infty}\dfrac{1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}}{\ln n}=1$$
 \end{solution}
 
 \begin{proposition}
-	设 $f(x)$ 在 $(a,b)$ 内连续, 且 $\lim\limits_{x\rightarrow a^{+}}f(x)=\lim\limits_{x\rightarrow b^{-}}f(x)=-\infty$, 证明: $f(x)$在$(a,b)$ 内有最大值
+	设 $f(x)$ 在 $(a,b)$ 内连续, 且 $\lim\limits_{x\to a^{+}}f(x)=\lim\limits_{x\to b^{-}}f(x)=-\infty$, 证明: $f(x)$在$(a,b)$ 内有最大值
 \end{proposition}
 \begin{solution}
 	
@@ -585,7 +598,7 @@
 
 \begin{proposition}
 	设 $2x_{1}=1,2x_{n+1}=1-x_{n}^2$, 证明数列 $\{x_{n}\}$ 收敛,
-	并求极限 $\lim\limits_{n\rightarrow +\infty}x_{n}$
+	并求极限 $\lim\limits_{n\to +\infty}x_{n}$
 \end{proposition}
 \begin{solution}
 	
@@ -600,7 +613,7 @@
 	\end{cases}\Rightarrow x_{n}\in (0,\dfrac{1}{2})$$
 	\begin{anymark}[压缩映射原理]
 
-		不妨设 $\lim\limits_{n\rightarrow\infty}x_{n}=a(a>0)$, 对 $2x_{n+1}=1-x_{n}^2$ 两边同时取极限: 
+		不妨设 $\lim\limits_{n\to\infty}x_{n}=a(a>0)$, 对 $2x_{n+1}=1-x_{n}^2$ 两边同时取极限: 
 	    
 		$$2a=1-a^2\Rightarrow 
 		\begin{cases}
@@ -618,7 +631,7 @@
 		
 		$$\lim\limits_{n\to \infty} 0 = \lim\limits_{n\to \infty}(\dfrac{2\sqrt{2}-1}{4})^{n-1}=0$$
 		
-		夹逼定理: $\lim\limits_{n\to \infty}|x_{n}-a|=0 \Rightarrow \lim\limits_{n\rightarrow +\infty}x_{n} = a =\sqrt{2}-1$
+		夹逼定理: $\lim\limits_{n\to \infty}|x_{n}-a|=0 \Rightarrow \lim\limits_{n\to +\infty}x_{n} = a =\sqrt{2}-1$
 	\end{anymark}
 	\begin{anymark}[柯西列]
 
@@ -649,7 +662,7 @@
 \end{solution}
 
 \begin{proposition}
-	设 $x_{1}=1,x_{n}=1+\dfrac{1}{1+x_{n-1}},(n=1,2,\cdots)$,证明极限 $\lim\limits_{n\rightarrow\infty}x_{n}$ 存在并求出此极限
+	设 $x_{1}=1,x_{n}=1+\dfrac{1}{1+x_{n-1}},(n=1,2,\cdots)$,证明极限 $\lim\limits_{n\to\infty}x_{n}$ 存在并求出此极限
 \end{proposition}
 \begin{solution}
 	
@@ -719,11 +732,11 @@
 	比较判别法:
 	$$\sum\limits_{n=1}^{+\infty}(x_{n+1}-x_{n})\text{收敛}\Rightarrow \lim\limits_{n\to +\infty}x_{n+1} - x_{1} = A$$
 	
-	综上所述, 极限 $\lim\limits_{n\rightarrow\infty}x_{n}$ 存在
+	综上所述, 极限 $\lim\limits_{n\to\infty}x_{n}$ 存在
 \end{solution}
 
 \begin{proposition}
-	设 $x_{0}=1,x_{n+1}=\dfrac{1}{x_{n}^3+4},(n=0,1,2,\cdots)$, 证明极限 $\lim\limits_{n\rightarrow\infty}x_{n}$存在并求出此极限
+	设 $x_{0}=1,x_{n+1}=\dfrac{1}{x_{n}^3+4},(n=0,1,2,\cdots)$, 证明极限 $\lim\limits_{n\to\infty}x_{n}$存在并求出此极限
 \end{proposition}
 \begin{solution}
 	
@@ -745,9 +758,9 @@
 	
 	比较判别法: 
 	$$\sum\limits_{n=1}^{+\infty}|x_{n}-x_{n-1}|\text{收敛}\Rightarrow \sum\limits_{n=1}^{+\infty}|x_{n}-x_{n-1}|\text{收敛}
-	\lim\limits_{n\rightarrow\infty}x_{n}-x_{0}\text{存在}$$
+	\lim\limits_{n\to\infty}x_{n}-x_{0}\text{存在}$$
 	
-	不妨设 $\lim\limits_{n\rightarrow\infty}x_{n}=A(A>0)$: 
+	不妨设 $\lim\limits_{n\to\infty}x_{n}=A(A>0)$: 
 	$$A=\dfrac{1}{A^3+4}\Rightarrow A^4+4A-1=0$$
 	
 	$A$ 是方程 $x^4+4x-1=0$ 的唯一正根
@@ -764,7 +777,11 @@
 \end{introduction}
 \section{函数极限}
 \begin{definition}[函数极限]
-	设函数 $f(x)$ 在点 $x_{0}$ 的某个去心邻域 $\mathring{U}(x_{0},\delta)$ 内有定义, 如果存在常数 $A$, 对于任意给定的正数 $\epsilon$, 总存在正数 $\delta$, 使得当 $x$ 满足不等式 $0<|x-x_{0}|<\delta$ 时, 对应的函数值 $f(x)$ 都满足不等式 $|f(x)-A|<\epsilon$, 那么常数 $A$ 是当 $x$ 趋于 $x_{0}$ 时函数 $f(x)$ 的极限, 记作 $\lim\limits_{x\to x_{0}}f(x)=A$
+	设函数 $f(x)$ 在点 $x_{0}$ 的某个去心邻域 $\mathring{U}(x_{0},\delta)$ 内有定义, 如果存在常数 $A$, 对于任意给定的正数 $\epsilon$, 总存在正数 $\delta$, 
+	使得当 $x$ 满足不等式 $0<|x-x_{0}|<\delta$ 时, 对应的函数值 $f(x)$ 都满足不等式 $|f(x)-A|<\epsilon$, 那么常数 $A$ 是当 $x$ 趋于 $x_{0}$ 时函数 $f(x)$ 的极限, 
+	记作 $\lim\limits_{x\to x_{0}}f(x)=A$
+
+	$$\forall \epsilon > 0, \exists \xi > 0, x\in (x_{0}-\xi,x_{0})\cup (x_{0},x_{0}+\xi), |f(x)-A| < \epsilon \Leftrightarrow \lim\limits_{x \to x_{0}}f(x) = A$$
 \end{definition}
 
 \begin{definition}[单侧极限]
@@ -787,11 +804,11 @@
 \end{property}
 
 \begin{property}[局部有界性]
-	若函数 $f(x)$ 满足$\lim\limits_{x\to x_{0}}f(x)=A$, 则存在正数 $M>0$, 存在正数 $\delta>0$, 使得当 $x$ 满足不等式 $0<|x-x_{0}|<\delta$ 时, 对应的函数值 $f(x)$ 都满足不等式 $|f(x)|\leq M$
+	若函数 $f(x)$ 满足$\lim\limits_{x\to x_{0}}f(x)=A$, $\exists M > 0, \delta > 0,\ s.t.\ x\in(x_{0}-\delta,x_{0})\cup(x_{0},x-{0}+\delta), |f(x)|\leq M$
 \end{property}
 
 \begin{property}[局部保号性]
-	若函数 $f(x)$ 满足 $\lim\limits_{x\to x_{0}}f(x)=A>(<)0$, 则存在正数 $\delta>0$, 使得当 $x$ 满足不等式 $0<|x-x_{0}|<\delta$ 时, 对应的函数值 $f(x)>(<)0$
+	若函数 $f(x)$ 满足 $\lim\limits_{x\to x_{0}}f(x)=A>(<)0$, $\exists \delta > 0,\ s.t.\ x\in(x_{0}-\delta,x_{0})\cup(x_{0},x-{0}+\delta), f(x) > (<) 0$
 \end{property}
 
 \section{函数极限计算}
@@ -828,24 +845,27 @@
 
 	(2). $\dfrac{\infty}{\infty}$: $\lim\limits_{x\to a}f(x)=\lim\limits_{x\to a}g(x)=\infty$
 
-	如果 $\lim\limits_{x\to a}\dfrac{f'(x)}{g'(x)}=l$($l$ 可以是实数或者 $\infty$), 我们有: $\lim\limits_{x\to a}\dfrac{f(x)}{g(x)}=l$
+	如果 $\lim\limits_{x\to a}\dfrac{f'(x)}{g'(x)}=l$($l$ 可以是实数或者 $\infty$) $\Rightarrow \lim\limits_{x\to a}\dfrac{f(x)}{g(x)}=l$
 \end{theorem}
 \begin{anymark}[证明]
-	构造辅助函数: $F(x) = \begin{cases} 0,& x=x_{0}  \\ f(x),&x\in\mathring{U}(x_{0}) \end{cases}, G(x)= \begin{cases} 0,& x=x_{0}  \\ g(x),&x\in\mathring{U}(x_{0}) \end{cases} $
+	构造辅助函数: 
+	$$F(x) = \begin{cases} 
+		0 & x=x_{0}  \\ 
+		f(x) & x\in\mathring{U}(x_{0}) 
+	\end{cases}\qquad 
+	G(x) = \begin{cases}
+		 0 & x=x_{0}  \\ 
+		 g(x) & x\in\mathring{U}(x_{0}) 
+	\end{cases}$$
 
-	我们可以得到: $F(x),G(x)$ 在 $[x_{0},x]$ 上连续, 在 $(x_{0},x)$ 内可导, 且 $G'(x)\neq 0$
+	$F(x),G(x)$ 在 $[x_{0},x]$ 上连续, 在 $(x_{0},x)$ 内可导, 且 $G'(x)\neq 0$
 	
-	我们利用柯西中值定理:
+	柯西中值定理:
 	
-	$$\exists \xi\in (x_{0},x), s.t.\ \dfrac{F(x)-F(x_{0})}{G(x)-G(x_{0})}= \dfrac{F'(xi)}{G'(\xi)}\Rightarrow \dfrac{f(x)}{g(x)} = \dfrac{f'(\xi)}{g'(\xi)}$$
+	$$\exists \xi\in (x_{0},x),\ s.t.\ \dfrac{F(x)-F(x_{0})}{G(x)-G(x_{0})}= \dfrac{F'(xi)}{G'(\xi)}
+	\Rightarrow \dfrac{f(x)}{g(x)} = \dfrac{f'(\xi)}{g'(\xi)}$$
 
-	我们取极限 $x\to x_{0}^{+}$ 得到: $\lim\limits_{x\to x_{0}^{+}}\dfrac{f(x)}{g(x)} = \lim\limits_{\xi\to x_{0}^{+}}\dfrac{f'(\xi)}{g'(\xi)} = \lim\limits_{x\to x_{0}^{+}}\dfrac{f'(x)}{g'(x)} $
-
-	同理我们可以得到: $\lim\limits_{x\to x_{0}^{-}}\dfrac{f(x)}{g(x)} = \lim\limits_{x\to x_{0}^{-}}\dfrac{f'(x)}{g'(x)} $
-	
-	由于 $\lim\limits_{x\to a}\dfrac{f'(x)}{g'(x)}=l\to \lim\limits_{x\to x_{0}^{-}}\dfrac{f'(x)}{g'(x)} = \lim\limits_{x\to x_{0}^{+}}\dfrac{f'(x)}{g'(x)}=l$
-
-	我们得到: $\lim\limits_{x\to x_{0}^{-}}\dfrac{f(x)}{g(x)} = \lim\limits_{x\to x_{0}^{+}}\dfrac{f(x)}{g(x)} = l$, 证毕
+	$$\lim\limits_{x\to x_{0}}\dfrac{f(x)}{g(x)} = \lim\limits_{\xi\to x_{0}}\dfrac{f'(\xi)}{g'(\xi)} = \lim\limits_{x\to x_{0}}\dfrac{f'(x)}{g'(x)}$$
 \end{anymark}
 \begin{theorem}[广义洛必达定理]
 	设 $f(x)$ 和 $g(x)$ 在 $\mathring{U}(x_{0})$ 上可导, 满足:
@@ -856,19 +876,19 @@
 
 	(3). $\lim\limits_{x\to x_{0}}\dfrac{f'(x)}{g'(x)}=A(A\text{为有限数或}\pm\infty)$
 
-	我们有: $\lim\limits_{x\to x_{0}}\dfrac{f(x)}{g(x)}=A$
+	$\lim\limits_{x\to x_{0}}\dfrac{f(x)}{g(x)}=A$
 \end{theorem}
 \begin{anymark}[证明]
 	首先考虑 $x\to x_{0}^{-}$:
 
-	(1). 当 $A$ 为常数时, 我们有:
+	(1). 当 $A$ 为常数时:
 	$$\forall \varepsilon > 0, \exists \delta > 0,\ s.t.\ x\in (x_{0}-\delta,x_{0}), |\dfrac{f'(x)}{g'(x)}-A|<\dfrac{\varepsilon}{3}\Rightarrow \text{取定} x_{1}\in (x_{0}-\delta,x_{0})$$
 
-	我们考虑 $x\in (x_{1},x)$, 由柯西中值定理我们有:
+	$x\in (x_{1},x)$, 柯西中值定理:
 
 	$$\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})} = \dfrac{f'(\xi)}{g'(\xi)}\Rightarrow |\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})}-A| = |\dfrac{f'(\xi)}{g'(\xi)}-A| < \dfrac{\varepsilon}{3}$$
 
-	$x\in[x_{1},x_{0})$, 我们有:
+	$x\in[x_{1},x_{0})$:
 
 	\begin{eqnarray*}
 		\big|\dfrac{f(x)}{g(x)} -A\big| &=& \big|\dfrac{g(x)-g(x_{1})}{g(x)} \left[\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})}-A\right] + \dfrac{f(x_{1})-Ag(x_{1})}{g(x)}\big|\\
@@ -876,19 +896,23 @@
 								&\leq& (1+\big|\dfrac{g(x_{1})}{g(x)}\big|)\big|\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})}-A\big|+\big|\dfrac{f(x_{1})-Ag(x_{1})}{g(x)}\big|
 	\end{eqnarray*}
 
-	我们有: $\lim\limits_{x\to x_{0}}g(x) =\infty\Rightarrow \begin{cases} \lim\limits_{x\to x_{0}}\dfrac{g(x_{1})}{g(x)} =0 \\ \lim\limits_{x\to x_{0}}\dfrac{f(x_{1})-Ag(x_{1})}{g(x)}=0\end{cases}$
+	$$\lim\limits_{x\to x_{0}}g(x) =\infty\Rightarrow 
+	\begin{cases} 
+		\lim\limits_{x\to x_{0}}\dfrac{g(x_{1})}{g(x)} =0 \\
+		\lim\limits_{x\to x_{0}}\dfrac{f(x_{1})-Ag(x_{1})}{g(x)}=0
+	\end{cases}$$
 
-	我们有:
+	
 	$$\forall \varepsilon >0, \exists x_{2}\in(x_{1},x_{0}),\forall x\in(x_{2},x_{0}),\ s.t.\ \big|\dfrac{g(x_{1})}{g(x)}\big|< 1 \text{且}
-	 \big|\dfrac{f(x_{1})-Ag(x_{1})}{g(x)}\big|< \dfrac{\varepsilon}{3}$$
+	\big|\dfrac{f(x_{1})-Ag(x_{1})}{g(x)}\big|< \dfrac{\varepsilon}{3}$$
 
-	此时,我们有: $\forall \varepsilon > 0, \exists \delta_{1} = x_{0}-x_{2}, \forall x\in (x_{0}-\delta_{1},x_{0}), \big|\dfrac{f(x)}{g(x)} -A\big|<2\cdot \dfrac{\varepsilon}{3}+\dfrac{\varepsilon}{3}=\varepsilon$
+	此时, $\forall \varepsilon > 0, \exists \delta_{1} = x_{0}-x_{2}, \forall x\in (x_{0}-\delta_{1},x_{0}), \big|\dfrac{f(x)}{g(x)} -A\big|<2\cdot \dfrac{\varepsilon}{3}+\dfrac{\varepsilon}{3}=\varepsilon$
 	
-	(2). 当 $A$ 为 $\infty$ 时, 我们有: $|\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})}| = |\dfrac{f'(\xi)}{g'(\xi)}| > M$
+	(2). 当 $A$ 为 $\infty$ 时: $\big|\dfrac{f(x)-f(x_{1})}{g(x)-g(x_{1})}\big| = \big|\dfrac{f'(\xi)}{g'(\xi)}\big| > M$
 	
-	取 $M = 1\to |f(x)-f(x_{1})|>|g(x)-g(x_{1})|\to \lim\limits_{x\to x_{0}^{-}}f(x) = \infty$
+	取 $M = 1\to \big|f(x)-f(x_{1})\big| > \big|g(x)-g(x_{1})\big|\to \lim\limits_{x\to x_{0}^{-}}f(x) = \infty$
 
-	$x\to x_{0}^{+}$ 的情况类似, 证毕
+	$x\to x_{0}^{+}$ 的情况类似
 \end{anymark}
 
 \section{连续和间断}
@@ -925,7 +949,9 @@
 
 \section{一元微分学概念}
 \begin{definition}[导数]
-	设 $y=f(x)$ 定义在区间 $I$ 上, 自变量在 $x=x_{0}$ 处增加一个增量 $\Delta x$ 时, 其中 $x_{0}\in I, x_{0}+\Delta\in I$, 函数值的增量 $\Delta y=f(x_{0}+\Delta x)-f(x_{0})$, 如果极限 $\lim\limits_{\Delta x\to 0}\frac{\Delta y}{\Delta x}$ 存在, 那么称此极限为函数 $y=f(x)$ 在点 $x_{0}$ 处的导数, 记为 $f'(x_{0})$ 或 $\dfrac{dy}{dx}|_{x=x_{0}}$ 或 $\dfrac{df(x)}{dx}|_{x=x_{0}}$
+	设 $y=f(x)$ 定义在区间 $I$ 上, 自变量在 $x=x_{0}$ 处增加一个增量 $\Delta x$ 时, 其中 $x_{0}\in I, x_{0}+\Delta\in I$, 
+	函数值的增量 $\Delta y=f(x_{0}+\Delta x)-f(x_{0})$, 如果极限 $\lim\limits_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}$ 存在, 
+	那么称此极限为函数 $y=f(x)$ 在点 $x_{0}$ 处的导数, 记为 $f'(x_{0})$ 或 $\dfrac{dy}{dx}\big|_{x=x_{0}}$ 或 $\dfrac{df(x)}{dx}\big|_{x=x_{0}}$
 \end{definition}
 \begin{definition}[导数的几何意义]
 	函数 $y=f(x)$ 在点 $x=x_{0}$ 处的导数 $f'(x_{0})$ 是函数 $y=f(x)$ 在点 $x=x_{0}$ 处的切线的斜率
@@ -971,8 +997,8 @@
 
 \begin{theorem}[高阶导数]
 	\begin{enumerate}
-		\item $\sin^{(n)} x = \sin (x+\frac{n\pi}{2})\qquad \qquad\sin^{(n)}(ax+b) = a^{n} \sin(ax+b+\frac{n\pi}{2})$
-		\item $\cos^{(n)} x = \cos (x+\frac{n\pi}{2})\qquad\qquad \cos^{(n)}(ax+b) = a^{n} \cos(ax+b+\frac{n\pi}{2})$
+		\item $\sin^{(n)} x = \sin (x+\dfrac{n\pi}{2})\qquad \qquad\sin^{(n)}(ax+b) = a^{n} \sin(ax+b+\dfrac{n\pi}{2})$
+		\item $\cos^{(n)} x = \cos (x+\dfrac{n\pi}{2})\qquad\qquad \cos^{(n)}(ax+b) = a^{n} \cos(ax+b+\dfrac{n\pi}{2})$
 		\item $[\ln(1+x)]^{(n)} = (-1)^{n-1}\dfrac{(n-1)!}{(1+x)^{n}}\qquad\qquad [\ln(1+x)]^{(n)} = (-1)^{n-1}\dfrac{(n-1)!a^{n}}{(ax+b)^{n}}$
 		\item $(\dfrac{1}{ax+b})^{(n)} = (-1)^{n-1}\dfrac{(n-1)!a^{n}}{(ax+b)^{n+1}}$
 		\item 莱布尼茨公式: $(uv)^{n} = \sum\limits_{i=0}^{n}\binom{i}{n}u^{(i)}v^{(n-i)}$
@@ -1040,137 +1066,151 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	\end{enumerate}
 \end{definition}
 
-\subsection{函数单调性 \&凹凸性 \&极值点 \&拐点}
+\subsection{函数单调性 \& 凹凸性 \& 极值点 \& 拐点}
 \begin{definition}[单调性]
-	1. 设函数$f(x)$在区间$I$上有定义,如果对任意$x_{1},x_{2}\in I,x_{1}<x_{2}$,均有$f(x_{1})<f(x_{2})$,则称函数$f(x)$在区间$I$上是单调递增的;如果对任意$x_{1},x_{2}\in I,x_{1}<x_{2}$,均有$f(x_{1})>f(x_{2})$,则称函数$f(x)$在区间$I$上是单调递减的.
+	1. 设函数 $f(x)$ 在区间 $I$ 上有定义, $\forall x_{1},x_{2}\in I,x_{1}<x_{2}$,均有$f(x_{1}) < f(x_{2})$,
+	则称函数 $f(x)$ 在区间 $I$ 上是严格单调递增的;
+	$\forall x_{1},x_{2}\in I,x_{1}<x_{2}$, 均有 $f(x_{1})>f(x_{2})$, 
+	则称函数 $f(x)$ 在区间 $I$ 上是严格单调递减的
 
-	2. 设函数$f(x)$在区间$I$上有定义,如果对任意$x_{1},x_{2}\in I,x_{1}<x_{2}$,均有$f(x_{1})\leq f(x_{2})$,则称函数$f(x)$在区间$I$上是单调不减的;如果对任意$x_{1},x_{2}\in I,x_{1}<x_{2}$,均有$f(x_{1})\geq f(x_{2})$,则称函数$f(x)$在区间$I$上是单调不增的.
+	2. 设函数 $f(x)$ 在区间 $I$ 上有定义, $\forall x_{1},x_{2}\in I,x_{1}<x_{2}$,均有 $f(x_{1})\leq f(x_{2})$,
+	则称函数 $f(x)$ 在区间 $I$ 上是单调不减的; $\forall x_{1},x_{2}\in I,x_{1}<x_{2}$,均有 $f(x_{1})\geq f(x_{2})$,
+	则称函数 $f(x)$ 在区间 $I$ 上是单调不增的
 \end{definition}
 
 \begin{definition}[凹凸性]
 	设函数$f(x)$在区间$I$上有定义
 	
-	1. 如果对任意$x_{1},x_{2}\in I,x_{1}<x_{2}$,均有$f(\dfrac{x_{1}+x_{2}}{2}) < \dfrac{f(x_{1})+f(x_{2})}{2}$,则称函数$f(x)$在区间$I$上是凹的
+	1. $\forall x_{1},x_{2}\in I,x_{1}<x_{2}$, 均有 $f(\dfrac{x_{1}+x_{2}}{2}) < \dfrac{f(x_{1})+f(x_{2})}{2}$, 则称函数 $f(x)$ 在区间 $I$ 上是凹的
 	
-	2. 如果对任意$x_{1},x_{2}\in I,x_{1}<x_{2}$,均有$f(\dfrac{x_{1}+x_{2}}{2}) > \dfrac{f(x_{1})+f(x_{2})}{2}$,则称函数$f(x)$在区间$I$上是凸的
+	2. $\forall x_{1},x_{2}\in I,x_{1}<x_{2}$, 均有 $f(\dfrac{x_{1}+x_{2}}{2}) > \dfrac{f(x_{1})+f(x_{2})}{2}$, 则称函数 $f(x)$ 在区间 $I$ 上是凸的
 
-	3. 如果对任意$x_{1},x_{2}\in I,x_{1}<x_{2}$,均有$f(\lambda_{1}x_{1} +\lambda_{2} x_{2}) >(<)\lambda_{1}f(x_{1}) +\lambda_{2}f(x_{2})(\lambda_{1}>0, \lambda_{2}>0, \lambda_{1}+\lambda_{2} = 1)$,则称函数$f(x)$在区间$I$上是凸(凹)的
+	3. $\forall x_{1},x_{2}\in I,x_{1}<x_{2}$, 均有 $f(\lambda_{1}x_{1} +\lambda_{2} x_{2}) >(<)\lambda_{1}f(x_{1}) +\lambda_{2}f(x_{2})(\lambda_{1}>0, \lambda_{2}>0, \lambda_{1}+\lambda_{2} = 1)$,
+	则称函数 $f(x)$ 在区间 $I$ 上是凸(凹)的
 \end{definition}
 
 \begin{definition}[极值点]
-	设函数$f(x)$在点$x_{0}$的某邻域$U(x_{0})$内有定义,如果对去心邻域内任意$x$,均有$f(x)<f(x_{0})(\text{或}f(x)>f(x_{0}))$,我们称$f(x_{0})$是函数$f(x)$的一个极小值(或极大值).
+	设函数 $f(x)$ 在点 $x_{0}$ 的某邻域 $U(x_{0})$ 内有定义, $\forall x\in \mathring{U}(x_{0})$, 
+	均有 $f(x) \leq (\geq)f(x_{0})$, 称 $f(x_{0})$ 是函数 $f(x)$ 的一个极(大)值
 \end{definition}
 \begin{definition}[驻点]
-	一阶导数为$0$的点称为驻点; 对于多元函数而言,驻点是一阶偏导数都为$0$的点.
+	一阶导数为 $0$ 的点称为驻点, 对于多元函数,驻点是一阶偏导数都为 $0$ 的点
 \end{definition}
 
 \begin{theorem}[极值点判别]
-	第一充分条件:
-	$$\begin{cases} f(x) \text{在} x_{0} \text{处连续, 且在} \mathring{U}(x_{0}) \text{内可导} \\
-		 x\in(x_{0}-\delta,x_{0}),f'(x) > 0; x\in(x_{0},x_{0}+\delta), f'(x) < 0, f(x) \text{在} x= x_{0}\text{取极大值}\\
-		 x\in(x_{0}-\delta,x_{0}),f'(x) < 0; x\in(x_{0},x_{0}+\delta), f'(x) > 0, f(x) \text{在} x= x_{0}\text{取极小值}\\
-		 x\in(x_{0}-\delta,x_{0})\cup(x_{0},x_{0}+\delta), f'(x)\text{不变号}, x = x_{0} \text{不是极值点}
-		\end{cases}$$
+	第一充分条件: $f(x)$ 在 $x_{0}$ 处连续, 且在 $\mathring{U}(x_{0})$ 内可导 
 
-	第二充分条件:
+	$$\begin{cases} 
+		x\in(x_{0}-\delta,x_{0}),f'(x) > 0; x\in(x_{0},x_{0}+\delta), f'(x) < 0 & f(x_{0}) = \max\limits_{x\in U(x_{0})}\{f(x)\}\\
+		x\in(x_{0}-\delta,x_{0}),f'(x) < 0; x\in(x_{0},x_{0}+\delta), f'(x) > 0 & f(x_{0}) = \min\limits_{x\in U(x_{0})}\{f(x)\}\\
+		x\in(x_{0}-\delta,x_{0})\cup(x_{0},x_{0}+\delta), f'(x)\leq (\geq) 0 
+	\end{cases}$$
+
+	第二充分条件: $f(x)$ 在 $x_{0}$ 处二阶可导, 且 $f'(x_{0}) = 0, f''(x_{0})\neq 0$
 	$$
-	\begin{cases} f(x) \text{在} x_{0} \text{处二阶可导, 且} f'(x_{0}) = 0, f''(x_{0})\neq 0\\
-	f''(x_{0}) > 0, f(x) \text{在} x= x_{0}\text{取极小值}\\
-	f''(x_{0}) < 0, f(x) \text{在} x= x_{0}\text{取极大值}
+	\begin{cases} 
+		f''(x_{0}) > 0 & f(x_{0}) = \min\limits_{x\in U(x_{0})}\{f(x)\}\\
+		f''(x_{0}) < 0 & f(x_{0}) = \max\limits_{x\in U(x_{0})}\{f(x)\}
 	\end{cases}
 	$$
 
-	第三充分条件:
+	第三充分条件: $f(x)$ 在 $x_{0}$ 处 $n$ 阶可导, 且 $f^{(m)}(x_{0}) = 0(m = 1,2,\cdots,n-1), f^{(n)}(x_{0}) \neq 0, n\in \{2k|k\in \mathbb{N}^{+}\}$
 	$$
-	\begin{cases} f(x) \text{在} x_{0} \text{处} n \text{阶可导, 且} f^{(m)}(x_{0}) = 0(m = 1,2,\cdots,n-1), f^{(n)}(x_{0}) \neq 0, n\in \{2k|k\in \mathbb{N}^{+}\}\\
-	f^{(n)}(x_{0}) > 0, f(x) \text{在} x= x_{0}\text{取极小值}\\
-	f^{(n)}(x_{0}) < 0, f(x) \text{在} x= x_{0}\text{取极大值}
+	\begin{cases} 
+		f^{(n)}(x_{0}) > 0 & f(x_{0}) = \min\limits_{x\in U(x_{0})}\{f(x)\}\\
+		f^{(n)}(x_{0}) < 0 & f(x_{0}) = \max\limits_{x\in U(x_{0})}\{f(x)\}\\
 	\end{cases}
 	$$
 \end{theorem}
 
 \begin{definition}[拐点]
-	连续函数$f(x)$在区间$I$上连续,$x_{0}$是区间的内点,当函数$f(x)$经过点$(x_{0},f(x_{0}))$时,函数的凹凸性发生改变,则称$(x_{0},f(x_{0}))$是函数$f(x)$的拐点.
+	连续函数 $f(x)$ 在区间 $I$ 上连续, $x_{0}$ 是区间的内点, 当函数 $f(x)$ 经过点 $(x_{0},f(x_{0}))$ 时,
+	函数的凹凸性发生改变, 称 $(x_{0},f(x_{0}))$ 是函数 $f(x)$ 的拐点
 \end{definition}
 
 \begin{theorem}[拐点判别]
-	第一充分条件:
-	$$
-	\begin{cases} f(x) \text{在} x_{0} \text{处连续, 且在} \mathring{U}(x_{0}) \text{内二阶可导}\\
-		x\in(x_{0}-\delta,x_{0}),f''(x)<(>)0; x\in(x_{0},x_{0}+\delta),f''(x)>(<)0\\
-		(x_{0},f(x_{0})) \text{是} f(x) \text{的拐点}
-	\end{cases}
-	$$
+	第一充分条件: $f(x)$ 在 $x_{0}$ 处连续, 且在 $\mathring{U}(x_{0})$ 内二阶可导
+	
+	$$\begin{cases}
+		x\in(x_{0}-\delta,x_{0}), f''(x)<(>)0\\
+		x\in(x_{0},x_{0}+\delta), f''(x)>(<)0
+	\end{cases}$$
 
-	第二充分条件:
-	$$
-	\begin{cases} f(x) \text{在} x_{0} \text{处三阶可导}\\
-		f''(x_{0}) = 0, f'''(x_{0})\neq 0\\
-		(x_{0},f(x_{0})) \text{是} f(x) \text{的拐点}
-	\end{cases}
-	$$
+	第二充分条件: $f(x)$ 在 $x_{0}$ 处三阶可导
+	$$\begin{cases}
+		f''(x_{0}) = 0\\
+		f'''(x_{0})\neq 0
+	\end{cases}$$
 
-	第三充分条件:
-	$$
-	\begin{cases} f(x) \text{在} x_{0} \text{处} n \text{阶可导}\\
-		f^{(m)}(x_{0}) = 0(m = 1,2,\cdots,n-1), f^{(n)}(x_{0}) \neq 0, n\in \{2k+1|k\in \mathbb{N}^{+}\}\\
-		(x_{0},f(x_{0})) \text{是} f(x) \text{的拐点}
-	\end{cases}
-	$$
+	第三充分条件: $f(x)$ 在 $x_{0}$ 处 $n$ 阶可导
+	$$\begin{cases}
+		f^{(m)}(x_{0}) = 0 & m = 1,2,\cdots,n-1\\
+		f^{(n)}(x_{0}) \neq 0 & n\in \{2k+1|k\in \mathbb{N}^{+}\}\\
+	\end{cases}$$
 	
 \end{theorem}
 \begin{theorem}[多项式函数极值点和拐点个数]
-	假设 $P_{n}(x)=\prod\limits_{i=1}^{k}(x-a_{i})^{p_{i}}$, 其中 $k_{1}$ 个 $p_{i}$ 为奇数(大于 $1$), $k_{2}$ 个 $p_{i}$ 为偶数, $k_{0}$ 个 $p_{i}=1$, 满足 $k_{0}+k_{1}+k_{2} = k$, 我们有:
-		\begin{itemize}
-			\item $P_{n}(x)$ 的极值点个数: $k-1+k_{2} = k_{0}+k_{1}+2k_{2}-1$
-			\item $P_{n}(x)$ 的拐点个数: $k+2k_{1}+k_{2}-2 = k_{0}+3k_{1}+2k_{2}-2$
-		\end{itemize}
-
-		具体证明过程见: $\mathbf{the: }$\ref{the: 代数基本定理}
+	假设 $P_{n}(x)=\prod\limits_{i=1}^{k}(x-a_{i})^{p_{i}}$, 
+	其中 $k_{1}$ 个 $p_{i}$ 为奇数(大于 $1$), $k_{2}$ 个 $p_{i}$ 为偶数, $k_{0}$ 个 $p_{i}=1$, 满足 $k_{0}+k_{1}+k_{2} = k$
+	
+	\begin{itemize}
+		\item $P_{n}(x)$ 的极值点个数: $k-1+k_{2} = k_{0}+k_{1}+2k_{2}-1$
+		\item $P_{n}(x)$ 的拐点个数: $k+2k_{1}+k_{2}-2 = k_{0}+3k_{1}+2k_{2}-2$
+	\end{itemize}
+	多项式函数极值点和拐点 $\mathbf{the: }$\ref{the: 代数基本定理}
 \end{theorem}
 \begin{anymark}[注]
 	\begin{itemize}
-		\item 驻点是导数为$0$的点,不一定是极值点
-		\item 极值点导数可能存在,也可能不存在;当导数存在时,$f'(x_{0})=0$
-		\item 拐点处二阶导数可能存在,也可能不存在;当二阶导数存在时,$f''(x_{0})=0$
+		\item 驻点是导数为 $0$ 的点, 不一定是极值点
+		\item 极值点导数可能存在,也可能不存在
+		\item 极值点导数存在时, 导数值为 $0$
+		\item 拐点处二阶导数可能存在,也可能不存在
+		\item 拐点二阶导数存在时, 二阶导数值为 $0$
 	\end{itemize}
 \end{anymark}
 \begin{definition}[曲率和曲率半径]
 
-	设$y(x)$二阶可导,则曲线 $y=y(x)$ 在其上点 $(x_{0},y(x_{0}))$ 处的曲率公式表示为:
+	设$y(x)$二阶可导,则曲线 $y=y(x)$ 在其上点 $(x_{0},y_{0})$ 处的曲率公式表示为:
 	$$k=\frac{|y''|}{[1+(y')^{2}]^{\frac{3}{2}}}$$
 
 	曲率半径:
 	$$R=\frac{1}{k}=\frac{[1+(y')^{2}]^{\frac{3}{2}}}{|y''|}$$
 \end{definition}
 \begin{anymark}[曲率半径推导]
-	我们不妨设曲线上的任意一点 $C(x_{0},f(x_{0}))$, 这点的曲率圆半径为 $R$, 我们可以知道这个圆是 $C$ 点和周围两个点 $A(x_{0}-\delta,f(x_{0}-\delta)),B(x_{0}+\delta,f(x_{0}+\delta))$ 的外接圆, 且 $A,B$ 无线靠近 $C$
+	不妨设曲线上的任意一点 $C(x_{0},f(x_{0}))$, 点 $C$ 的曲率圆半径为 $R$, 曲率圆是 $C$ 点和周围两个点 
+	$A(x_{0}-\delta,f(x_{0}-\delta)),B(x_{0}+\delta,f(x_{0}+\delta))$ 的外接圆, 且 $A,B$ 无线靠近 $C$
 
-	我们利用等面积法来求出这个外接圆半径 $R$, 首先我们利用正弦定理得到:
+	正弦定理:
 	$$\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = \dfrac{c}{\sin C} = 2R\Rightarrow S_{\Delta ABC} = \dfrac{abc}{R}$$
 
-	我们利用向量法求出 $\Delta ABC$ 的面积:
-	$$S_{\Delta ABC} = \dfrac{1}{2}|\mathbf{det}(\vec{a},\vec{b})| ,\begin{cases} \vec{a} = (\delta, f(x_{0})-f(x_{0}))\\ \vec{b} = (\delta,f(x_{0}+\delta)-f(x_{0})) \\ \vec{c}= (2\delta,f(x_{0}+\delta)-f(x_{0}-\delta))\end{cases} $$
+	$\Delta ABC$ 的面积:
 
-	我们得到:
-	$$\begin{cases} S = \dfrac{\sqrt{\delta^{2}+\left[f(x_{0})-f(x_{0}-\delta)\right]^{2}}\sqrt{\delta^{2}+\left[f(x_{0}+\delta)-f(x_{0})\right]^{2}}\sqrt{4\delta^{2}+\left[f(x_{0}+\delta)-f(x_{0}-\delta)\right]^{2}}}{4R} \\ S = |\delta\left[f(x_{0}+\delta)+f(x_{0}-\delta)-2f(x_{0})\right]|\end{cases}$$
+	$$S_{\Delta ABC} = \dfrac{1}{2}\big|\mathbf{det}(\boldsymbol{a},\boldsymbol{b})\big|$$
+	$$\begin{cases} 
+		\boldsymbol{a} = (\delta, f(x_{0})-f(x_{0})) \\ 
+		\boldsymbol{b} = (\delta,f(x_{0}+\delta)-f(x_{0})) \\ 
+		\boldsymbol{c} = (2\delta,f(x_{0}+\delta)-f(x_{0}-\delta))
+	\end{cases} $$
 
-	我们有:
-	$$ R = \lim\limits_{\delta\to 0}\dfrac{\sqrt{1+\left[\frac{f(x_{0}+\delta)-f(x_{0})}{\delta}\right]^{2}}\sqrt{1+\left[\frac{f(x_{0})-f(x_{0}-\delta)}{\delta}\right]^{2}}\sqrt{4+\left[\frac{f(x_{0}+\delta)-f(x_{0}-\delta)}{2\delta}\right]^{2}}}{|\dfrac{f(x_{0}+\delta)+f(x_{0}-\delta)-2f(x_{0})}{\delta^{2}}|}$$
+	
+	$$\begin{cases} 
+		S = \dfrac{\sqrt{\delta^{2}+\left[f(x_{0})-f(x_{0}-\delta)\right]^{2}}\sqrt{\delta^{2}+\left[f(x_{0}+\delta)-f(x_{0})\right]^{2}}\sqrt{4\delta^{2}+\left[f(x_{0}+\delta)-f(x_{0}-\delta)\right]^{2}}}{4R} \\ 
+		S = \big|\delta\left[f(x_{0}+\delta)+f(x_{0}-\delta)-2f(x_{0})\right]\big|
+	\end{cases}$$
 
-	我们得到: $R = \dfrac{\left[1 + [f'(x_{0})]^{2}\right]^{\frac{3}{2}}}{f''(x_{0})}$, $R$ 越大, 曲线越平坦, $R$ 越小, 曲线越陡峭.
+
+	$$ R = \lim\limits_{\delta\to 0}\dfrac{\sqrt{1+\left[\frac{f(x_{0}+\delta)-f(x_{0})}{\delta}\right]^{2}}\sqrt{1+\left[\frac{f(x_{0})-f(x_{0}-\delta)}{\delta}\right]^{2}}\sqrt{4+\left[\frac{f(x_{0}+\delta)-f(x_{0}-\delta)}{2\delta}\right]^{2}}}{\big|\dfrac{f(x_{0}+\delta)+f(x_{0}-\delta)-2f(x_{0})}{\delta^{2}}\big|}$$
+
+	$R = \dfrac{\left[1 + [f'(x_{0})]^{2}\right]^{\frac{3}{2}}}{f''(x_{0})}$, $R$ 越大, 曲线越平坦, $R$ 越小, 曲线越陡峭.
 \end{anymark}
 \subsection{物理应用}
 \begin{definition}[相关变化率]
 	$$y=y(x)
-		\left\lbrace
-		\begin{array}{l}
-			y=y(t) \\
-			x=x(t)
-		\end{array}
-		\right.
-		\Rightarrow
-		\dfrac{dy}{dx}=\dfrac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}} $$
+	\begin{cases}
+		y = y(t) \\
+		x = x(t)  
+	\end{cases} \Rightarrow
+	\dfrac{dy}{dx} = \dfrac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}}$$
 \end{definition}
 
 \chapterimage{chap5.jpg}
@@ -1223,8 +1263,8 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	极值点的定义:
 	$$\begin{cases}
-		f'_{-}(x_{0})=\lim\limits_{x\rightarrow x_{0}^{-}}\dfrac{f(x)-f(x_{0})}{x-x_{0}}\leq 0 \\
-		f'_{+}(x_{0})=\lim\limits_{x\rightarrow x_{0}^{+}}\dfrac{f(x_{0})-f(x)}{x_{0}-x}\geq 0
+		f'_{-}(x_{0})=\lim\limits_{x\to x_{0}^{-}}\dfrac{f(x)-f(x_{0})}{x-x_{0}}\leq 0 \\
+		f'_{+}(x_{0})=\lim\limits_{x\to x_{0}^{+}}\dfrac{f(x_{0})-f(x)}{x_{0}-x}\geq 0
 	\end{cases}$$
 
 	$f(x)$ 在 $x=x_{0}$ 处可导, $f'_{+}(x_{0})=f'_{-}(x_{0})=f(x_{0})=0$
@@ -1325,8 +1365,8 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	极限定义:
 	$$\begin{cases}
-		\lim\limits_{x\rightarrow a^{+}}\dfrac{f(x)-f(a)}{x-a}>0 \\
-		\lim\limits_{x\rightarrow b^{-}}\dfrac{f(x)-f(b)}{x-b}<0
+		\lim\limits_{x\to a^{+}}\dfrac{f(x)-f(a)}{x-a}>0 \\
+		\lim\limits_{x\to b^{-}}\dfrac{f(x)-f(b)}{x-b}<0
 	\end{cases}\Rightarrow
 	\begin{cases}
 		f(x)>f(a) \\
@@ -1469,7 +1509,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \myspace{1}
 
 \begin{proposition}
-	设 $f(x)$ 在 $[0,2]$ 上连续, 在 $(0,2)$ 内三阶可导,且 $\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)}{x}=2,f(1)=1,f(2)=6$, 证明: $\exists \xi\in(0,2),\ s.t.\ f^{(3)}(\xi)=9$
+	设 $f(x)$ 在 $[0,2]$ 上连续, 在 $(0,2)$ 内三阶可导,且 $\lim\limits_{x\to 0^{+}}\dfrac{f(x)}{x}=2,f(1)=1,f(2)=6$, 证明: $\exists \xi\in(0,2),\ s.t.\ f^{(3)}(\xi)=9$
 \end{proposition}
 \begin{solution}
 
@@ -1895,8 +1935,8 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	$f'_{+}(a)f'_{-}(b)>0$,不妨设 $f'_{+}(a)>0,f'_{-}(b)>0$:
 
 	$$\begin{cases}
-		f'_{+}(a)=\lim\limits_{x\rightarrow a^{+}}\dfrac{f(x)-f(a)}{x-a}>0 \\
-		f'_{-}(b)=\lim\limits_{x\rightarrow b^{-}}\dfrac{f(x)-f(b)}{x-b}>0
+		f'_{+}(a)=\lim\limits_{x\to a^{+}}\dfrac{f(x)-f(a)}{x-a}>0 \\
+		f'_{-}(b)=\lim\limits_{x\to b^{-}}\dfrac{f(x)-f(b)}{x-b}>0
 	\end{cases}\Rightarrow
 	\begin{cases}
 		x\in(a,a+\sigma_{1}),f(x)>f(a)=0 \\
@@ -2108,7 +2148,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \myspace{1}
 
 \begin{proposition}
-	设 $f(x)$ 二阶可导,$f(1)> 0,\lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)}{x}<0$,证明: $f(x)f''(x)+[f'(x)]^2=0$ 在 $(0,1)$ 内至少有两个根.
+	设 $f(x)$ 二阶可导,$f(1)> 0,\lim\limits_{x\to 0^{+}}\dfrac{f(x)}{x}<0$,证明: $f(x)f''(x)+[f'(x)]^2=0$ 在 $(0,1)$ 内至少有两个根.
 \end{proposition}
 \begin{solution}
 
@@ -2117,9 +2157,9 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	$$F'(x)=f(x)f''(x)+[f'(x)]^2$$
 
 	
-	$$ \lim\limits_{x\rightarrow 0^{+}}\dfrac{f(x)}{x}<0\to
+	$$ \lim\limits_{x\to 0^{+}}\dfrac{f(x)}{x}<0\to
 	\begin{cases}
-		f(0)=\lim\limits_{x\rightarrow 0^{+}}f(x)=0 \\
+		f(0)=\lim\limits_{x\to 0^{+}}f(x)=0 \\
 		\exists\xi>0,\ x\in(0,\xi),f(x)<0
 	\end{cases}
 	$$
@@ -2601,7 +2641,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \subsection{泰勒公式}
 
 \begin{proposition}
-	设 $f(x)$ 二阶连续可导,$f''(x)\neq 0$, 若 $f(x+h)=f(x)+ h f'(x+\theta h)(0<\theta<1)$,证明: $\lim\limits_{h\rightarrow 0 }\theta=\dfrac{1}{2}$
+	设 $f(x)$ 二阶连续可导,$f''(x)\neq 0$, 若 $f(x+h)=f(x)+ h f'(x+\theta h)(0<\theta<1)$,证明: $\lim\limits_{h\to 0 }\theta=\dfrac{1}{2}$
 \end{proposition}
 \begin{solution}
 
@@ -2614,16 +2654,16 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	拉格朗日中值定理:
 	$$\exists\eta \in(x,x+\theta h),\ s.t.\ f'(x+\theta h) - f'(x)=\theta hf''(\eta)\Rightarrow \theta=\dfrac{f''(\eta)}{2f''(\xi)}$$
 
-	$$\lim\limits_{h\rightarrow 0 }\theta=\lim\limits_{h\rightarrow 0 }\dfrac{f''(\eta)}{2f''(\xi)}=\dfrac{1}{2}$$
+	$$\lim\limits_{h\to 0 }\theta=\lim\limits_{h\to 0 }\dfrac{f''(\eta)}{2f''(\xi)}=\dfrac{1}{2}$$
 
-	综上所述: $\lim\limits_{h\rightarrow 0 }\theta=\dfrac{1}{2}$
+	综上所述: $\lim\limits_{h\to 0 }\theta=\dfrac{1}{2}$
 \end{solution}
 \myspace{1}
 
 \begin{proposition}
 	设 $f(x)$ 有 $n+1$ 阶导数,若 $f(a+h)=f(a)+f'(a)h+\dfrac{f''(a)}{2}h^2+\cdots+\dfrac{f^{(n)}(a+\theta h)}{n!}h^n(0<\theta<1)$,且 $f^{(n+1)}(a)\neq 0$
 
-	证明: $\lim\limits_{h\rightarrow 0 }\theta=\dfrac{1}{n+1}$
+	证明: $\lim\limits_{h\to 0 }\theta=\dfrac{1}{n+1}$
 \end{proposition}
 \begin{solution}
 
@@ -2639,14 +2679,14 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	$$\exists\eta\in(a\sim a+h),\ s.t.\ f^{(n)}(a+\theta h)-f^{(n)}(a)=\theta hf^{(n+1)}(\eta)\Rightarrow \theta=\dfrac{1}{n+1}\dfrac{f^{(n+1)}(\xi)}{f^{(n+1)}(\eta)}$$
 
-	$$\lim\limits_{h\rightarrow 0 }\theta=\lim\limits_{h\rightarrow 0 }\dfrac{1}{n+1}\dfrac{f^{(n+1)}(\xi)}{f^{(n+1)}(\eta)}=\dfrac{1}{n+1}$$
+	$$\lim\limits_{h\to 0 }\theta=\lim\limits_{h\to 0 }\dfrac{1}{n+1}\dfrac{f^{(n+1)}(\xi)}{f^{(n+1)}(\eta)}=\dfrac{1}{n+1}$$
 
 \end{solution}
 \myspace{1}
 
 \begin{proposition}
 	设 $f(x)$ 有 $n$ 阶连续导数,$f^{(k)}(x_{0})=0(k=2,3,\cdots,n-1),f^{(n)}(x_{0})\neq 0,f(x_{0}+h)=f(x_{0})+hf'(x_{0}+\theta h)$,
-	其中 $\theta\in(0,1)$,证明: $\lim\limits_{h\rightarrow 0 }\theta=\dfrac{1}{\sqrt[n-1]{n}}$
+	其中 $\theta\in(0,1)$,证明: $\lim\limits_{h\to 0 }\theta=\dfrac{1}{\sqrt[n-1]{n}}$
 \end{proposition}
 \begin{solution}
 
@@ -2669,9 +2709,9 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	$f^{(k)}(x_{0}) = 0(k=2,3,\cdots,n-1)$:
 	$$f'(x_{0}+\theta h) = f'(x_{0}) + \dfrac{f^{(n)}(\eta)}{(n-1)!}(\theta h)^{n-1}\Rightarrow \theta^{n-1} = \dfrac{f^{(n)}(\xi)}{nf^{(n)}(\eta)}$$
 
-	$$\theta^{n-1}=\dfrac{f^{(n)}\xi}{nf^{(n)}(\eta)}\Rightarrow \lim\limits_{h\rightarrow 0 }\theta^{n-1}=\dfrac{1}{n}$$
+	$$\theta^{n-1}=\dfrac{f^{(n)}\xi}{nf^{(n)}(\eta)}\Rightarrow \lim\limits_{h\to 0 }\theta^{n-1}=\dfrac{1}{n}$$
 
-	综上所述: $\lim\limits_{h\rightarrow 0 }\theta=\dfrac{1}{\sqrt[n-1]{n}}$
+	综上所述: $\lim\limits_{h\to 0 }\theta=\dfrac{1}{\sqrt[n-1]{n}}$
 \end{solution}
 \myspace{1}
 
@@ -2937,9 +2977,9 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 \subsection{广义罗尔定理}
 
 \begin{proposition}
-	1. $f(x)$ 在 $(a,b)$ 内可导,且 $\lim\limits_{x\rightarrow a^{+}}f(x)=\lim\limits_{x\rightarrow b^{-}}f(x)=A$,证明: $\exists \xi\in(a,b),\ s.t.\ f'(\xi)=0$
+	1. $f(x)$ 在 $(a,b)$ 内可导,且 $\lim\limits_{x\to a^{+}}f(x)=\lim\limits_{x\to b^{-}}f(x)=A$,证明: $\exists \xi\in(a,b),\ s.t.\ f'(\xi)=0$
 
-	2. $f(x)$ 在 $[0,+\infty)$ 内可导,且 $f(0)=\lim\limits_{x\rightarrow +\infty}f(x)=A$,证明: $\exists \xi\in(0,+\infty),\ s.t.\ f'(\xi)=0$
+	2. $f(x)$ 在 $[0,+\infty)$ 内可导,且 $f(0)=\lim\limits_{x\to +\infty}f(x)=A$,证明: $\exists \xi\in(0,+\infty),\ s.t.\ f'(\xi)=0$
 
 	3.$f(x)$ 在 $[0,+\infty)$ 内可导,且 $0\leq f(x)\leq \dfrac{x}{1+x^2}$,证明: $\exists \xi>0,\ s.t.\ f'(\xi)=\dfrac{1-\xi^2}{(1+\xi^2)^2}$
 
@@ -2983,11 +3023,11 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	
 	夹逼定理:
 	$$\begin{cases}
-		\lim\limits_{x\rightarrow +\infty}f(x)=0 \\
-		\lim\limits_{x\rightarrow 0}f(x)=0
+		\lim\limits_{x\to +\infty}f(x)=0 \\
+		\lim\limits_{x\to 0}f(x)=0
 	\end{cases}$$
 
-	$\lim\limits_{x\rightarrow 0 }g(x)=\lim\limits_{x\rightarrow  +\infty}g(x)=0$:
+	$\lim\limits_{x\to 0 }g(x)=\lim\limits_{x\to  +\infty}g(x)=0$:
 
 	$$\exists\xi\in(0,+\infty),\ s.t.\ g'(\xi)=0\Rightarrow f'(\xi)=\dfrac{1-\xi^2}{(1+\xi^2)^2}$$
 
@@ -2997,9 +3037,9 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	$$g'(x)=f'(x)+e^{-x},\ g(0)=0$$
 
 	夹逼定理: $0\leq |f(x)|\leq e^{-x}$
-	$$\lim\limits_{x\rightarrow +\infty}f(x)=0\Rightarrow \lim\limits_{x\rightarrow +\infty}g(x)=0$$
+	$$\lim\limits_{x\to +\infty}f(x)=0\Rightarrow \lim\limits_{x\to +\infty}g(x)=0$$
 
-	$\lim\limits_{x\rightarrow 0 }g(x)=\lim\limits_{x\rightarrow  +\infty}g(x)=0$:
+	$\lim\limits_{x\to 0 }g(x)=\lim\limits_{x\to  +\infty}g(x)=0$:
 	$$\exists\xi\in(0,+\infty),\ s.t.\ g'(\xi)=0\Rightarrow f'(\xi)+e^{-\xi}=0$$
 \end{solution}
 \myspace{1}
@@ -3708,7 +3748,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 	
 	(3).如果 $f(x)$ 是周期函数,$\int_{a}^{x}f(t)dt\text{是周期函数与}\int_{0}^{T}f(t)dt=0\text{等价}$
 	\begin{anymark}[证明]
-		我们令: $F(x)=\int_{a}^{x}f(t)dt$
+		令: $F(x)=\int_{a}^{x}f(t)dt$
 
 		(i). 必要性: $F(x+T)-F(x)=\int_{x}^{x+T}f(t)dt=\int_{0}^{T}f(t)dt=0$
 
@@ -3775,7 +3815,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	$$S=\dfrac{1}{2}\int_{\theta_{1}}^{\theta_{2}}\big|[r_{1}(\theta)]^{2}-[r_{2}(\theta)]^{2}\big|d\theta$$
 
-	$S$ 表示的是由 $\theta=\theta_{1},\theta=\theta_{2}$ 和 $r=r_{1}(\theta),r=r_{2}\theta$ 四条曲线围成的平面图形的面积.
+	$S$ 表示的是由 $\theta=\theta_{1},\theta=\theta_{2}$ 和 $r=r_{1}(\theta),r=r_{2}\theta$ 四条曲线围成的平面图形的面积
 
 	(iii).参数方程 
 	$\begin{cases}
@@ -3785,7 +3825,7 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	$$S=\int_{a}^{b}f(x)dx = \int_{\alpha}^{\beta}y(t)x'(t)dt$$
 
-	$S$ 表示的是由 $t=\alpha,t=\beta$ 和 $x=x(t),y=y(t)$ 四条曲线围成的平面图形的面积.
+	$S$ 表示的是由 $t=\alpha,t=\beta$ 和 $x=x(t),y=y(t)$ 四条曲线围成的平面图形的面积
 	
 \end{definition}
 \subsubsection{平面曲线弧长}
@@ -3818,11 +3858,12 @@ $$\ln y =\ln f(x)\Rightarrow \frac{y'}{y} = \frac{f'(x)}{f(x)}\qquad\qquad y = a
 
 	(iii). 绕任意直线 $L_{0}: Ax+By+C=0$ 旋转
 
-	$$\begin{cases} V=\pi\int_{l_{1}}^{l_{2}}r^{2}dl \\ 
+	$$\begin{cases} 
+		V=\pi\int_{l_{1}}^{l_{2}}r^{2}dl \\ 
 		r = \dfrac{|Ax+Bf(x)+C|}{\sqrt{A^{2}+B^{2}}}\\
-		dl = \dfrac{\vec{n}\cdot \vec{l}}{|\vec{l}|}\\
-		\vec{n} = (dx,dy)\\
-		\vec{l} = (B,-A)
+		dl = \dfrac{\boldsymbol{n}\cdot \boldsymbol{l}}{|\boldsymbol{l}|}\\
+		\boldsymbol{n} = (dx,dy)\\
+		\boldsymbol{l} = (B,-A)
 	\end{cases}\Rightarrow V = \dfrac{\pi}{(A^{2}+B^{2})^{\frac{3}{2}}}\int_{a}^{b} \left[Ax+Bf(x)+C\right]^{2}\big|Af'(x)-B\big|dx$$
 
 	(iv). 平面区域 $D$ 绕直线 $L_{0}: Ax+By+C=0$
