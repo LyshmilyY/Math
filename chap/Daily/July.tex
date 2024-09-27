@@ -3,8 +3,10 @@
 \section{Week \Rmnum{1}}
 \textcolor{orange}{July 1}
 
-1. 求极限 $\lim\limits_{x\to +\infty}\left[ \dfrac{\ln(x+\sqrt{x^2+1})}{\ln(x+\sqrt{x^2-1})}\right]^{x^2\ln x} $
-\myspace{1}
+\begin{example}[][Exam: 33.1.1]
+	$$\lim\limits_{x\to +\infty}\left[ \dfrac{\ln(x+\sqrt{x^2+1})}{\ln(x+\sqrt{x^2-1})}\right]^{x^2\ln x}$$
+\end{example}
+
 \begin{solution}
 	
 	原极限等价于: 
@@ -21,14 +23,15 @@
 	
 	原极限$I=e^{\dfrac{1}{2}}$
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)$在$[0,1]$导函数连续,且$\int_{0}^{1}x^2f'(x)dx=1$,证明: 
+\begin{example}[][Exam: 33.1.2]
+	设 $f(x)$ 在 $[0,1]$ 导函数连续, 且 $\int_{0}^{1}x^2f'(x)dx=1$, 证明: 
 
 (1). $\exists \xi\in(0,1),\ s.t. f'(\xi)=3$
 
-(2). 若$f(1)=\int_{0}^{1}f(x)dx=0$,则$\exists \eta\in(0,1), \ s.t. f'(\eta)=-\dfrac{6}{7}$
-\myspace{1}
+(2). $f(1)=\int_{0}^{1}f(x)dx = 0 \to \exists \eta\in(0,1), \ s.t.\ f'(\eta)=-\dfrac{6}{7}$
+\end{example}
+
 \begin{solution}
 	
 	(1).我们不妨设$g(x)=x^2$,我们有$x\in(0,1),g(x)>0$,我们根据第一积分中值定理得到: 
@@ -52,12 +55,14 @@
 	
 	当$k=3$时,我们有$h(x)=x^2-3x$,当$x\in(0,1)$,$h(x)<0$,满足第一积分中值定理使用条件,我们可以得到: $\exists \eta\in(0,1), \ s.t. f'(\eta)=-\dfrac{6}{7}$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{orange}{July 2}
 
-1. 设$f(x)$连续,$\lim\limits_{x\to 0}\dfrac{f(x)}{x}=1$,求极限$\lim\limits_{x\to 0 }\left[ 1+\int_{0}^{x}tf(x^2-t^2)dt\right]^{\frac{1}{(\tan x-x)\ln(1+x)}} $
-\myspace{1}
+\begin{example}[][Exam: 33.1.3]
+	设 $f(x)$ 连续, $\lim\limits_{x\to 0}\dfrac{f(x)}{x}=1$
+	$$\lim\limits_{x\to 0 }\left[ 1+\int_{0}^{x}tf(x^2-t^2)dt\right]^{\frac{1}{(\tan x-x)\ln(1+x)}}$$
+\end{example}
 \begin{solution}
 	
 	原极限等价于: 
@@ -68,10 +73,11 @@
 		&=&e^{\frac{3}{4}}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)$是$(-\infty,+\infty)$上连续的周期为$1$的周期函数且满足$0\leq f(x)\leq 1$与$\int_{0}^{1}f(x)dx=1$,证明: $x\in[0,13]$时,$\int_{0}^{\sqrt{x}}f(t)dt+\int_{0}^{\sqrt{x+27}}f(t)dt+\int_{0}^{\sqrt{13-x}}f(t)dt\leq 11$
-\myspace{1}
+\begin{example}[][Exam: 33.1.4]
+	设 $f(x)$ 是 $(-\infty,+\infty)$ 上连续的周期为 $1$ 的周期函数且满足 $0\leq f(x)\leq 1, \int_{0}^{1}f(x)dx=1$,证明:
+	$$x\in[0,13], \int_{0}^{\sqrt{x}}f(t)dt+\int_{0}^{\sqrt{x+27}}f(t)dt+\int_{0}^{\sqrt{13-x}}f(t)dt\leq 11$$
+\end{example}
 \begin{solution}
 	
 	我们由$0\leq f(x)\leq 1$得到: 
@@ -100,12 +106,15 @@
 	
 	综上所述,等号成立条件为$x=9$,原不等式成立.
 \end{solution}
-\myspace{1}
+
 
 \textcolor{orange}{July 3}
 
-1. 设$D=\{(x,y)|0\leq x\leq 2,0\leq y\leq 2\}$,$f(x,y)$在$D$上连续,$\iint\limits_{D}f(x,y)dxdy=0$,$\iint\limits_{D}xyf(x,y)dxdy=1$,证明: $\exists (\xi,\eta)\in D,\ s.t. |f'(\xi,\eta)|\geq \dfrac{2}{4\ln 2+3}$
-\myspace{1}
+\begin{example}[][Exam: 33.1.5]
+	设 $D=\{(x,y)|0\leq x\leq 2,0\leq y\leq 2\}$, $f(x,y)$ 在 $D$ 上连续, $\iint\limits_{D}f(x,y)dxdy=0, \iint\limits_{D}xyf(x,y)dxdy=1$,证明: 
+	$$\exists (\xi,\eta)\in D,\ s.t.\ \big|f'(\xi,\eta)\big|\geq \dfrac{2}{4\ln 2+3}$$
+\end{example}
+1. 
 \begin{solution}
 	
 	我们由: $\iint\limits_{D}f(x,y)dxdy=0$,$\iint\limits_{D}xyf(x,y)dxdy=1$得到: 
@@ -159,10 +168,11 @@
 	
 	综上所述,我们找到$k=1$使得上式成立,我们有: $\exists (\xi,\eta)\in D,\ s.t. |f'(\xi,\eta)|\geq \dfrac{2}{4\ln 2+3}$
 \end{solution}
-\myspace{1}
 
-2. 求极限: $\lim\limits_{x\to+\infty}(x^{\frac{1}{x}}-1)^{\frac{1}{\ln x}}$
-\myspace{1}
+\begin{example}[][Exam: 33.1.6]
+	$$\lim\limits_{x\to+\infty}(x^{\frac{1}{x}}-1)^{\frac{1}{\ln x}}$$
+\end{example}
+
 \begin{solution}
 	
 	原极限等价于: 
@@ -178,16 +188,18 @@
 		\end{itemize}
 	\end{anymark}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{orange}{July 4}
 
-1. 已知$a_{n}=\sum\limits_{k=1}^{n}\dfrac{1}{k^2}$,$b_{n}=\sum\limits_{k=1}^{n}\dfrac{1}{(2k-1)^2}$,且$\lim\limits_{n\to +\infty}a_{n}=\dfrac{\pi^2}{6}$
+\begin{example}[][Exam: 33.1.7]
+	已知 $a_{n}=\sum\limits_{k=1}^{n}\dfrac{1}{k^2}, b_{n}=\sum\limits_{k=1}^{n}\dfrac{1}{(2k-1)^2}$,
+	且 $\lim\limits_{n\to +\infty}a_{n}=\dfrac{\pi^2}{6}$
 
-(1). 证明: $a_{2n}=\dfrac{1}{4}a_{n}+b_{n},\ (n=1,2,\cdots)$
+(1). 证明: $a_{2n}=\dfrac{1}{4}a_{n}+b_{n}(n=1,2,\cdots)$
 
-(2). 求$\lim\limits_{n\to+\infty}n\left( \dfrac{b_{n}}{a_{n}}-\dfrac{3}{4}\right) $
-\myspace{1}
+(2). $\lim\limits_{n\to+\infty}n\left(\dfrac{b_{n}}{a_{n}}-\dfrac{3}{4}\right) $
+\end{example}
 \begin{solution}
 	
 	(1). 我们有: $$\dfrac{1}{4}a_{n}=\dfrac{1}{4}\sum\limits_{k=1}^{n}\dfrac{1}{k^2}=\sum\limits_{k=1}^{n}\dfrac{1}{(2k)^2}$$
@@ -216,10 +228,11 @@
 		\item $\sum\limits_{n=1}^{+\infty}\dfrac{1}{(2n)^2}=\dfrac{\pi^2}{24}$
 	\end{itemize}
 \end{anymark}
-\myspace{1}
 
-2. 若$\lim\limits_{x\to 0}\dfrac{\cos(xe^x)-e^{-\frac{x^2}{2}e^{2x}}}{x^{\alpha}}=\beta\neq0$,求$\alpha,\beta$
-\myspace{1}
+\begin{example}[][Exam: 33.1.8]
+	$\lim\limits_{x\to 0}\dfrac{\cos(xe^x)-e^{-\frac{x^2}{2}e^{2x}}}{x^{\alpha}} = \beta\neq0$, 求 $\alpha,\beta$
+\end{example}
+
 \begin{solution}
 	
 	原极限等价于: 
@@ -231,12 +244,14 @@
 	
 	我们得到: $\alpha=4,\ \beta=-\dfrac{1}{12}$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{orange}{July 5}
 
-1. 求$\int_{0}^{+\infty}\dfrac{\ln x}{x^2+a^2}dx\ (a>0)$
-\myspace{1}
+\begin{example}[][Exam: 33.1.9]
+	$$\int_{0}^{+\infty}\dfrac{\ln x}{x^2+a^2}dx(a>0)$$
+\end{example}
+
 \begin{solution}
 	
 	原积分等价于: 
@@ -257,10 +272,11 @@
 		\item 利用正切三角换元法
 	\end{itemize}
 \end{anymark}
-\myspace{1}
 
-2. 若$\lim\limits_{x\to 0}\dfrac{\cos 2x-\cos x\sqrt{\cos 2x}}{x^{\alpha}}=\beta\neq0$,求$\alpha,\beta$
-\myspace{1}
+\begin{example}[][Exam: 33.1.10]
+	$\lim\limits_{x\to 0}\dfrac{\cos 2x-\cos x\sqrt{\cos 2x}}{x^{\alpha}}=\beta\neq0$, 求 $\alpha,\beta$
+\end{example}
+
 \begin{solution}
 	
 	原极限等价于: 
@@ -274,12 +290,14 @@
 	
 	我们可以得到: $\alpha=2,\ \beta=-\dfrac{1}{2}$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{orange}{July 6}
 
-1. 设$f(x)=\dfrac{1}{1+3x+9x^2}$,求$f^{(100)}(0)$
-\myspace{1}
+\begin{example}[][Exam: 33.1.11]
+	设 $f(x)=\dfrac{1}{1+3x+9x^2}$, 求 $f^{(100)}(0)$
+\end{example}
+
 \begin{solution}
 	
 	我们可以得到: 
@@ -300,10 +318,11 @@
 	
 	我们得到: $a_{100}=-3^{100}\Rightarrow f^{(100)}(0)=-3^{100}100!$
 \end{solution}
-\myspace{1}
 
-2. 如果$\lim\limits_{x\to 0}\dfrac{ax^2+bx+1-e^{x^2-2x}}{x^2}=2$,求$a,b$
-\myspace{1}
+\begin{example}[][Exam: 33.1.12]
+	$\lim\limits_{x\to 0}\dfrac{ax^2+bx+1-e^{x^2-2x}}{x^2}=2$, 求 $a,b$
+\end{example}
+
 \begin{solution}
 	
 	原极限等价于: 
@@ -325,12 +344,14 @@
 	\end{array}
 	\right. $
 \end{solution}
-\myspace{1}
+
 
 \textcolor{orange}{July 7}
 
-1. 求极限$\lim\limits_{x\to 0}\dfrac{n!x^n-\sin x\sin 2x\cdots\sin nx}{x^{n+2}}$
-\myspace{1}
+\begin{example}[][Exam: 33.1.13]
+	$$\lim\limits_{x\to 0}\dfrac{n!x^n-\sin x\sin 2x\cdots\sin nx}{x^{n+2}}$$
+\end{example}
+
 \begin{solution}
 	
 	原极限等价于: 
@@ -345,10 +366,10 @@
 		&=&\dfrac{n(2n+1)(n+1)!}{36}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
-2. 若$\lim\limits_{x\to 0}\left(\dfrac{\ln(x+\sqrt{x^2+1})+ax^2+bx^3}{x} \right)^{\frac{1}{x^2}}=e^2$,求$a,b$
-\myspace{1}
+\begin{example}[][Exam: 33.1.14]
+	$\lim\limits_{x\to 0}\left(\dfrac{\ln(x+\sqrt{x^2+1})+ax^2+bx^3}{x} \right)^{\frac{1}{x^2}}=e^2$, 求 $a,b$
+\end{example}
 \begin{solution}
 	
 	原极限等价于: 
@@ -381,18 +402,21 @@
 	我们可以得到: $\ln(x+\sqrt{1+x^2})$的泰勒展开式: 
 	$$\ln(x+\sqrt{1+x^2})=x-\dfrac{1}{6}x^3+o(x^3)$$
 \end{anymark}
-\myspace{1}
+
 
 \section{Week \Rmnum{2}}
 
 \textcolor{blue}{July 8}
 
-1. 设$n$阶矩阵$A,B$满足$AB+aA+bB+cE=O$,其中$ab\neq c$,证明: 
+\begin{example}[][Exam: 33.2.1]
+	设 $n$ 阶矩阵 $A,B$ 满足 $AB+aA+bB+cE=O$, 其中 $ab\neq c$, 证明: 
 
-(1). $A+bE$与$B+aE$均为可逆矩阵 
+(1). $A+bE$ 与 $B+aE$ 均为可逆矩阵 
 
-(2).$AB=BA$
-\myspace{1}
+(2). $AB=BA$
+\end{example}
+1. 
+
 \begin{solution}
 	
 	(1). 我们由$AB+aA+bB+cE=O$可以得到: 
@@ -418,10 +442,11 @@
 	\end{array}
 	\right. \Rightarrow AB=BA$$
 \end{solution}
-\myspace{1}
 
-2. 已知常数$a>0,\ bc\neq 0$,使得$\lim\limits_{x\to+\infty}[x^a\ln(1+\frac{x}{b})-x]=c$,求$a,b,c$
-\myspace{1}
+\begin{example}[][Exam: 33.2.2]
+	已知常数 $a>0, bc\neq 0$, 且 $\lim\limits_{x\to+\infty}[x^a\ln(1+\frac{x}{b})-x]=c$, 求 $a,b,c$
+\end{example}
+
 \begin{solution}
 	
 	原极限等价于: 
@@ -445,13 +470,14 @@
 	\end{array}
 	\right. $
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{July 9}
 
-1. 求极限
-$$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\dfrac{\sin y}{y}dy+\int_{\frac{1}{3}}^{\frac{3}{6n}}\dfrac{\sin y}{y}dy+\cdots+\int_{\frac{1}{3}}^{\frac{(2n-1)}{6n}}\dfrac{\sin y}{y}dy \right]$$
-\myspace{1}
+\begin{example}[][Exam: 33.2.3]
+	$$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\dfrac{\sin y}{y}dy+\int_{\frac{1}{3}}^{\frac{3}{6n}}\dfrac{\sin y}{y}dy+\cdots+\int_{\frac{1}{3}}^{\frac{(2n-1)}{6n}}\dfrac{\sin y}{y}dy \right]$$
+\end{example}
+
 \begin{solution}
 	
 	原极限等价于: 
@@ -464,22 +490,25 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 		&=&3(\cos \frac{1}{3}-1)
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
-2. 设 $A$ 为 $n$ 阶反对称矩阵, 证明: 对于任意向量 $x$,均有 $x^{T}(A+E)x\geq 0$
-\myspace{1}
+\begin{example}[][Exam: 33.2.4]
+	设 $A$ 为 $n$ 阶反对称矩阵, 证明: 对于任意向量 $x$, 均有 $x^{T}(A+E)x\geq 0$
+\end{example}
+
 \begin{solution}
 	
 	我们有: $$x^{T}(A+E)x=[x^{T}(A+E)x]^T=x^{T}(A^{T}+E)x=x^{T}(-A+E)x$$
 	
 	$$x^{T}(A+E)x+x^{T}(A-E)x=2x^{T}Ax=0\Rightarrow x^{T}(A+E)x=x^{T}Ax+x^{T}Ex=x^{T}x\geq 0$$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{July 10}
 
-1. $s>0$,证明: $\dfrac{n^{s+1}}{s+1}<1^s+2^s+\cdots+n^s<\dfrac{(n+1)^{s+1}}{s+1}$
-\myspace{1}
+\begin{example}[][Exam: 33.2.5]
+	$$\dfrac{n^{s+1}}{s+1} < 1^s+2^s+\cdots+n^s < \dfrac{(n+1)^{s+1}}{s+1} (s > 0)$$
+\end{example}
+
 \begin{figure}[H]
 	\centering
 	\subfigure[定积分定义示意图$\alpha$]{
@@ -556,10 +585,11 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	如图$(b)$第二个不等式: 
 	$$\text{左边}=\sum\limits_{i=1}^{n}S_{i}<\int_{0}^{1}x^sdx=\dfrac{1}{s+1}=\text{右边}$$
 \end{solution}
-\myspace{1}
 
-2. 求极限$\lim\limits_{n\to +\infty}\dfrac{1^{p+1}+2^{p+1}+\cdots+n^{p+1}}{n(1^p+2^p+\cdots+n^p)}(p>0)$
-\myspace{1}
+\begin{example}[][Exam: 33.2.6]
+	$$\lim\limits_{n\to +\infty}\dfrac{1^{p+1}+2^{p+1}+\cdots+n^{p+1}}{n(1^p+2^p+\cdots+n^p)}(p>0)$$
+\end{example}
+
 \begin{solution}
 	
 	原极限等价于: 
@@ -571,16 +601,19 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 		&=&\dfrac{p+1}{p+2}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{July 11}
 
-1. 已知矩阵$A=\left[ \begin{matrix}
-	0&-1&1\\
-	2&-3&0\\
-	0&0&0
-\end{matrix}\right] $,求$A^{99}$
-\myspace{1}
+\begin{example}[][Exam: 33.2.7]
+	已知 $ A = 
+	\begin{bmatrix}
+		0 & -1 & 1\\
+		2 & -3 & 0\\
+		0 &  0 & 0
+	\end{bmatrix}$, 求 $A^{99}$
+\end{example}
+
 \begin{solution}
 	
 	我们将矩阵$A$相似对角化: 
@@ -647,10 +680,11 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 		\end{matrix}\right]
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
-2. 设$3$阶实对称矩阵$A$特征值为$\lambda_{1}=-1,\ \lambda_{2}=\lambda_{3}=1$,对应于$\lambda_{1}$的特征向量为$\xi_{1}=[0,1,1]^{T}$,求$A$.
-\myspace{1}
+\begin{example}[][Exam: 33.2.8]
+	设 $3$ 阶实对称矩阵 $A$ 特征值为 $\lambda_{1}=-1, \lambda_{2}=\lambda_{3}=1, \lambda_{1}$ 的特征向量为 $\xi_{1}=[0,1,1]^{T}$, 求 $A$
+\end{example}
+
 \begin{solution}
 	
 	我们不妨设特征值$\lambda_{2},\ \lambda_{3}$对应的特征向量为$x=(x_{1},x_{2},x_{3})^T$,我们由实对称矩阵不同特征值对应的特征向量相互正交得到: 
@@ -691,12 +725,14 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 		\end{matrix}\right]
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{July 12}
 
-1. 设$A$是任意的$m\times n$矩阵,证明: $\text{方程组}A^{T}Ax=A^{T}b$一定有解.
-\myspace{1}
+\begin{example}[][Exam: 33.2.9]
+	设 $A$ 是任意的 $m\times n$ 矩阵, 证明: 方程组 $A^{T}Ax=A^{T}b$ 一定有解
+\end{example}
+
 \begin{solution}
 	
 	我们知道非齐次方程组有解的充要条件为: $rank(A)=rank([A,b])$
@@ -718,18 +754,22 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	原方程组一定有解.
 \end{solution}
-\myspace{1}
 
-2. 设$A$为$3$阶实对称矩阵,$B=\left( \begin{matrix}
-	3&0&0\\0&1&1\\0&0&1
-\end{matrix}\right) $,$\alpha=(1,0,1)^{T}$是矩阵$A$特征值$3$的一个特征向量,若$r(3E-A)>1$,且$A^2-4E+3E=0$,下列选项错误的是: 
-\begin{itemize}
-	\item A. 矩阵$A$必可相似对角化
-	\item B. 矩阵$B$不可以相似对角化
-	\item \hl{C}. 矩阵方程$AX-XB=0$有可逆解
-	\item D. $r(3E-A)=2$
-\end{itemize}
-\myspace{1}
+\begin{example}[][Exam: 33.2.10]
+	设 $A$ 为 $3$ 阶实对称矩阵, $B = 
+	\begin{pmatrix}
+		3 & 0 & 0\\
+		0 & 1 & 1\\
+		0 & 0 & 1
+	\end{pmatrix}, \alpha=(1,0,1)^{T}$ 是矩阵 $A$ 特征值 $3$ 的一个特征向量, 若 $r(3E-A)>1$, 且 $A^2-4E+3E=0$, 下列选项错误的是: 
+	\begin{itemize}
+		\item A. 矩阵 $A$ 必可相似对角化
+		\item B. 矩阵 $B$ 不可以相似对角化
+		\item C. 矩阵方程 $AX-XB=0$ 有可逆解
+		\item D. $r(3E-A)=2$
+	\end{itemize}
+\end{example}
+
 \begin{solution}
 	
 	A. 我们由实对称矩阵必可相似对角化得到矩阵$A$一定可以相似对角化.
@@ -740,12 +780,14 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	D. 我们有: $A^2-4E+3E=0\Rightarrow (A-3E)(A-E)=0$,矩阵$A$的特征值有$\lambda_{1}=3,\lambda_{2}=1$,对应$r(3E-A)=1\text{或者}2$,又因为$r(3E-A)>1\Rightarrow r(3E-A)=2$.
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{July 13}
 
-1. 求$f(x)=\sqrt{4x^2+x}\ln(2+\dfrac{1}{x})$的斜渐近线.
-\myspace{1}
+\begin{example}[][Exam: 33.2.11]
+	求 $f(x)=\sqrt{4x^2+x}\ln(2+\dfrac{1}{x})$ 的斜渐近线
+\end{example}
+
 \begin{solution}
 	
 	我们不妨假设$f(x)$的斜渐近线为$y=ax+b$,我们得到: 
@@ -796,16 +838,17 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 		\right. $$
 	\end{anymark}
 \end{solution}
-\myspace{1}
 
-2. 当$x\to 0$时,下列无穷小量最高阶的是: 
+\begin{example}[][Exam: 33.2.12]
+	当 $x\to 0$ 时,下列无穷小量最高阶的是: 
 \begin{itemize}
 	\item A. $(1+x)^{x^2}-1$
 	\item B. $e^{x^4-2x}-1$
-	\item \hl{C}. $\int_{0}^{x^2}\sin t^2dt$
+	\item C. $\int_{0}^{x^2}\sin t^2dt$
 	\item D. $\sqrt{1+2x}-\sqrt[3]{1+3x}$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 	A. $e^{x^2\ln(1+x)}-1\sim x^2\ln(1+x)\sim x^3\Rightarrow \text{最高阶} 3\text{阶}$
@@ -816,12 +859,13 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	D. $\sqrt{1+2x}-\sqrt[3]{1+3x}=1+\dfrac{1}{2}2x-\dfrac{1}{8}(2x)^2-[1+\dfrac{1}{3}3x-\dfrac{1}{27}(3x^2)]\sim \dfrac{1}{12}x^2\Rightarrow \text{最高阶} 2\text{阶}$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{July 14}
 
-1. 求曲线$y=\sqrt{x^4-3x^3+4}$在$x\to +\infty$方向的渐进二次曲线.
-\myspace{1}
+\begin{example}[][Exam: 33.2.13]
+	求曲线 $y=\sqrt{x^4-3x^3+4}$ 在 $x\to +\infty$ 方向的渐进二次曲线
+\end{example}
 \begin{solution}
 	\begin{eqnarray*}
 		\text{当}x\to +\infty,\ f(x)&=&x^2\sqrt{1+\dfrac{4-3x^3}{x^4}}\\
@@ -831,12 +875,17 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	原函数的渐近二次曲线为: $y=x^2-\dfrac{3}{2}x-\dfrac{9}{8}$
 \end{solution}
-\myspace{1}
 
-2. 设$\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$是$n$个$n$维列向量,证明: $\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$线性无关的充要条件为: $$\left| \begin{matrix}
-	\alpha_{1}^{T}\alpha_{1}&\alpha_{1}^{T}\alpha_{2}&\cdots&\alpha_{1}^{T}\alpha_{n}\\\alpha_{2}^{T}\alpha_{1}&\alpha_{2}^{T}\alpha_{2}&\cdots&\alpha_{2}^{T}\alpha_{n}\\\vdots&\vdots& &\vdots\\\alpha_{n}^{T}\alpha_{1}&\alpha_{n}^{T}\alpha_{2}&\cdots&\alpha_{n}^{T}\alpha_{n}
-\end{matrix}\right|\neq 0$$
-\myspace{1}
+\begin{example}[][Exam: 33.2.14]
+	设 $\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$ 是 $n$ 个 $n$ 维列向量, 证明: $\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$ 线性无关的充要条件为: 
+	$$\begin{vmatrix}
+		\alpha_{1}^{T}\alpha_{1}&\alpha_{1}^{T}\alpha_{2}&\cdots&\alpha_{1}^{T}\alpha_{n}\\
+		\alpha_{2}^{T}\alpha_{1}&\alpha_{2}^{T}\alpha_{2}&\cdots&\alpha_{2}^{T}\alpha_{n}\\
+		\vdots&\vdots& &\vdots\\
+		\alpha_{n}^{T}\alpha_{1}&\alpha_{n}^{T}\alpha_{2}&\cdots&\alpha_{n}^{T}\alpha_{n}
+	\end{vmatrix}\neq 0$$
+\end{example}
+
 \begin{solution}
 	
 	我们不妨设$A=(\alpha_{1},\alpha_{2},\cdots,\alpha_{n})$,$A^{T}=\left( \begin{matrix}
@@ -850,20 +899,22 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	$\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$线性无关等价于$|A|\neq 0$,证毕！
 \end{solution}
-\myspace{1}
+
 
 \section{Week \Rmnum{3}}
 
 \textcolor{cyan}{July 15}
 
-1. 当$x\to 0^{+}$时,下列无穷小量中最高阶的是: 
+\begin{example}[][Exam: 33.3.1]
+	当 $x\to 0^{+}$ 时,下列无穷小量中最高阶的是: 
 \begin{itemize}
 	\item A. $\int_{0}^{1-\cos x}\dfrac{\sin t}{t}dt$
 	\item B. $\int_{0}^{x}t\tan \sqrt{x^2-t^2}dt$
 	\item C. $\int_{\sin x}^{1-\sqrt{\cos x}}e^{xt}\ln(1+t^3)dt$
-	\item \hl{D}. $\int_{\sin x}^{x}\sqrt{\sin^3 t}dt$
+	\item D. $\int_{\sin x}^{x}\sqrt{\sin^3 t}dt$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 	A. $\int_{0}^{1-\cos x}\dfrac{\sin t}{t}dt\sim \int_{0}^{\frac{1}{2}x^2}1dt\sim \dfrac{1}{2}x^2\Rightarrow \text{最高阶} 2\text{阶}$
@@ -885,10 +936,11 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	D. 由积分中值定理得到: 
 	$$\int_{\sin x}^{x}\sqrt{\sin^3 t}dt=(x-\sin x)\sin^{\frac{3}{2}}\xi\sim \dfrac{1}{6}x^{\frac{9}{2}},\ \xi\in(\sin x,x)\Rightarrow \text{最高阶} \dfrac{9}{2}\text{阶}$$
 \end{solution}
-\myspace{1}
 
-2. 求级数$\sum\limits_{n=1}^{+\infty}\dfrac{(-1)^n}{(2n-1)(2n+1)}$的和.
-\myspace{1}
+\begin{example}[][Exam: 33.3.2]
+	$$\sum\limits_{n=1}^{+\infty}\dfrac{(-1)^n}{(2n-1)(2n+1)}$$
+\end{example}
+
 \begin{solution}
 	
 	我们可以得到: $\sum\limits_{n=1}^{+\infty}\dfrac{(-1)^n}{(2n-1)(2n+1)}=\dfrac{1}{2}\sum\limits_{n=1}^{+\infty}\dfrac{(-1)^n}{2n-1}-\dfrac{1}{2}\sum\limits_{n=1}^{+\infty}\dfrac{(-1)^n}{2n+1}$
@@ -905,7 +957,7 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	\end{eqnarray*}
 	
 \end{solution}
-\myspace{1}
+
 \begin{theorem}[常用泰勒级数]
 	\begin{itemize}
 		\item $$e^{x}=1+x+\dfrac{x^2}{2!}+\cdots+\dfrac{x^n}{n!}+\cdots=\sum\limits_{n=0}^{+\infty}\dfrac{x^n}{n!},\ x\in \mathbb{R}$$
@@ -946,12 +998,14 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 		\item $$1+\dfrac{1}{2^2}+\dfrac{1}{3^2}+\cdots+\dfrac{1}{n^2}+\cdots=\sum\limits_{n=0}^{+\infty}\dfrac{1}{n^2}=\dfrac{\pi^2}{6}$$
 	\end{itemize}
 \end{proposition}
-\myspace{1}
+
 
 \textcolor{cyan}{July 16}
 
-1. 设$A=(a_{ij})_{3\times 3}$,$A$的每行元素之和为$a$,且$|A|=b$,将$A$中的每个元素加$k$得到矩阵$B=(a_{ij}+k)_{3\times 3}$,求$|B|$
-\myspace{1}
+\begin{example}[][Exam: 33.3.3]
+	设 $A=(a_{ij})_{3\times 3}$, $A$ 的每行元素之和为 $a$, 且 $\big|A\big|=b$, 将 $A$ 中的每个元素加 $k$ 得到矩阵 $B=(a_{ij}+k)_{3\times 3}$, 求 $\big|B\big|$
+\end{example}
+
 \begin{solution}
 	
 	我们不妨设: $A=\left[\begin{matrix}
@@ -970,10 +1024,10 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 		&=&\dfrac{(a+3k)b}{a}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
-2. 求$\sum\limits_{n=0}^{+\infty}\dfrac{(-1)^n(n^2-n+1)}{2^n}$的和.
-\myspace{1}
+\begin{example}[][Exam: 33.3.4]
+	$$\sum\limits_{n=0}^{+\infty}\dfrac{(-1)^n(n^2-n+1)}{2^n}$$
+\end{example}
 \begin{solution}
 	
 	我们有: $$\sum\limits_{n=0}^{+\infty}x^{n}=\dfrac{1}{1-x},\ x\in(-1,1)\Rightarrow \sum\limits_{n=0}^{+\infty}\dfrac{(-1)^n}{2^n}=\dfrac{2}{3}$$
@@ -999,12 +1053,14 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 		&=&\dfrac{22}{27}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{cyan}{July 17}
 
-1. 设$A$是$3$阶矩阵,且满足$|A-2E|=|A-3E|=|A-4E|=3$,求$|A-E|$
-\myspace{1}
+\begin{example}[][Exam: 33.3.5]
+	设 $A$ 是 $3$ 阶矩阵, 且满足 $\big|A-2E\big|=\big|A-3E\big|=\big|A-4E\big|=3$, 求 $\big|A-E\big|$
+\end{example} 
+
 \begin{solution}
 	
 	我们不妨设: $A=\left[\begin{matrix}
@@ -1018,16 +1074,18 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	我们可以得到: $f(x)=-(x-2)(x-3)(x-4)+3$,因此: $f(1)=9\Rightarrow |A-E|=9$
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)$连续,且$\lim\limits_{x\to 0^{+}}\dfrac{f(x)}{x}=1$,$\alpha(x)=\int_{0}^{\sqrt{x}}\dfrac{\ln(1+t^4)}{f(t)}dt$,$\beta(x)=\int_{0}^{\sin x}\dfrac{\sqrt{1+t^3}-1}{f(t)}dt$,则当$x\to 0^{+}$时,$\alpha(x)$是$\beta(x)$的: 
+\begin{example}[][Exam: 33.3.6]
+	设 $f(x)$ 连续, 且 $\lim\limits_{x\to 0^{+}}\dfrac{f(x)}{x}=1, \alpha(x)=\int_{0}^{\sqrt{x}}\dfrac{\ln(1+t^4)}{f(t)}dt$,
+	$\beta(x)=\int_{0}^{\sin x}\dfrac{\sqrt{1+t^3}-1}{f(t)}dt$, 则当 $x\to 0^{+}$时, $\alpha(x)$ 是 $\beta(x)$ 的: 
 \begin{itemize}
 	\item A. 等价无穷小
 	\item B. 同阶但非等价无穷小
 	\item C. 高阶无穷小
-	\item \hl{D}. 低阶无穷小
+	\item D. 低阶无穷小
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	\begin{eqnarray*}
 		\lim\limits_{x\to 0}\dfrac{\alpha(x)}{\beta(x)}&=&\lim\limits_{x\to 0}\dfrac{\int_{0}^{\sqrt{x}}\dfrac{\ln(1+t^4)}{f(t)}dt}{\int_{0}^{\sin x}\dfrac{\sqrt{1+t^3}-1}{f(t)}dt}\\
@@ -1038,12 +1096,14 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	$\alpha(x)$是$\beta(x)$的低阶无穷小.
 \end{solution}
-\myspace{1}
+
 
 \textcolor{cyan}{July 18}
 
-1. 证明: $\sum\limits_{n=1}^{+\infty}\dfrac{1+\frac{1}{2}+\cdots+\frac{1}{n}}{(n+1)(n+2)}$收敛,并求其和.
-\myspace{1}
+\begin{example}[][Exam: 33.3.7]
+	证明: $\sum\limits_{n=1}^{+\infty}\dfrac{1+\frac{1}{2}+\cdots+\frac{1}{n}}{(n+1)(n+2)}$ 收敛, 并求其和
+\end{example}
+
 \begin{solution}
 	
 	我们不妨设$a_{n}=1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}$,我们可以得到: 
@@ -1060,10 +1120,11 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	原级数收敛,其和$S=1$.
 \end{solution}
-\myspace{1}
 
-2. 当$x\to 0$时,$2\arctan x-\ln\dfrac{1+x}{1-x}$是$x$的$n$阶无穷小,求$n$.
-\myspace{1}
+\begin{example}[][Exam: 33.3.8]
+	当 $x\to 0$ 时, $2\arctan x-\ln\dfrac{1+x}{1-x}$ 是 $x$ 的 $n$ 阶无穷小, 求 $n$
+\end{example}
+
 \begin{solution}
 	
 	利用泰勒展开式将函数展开: 
@@ -1082,22 +1143,25 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	综上所述,我们可以得到: $n=3$.
 \end{solution}
-\myspace{1}
+
 
 \textcolor{cyan}{July 19}
 
-1. 关于函数$f(x,y)=\left\lbrace
-\begin{array}{l}
-	xy,\ xy\neq 0\\x,\ y=0\\y,\ x=0
-\end{array}
-\right. $,下列结论正确的是: 
+\begin{example}[][Exam: 33.3.9]
+	关于函数 $f(x,y)=
+	\begin{cases}
+		xy  & xy\neq 0\\
+		x   & y=0\\
+		y   & x=0
+	\end{cases}$, 下列结论正确的是: 
 \begin{itemize}
-	\item \hl{A}. $\dfrac{\partial f}{\partial x}|_{(0,0)}=1$
-	\item B. $\dfrac{\partial^2 f}{\partial x\partial y}|_{(0,0)}=1$
-	\item \hl{C}. $\lim\limits_{(x,y)\to (0,0)}f(x,y)=0$
-	\item \hl{D}. $\lim\limits_{x\to 0}\lim\limits_{y\to 0}f(x,y)=0$
+	\item A. $\dfrac{\partial f}{\partial x}\big|_{(0,0)}=1$
+	\item B. $\dfrac{\partial^2 f}{\partial x\partial y}\big|_{(0,0)}=1$
+	\item C. $\lim\limits_{(x,y)\to (0,0)}f(x,y)=0$
+	\item D. $\lim\limits_{x\to 0}\lim\limits_{y\to 0}f(x,y)=0$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 	$A$. $\dfrac{\partial f}{\partial x}|_{(0,0)}\lim\limits_{x\to 0 +\infty}\dfrac{f(x,0)-f(0,0)}{x}=1$
@@ -1116,10 +1180,11 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	\end{array}
 	\right.\Rightarrow  \lim\limits_{x\to 0}\lim\limits_{y\to 0}f(x,y)=0$
 \end{solution}
-\myspace{1}
 
-2. 求$\sum\limits_{n=0}^{+\infty}\dfrac{(2n)!!}{(2n+1)!!}\dfrac{x^{2n+2}}{n+1}$的和函数$S(x)$
-\myspace{1}
+\begin{example}[][Exam: 33.3.10]
+	求幂级数 $\sum\limits_{n=0}^{+\infty}\dfrac{(2n)!!}{(2n+1)!!}\dfrac{x^{2n+2}}{n+1}$ 和函数
+\end{example}
+
 \begin{solution}
 	
 	我们先求收敛区间: 
@@ -1160,12 +1225,14 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	综上所述,我们得到: $S(x)=(\arcsin x)^2,\ x\in[-1,1]$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{cyan}{July 20}
 
-1. 当$x\to 0^{+}$时,$(1+x)^{\frac{1}{x}}-(e+ax+bx^2)$是比$x^2$高阶的无穷小,求$a,b$
-\myspace{1}
+\begin{example}[][Exam: 33.3.11]
+	当 $x\to 0^{+}$ 时, $(1+x)^{\frac{1}{x}}-(e+ax+bx^2)$ 是比 $x^2$ 高阶的无穷小, 求 $a,b$
+\end{example}
+
 \begin{solution}
 	
 	我们利用泰勒展开得到: 
@@ -1183,10 +1250,11 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	综上所述,我们得到: $a=-\dfrac{e}{2},\ b=\dfrac{11e}{24}$
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)$二阶可导,$f(0)=0$,证明: $\exists \xi\in(-\frac{\pi}{2},\frac{\pi}{2}),\ s.t. f''(\xi)=3f'(\xi)\tan \xi+2f(\xi)$.
-\myspace{1}
+\begin{example}[][Exam: 33.3.12]
+	设 $f(x)$ 二阶可导, $f(0)=0$, 证明: 
+	$$\exists \xi\in(-\dfrac{\pi}{2},\dfrac{\pi}{2}),\ s.t.\ f''(\xi)=3f'(\xi)\tan \xi+2f(\xi)$$
+\end{example}
 \begin{solution}
 	
 	我们构造辅助函数: $F(x)=f(x)\cos^2 x$
@@ -1212,12 +1280,13 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	综上所述,我们得到: $\exists \xi\in(-\frac{\pi}{2},\frac{\pi}{2}),\ s.t. f''(\xi)=3f'(\xi)\tan \xi+2f(\xi)$.
 \end{solution}
-\myspace{1}
+
 
 \textcolor{cyan}{July 21}
 
-1. 设函数$f(x)=\dfrac{\sin x}{1+x^2}$在$x=0$处的$3$次泰勒多项式为$ax+bx^2+cx^3$,求$a,b,c$
-\myspace{1}
+\begin{example}[][Exam: 33.3.13]
+	设函数 $f(x)=\dfrac{\sin x}{1+x^2}$ 在 $x=0$ 处的 $3$ 次泰勒多项式为 $ax+bx^2+cx^3$, 求 $a,b,c$
+\end{example}
 \begin{solution}
 	
 	我们由泰勒展开式: $$\left\lbrace
@@ -1240,10 +1309,11 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	\end{array}
 	\right. $
 \end{solution}
-\myspace{1}
 
-2. 求极限$\lim\limits_{x\to 0}\dfrac{e^{(1+x)^{\frac{1}{x}}}-(1+x)^{\frac{e}{x}}}{x^2}$
-\myspace{1}
+\begin{example}[][Exam: 33.3.14]
+	$$\lim\limits_{x\to 0}\dfrac{e^{(1+x)^{\frac{1}{x}}}-(1+x)^{\frac{e}{x}}}{x^2}$$
+\end{example}
+
 \begin{solution}
 	
 	原极限等价于: 
@@ -1254,13 +1324,15 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 		&=&\dfrac{e^{e+1}}{8}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \section{Week \Rmnum{4}}
 \textcolor{purple}{July 22}
 
-1. 设函数$f(x)=\sec x$在$x=0$处的$2$次泰勒多项式为$1+ax+bx^2$,求$a,b$
-\myspace{1}
+\begin{example}[][Exam: 33.4.1]
+	设函数 $f(x)=\sec x$ 在 $x=0$ 处的 $2$ 次泰勒多项式为 $1+ax+bx^2$, 求 $a,b$
+\end{example}
+
 \begin{solution}
 	
 	我们有: $$\sec x=\sum\limits_{n=0}^{+\infty}\dfrac{(-1)^nE_{2n}}{(2n)!}x^{2n}=1+\dfrac{1}{2}x^2+\dfrac{5}{24}x^4+\dfrac{61}{720}x^6+\cdots,\ x\in(-\dfrac{\pi}{2},\dfrac{\pi}{2})$$
@@ -1271,10 +1343,12 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	\end{array}
 	\right. $
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)$在$[-1,1]$二阶导数连续,证明: $\exists \xi\in[-1,1],\ s.t. \int_{-1}^{1}xf(x)dx=\dfrac{2f'(\xi)+\xi f''(\xi)}{3}$
-\myspace{1}
+\begin{example}[][Exam: 33.4.2]
+	设 $f(x)$ 在 $[-1,1]$ 二阶导数连续,证明: 
+	$$\exists \xi\in[-1,1],\ s.t.\ \int_{-1}^{1}xf(x)dx=\dfrac{2f'(\xi)+\xi f''(\xi)}{3}$$
+\end{example}
+
 \begin{solution}
 	
 	我们构造辅助函数: $F(x)=\int_{0}^{x}tf(t)dt$,$F(0)=F'(0)=0$,我们有: $$\left\lbrace
@@ -1301,12 +1375,14 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	综上所述,我们得到: $\exists \xi\in[-1,1],\ s.t. \int_{-1}^{1}xf(x)dx=\dfrac{2f'(\xi)+\xi f''(\xi)}{3}$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purple}{July 23}
 
-1.函数$f(x)=\dfrac{(x+1)|x-1|}{e^{\frac{1}{x-2}}\ln|x|}$的可去间断点个数.
-\myspace{1}
+\begin{example}[][Exam: 33.4.3]
+	函数 $f(x)=\dfrac{(x+1)\big|x-1\big|}{e^{\frac{1}{x-2}}\ln|x|}$ 的可去间断点个数
+\end{example}
+
 \begin{solution}
 	
 	我们发现可能的间断点为$x=0,\ x=1,\ x=-1,\ x=2$
@@ -1337,16 +1413,17 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	综上所述,$f(x)$的可去间断点有两个,分别为$x=0,\ x=-1$
 \end{solution} 
-\myspace{1}
 
-2. 设$f(x)$和$\varphi(x)$在$(-\infty,+\infty)$内有定义,$f(x)$为连续函数,$\varphi(x)$有间断点,下列命题正确的是: 
+\begin{example}[][Exam: 33.4.4]
+	设 $f(x)$ 和 $\varphi(x)$ 在 $(-\infty,+\infty)$ 内有定义,$f(x)$ 为连续函数,$\varphi(x)$ 有间断点,下列命题正确的是: 
 \begin{itemize}
-	\item A. $f(x)[|\varphi(x)|+\varphi^2(x)]$必有间断点
-	\item \hl{B}. 若$f(x)$单调,则$\dfrac{\varphi(x)}{|f(x)|}$必有间断点
-	\item \hl{C}. $\dfrac{\varphi(x)}{1+f^2(x)}$必有间断点
-	\item D. $f(x)\varphi(x)$必有间断点
+	\item A. $f(x)[|\varphi(x)|+\varphi^2(x)]$ 必有间断点
+	\item B. 若 $f(x)$ 单调,则 $\dfrac{\varphi(x)}{|f(x)|}$ 必有间断点
+	\item C. $\dfrac{\varphi(x)}{1+f^2(x)}$ 必有间断点
+	\item D. $f(x)\varphi(x)$ 必有间断点
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 	我们知道: 
@@ -1359,12 +1436,17 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	对于$C$选项,我们同理假设$\dfrac{\varphi(x)}{1+f^2(x)}$连续,我们知道$1+f^{2}(x)$连续,我们得到: $\varphi(x)$连续,矛盾！！！
 	
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purple}{July 24}
 
-1. 设$\lambda_{1},\lambda_{2},\cdots,\lambda_{m}$是$n$阶矩阵$A$的$m$个两两互异的特征值$(m\leq n)$,对应的特征向量分别为$\xi_{1},\xi_{2},\cdots,\xi_{m}$,令$\eta=\sum\limits_{k=1}^{m}\xi_{k}$,证明: $$\eta,A\eta,A^2\eta,\cdots,A^{m-1}\eta\text{线性无关}$$
-\myspace{1}
+\begin{example}[][Exam: 33.4.5]
+	设 $\lambda_{1},\lambda_{2},\cdots,\lambda_{m}$ 是 $n$ 阶矩阵 $A$ 的 $m$ 个两两互异的特征值 $(m\leq n)$,
+	对应的特征向量分别为 $\xi_{1},\xi_{2},\cdots,\xi_{m}$, 令 $\eta=\sum\limits_{k=1}^{m}\xi_{k}$
+
+	证明: $\eta,A\eta,A^2\eta,\cdots,A^{m-1}\eta $ 线性无关
+\end{example}
+
 \begin{solution}
 	
 	我们由: 
@@ -1398,16 +1480,17 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	我们有$\lambda_{1},\lambda_{2},\cdots,\lambda_{m}$两两互异,我们得到$|B|\neq 0$,$B$为可逆矩阵,我们得到: $r(C)=r(D)$,$D=[\xi_{1},\xi_{2},\cdots,\xi_{m}]$线性无关,因此我们得到: 
 	$$\eta,A\eta,A^2\eta,\cdots,A^{m-1}\eta\text{线性无关}$$
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)=\lim\limits_{n\to+\infty}\dfrac{x^{n+2}}{\sqrt{2^{2n}+x^{2n}}}$,则$f(x)$在其定义域内: 
+\begin{example}[][Exam: 33.4.6]
+	设 $f(x)=\lim\limits_{n\to+\infty}\dfrac{x^{n+2}}{\sqrt{2^{2n}+x^{2n}}}$, $f(x)$ 在其定义域内: 
 \begin{itemize}
 	\item A. 连续
-	\item B. 有$1$个可去间断点
-	\item \hl{C}. 有$1$个跳跃间断点
-	\item D. 有$1$个第二类间断点
+	\item B. 有 $1$ 个可去间断点
+	\item C. 有 $1$ 个跳跃间断点
+	\item D. 有 $1$ 个第二类间断点
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 	我们首先得到: 
@@ -1419,12 +1502,14 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	$f(x)$在$(-\infty,-2]$上没有定义,在$(-2,+\infty)$上有且仅有一个间断点$x=2$,且为跳跃间断点.
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purple}{July 25}
 
-1. 求积分$\int_{0}^{1}dx\int_{0}^{\sqrt{x}}(\dfrac{e^x}{x}-\dfrac{e^{y^2}}{\sqrt{x}})dy$
-\myspace{1}
+\begin{example}[][Exam: 33.4.7]
+	$$\int_{0}^{1}dx\int_{0}^{\sqrt{x}}(\dfrac{e^x}{x}-\dfrac{e^{y^2}}{\sqrt{x}})dy$$
+\end{example}
+
 \begin{solution}
 	
 	原二重积分等价于: 
@@ -1435,16 +1520,17 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 		&=&e-1
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)=\lim\limits_{n\to +\infty}\dfrac{x^{n+2}-x^{-n}}{x^n+x^{-n}}$,则函数$f(x)$: 
+\begin{example}[][Exam: 33.4.8]
+	设 $f(x)=\lim\limits_{n\to +\infty}\dfrac{x^{n+2}-x^{-n}}{x^n+x^{-n}}$, 函数$f(x)$: 
 \begin{itemize}
-	\item A. 仅有$1$个间断点
-	\item B. 仅有$2$个间断点,其中$1$个可去,$1$个无穷
-	\item C. 仅有$2$个间断点,$2$个都是跳跃
-	\item \hl{D}. 有$2$个跳跃间断点和$1$个可去间断点
+	\item A. 仅有 $1$ 个间断点
+	\item B. 仅有 $2$ 个间断点,其中 $1$ 个可去间断点, $1$ 个无穷间断点
+	\item C. 仅有 $2$ 个间断点, $2$ 个都是跳跃间断点
+	\item D. 有 $2$ 个跳跃间断点和 $1$ 个可去间断点
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 	我们可以知道: 
@@ -1458,12 +1544,14 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	我们知道$f(x)$有$3$个间断点,其中$x=0$是可去间断点;$x=1$和$x=-1$是两个跳跃间断点.
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purple}{July 26}
 
-1. $\int_{0}^{1}\dfrac{x^b-x^a}{\ln x}dx$
-\myspace{1}
+\begin{example}[][Exam: 33.4.9]
+	$$\int_{0}^{1}\dfrac{x^b-x^a}{\ln x}dx$$
+\end{example}
+
 \begin{solution}
 	
 	原积分等价于: 
@@ -1475,10 +1563,11 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 		&=&\ln|\dfrac{b+1}{a+1}|
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
-2. $\int_{0}^{1}\sin (\ln\dfrac{1}{x})\dfrac{x^b-x^a}{\ln x}dx$
-\myspace{1}
+\begin{example}[][Exam: 33.4.10]
+	$$\int_{0}^{1}\sin (\ln\dfrac{1}{x})\dfrac{x^b-x^a}{\ln x}dx$$
+\end{example}
+
 \begin{solution}
 	
 	原积分等价于: 
@@ -1495,12 +1584,14 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 		&=&\arctan(b+1)-\arctan(a+1)
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purple}{July 27}
 
-1. 设$f(x)$在$x=1$处连续,且$\dfrac{f(x)-2x}{e^{x-1}-1}-\dfrac{1}{\ln x}$在$x=1$的某去心邻域有界,求$f(1)$
-\myspace{1}
+\begin{example}[][Exam: 33.4.11]
+	设 $f(x)$ 在 $x=1$ 处连续, 且 $\dfrac{f(x)-2x}{e^{x-1}-1}-\dfrac{1}{\ln x}$ 在 $x=1$ 的某去心邻域有界, 求 $f(1)$
+\end{example}
+
 \begin{solution}
 	
 	我们由题意可得: 
@@ -1517,10 +1608,13 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	综上所述,$f(1)=3$.
 \end{solution}
-\myspace{1}
 
-2. 设$\alpha, \beta$均为$3$维单位列向量,$\alpha^{T}\beta=\dfrac{1}{2}$,$A=\alpha\beta^{T}+\beta\alpha^{T}$,求二次型$x^{T}Ax$在正交变换下的标准型.
-\myspace{1}
+\begin{example}[][Exam: 33.4.12]
+	设 $\alpha, \beta$ 均为 $3$ 维单位列向量,
+	$\alpha^{T}\beta=\dfrac{1}{2}, A=\alpha\beta^{T}+\beta\alpha^{T}$,
+	求二次型 $x^{T}Ax$ 在正交变换下的标准型
+\end{example}
+
 \begin{solution}
 	
 	我们由: $\alpha^{T}\beta=\dfrac{1}{2}$,$A=\alpha\beta^{T}+\beta\alpha^{T}$可以得到: 
@@ -1546,10 +1640,10 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	综上所述,二次型$f=x^{T}Ax$的标准型为$f=\dfrac{3}{2}y_{1}^2-\dfrac{1}{2}y_{2}^{2}$.
 \end{solution}
-\myspace{1}
+
 \begin{anymark}[变式]
 	$A=\alpha\beta^{T}$,求二次型$f=x^{T}Ax$在正交变换下的标准型.
-	\myspace{1}
+	
 	\begin{solution}
 		
 		我们首先要求出二次型对应的矩阵$B$,我们有: $f^{T}=f\Rightarrow x^{T}A^{T}x=B^{T}$
@@ -1583,8 +1677,10 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 
 \textcolor{purple}{July 28}
 
-1. 已知函数$f(x)=\dfrac{(x^2+a^2)(x-1)}{e^{\frac{1}{x}}+b}$在$(-\infty,+\infty)$上有一个可去间断点和一个跳跃间断点,求$a,b$
-\myspace{1}
+\begin{example}[][Exam: 33.4.13]
+	已知函数 $f(x)=\dfrac{(x^2+a^2)(x-1)}{e^{\frac{1}{x}}+b}$ 在 $(-\infty,+\infty)$ 上有一个可去间断点和一个跳跃间断点, 求 $a,b$
+\end{example}
+
 \begin{solution}
 	
 	我们发现$f(x)$的间断点为$x=0$和$x=\dfrac{1}{\ln(-b)}$,我们有: 
@@ -1605,10 +1701,11 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	综上所述,$a\neq 0,\ b=-e$
 \end{solution}
-\myspace{1}
 
-2. 求不定积分$\int\dfrac{x^2(\sqrt{1+x^2}-x)}{\sqrt{1+x^2}(\sqrt{1+x^2}+1)}e^{x}dx$
-\myspace{1}
+\begin{example}[][Exam: 33.4.14]
+	$$\int\dfrac{x^2(\sqrt{1+x^2}-x)}{\sqrt{1+x^2}(\sqrt{1+x^2}+1)}e^{x}dx$$
+\end{example}
+
 \begin{solution}
 	
 	原不定积分等价于: 
@@ -1620,17 +1717,18 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 		&=&e^x(\sqrt{x^2+1}-x)+C
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purple}{July 29}
 
-1. 函数$f(x)=\left\lbrace
-\begin{array}{l}
-	\dfrac{e^x-1}{x},\ x\neq 0\\
-	1,\ x=0
-\end{array}
-\right. $,判断$x=0$处连续性、可导性以及极值情况.
-\myspace{1}
+\begin{example}[][Exam: 33.4.15]
+	函数 $f(x)=
+	\begin{cases}
+		\dfrac{e^x-1}{x} & x\neq 0\\
+		1 & x=0
+	\end{cases}$, 判断 $x=0$ 处连续性、可导性以及极值情况
+\end{example}
+
 \begin{solution}
 	
 	首先判断连续性: $$\lim\limits_{x\to 0^{+}}f(x)=\lim\limits_{x\to 0^{-}}f(x)=1=f(0)\Rightarrow f(x)\text{在}x=0\text{处连续}$$
@@ -1647,10 +1745,11 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	我们得到$f(x)$在$x=0$处连续可导,且导函数连续.
 \end{solution}
-\myspace{1}
 
-2. $A=(a_{ij})_{3\times 3}$是实对称矩阵,$A$的每行元素之和为$0$,设$2,3$是$A$的非零特征值,求$a_{11}$对应的代数余子式.
-\myspace{1}
+\begin{example}[][Exam: 33.4.16]
+	$A=(a_{ij})_{3\times 3}$ 是实对称矩阵, $A$ 的每行元素之和为 $0$, 设 $2,3$ 是 $A$ 的非零特征值, 求 $a_{11}$ 对应的代数余子式
+\end{example}
+
 \begin{solution}
 	
 	我们可以知道矩阵$A$的三个特征值分别为$0,2,3$,其中特征值$0$对应的特征向量为$\xi_{1}=\left( \begin{matrix}
@@ -1667,18 +1766,20 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 
 综上所述: $a_{11}$对应的代数余子式$A_{11}=A^{*}_{11}=2$.
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purple}{July 30}
 
-1. 下列函数在$x=0$处不可导的是: 
+\begin{example}[][Exam: 33.4.17]
+	下列函数在 $x=0$ 处不可导的是: 
 \begin{itemize}
 	\item A. $\int_{0}^{x}(|t|+t)dt$
 	\item B. $|x|[x+\int_{0}^{|x|}e^{t^2}dt]$
 	\item C. $|\tan x-\sin x|$
-	\item \hl{D}. $\sin|x|+\cos |x|$
+	\item D. $\sin|x|+\cos |x|$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 	
 	$A.\ f(x)=\left\lbrace
@@ -1709,10 +1810,12 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	\end{array}
 	\right. f(x)\text{在}x=0\text{处不可导}$
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)$在$[a,b]$连续,在$(a,b)$内可导,证明: $$\text{存在互不相同的}\xi_{1},\xi_{2},\cdots,\xi_{n}\in(a,b),\ s.t. \ f'(\xi_{1})f'(\xi_{2})\cdots f'(\xi_{n})=\left[ \dfrac{f(b)-f(a)}{b-a}\right]^{n}$$
-\myspace{1}
+\begin{example}[][Exam: 33.4.18]
+	设 $f(x)$ 在 $[a,b]$ 上连续, 在 $(a,b)$ 内可导, 证明: 
+	$$\exists \xi_{1},\xi_{2},\cdots,\xi_{n}\in(a,b)(\xi_{1} < \xi_{2} < \cdots < \xi_{n}),
+	\ s.t. \ f'(\xi_{1})f'(\xi_{2})\cdots f'(\xi_{n})=\left[ \dfrac{f(b)-f(a)}{b-a}\right]^{n}$$
+\end{example}
 \begin{solution}
 	
 	我们构造辅助函数$F(x)=\left[ f(x)-f(a)\right]^n,\ G(x)=\left[ x-a\right]^n $,我们有$F(a)=G(a)=0$
@@ -1736,12 +1839,15 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	综上所述,我们得到: 
 	$$\text{存在互不相同的}\xi_{1},\xi_{2},\cdots,\xi_{n}\in(a,b),\ s.t. \ f'(\xi_{1})f'(\xi_{2})\cdots f'(\xi_{n})=\left[ \dfrac{f(b)-f(a)}{b-a}\right]^{n}$$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purple}{July 31}
 
-1. 已知$f(x)$在$x=0$的某邻域内有定义,且$\lim\limits_{x\to 0}\varphi(x)=0$,则$\lim\limits_{x\to 0}\dfrac{f[\varphi(x)]-f(0)}{\varphi(x)}$存在和$f(x)$在$x=0$处可导之间关系
-\myspace{1}
+\begin{example}[][Exam: 33.4.19]
+	已知 $f(x)$ 在 $x=0$ 的某邻域内有定义, 且 $\lim\limits_{x\to 0}\varphi(x)=0$,
+	$\lim\limits_{x\to 0}\dfrac{f[\varphi(x)]-f(0)}{\varphi(x)}$ 存在和 $f(x)$ 在 $x=0$ 处可导之间关系
+\end{example}
+1. 
 \begin{solution}
 	
 	(1). 必要性
@@ -1760,10 +1866,11 @@ $$\lim\limits_{n\to +\infty}\dfrac{1}{n}\left[\int_{\frac{1}{3}}^{\frac{1}{6n}}\
 	
 	综上所述,$\lim\limits_{x\to 0}\dfrac{f[\varphi(x)]-f(0)}{\varphi(x)}$存在是$f(x)$在$x=0$处可导的既不充分也不必要条件.
 \end{solution}
-\myspace{1}
 
-2. 设存在连续函数$f(x)$满足$f(x)=1+\lambda\int_{x}^{1}f(y)f(y-x)dy$,证明: $\lambda\leq \dfrac{1}{2}$
-\myspace{1}
+\begin{example}[][Exam: 33.4.20]
+	设存在连续函数 $f(x)$ 满足 $f(x)=1+\lambda\int_{x}^{1}f(y)f(y-x)dy$, 证明: $\lambda\leq \dfrac{1}{2}$
+\end{example}
+
 \begin{solution}
 	
 	我们对等式两边分别在区间$[0,1]$上取定积分得到: 

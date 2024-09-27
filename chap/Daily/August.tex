@@ -4,8 +4,10 @@
 \section{Week \Rmnum{1}}
 \textcolor{orange}{August 1}
 
-1. 已知$f(x)$为奇函数,则$f_{+}'(0)$存在和$f(x)$在$x=0$处可导关系
-\myspace{1}
+\begin{example}[][Exam: 34.1.1]
+	已知 $f(x)$ 为奇函数, $f_{+}'(0)$ 存在和 $f(x)$ 在 $x=0$处可导关系
+\end{example}
+
 \begin{solution}
 	
 	(1). 充分性
@@ -27,10 +29,11 @@
 	
 	综上所述,$f_{+}'(0)$存在是$f(x)$在$x=0$处可导的充要条件.
 \end{solution} 
-\myspace{1}
 
-2. 求$\int_{0}^{1}dx\int_{1-x}^{2-x}e^{(x+y)^2}(\sin^2x+\cos^2y)dy+\int_{1}^{2}dx\int_{0}^{2-x}e^{(x+y)^2}(\sin^2x+\cos^2y)dy$
-\myspace{1}
+\begin{example}[][Exam: 34.1.2]
+	$$\int_{0}^{1}dx\int_{1-x}^{2-x}e^{(x+y)^2}(\sin^2x+\cos^2y)dy+\int_{1}^{2}dx\int_{0}^{2-x}e^{(x+y)^2}(\sin^2x+\cos^2y)dy$$
+\end{example}
+
 \begin{solution}
 	
 	我们画出二重积分的积分区域,不难发现积分区域关于直线$y=x$对称,原二重积分等价于: 
@@ -46,12 +49,14 @@
 		&=&\dfrac{e^4-4}{2}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{orange}{August 2}
 
-1. 已知函数$f(x)$在$x=x_{0}$的邻域内可导,则$f'(x_{0})>0$是$f(x)$在$x=x_{0}$的某邻域内单调递增之间关系
-\myspace{1}
+\begin{example}[][Exam: 34.1.3]
+	已知函数 $f(x)$ 在 $x=x_{0}$ 的某邻域内可导, $f'(x_{0})>0$ 与 $f(x)$ 在 $x=x_{0}$ 的某邻域内单调递增关系
+\end{example}
+
 \begin{solution}
 	
 	(1). 充分性
@@ -65,10 +70,10 @@
 	
 	综上所述,$f'(x_{0})>0$是$f(x)$在$x=x_{0}$的某邻域内单调递增的既不充分也不必要条件.
 \end{solution}
-\myspace{1}
 
-2. $I_{n}=\int_{1}^{+\infty}\dfrac{\sqrt{t-1}}{t^n}dt\ (n\geq 2)$,求$\lim\limits_{n\to+\infty}\dfrac{I_{n+1}}{I_{n}}$
-\myspace{1}
+\begin{example}[][Exam: 34.1.4]
+	$I_{n}=\int_{1}^{+\infty}\dfrac{\sqrt{t-1}}{t^n}dt\ (n\geq 2)$, 求 $\lim\limits_{n\to+\infty}\dfrac{I_{n+1}}{I_{n}}$
+\end{example}
 \begin{solution}
 	
 	我们令$t=\dfrac{1}{\cos^2 x},\ x\in(0,\dfrac{\pi}{2}),\ dt=\dfrac{2\sin x}{\cos^3 x}$,我们可以得到: 
@@ -102,18 +107,20 @@
 	
 	$$\lim\limits_{n\to+\infty}\dfrac{I_{n+1}}{I_{n}}=\lim\limits_{n\to+\infty}\dfrac{n-2}{n}=1$$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{orange}{August 3}
 
-1. 设函数$f(x)$在$x=x_{0}$的某个邻域内有定义,下列命题中正确的个数:  
+\begin{example}[][Exam: 34.1.5]
+	设函数 $f(x)$ 在 $x=x_{0}$ 的某个邻域内有定义, 下列命题中正确的个数:  
 \begin{itemize}
-	\item \hl{A}. 若$f'(x_{0})$存在,则$f(x)$在$x=x_{0}$处连续
-	\item \hl{B}. 若$f'_{-}(x_{0})$和$f'_{+}(x_{0})$都存在,则$f(x)$在$x=x_{0}$处连续
-	\item C. 若$\lim\limits_{x\to x_{0}^{-}}f'(x)$,$\lim\limits_{x\to x_{0}^{+}}f'(x)$都存在,则$f(x)$在$x=x_{0}$处连续
-	\item D. 若$\lim\limits_{x\to x_{0}}f'(x)$存在,则$f(x)$在$x=x_{0}$处连续
+	\item A. 若 $f'(x_{0})$ 存在,则 $f(x)$ 在 $x=x_{0}$ 处连续
+	\item B. 若 $f'_{-}(x_{0})$ 和 $f'_{+}(x_{0})$ 都存在, 则 $f(x)$ 在 $x=x_{0}$ 处连续
+	\item C. 若 $\lim\limits_{x\to x_{0}^{-}}f'(x), \lim\limits_{x\to x_{0}^{+}}f'(x)$ 都存在, 则 $f(x)$ 在 $x=x_{0}$ 处连续
+	\item D. 若 $\lim\limits_{x\to x_{0}}f'(x)$ 存在, 则 $f(x)$ 在 $x=x_{0}$ 处连续
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	$A$. 导函数存在,原函数连续,正确
@@ -138,14 +145,15 @@
 	
 	综上所述,上述命题正确的个数为$2$个.
 \end{solution}
-\myspace{1}
 
-2. $A$为$3$阶实对称矩阵,特征值为$0,1,1$,且$\alpha_{1}=\left( \begin{matrix}
+\begin{example}[][Exam: 34.1.6]
+	$A$ 为 $3$ 阶实对称矩阵, 特征值为$0,1,1$, 且 $\alpha_{1}=\begin{bmatrix}
 	1\\a\\0
-\end{matrix}\right)$,$\alpha_{2}=\left( \begin{matrix}
+	\end{bmatrix}, \alpha_{2}=\begin{bmatrix}
 	1\\-1\\a
-\end{matrix}\right)$是$A$的两个不同的特征向量,若$A(\alpha_{1}+\alpha_{2})=\alpha_{2}$,求矩阵$A$
-\myspace{1}
+	\end{bmatrix}$ 是 $A$ 的两个不同的特征向量, 若 $A(\alpha_{1}+\alpha_{2}) = \alpha_{2}$, 求矩阵 $A$
+\end{example}
+
 \begin{solution}
 
 	(1). 我们可以得到:  
@@ -170,12 +178,15 @@
 		0&0&1
 	\end{matrix}\right] $$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{orange}{August 4}
 
-1. 设曲线$y=f(x)$与$y=\sqrt{\dfrac{(1+x^2)\sqrt{x}}{e^{x-1}}}+\arctan\dfrac{x^2-1}{\sqrt{1+x^2}}$在点$(1,\sqrt{2})$处相切,求$\lim\limits_{x\to1}(f(x)+1-\sqrt{2})^{\frac{1}{\ln x}}$
-\myspace{1}
+\begin{example}[][Exam: 34.1.7]
+	设曲线 $y=f(x)$ 与 $y=\sqrt{\dfrac{(1+x^2)\sqrt{x}}{e^{x-1}}}+\arctan\dfrac{x^2-1}{\sqrt{1+x^2}}$ 在点 $(1,\sqrt{2})$ 处相切,
+	求 $\lim\limits_{x\to 1}[f(x)+1-\sqrt{2}]^{\frac{1}{\ln x}}$
+\end{example}
+
 \begin{solution}
 
 	原极限可以化为:  
@@ -206,10 +217,11 @@
 	
 	我们由$f'(1)=g'(1)+h'(1)=\dfrac{5\sqrt{2}}{4}$,我们得到原极限$I=e^{\dfrac{5\sqrt{2}}{4}}$
 \end{solution}
-\myspace{1}
 
-2. 求二次型$f(x_{1},x_{2},x_{3})=(x_{1}+2x_{2}+mx_{3})(2x_{1}+3x_{2}+nx_{3})$的正惯性指数
-\myspace{1}
+\begin{example}[][Exam: 34.1.8]
+	求二次型 $f(x_{1},x_{2},x_{3})=(x_{1}+2x_{2}+mx_{3})(2x_{1}+3x_{2}+nx_{3})$ 的正惯性指数
+\end{example}
+
 \begin{solution}
 
 	我们令$\left\lbrace
@@ -236,12 +248,14 @@
 
 综上所述,原二次型的正惯性指数为$1$.
 \end{solution}
-\myspace{1} 
+ 
 
 \textcolor{orange}{August 5}
 
-1. 确定函数$g(x)=|x^3-x-\sin x|$不可导的点的个数
-\myspace{1}
+\begin{example}[][Exam: 34.1.9]
+	确定函数 $g(x)=\big|x^3-x-\sin x\big|$ 不可导的点的个数
+\end{example}
+
 \begin{solution}
 
 	我们知道,对于连续函数$f(x)$,当$f(x)\neq 0$时,$f(x)$可导,$|f(x)|$也可导;当$f(x)=0$时,当且仅当$f'(x)=0$时,$|f(x)|$可导.
@@ -289,16 +303,17 @@
 	
 	此时对应$f'(x)$均不为$0$,我们可以得到$g(x)$不可导的点有$3$个:  $x=\xi_{1},\ x=0,\ x=\xi_{2}$.
 \end{solution}
-\myspace{1}
 
-2. 设$A$为$n$阶矩阵,$n$维列向量组$\alpha_{1},\alpha_{2},\cdots,\alpha_{t}$是方程组$Ax=0$的基础解系,若存在$\beta_{i}$,使得$A\beta_{i}=\alpha_{i}, \ (i=1,2,\cdots,t)$,分析下列命题正确的个数
-\begin{itemize}
-	\item \hl{(1)}. 向量组$\beta_{1},\beta_{2},\cdots,\beta_{t}$线性无关
-	\item \hl{(2)}. 向量组$\alpha_{1},\alpha_{2},\cdots,\alpha_{t},\beta_{1},\beta_{2},\cdots,\beta_{t}$线性无关
-	\item \hl{(3)}. 向量组$\alpha_{1},\alpha_{2},\cdots,\alpha_{t},\beta_{1},\beta_{2},\cdots,\beta_{t}$均是方程组$A^2x=0$的解
-	\item \hl{(4)}. 向量组$\alpha_{1},\alpha_{2},\cdots,\alpha_{t},\beta_{1},\beta_{2},\cdots,\beta_{t}$均是方程组$A^2x=0$的基础解系
-\end{itemize}
-\myspace{1}
+\begin{example}[][Exam: 34.1.10]
+	设 $A$ 为 $n$ 阶矩阵, $n$ 维列向量组 $\alpha_{1},\alpha_{2},\cdots,\alpha_{t}$ 是方程组 $Ax=0$ 的基础解系,
+	$\exists \beta_{i},\ s.t.\ A\beta_{i}=\alpha_{i}(i=1,2,\cdots,t)$, 分析下列命题正确的个数
+	\begin{itemize}
+		\item A. 向量组 $\beta_{1},\beta_{2},\cdots,\beta_{t}$ 线性无关
+		\item B. 向量组 $\alpha_{1},\alpha_{2},\cdots,\alpha_{t},\beta_{1},\beta_{2},\cdots,\beta_{t}$ 线性无关
+		\item C. 向量组 $\alpha_{1},\alpha_{2},\cdots,\alpha_{t},\beta_{1},\beta_{2},\cdots,\beta_{t}$ 均是方程组 $A^2x=0$ 的解
+		\item D. 向量组 $\alpha_{1},\alpha_{2},\cdots,\alpha_{t},\beta_{1},\beta_{2},\cdots,\beta_{t}$ 均是方程组 $A^2x=0$ 的基础解系
+	\end{itemize}
+\end{example}
 \begin{solution}
 
 	(1). 我们令$C=(\alpha_{1},\alpha_{2},\cdots,\alpha_{t})$,$B=\beta_{1},\beta_{2},\cdots,\beta_{t}$,我们有$AB=C$
@@ -351,22 +366,20 @@
 	
 	综上所述,命题$(1),(2),(3),(4)$都是正确的,命题正确个数为$4$个.
 \end{solution}
-\myspace{1}
+
 
 \textcolor{orange}{August 6}
 
-1. 设$f(x)=\left\lbrace
-\begin{array}{l}
-	x^2,\ x\geq 0\\
-	x^4,\ x<0
-\end{array}
-\right. $,$g(x)=\left\lbrace
-\begin{array}{l}
-	-\sqrt{x},\ x>0\\
-	x^2,\ x\leq 0
-\end{array}
-\right. $,若$y=f(g(x))$,求$\dfrac{dy}{dx}|_{x=1}$和$\dfrac{dy}{dx}|_{x=0}$
-\myspace{1}
+\begin{example}[][Exam: 34.1.11]
+	设 $f(x)=\begin{cases}
+		x^2 & x\geq 0\\
+		x^4 & x<0
+	\end{cases}, g(x)=\begin{cases}
+		-\sqrt{x} & x>0\\
+		x^2 & x\leq 0
+	\end{cases}$, 若 $y=f[g(x)]$, 求 $\dfrac{dy}{dx}\big|_{x=1}$ 和 $\dfrac{dy}{dx}\big|_{x=0}$
+\end{example}
+
 \begin{solution}
 
 	我们令$h(x)=f(g(x))$,我们有:  
@@ -391,16 +404,17 @@
 	
 	综上所述,我们得到:  $\dfrac{dy}{dx}|_{x=1}=2,\ \dfrac{dy}{dx}|_{x=0}=0$.
 \end{solution}
-\myspace{1}
 
-2. 设$A$为$3$阶矩阵,$\alpha$为$3$维列向量,$A^2\alpha\neq 0$,$A^3\alpha=0$,下列说法错误的是:  
+\begin{example}[][Exam: 34.1.12]
+	设 $A$ 为 $3$ 阶矩阵, $\alpha$ 为 $3$ 维列向量, $A^2\alpha\neq 0, A^3\alpha=0$,下列说法错误的是:  
 \begin{itemize}
-	\item $A$. $A$只有$0$特征值
-	\item $B$. $r(A)=2$
-	\item \hl{C}. $A$能相似对角化
-	\item $D$. $A$不是对称矩阵
+	\item A. $A$ 只有 $0$ 特征值
+	\item B. $r(A)=2$
+	\item C. $A$ 能相似对角化
+	\item D. $A$ 不是对称矩阵
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	我们可以证明向量组$(\alpha,A\alpha,A^2\alpha)$线性无关,我们不妨假设存在不全为$0$的数$k_{1},k_{2},k_{3}$使得:  
@@ -425,17 +439,18 @@
 
 我们可以求出矩阵$B$只有$0$特征值,且$rank(B)=2$,不能相似对角化.
 \end{solution}
-\myspace{1}
+
 
 \textcolor{orange}{August 7}
 
-1. 设$\varphi(x)=\left\lbrace
-\begin{array}{l}
-	x^3\sin\dfrac{1}{x},\ x\neq 0\\
-	0,\ x=0
-\end{array}
-\right. $,函数$f(x)$可导,求$F(x)=f[\varphi(x)]$的导数
-\myspace{1}
+\begin{example}[][Exam: 34.1.13]
+	设 $\varphi(x)=
+	\begin{cases}
+		x^3\sin\dfrac{1}{x} & x\neq 0\\
+		0 & x=0
+	\end{cases}$, 函数 $f(x)$ 可导, 求 $F(x)=f[\varphi(x)]$ 的导数
+\end{example}
+
 \begin{solution}
 
 	我们有$\varphi'(0)=\lim\limits_{x\to 0}\dfrac{\varphi(x)}{x}=0$,我们可以得到:  
@@ -453,10 +468,12 @@
 	\end{array}
 	\right. $$
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)$在$[0,1]$上导函数连续,$f(0)=f(\dfrac{1}{2})=f(1)=0$,$|f'(x)|\leq M$,求证:  $|\int_{0}^{1}f(x)dx|\leq \dfrac{M}{8}$
-\myspace{1}
+\begin{example}[][Exam: 34.1.14]
+	设 $f(x)$ 在 $[0,1]$ 上导函数连续, $f(0)=f(\dfrac{1}{2})=f(1)=0, \big|f'(x)\big|\leq M$, 求证: 
+	$$\big|\int_{0}^{1}f(x)dx\big|\leq \dfrac{M}{8}$$
+\end{example}
+
 \begin{solution}
 
 	我们由绝对值不等式可以得到:  
@@ -479,19 +496,21 @@
 
 	综上所述,我们证明:  $|\int_{0}^{1}f(x)dx|\leq \dfrac{M}{8}$
 \end{solution}
-\myspace{1}
+
 
 \section{Week \Rmnum{2}}
 \textcolor{blue}{August 8}
 
-1. 设$A$是$n$阶矩阵,则下列说法错误的是:  
+\begin{example}[][Exam: 34.2.1]
+	设 $A$ 是 $n$ 阶矩阵, 下列说法错误的是:  
 \begin{itemize}
-	\item A. 对于任意的$n$维列向量$\xi$,有$A\xi=0$,则$A=0$
-	\item \hl{B}. 对于任意的$n$维列向量$\xi$,有$\xi^{T}A\xi=0$,则$A=0$
-	\item C. 对于任意的$n$阶矩阵$B$,有$AB=0$,则$A=0$
-	\item D. 对于任意的$n$阶矩阵$B$,有$B^{T}AB=0$,则$A=0$
+	\item A. 对于任意的 $n$ 维列向量 $\xi$, 有 $A\xi=0$, 则 $A=0$
+	\item B. 对于任意的 $n$ 维列向量 $\xi$, 有 $\xi^{T}A\xi=0$, 则 $A=0$
+	\item C. 对于任意的 $n$ 阶矩阵 $B$, 有 $AB=0$, 则 $A=0$
+	\item D. 对于任意的 $n$ 阶矩阵 $B$, 有 $B^{T}AB=0$, 则 $A=0$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=13cm,height=10cm]{"figure/Question/四个子空间.pdf"}
@@ -507,10 +526,11 @@
 	
 	(4). 同$(3)$,取$B=E$,可以得到$A=0$,矩阵$A$只能为零矩阵,在$A=0$时,任意的$n$阶矩阵$B$满足$B^{T}AB=0$
 \end{solution}
-\myspace{1}
 
-2. 设函数$f(x)$在$(\dfrac{1}{2},+\infty)$上可导,且$\lim\limits_{h\to 0}\dfrac{f[(x+h)^2]-f(x^2+h)}{h}=1$,$f(1)=1$,求$f(x)$
-\myspace{1}
+\begin{example}[][Exam: 34.2.2]
+	设函数 $f(x)$ 在 $(\dfrac{1}{2},+\infty)$ 上可导, 且 $\lim\limits_{h\to 0}\dfrac{f[(x+h)^2]-f(x^2+h)}{h}=1, f(1)=1$, 求 $f(x)$
+\end{example}
+
 \begin{solution}
 
 	原极限等价于:  
@@ -530,12 +550,15 @@
 	
 	我们得到$f(x)=\sqrt{x}+\dfrac{1}{2}\ln(2\sqrt{x}-1)$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{August 9}
 
-1. $f(x)$在$[0,1]$上导函数连续,$f(0)=f(1)=0$,证明:  $\int_{0}^{1}f^{2}(x)dx\leq \dfrac{1}{8}\int_{0}^{1}[f'(x)]^2dx$
-\myspace{1}
+\begin{example}[][Exam: 34.2.3]
+	$f(x)$ 在 $[0,1]$ 上导函数连续, $f(0)=f(1)=0$, 证明:
+	$$\int_{0}^{1}f^{2}(x)dx\leq \dfrac{1}{8}\int_{0}^{1}[f'(x)]^2dx$$
+\end{example}
+
 \begin{theorem}[积分形式柯西不等式]
 	$$\left[ \int_{a}^{b}f(x)g(x)dx\right] ^2\leq \int_{a}^{b}f^2(x)dx\int_{a}^{b}g^{2}(x)dx$$
 	
@@ -585,10 +608,10 @@
 		&=&\dfrac{1}{8}\int_{0}^{1}[f'(x)]^2dx
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
-2. 求$\lim\limits_{n\to+\infty}\left[\sqrt{n}(\sqrt{n+1}-\sqrt{n})+\dfrac{1}{2} \right]^{\dfrac{\sqrt{n+1}+\sqrt{n}}{\sqrt{n+1}-\sqrt{n}}} $
-\myspace{1}
+\begin{example}[][Exam: 34.2.4]
+	$$\lim\limits_{n\to+\infty}\left[\sqrt{n}(\sqrt{n+1}-\sqrt{n})+\dfrac{1}{2} \right]^{\frac{\sqrt{n+1}+\sqrt{n}}{\sqrt{n+1}-\sqrt{n}}}$$
+\end{example}
 \begin{solution}
 
 	原极限等价于:  
@@ -599,12 +622,15 @@
 		&=&e^{-\frac{1}{2}}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{August 10}
 
-1. 设可导函数$y=y(x)$由方程$\sin x-\int_{x}^{y}\varphi(u)du=0$所确定,其中可导函数$\varphi(u)>0$,且$\varphi(0)=\varphi'(0)=1$,求$y''(0)$
-\myspace{1}
+\begin{example}[][Exam: 34.2.5]
+	设可导函数 $y=y(x)$ 由方程 $\sin x-\int_{x}^{y}\varphi(u)du=0$ 所确定,
+	其中可导函数 $\varphi(u)>0$, 且 $\varphi(0)=\varphi'(0)=1$, 求 $y''(0)$
+\end{example}
+
 \begin{solution}
 
 	我们可以得到:  当$x=0$时,$\int_{0}^{y}\varphi(u)du=0$,且$\varphi(u)>0$,我们得到$y=0$.
@@ -627,14 +653,15 @@
 	\end{array}
 	\right. $$
 \end{solution}
-\myspace{1}
 
-2. 设$a_{n}=\int_{0}^{1}\dfrac{x^n}{1+x}dx$
+\begin{example}[][Exam: 34.2.6]
+	设 $a_{n}=\int_{0}^{1}\dfrac{x^n}{1+x}dx$
 
-(1).证明:  $\dfrac{1}{2(n+1)}\leq a_{n}\leq \dfrac{1}{2n},\ n=1,2,\cdots$
+(1). 证明: $\dfrac{1}{2(n+1)}\leq a_{n}\leq \dfrac{1}{2n}(n=1,2,\cdots)$
 
-(2). 证明:  级数$\sum\limits_{n=1}^{+\infty}(-1)^{n-1}(\dfrac{1}{2n}-\int_{0}^{1}\dfrac{x^n}{1+x}dx)$绝对收敛.
-\myspace{1}
+(2). 证明: 级数 $\sum\limits_{n=1}^{+\infty}(-1)^{n-1}\left[\dfrac{1}{2n}-\int_{0}^{1}\dfrac{x^n}{1+x}dx\right]$ 绝对收敛
+\end{example}
+
 \begin{solution}
 
 	(1). 我们有:  $$\left\lbrace
@@ -659,12 +686,14 @@
 	
 	我们知道级数$\sum\limits_{n=1}^{+\infty}\dfrac{1}{2n^2}$收敛,由比较判别法我们可知级数$\sum\limits_{n=1}^{+\infty}b_{n}$收敛,原级数绝对收敛.
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{August 11}
 
-1. 设$x=x(y)$是函数$y=\ln x+e^x$的反函数,求$\dfrac{d^2x}{dy^2}$.
-\myspace{1}
+\begin{example}[][Exam: 34.2.7]
+	设 $x=x(y)$ 是函数 $y=\ln x+e^x$ 的反函数, 求 $\dfrac{d^2x}{dy^2}$
+\end{example}
+
 \begin{solution}
 
 	我们有:  $\left\lbrace
@@ -686,14 +715,16 @@
 	我们有:  
 	$$\dfrac{d^2x}{dy^2}=\dfrac{\dfrac{dx}{dy}}{dx}\dfrac{dx}{dy}=\dfrac{x-x^3e^x}{(1+xe^x)^3}$$
 \end{solution}
-\myspace{1}
 
-2. 设$a_{0}=1,a_{1}=0$,$a_{n+1}=\dfrac{1}{n+1}(na_{n}+a_{n-1})\ (n=1,2,3\cdots)$,$S(x)$为幂级数$\sum\limits_{n=0}^{+\infty}a_{n}x^{n}$的和函数.
+\begin{example}[][Exam: 34.2.8]
+	设 $a_{0}=1, a_{1}=0, a_{n+1}=\dfrac{1}{n+1}(na_{n}+a_{n-1})(n=1,2,3\cdots)$, 
+	$S(x)$ 为幂级数 $\sum\limits_{n=0}^{+\infty}a_{n}x^{n}$ 的和函数
 
-(1).证明:  幂级数$\sum\limits_{n=0}^{+\infty}a_{n}x^n$的收敛半径不小于$1$.
+(1). 证明: 幂级数 $\sum\limits_{n=0}^{+\infty}a_{n}x^n$ 的收敛半径不小于 $1$
 
-(2).证明:  $(1-x)S'(x)-xS(x)=0,\ x\in(-1,1)$,并求出$S(x)$的表达式.
-\myspace{1}
+(2). 证明: $(1-x)S'(x)-xS(x)=0, x\in(-1,1)$, 并求出 $S(x)$ 的表达式
+\end{example}
+
 \begin{solution}
 
 	(1). 我们由$a_{n+1}=\dfrac{1}{n+1}(na_{n}+a_{n-1})$得到:  
@@ -749,17 +780,17 @@
 	我们有$S(0)=1\Rightarrow C_{1}=1$,因此$S(x)=\dfrac{1}{e^x(1-x)},\ x\in(-1,1)$
 	
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{August 12}
 
-1. 设$y=y(x)$由$e^y\sin t-y+1=0$和$x=\left\lbrace
-\begin{array}{l}
-	\dfrac{e^t-1}{t},\ t\neq 0\\
-	1,\ t=0
-\end{array}
-\right. $所确定,求$\dfrac{d^2y}{dx^2}|_{t=0}$
-\myspace{1}
+\begin{example}[][Exam: 34.2.9]
+	设 $y=y(x)$ 由 $e^y\sin t-y+1=0$ 和 $x=\begin{cases}
+		\dfrac{e^t-1}{t} & t\neq 0\\
+		1 & t=0
+	\end{cases}$ 所确定, 求 $\dfrac{d^2y}{dx^2}\big|_{t=0}$
+\end{example}
+
 \begin{solution}
 
 	我们知道:  当$t=0$时,$\left\lbrace
@@ -797,16 +828,17 @@
 	$$\dfrac{d^2y}{dx^2}|_{t=0}=\dfrac{y''(t)x'(t)-x''(t)y'(t)}{[x'(t)]^3}|_{t=0}=8e^2-\dfrac{8e}{3}$$
 	
 \end{solution}
-\myspace{1}
 
-2. 下列命题正确的是:  
+\begin{example}[][Exam: 34.2.10]
+	下列命题正确的是:  
 \begin{itemize}
-	\item \hl{A}. 设$A$为$3$阶矩阵,若$A$的特征值$\lambda_{1}\lambda_{2}\neq 0,\lambda_{3}=0$,则$r(A)=2$
-	\item \hl{B}. 设$A$为$3$阶非零矩阵,若$A^2=0$,则$r(A)=1$
-	\item C. 设$A,B$为$3$阶矩阵,若$A$与$B$等价,则$|A|=|B|$
-	\item D. 设$A,B$为$3$阶实对称矩阵,若$A$与$B$合同,则$|A|=|B|$
+	\item A. 设 $A$ 为 $3$ 阶矩阵, 若 $A$ 的特征值 $\lambda_{1}\neq 0,\lambda_{2}\neq 0,\lambda_{3}=0$,则 $r(A)=2$
+	\item B. 设 $A$ 为 $3$ 阶非零矩阵, 若 $A^2=0$,则 $r(A)=1$
+	\item C. 设 $A, B$ 为 $3$ 阶矩阵, 若 $A$ 与 $B$ 等价,则 $|A|=|B|$
+	\item D. 设 $A, B$ 为 $3$ 阶实对称矩阵, 若 $A$ 与 $B$ 合同,则 $|A|=|B|$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	(A). 我们可以得到矩阵$A\sim diag\{\lambda_{1},\lambda_{2},\lambda_{3}\}$,对角矩阵的秩和矩阵$A$的秩相同,$r(A)=2$
@@ -817,17 +849,18 @@
 	
 	(D). $A$与$B$合同$\Rightarrow A=P^{T}BP$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{August 13}
 
-1. 已知$f(x)=\left\lbrace
-\begin{array}{l}
-	\lim\limits_{n\to +\infty}\left( 1+\dfrac{2nx+x^2}{2n^2}\right)^{-n},\ x\neq 0\\
-	\lim\limits_{n\to +\infty}2\left[ \dfrac{n}{(n+1)^2}+\dfrac{n}{(n+2)^2}+\cdots+\dfrac{n}{(n+n)^2}\right],\ x=0  
-\end{array}
-\right. $,求$\int f(x)dx$
-\myspace{1}
+\begin{example}[][Exam: 34.2.11]
+	$$f(x)=\begin{cases}
+		\lim\limits_{n\to +\infty}\left( 1+\dfrac{2nx+x^2}{2n^2}\right)^{-n} & x\neq 0\\
+		\lim\limits_{n\to +\infty}2\left[ \dfrac{n}{(n+1)^2}+\dfrac{n}{(n+2)^2}+\cdots+\dfrac{n}{(n+n)^2}\right] & x=0 	
+	\end{cases}$$
+	求 $\int f(x)dx$
+\end{example}
+
 \begin{solution}
 
 	当$x\neq 0$时:  
@@ -848,10 +881,11 @@
 
 	我们得到:  $f(x)=e^{-x}\Rightarrow \int f(x)dx=-e^{-x}+C$
 \end{solution}
-\myspace{1}
 
-2. 已知函数$f(x)=x^2\ln(1-x)$,当$n\geq 3$时,求$f^{(n)}(0)$
-\myspace{1}
+\begin{example}[][Exam: 34.2.12]
+	已知函数 $f(x)=x^2\ln(1-x)$, 当 $n\geq 3$时, 求 $f^{(n)}(0)$
+\end{example}
+
 \begin{solution}
 
 	我们利用$\ln(1-x)$的泰勒展开式:  
@@ -871,12 +905,14 @@
 	\end{array}
 	\right. \Rightarrow f^{(n)}(0)=-\dfrac{n!}{n-2},\ n\geq 3$$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{August 14}
 
-1. 设$f(x)$在$[0,1]$上可导,$f(0)=f(1)=-2$,证明:  $\exists \xi\in(0,1),\ s.t. f'(\xi)-f(\xi)=\xi$
-\myspace{1}
+\begin{example}[][Exam: 34.2.13]
+	设 $f(x)$ 在 $[0,1]$ 上可导, $f(0)=f(1)=-2$, 证明: $\exists \xi\in(0,1),\ s.t.\ f'(\xi)-f(\xi)=\xi$
+\end{example}
+
 \begin{solution}
 
 	我们构造辅助函数:  $F(x)=e^{-x}\left[ f(x)+x+1\right]$,我们有:  
@@ -895,10 +931,11 @@
 	
 	综上所述,我们得到:  $\exists \xi\in(0,1),\ s.t. f'(\xi)-f(\xi)=\xi$
 \end{solution}
-\myspace{1}
 
-2. 设数列$\{u_{n}\}$满足$u_{1}=1,\ u_{n+1}=\dfrac{u_{n}+3}{u_{n}+1},\ (n=1,2,\cdots)$,试证明数列$\{u_{n}\}$收敛,并求其极限.
-\myspace{1}
+\begin{example}[][Exam: 34.2.14]
+	设数列 $\{u_{n}\}$ 满足 $u_{1}=1, u_{n+1}=\dfrac{u_{n}+3}{u_{n}+1}(n=1,2,\cdots)$, 证明数列 $\{u_{n}\}$ 收敛, 并求其极限
+\end{example}
+
 \begin{solution}
 
 	我们有:
@@ -954,13 +991,16 @@
 	
 	综上所述,我们证明数列$\{u_{n}\}$收敛,极限为$\sqrt{3}$.
 \end{solution}
-\myspace{1}
+
 
 \section{Week \Rmnum{3}}
 \textcolor{cyan}{August 15}
 
-1. $f(x)=\int_{1}^{x}\dfrac{\arctan t}{(1+t^2)^{\frac{3}{2}}\ln(1+t^2)}dt$,求$\int_{0}^{1}\dfrac{x}{1+x^2}f(x)dx$
-\myspace{1}
+\begin{example}[][Exam: 34.3.1]
+	$$f(x)=\int_{1}^{x}\dfrac{\arctan t}{(1+t^2)^{\frac{3}{2}}\ln(1+t^2)}dt$$
+	求 $\int_{0}^{1}\dfrac{x}{1+x^2}f(x)dx$
+\end{example}
+
 \begin{solution}
 
 	原定积分等价于:  
@@ -973,10 +1013,11 @@
 		&=&-\dfrac{\sqrt{2}\pi}{16}+\dfrac{2-\sqrt{2}}{4}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)=\dfrac{1}{1+2x+4x^2}$,求$f^{(100)}(0)$
-\myspace{1}
+\begin{example}[][Exam: 34.3.2]
+	设 $f(x)=\dfrac{1}{1+2x+4x^2}$, 求 $f^{(100)}(0)$
+\end{example}
+
 \begin{solution}
 
 	$$f(x)=\dfrac{1-2x}{(1-2x)(4x^2+2x+1)}=\dfrac{1-2x}{1-(2x)^3}$$
@@ -988,12 +1029,15 @@
 	$\dfrac{f^{(100)}(0)}{100!}$是$f(x)$中$x^{100}$前面的系数,我们可以得到:  
 	$$f^{(100)}(0)=-2^{100}\times100!$$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{cyan}{August 16}
 
-1. 证明:  在区间$(0,2)$内存在三个不同的点$x_{1},x_{2},x_{3}$,使得$\dfrac{1-\ln(1+x_{1})}{(1+x_{1})^2}x_{3}=\dfrac{1-\ln(1+x_{2})}{(1+x_{2})^2}(2-x_{3})$
-\myspace{1}
+\begin{example}[][Exam: 34.3.3]
+	证明:
+	$$\exists x_{1},x_{2},x_{3}\in(0,2)(x_{1} < x_{2} < x_{3}),\ s.t.\ 
+	\dfrac{1-\ln(1+x_{1})}{(1+x_{1})^2}x_{3}=\dfrac{1-\ln(1+x_{2})}{(1+x_{2})^2}(2-x_{3})$$
+\end{example}
 \begin{solution}
 
 	我们构造辅助函数:  $f(x)=\dfrac{\ln(1+x)}{1+x}$,我们有:  
@@ -1017,14 +1061,15 @@
 	
 	综上所述,我们可以得到:  在区间$(0,2)$内存在三个不同的点$x_{1},x_{2},x_{3}$,使得$\dfrac{1-\ln(1+x_{1})}{(1+x_{1})^2}x_{3}=\dfrac{1-\ln(1+x_{2})}{(1+x_{2})^2}(2-x_{3})$
 \end{solution}
-\myspace{1}
 
-2. 设$y=\dfrac{\arcsin x}{\sqrt{1-x^2}}$
+\begin{example}[][Exam: 34.3.4]
+	$$y=\dfrac{\arcsin x}{\sqrt{1-x^2}}$$
 
-(1). 证明:  $(1-x^2)y^{(n+1)}-(2n+1)xy^{(n)}-n^2y^{(n-1)}=0(n\geq 1)$;
+(1). 证明: $(1-x^2)y^{(n+1)}-(2n+1)xy^{(n)}-n^2y^{(n-1)}=0(n\geq 1)$
 
-(2). 求$y^{(n)}(0)$
-\myspace{1}
+(2). 求 $y^{(n)}(0)$
+\end{example}
+
 \begin{solution}
 
 	(1). 我们对$f(x)$求导可以得到:  
@@ -1055,12 +1100,15 @@
 	\end{array}
 	\right. $$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{cyan}{August 17}
 
-1. 已知极限$\lim\limits_{t\to x}\left(\dfrac{\sin t}{\sin x} \right)^{\dfrac{x}{\sin t-\sin x}}$,记此极限为$f(x)$,求函数$f(x)$的间断点,并指出其类型.
-\myspace{1}
+\begin{example}[][Exam: 34.3.5]
+	$$f(x) = \lim\limits_{t\to x}\left(\dfrac{\sin t}{\sin x} \right)^{\frac{x}{\sin t-\sin x}}$$\
+	求 $f(x)$ 的间断点, 并指出其类型
+\end{example}
+
 \begin{solution}
 
 	$$f(x)=e^{\lim\limits_{t\to x}\frac{x}{\sin t-\sin x}\ln(1+\frac{\sin t-\sin x}{\sin x})}=e^{\frac{x}{\sin x}}$$
@@ -1083,10 +1131,12 @@
 	\end{array}
 	\right. \Rightarrow x=k\pi\text{是}f(x)\text{无穷间断点}$$
 \end{solution}
-\myspace{1}
 
-2. 证明:  $\int_{0}^{\pi}xa^{\sin x}dx\int_{0}^{\frac{\pi}{2}}a^{-\cos x}dx\geq \dfrac{\pi^3}{4}$
-\myspace{1}
+\begin{example}[][Exam: 34.3.6]
+	证明: 
+	$$\int_{0}^{\pi}xa^{\sin x}dx\int_{0}^{\frac{\pi}{2}}a^{-\cos x}dx\geq \dfrac{\pi^3}{4}$$
+\end{example}
+
 \begin{solution}
 
 	我们由区间再现公式可以得到:
@@ -1106,17 +1156,16 @@
 		&=&\dfrac{\pi^3}{4} 
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{cyan}{August 18}
 
-1. 设函数$f(x)=\left\lbrace
-\begin{array}{l}
-	x|x|,\ x\leq 0,\\
-	x\ln x,\ x>0,
-\end{array}
-\right. $,\ $x=0$处$f(x)$的可导性判断、$x=0$是否为$f(x)$的极值点
-\myspace{1}
+\begin{example}[][Exam: 34.3.7]
+	设函数 $f(x)=\begin{cases}
+		x|x| & x\leq 0,\\
+		x\ln x & x>0,
+	\end{cases}, x=0$ 处 $f(x)$ 的可导性判断、$x=0$ 是否为 $f(x)$ 的极值点
+\end{example}
 \begin{solution}
 
 	当$x=0$时,我们有$f(0)=0$,且我们有:  
@@ -1137,24 +1186,25 @@
 	
 	取$\varepsilon\in(0,1)$,当$x\in(-\varepsilon,0)$时,$f(x)=-x^2<f(0)=0$;当$x\in(0,\varepsilon)$时,$f(x)=x\ln x<f(0)=0$,$x=0$是$f(x)$的极大值点.
 \end{solution}
-\myspace{1}
 
-2. 已知$f(x)=\prod\limits_{n=1}^{100}\left(\tan\dfrac{\pi x^n}{4}-n\right)$,求$f'(1)$
-\myspace{1}
+\begin{example}[][Exam: 34.3.8]
+	$f(x)=\prod\limits_{n=1}^{100}\left(\tan\dfrac{\pi x^n}{4}-n\right)$, 求 $f'(1)$
+\end{example}
+
 我们令$g(x)=\prod\limits_{n=2}^{100}\left(\tan\dfrac{\pi x^n}{4}-n\right)$,我们得到:$$f(x)=(\tan\dfrac{\pi x}{4}-1)g(x)$$
 $$f'(x)=\dfrac{\pi}{4\cos^2\frac{\pi x}{4}}g(x)+g'(x)(\tan\dfrac{\pi x}{4}-1)$$
 $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-100)=-\dfrac{\pi}{2}99!$$
-\myspace{1}
+
 
 \textcolor{cyan}{August 19}
 
-1. 已知函数$f(x)=\left\lbrace
-\begin{array}{l}
-	\int_{0}^{x}\cos\dfrac{1}{t}dt,\ x\neq 0\\
-	0,\ x=0
-\end{array}
-\right. $,求$f'(0)$
-\myspace{1}
+\begin{example}[][Exam: 34.3.9]
+	$f(x)=\begin{cases}
+		\int_{0}^{x}\cos\dfrac{1}{t}dt & x\neq 0\\
+		0 & x=0
+	\end{cases}$, 求 $f'(0)$
+\end{example}
+
 \begin{solution}
 
 	我们有:$\lim\limits_{x\to 0}f(x)=f(0)=0$,我们根据导数的定义可以得到:  
@@ -1168,10 +1218,12 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 
 	综上所述,我们得到:$f'(0)=0$
 \end{solution}
-\myspace{1}
 
-2. $f(x)$可导,且满足$x=\int_{0}^{x}f(t)dt+\int_{0}^{x}tf(t-x)dt$,求$f(x)$以及$\int_{-\frac{\pi}{4}}^{\frac{3\pi}{4}}|f(x)|^6dx$
-\myspace{1}
+\begin{example}[][Exam: 34.3.10]
+	$f(x)$ 可导, 且满足 $x=\int_{0}^{x}f(t)dt+\int_{0}^{x}tf(t-x)dt$,
+	求 $f(x)$ 以及 $\int_{-\frac{\pi}{4}}^{\frac{3\pi}{4}}\big|f(x)\big|^6dx$
+\end{example}
+
 \begin{solution}
 
 	我们令$u=t-x,t=u+x$,我们得到:
@@ -1208,12 +1260,14 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 		&=&\dfrac{5\pi}{2}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{cyan}{August 20}
 
-1. 设函数$f(x)=\int_{-1}^{x}t\ln|t|dt$,\ $x=0$处$f(x)$的可导性判断、$x=0$是否为$f(x)$的极值点
-\myspace{1}
+\begin{example}[][Exam: 34.3.11]
+	设函数 $f(x)=\int_{-1}^{x}t\ln|t|dt, x=0$ 处 $f(x)$ 的可导性判断、$x=0$ 是否为 $f(x)$ 的极值点
+\end{example}
+
 \begin{solution}
 
 	我们有$g(x)=x\ln|x|$在$x=0$处可去间断,且$\lim\limits_{x\to 0}g(x)=0$,我们得到$f(x)$在$x=0$处连续
@@ -1228,10 +1282,11 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	
 	当$x\in(-1,0)$时,$f(x)>f(0)$;当$x\in(0,1)$时,$f(x)>f(0)$,$f(x)$在$x=0$处取极小值.
 \end{solution}
-\myspace{1}
 
-2. 函数$f(x)=(x+1)|x^2-1|$驻点和极值点个数
-\myspace{1}
+\begin{example}[][Exam: 34.3.12]
+	函数 $f(x)=(x+1)\big|x^2-1\big|$ 驻点和极值点个数
+\end{example}
+
 \begin{solution}
 
 	我们得到:  $f(x)=\left\lbrace
@@ -1272,12 +1327,14 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	综上所述,我们得到$f(x)$有$x=\dfrac{1}{3}$和$x=-1$两个驻点和$x=\dfrac{1}{3}$和$x=1$两个极值点.
 	
 \end{solution}
-\myspace{1}
+
 
 \textcolor{cyan}{August 21}
 
-1. 已知函数$f(x)$在$x=0$的某个邻域内二阶可导,且$\lim\limits_{x\to 0 }\left[ \dfrac{\sin x}{x^3}+\dfrac{f(x)}{x^2}\right]=\dfrac{1}{3}$,求$f(0)$、$f'(0)$及$f''(0)$
-\myspace{1}
+\begin{example}[][Exam: 34.3.13]
+	$f(x)$ 在 $x=0$ 的某个邻域内二阶可导, 且 $\lim\limits_{x\to 0 }\left[\dfrac{\sin x}{x^3}+\dfrac{f(x)}{x^2}\right]=\dfrac{1}{3}$,
+	求 $f(0), f'(0)$ 和 $f''(0)$
+\end{example}
 \begin{solution}
 
 	原极限等价于:  
@@ -1305,10 +1362,11 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	\end{array}
 	\right. $$
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)$连续,且$x>1$时,我们有$f(x)\left[ \int_{0}^{x}f(t)dt+1\right]=\dfrac{xe^x}{2(1+x)^2}$,求$f(x)$
-\myspace{1}
+\begin{example}[][Exam: 34.3.14]
+	设 $f(x)$ 连续,且 $x>1, f(x)\left[\int_{0}^{x}f(t)dt+1\right]=\dfrac{xe^x}{2(1+x)^2}$, 求 $f(x)$
+\end{example}
+
 \begin{solution}
 
 	我们不妨设$F(x)=\int_{0}^{x}f(t)dt\Rightarrow F'(x)=f(x)$
@@ -1330,19 +1388,21 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	
 	综上所述,我们得到:  $f(x)=\dfrac{xe^{\frac{x}{2}}}{2(1+x)^{\frac{3}{2}}}$
 \end{solution}
-\myspace{1}
+
 
 \section{Week \Rmnum{4}}
 \textcolor{purplea}{August 22}
 
-1. 设$f(x)$有二阶连续导数,且$f'(0)=0$,$\lim\limits_{x\to 0}\dfrac{f''(x)+f(x)-f(-x)}{|x|}=1$,下列说法正确的是:
+\begin{example}[][Exam: 34.4.1]
+	设 $f(x)$ 有二阶连续导数, 且 $f'(0)=0, \lim\limits_{x\to 0}\dfrac{f''(x)+f(x)-f(-x)}{|x|}=1$,下列说法正确的是:
 \begin{itemize}
-	\item A. $f(0)$是$f(x)$极大值
-	\item B. $f''(0)>0$,$f(0)$是$f(x)$极小值
-	\item C. $(0,f(0))$是曲线$y=f(x)$的拐点
-	\item \hl{D}. $f(0)$是$f(x)$的极值点,$(0,f(0))$不是曲线$y=f(x)$的拐点
+	\item A. $f(0)$ 是 $f(x)$ 极大值
+	\item B. $f''(0)>0, f(0)$ 是 $f(x)$ 极小值
+	\item C. $(0,f(0))$ 是曲线 $y=f(x)$ 的拐点
+	\item D. $f(0)$ 是 $f(x)$ 的极值点, $(0,f(0))$ 不是曲线 $y=f(x)$ 的拐点
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	原极限等价于:  
@@ -1356,10 +1416,10 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 
 	我们得到:$f''(0)=0$,且$x\in(-\xi,\xi)$,$f''(x)>0$,我们知道$f'(x)$在$x\in(-\xi,\xi)$上单调递增,$x=0$是$f(x)$的极小值点,$(0,f(0))$不是函数$f(x)$的拐点.
 \end{solution}
-\myspace{1}
 
-2. 计算极限$$\lim\limits_{t\to 0^{+}}\dfrac{1}{t^3}\int_{0}^{\frac{\pi}{4}}d\theta\int_{0}^{\frac{t}{\cos \theta}}\dfrac{\sin(r^2\sin\theta\cos\theta)}{\sin\theta}dr$$
-\myspace{1}
+\begin{example}[][Exam: 34.4.2]
+	$$\lim\limits_{t\to 0^{+}}\dfrac{1}{t^3}\int_{0}^{\frac{\pi}{4}}d\theta\int_{0}^{\frac{t}{\cos \theta}}\dfrac{\sin(r^2\sin\theta\cos\theta)}{\sin\theta}dr$$
+\end{example}
 \begin{solution}
 
 	原极限等价于:  
@@ -1371,12 +1431,16 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 		&=&\dfrac{1}{3}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purplea}{August 23}
 
-1. 设$f(x)$连续,且$f(x)\neq 0,f(1)=\sqrt{2}$,若对任意$x,y\in(-\infty,+\infty)$,有$f(x+y)-f(x)=\int_{x}^{x+y}\dfrac{t}{f(t)}(t^2+1)dt$,求$f(x)$
-\myspace{1}
+\begin{example}[][Exam: 34.4.3]
+	设 $f(x)$ 连续, 且 $f(x)\neq 0,f(1)=\sqrt{2}$
+	$$\forall x,y\in(-\infty,+\infty), f(x+y)-f(x)=\int_{x}^{x+y}\dfrac{t}{f(t)}(t^2+1)dt$$
+	求 $f(x)$
+\end{example}
+
 \begin{solution}
 
 	我们可以得到:
@@ -1393,10 +1457,13 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	
 	我们得到:  $f(x)=\sqrt{\dfrac{x^4}{2}+x^2+\dfrac{1}{2}}=\dfrac{x^2+1}{\sqrt{2}}$
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)$在$[0,+\infty)$连续,在$(0,+\infty)$恒正,$x>0$时,我们有$\left[ f(x)\right]^3\leq 3\int_{0}^{x}f^{2}(t)dt$,证明:$x\geq 0\text{时,均有}f(x)\leq x$
-\myspace{1}
+\begin{example}[][Exam: 34.4.4]
+	设 $f(x)$ 在 $[0,+\infty)$ 连续, 在 $(0,+\infty)$ 恒正,
+	$x>0, \left[ f(x)\right]^3\leq 3\int_{0}^{x}f^{2}(t)dt$,
+	证明: $$x\geq 0, f(x)\leq x$$
+\end{example}
+
 \begin{solution}
 
 	我们构造辅助函数:  $F(x)=\int_{0}^{x}f^{2}(t)dt,\ F'(x)=f^{2}(x)$
@@ -1412,12 +1479,14 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	我们补充$\lim\limits_{x\to 0}f(x)=0$,综上所述,我们得到:  $x\geq 0\text{时,均有}f(x)\leq x$	
 	
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purplea}{August 24}
 
-1. 已知$f(x)=\dfrac{x|x|}{1+x}$,求$f(x)$的凹凸区间以及渐近线
-\myspace{1}
+\begin{example}[][Exam: 34.4.5]
+	$f(x)=\dfrac{x|x|}{1+x}$, 求 $f(x)$ 的凹凸区间和渐近线
+\end{example}
+
 \begin{solution}
 
 	我们有:  
@@ -1479,10 +1548,12 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	
 	综上所述,$f(x)$有三条渐近线,铅锤渐近线$x=-1$;斜渐近线$y=x-1$和$y=-x+1$.
 \end{solution}
-\myspace{1}
 
-2. 函数$f(x)$具有二阶连续的导数,曲线$y=f(x)$既关于$y$轴对称也关于直线$x=1$对称,求$\int_{-2}^{2}(x-2024)f''(x)dx$
-\myspace{1}
+\begin{example}[][Exam: 34.4.6]
+	函数 $f(x)$ 具有二阶连续的导数, 曲线 $y=f(x)$ 既关于 $y$ 轴对称也关于直线 $x=1$ 对称,
+	求 $\int_{-2}^{2}(x-2024)f''(x)dx$
+\end{example}
+
 \begin{solution}
 
 	周期性、轴对称性、中心对称性
@@ -1496,28 +1567,30 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 		&=&0
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purplea}{August 25}
 
-1. 设$(X,Y)$的概率密度为$f(x,y)=\left\lbrace
-\begin{array}{l}
-	x+y,\ 0\leq x\leq 1,\ 0\leq y\leq 1\\
-	0,\ \text{其他}
-\end{array}
-\right. $
+\begin{example}[][Exam: 34.4.7]
+	设 $(X,Y)$ 的概率密度为 $f(x,y)=
+	\begin{cases}
+		x+y & 0\leq x\leq 1, 0\leq y\leq 1\\
+		0 & others
+	\end{cases}$
 
-(1). 求$\text{max}\{X,Y\}$的分布函数和概率密度
+(1). 求 $\max\{X,Y\}$ 的分布函数和概率密度
 
-(2). 求$\text{min}\{X,Y\}$的分布函数和概率密度
-\myspace{1}
+(2). 求 $\min\{X,Y\}$ 的分布函数和概率密度
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 曲线$y=x(1+\arcsin \dfrac{2}{x})$的斜渐近线方程
-\myspace{1}
+\begin{example}[][Exam: 34.4.8]
+	曲线 $y=x(1+\arcsin \dfrac{2}{x})$ 的斜渐近线
+\end{example}
+
 \begin{solution}
 
 	(1). $x\Rightarrow +\infty$
@@ -1550,12 +1623,14 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	
 	综上所述,$f(x)$的斜渐近线方程为:$y=x+2$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purplea}{August 26}
 
-1. $\int_{0}^{1}\dfrac{\arcsin\sqrt{x}}{x^2-x+1}dx$
-\myspace{1}
+\begin{example}[][Exam: 34.4.9]
+	$$\int_{0}^{1}\dfrac{\arcsin\sqrt{x}}{x^2-x+1}dx$$
+\end{example}
+
 \begin{solution}
 
 	我们有:$\left\lbrace
@@ -1578,10 +1653,11 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 		&=&\dfrac{\sqrt{3}\pi^2}{18}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
-2. $\int_{0}^{\frac{\pi}{4}}\ln(1+\tan x)dx$
-\myspace{1}
+\begin{example}[][Exam: 34.4.10]
+	$$\int_{0}^{\frac{\pi}{4}}\ln(1+\tan x)dx$$
+\end{example}
+
 \begin{solution}
 
 	我们利用区间再现公式得到:
@@ -1592,12 +1668,14 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 		I&=&\dfrac{\pi \ln2}{8}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purplea}{August 27}
 
-1. 设$f(x)=\arctan x$,求$f^{(n)}(0)$($n$为奇数)
-\myspace{1}
+\begin{example}[][Exam: 34.4.11]
+	$f(x)=\arctan x$, 求 $f^{(n)}(0), n\in\{2k+1, k\in \mathbb{Z}^{+}\}$
+\end{example}
+
 \begin{solution}
 
 	我们利用泰勒展开式:
@@ -1613,15 +1691,15 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 		
 	综上所述,我们得到:  $f^{(n)}(0)=(-1)^{\frac{n-1}{2}}(n-1)!,\ n\text{为奇数}$
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)=\left\lbrace
-\begin{array}{l}
-	ax+1,\ x<0\\
-	be^x,\ x\geq 0
-\end{array}
-\right. $为可导函数,求$\int f(\ln x)dx$
-\myspace{1}
+\begin{example}[][Exam: 34.4.12]
+	设 $f(x)=
+	\begin{cases}
+		ax+1 & x<0\\
+		be^x & x\geq 0
+	\end{cases}$ 为可导函数, 求 $\int f(\ln x)dx$
+\end{example}
+
 \begin{solution}
 
 	我们可以知道$f(x)$在$x=0$处可导:
@@ -1652,12 +1730,15 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	\end{array}
 	\right. $
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purplea}{August 28}
 
-1. 设$f(x)$在$[a,b]$上可导,$f(a)=a$,$\int_{a}^{b}f(x)dx=\dfrac{1}{2}(b^2-a^2)$,证明:$\exists\xi\in(a,b),\ s.t. f'(\xi)=f(\xi)-\xi+1$
-\myspace{1}
+\begin{example}[][Exam: 34.4.13]
+	设 $f(x)$ 在 $[a,b]$ 上可导, $f(a)=a, \int_{a}^{b}f(x)dx=\dfrac{1}{2}(b^2-a^2)$, 证明:
+	$$\exists\xi\in(a,b),\ s.t.\ f'(\xi)=f(\xi)-\xi+1$$
+\end{example} 
+
 \begin{solution}
 
 	我们构造辅助函数:  $F(x)=\dfrac{f(x)-x}{e^x}$,我们有:  $F(a)=0$
@@ -1678,10 +1759,11 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	
 	综上所述,我们得到:  $\exists\xi\in(a,b),\ s.t. f'(\xi)=f(\xi)-\xi+1$
 \end{solution}
-\myspace{1}
 
-2. 求$\int_{-\pi}^{\pi}\dfrac{x\sin x}{(1+2^x)(1+\cos^2 x)}dx$
-\myspace{1}
+\begin{example}[][Exam: 34.4.14]
+	$$\int_{-\pi}^{\pi}\dfrac{x\sin x}{(1+2^x)(1+\cos^2 x)}dx$$
+\end{example}
+
 \begin{solution}
 
 	我们可以得到:  
@@ -1694,12 +1776,14 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 		&=&\dfrac{\pi^2}{4}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purplea}{August 29}
 
-1. 求$\int_{0}^{1}\dfrac{\arctan e^{2x-1}}{\sqrt{x}+\sqrt{1-x}}dx$
-\myspace{1}
+\begin{example}[][Exam: 34.4.15]
+	$$\int_{0}^{1}\dfrac{\arctan e^{2x-1}}{\sqrt{x}+\sqrt{1-x}}dx$$
+\end{example}
+
 \begin{solution}
 
 	我们利用区间再现公式:  
@@ -1711,10 +1795,11 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 		&=&\dfrac{\pi}{2}-\dfrac{\sqrt{2}\pi}{4}\ln(\sqrt{2}+1) 
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
-2. 求曲线$y=e^{\frac{1}{x}}\sqrt{1+x^2}$的渐近线所围区域的面积
-\myspace{1}
+\begin{example}[][Exam: 34.4.16]
+	求曲线 $y=e^{\frac{1}{x}}\sqrt{1+x^2}$ 的渐近线所围区域的面积
+\end{example}
+
 \begin{solution}
 
 	我们由题意知:$f(x)$在$x=0$处无定义,$x=0$是$f(x)$的铅垂渐近线.
@@ -1741,22 +1826,25 @@ $$f'(1)=\dfrac{\pi}{2}g(1)=\dfrac{\pi}{2}\times(1-2)\times(1-3)\cdots\times(1-10
 	
 	我们可以得到:  $S=1$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purplea}{August 30}
 
-1. 随机变量$X$服从分布$X\sim E(1)$,随机变量$Y$服从分布$Y\sim B(1,\dfrac{1}{2})$,$X,Y$相互独立,随机变量$Z=X-Y$,求$f_{z}(Z)$
-\myspace{1}
+\begin{example}[][Exam: 34.4.17]
+	随机变量 $X$ 服从分布 $X\sim E(1)$, 随机变量 $Y$ 服从分布 $Y\sim B(1,\dfrac{1}{2})$,
+	$X,Y$ 相互独立, 随机变量 $Z=X-Y$, 求 $f_{z}(Z)$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)$是单调可导函数,$f(-\dfrac{\pi}{2})=-f(\dfrac{\pi}{2})$,$g(x)$是$f(x)$反函数,且$f(x)$满足:
-$$\int_{-\frac{\pi}{2}}^{f(x)}g(t)dt=\int_{-\frac{\pi}{2}}^{x}\left(\dfrac{1}{1+e^{-|t|}}+\dfrac{\sin t}{1+e^{-\frac{\pi}{2}}}\right)\sin tdt$$
+\begin{example}[][Exam: 34.4.18]
+	设 $f(x)$ 是单调可导函数,$f(-\dfrac{\pi}{2})=-f(\dfrac{\pi}{2})$, $g(x)$ 是 $f(x)$反函数
+	$$\int_{-\frac{\pi}{2}}^{f(x)}g(t)dt=\int_{-\frac{\pi}{2}}^{x}\left(\dfrac{1}{1+e^{-|t|}}+\dfrac{\sin t}{1+e^{-\frac{\pi}{2}}}\right)\sin tdt$$
+	$$\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}f(x)dx$$
+\end{example}
 
-求积分$\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}f(x)dx$
-\myspace{1}
 \begin{solution}
 
 	我们对上述等式两边对$x$求导可以得到:  
@@ -1769,12 +1857,14 @@ $$\int_{-\frac{\pi}{2}}^{f(x)}g(t)dt=\int_{-\frac{\pi}{2}}^{x}\left(\dfrac{1}{1+
 		&=&\dfrac{-\pi}{2(1+e^{-\frac{\pi}{2}})}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purplea}{August 31}
 
-1. 设$f(x)=\arctan x \cdot e^{ax}$,且$f'''(0)=2$,求$a^2$
-\myspace{1}
+\begin{example}[][Exam: 34.4.19]
+	设 $f(x)=\arctan x \cdot e^{ax}$, 且 $f'''(0)=2$, 求 $a^2$
+\end{example}
+
 \begin{solution}
 
 	我们根据泰勒展开式:  
@@ -1787,10 +1877,11 @@ $$\int_{-\frac{\pi}{2}}^{f(x)}g(t)dt=\int_{-\frac{\pi}{2}}^{x}\left(\dfrac{1}{1+
 	
 	我们可以得到:  $f'''(0)=3a^2-2=2\Rightarrow a^2=\dfrac{4}{3}$
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)$在$[0,+\infty)$的导函数连续,$f(0)=0$,$|f'(x)-f(x)|\leq 1$,证明:  $|f(x)|\leq e^x-1$
-\myspace{1}
+\begin{example}[][Exam: 34.4.20]
+	设 $f(x)$ 在 $[0,+\infty)$ 的导函数连续,$f(0)=0, \big|f'(x)-f(x)\big|\leq 1$, 证明: $|f(x)|\leq e^x-1$
+\end{example}
+
 \begin{solution}
 
 	我们构造辅助函数:  $F(x)=e^{-x}f(x)\Rightarrow F'(x)=e^{-x}(f'(x)-f(x))$

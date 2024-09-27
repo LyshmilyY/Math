@@ -3,8 +3,10 @@
 \section{Week \Rmnum{1}}
 \textcolor{orange}{September 1}
 
-1. 求曲线$y=\dfrac{x^{1+x}}{(1+x)^x}(x>0)$的斜渐近线方程
-\myspace{1}
+\begin{example}[][Exam: 35.1.1]
+	求曲线 $y=\dfrac{x^{1+x}}{(1+x)^x}(x>0)$的斜渐近线
+\end{example}
+
 \begin{solution}
 
 	我们不妨设曲线的斜渐近线方程为:  $y=ax+b$,我们可以得到:  
@@ -18,10 +20,11 @@
 	
 	综上所述,曲线的斜渐近线方程为:  $y=\frac{x}{e}+\frac{1}{2e}$
 \end{solution}
-\myspace{1}
 
-2. $\int_{0}^{\frac{\pi}{2}}\ln(\sin x)dx$
-\myspace{1}
+\begin{example}[][Exam: 35.1.2]
+	$$\int_{0}^{\frac{\pi}{2}}\ln(\sin x)dx$$
+\end{example}
+
 \begin{solution}
 
 	我们利用区间再现公式:  
@@ -34,12 +37,14 @@
 		I&=&\dfrac{\pi \ln 2}{2}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{orange}{September 2}
 
-1. $\int_{0}^{\frac{\pi}{2}}\dfrac{1}{1+\tan^{n}x}dx$
-\myspace{1}
+\begin{example}[][Exam: 35.1.3]
+	$$\int_{0}^{\frac{\pi}{2}}\dfrac{1}{1+\tan^{n}x}dx$$
+\end{example}
+
 \begin{solution}
 
 	原定积分等价于:  $\int_{0}^{+\infty}\dfrac{1}{(1+x^{n})(1+x^2)}dx$
@@ -51,35 +56,35 @@
 		I&=&\dfrac{\pi}{4}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
-2. 设随即变量$(X,Y)$的联合概率密度为:  $f(x,y)=\left\lbrace
-\begin{array}{l}
-	\dfrac{21}{4}x^2y,\ x^2\leq y\leq 1\\
-	0,\ \text{其他}
-\end{array}
-\right. $,求$P\{Y\geq 0.75|X=0.5\}$
-\myspace{1}
+\begin{example}[][Exam: 35.1.4]
+	设随即变量 $(X,Y)$ 的联合概率密度为: $f(x,y)=
+	\begin{cases}
+		\dfrac{21}{4}x^2y  & x^2\leq y\leq 1\\
+		0  & others
+	\end{cases}$, 求 $P\{Y\geq 0.75|X=0.5\}$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
+
 
 \textcolor{orange}{September 3}
 
-1. 设$f(x)=\left\lbrace
-\begin{array}{l}
-	\dfrac{g(x)}{x},\ x\neq 0\\
-	0,\ x=0
-\end{array}
-\right. $,其中$g(x)$在$x=0$的一个邻域内有二阶导数,且$g(0)=0$,$g'(0)=0$,则$f(x)$在点$x=0$处
-\begin{itemize}
-	\item A. 不连续
-	\item B. 连续,但$f'(0)$不存在
-	\item C. $f'(0)$存在,但$f'(x)$在$x=0$处不连续
-	\item \hl{D}. $f'(x)$在$x=0$处连续
-\end{itemize}
-\myspace{1}
+\begin{example}[][Exam: 35.1.5]
+	设 $f(x)=
+	\begin{cases}
+		\dfrac{g(x)}{x} & x\neq 0\\
+		0 & x=0
+	\end{cases}$,其中 $g(x)$ 在 $x=0$ 的一个邻域内有二阶导数, 且 $g(0)=0$, $g'(0)=0$, 则 $f(x)$ 在点 $x=0$ 处
+	\begin{itemize}
+		\item A. 不连续
+		\item B. 连续,但 $f'(0)$ 不存在
+		\item C. $f'(0)$ 存在,但 $f'(x)$ 在 $x=0$ 处不连续
+		\item D. $f'(x)$ 在 $x=0$ 处连续
+	\end{itemize}
+\end{example}
 \begin{solution}
 
 	(1). $f(x)$在$x=0$处连续性
@@ -103,10 +108,13 @@
 	
 	综上所述,我们得到$f'(x)$在$x=0$处连续.
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)$在$[0,+\infty)$上连续,$\int_{0}^{+\infty}f^{2}(x)dx$收敛,$a_{n}=\int_{0}^{1}f(nx)dx$,证明:  $k>0\text{时},\sum\limits_{n=1}^{+\infty}\dfrac{a_{n}^2}{n^k}$收敛.
-\myspace{1}
+\begin{example}[][Exam: 35.1.6]
+	设 $f(x)$ 在 $[0,+\infty)$ 上连续, 且 $\int_{0}^{+\infty}f(x)dx$ 收敛, $a_{n}=\int_{0}^{1}f(nx)dx$, 证明:  
+	$k>0$ 时, $\sum\limits_{n=1}^{+\infty}\dfrac{a_{n}^2}{n^k}$ 收敛
+
+\end{example}
+
 \begin{solution}
 
 	我们由$a_{n}=\int_{0}^{1}f(nx)dx\Rightarrow a_{n}=\dfrac{1}{n}\int_{0}^{n}f(x)dx$,我们可以得到:  
@@ -121,12 +129,14 @@
 	
 	我们已知级数$\sum\limits_{n=1}^{+\infty}\dfrac{b}{n^{1+k}}(k>0,b>0)$收敛,我们根据比较判别法可以得到:  级数$\sum\limits_{n=1}^{+\infty}\dfrac{a_{n}^2}{n^k}$收敛
 \end{solution}
-\myspace{1}
+
 
 \textcolor{orange}{September 4}
 
-1. 已知方程$x^5-5x+k=0$有三个不同的实数根,求$k$的取值范围
-\myspace{1}
+\begin{example}[][Exam: 35.1.7]
+	已知方程 $x^5-5x+k=0$ 有三个不同的实数根, 求 $k$ 的取值范围
+\end{example}
+
 \begin{solution}
 
 	我们令$f(x)=x^5-5x+k$,$f'(x)=5x^4-5=5(x^2+1)(x+1)(x-1)$
@@ -160,10 +170,11 @@
 	
 	综上所述,我们得到$k$的取值范围为$(-4,4)$.
 \end{solution}
-\myspace{1}
 
-2. $\int_{0}^{+\infty}\dfrac{1}{(1+x^2)(1+x^n)}dx$
-\myspace{1}
+\begin{example}[][Exam: 35.1.8]
+	$$\int_{0}^{+\infty}\dfrac{1}{(1+x^2)(1+x^n)}dx$$
+\end{example}
+
 \begin{solution}
 
 	原定积分可以化为:  
@@ -175,12 +186,14 @@
 		I&=&\dfrac{\pi}{4}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{orange}{September 5}
 
-1. $\int_{0}^{1}\dfrac{\ln(1+x)}{1+x^2}dx$
-\myspace{1}
+\begin{example}[][Exam: 35.1.9]
+	$$\int_{0}^{1}\dfrac{\ln(1+x)}{1+x^2}dx$$
+
+\end{example}
 \begin{solution}
 
 	原定积分可以化为:  
@@ -193,10 +206,11 @@
 		I&=&\dfrac{\pi \ln 2}{8}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
-2. 求极限$\lim\limits_{x\to 0}\int_{\ln(1+x)}^{x}\dfrac{(1-2t)^{\frac{1}{t}}}{t^2}dt$
-\myspace{1}
+\begin{example}[][Exam: 35.1.10]
+	$$\lim\limits_{x\to 0}\int_{\ln(1+x)}^{x}\dfrac{(1-2t)^{\frac{1}{t}}}{t^2}dt$$
+\end{example}
+
 \begin{solution}
 
 	我们利用第二积分中值定理可以得到:  
@@ -207,12 +221,13 @@
 		 &=&\dfrac{e^{-2}}{2}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{orange}{September 6}
 
-1. 已知$f(x)=[x]\sin \pi x$,其中$[x]$表示不超过$x$的最大整数,求$f'(x)$
-\myspace{1}
+\begin{example}[][Exam: 35.1.11]
+	已知 $f(x)=[x]\sin \pi x$,其中 $[x]$ 表示不超过 $x$ 的最大整数, 求$f'(x)$
+\end{example}
 \begin{solution}
 
 	(1). 
@@ -235,10 +250,10 @@
 	\end{array}
 	\right. $
 \end{solution}
-\myspace{1}
 
-2. 设函数$f(x)=ax-b\ln x(a>0)$有两个零点,求$\dfrac{b}{a}$的取值范围.
-\myspace{1}
+\begin{example}[][Exam: 35.1.12]
+	设函数 $f(x)=ax-b\ln x(a>0)$ 有两个零点, 求 $\dfrac{b}{a}$ 的取值范围
+\end{example}
 \begin{solution}
 
 	我们首先得到$f(x)$定义域为$(0,+\infty)$,我们有:  $f'(x)=\dfrac{ax-b}{x}$.
@@ -266,12 +281,14 @@
 	
 	综上所述,我们得到$\dfrac{b}{a}$的取值范围为$(e,+\infty)$.
 \end{solution}
-\myspace{1}
+
 
 \textcolor{orange}{September 7}
 
-1. $\int_{0}^{1}\dfrac{x^2}{x+\sqrt{1-x^2}}dx$
-\myspace{1}
+\begin{example}[][Exam: 35.1.13]
+	$$\int_{0}^{1}\dfrac{x^2}{x+\sqrt{1-x^2}}dx$$
+\end{example}
+
 \begin{solution}
 
 	原定积分可以化为:  
@@ -284,10 +301,11 @@
 		I&=&\dfrac{1}{4}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
-2. $\int_{0}^{1}\dfrac{1}{x+\sqrt{1-x^2}}dx$
-\myspace{1}
+\begin{example}[][Exam: 35.1.14]
+	$$\int_{0}^{1}\dfrac{1}{x+\sqrt{1-x^2}}dx$$
+\end{example}
+
 \begin{solution}
 
 	原定积分可以化为:  
@@ -299,13 +317,15 @@
 		I&=&\dfrac{\pi}{4}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \section{Week \Rmnum{2}}
 \textcolor{blue}{September 8}
 
-1. 求极限$\lim\limits_{n\to+\infty}\left[1+\sin\left(\pi\sqrt{1+4n^2} \right) \right]^n$
-\myspace{1}
+\begin{example}[][Exam: 35.2.1]
+	$$\lim\limits_{n\to+\infty}\left[1+\sin\left(\pi\sqrt{1+4n^2} \right) \right]^n$$
+\end{example}
+
 \begin{solution}
 
 	原极限可以化为:  
@@ -317,10 +337,12 @@
 		&=&e^{\frac{\pi}{4}}
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
-2. 设$f_{n}(x)=\tan^n x(n=1,2,\cdots)$,且曲线$y=\tan^n x$在点$x=\dfrac{\pi}{4}$处的切线与$x$轴的交点为$(x_{n},0)$,求极限$\lim\limits_{n\to+\infty}f_{n}(x_{n})$
-\myspace{1}
+\begin{example}[][Exam: 35.2.2]
+	设 $f_{n}(x)=\tan^n x(n=1,2,\cdots)$, 且曲线 $y=\tan^n x$ 在点 $x=\dfrac{\pi}{4}$ 处的切线与 $x$ 轴的交点为$(x_{n},0)$,
+	求 $\lim\limits_{n\to+\infty}f_{n}(x_{n})$
+\end{example}
+
 \begin{solution}
 
 	我们先求切线方程:  
@@ -341,16 +363,23 @@
 
 	综上所述,我们得到:  $\lim\limits_{n\to+\infty}f_{n}(x_{n})=e^{-1}$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{September 9}
 
-1. 设$A$是$3$阶实对称矩阵,且不可逆,\ $\left(\begin{matrix}
-	2&-2&1\\-2&-1&2
-\end{matrix} \right)\cdot A=\left(\begin{matrix}
-6&-6&3\\-12&-6&12
-\end{matrix} \right) $,求$A$
-\myspace{1}
+\begin{example}[][Exam: 35.2.3]
+	设 $A$ 是 $3$ 阶实对称矩阵,且不可逆
+	$$\begin{bmatrix}
+		 2 & -2 & 1\\
+		-2 & -1 & 2
+	\end{bmatrix}\cdot A=
+	\begin{bmatrix}
+		6 & -6 & 3\\
+	  -12 & -6 & 12
+	\end{bmatrix}$$ 
+	求 $A$
+\end{example}
+
 \begin{solution}
 
 	我们利用谱分解定理:  $A=\sum\limits_{i=1}^{3}\lambda_{i}G_{i},\ G_{i}=e_{i}e_{i}^{T}$
@@ -377,11 +406,12 @@ A^{T}\xi_{2}=6\xi_{2}
 	4&0&-2\\0&2&-2\\-2&-2&3
 \end{matrix} \right)$
 \end{solution}
-\myspace{1}
 
 
-2. 已知方程$\dfrac{1}{\ln(1+x)}-\dfrac{1}{x}=k$在区间$(0,1)$有实数根,求$k$的取值范围
-\myspace{1}
+\begin{example}[][Exam: 35.2.4]
+	已知方程 $\dfrac{1}{\ln(1+x)}-\dfrac{1}{x}=k$ 在区间 $(0,1)$ 有实数根, 求 $k$ 的取值范围
+\end{example}
+
 \begin{solution}
 
 	我们构造辅助函数:  $f(x)=\dfrac{1}{\ln(1+x)}-\dfrac{1}{x}$,我们有:  
@@ -409,23 +439,24 @@ A^{T}\xi_{2}=6\xi_{2}
 	
 	综上所述,$k$的取值范围为:  $(\dfrac{1}{\ln2}-1,\dfrac{1}{2})$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{September 10}
 
-1. 设$f(x)=\left\lbrace
-\begin{array}{l}
-	\dfrac{e^x-1}{x},\ x\neq 0\\
-	1,\ x=0
-\end{array}
-\right. $,则下列关于$y=\dfrac{\int_{0}^{x}f(t)dt}{x}$的命题正确的个数
+\begin{example}[][Exam: 35.2.5]
+	设 $f(x)=
+	\begin{cases}
+		\dfrac{e^x-1}{x} & x\neq 0\\
+		1 & x=0
+	\end{cases}$,则下列关于 $y=\dfrac{\int_{0}^{x}f(t)dt}{x}$ 的命题正确的个数
 \begin{itemize}
 	\item A. 有垂直渐近线
-	\item \hl{B}. 有水平渐近线
+	\item B. 有水平渐近线
 	\item C. 有斜渐近线
 	\item D. 是有界函数
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	我们可以得到:  $f(x)$在$x=0$处连续,$f(x)$在$\mathbb{R}$上连续,我们令$g(x)=\dfrac{\int_{0}^{x}f(t)dt}{x}$
@@ -449,10 +480,11 @@ A^{T}\xi_{2}=6\xi_{2}
 	在$x\Rightarrow +\infty$时,$\lim\limits_{x\to+\infty}\dfrac{g(x)}{x^2}=\lim\limits_{x\to +\infty}\dfrac{e^x-1}{2x^2}=+\infty$,$g(x)$不存在斜渐近线,且$g(x)$为无界函数.
 	
 \end{solution}
-\myspace{1}
 
-2. $\int_{0}^{+\infty}\dfrac{\ln x}{1+x^2}dx$
-\myspace{1}
+\begin{example}[][Exam: 35.2.6]
+	$$\int_{0}^{+\infty}\dfrac{\ln x}{1+x^2}dx$$
+\end{example}
+
 \begin{solution}
 
 	原定积分可以化为:  
@@ -463,12 +495,14 @@ A^{T}\xi_{2}=6\xi_{2}
 		I&=&0
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{September 11}
 
-1. $\int_{0}^{+\infty}\dfrac{\ln(1-x^2+x^4)}{(1+x^2)\ln x}dx$
-\myspace{1}
+\begin{example}[][Exam: 35.2.7]
+	$$\int_{0}^{+\infty}\dfrac{\ln(1-x^2+x^4)}{(1+x^2)\ln x}dx$$
+\end{example}
+
 \begin{solution}
 
 	原定积分可以化为:  
@@ -478,15 +512,16 @@ A^{T}\xi_{2}=6\xi_{2}
 		I&=&\pi
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
-2. 已知函数$f(x)$三阶可导,则下列命题中不是$(0,f(0))$为曲线$y=f(x)$的拐点的必要条件的有:  
+\begin{example}[][Exam: 35.2.8]
+	已知函数 $f(x)$ 三阶可导, 则下列命题中不是 $(0,f(0))$ 为曲线 $y=f(x)$ 的拐点的必要条件的有:  
 \begin{itemize}
-	\item \hl{A}. 存在$\delta>0$,$f(x)$在$(-\delta,0)$内单调下降,$f(x)$在$(0,\delta)$内单调增加
-	\item \hl{B}. 存在$\delta>0$,当$x\in(-\delta,\delta)$,有$f''(-x)=-f''(x)$
-	\item \hl{C}. $f''(0)=0,\ f'''(0)\neq 0$
+	\item A. $\exists \delta>0, f(x)$ 在 $(-\delta,0)$ 内单调下降,$f(x)$ 在 $(0,\delta)$内单调增加
+	\item B. $\exists \delta>0, x\in(-\delta,\delta)$, $f''(-x)=-f''(x)$
+	\item C. $f''(0)=0, f'''(0)\neq 0$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	拐点是函数凹凸性发生改变的函数点,由函数$f(x)$三阶可导,我们可以得到$f''(x_{0})=0$,且有:  
@@ -500,18 +535,19 @@ A^{T}\xi_{2}=6\xi_{2}
 	
 	综上所述,上述三个命题都不正确.
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{September 12}
 
-1. 下列命题正确的是:  
+\begin{example}[][Exam: 35.2.9]
+	下列命题正确的是:  
 \begin{itemize}
 	\item A. 若$\lim\limits_{x\to x_{0}}f'(x)=a$,则$f'(x_{0})=a$
 	\item B. 若$\lim\limits_{x\to x_{0}}f'(x)$不存在,则$f(x)$在点$x_{0}$处不可导
-	\item \hl{C}. 若$f'(x)$在$x=x_{0}$处连续,则在$x_{0}$的某邻域内$f'(x)$存在
+	\item C. 若$f'(x)$在$x=x_{0}$处连续,则在$x_{0}$的某邻域内$f'(x)$存在
 	\item D. 若$f(x)$在$x=x_{0}$处可导,$g(x)$在$x=x_{0}$处不可导,则$f(x)\cdot g(x)$在$x=x_{0}$处不可导
 \end{itemize}
-\myspace{1}
+\end{example}
 \begin{solution}
 
 	重要反例:  
@@ -532,14 +568,15 @@ A^{T}\xi_{2}=6\xi_{2}
 	\end{array}
 	\right. $$
 \end{solution}
-\myspace{1}
 
-2. 证明不等式和求极限
+\begin{example}[][Exam: 35.2.10]
+	证明不等式和求极限
 
 (1). 证明:  $\dfrac{1}{n}-\ln(1+\dfrac{1}{n})<\dfrac{1}{2}\cdot\dfrac{1}{n^2},\ (n\in\mathbb{N}^{*})$
 
-(2). 求$\lim\limits_{n\to+\infty}\prod\limits_{i=1}^{n}\dfrac{n^2+i}{n^2}$
-\myspace{1}
+(2). 求 $\lim\limits_{n\to+\infty}\prod\limits_{i=1}^{n}\dfrac{n^2+i}{n^2}$
+\end{example}
+
 \begin{solution}
 
 	(1). 我们构造辅助函数:  $f(x)=x-\ln(1+x)-\dfrac{x^2}{2},\ x\in(0,1]$
@@ -570,12 +607,14 @@ A^{T}\xi_{2}=6\xi_{2}
 	$\text{左边}=\text{右边}=e^{\frac{1}{2}}$,
 	我们由夹逼定理可以得到原式子$I=e^{\frac{1}{2}}$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{September 13}
 
-1. 设区域$D_{1}:\{(x,y)| 0\leq x\leq 1,\ 0\leq y\leq 1\}$,$D_{2}:\{(x,y)| x^2+y^2\leq r^2,\ (r>0)\}$,比较$I=\iint \limits_{D_{1}}\left(\cos x^2+\sin y^2\right) dxdy$,\ $J=\iint\limits_{D_{1}}\sqrt{2}dxdy$,\ $K=\lim\limits_{r\to 0}\dfrac{1}{\pi r^2}\iint\limits_{D_{2}}e^{x^2-y^2}\cos(x+y)dxdy$大小
-\myspace{1}
+\begin{example}[][Exam: 35.2.11]
+	设区域$D_{1}:\{(x,y)| 0\leq x\leq 1,\ 0\leq y\leq 1\}$,$D_{2}:\{(x,y)| x^2+y^2\leq r^2,\ (r>0)\}$,比较$I=\iint \limits_{D_{1}}\left(\cos x^2+\sin y^2\right) dxdy$,\ $J=\iint\limits_{D_{1}}\sqrt{2}dxdy$,\ $K=\lim\limits_{r\to 0}\dfrac{1}{\pi r^2}\iint\limits_{D_{2}}e^{x^2-y^2}\cos(x+y)dxdy$大小
+\end{example}
+1. 
 \begin{solution}
 
 	我们首先可以得到:  $J=\sqrt{2}$
@@ -603,10 +642,11 @@ A^{T}\xi_{2}=6\xi_{2}
 	\end{array}
 	\right.\Rightarrow K<I<J$
 \end{solution}
-\myspace{1}
 
-2. 证明:  若在区间$I$上$f^{(n)}(x)\neq 0$,则方程$f(x)=0$在$I$上最多$n$个实数根
-\myspace{1}
+\begin{example}[][Exam: 35.2.12]
+	证明: 若在区间 $I$ 上 $f^{(n)}(x)\neq 0$, 则方程 $f(x)=0$ 在 $I$ 上最多 $n$ 个实数根
+\end{example}
+
 \begin{solution}
 
 	我们利用反证法,来证明:  方程$f(x)=0$在区间$I$上有超过$n$个实数根,则$f^{(n)}(x)=0$在区间$I$上有解.
@@ -628,18 +668,20 @@ A^{T}\xi_{2}=6\xi_{2}
 	
 	综上所述,原命题的逆否命题成立,原命题成立.
 \end{solution}
-\myspace{1}
+
 
 \textcolor{blue}{September 14}
 
-1. 设函数$f(x)$在$[0,+\infty)$上连续,且$(0,+\infty)$上$f'(x)>0$,下列命题正确的是:  
+\begin{example}[][Exam: 35.2.13]
+	设函数 $f(x)$ 在 $[0,+\infty)$ 上连续, 且 $(0,+\infty)$ 上 $f'(x)>0$, 下列命题正确的是:  
 \begin{itemize}
-	\item A. 若$f(0)=0$,则$\lim\limits_{x\to 0^{+}}\dfrac{f(x)}{x}$存在
-	\item B. 若$\lim\limits_{x\to+\infty}\dfrac{f(x)}{x}=2024$,则$\lim\limits_{x\to +\infty}f'(x)=2024$
-	\item \hl{C}. 若$\lim\limits_{x\to+\infty}\dfrac{1}{x}\int_{0}^{x}f(t)dt=1$,则$\lim\limits_{x\to +\infty}f(x)=1$
-	\item D. 若$\lim\limits_{x\to+\infty}\dfrac{1}{x}\int_{0}^{x}f(t)dt=1$且$\lim\limits_{x\to+\infty}\int_{0}^{x}f(t)dt=\infty$,则$\lim\limits_{x\to+\infty}f(x)$不存在
+	\item A. 若 $f(0)=0$,则 $\lim\limits_{x\to 0^{+}}\dfrac{f(x)}{x}$ 存在
+	\item B. 若 $\lim\limits_{x\to+\infty}\dfrac{f(x)}{x}=2024$, 则 $\lim\limits_{x\to +\infty}f'(x)=2024$
+	\item C. 若 $\lim\limits_{x\to+\infty}\dfrac{1}{x}\int_{0}^{x}f(t)dt=1$, 则 $\lim\limits_{x\to +\infty}f(x)=1$
+	\item D. 若 $\lim\limits_{x\to+\infty}\dfrac{1}{x}\int_{0}^{x}f(t)dt=1$ 且 $\lim\limits_{x\to+\infty}\int_{0}^{x}f(t)dt=\infty$,则$\lim\limits_{x\to+\infty}f(x)$不存在
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	(A). $f(x)=\sqrt{x}$
@@ -663,10 +705,11 @@ A^{T}\xi_{2}=6\xi_{2}
 	$$\lim\limits_{x\to +\infty}\dfrac{\int_{0}^{x}f(t)dt}{x}=\lim\limits_{x\to+\infty}f(x)\neq 1$$
 	
 \end{solution}
-\myspace{1}
 
-2. 讨论$\int_{0}^{+\infty}\dfrac{x^m|\ln x|^n}{1+x^k}dx$的敛散性
-\myspace{1}
+\begin{example}[][Exam: 35.2.14]
+	讨论 $\int_{0}^{+\infty}\dfrac{x^m|\ln x|^n}{1+x^k}dx$ 的敛散性
+\end{example}
+
 \begin{solution}
 
 	我们可知函数可能的暇点为$x=0,\ x=1,\ x=+\infty$
@@ -719,19 +762,21 @@ A^{T}\xi_{2}=6\xi_{2}
 	\end{array}
 	\right. $时,原反常积分收敛
 \end{solution}
-\myspace{1}
+
 
 \section{Week \Rmnum{3}}
 \textcolor{cyan}{September 15}
 
-1. 对于$y=\left(1+x+\dfrac{x^2}{2!}+\cdots+\dfrac{x^n}{n!} \right)e^{-x}$而言,下列说法正确的是:  
+\begin{example}[][Exam: 35.3.1]
+	函数 $y=\left(1+x+\dfrac{x^2}{2!}+\cdots+\dfrac{x^n}{n!} \right)e^{-x}$, 下列说法正确的是:  
 \begin{itemize}
-	\item A. 当$n$无论为偶数还是奇数时,函数都取极值
-	\item B. 当$n$无论为偶数还是奇数时,函数都不取极值
-	\item C. 当$n$为偶数时,函数取极值;当$n$为奇数时,函数不取极值
-	\item \hl{D}. 当$n$为偶数时,函数不取极值;当$n$为奇数时,函数取极值
+	\item A. 当 $n$ 无论为偶数还是奇数时, 函数都取极值
+	\item B. 当 $n$ 无论为偶数还是奇数时, 函数都不取极值
+	\item C. 当 $n$ 为偶数时, 函数取极值; 当 $n$ 为奇数时,函数不取极值
+	\item D. 当 $n$ 为偶数时, 函数不取极值; 当 $n$ 为奇数时,函数取极值
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	我们对原函数求导,可以得到:  
@@ -741,10 +786,11 @@ A^{T}\xi_{2}=6\xi_{2}
 	
 	(2). 当$n$为奇数时,$x<0$时,$f'(x)>0$;$x>0$时,$f'(x)<0$,$f(x)$在$x=0$处取极值.
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)$连续,$g(x)=f(x)\cdot\int_{0}^{x}f(t)dt$单调不增,证明$f(x)\equiv 0$
-\myspace{1}
+\begin{example}[][Exam: 35.3.2]
+	设 $f(x)$ 连续, $g(x)=f(x)\cdot\int_{0}^{x}f(t)dt$ 单调不增, 证明: $f(x)\equiv 0$
+\end{example}
+
 \begin{solution}
 
 	我们构造辅助函数:  $F(x)=\dfrac{1}{2}\left(\int_{0}^{x}f(t)dt \right)^2$
@@ -766,12 +812,14 @@ A^{T}\xi_{2}=6\xi_{2}
 	
 	综上所述,我们得到:  $f(x)\equiv 0$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{cyan}{September 16}
 
-1. 设函数$f(x)$在$(-\infty,+\infty)$上二阶可导,且$f''(x)\neq 0$,$\lim\limits_{x\to \infty}\dfrac{\sqrt{x^2-x+1}}{xf'(x)}=\alpha>0$,且存在一点$f(x_{0})<0$,证明:  方程$f(x)=0$在$(-\infty,+\infty)$上恰有两个实数根
-\myspace{1}
+\begin{example}[][Exam: 35.3.3]
+	设函数 $f(x)$ 在 $(-\infty,+\infty)$ 上二阶可导, $f''(x)\neq 0, \lim\limits_{x\to \infty}\dfrac{\sqrt{x^2-x+1}}{xf'(x)}=\alpha>0$,
+	且 $\exists x_{0}\in \mathbb{R},\ s.t.\ f(x_{0})<0$, 证明: 方程 $f(x)=0$ 在 $(-\infty,+\infty)$ 上恰有两个实数根
+\end{example}
 \begin{solution}
 
 	我们可以得到:  $$\left\lbrace
@@ -801,10 +849,11 @@ A^{T}\xi_{2}=6\xi_{2}
 	
 	综上所述,我们得到:  方程$f(x)=0$在$(-\infty,+\infty)$上恰有两个实数根
 \end{solution}
-\myspace{1}
 
-2. 讨论$\int_{0}^{+\infty}\dfrac{(1+x^p)\ln|\ln x|}{x^q}dx$的敛散性
-\myspace{1}
+\begin{example}[][Exam: 35.3.4]
+	讨论 $\int_{0}^{+\infty}\dfrac{(1+x^p)\ln|\ln x|}{x^q}dx$ 的敛散性
+\end{example}
+
 \begin{solution}
 
 	我们可以找到函数可能的暇点为$x=0,x=1,x=+\infty$
@@ -852,18 +901,21 @@ A^{T}\xi_{2}=6\xi_{2}
 	综上所述,我们得到,原反常积分一定发散.
 	
 \end{solution}
-\myspace{1}
+
 
 \textcolor{cyan}{September 17}
 
-1. 设函数$f(x)$在$x=0$的某个邻域内可导,$g(x)$在$x=0$的某个邻域内连续,且$\lim\limits_{x\to 0}\dfrac{g(x)}{x}=0,\ f'(x)=\sin^2 x+\int_{0}^{x}g(x-t)dt$,则下列命题正确的是:  
+\begin{example}[][Exam: 35.3.5]
+	设函数 $f(x)$ 在 $x=0$ 的某个邻域内可导,$g(x)$ 在 $x=0$ 的某个邻域内连续,
+	且 $\lim\limits_{x\to 0}\dfrac{g(x)}{x}=0, f'(x)=\sin^2 x+\int_{0}^{x}g(x-t)dt$,则下列命题正确的是:  
 \begin{itemize}
-	\item A. $x=0$是$f(x)$的极大值点
-	\item B. $x=0$是$f(x)$的极小值点
-	\item \hl{C}. $(0,f(0))$是$y=f(x)$的拐点
-	\item D. $x=0$是$f(x)$的极值点,但$(0,f(0))$不是$y=f(x)$的拐点
+	\item A. $x=0$ 是 $f(x)$ 的极大值点
+	\item B. $x=0$ 是 $f(x)$ 的极小值点
+	\item C. $(0,f(0))$ 是 $y=f(x)$ 的拐点
+	\item D. $x=0$ 是 $f(x)$ 的极值点,但 $(0,f(0))$ 不是 $y=f(x)$ 的拐点
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	我们首先可以得到:  $g(0)=0,g'(0)=0$,我们有:  
@@ -884,25 +936,28 @@ A^{T}\xi_{2}=6\xi_{2}
 	
 	我们有:  $x=0$不是$f(x)$的极值点;$(0,f(0))$是$f(x)$的拐点.
 \end{solution}
-\myspace{1}
 
-2. 设$X_{1},X_{2},\cdots,X_{9}$是来自正态总体$X$的简单随机样本,$Y_{1}=\dfrac{X_{1}+X_{2}+\cdots+X_{6}}{6}$,$Y_{2}=\dfrac{X_{7}+X_{8}+X_{9}}{3}$,$S^2=\dfrac{1}{2}\sum\limits_{i=1}^{9}(X_{i}-Y_{2})^2$,$Z=\dfrac{\sqrt{2}(Y_{1}-Y_{2})}{S}$,证明:  $Z\sim t(2)$
-\myspace{1}
+\begin{example}[][Exam: 35.3.6]
+	设 $X_{1},X_{2},\cdots,X_{9}$ 是来自正态总体 $X$ 的简单随机样本,$Y_{1}=\dfrac{X_{1}+X_{2}+\cdots+X_{6}}{6}, Y_{2}=\dfrac{X_{7}+X_{8}+X_{9}}{3}$,
+	$S^2=\dfrac{1}{2}\sum\limits_{i=1}^{9}(X_{i}-Y_{2})^2, Z=\dfrac{\sqrt{2}(Y_{1}-Y_{2})}{S}$, 证明: $Z\sim t(2)$
+\end{example}
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
+
 
 \textcolor{cyan}{September 18}
 
-1.设函数$f(x)$在区间$[-2,2]$上可导,且$f'(x)>f(x)>0$,下列命题正确的是:  
+\begin{example}[][Exam: 35.3.7]
+	设函数 $f(x)$ 在区间 $[-2,2]$ 上可导, 且 $f'(x)>f(x)>0$,下列命题正确的是:  
 \begin{itemize}
 	\item A. $\dfrac{f(-2)}{f(-1)}>1$
-	\item \hl{B}. $\dfrac{f(0)}{f(-1)}>e$
+	\item B. $\dfrac{f(0)}{f(-1)}>e$
 	\item C. $\dfrac{f(1)}{f(-1)}<e^2$
 	\item D. $\dfrac{f(2)}{f(-1)}<e^3$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	我们构造辅助函数:  $F(x)=\dfrac{f(x)}{e^x}$
@@ -924,10 +979,10 @@ A^{T}\xi_{2}=6\xi_{2}
 	\end{array}
 	\right. $$
 \end{solution}
-\myspace{1}
 
-2. 设$D=\{(p,q)|\int_{0}^{+\infty}\dfrac{x^p|x-1|^q}{(x+1)\ln x\ln(x+2)}dx\text{收敛}\}$,求$D$绕$q$轴旋转一周扫过的体积
-\myspace{1}
+\begin{example}[][Exam: 35.3.8]
+	$D=\left\{(p,q)\big|\int_{0}^{+\infty}\dfrac{x^p|x-1|^q}{(x+1)\ln x\ln(x+2)}dx\quad \text{收敛}\right\}$, 求 $D$ 绕 $q$ 轴旋转一周扫过的体积
+\end{example}
 \begin{solution}
 
 	我们可以找到函数可能的暇点为$x=0,x=1,x=+\infty$
@@ -974,17 +1029,19 @@ A^{T}\xi_{2}=6\xi_{2}
 	我们可以得到:  $D=\{(p,q)|-1<p<0,0<q<-p\}$,我们可以得到:  
 	$$V=\dfrac{2\pi}{3}$$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{cyan}{September 19}
 
-1.设$f(x)$是以$T$为周期的连续函数,下列哪些命题是$\int_{0}^{x}f(t)dt$是以$T$为周期的周期函数的充分条件:  
+\begin{example}[][Exam: 35.3.9]
+	设 $f(x)$ 是以 $T$ 为周期的连续函数,下列哪些命题是 $\int_{0}^{x}f(t)dt$ 是以 $T$ 为周期的周期函数的充分条件:  
 \begin{itemize}
 	\item A. $\int_{0}^{T}\left[ f(t)-f(-t)\right]dt=0$
-	\item \hl{B}. $f(-x)=f(x)$
-	\item \hl{C}. $\int_{0}^{+\infty}f(t)dt$收敛
+	\item B. $f(-x)=f(x)$
+	\item C. $\int_{0}^{+\infty}f(t)dt$ 收敛
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	我们设$F(x)=\int_{0}^{x}f(t)dt$,已知函数$f(x)$为周期函数,$F(x)$为在周期函数等价于:  
@@ -998,24 +1055,26 @@ A^{T}\xi_{2}=6\xi_{2}
 	
 	我们得到:  $\int_{0}^{T}f(x)dx=A=0$
 \end{solution}
-\myspace{1}
 
-2. 设随机变量$X$和$Y$独立同分布,$X$的概率密度为$f_{X}(x)=\left\lbrace
-\begin{array}{l}
-	\dfrac{2}{\sqrt{\pi}}e^{-x^2},\ x>0\\
-	0,\ x<0
-\end{array}
-\right. $,令$Z=\sqrt{X^2+Y^2}$,求$D(Z)$
-\myspace{1}
+\begin{example}[][Exam: 35.3.10]
+	设随机变量 $X$ 和 $Y$ 独立同分布,$X$ 的概率密度为 $f_{X}(x)=
+	\begin{cases}
+		\dfrac{2}{\sqrt{\pi}}e^{-x^2} & x>0\\
+		0 & x<0
+	\end{cases}$,令 $Z=\sqrt{X^2+Y^2}$, 求 $D(Z)$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
+
 
 \textcolor{cyan}{September 20}
 
-1.已知常数$k\geq \ln2-1$,证明:  $(x-1)(x-\ln^2 x+2k\ln x-1)\geq 0$
-\myspace{1}
+\begin{example}[][Exam: 35.3.11]
+	已知常数 $k\geq \ln2-1$, 证明: $(x-1)(x-\ln^2 x+2k\ln x-1)\geq 0$
+\end{example}
+
 \begin{solution}
 
 	我们构造辅助函数:  $f(x)=x-\ln^2 x+2k\ln x-1,x>0$
@@ -1049,10 +1108,11 @@ A^{T}\xi_{2}=6\xi_{2}
 	
 	综上所述,我们得到:  $(x-1)(x-\ln^2 x+2k\ln x-1)\geq 0$
 \end{solution}
-\myspace{1}
 
-2. 求$\sum\limits_{n=1}^{+\infty}\dfrac{(n-1)^3}{n(n+1)}x^n$的和函数$S(x)$
-\myspace{1}
+\begin{example}[][Exam: 35.3.12]
+	求幂级数 $\sum\limits_{n=1}^{+\infty}\dfrac{(n-1)^3}{n(n+1)}x^n$ 的和函数 $S(x)$
+\end{example}
+
 \begin{solution}
 
 	我们不妨设$a_{n}=\dfrac{(n-1)^3}{n(n+1)}$,我们可以得到:  
@@ -1072,12 +1132,14 @@ A^{T}\xi_{2}=6\xi_{2}
 
 综上所述,$S(x)=\dfrac{1}{(1-x)^2}-9-\dfrac{5x}{1-x}-\dfrac{8\ln(1-x)}{x}+\ln(1-x), \ x\in(-1,1)$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{cyan}{September 21}
 
-1. 设$f(x)=x[\dfrac{1}{x}]$,\ $[\dfrac{1}{x}]$表示不超过$\dfrac{1}{x}$的最大整数,判断$f(x)$的间断点及其类型
-\myspace{1}
+\begin{example}[][Exam: 35.3.13]
+	设 $f(x)=x[\dfrac{1}{x}], [\dfrac{1}{x}]$ 表示不超过 $\dfrac{1}{x}$ 的最大整数, 求 $f(x)$ 的间断点并判断其类型
+\end{example}
+
 \begin{solution}
 
 	我们发现$f(x)$可能的间断点在$x=0,\pm \dfrac{1}{n}$,且$x-1<[x]\leq x\Rightarrow \dfrac{1}{x}-1<[\dfrac{1}{x}]<\dfrac{1}{x}$
@@ -1110,10 +1172,11 @@ A^{T}\xi_{2}=6\xi_{2}
 	
 	综上所述,$f(x)$有且仅有一个可去间断点$x=0$,有无数多个跳跃间断点$x=\pm \dfrac{1}{n}$
 \end{solution}
-\myspace{1}
 
-2. 设$f(x,y)$在全平面上有连续的偏导数,且$x\dfrac{\partial f}{\partial x}+y\dfrac{\partial f}{\partial y}=0$,证明:  $f(x,y)$为常数.
-\myspace{1}
+\begin{example}[][Exam: 35.3.14]
+	设 $f(x,y)$ 在全平面上有连续的偏导数, 且 $x\dfrac{\partial f}{\partial x}+y\dfrac{\partial f}{\partial y}=0$, 证明: $f(x,y)$为常数
+\end{example}
+
 \begin{solution}
 
 	我们构造辅助函数:  $g(t)=f(tx,ty)$,我们有:  
@@ -1131,13 +1194,16 @@ A^{T}\xi_{2}=6\xi_{2}
 	
 	综上所述,$g'(t)=0\Rightarrow g(t)=C\Rightarrow g(0)=g(1)\Rightarrow f(0,0)=f(x,y)=C$,$f(x,y)$为常数.
 \end{solution}
-\myspace{1}
+
 
 \section{Week \Rmnum{4}}
 \textcolor{purplea}{September 22}
 
-1.设函数$f(x)$二阶可导,$f(0)=1,f'(0)=0$,且对任意$x\geq 0$,有$f''(x)-5f'(x)+6f(x)\geq 0$,证明不等式$f(x)\geq 3e^{2x}-2e^{3x},\ (x\geq 0)$
-\myspace{1}
+\begin{example}[][Exam: 35.4.1]
+	设函数 $f(x)$ 二阶可导, $f(0)=1, f'(0)=0$, $\forall x\geq 0, f''(x)-5f'(x)+6f(x)\geq 0$,证明: 
+	$$f(x)\geq 3e^{2x}-2e^{3x} (x\geq 0)$$
+\end{example}
+
 \begin{solution}
 
 	我们构造辅助函数:  $F(x)=e^{-3x}(f'(x)-2f(x))$,我们有:  
@@ -1160,10 +1226,11 @@ A^{T}\xi_{2}=6\xi_{2}
 	
 	综上所述,我们证明:  $f(x)\geq 3e^{2x}-2e^{3x},\ (x\geq 0)$
 \end{solution}
-\myspace{1}
 
-2. 求$\sum\limits_{n=1}^{+\infty}\dfrac{n!}{(2n+1)!!(n+1)}$的和
-\myspace{1}
+\begin{example}[][Exam: 35.4.2]
+	$$\sum\limits_{n=1}^{+\infty}\dfrac{n!}{(2n+1)!!(n+1)}$$
+\end{example}
+
 \begin{solution}
 
 	我们构造幂级数$\sum\limits_{n=1}^{+\infty}\dfrac{(2n)!!}{(2n+1)!!(n+1)}x^{2n+2}$,我们设该幂级数的和函数为$S(x)$
@@ -1194,12 +1261,15 @@ A^{T}\xi_{2}=6\xi_{2}
 	
 	我们得到原和式为:  $I=2S(\dfrac{1}{\sqrt{2}})=\dfrac{\pi^2}{8}-1$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purplea}{September 23}
 
-1. 计算$\iint\limits_{D}\left[ x(1-y^3)+y(1+x^3)\right]dxdy$,其中$D=\{(x,y)|x^2+y^2\leq 2x+2y\}$
-\myspace{1}
+\begin{example}[][Exam: 35.4.3]
+	$$\iint\limits_{D}\left[ x(1-y^3)+y(1+x^3)\right]dxdy$$
+	
+	其中 $D=\{(x,y)|x^2+y^2\leq 2x+2y\}$
+\end{example}
 \begin{solution}
 
 	我们根据轮换对称性,可以得到:
@@ -1212,10 +1282,12 @@ A^{T}\xi_{2}=6\xi_{2}
 		&=&4\pi
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
-2. 设$a_{n}=\int_{0}^{\frac{\pi}{2}}\cos^n x\sin nxdx$,证明:  $a_{n}=\dfrac{1}{2^{n+1}}\sum\limits_{k=1}^{n}\dfrac{2^k}{k},\ (n\geq 1)$
-\myspace{1}
+\begin{example}[][Exam: 35.4.4]
+	设 $a_{n}=\int_{0}^{\frac{\pi}{2}}\cos^n x\sin nxdx$,证明: 
+	$$a_{n}=\dfrac{1}{2^{n+1}}\sum\limits_{k=1}^{n}\dfrac{2^k}{k}(n\geq 1)$$
+\end{example}
+
 \begin{solution}
 
 	我们可以得到:
@@ -1254,29 +1326,29 @@ A^{T}\xi_{2}=6\xi_{2}
 	
 	综上所述,我们得到:  $a_{n}=\dfrac{1}{2^{n+1}}\sum\limits_{k=1}^{n}\dfrac{2^k}{k},\ (n\geq 1)$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purplea}{September 24}
 
-1. 设三元二次型$f=x^{T}Ax$正定,其中$x=(x_{1},x_{2},x_{3})^{T}$,$A$为实对称矩阵,则下列说法不正确的是:  
+\begin{example}[][Exam: 35.4.5]
+	设三元二次型 $f=x^{T}Ax$ 正定, 其中 $x=(x_{1},x_{2},x_{3})^{T}$, $A$ 为实对称矩阵, 则下列说法不正确的是:  
 \begin{itemize}
-	\item A. 仅在$x=0$处$f$取得最小值
-	\item B. 齐次方程组$\left\lbrace
-	\begin{array}{l}
+	\item A. 仅在 $x=0$ 处 $f$ 取得最小值
+	\item B. 齐次方程组 $
+	\begin{cases}
 		\dfrac{\partial f}{\partial x_{1}}=0\\
 		\dfrac{\partial f}{\partial x_{2}}=0\\
-		\dfrac{\partial f}{\partial x_{3}}=0
-	\end{array}
-	\right. $只有零解
+		\dfrac{\partial f}{\partial x_{3}}=0  
+	\end{cases}$ 只有零解
 	\item C. 二阶偏导数矩阵
-	$$\left( \dfrac{\partial^2 f}{\partial x_{i}\partial x_{j}}\right)_{3\times 3}=\left( \begin{matrix}
+	$\left(\dfrac{\partial^2 f}{\partial x_{i}\partial x_{j}}\right)_{3\times 3}=\begin{pmatrix}
 		\dfrac{\partial^2 f}{\partial x_{1}^2}&\dfrac{\partial^2 f}{\partial x_{1}\partial x_{2}}&\dfrac{\partial^2 f}{\partial x_{1}\partial x_{3}}\\
 		\dfrac{\partial^2 f}{\partial x_{2}\partial x_{1}}&\dfrac{\partial^2 f}{\partial x_{2}^2}&\dfrac{\partial^2 f}{\partial x_{2}\partial x_{3}}\\
 		\dfrac{\partial^2 f}{\partial x_{3}\partial x_{1}}&\dfrac{\partial^2 f}{\partial x_{3}\partial x_{2}}&\dfrac{\partial^2 f}{\partial x_{3}^2}
-	\end{matrix}\right) \text{正定}$$
-	\item \hl{D}. 存在三维非零列向量$\alpha$,使得$A=\alpha\alpha^{T}$,从而$f=(\alpha^{T}x)^2$
+	\end{pmatrix}$ 是正定矩阵
+	\item D. $\exists \alpha\in \mathbb{R}^{3}\neq 0,\ s.t.\ A=\alpha\alpha^{T}\to f=(\alpha^{T}x)^2$
 \end{itemize}
-\myspace{1}
+\end{example}
 \begin{solution}
 
 	我们不妨假设$f=a_{11}x_{1}^2+a_{22}x_{2}^2+a_{33}x_{3}^2+2a_{12}x_{1}x_{2}+2a_{13}x_{1}x_{3}+2a_{23}x_{2}x_{3}$,我们可以得到:  
@@ -1330,11 +1402,12 @@ $$\left( \dfrac{\partial^2 f}{\partial x_{i}\partial x_{j}}\right)_{3\times 3}=\
 
 (4)$|A|\neq 0\Rightarrow rank(A)=3$,假设$A=\alpha\alpha^{T}$,$rank(A)=1$矛盾！！！
 \end{solution}
-\myspace{1}
 
 
-2. 证明不等式:  $$|\dfrac{\sin x-\sin y}{x-y}-\cos y|\leq \dfrac{1}{2}|x-y|,\ (x\neq y)$$
-\myspace{1}
+\begin{example}[][Exam: 35.4.6]
+	证明: $$\big|\dfrac{\sin x-\sin y}{x-y}-\cos y\big|\leq \dfrac{1}{2}\big|x-y\big| (x\neq y)$$
+\end{example}
+
 \begin{solution}
 
 	我们利用带拉格朗日余项的泰勒公式将$f(x)=\sin x$进行展开:  
@@ -1346,12 +1419,14 @@ $$\left( \dfrac{\partial^2 f}{\partial x_{i}\partial x_{j}}\right)_{3\times 3}=\
 		&\leq&\dfrac{1}{2}|x-y|
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purplea}{September 25}
 
-1.求$\sum\limits_{n=2}^{+\infty}\dfrac{n^2+3n+4}{2^n(n+1)!}x^{2n}$的和函数$S(x)$
-\myspace{1}
+\begin{example}[][Exam: 35.4.7]
+	求幂级数 $\sum\limits_{n=2}^{+\infty}\dfrac{n^2+3n+4}{2^n(n+1)!}x^{2n}$ 的和函数 $S(x)$
+\end{example}
+
 \begin{solution}
 
 	我们可以将原级数化为:  $\sum\limits_{n=2}^{+\infty}\dfrac{n^2+3n+4}{(n+1)!}(\dfrac{x^2}{2})^{n}$
@@ -1377,28 +1452,35 @@ $$\left( \dfrac{\partial^2 f}{\partial x_{i}\partial x_{j}}\right)_{3\times 3}=\
 	\end{array}
 	\right. $
 \end{solution}
-\myspace{1}
 
-2. 设线性方程组$Ax=\alpha$有解,$\left( \begin{matrix}
-	A\\B
-\end{matrix}\right)x=\left( \begin{matrix}
-\alpha\\\beta
-\end{matrix}\right) $无解,则下列结论正确的是:  
-\begin{itemize}
-	\item A. $r(B,\beta)=r(B)+1$
-	\item B. $r\left(\begin{matrix}
-		A&\alpha\\B&\beta
-	\end{matrix}\right)<r\left( \begin{matrix}
-	A\\B
-\end{matrix}\right) +1$
-	\item C. $r\left[B^{T}(B,\beta)\right]>r(B^{T}B)$ 
-	\item \hl{D}. $r\left[(A^T,B^T)\left(\begin{matrix}
-		A&\alpha\\B&\beta
-	\end{matrix} \right) \right] =r\left[ (A^T,B^T)\left( \begin{matrix}
-	A\\B
-\end{matrix}\right) \right] $
-\end{itemize}
-\myspace{1}
+\begin{example}[][Exam: 35.4.8]
+	设线性方程组 $Ax=\alpha$ 有解,$
+	\begin{pmatrix}
+		A\\B
+	\end{pmatrix}x=
+	\begin{pmatrix}
+		\alpha\\\beta
+	\end{pmatrix}$ 无解, 则下列结论正确的是:  
+	\begin{itemize}
+		\item A. $r(B,\beta)=r(B)+1$
+		\item B. $r
+		\begin{pmatrix}
+			A&\alpha\\B&\beta
+		\end{pmatrix}<r
+		\begin{pmatrix}
+		A\\B
+		\end{pmatrix}+1$
+		\item C. $r\left[B^{T}(B,\beta)\right]>r(B^{T}B)$ 
+		\item D. $r\left[(A^T,B^T)
+		\begin{pmatrix}
+			A&\alpha\\B&\beta
+		\end{pmatrix}\right] =r\left[ (A^T,B^T)
+		\begin{pmatrix}
+		A\\B
+		\end{pmatrix}\right]$
+	\end{itemize}
+	
+\end{example}
 \begin{solution}
 
 	(1). 方程组$Ax=\alpha$与$Bx=\beta$无公共解,$r(B,\beta)$和$r(B)+1$可能相等,也可能不等
@@ -1441,12 +1523,14 @@ A\\B
 		A\\B
 	\end{matrix}\right) \right] $$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purplea}{September 26}
 
-1. 已知$\lim\limits_{x\to 0^{+}}\dfrac{x^{\ln (3\cos x)}-3^{\ln x}}{x^k\ln x}=c,\ (c\neq 0)$,求$c$、$k$
-\myspace{1}
+\begin{example}[][Exam: 35.4.9]
+	已知 $\lim\limits_{x\to 0^{+}}\dfrac{x^{\ln (3\cos x)}-3^{\ln x}}{x^k\ln x}=c(c\neq 0)$, 求$c, k$
+\end{example}
+
 \begin{solution}
 
 	原极限可以化为:  
@@ -1466,11 +1550,12 @@ A\\B
 	\end{array}
 	\right. $
 \end{solution}
-\myspace{1}
 
-2. 设$f(x,y)$在$D=\{(x,y)|x^2+y^2\leq 1\}$内具有连续的偏导数,且在边界上取值为$0$,证明:  
-$$f(0,0)=\lim\limits_{\xi\to 0^{+}}\dfrac{-1}{2\pi}\iint\limits_{D_{1}}\dfrac{x\dfrac{\partial f}{\partial x}+y\dfrac{\partial f}{\partial y}}{x^2+y^2}dxdy,\ (D_{1}=\{(x,y)|\xi^{2}\leq x^2+y^2\leq 1\})$$
-\myspace{1}
+\begin{example}[][Exam: 35.4.10]
+	设 $f(x,y)$ 在 $D=\{(x,y)|x^2+y^2\leq 1\}$ 内具有连续的偏导数, 且在边界上取值为 $0$,证明:  
+$$f(0,0)=\lim\limits_{\xi\to 0^{+}}\dfrac{-1}{2\pi}\iint\limits_{D_{1}}\dfrac{x\dfrac{\partial f}{\partial x}+y\dfrac{\partial f}{\partial y}}{x^2+y^2}dxdy$$
+其中 $(D_{1}=\{(x,y)|\xi^{2}\leq x^2+y^2\leq 1\})$
+\end{example}
 \begin{solution}
 
 	我们利用极坐标代换:  
@@ -1492,18 +1577,20 @@ $$f(0,0)=\lim\limits_{\xi\to 0^{+}}\dfrac{-1}{2\pi}\iint\limits_{D_{1}}\dfrac{x\
 		&=&f(0,0)
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purplea}{September 27}
 
-1. 设$f(x)$二阶可导,$f(x)>0$,$\lim\limits_{x\to 0}\dfrac{f(x)-1}{x}=1$,且$f(x)f''(x)>[f'(x)]^2$,下列命题一定成立的是:  
+\begin{example}[][Exam: 35.4.11]
+	设 $f(x)$ 二阶可导, $f(x)>0, \lim\limits_{x\to 0}\dfrac{f(x)-1}{x}=1$, 且 $f(x)f''(x)>[f'(x)]^2$, 下列命题一定成立的是:  
 \begin{itemize}
-	\item \hl{A}. $e^{-x}f(x)\geq 1$
+	\item A. $e^{-x}f(x)\geq 1$
 	\item B. $e^{-x}f(x)<1$
 	\item C. $\dfrac{\ln f(x)}{x}<1$
 	\item D. $\dfrac{\ln f(x)}{x}>1$
 \end{itemize}
-\myspace{1}
+\end{example}
+
 \begin{solution}
 
 	$\lim\limits_{x\to 0}\dfrac{f(x)-1}{x}=1\Rightarrow \left\lbrace
@@ -1525,10 +1612,11 @@ $$f(0,0)=\lim\limits_{\xi\to 0^{+}}\dfrac{-1}{2\pi}\iint\limits_{D_{1}}\dfrac{x\
 	我们将$F(x)$在$x=0$处进行泰勒展开得到:  
 	$$F(x)=F(0)+F'(0)x+\dfrac{F''(\xi)}{2}x^2,\ F''(x)>0\Rightarrow F(x)\geq x\Rightarrow e^{-x}f(x)\geq 1$$
 \end{solution}
-\myspace{1}
 
-2. 求$\sum\limits_{n=1}^{+\infty}n^3x^n$的和函数$S(x)$
-\myspace{1}
+\begin{example}[][Exam: 35.4.12]
+	求幂级数 $\sum\limits_{n=1}^{+\infty}n^3x^n$ 的和函数 $S(x)$
+\end{example}
+
 \begin{solution}
 
 	首先求收敛域,不妨设$a_{n}=n^3$,我们有:  
@@ -1558,12 +1646,14 @@ $$f(0,0)=\lim\limits_{\xi\to 0^{+}}\dfrac{-1}{2\pi}\iint\limits_{D_{1}}\dfrac{x\
 	
 	综上所述,原幂级数的和函数$S(x)=\dfrac{x^3+4x^2+x}{(x-1)^4}$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purplea}{September 28}
 
-1. 求极限$\lim\limits_{x\to +\infty}\left[(x+2)^{1+\frac{1}{x}}-x^{1+\frac{1}{x+\sin x}}\right]$
-\myspace{1}
+\begin{example}[][Exam: 35.4.13]
+	$$\lim\limits_{x\to +\infty}\left[(x+2)^{1+\frac{1}{x}}-x^{1+\frac{1}{x+\sin x}}\right]$$
+\end{example}
+
 \begin{solution}
 
 	原极限可化为:  
@@ -1574,29 +1664,36 @@ $$f(0,0)=\lim\limits_{\xi\to 0^{+}}\dfrac{-1}{2\pi}\iint\limits_{D_{1}}\dfrac{x\
 		&=&2
 	\end{eqnarray*}
 \end{solution}
-\myspace{1}
 
 
-2. 设$A$为$n$阶方阵,$\beta$为$n$维非零列向量,且$r\left( \begin{matrix}
-	A^T\\\beta^T
-\end{matrix}\right)<r\left( \begin{matrix}
-A^T&0\\\beta^T&1
-\end{matrix}\right)$,下列说法正确的是:  
-\begin{itemize}
-	\item A. $\left( \begin{matrix}
-		A&\beta\\\beta^T&0
-	\end{matrix}\right)\left( \begin{matrix}
-	x\\y
-\end{matrix}\right)=0$必有非零解
-	\item B. $\left( \begin{matrix}
-		A&\beta\\\beta^T&0
-	\end{matrix}\right)\left( \begin{matrix}
-		x\\y
-	\end{matrix}\right)=0$只有零解
-	\item C. 方程组$Ax=\beta$必无解
-	\item \hl{D}. 方程组$Ax=\beta$必有解
-\end{itemize}
-\myspace{1}
+\begin{example}[][Exam: 35.4.14]
+	设 $A$ 为 $n$ 阶方阵, $\beta$ 为 $n$ 维非零列向量, 且 $r
+	\begin{pmatrix}
+		A^T\\\beta^T
+	\end{pmatrix} < r
+	\begin{pmatrix}
+	A^T&0\\\beta^T&1
+	\end{pmatrix}$, 下列说法正确的是:  
+	\begin{itemize}
+		\item A. $
+		\begin{pmatrix}
+			A&\beta\\\beta^T&0
+		\end{pmatrix}
+		\begin{pmatrix}
+			x\\y
+		\end{pmatrix}=0$ 必有非零解
+		\item B. $
+		\begin{pmatrix}
+			A&\beta\\\beta^T&0
+		\end{pmatrix}
+		\begin{pmatrix}
+			x\\y
+		\end{pmatrix}=0$ 只有零解
+		\item C. 方程组$Ax=\beta$必无解
+		\item D. 方程组$Ax=\beta$必有解
+	\end{itemize}
+\end{example}
+
 \begin{solution}
 
 	$$\left( \begin{matrix}
@@ -1634,31 +1731,35 @@ x\\y
 	A^T\\\beta^T
 \end{matrix}\right)+1\Rightarrow r(A,\beta)=r(A)$,我们可以得到:  方程组$Ax=\beta$一定有解
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purplea}{September 29}
 
-1. 设$X\sim N(0,1)$,求$E(X^4e^{X})$
-\myspace{1}
+\begin{example}[][Exam: 35.4.15]
+	设 $X\sim N(0,1)$, 求 $E(X^4e^{X})$
+\end{example}
+
 \begin{solution}
 	
 \end{solution}
-\myspace{1}
 
-2.设$f(x)$为非负连续函数,且当$x>0$时,有$\int_{0}^{x}f(x)f(x-t)dt=x^3$,求$f(x)$ 
-\myspace{1}
+\begin{example}[][Exam: 35.4.16]
+	设 $f(x)$ 为非负连续函数, $x>0, \int_{0}^{x}f(x)f(x-t)dt=x^3$, 求 $f(x)$ 
+\end{example}
 \begin{solution}
 
 	我们不妨设$F(x)=\int_{0}^{x}f(t)dt,F(0)=0$,上述条件可化为:  
 	$$\int_{0}^{x}f(x)f(x-t)dt=x^3\Rightarrow f(x)\int_{0}^{x}f(t)dt=x^3\Rightarrow F(x)F'(x)=x^3\Rightarrow F(x)=\dfrac{x^2}{\sqrt{2}}$$
 	$$f(x)=F'(x)=\sqrt{2}x$$
 \end{solution}
-\myspace{1}
+
 
 \textcolor{purplea}{September 30}
 
-1. $a_{n+2}=\dfrac{2}{n+2}a_{n+1}+\dfrac{3}{(n+2)(n+1)}a_{n}(n\geq 0)$,$a_{0}=0,a_{1}=1$,已知$a_{3}>a_{4}>a_{5}$,求$\sum\limits_{n=0}^{+\infty}a_{n}x^n$的和函数$S(x)$
-\myspace{1}
+\begin{example}[][Exam: 35.4.17]
+	$a_{n+2}=\dfrac{2}{n+2}a_{n+1}+\dfrac{3}{(n+2)(n+1)}a_{n}(n\geq 0), a_{0}=0,a_{1}=1$,
+	已知 $a_{3}>a_{4}>a_{5}$, 求幂级数 $\sum\limits_{n=0}^{+\infty}a_{n}x^n$ 的和函数$S(x)$
+\end{example}
 \begin{solution}
 
 	我们利用数学归纳法证明$\{a_{n}\}(n\geq 3)$单调递减:  
@@ -1688,18 +1789,18 @@ x\\y
 	
 	我们可以得到:  $S(x)=\dfrac{e^{3x}-e^{-x}}{4}$
 \end{solution}
-\myspace{1}
 
-2. 设$f(x)$在$[0,1]$上二阶可导,且$\lim\limits_{x\to 0^{+}}\dfrac{f(x)}{x}=2$,$\int_{0}^{1}f(x)dx=1$.
+\begin{example}[][Exam: 35.4.18]
+	设 $f(x)$ 在 $[0,1]$ 上二阶可导,且 $\lim\limits_{x\to 0^{+}}\dfrac{f(x)}{x}=2, \int_{0}^{1}f(x)dx=1$
 
-(1). 证明:  $\exists \xi\in(0,1),\ s.t. f'(\xi)=f(\xi)-2\xi+2$
+(1). 证明: $\exists \xi\in(0,1),\ s.t.\ f'(\xi)=f(\xi)-2\xi+2$
 
-(2). 证明:  $\exists \eta\in(0,1),\ s.t. f''(\eta)=0$
+(2). 证明: $\exists \eta\in(0,1),\ s.t.\ f''(\eta)=0$
 
-(3). 证明:  $\exists \zeta\in(0,1),\ s.t. \int_{0}^{\zeta}f(t)dt+\zeta f(\zeta)=2\zeta$
+(3). 证明: $\exists \zeta\in(0,1),\ s.t.\ \int_{0}^{\zeta}f(t)dt+\zeta f(\zeta)=2\zeta$
 
-(4). 证明:  $\exists \mu\in(0,1),\ s.t. \mu f(\mu)=2\int_{0}^{\mu}f(t)dt$
-\myspace{1}
+(4). 证明: $\exists \mu\in(0,1),\ s.t.\ \mu f(\mu)=2\int_{0}^{\mu}f(t)dt$
+\end{example}
 \begin{solution}
 
 	我们由题意可得:  
