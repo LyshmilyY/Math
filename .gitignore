@@ -1,4 +1,5 @@
 *.aux
+*.bcf
 *.log
 *.ptc
 *.toc

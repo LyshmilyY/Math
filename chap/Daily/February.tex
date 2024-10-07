@@ -21,6 +21,8 @@
 
 	综上所述: $x=0$ 不是 $f(x)$ 的极值点, 点 $(0,f(0))$ 是 曲线 $f(x)$ 的拐点
 \end{solution}
+\myspace{1}
+
 \begin{example}[][Exam: 28.1.2]
 	设函数 $f(x)$ 在 $(-\infty,+\infty)$ 上连续,其导函数图形如图所示,则:
 \begin{tikzpicture}
@@ -77,6 +79,7 @@
 
 	综上所述, $f(x)$ 有且仅有一条斜渐近线: $x-y+\dfrac{1}{e} = 0$
 \end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.1.4]
 	曲线 $y=\dfrac{x^{2}+x}{x^{2}-1}$ 渐近线的条数为:
@@ -156,6 +159,7 @@
 		\node at (-0.2,-0.2) {O};
 	\end{tikzpicture}
 \end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.1.6]
 	在区间 $(-\infty,+\infty)$ 内,方程 $|x|^{\frac{1}{4}}+|x|^{\frac{1}{2}}-\cos x=0$: 
@@ -208,6 +212,7 @@
 
 	$f(x)$ 的驻点只有$2$个驻点, 分别是 $x=x_{1}$ 和 $x=x_{2}$ 
 \end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.1.8]
 	设 $f(x)=x^{2}(1-x)^{2}$,则方程 $f''(x)=0$在 $(0,1)$ 上:
@@ -256,6 +261,7 @@
 
 	综上所述, $f(x)$ 在 $(0,+\infty)$ 内有且仅有 $2$ 个零点
 \end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.1.10]
 	证明:当 $x>0, \ln(1+\dfrac{1}{x})>\dfrac{1}{1+x}$
@@ -287,6 +293,7 @@
 
 	综上所述, $f(x) > \dfrac{\pi}{2}$
 \end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.1.12]
 	设 $p,q$ 是大于 $1$ 的常数,且 $\dfrac{1}{p}+\dfrac{1}{q}=1$,
@@ -338,6 +345,7 @@
 
 	综上所述, $\exists \xi\in(0,3),\ s.t.\ f'(\xi)=0$
 \end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.1.14]
 	设 $f(x)$在区间 $[a,b]$ 上具有二阶导数, 且 $f(a)=f(b)=0,f'(a)f'(b)>0$,证明:
@@ -371,6 +379,7 @@
 
 	综上所述, 存在 $\xi\in(a,b)$ 和 $\eta\in(a,b)$,$s.t.\ f(\xi)=0$ 且 $f''(\eta)=0$
 \end{solution}
+\myspace{1}
 
 \section{Week \Rmnum{2}}
 \textcolor{blue}{\textbf{February 8}}
@@ -403,6 +412,7 @@
 
 	罗尔定理: $\exists \zeta\in(a,b),\ s.t.\ g'(\zeta) = e^{\lambda\zeta}\left[f'(\zeta) + \lambda f(\zeta)\right] = 0\Rightarrow f'(\zeta) + \lambda f(\zeta) = 0$
 \end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.2.2]
 	设 $f(x)$ 在 $[0,1]$ 上连续,在 $(0,1)$ 内可导,且 $f(1)=0$,证明:
@@ -438,6 +448,7 @@
 
 	综上所述, $\exists \xi\in\left(0,\dfrac{1}{2}\right),\eta\in\left( \dfrac{1}{2},1\right),\ s.t.\ f'(\xi)+f'(\eta)=\xi^{2}+\eta^{2}$
 \end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.2.4]
 	设 $f(x)$ 在区间 $[a,b]$ 上连续,在 $(a,b)$ 内可导,且 $a,b$ 同号,证明:
@@ -491,6 +502,7 @@
 	\end{eqnarray*}
 
 \end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.2.6]
 	求下列的不定积分
@@ -538,6 +550,24 @@
 (2). $\displaystyle{\int \dfrac{1-x}{1+x^{3}}dx}$
 \end{example}
 
+\begin{solution}
+
+	(1). 
+	\begin{eqnarray*}
+		I & = & \int \dfrac{1}{x^{2}-x+1}dx\\
+		  & = & \int \dfrac{1}{(x-\frac{1}{2})^{2}+(\frac{\sqrt{3}}{2})^{2}}dx\\
+		  & = & \dfrac{2}{\sqrt{3}}\arctan \dfrac{2x-1}{\sqrt{3}} +C
+	\end{eqnarray*}
+
+	(2). 
+	\begin{eqnarray*}
+		I & = & \int\dfrac{1-x+x^{2}}{1+x^{3}}dx + \int\dfrac{x^{2}}{1+x^{3}}dx\\
+		  & = & \int\dfrac{1}{1+x}dx + \int\dfrac{1}{3(1+x^{3})}d(x^{3})\\
+		  & = & \ln |1+x| + \dfrac{1}{3}\ln|1+x^{3}| + C
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
+
 \begin{example}[][Exam: 28.2.8]
 	求下列的不定积分
 
@@ -546,16 +576,56 @@
 (2). $\displaystyle{\int \dfrac{x}{1+x^{3}}dx}$
 \end{example}
 \myspace{1}
+\begin{solution}
+
+	(1). 
+	\begin{eqnarray*}
+		I & = & \int \dfrac{1}{1+x^{3}}dx\\
+		  & = & \int \dfrac{1}{(x+1)(x^{2}-x+1)}dx\\
+		  & = & \dfrac{1}{3}\int \left[\dfrac{1}{x+1}-\dfrac{x-2}{x^{2}-x+1}\right]dx\\
+		  & = & \dfrac{1}{3}\int \dfrac{1}{1+x}dx - \dfrac{1}{6}\int \dfrac{2x-1}{1+x^{2}-x}dx + \dfrac{1}{2}\int \dfrac{1}{1+x^{2}-x}dx\\
+		  & = & \dfrac{1}{3}\ln |1+x| - \dfrac{1}{6}\ln |1+x^{2}-x| + \dfrac{1}{\sqrt{3}}\arctan \dfrac{2x-1}{\sqrt{3}} + C\\
+	\end{eqnarray*}
+
+	(2). 
+	\begin{eqnarray*}
+		I & = & \int \dfrac{x}{1+x^{3}}dx\\
+		  & = & \dfrac{1}{3}\int \left[\dfrac{x+1}{1+x^{2}-x}-\dfrac{1}{1+x}\right]dx\\
+		  & = & \dfrac{1}{6}\int \dfrac{2x-1}{1+x^{2}-x}dx - \dfrac{1}{3}\int \dfrac{1}{1+x}dx + \dfrac{1}{2}\dfrac{1}{1+x^{2}-x}dx\\
+		  & = & \dfrac{1}{6}\ln |1+x^{2}-x| - \dfrac{1}{3}\ln |1+x| + \dfrac{1}{\sqrt{3}}\arctan \dfrac{2x-1}{\sqrt{3}} + C
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
 
 \textcolor{blue}{\textbf{February 12}}
 
 \begin{example}[][Exam: 28.2.9]
 	已知 $f(x)$ 的一个原函数为 $\ln^{2}x$,求 $\int xf'(x)dx$
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int xf'(x)dx\\
+		  & = & \int xdf(x)\\
+		  & = & xf(x) - \int f(x)dx \\
+		  & = & xf(x) - \ln^{2}x + C\\
+		  & = & 2\ln x - \ln^{2}x + C
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.2.10]
 	设 $f(\ln x)=\dfrac{\ln(1+x)}{x}$,求 $\int f(x)dx$
 \end{example}
+\begin{solution}
+
+	$$f(\ln x) = \dfrac{\ln(1+x)}{x}\Rightarrow f(x) = \dfrac{\ln(1+e^{x})}{e^{x}}$$
+	\begin{eqnarray*}
+		\int f(x)dx & = & \int \dfrac{\ln(1+e^{x})}{e^{x}}dx\\
+		  			& = & \int \ln(1+e^{x})d(-e^{-x})\\
+		  			& = & -\dfrac{\ln(1+e^{x})}{e^{x}} + \int \dfrac{1}{1+e^{x}}dx\\
+					& = & x - \dfrac{\ln(1+e^{x})}{e^{x}} - \ln(1+e^{x}) + C 
+	\end{eqnarray*}
+\end{solution}
 \myspace{1}
 
 \textcolor{blue}{\textbf{February 13}}
@@ -563,6 +633,22 @@
 \begin{example}[][Exam: 28.2.11]
 	$$\int \max(1,x^{2})dx$$
 \end{example}
+\begin{solution}
+	
+	$$\max(1,x^{2}) = 
+	\begin{cases}
+		x^{2} & x\in(-\infty,-1)\cup(1,+\infty)\\
+		1 & x\in[-1,1]
+	\end{cases}$$
+
+	$$\int \max(1,x^{2}) dx = 
+	\begin{cases}
+		\dfrac{1}{3}x^{3} + C -\dfrac{2}{3}\\
+		x + C\\
+		\dfrac{1}{3}x^{3} + C +\dfrac{2}{3}
+	\end{cases}$$
+\end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.2.12]
 	设 $M=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\dfrac{\sin x}{1+x^{2}}\cos^{4}xdx,N=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}(\sin^{3}x+\cos^{4}x)dx,P=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}(x^{2}\sin^{3}x-\cos^{4}x)dx$
@@ -573,6 +659,13 @@
 	\item D. $P<M<N$
 \end{itemize}
 \end{example}
+\begin{solution}
+	$$\begin{cases}
+	  M = 0\\
+	  N = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}cos^{4}xdx > 0\\
+	  P = -\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}cos^{4}xdx < 0
+	\end{cases}\Rightarrow P < M < N$$
+\end{solution}
 \myspace{1}
 
 \textcolor{blue}{\textbf{February 14}}
@@ -586,6 +679,14 @@
 	\item D. $K>N>M$
 \end{itemize}
 \end{example}
+\begin{solution}
+	$$\begin{cases}
+	  M = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\dfrac{1+2x+x^{2}}{1+x^{2}}dx = \pi\\
+	  N < \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}1dx = \pi\\
+	  K > \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}1dx = \pi
+	\end{cases}\Rightarrow N < M < K$$
+\end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.2.14]
 	设 $I_{1}=\int_{0}^{\frac{\pi}{4}}\dfrac{\tan x}{x}dx,I_{2}=\int_{0}^{\frac{\pi}{4}}\dfrac{x}{\tan x}dx$
@@ -596,18 +697,47 @@
 	\item D. $1>I_{2}>I_{1}$
 \end{itemize}
 \end{example}
+\begin{solution}
+	$$x \in (0,\dfrac{\pi}{4}), \tan x > x\Rightarrow I_{1} > I_{2}$$
+
+	构造辅助函数: $f(x) = \dfrac{\tan x}{x}$
+
+	$$\begin{cases}
+	  f'(x) = \dfrac{x-\sin x}{x^{2}\cos^{2}x} > 0\\
+	  f(x) < f(\dfrac{\pi}{4}) = \dfrac{4}{\pi}
+	\end{cases}\Rightarrow I_{1} < \dfrac{\pi}{4}\times \dfrac{4}{\pi} = 1$$
+\end{solution}
 \myspace{1}
 
 \section{Week \Rmnum{3}}
 \textcolor{cyan}{\textbf{February 15}}
 
 \begin{example}[][Exam: 28.3.1]
-	$$\int_{-2}^{2}[\ln(x+\sqrt{1+x^{2}})+\sqrt{1-\dfrac{x^{2}}{4}}]dx$$
+	$$\int_{-2}^{2}\left[\ln(x+\sqrt{1+x^{2}})+\sqrt{1-\dfrac{x^{2}}{4}}\right]dx$$
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int_{-2}^{2}\sqrt{1-\dfrac{x^{2}}{4}}dx\\
+		  & = & 2\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\cos^{2}xdx\\
+		  & = & 4\int_{0}^{\frac{\pi}{2}}\cos^{2}xdx\\
+		  & = & 4\times \dfrac{1}{2}\times \dfrac{\pi}{2}\\
+		  & = & \pi 
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.3.2]
 	$$\int_{-\pi}^{\pi}|x|[x^{3}+\sin^{2}x]\cos^{2}xdx$$
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int_{-\pi}^{\pi} |x|\sin^{2}x \cos^{2}xdx\\
+		  & = & 2\int_{0}^{\pi}x\sin^{2}x\cos^{2}xdx\\
+		  & = & 2\pi\int_{0}^{\frac{\pi}{2}}\sin^{2}x(1-\sin^{2}x)dx\\
+		  & = & 2\pi\times \dfrac{1}{2}\times \dfrac{\pi}{2}\times \dfrac{1}{4}\\
+		  & = & \dfrac{\pi^{2}}{8}
+	\end{eqnarray*}
+\end{solution}
 \myspace{1}
 
 \textcolor{cyan}{\textbf{February 16}}
@@ -615,10 +745,28 @@
 \begin{example}[][Exam: 28.3.3]
 	$$\int_{0}^{\pi}\sqrt{1-\sin x}dx$$
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int_{0}^{\pi}\sqrt{1-\sin x}dx\\
+		  & = & \int_{0}^{\frac{\pi}{2}}\sqrt{1-\sin x}dx + \int_{\frac{\pi}{2}}^{\pi}\sqrt{1-\sin x}dx\\
+		  & = & \int_{0}^{\frac{\pi}{2}}(\cos \frac{x}{2}-\sin \frac{x}{2})dx + \int_{\frac{\pi}{2}}^{\pi}(\sin \frac{x}{2}-\cos \frac{x}{2})dx\\
+		  & = & (2\sin \frac{x}{2}+2\cos \frac{x}{2})\big|_{x=0}^{x=\frac{\pi}{2}} - (2\sin \frac{x}{2}+2\cos \frac{x}{2})\big|_{x=\frac{\pi}{2}}^{x=\pi}\\
+		  & = & 4\sqrt{2}-4
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.3.4]
 	$$\int_{\sqrt{e}}^{e^{\frac{3}{4}}}\dfrac{dx}{x\sqrt{\ln x(1-\ln x)}}$$
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int_{\sqrt{e}}^{e^{\frac{3}{4}}}\dfrac{d(\ln x)}{\sqrt{\ln x(1-\ln x)}}\\
+		  & = & \int_{\frac{1}{2}}^{\frac{3}{4}}\dfrac{1}{\sqrt{(\frac{1}{2})^{2}-(t-\frac{1}{2})^{2}}}dt\\
+		  & = & \arcsin(2t-1)\big|_{t=\frac{1}{2}}^{t=\frac{3}{4}}\\
+		  & = & \dfrac{\pi}{6}
+	\end{eqnarray*}
+\end{solution}
 \myspace{1}
 
 \textcolor{cyan}{\textbf{February 17}}
@@ -626,6 +774,14 @@
 \begin{example}[][Exam: 28.3.5]
 	$$\int_{0}^{1}\dfrac{\arcsin \sqrt{x}}{\sqrt{x(1-x)}}dx$$
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & 2\int_{0}^{1}\dfrac{\arcsin \sqrt{x}}{2\sqrt{x(1-x)}}dx\\
+		  & = & 2\int_{0}^{1}\arcsin \sqrt{x}d(\arcsin \sqrt{x})\\
+		  & = & (\arcsin \sqrt{x})^{2}\big|_{x=0}^{x=1}\\
+		  & = & \dfrac{\pi^{2}}{4}
+	\end{eqnarray*}
+\end{solution}
 \myspace{1}
 
 \textcolor{cyan}{\textbf{February 18}}
@@ -633,10 +789,29 @@
 \begin{example}[][Exam: 28.3.6]
 	$$\int_{0}^{1}\dfrac{\ln(1+x)}{(2-x)^{2}}dx$$
 \end{example}
-
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int_{0}^{1}\dfrac{\ln(1+x)}{(2-x)^{2}}dx\\
+		  & = & -\int_{0}^{1}\ln(1+x)d \dfrac{1}{x-2}\\
+		  & = & -\dfrac{\ln(1+x)}{x-2}\big|_{x=0}^{x=1} + \int_{0}^{1}\dfrac{1}{(x+1)(x-2)}dx\\
+		  & = & \ln 2 + \dfrac{1}{3}\ln\big|\dfrac{x-2}{x+1}\big|\big|_{x=0}^{x=1}\\
+		  & = & \dfrac{\ln 2}{3}
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
 \begin{example}[][Exam: 28.3.7]
 	已知函数 $f(x)=\int_{1}^{x}\sqrt{1+t^{4}}dt$,则 $\int_{0}^{1}x^{2}f(x)dx$
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		\int_{0}^{1}x^{2}f(x)dx & = & \dfrac{1}{3}\int_{0}^{1}f(x)d(x^{3})\\
+		& = & \dfrac{1}{3}x^{3}f(x)\big|_{x=0}^{x=1} - \dfrac{1}{3}\int_{0}^{1}x^{3}df(x)\\
+		& = & -\dfrac{1}{3}\int_{0}^{1}x^{3}\sqrt{1+x^{4}}dx\\
+		& = & -\dfrac{1}{12}\int_{0}^{1}\sqrt{1+x^{4}}d(x^{4})\\
+		& = & -\dfrac{1}{18}(1+x^{4})^{\frac{3}{2}}\big|_{x=0}^{x=1}\\
+		& = & -\dfrac{\sqrt{2}}{9} 
+	\end{eqnarray*}
+\end{solution}
 \myspace{1}
 
 \textcolor{cyan}{\textbf{February 19}}
@@ -644,30 +819,55 @@
 \begin{example}[][Exam: 28.3.8]
 	已知 $f(x)$ 连续,$\int_{0}^{x}tf(x-t)dt=1-\cos x$,求 $\int_{0}^{\frac{\pi}{2}}f(x)dx$
 \end{example}
+\begin{solution}
+	$$\int_{0}^{x}tf(x-t)dt = 1 - \cos x\Rightarrow \int_{0}^{x}(x-u)f(u)du = 1 - \cos x$$
+
+	$f(x)$ 连续, $\int_{0}^{x}f(u)du$ 可导:
+	$$\int_{0}^{x}f(u)du + xf(x) - xf(x) = \sin x\Rightarrow \int_{0}^{x}f(u)du = \sin x$$
+
+	$$\int_{0}^{\frac{\pi}{2}}f(x)dx = \sin \dfrac{\pi}{2} = 1$$
+
+\end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.3.9]
 	设 $f(x)=\begin{cases}
-		x^{2},0\leq x\leq 1\\2-x, 1<x\leq 2 
+		x^{2} & 0\leq x\leq 1\\
+		2-x & 1<x\leq 2 
 	\end{cases}$,记 $F(x)=\int_{0}^{x}f(t)dt(0\leq x\leq 2)$,则有:
 	\begin{itemize}
-		\item A. $F(x)=\begin{cases}
-			\dfrac{x^{3}}{3},0\leq x\leq 1\\
-			2x-\dfrac{x^{2}}{2}, 1<x\leq 2
+		\item A. $F(x)=
+		\begin{cases}
+			\dfrac{x^{3}}{3} & 0\leq x\leq 1\\
+			2x-\dfrac{x^{2}}{2} & 1<x\leq 2
 		\end{cases}$
-		\item B. $F(x)=\begin{cases}
-			\dfrac{x^{3}}{3},0\leq x\leq 1\\
-			\dfrac{1}{3}+2x-\dfrac{x^{2}}{2}, 1<x\leq 2
+		\item B. $F(x)=
+		\begin{cases}
+			\dfrac{x^{3}}{3} & 0\leq x\leq 1\\
+			\dfrac{1}{3}+2x-\dfrac{x^{2}}{2} & 1<x\leq 2
 		\end{cases}$
-		\item C. $F(x)=\begin{cases}
-			\dfrac{x^{3}}{3},0\leq x\leq 1\\
-			-\dfrac{7}{6}+2x-\dfrac{x^{2}}{2}, 1<x\leq 2
+		\item C. $F(x)=
+		\begin{cases}
+			\dfrac{x^{3}}{3} & 0\leq x\leq 1\\
+			-\dfrac{7}{6}+2x-\dfrac{x^{2}}{2} & 1<x\leq 2
 		\end{cases}$
-		\item D. $F(x)=\begin{cases}
-			\dfrac{x^{3}}{3},0\leq x\leq 1\\
-			\dfrac{x^{3}}{3}+2x-\dfrac{x^{2}}{2}, 1<x\leq 2
+		\item D. $F(x)=
+		\begin{cases}
+			\dfrac{x^{3}}{3} & 0\leq x\leq 1\\
+			\dfrac{x^{3}}{3}+2x-\dfrac{x^{2}}{2} & 1<x\leq 2
 		\end{cases}$
 	\end{itemize}
 \end{example}
+\begin{solution}
+
+	$f(x)$ 在 $[0,2]$ 上连续, $F(x) = \int_{0}^{x}f(t)dt$ 在 $(0,2)$ 上可导
+
+	$$F(x) = 
+	\begin{cases}
+		\dfrac{1}{3}x^{3}  & 0 \leq x \leq 1\\
+		2x - \dfrac{1}{2}x^{2} - \dfrac{7}{6} & 1 < x \leq 2
+	\end{cases}$$
+\end{solution}
 \myspace{1}
 
 \textcolor{cyan}{\textbf{February 20}}
@@ -675,10 +875,33 @@
 \begin{example}[][Exam: 28.3.10]
 	设 $x\geq -1$,求 $\int_{-1}^{x}(1-|t|)dt$
 \end{example}
+\begin{solution}
 
+	$$\int_{-1}^{x}(1-|t|)dt = 
+	\begin{cases}
+		\dfrac{1}{2}x^{2} + x + \dfrac{1}{2} & -1 \leq x \leq 0\\
+		-\dfrac{1}{2}x^{2} + x + \dfrac{1}{2} & x > 0
+	\end{cases}$$
+\end{solution}
+\myspace{1}
 \begin{example}[][Exam: 28.3.11]
-	设 $x=x(t)$ 由方程 $\sin t-\int_{1}^{x-t}e^{-u^{2}}du=0$ 所确定,试求 $\dfrac{d^{2}x}{dt^{2}}|_{t=0}$
+	设 $x=x(t)$ 由方程 $\displaystyle{\sin t-\int_{1}^{x-t}e^{-u^{2}}du=0}$ 所确定,试求 $\dfrac{d^{2}x}{dt^{2}}\big|_{t=0}$
 \end{example}
+\begin{solution}
+	$$\sin t -\int_{1}^{x-t}e^{-u^{2}}du = 0\Rightarrow \cos t = e^{-(x-t)^{2}}\left[\dfrac{dx}{dt}-1\right]$$
+
+	当 $t = 0$ 时, $x = 1$ 且 $\dfrac{dx}{dt}\big|_{t = 0} = e + 1$
+
+	$$-\sin t = -2(x-t)e^{-(x-t)^{2}}\left[\dfrac{dx}{dt}-1\right]^{2} + e^{-(x-t)^{2}}\dfrac{d^{2}x}{dt^{2}}$$
+
+	且 $\begin{cases}
+	  t = 0\\
+	  x = 1\\
+	  \frac{dx}{dt}\big|_{t = 0} = e + 1 
+	\end{cases}$
+
+	$$\dfrac{d^{2}x}{dt^{2}}\big|_{t = 0} = 2e^{2}$$
+\end{solution}
 \myspace{1}
 
 \textcolor{cyan}{\textbf{February 21}}
@@ -686,7 +909,29 @@
 \begin{example}[][Exam: 28.3.12]
 	设函数 $f(x)=\int_{0}^{1}|t(t-x)|dt(0<x<1)$,求 $f(x)$ 的极值、单调区间及曲线 $y=f(x)$ 的凹凸区间
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		f(x) & = & \int_{0}^{x}t(x-t)dt + \int_{x}^{1}t(t-x)dt\\
+			 & = & \dfrac{1}{3}x^{3} - \dfrac{1}{2}x + \dfrac{1}{3}, x\in (0,1)
+	\end{eqnarray*}
 
+	$$\begin{cases}
+	  f'(x) = x^{2} - \dfrac{1}{2} & x\in(0,1)\\
+	  f''(x) = 2x & x\in(0,1)
+	\end{cases}\Rightarrow 
+	\begin{cases}
+		x\in (0,\dfrac{1}{\sqrt{2}}) & f'(x) < 0\\
+		x\in (\dfrac{1}{\sqrt{2}},1) & f'(x) > 0
+	\end{cases}$$
+
+(1). $f(x)$ 在 $x = \dfrac{1}{\sqrt{2}}$ 处取极小值 $f(\dfrac{1}{\sqrt{2}}) = \dfrac{2-\sqrt{2}}{6}$
+
+(2). $f(x)$ 单调递减区间 $(0,\dfrac{1}{\sqrt{2}})$, 单调递增区间 $(\dfrac{1}{\sqrt{2}},1)$
+
+(3). $f(x)$ 的凹区间 $(0,1)$, 无凸区间
+
+\end{solution}
+\myspace{1}
 \begin{example}[][Exam: 28.3.13]
 	下列反常积分中发散的是:
 \begin{itemize}
@@ -696,6 +941,14 @@
 	\item D. $\int_{0}^{+\infty}\dfrac{x}{1+x^{2}}dx$
 \end{itemize}
 \end{example}
+\begin{solution}
+	$$\begin{cases}
+	  I_{1} = 1 \\
+	  I_{2} = \dfrac{1}{2} \\
+	  I_{3} = \dfrac{\pi^{2}}{8} \\
+	  I_{4} = \ln \sqrt{1+x^{2}}\big|_{x=0}^{x=+\infty}
+	\end{cases}$$
+\end{solution}
 \myspace{1}
 
 \section{Week \Rmnum{4}}
@@ -704,10 +957,28 @@
 \begin{example}[][Exam: 28.4.1]
 	$$\int_{5}^{+\infty}\dfrac{dx}{x^{2}-4x+3}$$
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int_{5}^{+\infty}\dfrac{dx}{x^{2}-4x+3}\\
+		  & = & \int_{5}^{+\infty}\dfrac{dx}{(x-1)(x-3)}\\
+		  & = & \dfrac{1}{2}\int_{5}^{+\infty}\left[\dfrac{1}{x-3}-\dfrac{1}{x-1}\right]dx\\
+		  & = & \dfrac{1}{2}\ln\left|\dfrac{x-3}{x-1}\right|\big|_{x=5}^{x=+\infty}\\
+		  & = & \dfrac{1}{2}\ln 2
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.4.2]
 	$$\int_{1}^{+\infty}\dfrac{dx}{e^{1+x}+e^{3-x}}$$
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int_{1}^{+\infty}\dfrac{d(e^{x})}{e^{2x+1}+e^{3}}\\
+		  & = & \int_{e}^{+\infty}\dfrac{1}{et^{2}+e^{3}}dt\\
+		  & = & \dfrac{1}{e^{2}}\arctan \dfrac{t}{e}\big|_{t=e}^{t=+\infty}\\
+		  & = & \dfrac{\pi}{4e^{2}}
+	\end{eqnarray*}
+\end{solution}
 \myspace{1}
 
 \textcolor{purplea}{\textbf{February 23}}
@@ -715,6 +986,16 @@
 \begin{example}[][Exam: 28.4.3]
 	$$\int_{0}^{+\infty}\dfrac{\ln(1+x)}{(1+x)^{2}}dx$$
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int_{0}^{+\infty}\dfrac{\ln(1+x)}{(1+x)^{2}}dx\\
+		  & = & -\int_{0}^{+\infty}\ln(1+x)d\left(\dfrac{1}{1+x}\right)\\
+		  & = & -\dfrac{\ln(1+x)}{1+x}\big|_{x=0}^{x=+\infty} + \int_{0}^{+\infty}\dfrac{1}{1+x}\dfrac{1}{1+x}dx\\
+		  & = & -\dfrac{1}{1+x}\big|_{x=0}^{x=+\infty}\\
+		  & = & 1
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.4.4]
 	已知抛物线通过 $x$ 轴上的两点 $A(1,0),B(3,0)$
@@ -723,6 +1004,22 @@
 
 (2). 计算上述两平面图形绕 $x$ 轴旋转一周所产生的两个旋转体体积之比
 \end{example}
+\begin{solution}
+
+(1). 设抛物线方程为 $y=a(x-1)(x-3)$, 两坐标轴与抛物线围成的图形面积为 $S_{1}$, $x$ 轴与抛物线围成的图形面积为 $S_{2}$
+
+$$\begin{cases}
+  S_{1}= \big|\int_{0}^{1}a(x^{2}-4x+3)dx\big| = \dfrac{4}{3}|a|\\
+  S_{2} = \big|\int_{1}^{3}a(x^{2}-4x+3)dx\big| = \dfrac{4}{3}|a|
+\end{cases}\Rightarrow S_{1} = S_{2}$$
+
+(2). 设 $S_{1}$, $S_{2}$ 绕 $x$ 轴旋转所成旋转体体积分别为 $V_{1}$, $V_{2}$
+
+$$\begin{cases}
+  V_{1} = \pi\int_{0}^{1}a^{2}(x^{2}-4x+3)^{2}dx = \dfrac{38\pi}{15}a^{2}\\
+  V_{2} = \pi\int_{1}^{3}a^{2}(x^{2}-4x+3)^{2}dx = \dfrac{18\pi}{5}a^{2}
+\end{cases}\Rightarrow \dfrac{V_{1}}{V_{2}} = \dfrac{19}{27}$$
+\end{solution}
 \myspace{1}
 
 \textcolor{purplea}{\textbf{February 24}}
@@ -730,7 +1027,17 @@
 \begin{example}[][Exam: 28.4.5]
 	求心形线 $r=a(1+\cos\theta)\ (a>0)$ 所围图形的面积
 \end{example}
-
+\begin{solution}
+	\begin{eqnarray*}
+		S & = & \dfrac{1}{2}\int_{0}^{2\pi}r^{2}d\theta\\
+		  & = & \dfrac{1}{2}\int_{0}^{2\pi}a^{2}(1+\cos\theta)^{2}d\theta\\
+		  & = & \dfrac{1}{2}\int_{0}^{2\pi}a^{2}(2+2\cos\theta+\cos^{2}\theta)d\theta\\
+		  & = & \dfrac{1}{2}\int_{0}^{2\pi}a^{2}(3+2\cos\theta)d\theta\\
+		  & = & \dfrac{1}{2}a^{2}(3\theta+2\sin\theta)\big|_{\theta=0}^{\theta=2\pi}\\
+		  & = & 3\pi a^{2}
+	\end{eqnarray*}	
+\end{solution}
+\myspace{1}
 \begin{example}[][Exam: 28.4.6]
 	已知平面区域 $D=\{(x,y)|0\leq y\leq \dfrac{1}{x\sqrt{1+x^{2}}},x\geq 1\}$
 \myspace{1}
@@ -738,6 +1045,24 @@
 
 (2). 求 $D$ 绕 $x$ 轴旋转所成旋转体的体积
 \end{example}
+\begin{solution}
+
+(1). $D$ 的面积为:
+	\begin{eqnarray*}
+		S_{D} & = & \int_{1}^{+\infty}\dfrac{1}{x\sqrt{1+x^{2}}}dx\\
+			  & = & \int_{\frac{\pi}{4}}^{\frac{\pi}{2}}\dfrac{1}{\sin x}dx\\
+			  & = & \ln \dfrac{1-\cos x}{\sin x}\big|_{x=\frac{\pi}{4}}^{x=\frac{\pi}{2}}\\
+			  & = & \ln (\sqrt{2} + 1)
+	\end{eqnarray*}
+
+(2). $D$ 绕 $x$ 轴旋转所成旋转体的体积为:
+	\begin{eqnarray*}
+		V & = & \pi\int_{1}^{+\infty}\dfrac{1}{x^{2}(1+x^{2})}dx\\
+		  & = & \pi\int_{1}^{+\infty}\left[\dfrac{1}{x^{2}}-\dfrac{1}{1+x^{2}}\right]dx\\
+		  & = & \pi\left[-\dfrac{1}{x}-\arctan x\right]\big|_{x=1}^{x=+\infty}\\
+		  & = & \dfrac{4\pi-\pi^{2}}{4}
+	\end{eqnarray*}
+\end{solution}
 \myspace{1}
 
 \textcolor{purplea}{\textbf{February 25}}
@@ -745,10 +1070,28 @@
 \begin{example}[][Exam: 28.4.7]
 	某水库的闸门形状为等腰梯形, 它的两条底边各长 $10m$ 和 $6m$, 高为 $20m$,较长的底边与水面相齐,求闸门的一侧所受水的压力
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		F & = & \rho g\int_{0}^{20}hL(h)dh\\
+		  & = & \rho g\int_{0}^{20}h(10-\dfrac{h}{5})dh\\
+		  & = & \rho g \left[5h^{2}-\dfrac{h^{3}}{15}\right]\big|_{h=0}^{h=20}\\
+		  & = & \dfrac{4400}{3}\rho g
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.4.8]
 	一个半径为 $R(m)$ 的球形贮水箱盛满了水,如果把箱中的水从顶部全部抽出,需要作的功
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		W & = & \rho g\int_{0}^{2R}h A(h)dh\\
+		  & = & \rho g\int_{0}^{2R}h\pi (2Rh-h^{2})dh\\
+		  & = & \pi \rho g \int_{0}^{2R}(2Rh^{2}-h^{3})dh\\
+		  & = & \pi \rho g \left[\dfrac{2}{3}Rh^{3}-\dfrac{1}{4}h^{4}\right]\big|_{h=0}^{h=2R}\\
+		  & = & \dfrac{4}{3}\pi \rho g R^{4}
+	\end{eqnarray*}
+\end{solution}
 \myspace{1}
 
 \textcolor{purplea}{\textbf{February 26}}
@@ -756,10 +1099,15 @@
 \begin{example}[][Exam: 28.4.9]
 	方程 $(xy^{2}+x)dx+(y-x^{2}y)dy=0$ 的通解
 \end{example}
+\begin{solution}
 
+\end{solution}
+\myspace{1}
 \begin{example}[][Exam: 28.4.10]
 	方程 $y'=1+x+y^{2}+xy^{2}$ 的通解
 \end{example}
+\begin{solution}
+\end{solution}
 \myspace{1}
 
 \textcolor{purplea}{\textbf{February 27}}
@@ -778,19 +1126,54 @@
 \begin{example}[][Exam: 28.4.13]
 	$$\int\dfrac{x\ln x+x\ln^{2}x}{2+x\ln x}dx$$
 \end{example}
-
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int\dfrac{x\ln x(1+\ln x)}{2+x\ln x}dx\\
+		  & = & \int\dfrac{x\ln x\left[x\ln x\right]'}{2+x\ln x}dx\\
+		  & = & \int\dfrac{t}{2+t}dt\\
+		  & = & t - 2\ln(t+2) + C\\
+		  & = & x\ln x - 2\ln(x\ln x + 2) + C
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
 \begin{example}[][Exam: 28.4.14]
 	$$\int\dfrac{\sin 2x\sin^{2}x}{2+\cos^{4} x}dx$$
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int\dfrac{2\cos x(\cos^{2}x-1)}{2+\cos^{4} x}d(\cos x)\\
+		  & = & \int\dfrac{2\cos^{3} x - 2\cos x}{2+\cos^{4} x}d(\cos x)\\
+		  & = & \int\dfrac{2t^{3}}{2+t^{4}}dt - \int \dfrac{1}{2+(t^{2})^{2}}d(t^{2})\\
+		  & = & \dfrac{1}{2}\ln(2+t^{4}) - \dfrac{1}{\sqrt{2}}\arctan \dfrac{t^{2}}{\sqrt{2}}\\
+		  & = & \dfrac{1}{2}\ln(2+\cos^{4} x) - \dfrac{1}{\sqrt{2}}\arctan \dfrac{\cos^{2} x}{\sqrt{2}} + C
+	\end{eqnarray*}
+\end{solution}
 \myspace{1}
 
 \textcolor{purplea}{\textbf{February 29}}
 \begin{example}[][Exam: 28.4.15]
 	$$\int\dfrac{\sin x}{\sin x+\cos x}dx$$
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int\dfrac{A(\sin x + \cos x) + B(\cos  x-\sin x)}{\sin x+\cos x}dx\\
+		  & = & \dfrac{1}{2}\int\dfrac{\sin x+\cos x}{\sin x+\cos x}dx - \dfrac{1}{2}\int \dfrac{\cos x-\sin x}{\sin x+\cos x}dx\\
+		  & = & \dfrac{1}{2}x - \dfrac{1}{2}\ln|\sin x+\cos x| + C
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.4.16]
 	$$\int\dfrac{\cos 2x}{\cos^{2} x(1+\sin^{2} x)}dx$$
 \end{example}
-
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int\dfrac{\cos^{2} x-\sin^{2} x}{\cos^{2} x+2\sin^{2} x}d(\tan x)\\
+		  & = & \int\dfrac{1-\tan^{2}x}{1+2\tan^{2} x}d(\tan x)\\
+		  & = & \dfrac{3}{2}\int \dfrac{1}{1+2t^{2}}dt - \dfrac{1}{2}\int dt\\
+		  & = & \dfrac{3}{2\sqrt{2}}\arctan \sqrt{2}t - \dfrac{1}{2}t + C\\
+		  & = & \dfrac{3}{2\sqrt{2}}\arctan \sqrt{2}\tan x - \dfrac{1}{2}\tan x + C
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
 

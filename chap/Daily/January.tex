@@ -10,6 +10,7 @@
 	
 	$f(x+1)$ 的定义域为$[0,a]$,则 $f(x)$ 的定义域为$[-1,a-1]$
 \end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 27.1.2]
 	已知 $f(x)=e^{x^{2}},f[\varphi(x)]=1-x$ 且 $\varphi(x)\geq 0$,求 $\varphi(x)$ 并求出定义域
@@ -17,17 +18,19 @@
 
 \begin{solution}
 	
-	$f[\varphi(x)]=1-x\Rightarrow e^{\varphi^{2}(x)}=1-x$, 因此: $\varphi(x)=\sqrt{\ln (1-x)}, x\ge 1$
+	$f[\varphi(x)]=1-x\Rightarrow e^{\varphi^{2}(x)}=1-x$, 因此: $\varphi(x)=\sqrt{\ln (1-x)}, x\leq 0$
 \end{solution}
-
+\myspace{1}
 \begin{example}[][Exam: 27.1.3]
 	设 
 	$$g(x)=
 	\begin{cases}
-		2-x,x\leq 0\\ x+2,x>0
+		2-x & x\leq 0\\
+		x+2 & x>0
 	\end{cases}$$,$$f(x)=
 	\begin{cases}
-		x^{2},x< 0\\ -x,x\geq 0
+		x^{2} & x< 0\\
+		-x & x\geq 0
 	\end{cases}
 	$$
 求 $g[f(x)]$
@@ -38,18 +41,19 @@
 	$$
 	g[f(x)] = 
 	\begin{cases}
-		2+x^{2}, & x<0\\
-		x+2, & x\geq 0
+		2+x^{2} & x<0\\
+		x+2 & x\geq 0
 	\end{cases}
 	$$
 \end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 27.1.4]
 	设函数 $$f(x)=
 \begin{cases}
-	1-2x^{2},x<-1\\
-	x^{3},-1\leq x\leq 2\\
-	12x-16,x>2
+	1-2x^{2} & x<-1\\
+	x^{3} & -1\leq x\leq 2\\
+	12x-16 & x>2
 \end{cases}
 $$
 求 $f(x)$ 的反函数 $g(x)$ 的表达式
@@ -59,13 +63,13 @@ $$
 	$$
 	g(x) = 
 	\begin{cases}
-		-\sqrt{\dfrac{1-x}{2}}, & x\in(-\infty,-1)\\
-		\displaystyle{\sqrt[3]{x}}, & x\in[-1,8]\\
-		\dfrac{x+16}{12}, & x\in(8,+\infty)
+		-\sqrt{\dfrac{1-x}{2}} & x\in(-\infty,-1)\\
+		\displaystyle{\sqrt[3]{x}} & x\in[-1,8]\\
+		\dfrac{x+16}{12} & x\in(8,+\infty)
 	\end{cases}
 	$$
 \end{solution}
-
+\myspace{1}
 \begin{example}[][Exam: 27.1.5]
 	证明:定义在 $[-a,a]$ 上的任意一个函数 $f(x)$ 都可以表示为一个奇函数和一个偶函数之和
 \end{example}
@@ -83,7 +87,7 @@ $$
 	
 	其中 $g(x)$ 是偶函数, $h(x)$ 是奇函数
 \end{solution}
-
+\myspace{1}
 \begin{example}[][Exam: 27.1.6]
 	判断函数 $f(x)=x\tan x\cdot e^{\sin x}$的奇偶性、单调性、周期性和有界性
 \end{example}
@@ -108,7 +112,7 @@ $$
 
 	$f(x)$ 不是周期函数
 \end{solution}
-
+\myspace{1}
 \begin{example}[][Exam: 27.1.7]
 	函数 $f(x)=\dfrac{|x|\sin(x-2)}{x(x-1)(x-2)^{2}}$ 在下列哪个区间内有界
 \begin{itemize}
@@ -129,7 +133,6 @@ $$
 
 	$f(x)$ 在区间 $(-1,0)$ 有界
 \end{solution}
-
 \myspace{1}
 \textcolor{orange}{\textbf{January 2}}
 
@@ -147,6 +150,8 @@ $$
 		  = & \dfrac{1}{\sqrt{2}} 
 	\end{align*}
 \end{solution}
+\myspace{1}
+
 \begin{example}[][Exam: 27.1.9]
 	$$\lim\limits_{x\to-\infty}\dfrac{\sqrt{4x^{2}+x-1}+x+1}{\sqrt{x^{2}+\sin x}}$$
 \end{example}
@@ -160,7 +165,6 @@ $$
 		  = & 1
 	\end{align*}
 \end{solution}
-
 \myspace{1}
 \textcolor{orange}{\textbf{January 3}}
 
@@ -180,7 +184,7 @@ $$
 	\end{align*}
 	综上所述, 原极限 $I =1$
 \end{solution}
-
+\myspace{1}
 \begin{example}[][Exam: 27.1.11]
 	$$\lim\limits_{x\to+\infty}(\sqrt{x^{2}+x}-\sqrt{x^{2}-x})$$
 \end{example}
@@ -196,7 +200,6 @@ $$
 		  = & 1
 	\end{align*}
 \end{solution}
-
 \myspace{1}
 \textcolor{orange}{\textbf{January 4}}
 
@@ -215,7 +218,7 @@ $$
 		  = & \dfrac{1}{2}
 	\end{align*}
 \end{solution}
-
+\myspace{1}
 \begin{example}[][Exam: 27.1.13]
 	已知 $\lim\limits_{x\to 0}\dfrac{e^{x^{2}}-\cos 2x}{ax^{b}}=1$, 求 $a,b$
 \end{example}
@@ -529,11 +532,11 @@ $$
 
 \begin{solution}
 
-	\begin{align*}
-		I = & \lim\limits_{x\to 0}e^{\frac{\ln(1+x)-x}{x(e^{x}-1)}}\\
-		  = & e^{\lim\limits_{x\to 0}\frac{\ln(1+x)-x}{x^{2}}}\\
-		  = & e^{\frac{1}{2}}
-	\end{align*}
+	\begin{eqnarray*}
+		I & = & \lim\limits_{x\to 0}e^{\frac{\ln(1+x)-x}{x(e^{x}-1)}}\\
+		  & = & e^{\lim\limits_{x\to 0}\frac{\ln(1+x)-x}{x^{2}}}\\
+		  & = & e^{-\frac{1}{2}}
+	\end{eqnarray*}
 \end{solution}
 
 \begin{example}[][Exam: 27.2.12]
@@ -544,7 +547,7 @@ $$
 
 	\begin{align*}
 		I = & \lim\limits_{x\to 0}e^{\frac{\ln(1+x)-x}{x^{2}}}\\
-		  = & e^{\frac{1}{2}}
+		  = & e^{-\frac{1}{2}}
 	\end{align*}
 \end{solution}
 
@@ -700,25 +703,25 @@ $$
 \end{solution}
 
 \begin{example}[][Exam: 27.3.8]
-	已知 $\lim\limits_{x\to 0}\dfrac{x-\tan x}{x^{k}}=c$, 其中 $k,c$ 为常数, 且 $c\neq 0$,求 $k,c$
+	已知 $\lim\limits_{x\to 0}\dfrac{x-\arctan x}{x^{k}}=c$, 其中 $k,c$ 为常数, 且 $c\neq 0$,求 $k,c$
 \end{example}
 
 \begin{solution}
 
 	\begin{align*}
-		I = & \lim\limits_{x\to 0}\dfrac{x-\tan x}{x^{k}}\\
-		  = & \lim\limits_{x\to 0}-\dfrac{x^{3}}{3x^{k}}\\
+		I = & \lim\limits_{x\to 0}\dfrac{x-\arctan x}{x^{k}}\\
+		  = & \lim\limits_{x\to 0}\dfrac{x^{3}}{3x^{k}}\\
 		  = & c
 	\end{align*}
 
-	综上所述: $k = 3, c = -\dfrac{1}{3}$
+	综上所述: $k = 3, c = \dfrac{1}{3}$
 \end{solution}
 
 \myspace{1}
 \textcolor{cyan}{\textbf{January 19}}
 
 \begin{example}[][Exam: 27.3.9]
-	若 $\lim\limits_{x\to 0}\left(\dfrac{\sin x^{4}}{x^{4}}-\dfrac{f(x)}{x^{3}}\right)=2$,  $x\to 0$ 时,$f(x)$ 是 $x$ 的:
+	若 $\lim\limits_{x\to 0}\left(\dfrac{\sin x^{3}}{x^{4}}-\dfrac{f(x)}{x^{3}}\right)=2$,  $x\to 0$ 时,$f(x)$ 是 $x$ 的:
 \begin{itemize}
 	\item A. 等价无穷小
 	\item B. 同阶但非等价无穷小
@@ -728,16 +731,11 @@ $$
 \end{example}
 
 \begin{solution}
-
-	令 
-	$$\begin{cases}
-		I = \lim\limits_{x\to 0}\left(\dfrac{\sin x^{4}}{x^{4}}-\dfrac{f(x)}{x^{3}}\right) = 2\\
-		J = \lim\limits_{x\to 0}\dfrac{\sin x^{4}}{x^{4}} = 1
-	\end{cases}\Rightarrow \lim\limits_{x\to 0}\dfrac{f(x)}{x^{3}} = -1$$
-
-	$$\lim\limits_{x\to 0}\dfrac{f(x)}{x} = \lim\limits_{x\to 0}\dfrac{f(x)}{x^{4}}\cdot\lim\limits_{x\to 0}x^{3} = 0$$
-
-	综上所述, $f(x)$ 是 $x$ 的 高阶无穷小.
+	
+	$$\lim\limits_{x \to 0}\left(\dfrac{\sin x^{3}}{x^{4}}- \dfrac{f(x)}{x^{3}}\right)x^{2} = 0$$
+	$$\lim\limits_{x \to 0}\dfrac{f(x)}{x} = \lim\limits_{x \to 0}\dfrac{\sin x^{3}}{x^{2}} = 0$$
+	
+	综上所述, $f(x)$ 是 $x$ 的 高阶无穷小
 \end{solution}
 
 \begin{example}[][Exam: 27.3.10]
@@ -917,11 +915,11 @@ $$
 \begin{solution}
 
 	$$f(x) = \begin{cases}
-	0, & x\in(-\infty,-1)\\
-	0, & x = -1\\
-	x+1, & x\in(-1,1)\\
-	1, & x = 1\\
-	0, & x\in(1,+\infty)
+	0 & x\in(-\infty,-1)\\
+	0 & x = -1\\
+	x+1 & x\in(-1,1)\\
+	1 & x = 1\\
+	0 & x\in(1,+\infty)
 	\end{cases}$$
 
 	综上所述, $f(x)$ 存在唯一的跳跃间断点 $x = 1$
@@ -1000,9 +998,9 @@ $$
 
 	$$f'(x) = 
 	\begin{cases}
-		0, & x< 0\\
-		\lim\limits_{x\to 0} x^{\alpha -1}\cos\dfrac{1}{x^{\beta}}, & x = 0\\
-		\alpha x^{\alpha -1}\cos \dfrac{1}{x^{\beta}} + \beta x^{\alpha-\beta-1}\sin \dfrac{1}{x^{\beta}}, & x > 0  
+		0 & x< 0\\
+		\lim\limits_{x\to 0} x^{\alpha -1}\cos\dfrac{1}{x^{\beta}} & x = 0\\
+		\alpha x^{\alpha -1}\cos \dfrac{1}{x^{\beta}} + \beta x^{\alpha-\beta-1}\sin \dfrac{1}{x^{\beta}} & x > 0  
 	\end{cases}$$
 
 	$f'(x)$ 在 $x = 0$ 处连续 $\Rightarrow \begin{cases} \alpha - 1 >0\\ \alpha - \beta - 1 > 0\end{cases}\Rightarrow \alpha - \beta > 1$
@@ -1020,7 +1018,7 @@ $$
 	设 $\begin{cases}
 		F(x,y) = x + y + e^{2xy} = 0\\
 		y = y(x)
-	\end{cases}$:
+	\end{cases}$
 	$$F'_{x} + F'_{y}\dfrac{dy}{dx} = 0\Rightarrow 1+2ye^{2xy}+(1+2xe^{2xy})\dfrac{dy}{dx} =0$$
 
 	在 $(0,-1)$ 邻域附近, $F'_{y}\neq 0\Rightarrow \dfrac{dy}{dx}\big|_{(0,-1)} = -\dfrac{1+2ye^{2xy}}{1+2xe^{2xy}} = 1$
@@ -1053,7 +1051,8 @@ $$
 
 \begin{example}[][Exam: 27.4.9]
 	设函数 $f(x)=\begin{cases}
-		\ln\sqrt{x},x\geq 1\\2x-1,x<1
+		\ln\sqrt{x} & x\geq 1\\
+		2x-1 & x<1
 	\end{cases}$,$y=f(f(x))$,则 $\dfrac{dy}{dx}\big|_{x=e}$
 \end{example}
 
@@ -1061,9 +1060,9 @@ $$
 \begin{anymark}[方法一]
 	$$f(f(x)) = 
 	\begin{cases}
-		\ln\dfrac{\ln x}{2}, & x\in[e^{2},+\infty)\\
-		\ln x -1, & x\in [1,e^{2})\\
-		4x-3, & x\in(-\infty,1)
+		\ln\dfrac{\ln x}{2} & x\in[e^{2},+\infty)\\
+		\ln x -1 & x\in [1,e^{2})\\
+		4x-3 & x\in(-\infty,1)
 	\end{cases}$$
 \end{anymark}
 	
