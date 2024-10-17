@@ -519,7 +519,7 @@
 		I & = & \int \dfrac{(x+1)e^{x}}{xe^{x}(1+xe^{x})}dx\\
 		  & = & \int \dfrac{1}{xe^{x}(1+xe^{x})}d(xe^{x})\\
 		  & = & \int \left[\dfrac{1}{xe^{x}}-\dfrac{1}{1+xe^{x}}\right]d(xe^{x})\\
-		  & = & \ln \dfrac{xe^{x}}{1+xe^{x}} +C
+		  & = & \ln \big|\dfrac{xe^{x}}{1+xe^{x}}\big| +C
 	\end{eqnarray*}
 
 	(2). 令 
@@ -561,9 +561,9 @@
 
 	(2). 
 	\begin{eqnarray*}
-		I & = & \int\dfrac{1-x+x^{2}}{1+x^{3}}dx + \int\dfrac{x^{2}}{1+x^{3}}dx\\
-		  & = & \int\dfrac{1}{1+x}dx + \int\dfrac{1}{3(1+x^{3})}d(x^{3})\\
-		  & = & \ln |1+x| + \dfrac{1}{3}\ln|1+x^{3}| + C
+		I & = & \int\dfrac{1-x+x^{2}}{1+x^{3}}dx - \int\dfrac{x^{2}}{1+x^{3}}dx\\
+		  & = & \int\dfrac{1}{1+x}dx - \int\dfrac{1}{3(1+x^{3})}d(x^{3})\\
+		  & = & \ln |1+x| - \dfrac{1}{3}\ln|1+x^{3}| + C
 	\end{eqnarray*}
 \end{solution}
 \myspace{1}
@@ -643,9 +643,9 @@
 
 	$$\int \max(1,x^{2}) dx = 
 	\begin{cases}
-		\dfrac{1}{3}x^{3} + C -\dfrac{2}{3}\\
-		x + C\\
-		\dfrac{1}{3}x^{3} + C +\dfrac{2}{3}
+		\dfrac{1}{3}x^{3} + C -\dfrac{2}{3} & x\leq -1\\
+		x + C & -1 < x < 1\\
+		\dfrac{1}{3}x^{3} + C +\dfrac{2}{3} & x\geq 1
 	\end{cases}$$
 \end{solution}
 \myspace{1}
@@ -809,7 +809,7 @@
 		& = & -\dfrac{1}{3}\int_{0}^{1}x^{3}\sqrt{1+x^{4}}dx\\
 		& = & -\dfrac{1}{12}\int_{0}^{1}\sqrt{1+x^{4}}d(x^{4})\\
 		& = & -\dfrac{1}{18}(1+x^{4})^{\frac{3}{2}}\big|_{x=0}^{x=1}\\
-		& = & -\dfrac{\sqrt{2}}{9} 
+		& = & \dfrac{1}{18}-\dfrac{\sqrt{2}}{9} 
 	\end{eqnarray*}
 \end{solution}
 \myspace{1}
@@ -1017,8 +1017,8 @@ $$\begin{cases}
 
 $$\begin{cases}
   V_{1} = \pi\int_{0}^{1}a^{2}(x^{2}-4x+3)^{2}dx = \dfrac{38\pi}{15}a^{2}\\
-  V_{2} = \pi\int_{1}^{3}a^{2}(x^{2}-4x+3)^{2}dx = \dfrac{18\pi}{5}a^{2}
-\end{cases}\Rightarrow \dfrac{V_{1}}{V_{2}} = \dfrac{19}{27}$$
+  V_{2} = \pi\int_{1}^{3}a^{2}(x^{2}-4x+3)^{2}dx = \dfrac{16\pi}{15}a^{2}
+\end{cases}\Rightarrow \dfrac{V_{1}}{V_{2}} = \dfrac{19}{8}$$
 \end{solution}
 \myspace{1}
 
@@ -1029,12 +1029,12 @@ $$\begin{cases}
 \end{example}
 \begin{solution}
 	\begin{eqnarray*}
-		S & = & \dfrac{1}{2}\int_{0}^{2\pi}r^{2}d\theta\\
-		  & = & \dfrac{1}{2}\int_{0}^{2\pi}a^{2}(1+\cos\theta)^{2}d\theta\\
-		  & = & \dfrac{1}{2}\int_{0}^{2\pi}a^{2}(2+2\cos\theta+\cos^{2}\theta)d\theta\\
-		  & = & \dfrac{1}{2}\int_{0}^{2\pi}a^{2}(3+2\cos\theta)d\theta\\
-		  & = & \dfrac{1}{2}a^{2}(3\theta+2\sin\theta)\big|_{\theta=0}^{\theta=2\pi}\\
-		  & = & 3\pi a^{2}
+		S & = & \dfrac{1}{2}\int_{0}^{\pi}r^{2}d\theta\\
+		  & = & \dfrac{1}{2}\int_{0}^{\pi}a^{2}(1+\cos\theta)^{2}d\theta\\
+		  & = & \dfrac{1}{2}\int_{0}^{\pi}a^{2}(2+2\cos\theta+\cos^{2}\theta)d\theta\\
+		  & = & \dfrac{1}{2}\int_{0}^{\pi}a^{2}(3+2\cos\theta)d\theta\\
+		  & = & \dfrac{1}{2}a^{2}(3\theta+2\sin\theta)\big|_{\theta=0}^{\theta=\pi}\\
+		  & = & \dfrac{3\pi a^{2}}{2}
 	\end{eqnarray*}	
 \end{solution}
 \myspace{1}
@@ -1100,13 +1100,26 @@ $$\begin{cases}
 	方程 $(xy^{2}+x)dx+(y-x^{2}y)dy=0$ 的通解
 \end{example}
 \begin{solution}
-
+	\begin{eqnarray*}
+		& x(1+y^{2})dx = y(x^{2}-1)dy\\
+		& \Downarrow \\
+		& \dfrac{x}{x^{2}-1}dx = \dfrac{y}{1+y^{2}}dy\\
+		& \Downarrow \\
+		& \dfrac{1}{2}\ln(x^{2}-1) = \dfrac{1}{2}\ln(y^{2}+1) + \dfrac{1}{2}\ln C\Rightarrow C(x^{2}-1) = y^{2}+1
+	\end{eqnarray*}
 \end{solution}
 \myspace{1}
 \begin{example}[][Exam: 28.4.10]
 	方程 $y'=1+x+y^{2}+xy^{2}$ 的通解
 \end{example}
 \begin{solution}
+	\begin{eqnarray*}
+		& \dfrac{dy}{dx} = x(1+y^{2}) + (1+y^{2}) = (x+1)(1+y^{2})\\
+		& \Downarrow \\
+		& \dfrac{1}{1+y^{2}}dy = (x+1)dx\\
+		& \Downarrow \\
+		& \arctan y = \dfrac{x^{2}}{2} + x + C
+	\end{eqnarray*}
 \end{solution}
 \myspace{1}
 
@@ -1115,10 +1128,34 @@ $$\begin{cases}
 \begin{example}[][Exam: 28.4.11]
 	方程 $(y+\sqrt{x^{2}+y^{2}})dx-xdy=0$ 满足条件 $y|_{x=1}=0$ 的特解
 \end{example}
+\begin{solution}
+	$$\dfrac{y}{x}+\sqrt{1+(\dfrac{y}{x})^{2}} = \dfrac{dy}{dx}$$
+
+	令 $\dfrac{y}{x} = u\Rightarrow y = ux, \dfrac{dy}{dx} = u + x\dfrac{du}{dx}$
+	\begin{eqnarray*}
+		& u + \sqrt{1+u^{2}} = u + x\dfrac{du}{dx}\\
+		& \Downarrow \\
+		& \dfrac{du}{\sqrt{1+u^{2}}} = \dfrac{1}{x} dx\\
+		& \Downarrow \\
+		& \ln(u+\sqrt{1+u^{2}}) = \ln x + \ln C\Rightarrow  \dfrac{y}{x} + \sqrt{1+(\dfrac{y}{x})^{2}} = Cx\\
+	\end{eqnarray*}
+\end{solution}
+\myspace{1}
 
 \begin{example}[][Exam: 28.4.12]
 	方程 $\dfrac{dy}{dx}=\dfrac{y}{x+y^{4}}$ 的通解
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		& \dfrac{dx}{dy} = x \cdot \dfrac{1}{y} + y^{3}\\
+		& \Downarrow \\
+		& \dfrac{dx}{dy} - x \cdot \dfrac{1}{y} = y^{3}\\
+		& \Downarrow \\
+		& \left[\dfrac{x}{y}\right]' = y^{2}\\
+		& \Downarrow \\
+		& \dfrac{x}{y} = \dfrac{y^{3}}{3} + C\Rightarrow x = \dfrac{y^{4}}{3} + Cy
+	\end{eqnarray*}
+\end{solution}
 \myspace{1}
 
 \textcolor{purplea}{\textbf{February 28}}
@@ -1132,7 +1169,7 @@ $$\begin{cases}
 		  & = & \int\dfrac{x\ln x\left[x\ln x\right]'}{2+x\ln x}dx\\
 		  & = & \int\dfrac{t}{2+t}dt\\
 		  & = & t - 2\ln(t+2) + C\\
-		  & = & x\ln x - 2\ln(x\ln x + 2) + C
+		  & = & x\ln x - 2\ln\big|x\ln x + 2\big| + C
 	\end{eqnarray*}
 \end{solution}
 \myspace{1}

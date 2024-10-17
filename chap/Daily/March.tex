@@ -6,10 +6,31 @@
 \begin{example}[][Exam: 29.1.1]
 	$$\int\dfrac{1}{\cos^{3} x}dx$$
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int \dfrac{\cos x}{\cos^{4} x}dx \\
+		  & = & \int \dfrac{1}{(1-\sin^{2}x)^{2}}d(\sin x)\\
+		  & = & \int \dfrac{1}{(t+1)^{2}(t-1)^{2}}dt\\
+		  & = & \int \left[\dfrac{A}{(t+1)} + \dfrac{B}{(t+1)^{2}} + \dfrac{C}{(t-1)} + \dfrac{D}{(t-1)^{2}}\right]dt \\
+		  & = & \int \left[\dfrac{1}{4}\dfrac{1}{t+1} + \dfrac{1}{4}\dfrac{1}{(t+1)^{2}} - \dfrac{1}{4}\dfrac{1}{t-1} + \dfrac{1}{4}\dfrac{1}{(t-1)^{2}}\right]dt\\
+		  & = & \dfrac{1}{4}\ln\left|\dfrac{1+t}{1-t}\right| + \dfrac{1}{2}\dfrac{t}{1-t^{2}} + C\\
+		  & = & \dfrac{1}{4}\ln\left|\dfrac{1+\sin x}{1-\sin x}\right| + \dfrac{\sin x}{2\cos^{2}x} + C
+	\end{eqnarray*}
+\end{solution}
 
 \begin{example}[][Exam: 29.1.2]
 	$$\int\dfrac{2+x}{(1+x^{2})^{2}}dx$$
 \end{example}
+\begin{solution}
+	令 $x = \tan u, dx = \dfrac{1}{\cos^{2}u}du, 1+x^{2} = \dfrac{1}{\cos^{2}u}$
+	\begin{eqnarray*}
+		I & = & \int (2+\tan u)\cos^{4}u\cdot \dfrac{1}{\cos^{2}u}du\\
+		  & = & \int (2\cos^{2}u+\sin u\cos u)du\\
+		  & = & \int (1+\cos 2u + \dfrac{1}{2}\sin 2u)du\\
+		  & = & u + \dfrac{1}{2}\sin 2u - \dfrac{1}{4}\cos 2u + C\\
+		  & = & \arctan x + \dfrac{x}{1+x^{2}} - \dfrac{1}{4}\dfrac{1-x^{2}}{1+x^{2}} + C
+	\end{eqnarray*}
+\end{solution}
 \myspace{1}
 
 \textcolor{orange}{March 2}
@@ -17,10 +38,32 @@
 \begin{example}[][Exam: 29.1.3]
 	$$\int\dfrac{\arcsin\sqrt{x}+\ln x}{\sqrt{x}}dx$$
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int \dfrac{\arcsin t + 2\ln t}{t} \cdot 2tdt\\
+		  & = & 2\int \arcsin tdt + 4\int \ln tdt\\
+		  & = & 2t\arcsin t + 4t\ln t -4t - 4\int \dfrac{t}{\sqrt{1-t^{2}}}dt\\
+		  & = & 2t\arcsin t + 4t\ln t -4t + 4 \sqrt{1-t^{2}} + C\\
+		  & = & 2 \sqrt{x}\arcsin\sqrt{x} + 2\sqrt{x} \ln x - 4 \sqrt{x} + 4\sqrt{1-x} + C 
+	\end{eqnarray*}
+\end{solution}
 
 \begin{example}[][Exam: 29.1.4]
 	$$\int e^{x}\arcsin\sqrt{1-e^{2x}}dx$$
 \end{example}
+\begin{solution}
+	令 $\sqrt{1-e^{2x}} = t, e^{x} = \sqrt{1-t^{2}}, x = \ln \sqrt{1-t^{2}}, dx = \dfrac{1}{t^{2}-1}dt$
+
+	\begin{eqnarray*}
+		I & = & \int \sqrt{1-t^{2}}\arcsin t \cdot \dfrac{t}{t^{2}-1}dt \\
+		  & = & -\int \dfrac{t\arcsin t}{\sqrt{1-t^{2}}}dt\\
+		  & = & -\int \dfrac{u\sin u}{\cos u}\cdot \cos u du\\
+		  & = & \int u d\cos u\\
+		  & = & u\cos u - \sin u + C\\
+		  & = & \sqrt{1-t^{2}}\arcsin t - t + C\\
+		  & = & e^{x}\arcsin\sqrt{1-e^{2x}} - \sqrt{1-e^{2x}} + C
+	\end{eqnarray*}
+\end{solution}
 \myspace{1}
 
 \textcolor{orange}{March 3}
@@ -28,10 +71,26 @@
 \begin{example}[][Exam: 29.1.5]
 	已知 $f(\ln x)=\dfrac{\ln(1+x)}{x}$, 求 $\int f(x)dx$
 \end{example}
-
+\begin{solution}
+	$$f(\ln x) = \dfrac{\ln(1+x)}{x}\Rightarrow f(x) = \dfrac{\ln(1+e^{x})}{e^{x}}$$
+	\begin{eqnarray*}
+		\int f(x) dx & = & \int \dfrac{\ln (1+e^{x})}{e^{x}}dx \\
+					 & = & \int \ln(1+e^{x})d(-e^{-x})\\
+					 & = & -\dfrac{\ln(1+e^{x]})}{e^{x}} + \int \dfrac{1+e^{x}-e^{x}}{1+e^{x}}\\
+					 & = & -\dfrac{\ln(1+e^{x]})}{e^{x}} + x - \ln(1+e^{x}) + C
+	\end{eqnarray*}
+\end{solution}
 \begin{example}[][Exam: 29.1.6]
 	$$\int_{0}^{\frac{\pi}{2}}x\sin^{2}x\cos^{2}xdx$$
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int_{0}^{\frac{\pi}{2}}(\dfrac{\pi}{2}-x)\sin^{2}x\cos^{2}xdx\\
+		  & = & \dfrac{\pi}{4}\int_{0}^{\frac{\pi}{2}}\sin^{2}x(1-\sin^{2}x)dx\\
+		  & = & \dfrac{\pi}{4}(\dfrac{1}{2}\times \dfrac{\pi}{2} - \dfrac{3}{4}\times \dfrac{1}{2}\times \dfrac{\pi}{2})\\
+		  & = & \dfrac{\pi^{2}}{64}
+	\end{eqnarray*}
+\end{solution}
 \myspace{1}
 
 \textcolor{orange}{March 4}
@@ -39,10 +98,31 @@
 \begin{example}[][Exam: 29.1.7]
 	$$\int_{0}^{\pi^{2}}\sqrt{x}\cos\sqrt{x}dx$$
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int_{0}^{\pi}2t^{2}\cos tdt\\
+		  & = & \int_{0}^{\pi}2t^{2}d(\sin t)\\
+		  & = & 2t^{2}\sin t\big|_{t = 0}^{t = \pi} - 4\int_{0}^{\pi}t\sin tdt\\
+		  & = & 4\int_{0}^{\pi}td(\cos t)\\
+		  & = & 4t\cos t\big|_{t = 0}^{t = \pi} - 4\int_{0}^{\pi}\cos tdt\\
+		  & = & -4\pi
+	\end{eqnarray*}
+\end{solution}
 
 \begin{example}[][Exam: 29.1.8]
 	$$\int_{0}^{2}x\sqrt{2x-x^{2}}dx$$
 \end{example}
+\begin{solution}
+	令 $x - 1 = \sin t, t\in [-\dfrac{\pi}{2}, \dfrac{\pi}{2}], dx = \cos t dt$
+	\begin{eqnarray*}
+		I & = & \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}(1+\sin t)\cos^{2} tdt\\
+		  & = & \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\cos^{2} tdt\\
+		  & = & 2\int_{0}^{\frac{\pi}{2}}\cos^{2} tdt\\
+		  & = & 2\times \dfrac{1}{2}\times \dfrac{\pi}{2}\\
+		  & = & \dfrac{\pi}{2}
+	\end{eqnarray*}
+
+\end{solution}
 \myspace{1}
 
 \textcolor{orange}{March 5}
@@ -50,10 +130,28 @@
 \begin{example}[][Exam: 29.1.9]
 	$$\int_{0}^{1}x(1-x^{4})^{\frac{3}{2}}dx$$
 \end{example}
-
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \dfrac{1}{2}\int_{0}^{1}\left[\sqrt{(1-(x^{2})^{2}}\right]^{3}d(x^{2})\\
+		  & = & \dfrac{1}{2}\int_{0}^{1}\left[\sqrt{1-u^{2}}\right]^{3}du\\
+		  & = & \dfrac{1}{2}\int_{0}^{\frac{\pi}{2}}\cos^{4}tdt\\
+		  & = & \dfrac{1}{2}\times \dfrac{3}{4}\times \dfrac{1}{2}\times \dfrac{\pi}{2}\\
+		  & = & \dfrac{3\pi}{32}
+	\end{eqnarray*}
+\end{solution}
 \begin{example}[][Exam: 29.1.10]
 	$$\int_{1}^{2}(x-1)^{2}(x-2)^{2}dx$$
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int_{1}^{2}(x-1)^{2} \left[(x-1)-1\right]^{2} d(x-1)\\
+		  & = & \int_{0}^{1}t^{2}(t-1)^{2}dt\\
+		  & = & \int_{0}^{1}(t^{4}-2t^{3}+t^{2})dt\\
+		  & = & \dfrac{t^{5}}{5} - \dfrac{t^{4}}{2} + \dfrac{t^{3}}{3}\big|_{t = 0}^{t = 1}\\
+		  & = & \dfrac{1}{5} - \dfrac{1}{2} + \dfrac{1}{3}\\
+		  & = & \dfrac{1}{30}
+	\end{eqnarray*}
+\end{solution}
 \myspace{1}
 
 \textcolor{orange}{March 6}
@@ -61,10 +159,24 @@
 \begin{example}[][Exam: 29.1.11]
 	$$\int_{-2}^{2}x\ln(1+e^{x})dx$$
 \end{example}
-
+\begin{solution}
+	\begin{eqnarray*}
+		I & = & \int_{-2}^{2}-x\ln(1+e^{-x})\\
+		  & = & -\int_{-2}^{2}x\ln(1+e^{x})dx + \int_{-2}^{2}x^{2}dx\\
+		  & = & -I + \dfrac{8}{3}\\
+		I & = & \dfrac{4}{3} 
+	\end{eqnarray*}
+\end{solution}
 \begin{example}[][Exam: 29.1.12]
 	设 $D$ 是由曲线 $xy+1=0$ 与直线 $y+x=0$ 及 $y=2$ 围成的有界区域,求 $D$ 的面积
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		S & = & \int_{-2}^{-1}(2+x)dx + \int_{-1}^{-\frac{1}{2}}(2 + \dfrac{1}{x})dx\\
+		  & = & (2x + \dfrac{1}{2}x^{2})\big|_{-2}^{-1} + (2x + \ln|x|)\big|_{-1}^{-\frac{1}{2}}\\
+		  & = & \dfrac{3}{2} - \ln 2
+	\end{eqnarray*}
+\end{solution}
 \myspace{1}
 
 \textcolor{orange}{March 7}
@@ -72,10 +184,47 @@
 \begin{example}[][Exam: 29.1.13]
 	设 $D$ 是由曲线 $y=x^{2}$ 与 $y=x$ 围成的有界区域,求区域 $D$ 分别绕直线 $y=0,x=0,x=1,x=2$ 旋转所得旋转体的体积
 \end{example}
+\begin{solution}
+	\begin{eqnarray*}
+		V_{1} & = & 2\pi \int_{0}^{1}(x^{2}-x^{3})dx\\
+			  & = & \dfrac{\pi}{6}\\
+		V_{2} & = & \pi\int_{0}^{1}(x^{2}-x^{4})dx\\
+			  & = & \dfrac{2\pi}{15}\\
+		V_{3} & = & 2\pi\int_{0}^{1}(1-x)(x-x^{2})dx\\
+			  & = & \dfrac{\pi}{6}\\
+		V_{4} & = & 2\pi\int_{0}^{1}(2-x)(x-x^{2})dx\\
+			  & = & \dfrac{\pi}{2}
+	\end{eqnarray*}
+\end{solution}
 
 \begin{example}[][Exam: 29.1.14]
 	方程 $y''+4y'+4y=e^{-2x}$ 满足条件 $y(0)=1,y'(0)=0$ 的特解
 \end{example}
+\begin{solution}
+
+	特征方程
+	$$\lambda^{2} + 4\lambda + 4 = 0\Rightarrow \lambda_{1} = \lambda_{2} = -2$$
+
+	不妨设方程一个特解为 $y^{*} = Ae^{-2x}x^{2}$, 代入方程 $A = \dfrac{1}{2}$
+
+	方程通解: $y = \dfrac{1}{2}x^{2}e^{-2x} + (C_{1} + C_{2}x)e^{-2x}$
+
+	$$\begin{cases}
+	  y(0) = 1\\
+	  y'(0) = 0
+	\end{cases}\Rightarrow 
+	\begin{cases}
+	  C_{1} = 1\\
+	  C_{2} - 2C_{1} = 0
+	\end{cases}\Rightarrow 
+	\begin{cases}
+	  C_{1} = 1\\
+	  C_{2} = 2
+	\end{cases}$$
+
+	综上, 满足条件的特解为 $y = e^{-2x}(\dfrac{1}{2}x^{2} + 2x + 1)$
+\end{solution}
+\myspace{1}
 
 \section{Week \Rmnum{2}}
 \textcolor{blue}{March 8}
@@ -89,6 +238,9 @@
 	\item D. $y'''-2y''-y'+2y=0$
 \end{itemize}
 \end{example}
+\begin{solution}
+
+\end{solution}
 
 \begin{example}[][Exam: 29.2.2]
 	方程 $y''-2y'=xe^{2x}$ 的特解形式为:
@@ -99,6 +251,9 @@
 	\item D. $y=x^{2}(ax+b)e^{2x}$
 \end{itemize}
 \end{example}
+\begin{solution}
+
+\end{solution}
 \myspace{1}
 
 \textcolor{blue}{March 9}
@@ -112,10 +267,20 @@
 	\item D. $y=ae^{x}+b+cx\sin x$
 \end{itemize}
 \end{example}
+\begin{solution}
+
+\end{solution}
 
 \begin{example}[][Exam: 29.2.4]
 	设函数 $f(x)$ 具有一阶连续导数, 且满足 $f(x)=\int_{0}^{x}(x^{2}-t^{2})f'(t)dt+x^{2}$, 求 $f(x)$ 表达式
 \end{example}
+\begin{solution}
+	$$f'(x) = 2x\int_{0}^{x}f'(t)dt + x^{2}f'(x) - x^{2}f'(x) + 2x$$
+	$$\begin{cases}
+		f'(x) = 2x \left[\int_{0}^{x}f'(t)dt + 1\right]\\
+		f''(x) = 
+	\end{cases}$$
+\end{solution}
 \myspace{1}
 
 \textcolor{blue}{March 10}

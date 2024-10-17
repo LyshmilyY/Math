@@ -33,9 +33,11 @@
 - `texlive 2024` [Texlive 安装教程](https://tug.ctan.org/info/install-latex-guide-zh-cn/install-latex-guide-zh-cn.pdf)
 
 - 字体安装(**所有用户安装**) 
-> [方正字体](https://pan.baidu.com/share/init?surl=BgbQM7LoinY7m8yeP25Y7Q) (提取码: `njy9`)
-> [CMU](https://fontmeme.com/fonts/cmu-typewriter-font/)
-> [NerdFOnt](https://www.nerdfonts.com/font-downloads)
+> (1). [方正字体](https://pan.baidu.com/share/init?surl=BgbQM7LoinY7m8yeP25Y7Q) (提取码: `njy9`)
+> 
+> (2). [CMU](https://fontmeme.com/fonts/cmu-typewriter-font/)
+> 
+> (3). [NerdFOnt](https://www.nerdfonts.com/font-downloads)
 
 ### 2.2 编辑器
 

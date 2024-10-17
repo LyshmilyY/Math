@@ -258,23 +258,23 @@ $|f(x,y)-A|<\varepsilon$, 那么称函数 $f(x,y)$ 当 $(x,y)\to(x_{0},y_{0})$ �
 	1. 普通对称性
 
 	(i). 区域 $D$ 关于 $x = a$ 对称, 我们有:
-	$$\iint\limits_{D} f(x,y)d\sigma = \begin{cases} 2\iint\limits_{D_{1}} f(x,y)d\sigma, & f(2a-x) = f(x) \\ 0, & f(2a-x) = -f(x)  \end{cases}$$
+	$$\iint\limits_{D} f(x,y)d\sigma = \begin{cases} 2\iint\limits_{D_{1}} f(x,y)d\sigma & f(2a-x) = f(x) \\ 0 & f(2a-x) = -f(x)  \end{cases}$$
 	特别的, 当 $a = 0$ 时, 我们有:
-	$$\iint\limits_{D} f(x,y)d\sigma = \begin{cases} 2\iint\limits_{D_{1}} f(x,y)d\sigma, & f(-x) = f(x) \\ 0, & f(-x) = -f(x)  \end{cases}$$
+	$$\iint\limits_{D} f(x,y)d\sigma = \begin{cases} 2\iint\limits_{D_{1}} f(x,y)d\sigma & f(-x) = f(x) \\ 0 & f(-x) = -f(x)  \end{cases}$$
 
 	(ii). 区域 $D$ 关于 $y = b$ 对称, 我们有:
-	$$\iint\limits_{D} f(x,y)d\sigma = \begin{cases} 2\iint\limits_{D_{1}} f(x,y)d\sigma, & f(x,2b-y) = f(x,y) \\ 0, & f(x,2b-y) = -f(x,y)  \end{cases}$$
+	$$\iint\limits_{D} f(x,y)d\sigma = \begin{cases} 2\iint\limits_{D_{1}} f(x,y)d\sigma & f(x,2b-y) = f(x,y) \\ 0 & f(x,2b-y) = -f(x,y)  \end{cases}$$
 	特别的, 当 $b = 0$ 时, 我们有:
-	$$\iint\limits_{D} f(x,y)d\sigma = \begin{cases} 2\iint\limits_{D_{1}} f(x,y)d\sigma, & f(x,-y) = f(x,y) \\ 0, & f(x,-y) = -f(x,y)  \end{cases}$$
+	$$\iint\limits_{D} f(x,y)d\sigma = \begin{cases} 2\iint\limits_{D_{1}} f(x,y)d\sigma & f(x,-y) = f(x,y) \\ 0 & f(x,-y) = -f(x,y)  \end{cases}$$
 
 	2. 轮换对称性
 
 	区域 $D$ 关于 $x = y$ 对称, 我们有:
 	$$\iint\limits_{D} f(x,y)d\sigma = \iint\limits_{D} f(y,x)d\sigma= \dfrac{1}{2}\iint\limits_{D}\left[f(x,y)+f(y,x)\right]d\sigma$$
-	$$\iint\limits_{D} f(x,y)d\sigma = \begin{cases} 2\iint\limits_{D_{1}} f(x,y)d\sigma, & f(x,y) = f(y,x) \\ 0, & f(x,y) = -f(y,x)  \end{cases}$$
+	$$\iint\limits_{D} f(x,y)d\sigma = \begin{cases} 2\iint\limits_{D_{1}} f(x,y)d\sigma & f(x,y) = f(y,x) \\ 0 & f(x,y) = -f(y,x)  \end{cases}$$
 
 	3. 区域 $D$ 关于原点对称, 我们有:
-	$$\iint\limits_{D} f(x,y)d\sigma = \begin{cases} 2\iint\limits_{D_{1}} f(x,y)d\sigma, & f(-x,-y) = f(x,y) \\ 0, & f(-x,-y) = -f(x,y)  \end{cases}$$
+	$$\iint\limits_{D} f(x,y)d\sigma = \begin{cases} 2\iint\limits_{D_{1}} f(x,y)d\sigma & f(-x,-y) = f(x,y) \\ 0 & f(-x,-y) = -f(x,y)  \end{cases}$$
 \end{theorem}
 \section{二重积分计算}
 
@@ -1041,8 +1041,8 @@ $$S(x) = \begin{cases}
 	(1). 一般式
 	
 	$$\begin{cases}
-		A_{1}x+B_{1}y+C_{1}z = 0, & \boldsymbol{n}_{1}=(A_{1},B_{1},C_{1})\\
-		A_{2}x+B_{2}y+C_{2}z = 0, & \boldsymbol{n}_{2}=(A_{2},B_{2},C_{2})\\
+		A_{1}x+B_{1}y+C_{1}z + D_{1}= 0, & \boldsymbol{n}_{1}=(A_{1},B_{1},C_{1})\\
+		A_{2}x+B_{2}y+C_{2}z + D_{2}= 0, & \boldsymbol{n}_{2}=(A_{2},B_{2},C_{2})\\
 		\boldsymbol{\tau} = \boldsymbol{n}_{1}\times \boldsymbol{n}_{2} 
 	\end{cases}$$
 	
@@ -1107,7 +1107,7 @@ $$S(x) = \begin{cases}
 
 \section{空间曲面和曲线}
 
-\begin{definition}[空间曲面] 
+\begin{definition}[空间曲线] 
 	(1). 一般式
 	
 	$$\begin{cases}
@@ -1592,7 +1592,7 @@ $$S(x) = \begin{cases}
 	
 	(4). 积分的可加性
 
-	设 $f(x,y,z)$ 在 $\Omega$ 上可积, 且 $\Omega_{1} \cap \Omega_{2} = \empty, \Omega_{1} \cup \Omega_{2} =\Omega$
+	设 $f(x,y,z)$ 在 $\Omega$ 上可积, 且 $\Omega_{1} \cap \Omega_{2} = \emptyset, \Omega_{1} \cup \Omega_{2} =\Omega$
 	$$\iiint\limits_{\Omega}f(x,y,z)dv = \iiint\limits_{\Omega_{1}}f(x,y,z)dv + \iiint\limits_{\Omega_{2}}f(x,y,z)dv $$
 
 	(5). 积分保号性
@@ -1622,24 +1622,24 @@ $$S(x) = \begin{cases}
 
 	$$\iiint\limits_{\Omega}f(x,y,z)dv = 
 	\begin{cases}
-		2\iiint\limits_{\Omega_{1}}f(x,y,z)dv, & f(x,y,z) = f(x,-y,z)\\
-		0,                                     & f(x,y,z) = -f(x,-y,z)
+		2\iiint\limits_{\Omega_{1}}f(x,y,z)dv & f(x,y,z) = f(x,-y,z)\\
+		0                                     & f(x,y,z) = -f(x,-y,z)
 	\end{cases}$$
 
 	(2). $\Omega$ 关于平面 $yoz$ 对称
 
 	$$\iiint\limits_{\Omega}f(x,y,z)dv =
 	\begin{cases}
-		2\iiint\limits_{\Omega_{1}}f(x,y,z)dv, & f(x,y,z) = f(-x,y,z)\\
-		0,                                     & f(x,y,z) = -f(-x,y,z)
+		2\iiint\limits_{\Omega_{1}}f(x,y,z)dv & f(x,y,z) = f(-x,y,z)\\
+		0                                     & f(x,y,z) = -f(-x,y,z)
 	\end{cases}$$
 
 	(3). $\Omega$ 关于平面 $xoy$ 对称
 
 	$$\iiint\limits_{\Omega}f(x,y,z)dv =
 	\begin{cases}
-		2\iiint\limits_{\Omega_{1}}f(x,y,z)dv, & f(x,y,z) = f(x,y,-z)\\
-		0,                                     & f(x,y,z) = -f(x,y,-z)
+		2\iiint\limits_{\Omega_{1}}f(x,y,z)dv & f(x,y,z) = f(x,y,-z)\\
+		0                                     & f(x,y,z) = -f(x,y,-z)
 	\end{cases}$$
 
 \end{definition}
@@ -1821,6 +1821,12 @@ $$S(x) = \begin{cases}
 
 	对于函数 $f(x,y,z)$ 在空间曲线 $\Gamma$ 上的第一型曲线积分
 	$$\int_{\Gamma}f(x,y,z)ds = \lim\limits_{\lambda \to 0}\sum\limits_{i=1}^{n}f(\xi_{i},\eta_{i},\zeta_{i})\Delta s_{i}$$
+
+	\textcolor{cyan}{物理意义}
+
+	1. 设一物体在 $xoy$ 平面内一光滑曲线弧 $L$ 上, 物体在 $L$ 上的线密度为 $\rho(x,y)$, 则物体的质量 $m = \int_{L}\rho(x,y)ds$
+
+	2. 设一物体在空间曲线 $\Gamma$ 上, 物体在 $\Gamma$ 上的线密度为 $\rho(x,y,z)$, 则物体的质量 $m = \int_{\Gamma}\rho(x,y,z)ds$
 \end{definition}
 \begin{corollary}
 
@@ -1860,24 +1866,24 @@ $$S(x) = \begin{cases}
 
 	$$\int_{\Gamma}f(x,y,z)ds = 
 	\begin{cases}
-		2\int_{\Gamma_{1}}f(x,y,z)ds, & f(x,y,z) = f(x,-y,z)\\
-		0,                                     & f(x,y,z) = -f(x,-y,z)
+		2\int_{\Gamma_{1}}f(x,y,z)ds & f(x,y,z) = f(x,-y,z)\\
+		0                                     & f(x,y,z) = -f(x,-y,z)
 	\end{cases}$$
 
 	(2). $\Gamma$ 关于平面 $yoz$ 对称
 
 	$$\int_{\Gamma}f(x,y,z)ds =
 	\begin{cases}
-		2\int_{\Gamma_{1}}f(x,y,z)ds, & f(x,y,z) = f(-x,y,z)\\
-		0,                                     & f(x,y,z) = -f(-x,y,z)
+		2\int_{\Gamma_{1}}f(x,y,z)ds & f(x,y,z) = f(-x,y,z)\\
+		0                                     & f(x,y,z) = -f(-x,y,z)
 	\end{cases}$$
 
 	(3). $\Gamma$ 关于平面 $xoy$ 对称
 
 	$$\int_{\Gamma}f(x,y,z)ds =
 	\begin{cases}
-		2\int_{\Gamma_{1}}f(x,y,z)ds, & f(x,y,z) = f(x,y,-z)\\
-		0,                                     & f(x,y,z) = -f(x,y,-z)
+		2\int_{\Gamma_{1}}f(x,y,z)ds & f(x,y,z) = f(x,y,-z)\\
+		0                                     & f(x,y,z) = -f(x,y,-z)
 	\end{cases}$$
 \end{definition}
 
@@ -1898,7 +1904,7 @@ $$S(x) = \begin{cases}
 	(2). $L: \begin{cases}
 		x = x(t)\\
 		y = y(t)
-	\end{cases}, t\in[\alpha,\beta]$
+	\end{cases} t\in[\alpha,\beta]$
 	
 	$$\int_{L}f(x,y)ds=\int_{\alpha}^{\beta}f\left[x(t),y(t)\right]\sqrt{[x'(t)]^2+[y'(t)]^2}dt$$
 	
@@ -1912,7 +1918,7 @@ $$S(x) = \begin{cases}
 		x = x(t)\\
 		y = y(t)\\
 		z = z(t)
-	\end{cases}, t\in[\alpha,\beta]\Rightarrow 
+	\end{cases} t\in[\alpha,\beta]\Rightarrow 
 	ds=\sqrt{[x'(t)]^{2}+[y'(t)]^{2}+[z'(t)]^{2}}dt$$
 	
 	$$\int_{\Gamma}f(x,y,z)ds=\int_{\alpha}^{\beta}f \left[ x(t),y(t),z(t)\right]\sqrt{[x'(t)]^{2}+[y'(t)]^{2}+[z'(t)]^{2}}dt$$
@@ -1921,33 +1927,124 @@ $$S(x) = \begin{cases}
 \section{第一型曲面积分}
 \subsection{第一型曲面积分定义和性质}
 \begin{definition}[第一型曲面积分]
-	设 $L$ 是 $xoy$ 平面内一条光滑曲线弧, 函数 $f(x,y)$ 在 $L$ 上有界, 在 $L$ 上任意插入一系列的点 $M_{1}, M_{2}, \cdots, M_{n-1}$ 将 $L$ 分成 $n$ 小段, 设第 $i$ 段的弧长为 $\Delta s_{i}$, 
-	在 第 $i$ 段上任意取一点 $(\zeta_{i},\eta_{i})$, 作乘积 $f(\zeta_{i},\eta_{i})\Delta s_{i}(i=1,2,\cdots,n)$, 并求和 $\sum\limits_{i=1}^{n}f(\zeta_{i},\eta_{i})\Delta s_{i}$, 当 
-	$\lim\limits_{n \to +\infty}\{\lambda|\lambda = \max\{\Delta s_{i}\}, i =1,2,\cdots,n\} = 0$ 时, 求和极限存在, 
-	且与 $\Delta s_{i}$ 的分法以及 $(\zeta_{i},\eta_{i})$ 的取法无关, 称此极限为函数 $f(x,y)$ 在曲线 $L$ 上对弧长的曲线积分
-	或第一型曲线积分, 记作 $\int_{L}f(x,y)ds$
-	$$\int_{L}f(x,y)ds = \lim\limits_{\lambda \to 0}\sum\limits_{i=1}^{n}f(\zeta_{i},\eta_{i})\Delta s_{i}$$ 
+	设曲面 $\Sigma$ 是光滑的, 函数 $f(x,y,z)$ 在 $\Sigma$ 上有界, 将 $\Sigma$ 任意分为 $n$ 个小块 $\Delta \Sigma_{i}$, $\Delta S_{i}$ 表示曲面 $\Delta\Sigma_{i}$ 的面积, 
+	在 $\Delta\Sigma_{i}$ 上任意取一点 $(\xi_{i},\eta_{i},\zeta_{i})$, 作乘积 $f(\xi_{i},\eta_{i},\zeta_{i})\Delta S_{i}(i=1,2,\cdots,n)$, 并求和 
+	$\sum\limits_{i=1}^{n}f(\xi_{i},\eta_{i},\zeta_{i})S_{i}$, 当 $\lim\limits_{n \to +\infty}\{\lambda|\lambda = \max\{S_{i}\}, i =1,2,\cdots,n\} = 0$ 
+	时, 极限 $\lim\limits_{\lambda \to 0}\sum\limits_{i=1}^{n}f(\xi_{i},\eta_{i},\zeta_{i})\Delta S_{i}$ 存在, 且与 $\Delta\Sigma_{i}$ 的分法和 $(\xi_{i},\eta_{i},\zeta_{i})$ 
+	的取法无关, 称此极限为函数 $f(x,y,z)$ 在曲面 $\Sigma$ 上对面积的曲面积分或第一型曲面积分, 记作 $\iint\limits_{\Sigma}f(x,y,z)dS$
 
-	其中 $f(x,y)$ 称为被积函数, $f(x,y)ds$ 称为被积表达式, $x,y$ 是积分变量, $L$ 是积分弧
+	$$\iint\limits_{\Sigma}f(x,y,z)dS = \lim\limits_{\lambda \to 0}\sum\limits_{i=1}^{n}f(\xi_{i},\eta_{i},\zeta_{i})\Delta S_{i}$$
 
-	对于函数 $f(x,y,z)$ 在空间曲线 $\Gamma$ 上的第一型曲线积分
-	$$\int_{\Gamma}f(x,y,z)ds = \lim\limits_{\lambda \to 0}\sum\limits_{i=1}^{n}f(\xi_{i},\eta_{i},\zeta_{i})\Delta s_{i}$$
+	其中 $f(x,y,z)$ 称为被积函数, $f(x,y,z)dS$ 称为被积表达式, $x,y,z$ 是积分变量, $\Sigma$ 是积分曲面
+
+	\textcolor{cyan}{物理意义}
+
+	设一曲面物体 $\Sigma$, 曲面密度为 $\rho(x,y,z)$, 则物体的质量 $m = \iint\limits_{\Sigma}\rho(x,y,z)dS$
 \end{definition}
-\begin{theorem}
-	$$z=f(x,y)\quad F(x,y,z)=0$$
+
+\begin{corollary}
+
+	(1). $\displaystyle{\int_{\Sigma} dS = S}$, 其中 $S$ 是 $\Sigma$ 的面积
+
+	(2). 设 $f(x,y,z)$ 在 $\Sigma$ 上可积, 其在 $\Sigma$ 上必有界
+
+	(3). 积分线性性质
+	$$\iint\limits_{\Sigma}\left[k_{1}f(x,y,z) + k_{2} g(x,y,z)\right]dS = k_{1}\iint\limits_{\Sigma}f(x,y,z)dS+k_{2}\iint\limits_{\Sigma}g(x,y,z)dS$$
+
+	(4). 积分可加性
+
+	设 $f(x,y,z)$ 在 $\Sigma$ 上可积, 且 $\Sigma_{1}\cap \Sigma_{2}=\emptyset, \Sigma_{1}\cup \Sigma_{2}=\Sigma$
+
+	$$\iint\limits_{\Sigma}f(x,y,z)dS = \iint\limits_{\Sigma_{1}}f(x,y,z)dS + \iint\limits_{\Sigma_{2}}f(x,y,z)dS$$
+
+	(5). 积分保号性
+
+	设 $f(x,y,z), g(x,y,z)$ 在 $\Sigma$ 上可积, 且在 $\Sigma$ 上 $f(x,y,z) \leq g(x,y,z)$
+
+	$$\iint\limits_{\Sigma}f(x,y,z)dS \leq \iint\limits_{\Sigma}g(x,y,z)dS\Rightarrow 
+	\big|\iint\limits_{\Sigma}f(x,y,z)dS\big| \leq \iint\limits_{\Sigma}\big|f(x,y,z)\big|dS$$
+
+	(6). 估值定理
 	
-	我们将曲面 $\Sigma$ 投影到任意一个平面,这里以 $xoy$ 为例,$dS=\sqrt{1+(z_{x}')^2+(z_{y}')^2}d\sigma$
+	设 $M,m$ 分别是 $f(x,y,z)$ 在 $\Sigma$ 上的最大值和最小值, $S_{\Sigma}$ 表示 $\Sigma$ 的面积 
 	
-	$$\iint_{\Sigma}f(x,y,z)dS=\iint_{D_{xy}}f(x,y,z)\sqrt{1+(z_{x}')^2+(z_{y}')^2}d\sigma$$
-\end{theorem}
+	$$mS_{\Sigma} \leq \iint\limits_{\Sigma}f(x,y,z)dS \leq MS_{\Sigma}$$
+
+	(7). 中值定理
+
+	设 $f(x,y,z)$ 在 $\Sigma$ 上连续, $S_{\Sigma}$ 是 $\Sigma$ 的面积
+
+	$$\exists (\xi,\eta,\zeta)\in \Sigma,\ s.t.\ \iint\limits_{\Sigma}f(x,y,z) dS = f(\xi,\eta,\zeta)S_{\Sigma}$$
+\end{corollary}
+
 \subsection{第一型曲面积分的对称性}
 
-\subsection{第一型曲面积分计算}
+\begin{definition}[普通对称性]
+	(1). $\Sigma$ 关于平面 $xoz$ 对称
 
+	$$\iint\limits_{\Sigma}f(x,y,z)dS = 
+	\begin{cases}
+		2\iint\limits_{\Sigma_{1}}f(x,y,z)dS & f(x,y,z) = f(x,-y,z)\\
+		0                                    & f(x,y,z) = -f(x,-y,z)
+	\end{cases}$$
+
+	(2). $\Sigma$ 关于平面 $yoz$ 对称
+
+	$$\iint\limits_{\Sigma}f(x,y,z)dS =
+	\begin{cases}
+		2\iint\limits_{\Sigma_{1}}f(x,y,z)dS & f(x,y,z) = f(-x,y,z)\\
+		0                                    & f(x,y,z) = -f(-x,y,z)
+	\end{cases}$$
+
+	(3). $\Sigma$ 关于平面 $xoy$ 对称
+
+	$$\iint\limits_{\Sigma}f(x,y,z)dS =
+	\begin{cases}
+		2\iint\limits_{\Sigma_{1}}f(x,y,z)dS & f(x,y,z) = f(x,y,-z)\\
+		0                             & f(x,y,z) = -f(x,y,-z)
+	\end{cases}$$
+\end{definition}
+
+\begin{definition}[轮换对称性]
+	若将 $x,y,z$ 任意两个交换位置后, 积分区域 $\Sigma$ 保持不变
+
+	$$\iint\limits_{\Sigma}f(x)dS=\iint\limits_{\Sigma}f(y)dS=\iint\limits_{\Sigma}f(z)dS$$
+\end{definition}
+
+\subsection{第一型曲面积分计算}
+\begin{theorem}[投影法]
+	1. 曲面投影 $xoy$ 平面
+
+	设曲面 $\Sigma$ 的方程为 $z=z(x,y)$, 则 $\Sigma$ 的面积元素 $dS = \sqrt{1+\left(\dfrac{\partial z}{\partial x}\right)^{2}+\left(\dfrac{\partial z}{\partial y}\right)^{2}}dxdy$
+
+	$$\iint\limits_{\Sigma}f(x,y,z)dS = \iint\limits_{D}f(x,y,z(x,y))\sqrt{1+\left(\dfrac{\partial z}{\partial x}\right)^{2}+\left(\dfrac{\partial z}{\partial y}\right)^{2}}dxdy$$
+
+	2. 曲面投影 $yoz$ 平面
+
+	设曲面 $\Sigma$ 的方程为 $x=x(y,z)$, 则 $\Sigma$ 的面积元素 $dS = \sqrt{1+\left(\dfrac{\partial x}{\partial y}\right)^{2}+\left(\dfrac{\partial x}{\partial z}\right)^{2}}dydz$
+
+	$$\iint\limits_{\Sigma}f(x,y,z)dS = \iint\limits_{D}f(x(y,z),y,z)\sqrt{1+\left(\dfrac{\partial x}{\partial y}\right)^{2}+\left(\dfrac{\partial x}{\partial z}\right)^{2}}dydz$$
+
+	3. 曲面投影 $xoz$ 平面
+
+	设曲面 $\Sigma$ 的方程为 $y=y(x,z)$, 则 $\Sigma$ 的面积元素 $dS = \sqrt{1+\left(\dfrac{\partial y}{\partial x}\right)^{2}+\left(\dfrac{\partial y}{\partial z}\right)^{2}}dxdz$
+
+	$$\iint\limits_{\Sigma}f(x,y,z)dS = \iint\limits_{D}f(x,y(x,z),z)\sqrt{1+\left(\dfrac{\partial y}{\partial x}\right)^{2}+\left(\dfrac{\partial y}{\partial z}\right)^{2}}dxdz$$
+
+\end{theorem}
 \section{第一型曲线积分和曲面积分应用}
+
 1. \textcolor{purplec}{曲线长度和曲面面积}
 
+\begin{theorem}[曲线弧长和曲面面积]
+
+	$$L_{\Gamma} = \int_{\Gamma} ds$$
+
+	$$S_{\Sigma} = \iint\limits_{\Sigma}dS$$
+\end{theorem}
+
 2. \textcolor{cyan}{重心}
+
 \begin{theorem}[重心公式]
 
 	(1). 光滑曲线, 对于光滑曲线 $\Gamma$, 线密度 $\rho(x,y,z)$, 重心 $O(\overline{x}, \overline{y}, \overline{z})$
@@ -2037,35 +2134,115 @@ $$S(x) = \begin{cases}
 \chapter{第二型曲线和曲面积分}
 
 \section{第二型曲线积分}
-
+\subsection{第二型曲线积分定义和性质}
 \begin{definition}[第二型曲线积分]
-	物理意义: 变力沿曲线做功
-	$$\int_{L}P(x,y)dx+Q(x,y)dy \quad \int_{\Gamma}P(x,y,z)dx+Q(x,y,z)dy+R(x,y,z)dz$$
+	在变力场中, $\boldsymbol{F} = P(x,y)\boldsymbol{i} + Q(x,y)\boldsymbol{j}$ 沿着曲线 $L$ 从 $A$ 点到 $B$ 点的做功
+
+	二维平面
+	$$W = \int_{L}\boldsymbol{F}\cdot d\boldsymbol{s} = \int_{L}P(x,y)dx+Q(x,y)dy$$
+
+	三维空间
+	$$W = \int_{\Gamma}\boldsymbol{F}\cdot d\boldsymbol{s} = \int_{\Gamma}P(x,y,z)dx+Q(x,y,z)dy+R(x,y,z)dz$$
 \end{definition}
-\subsection{格林公式}
-\begin{theorem}
-	格林公式: (第二型曲线积分 $\to$ 二重积分 )
-	$$\oint_{L}P(x,y)dx+Q(x,y)dy=\oiint\limits_{D}(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})d\sigma$$
+\begin{corollary}
+	(1). 线性性质
+
+	$$\int_{\Gamma}(k_{1}\boldsymbol{F_{1}}\pm \boldsymbol{F_{2}})d\boldsymbol{s} = k_{1}\int_{\Gamma}\boldsymbol{F_{1}}d\boldsymbol{s} + k_{2}\int_{\Gamma}\boldsymbol{F_{2}}d\boldsymbol{s}$$
+	(2). 积分有向性
 	
-	前提条件: $L$取正向,左手在内侧,$L$闭合.一般适用于平面曲线
+	$$\int_{\mathop{AB}\limits^{\frown}}\boldsymbol{F}d\boldsymbol{s} = - \int_{\mathop{BA}\limits^{\frown}}\boldsymbol{F}d\boldsymbol{s}$$
+	
+	(3). 积分可加性
+	
+	$$\int_{\mathop{AB}\limits^{\frown}}\boldsymbol{F}d\boldsymbol{s} = \int_{\mathop{AC}\limits^{\frown}}\boldsymbol{F}d\boldsymbol{s} + \int_{\mathop{CB}\limits^{\frown}}\boldsymbol{F}d\boldsymbol{s}$$
+\end{corollary}
+\subsection{第二型曲线积分计算}
+\subsubsection{参数方程转定积分}
+\begin{theorem}
+	1. 二维平面
+	$$ L = \begin{cases}
+		x = x(t)\\
+		y = y(t)
+	\end{cases}, t\in[\alpha,\beta]$$
+	$$\int_{L}P(x,y)dx+Q(x,y)dy = \int_{\alpha}^{\beta}[P(x(t),y(t))x'(t)+Q(x(t),y(t))y'(t)]dt$$
+
+	2. 三维空间
+	$$\Gamma = \begin{cases}
+		x = x(t)\\
+		y = y(t)\\
+		z = z(t)
+	\end{cases}, t\in[\alpha,\beta]$$
+	\begin{eqnarray*}
+		\int_{\Gamma}P(x,y,z)dx+Q(x,y,z)dy+R(x,y,z)dz & = & \int_{\alpha}^{\beta}P(x(t),y(t),z(t))x'(t)dt \\
+		& + & Q(x(t),y(t),z(t))y'(t)dt \\
+		& + & R(x(t),y(t),z(t))z'(t)dt
+	\end{eqnarray*}
 \end{theorem}
-\subsection{斯托克斯公式}
+\subsubsection{格林公式}
+\begin{theorem}[格林公式]
+	设平面有界区域 $D$ 由光滑曲线 $L$ 围成, $L$ 取正向(左手在内侧), $P(x,y),Q(x,y)$ 在 $D$ 上有一阶连续偏导数
+
+	$$\oint_{L}P(x,y)dx+Q(x,y)dy=\iint\limits_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy$$
+\end{theorem}
+\begin{itemize}
+	\item $L$ 是非封闭区域, 且在区域 $D$ 内满足 $\dfrac{\partial P}{\partial y} \neq \dfrac{\partial Q}{\partial x}$, 补线使其成为封闭区域
+	\item $L$ 是封闭区域, 且在区域 $D$ 内有奇点, 且除奇点之外满足 $\dfrac{\partial P}{\partial y} = \dfrac{\partial Q}{\partial x}$
+	$$\oint_{L}Pdx+Qdy = \oint_{L_{1}}Pdx+Qdy$$
+	\item 平面曲线积分与路径无关 $\Leftrightarrow \dfrac{\partial P}{\partial y} = \dfrac{\partial Q}{\partial x} \Leftrightarrow u = Pdx+ Qdy$ 
+\end{itemize}
+\subsubsection{斯托克斯公式}
 \begin{theorem}[斯托克斯公式]
-	斯托克斯公式: (第二型曲线积分 $\to$ 第一型曲面积分 )
-	$$\oint_{\Gamma}Pdx+Qdy+Rdz=\iint\limits_{\Sigma}\left| \begin{array}{lll}
+	设 $\Omega$ 是某空间区域, $\Sigma$ 是 $\Omega$ 内分片光滑有向曲面, $\Gamma$ 是 $\Sigma$ 的边界, 方向和 $\Sigma$ 法向量成右手系, 函数 $P(x,y,z),Q(x,y,z),R(x,y,z)$ 在 $\Omega$ 内有连续的一阶偏导数
+
+	$$\oint_{\Gamma}Pdx+Qdy+Rdz=\iint\limits_{\Sigma}
+	\begin{vmatrix}
 		\cos\alpha&\cos\beta&\cos\gamma\\
 		\dfrac{\partial}{\partial x}&\dfrac{\partial }{\partial y}&\dfrac{\partial}{\partial z}\\
 		P&Q&R
-	\end{array}\right|dS $$
+	\end{vmatrix}dS $$
+	$$\oint_{\Gamma}Pdx+Qdy+Rdz=\iint\limits_{\Sigma}
+	\begin{vmatrix}
+		dydz&dxdz&dxdy\\
+		\dfrac{\partial}{\partial x}&\dfrac{\partial }{\partial y}&\dfrac{\partial}{\partial z}\\
+		P&Q&R
+	\end{vmatrix}$$
 \end{theorem}
 
 \section{第二型曲面积分}
-\begin{definition}[第二型曲面积分]
-	物理意义: 向量场通过一个曲面的通量
-	$$\iint\limits_{\Omega}P(x,y,z)dydz+Q(x,y,z)dxdz+R(x,y,z)dxdy$$
+\subsection{第二型曲面积分定义和性质}
+\begin{definition}[第二型曲线积分]
+	在向量场场中, 存在向量函数 $\boldsymbol{F}(x,y,z) = P(x,y,z)\boldsymbol{i} + Q(x,y,z)\boldsymbol{j} + R(x,y,z)\boldsymbol{k}$, $\boldsymbol{\Sigma}$ 是
+	向量场中某一有向光滑曲面, $\boldsymbol{n}$ 是 $\boldsymbol{\Sigma}$ 的单位法向量, $\boldsymbol{F}$ 在 $\boldsymbol{\Sigma}$ 上的通量
+	$$\iint\limits_{\Sigma}\boldsymbol{F}\cdot \boldsymbol{n}dS = \iint\limits_{\Sigma} P(x,y,z)dydz + Q(x,y,z)dxdz + R(x,y,z)dydz$$
 \end{definition}
-\subsection{高斯公式}
+\begin{corollary}
+	(1). 线性性质
+
+	$$\iint_{\Sigma}(k_{1}\boldsymbol{F_{1}}\pm \boldsymbol{F_{2}})d\boldsymbol{S} = k_{1}\iint_{\Sigma}\boldsymbol{F_{1}}d\boldsymbol{S} + k_{2}\iint_{\Sigma}\boldsymbol{F_{2}}d\boldsymbol{S}$$
+	
+	(2). 积分有向性
+	
+	$$\iint_{\Sigma^{+}}\boldsymbol{F}d\boldsymbol{S} = - \iint_{\Sigma^{-}}\boldsymbol{F}d\boldsymbol{S}$$
+	
+	(3). 积分可加性
+	
+	$$\iint_{\Sigma}\boldsymbol{F}d\boldsymbol{S} = \iint_{\Sigma_{1}}\boldsymbol{F}d\boldsymbol{S} + \iint_{\Sigma_{2}}\boldsymbol{F}d\boldsymbol{S}$$
+\end{corollary}
+\subsection{第二型曲面积分计算}
+\subsubsection{投影转二重积分}
+\begin{itemize}
+	\item  $$\iint\limits_{\Sigma} P(x,y,z)dydz + Q(x,y,z)dxdz + R(x,y,z)dydz $$
+	\item  每一项的符号由 $\boldsymbol{n}$ 的方向决定
+	$$\begin{cases}
+	  cos\alpha > 0 \to dydz\\
+	  cos\beta > 0 \to dxdz\\
+	  cos\gamma > 0 \to dxdy
+	\end{cases}$$
+\end{itemize}
+\subsubsection{高斯公式}
 \begin{theorem}[高斯公式]
-	高斯公式: (第二型曲面积分 $\to$ 三重积分)
-	$$\iint\limits_{\Omega}P(x,y,z)dydz+Q(x,y,z)dxdz+R(x,y,z)dxdy=\iiint\limits_{\Omega}(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z})d\nu$$
+	
+	设空间有界闭区域 $\Omega$ 由分片光滑封闭曲面 $\Sigma$ 围成, $\Sigma$ 取外侧, 函数 $P(x,y,z),Q(x,y,z),R(x,y,z)$ 在 $\Omega$ 内有连续的一阶偏导数
+	
+	$$\iint\limits_{\Omega}P(x,y,z)dydz+Q(x,y,z)dxdz+R(x,y,z)dxdy=\iiint\limits_{\Omega}\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\right)d\nu$$
 \end{theorem}
