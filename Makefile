@@ -15,4 +15,4 @@ debug: main.tex
 	xelatex -synctex=1 -interaction=nonstopmode -shell-escape -8bit -file-line-error main.tex
 # 清理生成的文件
 clean:
-	rm -f *.aux *.bbl *.blg *.log *.out *.toc *.bcf *.run.xml *.ptc 
+	rm -f *.aux *.bbl *.blg *.log *.out *.toc *.bcf *.run.xml *.ptc *.synctex
