@@ -441,7 +441,7 @@ $$ det(A) = \begin{vmatrix}
 
 	$$C=A + B=(a_{ij})_{m\times n} + (b_{ij})_{m\times n}=(c_{ij})_{m\times n}$$
 	
-	其中,$c_{ij}=a_{ij} + b_{ij}$
+	其中 $c_{ij}=a_{ij} + b_{ij}$
 
 	\textcolor{purpleb}{2. 标量乘法}
 
@@ -826,13 +826,13 @@ $$ det(A) = \begin{vmatrix}
 		a_{m1} & a_{m2} & \cdots & a_{mn}
 	\end{bmatrix}, 
 	B =  \begin{bmatrix}
-		\beta_{1} \\ \beta_{2} \\ \vdots \\ \beta_{n}
+		\boldsymbol{\beta_{1}} \\ \boldsymbol{\beta}_{2} \\ \vdots \\ \boldsymbol{\beta}_{n}
 	\end{bmatrix},
 	AB = \begin{bmatrix}
-		\gamma_{1} \\ \gamma_{2} \\ \vdots \\ \gamma_{m}
+		\boldsymbol{\gamma}_{1} \\ \boldsymbol{\gamma}_{2} \\ \vdots \\ \boldsymbol{\gamma}_{m}
 	\end{bmatrix}$$
 
-	其中 $\beta_{i}, \gamma_{j}$ 代表行向量, $a_{ij}$ 代表元素
+	其中 $\boldsymbol{\beta}_{i}, \boldsymbol{\gamma}_{j}$ 代表行向量, $a_{ij}$ 代表元素
 
 	$$AB = 
 	\begin{bmatrix}
@@ -842,16 +842,16 @@ $$ det(A) = \begin{vmatrix}
 		a_{m1} & a_{m2} & \cdots & a_{mn}
 	\end{bmatrix}
 	\begin{bmatrix}
-		\beta_{1} \\ \beta_{2} \\ \vdots \\ \beta_{n}
+		\boldsymbol{\beta}_{1} \\ \boldsymbol{\beta}_{2} \\ \vdots \\ \boldsymbol{\beta}_{n}
 	\end{bmatrix} = 
 	\begin{bmatrix}
-		a_{11}\beta_{1}+a_{12}\beta_{2}+\cdots+a_{1n}\beta_{n}\\
-		a_{21}\beta_{1}+a_{22}\beta_{2}+\cdots+a_{2n}\beta_{n}\\
+		a_{11}\boldsymbol{\beta}_{1}+a_{12}\boldsymbol{\beta}_{2}+\cdots+a_{1n}\boldsymbol{\beta}_{n}\\
+		a_{21}\boldsymbol{\beta}_{1}+a_{22}\boldsymbol{\beta}_{2}+\cdots+a_{2n}\boldsymbol{\beta}_{n}\\
 		\vdots\\
-		a_{m1}\beta_{1}+a_{m2}\beta_{2}+\cdots+a_{mn}\beta_{n}
+		a_{m1}\boldsymbol{\beta}_{1}+a_{m2}\boldsymbol{\beta}_{2}+\cdots+a_{mn}\boldsymbol{\beta}_{n}
 	\end{bmatrix} = 
 	\begin{bmatrix}
-		\gamma_{1} \\ \gamma_{2} \\ \vdots \\ \gamma_{m}
+		\boldsymbol{\gamma}_{1} \\ \boldsymbol{\gamma}_{2} \\ \vdots \\ \boldsymbol{\gamma}_{m}
 	\end{bmatrix}$$
 
 	$AB$ 的行向量都可以由 $B$ 的行向量\textcolor{red}{线性表出} $\Rightarrow r(AB)\leq r(B)$
@@ -859,25 +859,18 @@ $$ det(A) = \begin{vmatrix}
 	(2). $r(AB) \leq r(A)$
 
 	令
-	$$A = \begin{bmatrix}
-		\alpha_{1} & \alpha_{2} & \cdots & \alpha_{n}
-	\end{bmatrix},
+	$$A = [\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{n}],
 	B = \begin{bmatrix}
 		b_{11} & b_{12} & \cdots & b_{1s}\\
 		b_{21} & b_{22} & \cdots & b_{2s}\\
 		\vdots & \vdots & \ddots & \vdots\\
 		b_{n1} & b_{n2} & \cdots & b_{ns}
 	\end{bmatrix},
-	AB = \begin{bmatrix}
-		\gamma_{1} & \gamma_{2} & \cdots & \gamma_{s}
-	\end{bmatrix}$$
+	AB = [\boldsymbol{\gamma}_{1}, \boldsymbol{\gamma}_{2}, \cdots, \boldsymbol{\gamma}_{s}]$$
 
-	其中 $\alpha_{i}, \gamma_{j}$ 代表列向量, $b_{ij}$ 代表元素
+	其中 $\boldsymbol{\alpha}_{i}, \boldsymbol{\gamma}_{j}$ 代表列向量, $b_{ij}$ 代表元素
 
-	$$AB =
-	\begin{bmatrix}
-		\alpha_{1} & \alpha_{2} & \cdots & \alpha_{n}
-	\end{bmatrix}
+	$$AB = [\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{n}]
 	\begin{bmatrix}
 		b_{11} & b_{12} & \cdots & b_{1s}\\
 		b_{21} & b_{22} & \cdots & b_{2s}\\
@@ -885,14 +878,12 @@ $$ det(A) = \begin{vmatrix}
 		b_{n1} & b_{n2} & \cdots & b_{ns}
 	\end{bmatrix} =
 	\begin{bmatrix}
-		b_{11}\alpha_{1}+b_{21}\alpha_{2}+\cdots+b_{n1}\alpha_{n}\\
-		b_{12}\alpha_{1}+b_{22}\alpha_{2}+\cdots+b_{n2}\alpha_{n}\\
+		b_{11}\boldsymbol{\alpha}_{1}+b_{21}\boldsymbol{\alpha}_{2}+\cdots+b_{n1}\boldsymbol{\alpha}_{n}\\
+		b_{12}\boldsymbol{\alpha}_{1}+b_{22}\boldsymbol{\alpha}_{2}+\cdots+b_{n2}\boldsymbol{\alpha}_{n}\\
 		\vdots\\
-		b_{1s}\alpha_{1}+b_{2s}\alpha_{2}+\cdots+b_{ns}\alpha_{n}
+		b_{1s}\boldsymbol{\alpha}_{1}+b_{2s}\boldsymbol{\alpha}_{2}+\cdots+b_{ns}\boldsymbol{\alpha}_{n}
 	\end{bmatrix}^{T} =
-	\begin{bmatrix}
-		\gamma_{1} & \gamma_{2} & \cdots & \gamma_{s}
-	\end{bmatrix}$$
+	[\boldsymbol{\gamma}_{1}, \boldsymbol{\gamma}_{2}, \cdots, \boldsymbol{\gamma}_{s}]$$
 
 	$AB$ 的列向量都可以由 $A$ 的列向量\textcolor{red}{线性表出} $\Rightarrow r(AB)\leq r(A)$
 
@@ -909,20 +900,13 @@ $$ det(A) = \begin{vmatrix}
 
 	令 $$
 	\begin{cases}
-		A = \begin{bmatrix}
-			\alpha_{1} & \alpha_{2} & \cdots & \alpha_{n}
-		\end{bmatrix}\\
-		B = \begin{bmatrix}
-			\beta_{1} & \beta_{2} & \cdots & \beta_{n}
-		\end{bmatrix}\\
-		[A,B] = \begin{bmatrix}
-			\alpha_{1} & \alpha_{2} & \cdots & \alpha_{n} & \beta_{1} & \beta_{2} & \cdots & \beta_{n}
-		\end{bmatrix}
+		A = [\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}]\\
+		B = [\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \cdots, \boldsymbol{\beta}_{n}]\\
+		[A,B] = [\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}, 
+		\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \cdots, \boldsymbol{\beta}_{n}]
 	\end{cases}$$
 
-	$$A + B = \begin{bmatrix}
-		\alpha_{1}+\beta_{1} & \alpha_{2}+\beta_{2} & \cdots & \alpha_{n}+\beta_{n}
-	\end{bmatrix}$$
+	$$A + B = [\boldsymbol{\alpha}_{1} + \boldsymbol{\beta}_{1}, \boldsymbol{\alpha}_{2} + \boldsymbol{\beta}_{2}, \cdots, \boldsymbol{\alpha}_{n} + \boldsymbol{\beta}_{n}]$$
 
 	$A+B$ 的列向量都可以由 $[A,B]$ 的列向量\textcolor{red}{线性表出} $\Rightarrow r(A+B)\leq r([A,B])\Rightarrow r(A+B)\leq r(A)+r(B)$
 \end{anymark}
@@ -1027,46 +1011,46 @@ $$ det(A) = \begin{vmatrix}
 \subsection{向量的定义和运算}
 \begin{definition}[向量的定义]
 	$n$ 个数构成的有序数组 $[a_{1},a_{2},\cdots,a_{n}]$ 称为一个 $n$ 维向量, 记作 
-	$\alpha=[a_{1},a_{2},\cdots,a_{n}], \alpha$ 称为 $n$ 维行向量,
-	$\alpha^{T}$ 称为 $n$ 维列向量, 其中 $a_{i}$ 称为向量的第 $i$ 个分量
+	$\boldsymbol{\alpha} = [a_{1},a_{2},\cdots,a_{n}], \boldsymbol{\alpha}$ 称为 $n$ 维行向量,
+	$\boldsymbol{\alpha}^{T}$ 称为 $n$ 维列向量, 其中 $a_{i}$ 称为向量的第 $i$ 个分量
 \end{definition}
 \begin{definition}[向量的线性运算]
 	\textcolor{purpleb}{1. 加法}
 
-	$$\alpha+\beta\overset{def}{\Longrightarrow}[a_{1}+b_{1},a_{2}+b_{2},\cdots,a_{n}+b_{n}]$$
+	$$\boldsymbol{\alpha} + \boldsymbol{\beta} \overset{def}{\Longrightarrow}[a_{1}+b_{1},a_{2}+b_{2},\cdots,a_{n}+b_{n}]$$
 	
 	\textcolor{purpleb}{2. 标量乘法}
 
-	$$k\alpha\overset{def}{\Longrightarrow}[ka_{1},ka_{2},\cdots,ka_{n}], k\in \mathbb{R}$$
+	$$k \boldsymbol{\alpha}\overset{def}{\Longrightarrow}[ka_{1},ka_{2},\cdots,ka_{n}], k\in \mathbb{R}$$
 	
 \end{definition}
 \begin{definition}[向量的内积和正交]
 	\textcolor{blue}{内积}
 	
-	设 $\alpha=[a_{1},a_{2},\cdots,a_{n}]^{T}, \beta=[b_{1},b_{2},\cdots,b_{n}]^{T}$, 则称: 
+	设 $\boldsymbol{\alpha} = [a_{1},a_{2},\cdots,a_{n}]^{T}, \boldsymbol{\beta} = [b_{1},b_{2},\cdots,b_{n}]^{T}$, 则称: 
 
-	$$\alpha^{T}\beta=\sum\limits_{i=1}^{n}a_{i}b_{i}=a_{1}b_{1}+a_{2}b_{2}+\cdots+a_{n}b_{n}$$
+	$$\boldsymbol{\alpha}^{T}\boldsymbol{\beta} = \sum\limits_{i=1}^{n}a_{i}b_{i}=a_{1}b_{1}+a_{2}b_{2}+\cdots+a_{n}b_{n}$$
 	
-	为向量 $\alpha,\beta$ 的内积, 记作$(\alpha, \beta)$
+	为向量 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 的内积, 记作$(\boldsymbol{\alpha}, \boldsymbol{\beta})$
 	
 	\textcolor{blue}{模}
 
-	$\|\alpha\| = \sqrt{\sum\limits_{i=1}^{n}a_{i}^2}$ 称为向量 $\alpha$ 的模, 特别的当 $\alpha$时, 称 $\alpha$ 为单位向量
+	$\|\boldsymbol{\alpha}\| = \sqrt{\sum\limits_{i=1}^{n}a_{i}^2}$ 称为向量 $\boldsymbol{\alpha}$ 的模, 特别的当 $\boldsymbol{\alpha}$时, 称 $\boldsymbol{\alpha}$ 为单位向量
 	
 	\textcolor{blue}{正交}
 	
-	当 $\alpha^{T}\beta=0$ 时, 称向量 $\alpha,\beta$ 是正交向量
+	当 $\boldsymbol{\alpha}^{T}\boldsymbol{\beta}=0$ 时, 称向量 $\boldsymbol{\alpha}, \boldsymbol{\beta}$ 是正交向量
 	
 	\textcolor{blue}{标准正交向量组}
 	
-	向量组 $\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$ 满足:  
-	$$\alpha_{i}^{T}\alpha_{j} =  
+	向量组 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}$ 满足:  
+	$$\boldsymbol{\alpha}_{i}^{T} \boldsymbol{\alpha}_{j} =  
 	\begin{cases}
 		0 & i\neq j\\
 		1 & i= j
 	\end{cases}$$
 	
-	则称 $\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$ 是标准或单位正交向量组
+	则称 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}$ 是标准或单位正交向量组
 
 	\textcolor{blue}{正交矩阵}
 
@@ -1079,24 +1063,24 @@ $$ det(A) = \begin{vmatrix}
 	
 	\textcolor{blue}{施密特正交化}
 	
-	线性无关的向量组 $\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$ 的标准正交化公式:
+	线性无关的向量组 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}$ 的标准正交化公式:
 	
 	$$\begin{cases}
-		\beta_{1} = \alpha_{1}\\
-		\beta_{2} = \alpha_{2}-\dfrac{(\alpha_{2},\beta_{1})}{(\beta_{1},\beta_{1})}\beta_{1}\\
+		\boldsymbol{\beta}_{1} = \boldsymbol{\alpha}_{1}\\
+		\boldsymbol{\beta}_{2} = \boldsymbol{\alpha}_{2}-\dfrac{(\boldsymbol{\alpha}_{2},\boldsymbol{\beta}_{1})}{(\boldsymbol{\beta}_{1},\boldsymbol{\beta}_{1})}\boldsymbol{\beta}_{1}\\
 		\cdots\\
-		\beta_{n} = \alpha_{n}-\dfrac{(\alpha_{n},\beta_{1})}{(\beta_{1},\beta_{1})}\beta_{1}-\dfrac{(\alpha_{n},\beta_{2})}{(\beta_{2},\beta_{2})}\beta_{2}-\cdots-\dfrac{(\alpha_{n},\beta_{n-1})}{(\beta_{n-1},\beta_{n-1})}\beta_{n-1}
+		\boldsymbol{\beta}_{n} = \boldsymbol{\alpha}_{n}-\dfrac{(\boldsymbol{\alpha}_{n},\boldsymbol{\beta}_{1})}{(\boldsymbol{\beta}_{1},\boldsymbol{\beta}_{1})}\boldsymbol{\beta}_{1}-\dfrac{(\boldsymbol{\alpha}_{n},\boldsymbol{\beta}_{2})}{(\boldsymbol{\beta}_{2},\boldsymbol{\beta}_{2})}\boldsymbol{\beta}_{2}-\cdots-\dfrac{(\boldsymbol{\alpha}_{n},\boldsymbol{\beta}_{n-1})}{(\boldsymbol{\beta}_{n-1},\boldsymbol{\beta}_{n-1})}\boldsymbol{\beta}_{n-1}
 	\end{cases}$$
 
-	将 $\beta_{1},\beta_{2},\cdots,\beta_{n}$ 单位化:
+	将 $\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \cdots, \boldsymbol{\beta}_{n}$ 单位化:
 	$$\begin{cases}
-		\eta_{1} = \dfrac{\beta_{1}}{\|\beta_{1}\|}\\
-		\eta_{2} = \dfrac{\beta_{2}}{\|\beta_{2}\|}\\
+		\boldsymbol{\eta}_{1} = \dfrac{\boldsymbol{\beta}_{1}}{\|\boldsymbol{\beta}_{1}\|}\\
+		\boldsymbol{\eta}_{2} = \dfrac{\boldsymbol{\beta}_{2}}{\|\boldsymbol{\beta}_{2}\|}\\
 		\cdots\\
-		\eta_{n} = \dfrac{\beta_{n}}{\|\beta_{n}\|}
+		\boldsymbol{\eta}_{n} = \dfrac{\boldsymbol{\beta}_{n}}{\|\boldsymbol{\beta}_{n}\|}
 	\end{cases}$$  
 	
-	$\eta_{1},\eta_{2},\cdots,\eta_{n}$ 是一个标准正交向量组
+	$\boldsymbol{\eta}_{1}, \boldsymbol{\eta}_{2}, \cdots, \boldsymbol{\eta}_{n}$ 是一个标准正交向量组
 \end{definition}
 
 \subsection{向量组的线性相关性}
@@ -1104,122 +1088,124 @@ $$ det(A) = \begin{vmatrix}
 \begin{definition}[线性相关和线性表出]
 	\textcolor{green}{1. 线性组合}
 	
-	设有 $m$ 个 $n$ 维向量 $\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$ 和 $m$ 个数 $k_{1},k_{2},\cdots,k_{m}$, 向量
-	$$k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{m}\alpha_{m}$$
-	称作向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$ 的\textcolor{blue}{线性组合}
+	设有 $m$ 个 $n$ 维向量 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{m}$ 和 $m$ 个数 $k_{1},k_{2},\cdots,k_{m}$, 向量
+	$$k_{1}\boldsymbol{\alpha}_{1}+k_{2}\boldsymbol{\alpha}_{2}+\cdots+k_{m}\boldsymbol{\alpha}_{m}$$
+	称作向量组 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{m}$ 的\textcolor{blue}{线性组合}
 	
 	\textcolor{blue}{2. 线性表出}
 	
-	向量 $\beta$ 可以表示为向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$ 的线性组合
+	向量 $\boldsymbol{\beta}$ 可以表示为向量组 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{m}$ 的线性组合
 	
-	$$\exists k_{i}(i = 1,2,\cdots,m)\in  \mathbb{R},\ s.t.\ \beta=k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{m}\alpha_{m}$$
+	$$\exists k_{i}(i = 1,2,\cdots,m)\in  \mathbb{R},\ s.t.\ \boldsymbol{\beta} = k_{1}\boldsymbol{\alpha}_{1} + k_{2}\boldsymbol{\alpha}_{2} + \cdots + k_{m}\boldsymbol{\alpha}_{m}$$
 
-	向量$\beta$ 可以由向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$ \textcolor{blue}{线性表出}
+	向量$\boldsymbol{\beta}$ 可以由向量组 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{m}$ \textcolor{blue}{线性表出}
 	
 	\textcolor{red}{3. 线性相关}
 	
-	向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$
+	向量组 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{m}$
 
-	$$\exists k_{i}\neq 0(i=1,2,\cdots,m), \ s.t. \ k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{m}\alpha_{m} = 0$$
+	$$\exists k_{i}\neq 0(i=1,2,\cdots,m), \ s.t. \ k_{1}\boldsymbol{\alpha}_{1} + k_{2}\boldsymbol{\alpha}_{2} + \cdots + k_{m}\boldsymbol{\alpha}_{m} = 0$$
 	
-	向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$ \textcolor{blue}{线性相关}
+	向量组 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{m}$ \textcolor{blue}{线性相关}
 	
 	\textcolor{red}{4. 线性无关}
 	
-	向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$
+	向量组 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{m}$
 
-	$$\exists k_{i}\in \mathbb{R},\ s.t.\ k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{m}\alpha_{m} = 0$$
+	$$\exists k_{i}\in \mathbb{R},\ s.t.\ k_{1}\boldsymbol{\alpha}_{1} + k_{2}\boldsymbol{\alpha}_{2} + \cdots + k_{m}\boldsymbol{\alpha}_{m} = 0$$
 
-	当且仅当 $k_{1}=k_{2}=\cdots=k_{m}=0$ 时上式成立, 向量组$\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$ \textcolor{blue}{线性无关}
+	当且仅当 $k_{1}=k_{2}=\cdots=k_{m}=0$ 时上式成立, 向量组 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{m}$ \textcolor{blue}{线性无关}
 \end{definition}
 
 \begin{theorem}[判别线性相关性的七大定理]
 	\textcolor{red}{定理\ 一}
 	
-	 向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$ 线性相关的充要条件: 至少有一个向量可以由其余的$n-1$个向量线性表出
+	 向量组 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}$ 线性相关的充要条件: 至少有一个向量可以由其余的 $n-1$ 个向量线性表出
 	 
 	 \begin{anymark}[证明]
 	 	(i). 必要性
 	 	
-	 	向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$ 线性相关
+	 	向量组 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}$ 线性相关
 	 	
-		$$\exists k_{i}\neq 0(i=1,2,\cdots,n),\ s.t.\ k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{n}\alpha_{n}=0$$
+		$$\exists k_{i}\neq 0(i=1,2,\cdots,n),\ s.t.\ k_{1}\boldsymbol{\alpha}_{1} + k_{2}\boldsymbol{\alpha}_{2} + \cdots + k_{n}\boldsymbol{\alpha}_{n}=0$$
 	 	
 		不妨假设 $k_{m}\neq 0(1\leq m\leq n)$
 
-	 	$$\alpha_{m}=-\dfrac{k_{1}}{k_{m}}\alpha_{1}-\cdots-\dfrac{k_{n}}{k_{m}}\alpha_{n}$$
-	 	$\alpha_{m}$ 可以由其余 $n-1$ 个向量线性表出
+	 	$$\boldsymbol{\alpha}_{m} = -\dfrac{k_{1}}{k_{m}}\boldsymbol{\alpha}_{1}-\cdots-\dfrac{k_{n}}{k_{m}}\boldsymbol{\alpha}_{n}$$
+	 	$\boldsymbol{\alpha}_{m}$ 可以由其余 $n-1$ 个向量线性表出
 	 	
 	 	(ii). 充分性
 	 	
-	 	不妨假设 $\alpha_{m}$ 可以由其余 $n-1$ 个向量线性表出:  
-	 	$$\alpha_{m}=k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{n}\alpha_{n}$$
+	 	不妨假设 $\boldsymbol{\alpha}_{m}$ 可以由其余 $n-1$ 个向量线性表出:  
+	 	$$\boldsymbol{\alpha}_{m} = k_{1}\boldsymbol{\alpha}_{1} + k_{2}\boldsymbol{\alpha}_{2} + \cdots + k_{n}\boldsymbol{\alpha}_{n}$$
 	 	
-		$$\exists k_{i}\neq 0(k_{m} = 1),\ s.t. \ k_{1}\alpha_{1} + k_{2}\alpha_{2}+\cdots + 1\alpha_{m} + \cdots + k_{n}\alpha_{n}=0$$
+		$$\exists k_{i}\neq 0(k_{m} = 1),\ s.t. \ k_{1}\boldsymbol{\alpha}_{1} + k_{2}\boldsymbol{\alpha}_{2} + \cdots + 1\boldsymbol{\alpha}_{m} + \cdots + k_{n}\boldsymbol{\alpha}_{n}=0$$
 	 	
-		向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$ 线性相关
+		向量组 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}$ 线性相关
 	 \end{anymark}
 
 	\textcolor{red}{定理\ 二}
 	
-	若向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$ 线性无关, $\beta,\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$ 线性相关, 
-	$\beta$ 可以由 $\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$ 线性表出, 且表示唯一
+	若向量组 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}$ 线性无关, $\boldsymbol{\beta}, \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}$ 线性相关, 
+	$\boldsymbol{\beta}$ 可以由 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}$ 线性表出, 且表示唯一
 	\begin{anymark}[证明]
 		(i). 存在性
 		
-		$\beta,\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$ 线性相关
+		$\boldsymbol{\beta}, \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}$ 线性相关
 
-		$$\exists k_{i}\in\mathbb{R}(i = 1,2,\cdots,n,\beta),\ s.t. \ k_{\beta}\beta + k_{1}\alpha_{1} + k_{2}\alpha_{2} + \cdots+k_{n}\alpha_{n} = 0$$
+		$$\exists k_{i}\in\mathbb{R}(i = 1,2,\cdots,n,\beta),\ s.t. \ k_{\beta}\boldsymbol{\beta} + k_{1}\boldsymbol{\alpha}_{1} + k_{2}\boldsymbol{\alpha}_{2} + \cdots + k_{n}\boldsymbol{\alpha}_{n} = 0$$
 
 		假设 $k_{\beta}=0$  
 		
-		$$k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{n}\alpha_{n} = 0\Rightarrow \exists k_{i}\neq 0 (i\in \{1,2,\cdots,n\})$$
+		$$k_{1}\boldsymbol{\alpha}_{1} + k_{2}\boldsymbol{\alpha}_{2} + \cdots + k_{n}\boldsymbol{\alpha}_{n} = 0\Rightarrow \exists k_{i}\neq 0 (i\in \{1,2,\cdots,n\})$$
 		
-		向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$ 线性相关, 矛盾 $\Rightarrow k_{\beta} \neq 0$
+		向量组 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}$ 线性相关, 矛盾 $\Rightarrow k_{\beta} \neq 0$
 		
-		$$\beta = -\dfrac{k_{1]}}{k_{\beta}} \alpha_{1} - \dfrac{k_{2}}{k_{\beta}} \alpha_{2} - \cdots - \dfrac{k_{n}}{k_{\beta}}\alpha_{n}$$
+		$$\boldsymbol{\beta} = -\dfrac{k_{1]}}{k_{\beta}} \boldsymbol{\alpha}_{1} - \dfrac{k_{2}}{k_{\beta}} \boldsymbol{\alpha}_{2} - \cdots - \dfrac{k_{n}}{k_{\beta}}\boldsymbol{\alpha}_{n}$$
 
-		向量 $\beta$ 可以由 $\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$ \textcolor{red}{线性表出}
+		向量 $\boldsymbol{\beta}$ 可以由 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}$ \textcolor{red}{线性表出}
 		
 		(ii). 唯一性
 		
-		假设向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$ 对 $\beta$ 存在两种不同的线性表出  
+		假设向量组 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}$ 对 $\boldsymbol{\beta}$ 存在两种不同的线性表出  
 		
 		$$\begin{cases}
-			\beta=l_{1}\alpha_{1}+l_{2}\alpha_{2}+\cdots+l_{n}\alpha_{n}\\
-			\beta=h_{1}\alpha_{1}+h_{2}\alpha_{2}+\cdots+h_{n}\alpha_{n}
+			\boldsymbol{\beta} = l_{1}\boldsymbol{\alpha}_{1} + l_{2}\boldsymbol{\alpha}_{2} + \cdots + l_{n}\boldsymbol{\alpha}_{n}\\
+			\boldsymbol{\beta} = h_{1}\boldsymbol{\alpha}_{1} + h_{2}\boldsymbol{\alpha}_{2} + \cdots + h_{n}\boldsymbol{\alpha}_{n}
 		\end{cases}$$
 
 		两式相减:  
 
-		$$(l_{1}-h_{1})\alpha_{1}+(l_{2}-h_{2})\alpha_{2}+\cdots+(l_{n}-h_{n})\alpha_{n}=0$$
+		$$(l_{1}-h_{1})\boldsymbol{\alpha}_{1} + (l_{2}-h_{2})\boldsymbol{\alpha}_{2} + \cdots + (l_{n}-h_{n})\boldsymbol{\alpha}_{n}=0$$
 
-		$\exists l_{i}-h_{i}\neq 0(i\in\{1,2,\cdots,n\})$, 向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$ 线性相关, 矛盾 $\Rightarrow$ \textcolor{red}{线性表出唯一}
+		$\exists l_{i}-h_{i}\neq 0(i\in\{1,2,\cdots,n\})$, 向量组 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}$ 线性相关, 矛盾 $\Rightarrow$ \textcolor{red}{线性表出唯一}
 	\end{anymark}
 
 	\textcolor{red}{定理\ 三}
 	
-	向量组 $\beta_{1},\beta_{2},\cdots,\beta_{t}$ 可以由 $\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$ 线性表出, 且 $t > s$, 则 $\beta_{1},\beta_{2},\cdots,\beta_{t}$ 线性相关
+	向量组 $\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2},\cdots, \boldsymbol{\beta}_{t}$ 可以由 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{s}$ 线性表出, 且 $t > s$, 则 $\boldsymbol{\beta}_{1},\boldsymbol{\beta}_{2},\cdots,\boldsymbol{\beta}_{t}$ 线性相关
 	
 	\begin{anymark}[证明]
 		
-		向量组 $\beta_{1},\beta_{2},\cdots,\beta_{t}$ 可以由 $\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$ 线性表出  
+		向量组 $\boldsymbol{\beta}_{1},\boldsymbol{\beta}_{2},\cdots,\boldsymbol{\beta}_{t}$ 可以由 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{s}$ 线性表出  
 		$$\begin{cases}
-		    \beta_{1}=l_{11}\alpha_{1}+l_{12}\alpha_{2}+\cdots+l_{1s}\alpha_{s}\\
-			\beta_{2}=l_{21}\alpha_{1}+l_{22}\alpha_{2}+\cdots+l_{2s}\alpha_{s}\\
+		    \boldsymbol{\beta}_{1}=l_{11}\boldsymbol{\alpha}_{1}+l_{12}\boldsymbol{\alpha}_{2}+\cdots+l_{1s}\boldsymbol{\alpha}_{s}\\
+			\boldsymbol{\beta}_{2}=l_{21}\boldsymbol{\alpha}_{1}+l_{22}\boldsymbol{\alpha}_{2}+\cdots+l_{2s}\boldsymbol{\alpha}_{s}\\
 			\cdots\\
-			\beta_{t}=l_{t1}\alpha_{1}+l_{t2}\alpha_{2}+\cdots+l_{ts}\alpha_{s}
+			\boldsymbol{\beta}_{t}=l_{t1}\boldsymbol{\alpha}_{1}+l_{t2}\boldsymbol{\alpha}_{2}+\cdots+l_{ts}\boldsymbol{\alpha}_{s}
 		\end{cases}$$
 
-		假设 $\exists k_{i}\in \mathbb{R},\ s.t. \sum\limits_{i=1}^{s}k_{i}\beta_{i} = 0$
+		假设 $\exists k_{i}\in \mathbb{R},\ s.t. \sum\limits_{i=1}^{s}k_{i}\boldsymbol{\beta}_{i} = 0$
 		
 		$$\begin{cases}
-		  k_{1}\beta_{1} = k_{1}(l_{11}\alpha_{1}+l_{12}\alpha_{2}+\cdots+l_{1s}\alpha_{s})\\
-		  k_{2}\beta_{2} = k_{2}(l_{21}\alpha_{1}+l_{22}\alpha_{2}+\cdots+l_{2s}\alpha_{s})\\
+		  k_{1}\boldsymbol{\beta}_{1} = k_{1}(l_{11}\boldsymbol{\alpha}_{1}+l_{12}\boldsymbol{\alpha}_{2}+\cdots+l_{1s}\boldsymbol{\alpha}_{s})\\
+		  k_{2}\boldsymbol{\beta}_{2} = k_{2}(l_{21}\boldsymbol{\alpha}_{1}+l_{22}\boldsymbol{\alpha}_{2}+\cdots+l_{2s}\boldsymbol{\alpha}_{s})\\
 		  \cdots\\
-		  k_{t}\beta_{t} = k_{t}(l_{t1}\alpha_{1}+l_{t2}\alpha_{2}+\cdots+l_{ts}\alpha_{s})
-		\end{cases}\Rightarrow 
-		\sum_{i=1}^{t}k_{i}\beta_{i} = (\sum\limits_{i=1}^{t}k_{i}l_{i1})\alpha_{1}+(\sum\limits_{i=1}^{t}k_{i}l_{i2})\alpha_{2}+\cdots+(\sum\limits_{i=1}^{t}k_{i}l_{is})\alpha_{s}
+		  k_{t}\boldsymbol{\beta}_{t} = k_{t}(l_{t1}\boldsymbol{\alpha}_{1}+l_{t2}\boldsymbol{\alpha}_{2}+\cdots+l_{ts}\boldsymbol{\alpha}_{s})
+		\end{cases}$$
+		
+		$$
+		\sum_{i=1}^{t}k_{i}\boldsymbol{\beta}_{i} = (\sum\limits_{i=1}^{t}k_{i}l_{i1})\boldsymbol{\alpha}_{1}+(\sum\limits_{i=1}^{t}k_{i}l_{i2})\boldsymbol{\alpha}_{2}+\cdots+(\sum\limits_{i=1}^{t}k_{i}l_{is})\boldsymbol{\alpha}_{s}
 		$$
 		
 		不妨令 $\sum\limits_{i=1}^{t}k_{i}l_{i1} = \sum\limits_{i=1}^{t}k_{i}l_{i2} = \cdots = \sum\limits_{i=1}^{t}k_{i}l_{is} = 0$
@@ -1242,23 +1228,23 @@ $$ det(A) = \begin{vmatrix}
 		
 		这是一个 $t$ 元 $s$ 个方程的齐次线性方程组, 且 $t > s$, 方程组一定有非零解 
 
-		$$\exists k_{i}\neq 0(i\in\{1,2,\cdots,n\}), \ s.t. \ k_{1}\beta_{1}+k_{2}\beta_{2}+\cdots+k_{t}\beta_{t}=0$$
+		$$\exists k_{i}\neq 0(i\in\{1,2,\cdots,n\}), \ s.t. \ k_{1}\boldsymbol{\beta}_{1} + k_{2}\boldsymbol{\beta}_{2} + \cdots + k_{t}\boldsymbol{\beta}_{t}=0$$
 		
-		$\beta_{1},\beta_{2},\cdots,\beta_{t}$ 线性相关
+		$\boldsymbol{\beta}_{1},\boldsymbol{\beta}_{2},\cdots,\boldsymbol{\beta}_{t}$ 线性相关
 	\end{anymark}
 
 	\textcolor{red}{定理\ 四}
 	
-	设 $m$ 个 $n$ 维向量 $\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$, 其中
+	设 $m$ 个 $n$ 维向量 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2}\cdots,\boldsymbol{\alpha}_{m}$, 其中
 	
 	$$\begin{cases}
-		\alpha_{1}=[a_{11},a_{21},\cdots,a_{n1}]^{T}\\
-		\alpha_{2}=[a_{12},a_{22},\cdots,a_{n2}]^{T}\\
+		\boldsymbol{\alpha}_{1}=[a_{11},a_{21},\cdots,a_{n1}]^{T}\\
+		\boldsymbol{\alpha}_{2}=[a_{12},a_{22},\cdots,a_{n2}]^{T}\\
 		\cdots\\
-		\alpha_{m}=[a_{1m},a_{2m},\cdots,a_{nm}]^{T}\\
+		\boldsymbol{\alpha}_{m}=[a_{1m},a_{2m},\cdots,a_{nm}]^{T}\\
 	\end{cases}$$
 
-	向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$ 线性相关的充要条件时齐次线性方程组 $AX = 0$ 有非零解, 也等价于零空间不为零
+	向量组 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{m}$ 线性相关的充要条件时齐次线性方程组 $AX = 0$ 有非零解, 也等价于零空间不为零
 
 	$$A = \begin{bmatrix}
 		a_{11} & a_{12} & \cdots & a_{1m}\\
@@ -1270,8 +1256,8 @@ $$ det(A) = \begin{vmatrix}
 	\begin{anymark}[证明]
 		(i). 必要性
 		
-		向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$ 线性相关  
-		$$\exists x_{i}\neq 0(i\in \{1,2,\cdots,m\}),\ s.t.\ x_{1}\alpha_{1}+x_{2}\alpha_{2}+\cdots+x_{m}\alpha_{m}=0$$
+		向量组 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{m}$ 线性相关  
+		$$\exists x_{i}\neq 0(i\in \{1,2,\cdots,m\}),\ s.t.\ x_{1}\boldsymbol{\alpha}_{1} + x_{2}\boldsymbol{\alpha}_{2} + \cdots + x_{m}\boldsymbol{\alpha}_{m}=0$$
 
 		$$\begin{cases}
 			a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1m}x_{m}=0\\
@@ -1291,79 +1277,82 @@ $$ det(A) = \begin{vmatrix}
 			\cdots\\
 			a_{n1}x_{1}+a_{n2}x_{2}+\cdots+a_{nm}x_{m}=0\\
 		\end{cases}\Rightarrow
-		x_{1}\alpha_{1}+x_{2}\alpha_{2}+\cdots+x_{m}\alpha_{m}=0$$
+		x_{1}\boldsymbol{\alpha}_{1} + x_{2}\boldsymbol{\alpha}_{2} + \cdots + x_{m}\boldsymbol{\alpha}_{m}=0$$
 		
-		向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{m}$ 线性相关
+		向量组 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{m}$ 线性相关
 	\end{anymark}
 	
 	\textcolor{red}{定理\ 五}
 	
-	向量 $\beta$ 可以由向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$ 线性表出, 等价于非齐次方程组方程 $AX=\beta$ 有解;
-	向量 $\beta$ 不能由向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$ 线性表出, 等价于非齐次方程组方程$AX=\beta$无解
+	向量 $\boldsymbol{\beta}$ 可以由向量组 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{s}$ 线性表出, 等价于非齐次方程组方程 $AX=\boldsymbol{\beta}$ 有解;
+	向量 $\boldsymbol{\beta}$ 不能由向量组 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{s}$ 线性表出, 等价于非齐次方程组方程$AX=\boldsymbol{\beta}$无解
 	\begin{anymark}[证明]
 
-		向量 $\beta$ 可以由向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$ 线性表出
-		$$\exists x_{i}\neq 0(i\in \{1,2,\cdots,s\}),\ s.t.\ x_{1}\alpha + x_{2}\alpha + \cdots + x_{s}\alpha_{s} = 0$$  
-		$$[\alpha_{1},\alpha_{2}\cdots,\alpha_{s}]\begin{bmatrix}
+		向量 $\boldsymbol{\beta}$ 可以由向量组 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{s}$ 线性表出
+		
+		$$\exists x_{i}\neq 0(i\in \{1,2,\cdots,s\}),\ s.t.\ x_{1}\boldsymbol{\alpha} + x_{2}\boldsymbol{\alpha} + \cdots + x_{s}\boldsymbol{\alpha}_{s} = 0$$  
+		$$[\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{s}]
+		\begin{bmatrix}
 			x_{1}\\
 			x_{2}\\
 			\cdots\\
 			x_{s}
-		\end{bmatrix} =\beta$$
-		方程组 $AX=\beta$ 有非零解
+		\end{bmatrix} = \boldsymbol{\beta}$$
+		方程组 $AX = \boldsymbol{\beta}$ 有非零解
 	\end{anymark}
 	
 	\textcolor{red}{定理\ 六}
 	
-	如果向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$ 一部分向量线性相关, 那么整个向量组也线性相关
+	如果向量组 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}$ 一部分向量线性相关, 那么整个向量组也线性相关
 	
 	\begin{anymark}[证明]
-		不妨设 $\alpha_{1},\alpha_{2}\cdots,\alpha_{j}(j< n)$ 线性相关  
+		不妨设 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{j}(j< n)$ 线性相关  
 		
-		$$\exists k_{i}\neq 0(i\in\{1,2,\cdots,j\}),\ s.t. \ k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{j}\alpha_{j}=0$$
+		$$\exists k_{i}\neq 0(i\in\{1,2,\cdots,j\}),\ s.t. \ k_{1}\boldsymbol{\alpha}_{1} + k_{2}\boldsymbol{\alpha}_{2} + \cdots + k_{j}\boldsymbol{\alpha}_{j}=0$$
 		 
 		取 $k_{1},k_{2},\cdots,k_{j},k_{j+1} = k_{j+2} = \cdots = k_{n} = 0$
 
-		$$k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{j}\alpha_{j} + 0\alpha_{j+1} + \cdots + 0\alpha_{n}=0$$
+		$$k_{1}\boldsymbol{\alpha}_{1} + k_{2}\boldsymbol{\alpha}_{2} + \cdots + k_{j}\boldsymbol{\alpha}_{j} + 0\boldsymbol{\alpha}_{j+1} + \cdots + 0\boldsymbol{\alpha}_{n}=0$$
+
 		$k_{1},k_{2},\cdots,k_{j},k_{j+1}=k_{j+2}=\cdots=k_{n}=0$ 不全为 $0$, 整个向量组也线性相关
 	\end{anymark}
 	
 	\textcolor{red}{定理\ 七}
 	
-	如果一组 $n$ 维向量 $\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$ 线性无关,
-	那么把这些向量各任意添加 $m$ 个分量得到的新向量组 $(n+m)$ 维 $\alpha_{1}^{*},\alpha_{2}^{*}\cdots,\alpha_{n}^{*}$ 线性无关;
-	如果向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{n}$ 线性相关, 那各去掉相同的若干个分量所得到的新向量组也线性相关
+	如果一组 $n$ 维向量 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}$ 线性无关,
+	那么把这些向量各任意添加 $m$ 个分量得到的新向量组 $(n+m)$ 维 $\boldsymbol{\alpha}_{1}^{*},\boldsymbol{\alpha}_{2}^{*}, \cdots, \boldsymbol{\alpha}_{n}^{*}$ 线性无关;
+	如果向量组 $\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}$ 线性相关, 那各去掉相同的若干个分量所得到的新向量组也线性相关
 \end{theorem}
 
 \section{极大线性无关组和向量组的秩}
 \begin{definition}[极大线性无关组]
-	在向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$, 如果存在部分向量组 $\alpha_{i_{1}},\alpha_{i_{2}}\cdots,\alpha_{i_{r}}$ 满足:  
+	在向量组 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{s}$, 如果存在部分向量组 $\boldsymbol{\alpha}_{i_{1}}, \boldsymbol{\alpha}_{i_{2}}, \cdots, \boldsymbol{\alpha}_{i_{r}}$ 满足:  
 	\begin{itemize}
-		\item $\alpha_{i_{1}},\alpha_{i_{2}}\cdots,\alpha_{i_{r}}$ 线性无关
-		\item 向量组中任意向量 $\alpha_{i}(i=1,2,\cdots,s)$ 都可以被向量组 $\alpha_{i_{1}},\alpha_{i_{2}}\cdots,\alpha_{i_{r}}$ 线性表出
+		\item $\boldsymbol{\alpha}_{i_{1}},\boldsymbol{\alpha}_{i_{2}}, \cdots, \boldsymbol{\alpha}_{i_{r}}$ 线性无关
+		\item 向量组中任意向量 $\boldsymbol{\alpha}_{i}(i=1,2,\cdots,s)$ 都可以被向量组 $\boldsymbol{\alpha}_{i_{1}},\boldsymbol{\alpha}_{i_{2}},\cdots,\boldsymbol{\alpha}_{i_{r}}$ 线性表出
 	\end{itemize}
-	则称向量组 $\alpha_{i_{1}},\alpha_{i_{2}}\cdots,\alpha_{i_{r}}$ 是原向量组的一个极大线性无关组
+	则称向量组 $\boldsymbol{\alpha}_{i_{1}},\boldsymbol{\alpha}_{i_{2}},\cdots,\boldsymbol{\alpha}_{i_{r}}$ 是原向量组的一个极大线性无关组
 	
 	一个向量组的极大线性无关组不唯一, 对于线性无关的向量组, 它的极大线性无关组是自身
 \end{definition}
 
 \begin{definition}[向量组的秩]
-	向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$ 的极大线性无关组 $\alpha_{i_{1}},\alpha_{i_{2}}\cdots,\alpha_{i_{r}}$ 中所含向量的个数 $r$ 称为向量组的秩,记作:
+	向量组 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2}, \cdots,\boldsymbol{\alpha}_{s}$ 的极大线性无关组 $\boldsymbol{\alpha}_{i_{1}},\boldsymbol{\alpha}_{i_{2}}, \cdots,\boldsymbol{\alpha}_{i_{r}}$ 中所含向量的个数 $r$ 称为向量组的秩,记作:
 
-	$$rank(\alpha_{1},\alpha_{2}\cdots,\alpha_{s}) = r(\alpha_{1},\alpha_{2}\cdots,\alpha_{s})=r$$
+	$$rank(\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2}, \cdots,\boldsymbol{\alpha}_{s}) = r(\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{s})=r$$
 
 	\begin{itemize}
 		\item $r(A) = r(col(A)) = r(row(A))$
 		\item 初等行变换和初等列变换不改变矩阵的秩
 		\item $A\overset{col}{\longrightarrow}B$, $A$ 的行向量与 $B$ 的行向量是等价向量组
-		\item 设向量组 $\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$ 及 $\beta_{1},\beta_{2}\cdots,\beta_{t}$, 若 $\beta_{i}(i=1,2,\cdots,t)$ 均可由 $\alpha_{1},\alpha_{2}\cdots,\alpha_{s}$ 线性表出,则:  
-		$$r(\alpha_{1},\alpha_{2}\cdots,\alpha_{s})\leq r(\beta_{1},\beta_{2}\cdots,\beta_{t})$$
+		\item 设向量组 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{s}$ 及 $\boldsymbol{\beta}_{1},\boldsymbol{\beta}_{2}, \cdots,\boldsymbol{\beta}_{t}$, 若 $\boldsymbol{\beta}_{i}(i=1,2,\cdots,t)$ 均可由 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{s}$ 线性表出,则:  
+		$$r(\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{s})\leq r(\boldsymbol{\beta}_{1},\boldsymbol{\beta}_{2}, \cdots,\boldsymbol{\beta}_{t})$$
 	\end{itemize}
 \end{definition}
 \section{等价向量组}
 \begin{definition}[等价向量组]
-	设两个向量组: $(\rm\Rmnum{1}) \alpha_{1},\alpha_{2}\cdots,\alpha_{s}, (\rm\Rmnum{2}) \beta_{1},\beta_{2}\cdots,\beta_{t}$,
-	若 $(\rm\Rmnum{1})$ 中向量 $\alpha_{i}(i=1,2,\cdots,s)$ 均可由 $(\rm\Rmnum{2})$ 中向量线性表出, 则称向量组 $(\rm\Rmnum{1})$ 可由向量组 $(\rm\Rmnum{2})$ 线性表出;
+	设两个向量组: $(\rm\Rmnum{1}) \boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{s}, (\rm\Rmnum{2}) \boldsymbol{\beta}_{1},\boldsymbol{\beta}_{2},\cdots,\boldsymbol{\beta}_{t}$,
+	若 $(\rm\Rmnum{1})$ 中向量 $\boldsymbol{\alpha}_{i}(i=1,2,\cdots,s)$ 均可由 $(\rm\Rmnum{2})$ 中向量线性表出, 则称向量组 $(\rm\Rmnum{1})$ 可由向量组 $(\rm\Rmnum{2})$ 线性表出;
 	若向量组 $(\rm\Rmnum{1})$ 和向量组 $(\rm\Rmnum{2})$ 互相线性表出, 称向量组 $(\rm\Rmnum{1})$ 与向量组 $(\rm\Rmnum{2})$ 是等价向量组, 记作 $(\rm\Rmnum{1})\cong (\rm\Rmnum{2})$
 	
 	\begin{itemize}
@@ -1375,37 +1364,38 @@ $$ det(A) = \begin{vmatrix}
 \end{definition}
 \section{向量空间}
 \begin{definition}[向量空间]
-	设 $\xi_{1},\xi_{2},\cdots,\xi_{n}$ 是 $n$ 维向量空间 $\mathbb{R}^{n}$ 中线性无关的有序向量,
-	$\forall \alpha\in \mathbb{R}^{n}$ 均可由向量组 $\xi_{1},\xi_{2},\cdots,\xi_{n}$ 线性表出, 且表出式:  
+	设 $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}$ 是 $n$ 维向量空间 $\mathbb{R}^{n}$ 中线性无关的有序向量,
+	$\forall \boldsymbol{\alpha}\in \mathbb{R}^{n}$ 均可由向量组 $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}$ 线性表出, 且表出式:  
 	
-	$$\alpha=a_{1}\xi_{1}+a_{2}\xi_{2}+\cdots+a_{n}\xi_{n}$$
+	$$\boldsymbol{\alpha} = a_{1}\boldsymbol{\xi}_{1} + a_{2}\boldsymbol{\xi}_{2} + \cdots + a_{n}\boldsymbol{\xi}_{n}$$
 	
-	称 $\xi_{1},\xi_{2},\cdots,\xi_{n}$ 是 $n$ 维向量空间 $\mathbb{R}^{n}$ 的一组基,
-	基向量的个数 $n$ 称为向量空间的维度, $[a_{1},a_{2},\cdots,a_{n}]^{T}$ 是向量 $\alpha$ 在基向量 $\xi_{1},\xi_{2},\cdots,\xi_{n}$ 的坐标
+	称 $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}$ 是 $n$ 维向量空间 $\mathbb{R}^{n}$ 的一组基,
+	基向量的个数 $n$ 称为向量空间的维度, $[a_{1},a_{2},\cdots,a_{n}]^{T}$ 是向量 $\alpha$ 在基向量 $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}$ 的坐标
 \end{definition}
 
 \begin{definition}[基变换]
-	$\xi_{1},\xi_{2},\cdots,\xi_{n}$ 和 $\eta_{1},\eta_{2},\cdots,\eta_{n}$ 是向量空间 $\mathbb{R}^{n}$ 中的两个基, 其有关系:  
+	$\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}$ 和 $\boldsymbol{\eta}_{1},\boldsymbol{\eta}_{2},\cdots,\boldsymbol{\eta}_{n}$ 是向量空间 $\mathbb{R}^{n}$ 中的两个基, 其有关系:  
 	
-	$$[\eta_{1},\eta_{2},\cdots,\eta_{n}] = 
-	[\xi_{1},\xi_{2},\cdots,\xi_{n}]
+	$$[\boldsymbol{\eta}_{1},\boldsymbol{\eta}_{2},\cdots,\boldsymbol{\eta}_{n}] = 
+	[\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}]
 	\begin{bmatrix}
 		c_{11} & c_{12} & \cdots & c_{1n}\\
 		c_{21} & c_{22} & \cdots & c_{2n}\\
 		\vdots & \vdots & \ddots & \vdots\\
 		c_{n1} & c_{n2} & \cdots & c_{nn}
-	\end{bmatrix} = [\xi_{1},\xi_{2},\cdots,\xi_{n}]C$$
+	\end{bmatrix} = [\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}]C$$
 	
-	上式是基 $\xi_{1},\xi_{2},\cdots,\xi_{n}$ 到基 $\eta_{1},\eta_{2},\cdots,\eta_{n}$ 的基变换公式,
-	矩阵 $C$ 是基 $\xi_{1},\xi_{2},\cdots,\xi_{n}$ 到基 $\eta_{1},\eta_{2},\cdots,\eta_{n}$ 的过渡矩阵,
-	$C$ 的第 $i$ 列即是 $\eta_{i}$ 在基 $\xi_{1},\xi_{2},\cdots,\xi_{n}$ 下的坐标, 过渡矩阵 $C$ 为可逆矩阵
+	上式是基 $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}$ 到基 $\boldsymbol{\eta}_{1},\boldsymbol{\eta}_{2},\cdots,\boldsymbol{\eta}_{n}$ 的基变换公式,
+	矩阵 $C$ 是基 $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}$ 到基 $\boldsymbol{\eta}_{1},\boldsymbol{\eta}_{2},\cdots,\boldsymbol{\eta}_{n}$ 的过渡矩阵,
+	$C$ 的第 $i$ 列即是 $\eta_{i}$ 在基 $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}$ 下的坐标, 过渡矩阵 $C$ 为可逆矩阵
 \end{definition}
 \begin{definition}[坐标变换]
-	设向量 $\alpha$ 在基 $\xi_{1},\xi_{2},\cdots,\xi_{n}$ 和基 $\eta_{1},\eta_{2},\cdots,\eta_{n}$ 下的坐标为别是 $\mathbf{x}=[x_{1},x_{2},\cdots,x_{n}]^{T},\mathbf{y}=[y_{1},y_{2},\cdots,y_{n}]^{T}$
+	设向量 $\boldsymbol{\alpha}$ 在基 $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}$ 和
+	基 $\boldsymbol{\eta}_{1},\boldsymbol{\eta}_{2},\cdots,\boldsymbol{\eta}_{n}$ 下的坐标为别是 $\mathbf{x}=[x_{1},x_{2},\cdots,x_{n}]^{T},\mathbf{y}=[y_{1},y_{2},\cdots,y_{n}]^{T}$
 
-	$$\alpha=[\xi_{1},\xi_{2},\cdots,\xi_{n}]\mathbf{x} = [\eta_{1},\eta_{2},\cdots,\eta_{n}]\mathbf{y}$$
+	$$\boldsymbol{\alpha}=[\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}]\mathbf{x} = [\boldsymbol{\eta}_{1},\boldsymbol{\eta}_{2},\cdots,\boldsymbol{\eta}_{n}]\mathbf{y}$$
 
-	$$[\xi_{1},\xi_{2},\cdots,\xi_{n}] = [\eta_{1},\eta_{2},\cdots,\eta_{n}]C$$
+	$$[\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}] = [\boldsymbol{\eta}_{1},\boldsymbol{\eta}_{2},\cdots,\boldsymbol{\eta}_{n}]C$$
 	
 	$$\mathbf{x} = C\mathbf{y} \Leftrightarrow \mathbf{y} = C^{-1}\mathbf{x}$$
 \end{definition}
@@ -1430,10 +1420,10 @@ $$ det(A) = \begin{vmatrix}
 	
 	向量形式:  
 	
-	$$x_{1}\alpha_{1}+x_{2}\alpha_{2}+\cdots+x_{n}\alpha_{n}=0$$
+	$$x_{1}\boldsymbol{\alpha}_{1}+x_{2}\boldsymbol{\alpha}_{2}+\cdots+x_{n}\boldsymbol{\alpha}_{n}=0$$
 	
 	其中:  
-	$$\alpha_{i} = \begin{bmatrix}
+	$$\boldsymbol{\alpha}_{i} = \begin{bmatrix}
 		a_{1j}\\
 		a_{2j}\\
 		\vdots\\
@@ -1457,202 +1447,329 @@ $$ det(A) = \begin{vmatrix}
 		\vdots\\
 		x_{n}\\
 	\end{bmatrix}$$
+\end{definition}
+
+\begin{theorem}
+	1. 当 $r(A) = n$ 时, $(\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{n})$ 线性无关, 方程组只有零解
 	
-	2. 有解的条件
+	2. 当 $r(A) = r < n$ 时, $(\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{n})$ 线性相关, 方程组有非零解, 且有 $n-r$ 个线性无关解
+\end{theorem}
+
+\begin{corollary}[解的性质]
+	$$\begin{cases}
+	  A\boldsymbol{\xi}_{1} = 0\\
+	  A\boldsymbol{\xi}_{2} = 0
+	\end{cases}\Rightarrow \forall k_{1},k_{2}\in \mathbb{R}, A(k_{1}\boldsymbol{\xi}_{1}+k_{2}\boldsymbol{\xi}_{2})=0$$
+\end{corollary}
+
+\begin{definition}[基础解系和通解]
 	
-	(i).当$r(A)=n\text{时},(\alpha_{1},\alpha_{2},\cdots,\alpha_{n}\text{线性无关})$,方程组只有零解.
+	1. 基础解系
 	
-	(ii). 当$r(A)=r<n\text{时},(\alpha_{1},\alpha_{2},\cdots,\alpha_{n}\text{线性相关})$,方程组有非零解,且有$n-r$个线性无关解.
-	
-	3. 解的性质
-	
-	如果$A\xi_{1}=0,\ A\xi_{2}=0, \forall k_{1},k_{2}\in \mathbb{R},\ A(k_{1}\xi_{1}+k_{2}\xi_{2})=0 $
-	
-	4. 基础解系和解的结构
-	
-	(1). 基础解系
-	
-	设$\xi_{1},\xi_{2},\cdots,\xi_{n-r}$满足:  
+	设 $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n-r}$ 满足:  
 	\begin{itemize}
-		\item $\xi_{1},\xi_{2},\cdots,\xi_{n-r}\text{是方程组的解}$
-		\item $\xi_{1},\xi_{2},\cdots,\xi_{n-r}\text{线性无关}$
-		\item $\text{方程组}AX=0\text{的任意一个解均可以由}\xi_{1},\xi_{2},\cdots,\xi_{n-r}\text{线性表出}$
+		\item $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n-r}$ 是方程组的解
+		\item $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n-r}$ 线性无关
+		\item 方程组 $AX=0$ 任意一个解均可以由 $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n-r}$ 线性表出
 	\end{itemize}
 	
-	我们称$\xi_{1},\xi_{2},\cdots,\xi_{n-r}$为方程组$AX=0$的基础解系.
+	$\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n-r}$ 是方程组 $AX=0$ 的基础解系
 	
-	(2). 通解
+	2. 通解
 	
-	设$\xi_{1},\xi_{2},\cdots,\xi_{n-r}$为方程组$AX=0$的基础解系,则$k_{1}\xi_{1}+k_{2}\xi_{2}+\cdots+k_{n-r}\xi_{n-r}$是方程组$AX=0$的通解,其中$k_{1},k_{2},\cdots,k_{n-r}\in \mathbb{R}$
+	设 $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n-r}$ 为方程组 $AX=0$ 的基础解系, 则 $k_{1}\boldsymbol{\xi}_{1} + k_{2}\boldsymbol{\xi}_{2} + \cdots + k_{n-r}\boldsymbol{\xi}_{n-r}$ 是方程组 $AX=0$ 的通解, 
+	其中 $k_{1},k_{2},\cdots,k_{n-r}\in \mathbb{R}$
 \end{definition}
 \subsection{非齐次方程组}
 \begin{definition}[非齐次方程组]
-	1. 形式
-	
 	方程组
-	$$\left\lbrace 
-	\begin{array}{l}
+	$$\begin{cases}
 		a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1n}x_{n}=b_{1}\\
 		a_{21}x_{1}+a_{22}x_{2}+\cdots+a_{2n}x_{n}=b_{2}\\
-		\cdots\cdots\\
+		\cdots\\
 		a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n}=b_{m}\\
-	\end{array}
-	\right. $$
-	称为$m$个方程,$n$个未知数的非齐次方程组.
+	\end{cases}$$
+	称为 $m$ 个方程, $n$ 个未知数的非齐次方程组
 	
-	其向量形式为:  
-	$$x_{1}\alpha_{1}+x_{2}\alpha_{2}+\cdots+x_{n}\alpha_{n}=\beta$$
+	向量形式:
+	$$x_{1}\boldsymbol{\alpha}_{1} + x_{2}\boldsymbol{\alpha}_{2} + \cdots + x_{n}\boldsymbol{\alpha}_{n} = \boldsymbol{\beta}$$
+
 	其中:  
-	$$\alpha_{i}=\left[ \begin{matrix}
+	$$\boldsymbol{\alpha}_{i} = 
+	\begin{bmatrix}
 		a_{1j}\\
 		a_{2j}\\
 		\vdots\\
 		a_{mj}
-	\end{matrix}\right](j=1,2,\cdots,n) ,\ \beta=\left[ \begin{matrix}
-	b_{1j}\\
-	b_{2j}\\
-	\vdots\\
-	b_{mj}
-	\end{matrix}\right]$$
+	\end{bmatrix}, 
+	\boldsymbol{\beta} = 
+	\begin{bmatrix}
+		b_{1j}\\
+		b_{2j}\\
+		\vdots\\
+		b_{mj}
+	\end{bmatrix}(j=1,2,\cdots,n)$$
 	
-	方程组的矩阵形式为:  
-	$$A_{m\times n}X=\beta$$
-	$$A=\left[
-	\begin{matrix}
-		a_{11}&a_{12}&\cdots&a_{1n}\\
-		a_{21}&a_{22}&\cdots&a_{2n}\\
-		\vdots&\vdots& &\vdots\\
-		a_{m1}&a_{m2}&\cdots&a_{mn}
-	\end{matrix}
-	\right],\quad X=\left[ \begin{matrix}
+	矩阵形式:  
+	$$A_{m\times n}X = \boldsymbol{\beta}$$
+	
+	$$A = 
+	\begin{bmatrix}
+		a_{11} & a_{12} & \cdots & a_{1n}\\
+		a_{21} & a_{22} & \cdots & a_{2n}\\
+		\vdots & \vdots & \ddots & \vdots\\
+		a_{m1} & a_{m2} & \cdots & a_{mn}
+	\end{bmatrix}, 
+	X = 
+	\begin{bmatrix}
 		x_{1}\\
 		x_{2}\\
 		\vdots\\
 		x_{n}\\
-	\end{matrix}\right]$$
-	矩阵$\left[ {\begin{array}{c:c}
-			\begin{matrix}
-				a_{11}&a_{12}&\cdots&a_{1n}\\
-				a_{21}&a_{22}&\cdots&a_{2n}\\
-				\vdots&\vdots& &\vdots\\
-				a_{m1}&a_{m2}&\cdots&a_{mn}
-			\end{matrix}&
-			\begin{matrix}
-				b_{1j}\\
-				b_{2j}\\
-				\vdots\\
-				b_{mj}
-			\end{matrix}
-	\end{array}} \right]$记作为矩阵$A$的增广矩阵,简记为$\left[ {\begin{array}{c:c}
-	\begin{matrix}
-		A
-	\end{matrix}&
-	\begin{matrix}
-	\beta
-	\end{matrix}
-\end{array}} \right]$
+	\end{bmatrix}$$
 
-	2. 有解的条件
-	
-	(i).$r(A)\neq r([A,\beta]),\text{方程组无解}.(\beta\text{不能由}\alpha_{1},\alpha_{2},\cdots,\alpha_{n}\text{线性表出})$
-	
-	(ii). $r(A)=r([A,\beta])=n,\text{方程组有唯一解}$ 
-	$$\alpha_{1},\alpha_{2},\cdots,\alpha_{n}\text{线性无关},\beta,\alpha_{1},\alpha_{2},\cdots,\alpha_{n}\text{线性相关}$$
-	
-	(iii).$r(A)=r([A,\beta])<n,\text{方程组有无穷多组解}.$
-	
-	3. 解的性质
-	
-	设$\eta_{1},\eta_{2},\eta_{3}$是非齐次方程组$AX=\beta$的解,$\xi$是对应齐次方程组$AX=0$的解,我们有:  
-	\begin{itemize}
-		\item $\eta_{1}-\eta_{2}\text{是}AX=0\text{的解}$
-		\item $k\xi+\eta\text{是方程组}AX=\beta\text{的解}$
-	\end{itemize}
-	
-	4. 解的结构
-	
-	(1). 特解
-	
-	$\eta\text{是非齐次性方程组}AX=\beta\text{的一个特解}$
-	
-	(2). 通解
-	
-	设$k_{1}\xi_{1}+k_{2}\xi_{2}+\cdots+k_{n-r}\xi_{n-r}$是方程组$AX=0$的通解,其中$k_{1},k_{2},\cdots,k_{n-r}\in \mathbb{R}$,我们可以得到非齐次性方程组的通解:  
-	$$k_{1}\xi_{1}+k_{2}\xi_{2}+\cdots+k_{n-r}\xi_{n-r}+\eta$$
+	矩阵 $\begin{bmatrix}
+		a_{11} & a_{12} & \cdots & a_{1n} & \vline & b_{1j} \\
+		a_{21} & a_{22} & \cdots & a_{2n} & \vline & b_{2j} \\
+		\vdots & \vdots & \ddots & \vdots & \vline & \vdots \\
+		a_{m1} & a_{m2} & \cdots & a_{mn} & \vline & b_{mj} \\
+		\end{bmatrix}$ 记作为矩阵 $A$ 的增广矩阵, 简记为 $\begin{bmatrix} A & \vline & \boldsymbol{\beta}\end{bmatrix}$
 \end{definition}
+
+\begin{theorem}
+
+	1. $r(A)\neq r([A,\boldsymbol{\beta}])$, 方程组无解
+	
+	$\boldsymbol{\beta}$ 不能由 $\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{n}$ 线性表出
+	
+	2. $r(A) = r([A,\boldsymbol{\beta}]) = n$, 方程组有唯一解
+
+	$\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{n}$ 线性无关,
+	$\boldsymbol{\beta},\boldsymbol{\alpha}_{1},\boldsymbol{\alpha}_{2},\cdots,\boldsymbol{\alpha}_{n}$ 线性相关
+	
+	3. $r(A) = r([A,\boldsymbol{\beta}]) < n$, 方程组有无穷多组解
+\end{theorem}
+
+\begin{corollary}[解的性质]
+	设 $\boldsymbol{\eta}_{1}, \boldsymbol{\eta}_{2}, \boldsymbol{\eta}_{3}$ 是非齐次方程组 $AX = \boldsymbol{\beta}$ 的解, $\boldsymbol{\xi}$ 是对应齐次方程组 $AX=0$ 的解
+
+	\begin{itemize}
+		\item $\boldsymbol{\eta}_{1} - \boldsymbol{\eta}_{2}$ 是 $AX=0$ 的解
+		\item $k \boldsymbol{\xi} + \boldsymbol{\eta}$ 是方程组 $AX = \boldsymbol{\beta}$ 的解
+	\end{itemize}
+\end{corollary}
+
+\begin{definition}[特解和通解]
+	
+	1. 特解
+	
+	$\eta$ 是非齐次性方程组 $AX = \boldsymbol{\beta}$ 的一个特解
+	
+	2. 通解
+	
+	设 $k_{1}\boldsymbol{\xi}_{1} + k_{2}\boldsymbol{\xi}_{2} + \cdots + k_{n-r}\boldsymbol{\xi}_{n-r}$ 是方程组 $AX=0$ 的通解, 
+	其中 $k_{1},k_{2},\cdots,k_{n-r}\in \mathbb{R}$, 非齐次性方程组的通解:  
+	$$k_{1}\boldsymbol{\xi}_{1} + k_{2}\boldsymbol{\xi}_{2} + \cdots + k_{n-r}\boldsymbol{\xi}_{n-r} + \boldsymbol{\eta}$$
+\end{definition}
+
 \section{两个方程组的公共解}
 \begin{definition}[两个方程组的公共解]
-	(1).齐次性线性方程组$A_{m\times n}X=0$和$B_{m\times n}X=0$的公共解是满足方程组$\left[
-	\begin{matrix}
+	(1). 齐次性线性方程组 $A_{m\times n}X=0$ 和 $B_{m\times n}X=0$ 的公共解是满足方程组 
+	$$\begin{bmatrix}
 		A\\B
-	\end{matrix}
-	\right]X=0$的解.
+	\end{bmatrix}X = 0$$
 	
-	(2). 非齐次性性线性方程组$A_{m\times n}X=\alpha$和$B_{m\times n}X=\beta$的公共解是满足方程组$\left[
-	\begin{matrix}
+	(2). 非齐次性性线性方程组 $A_{m\times n}X=\alpha$ 和 $B_{m\times n}X=\beta$ 的公共解是满足方程组 
+	$$\begin{bmatrix}
 		A\\B
-	\end{matrix}
-	\right]X=\left[
-	\begin{matrix}
-		\alpha\\\beta
-	\end{matrix}
-	\right]$的解.
+	\end{bmatrix} X = 
+	\begin{bmatrix}
+		\boldsymbol{\alpha}\\
+		\boldsymbol{\beta}
+	\end{bmatrix}$$
 	
-	(3).给出方程组$A_{m\times n}X=0$的通解$k_{1}\xi_{1}+k_{2}\xi_{2}+\cdots+k_{s}\xi_{s}$,代入第二个方程组$B_{m\times n}X=0$得到$k_{i}(i=1,2,\cdots,s)$之间的关系,代回方程$A_{m\times n}X=0$
+	(3). 给出方程组 $A_{m\times n}X=0$ 的通解 $k_{1}\boldsymbol{\xi}_{1} + k_{2}\boldsymbol{\xi}_{2} + \cdots + k_{s}\boldsymbol{\xi}_{s}$, 
+	代入第二个方程组 $B_{m\times n}X=0$ 得到 $k_{i}(i = 1,2,\cdots,s)$ 之间的关系,代回方程 $A_{m\times n}X=0$
 	
-	(4).给出方程组$A_{m\times n}X=0$的基础解系$\xi_{1},\xi_{2},\cdots,\xi_{s}$和方程组$B_{m\times n}X=0$的基础解系$\eta_{1},\eta_{2},\cdots,\eta_{t}$,公共解为:  
-	$$k_{1}\xi_{1}+k_{2}\xi_{2}+\cdots+k_{s}\xi_{s}=l_{1}\eta_{1}+l_{2}\eta_{2}+\cdots+l_{t}\eta_{t}$$
+	(4). 给出方程组$A_{m\times n}X=0$ 的基础解系 $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{s}$ 和方程组 $B_{m\times n}X=0$ 的基础解系
+	$\boldsymbol{\eta}_{1},\boldsymbol{\eta}_{2},\cdots,\boldsymbol{\eta}_{t}$,公共解为:
+
+	$$k_{1}\boldsymbol{\xi}_{1} + k_{2}\boldsymbol{\xi}_{2} + \cdots + k_{s}\boldsymbol{\xi}_{s} = l_{1}\boldsymbol{\eta}_{1} + l_{2}\boldsymbol{\eta}_{2} + \cdots + l_{t}\boldsymbol{\eta}_{t}$$
 \end{definition}
 \section{同解方程组}
 \begin{definition}[同解方程组]
-	如果两个方程组$A_{m\times n}X=0$和$B_{m\times n}X=0$有完全相同的解,则称它们为同解方程组.
+	如果两个方程组 $A_{m\times n}X=0$ 和 $B_{m\times n}X=0$ 有完全相同的解, 则称它们为\textcolor{red}{同解方程组}
 	\begin{itemize}
-		\item $AX=0\text{的解满足}BX=0\text{并且} BX=0\text{的解满足}AX=0$
-		\item $r(A)=r(B)\text{并且}AX=0\text{的解满足}BX=0(BX=0\text{的解满足}AX=0)$
-		\item $r(A)=r(B)=r(\left[
-		\begin{matrix}
-			A\\B
-		\end{matrix}
-		\right])$
+		\item $AX=0$ 的解满足 $BX=0$ 且 $BX=0$ 的解满足 $AX=0$
+		\item $r(A)=r(B)$ 且 $AX=0$ 的解满足 $BX=0$ ($BX=0$ 的解满足$AX=0$)
+		\item $r(A)=r(B)=r(\begin{bmatrix}
+		  A\\B
+		\end{bmatrix})$
 	\end{itemize}
 \end{definition}
+
+
+
 \chapterimage{chap19.jpg}
+
 \chapter{特征值和特征向量}
+
 \section{特征值和特征向量定义}
+
 \begin{definition}[特征值和特征向量]
-	设$A$是$n$阶矩阵,$\lambda$为常数,存在非零列向量$\xi$,满足:  
-	$$A\xi=\lambda\xi$$
-	则称$\lambda$为$A$的特征值,$\xi$是$A$对应于特征值$\lambda$的特征向量
-	\begin{anymark}[注]
-		$$(\lambda E-A)\xi=O\Rightarrow |\lambda E-A|=0$$
-		$$\left|
-		\begin{matrix}
-			\lambda-a_{11}&-a_{12}&\cdots&-a_{1n}\\
-			-a_{21}&\lambda-a_{22}&\cdots&-a_{2n}\\
-			\vdots&	\vdots& &	\vdots\\
-			-a_{n1}&-a_{n2}&\cdots&\lambda-a_{nn}
-		\end{matrix}
-		\right|=(\lambda-\lambda_{1})(\lambda-\lambda_{2})\cdots(\lambda-\lambda_{n})=0$$
-		上面右边是关于$\lambda$的特征多项式,也是$A$的特征方程:  
-		$$\lambda^{n}-(\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n})\lambda^{n-1}+\cdots+(-1)^{n}\prod\limits_{i=1}^{n}\lambda_{i}=0$$
-		我们得到:  
-		$$\left\lbrace 
-		\begin{array}{l}
-			\sum\limits_{i=1}^{n}\lambda_{i}=\sum\limits_{i=1}^{n}a_{ii}\\
-			\prod\limits_{i=1}^{n}\lambda_{i}=|A|
-		\end{array}
-		\right. $$
-	\end{anymark}
-	\begin{corollary}[特征向量]
-		\begin{itemize}
-			\item $k\text{重特征值至多只有}k\text{个线性无关的特征向量}$
-			\item $\text{若}\xi_{1},\xi_{2}\text{是}A\text{的属于不同特征值}\lambda_{1},\lambda_{2}\text{的特征向量},\lambda_{1},\lambda_{2}\text{线性无关}$
-			\item $\text{若}\xi_{1},\xi_{2}\text{是}A\text{的属于同一特征值}\lambda\text{的特征向量}$
-			
-			$k_{1}\lambda_{1}+k_{2}\lambda_{2}(k_{1},k_{2}\text{不同时为}0)\text{仍然是}A\text{属于特征值}\lambda\text{的特征向量}$
-		\end{itemize}
-	\end{corollary}
+	设 $A$ 是 $n$ 阶矩阵, $\lambda$ 为常数, 存在非零列向量 $\boldsymbol{\xi}$, 满足:  
+	
+	$$A\boldsymbol{\xi} = \lambda\boldsymbol{\xi}$$
+	
+	称 $\lambda$ 为 $A$ 的特征值, $\boldsymbol{\xi}$ 是 $A$ 对应于特征值 $\lambda$ 的特征向量
 \end{definition}
+
+\begin{corollary}[特征值]
+	$$(\lambda E-A)\boldsymbol{\xi} = O \Rightarrow |\lambda E - A|=0$$
+	
+	$$\begin{vmatrix}
+		\lambda - a_{11} & -a_{12}          & \cdots & -a_{1n}\\
+		-a_{21}          & \lambda - a_{22} & \cdots & -a_{2n}\\
+		\vdots           & \vdots           & \ddots & \vdots\\
+		-a_{n1}          & -a_{n2}          & \cdots & \lambda - a_{nn}
+	\end{vmatrix} = 
+	(\lambda-\lambda_{1})(\lambda-\lambda_{2}) \cdots (\lambda-\lambda_{n}) = 0$$
+	
+	上式是关于 $\lambda$ 的特征多项式, 也是 $A$ 的特征方程  
+	
+	$$\lambda^{n}-(\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n})\lambda^{n-1}+\cdots+(-1)^{n}\prod\limits_{i=1}^{n}\lambda_{i}=0$$
+	  
+	$$\begin{cases}
+		\sum\limits_{i=1}^{n}\lambda_{i} = \sum\limits_{i=1}^{n}a_{ii} = tr(A)\\
+		\prod\limits_{i=1}^{n}\lambda_{i} = |A|
+	\end{cases}$$
+\end{corollary}
+
+\begin{corollary}[特征向量]
+	\begin{proposition}
+		若 $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2}$ 是 $A$ 的属于不同特征值 $\lambda_{1},\lambda_{2}$ 的特征向量, $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2}$ 线性无关
+	\end{proposition}
+	\begin{anymark}[证明]
+		$\boldsymbol{\xi}_{1}, \boldsymbol{\xi}_{2}$ 是矩阵 $A$ 不同特征值 $\lambda_{1}, \lambda_{2} (\lambda_{1}\neq \lambda_{2})$ 对应的特征向量
+		
+		不妨设 $\boldsymbol{\xi}_{1}, \boldsymbol{\xi}_{2}$ 线性相关, 则存在不全为 $0$ 的常数 $c_{1}, c_{2}$
+		$$\exists c_{1},c_{2},\ s.t.\ c_{1}\boldsymbol{\xi}_{1} + c_{2}\boldsymbol{\xi}_{2} = 0$$
+
+		$$\begin{cases}
+			A\boldsymbol{\xi}_{1} = \lambda_{1}\boldsymbol{\xi}_{1}\\
+			A\boldsymbol{\xi}_{2} = \lambda_{2}\boldsymbol{\xi}_{2}
+		\end{cases}\Rightarrow 
+		c_{1}A\boldsymbol{\xi}_{1} + c_{2}A\boldsymbol{\xi}_{2} = c_{1}\lambda_{1}\boldsymbol{\xi}_{1} + c_{2}\lambda_{2}\boldsymbol{\xi}_{2}\\$$
+
+		$$\begin{cases}
+		  c_{1}(\lambda_{1} - \lambda_{2})\boldsymbol{\xi}_{1} = 0\\
+		  c_{2}(\lambda_{1} - \lambda_{2})\boldsymbol{\xi}_{2} = 0\\
+		  \boldsymbol{\xi}_{1} \neq \boldsymbol{0}, \boldsymbol{\xi}_{2} \neq \boldsymbol{0}, \lambda_{1} \neq \lambda_{2}
+		\end{cases}\Rightarrow c_{1} = c_{2} = 0$$
+
+		矛盾, 假设不成立, $\boldsymbol{\xi}_{1}, \boldsymbol{\xi}_{2}$ 线性无关
+	\end{anymark}
+
+	\begin{proposition}
+		若 $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2}$ 是 $A$ 的属于不同特征值 $\lambda_{1},\lambda_{2}$ 的特征向量, 
+		$k_{1}\boldsymbol{\xi}_{1} + k_{2}\boldsymbol{\xi}_{2}(k_{1}\neq 0, k_{2}\neq 0)$ 不是 $A$ 的特征向量
+	\end{proposition}
+	\begin{anymark}[证明]
+		不妨设 $k_{1}\boldsymbol{\xi}_{1} + k_{2}\boldsymbol{\xi}_{2}$ 是矩阵 $A$ 特征值 $\lambda$ 对应的特征向量
+
+		$$A(k_{1}\boldsymbol{\xi}_{1} + k_{2}\boldsymbol{\xi}_{2}) = \lambda (k_{1}\boldsymbol{\xi}_{1} + k_{2}\boldsymbol{\xi}_{2})$$
+		$$\begin{cases}
+			A\boldsymbol{\xi}_{1} = \lambda_{1}\boldsymbol{\xi}_{1}\\
+			A\boldsymbol{\xi}_{2} = \lambda_{2}\boldsymbol{\xi}_{2}
+		\end{cases}\Rightarrow
+		k_{1}(\lambda_{1} - \lambda)\boldsymbol{\xi}_{1} + k_{2}(\lambda_{2} - \lambda)\boldsymbol{\xi}_{2} = 0$$
+
+		$\boldsymbol{\xi}_{1}, \boldsymbol{\xi}_{2}$ 线性无关
+		$$\begin{cases}
+			k_{1}(\lambda_{1} - \lambda) = 0\\
+			k_{2}(\lambda_{2} - \lambda) = 0\\
+			k_{1} \neq 0, k_{2} \neq 0
+		\end{cases}\Rightarrow 
+		\lambda = \lambda_{1} = \lambda_{2}$$
+
+		矛盾, 假设不成立, $k_{1}\boldsymbol{\xi}_{1} + k_{2}\boldsymbol{\xi}_{2}$ 不是 $A$ 的特征向量
+	\end{anymark}
+
+	\begin{proposition}
+		若 $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2}$ 是 $A$ 的属于同一特征值 $\lambda$ 的特征向量, 
+		$k_{1}\boldsymbol{\xi}_{1} + k_{2}\boldsymbol{\xi}_{2}$ ($k_{1},k_{2}$ 不同时为 $0$) 仍然是 $A$ 属于特征值 $\lambda$ 的特征向量
+	\end{proposition}
+	\begin{anymark}[证明]
+		$$\begin{cases}
+			A\boldsymbol{\xi}_{1} = \lambda \boldsymbol{\xi}_{1}\\
+			A\boldsymbol{\xi}_{2} = \lambda \boldsymbol{\xi}_{2}
+		\end{cases}\Rightarrow
+		\begin{cases}
+			A(k_{1}\boldsymbol{\xi}_{1} + k_{2}\boldsymbol{\xi}_{2}) = \lambda(k_{1}\boldsymbol{\xi}_{1} + k_{2}\boldsymbol{\xi}_{2})\\
+			k_{1}\boldsymbol{\xi}_{1} + k_{2}\boldsymbol{\xi}_{2} \neq \boldsymbol{0}
+		\end{cases}$$
+
+		$k_{1}\boldsymbol{\xi}_{1} + k_{2}\boldsymbol{\xi}_{2}$ 是矩阵 $A$ 特征值 $\lambda$ 对应的特征向量
+	\end{anymark}
+\end{corollary}
+
+\begin{theorem}[特征值和特征向量]
+	$k$ 重特征值至多有 $k$ 个线性无关的特征向量
+
+
+	不妨设 $\lambda_{0}$ 是矩阵 $A$ 的一个特征值, $\lambda$ 对应的 $m$ 个线性无关的特征向量 $\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{m}$
+
+	构造一个 $n$ 维空间的极大线性无关组 $(\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{m},\boldsymbol{\xi}_{m+1},\cdots,\boldsymbol{\xi}_{n})$
+
+	令 $P = (\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{m},\boldsymbol{\xi}_{m+1},\cdots,\boldsymbol{\xi}_{n})$
+
+	$$\begin{cases}
+		A\boldsymbol{\xi}_{i} = \lambda_{0} \boldsymbol{\xi}_{i} (i = 1,2,\cdots, m)\\
+		AP = (A\boldsymbol{\xi}_{1}, A\boldsymbol{\xi}_{2}, \cdots, A\boldsymbol{\xi}_{m}, A\boldsymbol{\xi}_{m+1}, \cdots, A\boldsymbol{\xi}_{n})
+	\end{cases}$$
+	$$AP = (\lambda_{0} \boldsymbol{\xi}_{1}, \lambda_{0}\boldsymbol{\xi}_{2}, \cdots, \lambda_{0}\boldsymbol{\xi}_{m}, A\boldsymbol{\xi}_{m+1}, \cdots, A\boldsymbol{\xi}_{n})$$
+	
+	$$A\boldsymbol{\xi}_{j} = \sum\limits_{k = 1}^{n}a_{jk}\boldsymbol{\xi}_{k} (j = m + 1, \cdots, n)$$
+
+	综上:
+
+	\begin{eqnarray*}
+		AP & = & (\lambda_{0} \boldsymbol{\xi}_{1},\lambda_{0} \boldsymbol{\xi}_{2},\cdots,\lambda_{0} \boldsymbol{\xi}_{m},\sum\limits_{k=1}^{n}a_{k(m+1)}\boldsymbol{\xi}_{k}, \cdots,\sum\limits_{k=1}^{n}a_{kn}\boldsymbol{\xi}_{k} )\\
+			& = & (\boldsymbol{\xi}_{1},\boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{m},\boldsymbol{\xi}_{m+1},\cdots,\boldsymbol{\xi}_{n})
+			\begin{bmatrix}
+				\lambda_{0} &             &        &              &  a_{1(m+1)}     & \cdots & a_{1n} \\
+							& \lambda_{0} &        &              &  a_{2(m+1)}     & \cdots & a_{2n} \\
+							&             & \ddots &              &  \vdots         &        & \vdots \\
+							&             &        &  \lambda_{0} &  a_{m(m+1)}     & \cdots & a_{mn} \\
+				0           & 0           & \cdots & 0            &  a_{(m+1)(m+1)} & \cdots & a_{(m+1)n}\\
+				\vdots      & \vdots      &        & \vdots       &  \vdots         &        & \vdots \\
+				0           & 0           & \cdots & 0            &  a_{n(m+1)}     & \cdots & a_{nn}\\
+			\end{bmatrix}\\
+			& = & PB
+	\end{eqnarray*}
+
+	$$\begin{cases}
+		P^{-1}AP = B\\
+		|\lambda E - A| = |P^{-1}(\lambda E -B)P| = |\lambda E - B|\\
+	\end{cases}$$
+
+	\begin{eqnarray*}
+		|\lambda E - A| & = & 
+		\begin{bmatrix}
+			\lambda - \lambda_{0}   &                       &        &                       &  a_{1(m+1)}              & \cdots & a_{1n} \\
+									& \lambda - \lambda_{0} &        &                       &  a_{2(m+1)}              & \cdots & a_{2n} \\
+									&                       & \ddots &                       &  \vdots                  &        & \vdots \\
+									&                       &        & \lambda - \lambda_{0} &  a_{m(m+1)}              & \cdots & a_{mn} \\
+			0                       & 0                     & \cdots & 0                     & \lambda - a_{(m+1)(m+1)} & \cdots & a_{(m+1)n}\\
+			\vdots                  & \vdots                &        & \vdots                &  \vdots                  &        & \vdots \\
+			0                       & 0                     & \cdots & 0                     &  a_{n(m+1)}              & \cdots & \lambda - a_{nn}\\
+		\end{bmatrix}\\
+						& = & (\lambda - \lambda_{0})^{m}f(\lambda)
+	\end{eqnarray*}
+
+	$\lambda_{0}$ 至少是矩阵 $A$ 的 $m$ 重特征值, $m$ 个线性无关特征向量对应的特征值至少是 $m$ 重特征值 $\Leftrightarrow$ $k$ 重特征值至多有 $k$ 个线性无关的特征向量
+\end{theorem}
+
 \begin{table}[h]
 	\centering
 	\caption{常用特征值和特征向量}
@@ -1665,192 +1782,419 @@ $$ det(A) = \begin{vmatrix}
 			cell{1-Z}{1} = {mode = text}
 		}
 		矩阵     & A      & kA        & A^{k}       & f(A)       & A^{-1}           &  A^{*}               & P^{-1}AP \\
-		特征值   & \lambda & k\lambda & \lambda^{k} & f(\lambda) & \frac{1}{\lambda} & \frac{|A|}{\lambda} & \lambda   \\
-		特征向量 & \xi     & \xi      & \xi         & \xi        & \xi               &  \xi                & P^{-1}\xi \\
+		特征值   & \lambda & k\lambda & \lambda^{k} & f(\lambda) & \dfrac{1}{\lambda} & \dfrac{|A|}{\lambda} & \lambda   \\
+		特征向量 & \boldsymbol{\xi}     & \boldsymbol{\xi}      & \boldsymbol{\xi}         & \boldsymbol{\xi}        & \boldsymbol{\xi}               &  \boldsymbol{\xi}                & P^{-1}\boldsymbol{\xi} \\
 	\end{tblr}
 \end{table}
+
 \section{相似}
+
 \begin{definition}[矩阵的相似]
-	设$A,B$是两个$n$阶方阵,若存在$n$阶可逆矩阵$P$,使得$P^{-1}AP=B$,则称$A$相似于$B$,记作$A\sim B$
-	\begin{anymark}[注]
-		(1). $A\sim A\quad \text{反身性}$
-		
-		(2). $A\sim B\Rightarrow B\sim A\quad \text{对称性}$
-		
-		(3). $A\sim B,\ B\sim C\Rightarrow A\sim C\quad \text{传递性}$
-	\end{anymark}
-	\begin{corollary}[相似矩阵]
-		(1).$A\sim B$,我们得到:  
-		\begin{itemize}
-			\item $r(A)=r(B)$
-			\item $|A|=|B|$
-			\item $|\lambda A-E|=|\lambda B-E|$
-			\item $A,B\text{具有相同的特征值}$
-		\end{itemize}
-		
-		(2).$A\sim B$,我们得到:  
-		\begin{itemize}
-			\item $A^{m}\sim B^{m}$
-			\item $f(A)\sim f(B)$
-		\end{itemize}
-		
-		(3).$A\sim B\text{且}A\text{可逆}$,我们得到:  
-		\begin{itemize}
-			\item $A^{-1}\sim B^{-1}$
-			\item $f(A^{-1})\sim f(B^{-1})$
-		\end{itemize}
-		
-		(4).$A\sim B$,我们得到:  
-		\begin{itemize}
-			\item $A^{T}\sim B^{T}$
-			\item $A^{*}\sim B^{*}$
-		\end{itemize}
-	\end{corollary}
+	设 $A,B$ 是两个 $n$ 阶方阵, $\exists n$ 阶可逆矩阵 $P$, $s.t.\ P^{-1}AP = B$, 称 $A$ 相似于 $B$, 记作 $A\sim B$
 \end{definition}
+
+\begin{corollary}[相似矩阵]
+	\begin{itemize}
+		\item \textcolor{cyan}{反身性}: $A\sim A$
+		\item \textcolor{cyan}{对称性}: $A\sim B \Rightarrow B\sim A$
+		\item \textcolor{cyan}{传递性}: $A\sim B, B\sim C \Rightarrow A\sim C$
+	\end{itemize}
+\end{corollary}
+
+\begin{corollary}[相似矩阵]
+	(1). $A\sim B\Rightarrow P^{-1}AP = B$
+
+	\textcolor{red}{必要不充分条件}
+
+	\begin{itemize}
+		\item $r(A) = r(B)$
+		\item $|A| = |B|$
+		\item $\lambda_{A} = \lambda_{B}$
+		\item $tr(A) = tr(B)$
+		\item $|\lambda E-A| = |\lambda E - B|$
+		\item $A, B$ 各阶主子式之和分别相等
+	\end{itemize}
+	
+	(2). $A\sim B$
+	\begin{itemize}
+		\item $A^{T}\sim B^{T}$
+		\item $A^{*} \sim B^{*}$
+		\item $A^{m}\sim B^{m}$
+		\item $f(A)\sim f(B)$
+	\end{itemize}
+	
+	(3). $A\sim B$ 且 $A$ 可逆  
+	\begin{itemize}
+		\item $A^{-1}\sim B^{-1}$
+		\item $f(A^{-1})\sim f(B^{-1})$
+	\end{itemize}
+\end{corollary}
 \subsection{矩阵的相似对角化}
+
 \begin{definition}[相似对角化]
-	设$A$是$n$阶方阵,若存在$n$阶可逆矩阵$P$,使得$P^{-1}AP=\varLambda$,其中$\varLambda$是对角矩阵,则称$A$可相似对角化,记作$A\sim \varLambda$,称$\varLambda$为$A$的相似标准型
-	
-	\begin{anymark}[注]
-		$$P=[\xi_{1},\xi_{2},\cdots,\xi_{n}],\varLambda=\left[
-		\begin{matrix}
-			\lambda_{1}& & & \\
-			&\lambda_{2}& & \\
-			& &\ddots &\\
-			& & &\lambda_{n}
-		\end{matrix}
-		\right]$$
-		$$P^{-1}AP=\varLambda\Rightarrow AP=P\varLambda$$
-		$$A[\xi_{1},\xi_{2},\cdots,\xi_{n}]=[\lambda_{1}\xi_{1},\lambda_{2}\xi_{2},\cdots,\lambda_{n}\xi_{n}]\Rightarrow A\xi_{i}=\lambda_{i}\xi_{i}(i=1,2,\cdots,n)$$
-	\end{anymark}
-	\begin{corollary}[对角化]
-		\begin{itemize}
-			\item $n\text{阶矩阵}A\text{可相似对角化}\Leftrightarrow A\text{有}n\text{个线性无关的特征向量}$
-			\item $n\text{阶矩阵}A\text{可相似对角化}\Leftrightarrow \text{对于每个}k_{i}\text{重特征值都有}k_{i}\text{个特征向量}$
-			\item $A\text{有}n\text{个特征值}\Rightarrow n\text{阶矩阵}A\text{可相似对角化}$
-			\item $n\text{阶矩阵}A\text{为实对称矩阵}\Rightarrow A\text{可相似对角化}$
-		\end{itemize}
-	\end{corollary}
+	设 $A$ 是 $n$ 阶方阵, $\exists n$ 阶 可逆矩阵 $P$, $s.t.\ P^{-1}AP = \varLambda$, 其中 $\varLambda$ 是对角矩阵, 称 $A$ 可相似对角化,
+	记作 $A\sim \varLambda$, 称 $\varLambda$ 为 $A$ 的相似标准型
 \end{definition}
+
+\begin{theorem}[相似对角化充要条件]
+	$n$ 阶矩阵 $A$ 可相似对角化 $\Leftrightarrow$ $A$ 有 $n$ 个线性无关的特征向量
+
+	(1). 必要性
+	
+	不妨设存在可逆矩阵 $P$, $s.t.\ P^{-1}AP=\varLambda$, 其中 $\varLambda$ 是对角矩阵, $\varLambda = diag(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$
+
+	$$P^{-1}AP = 
+	\begin{bmatrix}
+		\lambda_{1} &             &        &           \\
+		            & \lambda_{2} &        &           \\
+		            &             & \ddots &           \\
+		            &             &        & \lambda_{n}
+	\end{bmatrix}$$
+	令 $P=[\boldsymbol{\xi}_{1}, \boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}]$
+	
+	$$A(\boldsymbol{\xi}_{1}, \boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}) = (\boldsymbol{\xi}_{1}, \boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n})
+	\begin{bmatrix}
+		\lambda_{1} &             &        &           \\
+		            & \lambda_{2} &        &           \\
+		            &             & \ddots &           \\
+		            &             &        & \lambda_{n}
+	\end{bmatrix}$$
+	$A\boldsymbol{\xi_{i}} = \lambda_{i}\boldsymbol{\xi_{i}}(i = 1,2,\cdots,n)$, $P$ 是可逆矩阵, 
+	$\boldsymbol{\xi}_{1}, \boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}$ 线性无关, 它们分别是矩阵 $A$ 对应于特征值 $\lambda_{1},\lambda_{2},\cdots,\lambda_{n}$ 的特征向量
+
+	(2). 充分性
+
+	设 $A$ 有 $n$ 个线性无关的特征向量 $\boldsymbol{\xi}_{1}, \boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}$,
+	对应的特征值分别为 $\lambda_{1}, \lambda_{2},\cdots,\lambda_{n}$, 令 $P=[\boldsymbol{\xi}_{1}, \boldsymbol{\xi}_{2},\cdots,\boldsymbol{\xi}_{n}]$, $P$ 可逆
+
+	$$A\boldsymbol{\xi_{i}} = \lambda_{i} \boldsymbol{\xi_{i}} \Rightarrow 
+	AP = P\begin{bmatrix}
+		\lambda_{1} &             &        &           \\
+		            & \lambda_{2} &        &           \\
+		            &             & \ddots &           \\
+		            &             &        & \lambda_{n}
+	\end{bmatrix}$$
+
+	$$P^{-1}AP = \begin{bmatrix}
+		\lambda_{1} &             &        &           \\
+		            & \lambda_{2} &        &           \\
+		            &             & \ddots &           \\
+		            &             &        & \lambda_{n}
+	\end{bmatrix}$$
+\end{theorem}
+
+\begin{corollary}[对角化]
+	\begin{itemize}
+		\item $n$ 阶矩阵 $A$ 可相似对角化 $\Leftrightarrow$ $A$ 有 $n$ 个线性无关的特征向量
+		\item $n$ 阶矩阵 $A$ 可相似对角化 $\Leftrightarrow$ 对于每个 $k_{i}$ 重特征值都有 $k_{i}$ 个线性无关的特征向量
+		\item $A$ 有 $n$ 个特征值 $\Rightarrow$ $n$ 阶矩阵 $A$ 可相似对角化
+		\item $n$ 阶矩阵 $A$ 为实对称矩阵 $\Rightarrow$ $A$ 可相似对角化
+	\end{itemize}
+\end{corollary}
+
 \subsection{实对称矩阵的相似对角化}
-\begin{definition}[实对称矩阵相似对角化]
-	$A^{T}=A\text{且}A\text{中元素全为实数,我们把}A\text{称作实对称矩阵}$
-	
-	\begin{anymark}[性质]
-		\begin{itemize}
-			\item $\text{实对称矩阵必可相似对角化,特征值为实数,特征向量为实向量}$
-			\item $\text{实对称矩阵属于不同特征值的特征向量互相正交}$
-			\item $\exists \text{正交矩阵} Q,\text{s.t.}\ Q^{-1}AQ=Q^{T}AQ=\varLambda$
-		\end{itemize}
-	\end{anymark}
+\begin{definition}[实对称矩阵]
+	$A^{T} = A$ 且 $A$ 中元素全为实数, 我们把 $A$ 称作\textcolor{red}{实对称矩阵}
 \end{definition}
+\begin{theorem}[实对称矩阵特征值]
+	$n$ 阶实对称矩阵 $A$ 特征值为实数
+
+	不妨设实对称矩阵 $A$ 的特征值 $\lambda$ 和对应的特征向量 $\boldsymbol{\xi}$, 记 $\overline{A}$ 为 $A$ 的共轭矩阵, 
+	$\overline{\lambda}$ 为 $\lambda$ 的共轭复数, $\overline{\boldsymbol{\xi}}$ 为 $\boldsymbol{\xi}$ 的共轭向量
+
+	$$\begin{cases}
+	  A\boldsymbol{\xi} = \lambda\boldsymbol{\xi}\\
+	  \overline{A} = A\\
+	  A = A^{T}\\
+	\end{cases}\Rightarrow
+	\overline{x}^{T}Ax = \overline{x}^{T}\overline{A}^{T}x = \overline{Ax}^{T}x$$
+
+	$$\overline{Ax}^{T}x = \overline{\lambda x}^{T}x = \overline{\lambda} \overline{x}^{T}x$$
+
+	$$\begin{cases}
+		\overline{x}^{T}Ax = \lambda \overline{x}^{T}x\\
+		\overline{x}^{T}Ax = \overline{\lambda} \overline{x}^{T}x
+	\end{cases}\Rightarrow (\lambda - \overline{\lambda}) \overline{x}^{T}x = 0$$
+
+	$\lambda - \overline{\lambda} = 0 \Rightarrow \lambda = \overline{\lambda}$, $\lambda$ 是实数
+\end{theorem}
+
+\begin{theorem}[实对称矩阵特征向量]
+	$n$ 阶实对称矩阵 $A$ 的不同特征值对应的特征向量互相正交
+
+	不妨设实对称矩阵 $A$ 的特征值 $\lambda_{1}, \lambda_{2}$ 对应的特征向量 $\boldsymbol{\xi}_{1}, \boldsymbol{\xi}_{2}$
+	$$\begin{cases}
+		A\boldsymbol{\xi}_{1} = \lambda_{1}\boldsymbol{\xi}_{1}\\
+		A\boldsymbol{\xi}_{2} = \lambda_{2}\boldsymbol{\xi}_{2}
+	\end{cases}\Rightarrow
+	\begin{cases}
+	   \boldsymbol{\xi}_{1}^{T}A^{T} = \lambda_{1}\boldsymbol{\xi}_{1}^{T}\\
+	   \boldsymbol{\xi}_{2}^{T}A^{T} = \lambda_{2}\boldsymbol{\xi}_{2}^{T}
+	\end{cases}$$
+
+	$$\begin{cases}
+		\boldsymbol{\xi}_{1}^{T}A\boldsymbol{\xi}_{2} = \lambda_{1}\boldsymbol{\xi}_{1}^{T}\boldsymbol{\xi}_{2}\\
+		\boldsymbol{\xi}_{1}^{T}A\boldsymbol{\xi}_{2} = \lambda_{2}\boldsymbol{\xi}_{1}^{T}\boldsymbol{\xi}_{2}
+	\end{cases}\Rightarrow
+	(\lambda_{1} - \lambda_{2})\boldsymbol{\xi}_{1}^{T}\boldsymbol{\xi}_{2} = 0$$
+
+	$\lambda_{1} \neq \lambda_{2} \Rightarrow \boldsymbol{\xi}_{1}^{T}\boldsymbol{\xi}_{2} = 0$, $\boldsymbol{\xi}_{1}, \boldsymbol{\xi}_{2}$ 互相正交
+\end{theorem}
+
+\begin{theorem}[实对称矩阵的相似对角化]
+	$n$ 阶实对称矩阵 $A_{n}$ 可正交相似对角化
+
+	1. 当 $n = 1$ 时, $A_{1}$ 已经是对角矩阵, $A_{1}$ 可正交相似对角化
+
+	2. 假设当 $n = k - 1$ 时, $A_{k-1}$ 可以正交相似对角化
+
+	3. 当 $n = k$, 不妨设 $A_{k}$ 的一个特征值为 $\lambda_{1}\in \mathbb{R}$, 对应的一个单位特征向量为 $\boldsymbol{\eta}_{1}$, 
+	不妨构造一个正交矩阵 $T = (\boldsymbol{\eta}_{1}, \boldsymbol{\eta}_{2}, \cdots, \boldsymbol{\eta}_{k})$
+
+	$$T^{-1}A_{k}T = (T^{-1}\lambda_{1}\boldsymbol{\eta}_{1}, T^{-1}A\boldsymbol{\eta}_{2}, \cdots, T^{-1}A\boldsymbol{\eta}_{k})$$
+
+	$$(T^{-1}A_{k}T)^{T} = T^{T}A_{k}^{T}(T^{-1})^{T} = T^{-1}A_{k}T$$
+
+	$$\begin{cases}
+	  T^{-1}\boldsymbol{\eta}_{1} = (1, 0, \cdots, 0)\\
+	  T^{-1}\boldsymbol{\eta}_{2} = (0, 1, \cdots, 0)\\
+	  \cdots\\
+	  T^{-1}\boldsymbol{\eta}_{k} = (0, 0, \cdots, 1)
+	\end{cases}\Rightarrow
+	T^{-1}A_{k}T = 
+	\begin{bmatrix}
+		\lambda_{1} & 0 & \cdots  & 0\\
+		0           &   &         & \\
+		\vdots      &   & P_{k-1} & \\
+		0           &   &         &  
+	\end{bmatrix}$$
+
+	当 $n = k - 1$ 时, $A_{k-1}$ 可以正交相似对角化 $\Rightarrow T_{2}^{-1}A_{k-1}T_{2} = \varLambda_{k-1}$
+
+	存在可逆矩阵 $T_{f}$
+
+	$$T_{f} = T
+	\begin{bmatrix}
+		1           & 0 & \cdots & 0\\
+		0           &   &        & \\
+		\vdots      &   & T_{2}  & \\
+		0           &   &        &
+	\end{bmatrix}\Rightarrow |T_{f}| = |T_{2}|\neq 0$$
+
+	$$T_{f}^{-1}A_{k}T_{f} = 
+	\begin{bmatrix}
+		1           & 0 & \cdots     & 0\\
+		0           &   &            & \\
+		\vdots      &   & T_{2}^{-1} & \\
+		0           &   &            &
+	\end{bmatrix}T^{-1}A_{k}T
+	\begin{bmatrix}
+		1           & 0 & \cdots & 0\\
+		0           &   &        & \\
+		\vdots      &   & T_{2}  & \\
+		0           &   &        &
+	\end{bmatrix}$$
+
+	$$T_{f}^{-1}A_{k}T_{f} = 
+	\begin{bmatrix}
+		1           & 0 & \cdots     & 0\\
+		0           &   &            & \\
+		\vdots      &   & T_{2}^{-1} & \\
+		0           &   &            &
+	\end{bmatrix}
+	\begin{bmatrix}
+		\lambda_{1} & 0 & \cdots  & 0\\
+		0           &   &         & \\
+		\vdots      &   & P_{k-1} & \\
+		0           &   &         &  
+	\end{bmatrix}
+	\begin{bmatrix}
+		1           & 0 & \cdots & 0\\
+		0           &   &        & \\
+		\vdots      &   & T_{2}  & \\
+		0           &   &        &
+	\end{bmatrix} = 
+	\begin{bmatrix}
+		\lambda_{1} & 0 & \cdots                 & 0\\
+		0           &   &                        & \\
+		\vdots      &   & T_{2}^{-1}P_{k-1}T_{2} & \\
+		0           &   &                        &  
+	\end{bmatrix}$$
+
+	$$T_{2}^{-1}P_{k-1}T_{2} = \varLambda_{k-1} \Rightarrow A_{k}\sim \varLambda_{k}$$
+
+	综上, $n$ 阶实对称矩阵 $A_{n}$ 可正交相似对角化
+\end{theorem}
+
+
+
 \chapterimage{chap20.jpg}
 \chapter{二次型}
 \section{二次型定义}
 \begin{definition}[二次型]
-	$n$元变量$x_{1},x_{2},\cdots,x_{n}$的二次齐次多项式
+	$n$ 元变量 $x_{1},x_{2},\cdots,x_{n}$ 的二次齐次多项式
 	\begin{eqnarray*}
-		f(x_{1},x_{2},\cdots,x_{n})=a_{11}x_{1}^{2}+2a_{12}x_{1}x_{2}+&\cdots&+2a_{1n}x_{1}x_{n}\\
-		+a_{22}x_{2}^2+&\cdots&+2a_{2n}x_{2}x_{n}\\
-		+&\cdots&\quad \\
-		& &+a_{nn}x_{n}^{2}
+		f(x_{1},x_{2},\cdots,x_{n}) = a_{11}x_{1}^{2} + 2a_{12}x_{1}x_{2} + & \cdots & + 2a_{1n}x_{1}x_{n}\\
+		                                              + a_{22}x_{2}^2     + & \cdots & + 2a_{2n}x_{2}x_{n}\\
+		                                                                  + & \cdots &                    \\
+		                                                                    &        & + a_{nn}x_{n}^{2}
 	\end{eqnarray*}
-	称为$n$元二次型,简称为二次型.
+	称为 $n$ 元二次型, 简称二次型
 	
-	我们令$a_{ij}=a_{ji}$,我们可以得到:  
-	$$f(x_{1},x_{2},\cdots,x_{n})=a_{11}x_{1}^{2}+\cdots+a_{1n}x_{1}x_{n}+a_{21}x_{2}x_{1}+a_{22}x_{2}^2+\cdots+a_{2n}x_{2}x_{n}
-	+\cdots+a_{n1}x_{n}x_{1}+\cdots+a_{nn}x_{n}^{2}$$
-	$$f(x_{1},x_{2},\cdots,x_{n})=\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{n}a_{ij}x_{i}x_{j}$$
+	令 $a_{ij}=a_{ji}$
+
+	\begin{eqnarray*}
+		f(x_{1},x_{2},\cdots,x_{n}) & = & a_{11}x_{1}^{2}  + a_{12}x_{1}x_{2} + \cdots + a_{1n}x_{1}x_{n} \\
+		                            &   & a_{21}x_{2}x_{1} + a_{22}x_{2}^2    + \cdots + a_{2m}x_{2}x_{n} \\
+		                            &   & \cdots                                                          \\
+		                            &   & a_{n1}x_{n}x_{1} + a_{n2}x_{n}x_{1} + \cdots + a_{nn}x_{n}^{2}
+	\end{eqnarray*}
 	
-	我们令$$A=\left[\begin{matrix}
-		a_{11}&a_{12}&\dots&a_{1n}\\
-		a_{21}&a_{22}&\dots&a_{2n}\\
-		\vdots&\vdots&\quad&\vdots\\
-		a_{n1}&a_{n2}&\dots&a_{nn}
-	\end{matrix} \right],\ \mathtt{x}=\left[\begin{matrix}
+	$$f(x_{1},x_{2},\cdots,x_{n}) = \sum\limits_{i=1}^{n}\sum\limits_{j=1}^{n}a_{ij}x_{i}x_{j}$$
+	
+	令 $$ A =
+	\begin{bmatrix}
+		a_{11} & a_{12} & \cdots & a_{1n}\\
+		a_{21} & a_{22} & \cdots & a_{2n}\\
+		\vdots & \vdots & \ddots & \vdots\\
+		a_{n1} & a_{n2} & \cdots & a_{nn}
+	\end{bmatrix}, 
+	\mathtt{x} = 
+	\begin{bmatrix}
 	x_{1}\\x_{2}\\\vdots\\x_{n}
-	\end{matrix} \right]$$
-	$$\text{二次型可表示为:  }f(\mathtt{x})=\mathtt{x}^{T}A\mathtt{x},A\text{为二次型}f(\mathtt{x})\text{的矩阵}$$
+	\end{bmatrix}$$
+
+	二次型可表示: $f(\mathtt{x}) = \mathtt{x}^{T}A\mathtt{x}, A$ 为二次型 $f(\mathtt{x})$ 的矩阵
 \end{definition}
-\section{二次型的标准型和规范型}
+
 \begin{definition}[线性变换]
-	对于$n$元二次型$f(x_{1},x_{2},\cdots,x_{n})$,令:  
-	$$\left\lbrace 
-	\begin{matrix}
-		x_{1}=c_{11}y_{1}+c_{12}y_{2}+\cdots+c_{1n}y_{n}\\
-		x_{2}=c_{21}y_{1}+c_{22}y_{2}+\cdots+c_{2n}y_{n}\\
-		\cdots\cdots\\
-		x_{n}=c_{n1}y_{1}+c_{n2}y_{2}+\cdots+c_{nn}y_{n}
-	\end{matrix}
-	\right. $$
-	记$$\mathtt{x}=\left[\begin{matrix}
-		x_{1}\\x_{2}\\\vdots\\x_{n}
-	\end{matrix} \right],\ C=\left[ \begin{matrix}
-	c_{11}&c_{12}&\cdots&c_{1n}\\
-	c_{21}&c_{22}&\cdots&c_{2n}\\
-	\vdots&\vdots& &\vdots\\
-	c_{n1}&c_{n2}&\cdots&c_{nn}
-	\end{matrix}\right],\ \mathtt{y}=\left[\begin{matrix}
-	y_{1}\\y_{2}\\\vdots\\y_{n}
-	\end{matrix} \right]$$
-	上面的线性变化可写作:  $$\mathtt{x}=C\mathtt{y}$$
-	我们把这种变换称为$x_{1},x_{2},\cdots,x_{n}$到$y_{1},y_{2},\cdots,y_{n}$的\textbf{线性变换},如果线性变换矩阵$C$可逆,$|C|\neq 0$,则称为\textbf{可逆线性变换}.
+	对于 $n$ 元二次型 $f(x_{1},x_{2},\cdots,x_{n})$ 
 	
-	我们有:  $$f(\mathtt{x})=\mathtt{x}^{T}A\mathtt{x},\ \mathtt{x}=C\mathtt{y}\Rightarrow f(\mathtt{x})=(C\mathtt{y})^{T}A(C\mathtt{y})=\mathtt{y}^{T}(C^{T}AC)\mathtt{y}$$
-	如果我们记$B=C^{T}AC$,我们得到$$f(\mathtt{x})=y^{T}By=g(\mathtt{y})$$
-	二次型$f(\mathtt{x})=\mathtt{x}^{T}A\mathtt{x}$通过线性变换$\mathtt{x}=C\mathtt{y}$得到了一个新二次型$g(\mathtt{y})=y^{T}By$
+	令  
+	$$\begin{cases}
+		x_{1} = c_{11}y_{1} + c_{12}y_{2} + \cdots + c_{1n}y_{n}\\
+		x_{2} = c_{21}y_{1} + c_{22}y_{2} + \cdots + c_{2n}y_{n}\\
+		\cdots\\
+		x_{n} = c_{n1}y_{1} + c_{n2}y_{2} + \cdots + c_{nn}y_{n}
+	\end{cases}$$
+
+	记
+	$$\mathtt{x} = 
+	\begin{bmatrix}
+		x_{1} \\ x_{2} \\ \vdots \\x_{n}
+	\end{bmatrix}, 
+	C = \begin{bmatrix}
+	c_{11} & c_{12} & \cdots & c_{1n}\\
+	c_{21} & c_{22} & \cdots & c_{2n}\\
+	\vdots & \vdots & \ddots & \vdots\\
+	c_{n1} & c_{n2} & \cdots & c_{nn}
+	\end{bmatrix}, 
+	\mathtt{y} = 
+	\begin{bmatrix}
+		y_{1} \\ y_{2} \\ \vdots \\y_{n}
+	\end{bmatrix}$$
+
+	$x\to y$ 线性变化:
+	
+	$$\mathtt{x}=C\mathtt{y}$$
+	
+	这种变换称为 $x_{1},x_{2},\cdots,x_{n}$ 到 $y_{1},y_{2},\cdots,y_{n}$ 的 \textbf{线性变换}, 
+	如果线性变换矩阵 $C(|C|\neq 0)$ 可逆, 则称为 \textbf{可逆线性变换}
+	
+	$$\begin{cases}
+		f(\mathtt{x}) = \mathtt{x}^{T}A\mathtt{x}\\ 
+		\mathtt{x} = C\mathtt{y}
+	\end{cases}\Rightarrow 
+	f(\mathtt{x}) = (C\mathtt{y})^{T}A(C\mathtt{y}) = \mathtt{y}^{T}(C^{T}AC)\mathtt{y}$$
+	
+	记 $B = C^{T}AC$ 
+
+	$$f(\mathtt{x}) = y^{T}By = g(\mathtt{y})$$
+
+	二次型 $f(\mathtt{x}) = \mathtt{x}^{T}A\mathtt{x}$ 通过线性变换 $\mathtt{x} = C\mathtt{y}$ 得到了一个新二次型 $g(\mathtt{y}) = y^{T}By$
 \end{definition}
+
+\section{合同}
+
 \begin{definition}[矩阵合同]
-	设$A,B$为$n$阶矩阵,若存在可逆矩阵$C$,使得:  
-	$$B=C^{T}AC$$
-	则称$A,B$合同,记作$A\simeq B$,其对应的二次型$f(\mathtt{x})$与$g(\mathtt{y})$为合同二次型.
-	\begin{anymark}[注]
-		(1). $A\simeq A\quad \text{反身性}$
-		
-		(2). $A\simeq B\Rightarrow B\simeq A\quad \text{对称性}$
-		
-		(3). $A\simeq B,\ B\simeq C\Rightarrow A\simeq C\quad \text{传递性}$
-	\end{anymark}
+	设 $A,B$ 为 $n$ 阶矩阵, $C$ 是可逆矩阵
+
+	$$\exists C\in \mathbb{R}^{n\times n},\ s.t.\ B = C^{T}AC$$
+	
+	称 $A,B$ 合同, 记作 $A\simeq B$, 其对应的二次型 $f(\mathtt{x})$ 与 $g(\mathtt{y})$ 为合同二次型
 \end{definition}
-\begin{definition}[标准型和规范型]
-	1. 二次型中只有平方项,而没有交叉项(所有交叉项系数全为0),形如:  
-	$$d_{1}x_{1}^2+d_{2}x_{2}^2+\cdots+d_{n}x_{n}^2$$
-	的二次型为标准二次型.
-	
-	2. 在标准二次型中,如果二次型的系数$d_{i}=\{0,1,-1\}$,这样的二次型称为规范型二次型.
-	
-	3. 二次型$f(\mathtt{x})=\mathtt{x}^{T}A\mathtt{x}$合同于标准型$d_{1}x_{1}^2+d_{2}x_{2}^2+\cdots+d_{n}x_{n}^2$,则称$d_{1}x_{1}^2+d_{2}x_{2}^2+\cdots+d_{n}x_{n}^2$为二次型$f(\mathtt{x})=\mathtt{x}^{T}A\mathtt{x}$的合同标准型.
-	
-	4. 二次型$f(\mathtt{x})=\mathtt{x}^{T}A\mathtt{x}$合同于规范型$x_{1}^2+\cdots++x_{p}^2-x_{p+1}^2-x_{q}^2$,则称$x_{1}^2+\cdots++x_{p}^2-x_{p+1}^2-x_{q}^2$为二次型$f(\mathtt{x})=\mathtt{x}^{T}A\mathtt{x}$的合同规范型.
-	
-	5. 任何二次型都可以通过可逆线性变换化为标准型或者规范型,对任意实对称矩阵$A$,必存在可逆矩阵$C$,使得$C^{T}AC=\varLambda$
-	
-	6. 任何二次型都可以通过正交变换化为标准型,对任意实对称矩阵$A$,必存在正交矩阵$Q$,使得$Q^{-1}AC=Q^{T}AQ=\varLambda$
+\begin{corollary}[合同]
+	\begin{itemize}
+		\item \textcolor{cyan}{反身性}: $A\simeq A$
+		\item \textcolor{cyan}{对称性}: $A\simeq B \Rightarrow B\simeq A$
+		\item \textcolor{cyan}{传递性}: $A\simeq B, B\simeq C \Rightarrow A\simeq C$
+	\end{itemize}
+\end{corollary}
+
+\section{二次型的标准型和规范型}
+
+\begin{definition}[标准型]
+	二次型中只有平方项, 而没有交叉项 (所有交叉项系数全为 $0$), 形如:  
+	$$d_{1}x_{1}^{2} + d_{2}x_{2}^{2} + \cdots + d_{n}x_{n}^{2}$$
+	的二次型为\textcolor{cyan}{标准二次型}
 \end{definition}
-\begin{definition}[惯性定理]
-	无论用什么样的可逆线性变换得到的二次型标准型或者规范型,标准型或者规范型中正项个数$p$,负项个数$q$都是不变的,$p$被称为正惯性指数,$q$被称为负惯性指数.
+
+\begin{definition}[规范型]
+	在标准二次型中, 如果二次型的系数 $d_{i} \in \{0, 1, -1\}$, 这样的二次型称为\textcolor{cyan}{规范型二次型}
 \end{definition}
-\begin{anymark}[注]
-	(1). $\text{二次型的秩为}r,r=p+q$
-	
-	(2). 两个二次型合同的充要条件为有相同的正、负惯性指数,或者相同的秩及正(负)惯性指数
-\end{anymark}
+
+\begin{corollary}[合同标准型和合同规范型]
+	\begin{itemize}
+		\item 二次型 $f(\mathtt{x}) = \mathtt{x}^{T}A\mathtt{x}$ 合同于标准型 $d_{1}x_{1}^{2} + d_{2}x_{2}^{2} + \cdots + d_{n}x_{n}^{2}$, 则称 $d_{1}x_{1}^{2} + d_{2}x_{2}^{2} + \cdots + d_{n}x_{n}^{2}$ 为二次型 $f(\mathtt{x}) = \mathtt{x}^{T}A\mathtt{x}$ 的合同标准型
+		\item 二次型 $f(\mathtt{x}) = \mathtt{x}^{T}A\mathtt{x}$ 合同于规范型 $x_{1}^{2} + \cdots + x_{p}^{2} - x_{p+1}^{2} - x_{p+q}^{2}$,则称 $x_{1}^{2} + \cdots + x_{p}^2 - x_{p+1}^{2} - x_{p+q}^{2}$ 为二次型 $f(\mathtt{x}) = \mathtt{x}^{T}A\mathtt{x}$ 的合同规范型
+		\item 对任意实对称矩阵 $A$,必存在可逆矩阵 $C$,使得 $C^{T}AC=\varLambda$
+		\item 对任意实对称矩阵 $A$,必存在正交矩阵 $Q$,使得 $Q^{T}AQ=\varLambda$
+	\end{itemize}
+\end{corollary}
+
+\begin{theorem}[惯性定理]
+	$f(\mathtt{x})$ 是二次型, $A$ 是二次型 $f(\mathtt{x})$ 对应的矩阵, 对于任意可逆线性变换 $C$, $C^{T}AC = \varLambda$,  
+	标准型或者规范型中正项个数 $p$, 负项个数 $q$ 都是不变的, $p$ 是\textcolor{red}{正惯性指数}, $q$ 是\textcolor{red}{负惯性指数}
+\end{theorem}
+
+\begin{corollary}[惯性定理]
+	\begin{itemize}
+		\item $A$ 是二次型 $f(\mathtt{x})$ 对应的矩阵, $r(A) = p_{A} + q_{A}$
+		\item $A,B$ 分别是二次型 $f(\mathtt{x}), g(\mathtt{y})$ 对应的矩阵, $A\simeq B$ 充要条件:
+		$$A\simeq B \Leftrightarrow 
+		\begin{cases}
+			p_{A} = p_{B}\\
+			q_{A} = q_{B}
+		\end{cases} \Leftrightarrow
+		\begin{cases}
+		  	r(A) = r(B) \\
+			q_{A} = q_{B} (p_{A} = p_{B})
+		\end{cases}$$
+	\end{itemize}
+\end{corollary}
+
 \section{正定二次型}
+
 \begin{definition}[正定矩阵]
-	$n$元二次型$f(x_{1},x_{2},\cdots,x_{n})=\mathtt{x}^{T}A\mathtt{x}$,对于任意$\mathtt{x}=[x_{1},x_{2},\cdots,x_{n}]^{T}\neq 0$,都有$\mathtt{x}^{T}A\mathtt{x}>0$,则称$f$为正定二次型,二次型对应的矩阵$A$为正定矩阵.
-	\begin{corollary}[二次型正定充要]
-		\begin{itemize}
-			\item $f\text{正定}\Leftrightarrow f\text{正惯性指数}p=n$
-			\item $f\text{正定}\Leftrightarrow \exists \text{可逆矩阵}D,\text{s.t.}\ A=D^{T}D$
-			\item $f\text{正定}\Leftrightarrow A\simeq E$
-			\item $f\text{正定}\Leftrightarrow A\text{的所有特征值}\lambda_{i}>0$
-			\item $f\text{正定}\Leftrightarrow A\text{的全部顺序主子式大于}0$
-		\end{itemize}
-	\end{corollary}
-	\begin{corollary}[二次型正定必要]
-		\begin{itemize}
-			\item $f\text{正定}\Rightarrow a_{ii}>0$
-			\item $f\text{正定}\Rightarrow |A|>0$
-		\end{itemize}
-	\end{corollary}
+	$n$ 元二次型 $f(x_{1},x_{2},\cdots,x_{n}) = \mathtt{x}^{T}A\mathtt{x}$
+	
+	$$\forall \mathtt{x}=[x_{1},x_{2},\cdots,x_{n}]^{T}\neq 0, \mathtt{x}^{T}A\mathtt{x}>0$$
+	
+	$f$ 为正定二次型, 二次型对应的矩阵 $A$ 为\textcolor{red}{正定矩阵}
 \end{definition}
+
+\begin{corollary}[二次型正定充要条件]
+	\begin{itemize}
+		\item $f$ 正定 $\Leftrightarrow f$ 正惯性指数 $p = n$
+		\item $f$ 正定 $\Leftrightarrow \exists D,\ s.t.\ A = D^{T}D$, $D$ 是可逆矩阵
+		\item $f$ 正定 $\Leftrightarrow A\simeq E$
+		\item $f$ 正定 $\Leftrightarrow A$ 的所有特征值 $\lambda_{i}>0$
+		\item $f$ 正定 $\Leftrightarrow A$ 的全部顺序主子式大于 $0$
+	\end{itemize}
+\end{corollary}
+\begin{corollary}[二次型正定必要条件]
+	\begin{itemize}
+		\item $f$ 正定 $\Rightarrow a_{ii}>0$
+		\item $f$ 正定 $\Rightarrow |A|>0$
+	\end{itemize}
+\end{corollary}
