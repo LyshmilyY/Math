@@ -1,156 +1,174 @@
 \chapterimage{chap21.jpg}
 \chapter{随机事件和概率}
+
 \begin{definition}[随机试验]
 	\begin{itemize}
-		\item $\text{试验可以在相同条件下重复进行}$
-		\item $\text{试验的所有结果是明确可知道的,并且不止一个}$
-		\item $\text{每一次试验出现哪一个结果,事先并不确定}$
+		\item 试验可以在相同条件下重复进行
+		\item 试验的所有结果是明确可知道的, 并且不止一个
+		\item 每一次试验出现哪一个结果, 事先并不确定
 	\end{itemize}
 \end{definition}
 \begin{definition}[随机事件]
 	\begin{itemize}
-		\item $\text{每一次试验中可能出现也可能不出现的结果称为随机事件}$
-		\item $\text{在试验中一定发生的事件为必然事件,一定不发生的事件为不可能事件}$
+		\item 每一次试验中可能出现也可能不出现的结果称为随机事件
+		\item 在试验中一定发生的事件为必然事件, 一定不发生的事件为不可能事件
 	\end{itemize}
 \end{definition}
+
 \begin{definition}[样本空间]
 	\begin{itemize}
-		\item $\text{随机试验的每一个可能的结果称为样本点,记作}\omega$
-		
-		$\text{样本点的全体组成的几何称为样本空间,记作}\Omega\Rightarrow \Omega=\{\omega\}$
-		\item $\text{由一个样本点构成的事件为基本事件}$
-		\item $\text{随机事件}A\text{是由若干个基本事件组成}\Rightarrow A\subset\Omega$
+		\item 随机试验的每一个可能的结果称为\textbf{样本点}, 记作 $\omega$; 样本点的全体组成的几何称为\textbf{样本空间}, 记作 
+		$\Omega\Rightarrow \Omega = \{\omega\}$
+		\item 由一个样本点构成的事件为\textbf{基本事件}
+		\item 随机事件 $A$ 是由若干个基本事件组成 $\Rightarrow A \subset \Omega$
 	\end{itemize}
 \end{definition}
+
 \section{事件的关系和运算}
 \begin{definition}[事件间关系]
 	\begin{itemize}
-		\item $\text{包含: }\text{事件}A\text{发生},\text{事件}B\text{发生}\Rightarrow A\subset B$
-		\item $\text{相等: }A\subset B,\ B\subset A\Rightarrow A=B$
-		\item $\text{相容: }AB\neq \varnothing$
-		\item $\text{互斥: }AB=\varnothing$
-		\item $\text{对立: }A\cup B=\Omega, A\cap B=\varnothing$
+		\item \textcolor{cyan}{包含}: 事件 $A$ 发生, 事件 $B$ 发生 $\Rightarrow A\subset B$
+		\item \textcolor{cyan}{相等}: $A \subset B, B\subset A\Rightarrow A = B$
+		\item \textcolor{cyan}{相容}: $AB \neq \varnothing$
+		\item \textcolor{cyan}{互斥}: $AB = \varnothing$
+		\item \textcolor{cyan}{对立}: $A\cup B=\Omega, A\cap B =\varnothing$
 	\end{itemize}
 \end{definition}
 \begin{definition}[运算法则]
 	\begin{itemize}
-		\item $\text{交换律: } A\cup B=B\cup A, A\cap B=B\cap A$
-		\item $\text{结合律: }(A\cup B)\cup C=A\cup (B\cup C), (A\cap B)\cap C=A\cap (B\cap C)$
-		\item $\text{分配律: }(A\cup B)\cap C=(A\cap C)\cup (B\cap C)$
-		\item $De\ Morgan's\ laws\text{: }\overline{A\cup B}=\overline{A}\cap\overline{B}, \overline{A\cap B}=\overline{A}\cup\overline{B} $
+		\item \textbf{交换律}: $A \cup B = B \cup A, A \cap B = B \cap A$
+		\item \textbf{结合律}: $(A\cup B)\cup C = A\cup (B\cup C), (A\cap B)\cap C = A\cap (B\cap C)$
+		\item \textbf{分配律}: $(A\cup B)\cap C = (A\cap C)\cup (B\cap C)$
+		\item \textbf{De\ Morgan's\ Laws}: $\overline{A\cup B} = \overline{A}\cap\overline{B}, \overline{A\cap B} = \overline{A}\cup\overline{B}$
 	\end{itemize}
 \end{definition}
+
 \section{概率定义}
 \begin{definition}[概率定义]
-	1. 描述性定义
+	(1). \textcolor{blue}{描述性定义}
 	
-	通常将随机事件$A$发生的可能性大小的度量(非负值)称为事件$A$发生的概率,记作$P(A)$
+	通常将随机事件 $A$ 发生的可能性大小的度量(非负值)称为事件 $A$ 发生的概率, 记作 $P(A)$
 	
-	2. 统计性定义
+	(2). \textcolor{blue}{统计性定义}
 	
-	在相同条件下做重复实验,事件$A$出现的次数$k$和总的试验次数$n$的比$\frac{k}{n}$称为事件$A$在这$n$次试验中出现的频率.当试验次数$n$足够大时,频率将稳定于某个常数$p$,$n$越大,频率偏离$p$的可能性越小,我们把这个常数$p$称为事件$A$发生的概率.
+	在相同条件下做重复实验, 事件 $A$ 出现的次数 $k$ 和总的试验次数 $n$ 的比 $\dfrac{k}{n}$ 称为事件 $A$ 在这 $n$ 次试验中出现的频率, 
+	当试验次数 $n$ 足够大时, 频率将稳定于某个常数 $p$, $n$ 越大, 频率偏离 $p$ 的可能性越小, 这个常数 $p$ 称为事件 $A$ 发生的概率
 	
-	3. 公理化定义
+	(3). 公理化定义
 	
-	设随机事件的样本空间为$\Omega$,如果对于每一个事件$A$都有一个确定的实数$P(A)$,且事件函数$P(*)$满足: 
+	设随机事件的样本空间为 $\Omega$, 对于每一个事件 $A$ 都有一个确定的实数 $P(A)$, 且事件函数 $P(*)$ 满足 
 	\begin{itemize}
-		\item $\text{非负性: }P(A)\geq 0$
-		\item $\text{规范性: }P(\Omega)=1$
-		\item $\text{可列可加性: }\text{对于任意两个互不相容的事件}A_{1},A_{2},\cdots,A_{n},\text{我们有: }$
-		$$P(\bigcup_{i=1}^{n}A_{i})=\sum\limits_{i=1}^{n}P(A_{i})$$
+		\item \textbf{非负性}: $P(A) \geq 0$
+		\item \textbf{规范性}: $P(\Omega) = 1$
+		\item \textbf{可列可加性}: 对于任意两个互不相容的事件 $A_{1}, A_{2}, \cdots, A_{n}$
+		$$P(\bigcup_{i = 1}^{n}A_{i}) = \sum\limits_{i=1}^{n}P(A_{i})$$
 	\end{itemize}
 \end{definition}
+
 \section{古典概率型和几何概率型}
+
 \begin{definition}[古典概率型]
-	古典概率型样本空间满足: 
+	古典概率型样本空间
 	\begin{itemize}
-		\item $\text{只有有限个基本事件}$
-		\item $\text{每个基本事件都是等可能发生}$
-		$$P(A)=\dfrac{k}{n}=\dfrac{\text{事件}A\text{所含的基本事件的个数}}{\text{样本空间内的基本事件个数}}$$
+		\item 只有有限个基本事件
+		\item 每个基本事件都是等可能发生
+		$$P(A) = \dfrac{k}{n} = \dfrac{N(A)}{N(\Omega)}$$
 	\end{itemize}
 \end{definition}
 \begin{definition}[几何概率型]
-	几何概率型样本空间满足: 
+	几何概率型样本空间
 	\begin{itemize}
-		\item $\text{无限个基本事件}$
-		\item $\text{每个基本事件都是等可能发生}$
-		\item $\text{样本空间是一个可以度量的有界区域}$
-		$$P(A)=\dfrac{S_{A}\text{的几何度量}}{\text{样本空间内的几何度量}}$$
+		\item 无限个基本事件
+		\item 每个基本事件都是等可能发生
+		\item 样本空间是一个可以度量的有界区域
+		$$P(A) = \dfrac{S_{A}}{S_{\Omega}}$$
 	\end{itemize}
 \end{definition}
+
 \section{概率论基本公式}
 \begin{definition}[性质和基本公式]
 	\begin{itemize}
-		\item $0\leq P(A)\leq 1,P(\varnothing)=0,P(\Omega)=1$
-		\item $A\subset B\Rightarrow P(B-A)=P(B)-P(A),P(B)\geq P(A)$
-		\item $P(\overline{A})=1-P(A)$
-		\item $P(A\cup B)=P(A)+P(B)-P(AB)$
+		\item $0 \leq P(A)\leq 1, P(\varnothing) = 0,P(\Omega) = 1$
+		\item $A\subset B\Rightarrow P(B-A) = P(B)-P(A), P(B)\geq P(A)$
+		\item $P(\overline{A}) = 1 - P(A)$
+		\item $P(A\cup B) = P(A) + P(B) - P(AB)$
 	\end{itemize}
 \end{definition}
-\begin{definition}[公式]
-	\begin{theorem}[条件概率公式]
-		$A,B$是两个任意事件,如果$P(A)>0$,我们称在$A$发生的条件下$B$发生的概率为条件概率,我们记作$P(B|A)$.
-		$$P(B|A)=\dfrac{P(AB)}{P(A)}$$
-	\end{theorem}
-	\begin{theorem}[乘法公式]
-		$A_{1},A_{2},\cdots,A_{n}$是$n$个事件,且$P(A_{i})>0,(i=1,2,\cdots,n),P(A_{1}A_{2}\cdots A_{n-1})>0$,我们有: 
-		$$P(A_{1}A_{2}\cdots A_{n})=P(A_{1})P(A_{2}|A_{1})P(A_{3}|A_{1}A_{2})\cdots P(A_{n}|A_{1}A_{2}\cdots A_{n-1})$$
-		
-		特别的,当$n=2$时,我们有: 
-		$$P(AB)=P(A)P(B|A)=P(B)P(A|B)$$
-	\end{theorem}
-	\begin{theorem}[全概率公式]
-		如果有完备事件组$A_{i}(i=1,2,\cdots,n)$,满足$\bigcup_{i=1}^{n}A_{i}=1,A_{i}A_{j}=\varnothing$,对于任意事件$B$,我们有: 
-		$$B=\bigcup_{i=1}^{n}A_{i}B,\ P(B)=\sum\limits_{i=1}^{n}P(A_{i})P(B|A_{i})$$
-	\end{theorem}
-	\begin{theorem}[贝叶斯公式]
-		如果有完备事件组$A_{i}(i=1,2,\cdots,n)$,满足$\bigcup_{i=1}^{n}A_{i}=1,A_{i}A_{j}=\varnothing$,对于任意事件$B$,我们有: 
-		$$P(A_{j}|B)=\dfrac{P(A_{j}B)}{P(B)}=\dfrac{P(A_{j})P(B|A_{j})}{\sum\limits_{i=1}^{n}P(A_{i})P(B|A_{i})},j=1,2,\cdots,n$$
-	\end{theorem}
-\end{definition}
+
+\begin{theorem}[条件概率公式]
+	$A, B$ 是两个任意事件, 如果 $P(A)>0$, 称在 $A$ 发生的条件下 $B$ 发生的概率为条件概率, 记作 $P(B\big|A)$
+	
+	$$P(B\big|A) = \dfrac{P(AB)}{P(A)}$$
+\end{theorem}
+\begin{theorem}[乘法公式]
+	$A_{1}, A_{2}, \cdots, A_{n}$ 是 $n$ 个事件, 且 $P(A_{i})>0(i = 1,2,\cdots,n), P(A_{1}A_{2}\cdots A_{n-1})>0$
+
+	$$P(A_{1}A_{2}\cdots A_{n}) = P(A_{1})P(A_{2}\big|A_{1})P(A_{3}\big|A_{1}A_{2})\cdots P(A_{n}\big|A_{1}A_{2}\cdots A_{n-1})$$
+	
+	特别的, 当 $n = 2$ 时 
+	$$P(AB) = P(A)P(B\big|A) = P(B)P(A\big|B)$$
+\end{theorem}
+\begin{theorem}[全概率公式]
+	完备事件组 $A_{i}(i = 1, 2, \cdots, n)$, 满足 $\bigcup_{i = 1}^{n}A_{i} = 1, A_{i}A_{j} = \varnothing$, 对于任意事件 $B$ 
+	
+	$$B = \bigcup_{i = 1}^{n}A_{i}B, P(B) = \sum\limits_{i = 1}^{n}P(A_{i})P(B\big|A_{i})$$
+\end{theorem}
+\begin{theorem}[贝叶斯公式]
+	完备事件组 $A_{i}(i = 1,2,\cdots,n)$, 满足 $\bigcup_{i = 1}^{n}A_{i} = 1, A_{i}A_{j} = \varnothing$, 对于任意事件 $B$
+
+	$$P(A_{j}\big|B) = \dfrac{P(A_{j}B)}{P(B)} = \dfrac{P(A_{j})P(B\big|A_{j})}{\sum\limits_{i = 1}^{n}P(A_{i})P(B\big|A_{i})} (j = 1, 2, \cdots, n)$$
+\end{theorem}
+
 \section{事件独立性和独立重复实验}
-\begin{definition}[定义]
-	1. 事件的独立性
+
+\begin{definition}[独立性]
+	(1). \textbf{事件的独立性}
 	
-	(1).描述性定义
+	(i). \textcolor{cyan}{描述性定义}
 	
-	事件$A_{1},A_{2},\cdots,A_{n}$中任意一个事件$A_{i}$发生的概率不受其他$n-1$个事件的影响,我们称这$n$个事件相互独立.
+	事件 $A_{1}, A_{2}, \cdots, A_{n}$ 中任意一个事件 $A_{i}$ 发生的概率不受其他 $n-1$ 个事件的影响, 称这 $n$ 个事件相互独立
 	
-	(2).数学定义
+	(ii). \textcolor{cyan}{数学定义}
 	
-	$A,B$为两个事件,如果我们有: $P(AB)=P(A)P(B)$,则称事件$A,B$相互独立.
+	$A,B$ 为两个事件, 如果 $P(AB) = P(A)P(B)$, 称事件 $A,B$ 相互独立
 	
-	2. 试验的独立性
+	(2). \textbf{试验的独立性}
 	
-	如果各个试验的结果是相互独立的,我们称这些试验是相互独立的,试验序列$\{E_{1},E_{2},\cdots,E_{n}\}$中任意两个试验$E_{i},E_{j}$,在这两个试验中任意两个结果$A_{ip},A_{iq}$满足: $P(A_{ip}A_{jq})=P(A_{ip})P(A_{jq})$,我们称试验序列相互独立.
-	
-	\begin{anymark}[注]
-		$$\mathcolorbox{yellow}{\text{相互独立}\Rightarrow \text{两两独立},\text{两两独立}\nRightarrow\text{相互独立}}$$
-	\end{anymark}
+	如果各个试验的结果是相互独立的, 称这些试验是相互独立的, 试验序列 $\{E_{1}, E_{2}, \cdots, E_{n}\}$ 中任意两个试验 $E_{i}, E_{j}$,
+	在这两个试验中任意两个结果 $A_{ip}, A_{iq}$ 满足 $P(A_{ip}A_{jq}) = P(A_{ip})P(A_{jq})$, 称试验序列相互独立
 \end{definition}
+
+
 \chapterimage{chap22.jpg}
 \chapter{一维随机变量及其分布}
+
 \section{一维随机变量}
 \begin{definition}[随机变量]
-	设随机试验$E$的样本空间$\Omega=\{\omega\}$满足: 
-	$\forall \omega \in\Omega$都有唯一的实数$X(\omega)$与之对应,且对任意实数$x$,都有$\{\omega|X(\omega)\leq x,\omega\in\Omega\}$是随机事件,我们则称定义在$\Omega$上的单值函数$X(\omega)$是随机变量.
+	设随机试验 $E$ 的样本空间 $\Omega=\{\omega\}$满足: 
+	$\forall \omega \in\Omega$ 都有唯一的实数 $X(\omega)$ 与之对应, 且对任意实数 $x$, 都有 $\{\omega|X(\omega)\leq x,\omega\in\Omega\}$ 是随机事件,
+	称定义在 $\Omega$ 上的单值函数 $X(\omega)$ 是随机变量
 \end{definition}
 \begin{definition}[分布函数]
-	设$X$是随机变量,$x$是任意实数,称函数$F(x)=P(X\leq x)$为随机变量$X$的分布函数,或者称$X$服从$F(x)$分布,记作$X\sim F(x)$
-	
-	\begin{itemize}
-		\item $F(x)$是单调不减函数,$\forall x_{1}\leq x_{2}$,我们有$F(x_{1})\leq F(x_{2})$
-		\item $F(x)$是右连续函数,我们有$\lim\limits_{x\to x_{0}^{+}}F(x_{0}^{+})=F(x_{0})$
-		\item $F(-\infty)=\lim\limits_{x\to -\infty}F(x)=0, \ F(+\infty)=\lim\limits_{x\to +\infty}F(x)=1$
-		\item $P\{X\leq a\}=F(a),\ P\{X<a\}=F(a^{-}),\ P\{X=a\}=F(a)-F(a^{-})$
-	\end{itemize}
+	设 $X$ 是随机变量, $x$ 是任意实数, 称函数 $F(x) = P(X\leq x)$ 为随机变量 $X$ 的分布函数, 或者称 $X$ 服从 $F(x)$ 分布, 记作 $X\sim F(x)$
 \end{definition}
+
+\begin{corollary}[分布函数性质]
+	\begin{itemize}
+		\item $F(x)$ 是单调不减函数, $\forall x_{1}\leq x_{2}, F(x_{1})\leq F(x_{2})$
+		\item $F(x)$ 是右连续函数, $\lim\limits_{x\to x_{0}^{+}}F(x_{0}^{+}) = F(x_{0})$
+		\item $F(-\infty) = \lim\limits_{x\to -\infty}F(x) = 0, F(+\infty) = \lim\limits_{x\to +\infty}F(x) = 1$
+		\item $P\{X\leq a\} = F(a), P\{X < a\} = F(a^{-}), P\{X = a\} = F(a) - F(a^{-})$
+	\end{itemize}
+\end{corollary}
+
 \section{一维离散型随机变量}
+
 \begin{definition}[一维离散型随机变量]
-	随机变量$X$只能取有限个值$x_{1},x_{2},\cdots$,则称$X$为离散型随机变量,我们有: 
-	$$P\{X=x_{i}\}=p_{i},i=1,2,\cdots$$
+	随机变量 $X$ 只能取有限个值 $x_{1},x_{2},\cdots$, 称 $X$ 为离散型随机变量 
 	
-	我们将上面的式子称为随机变量$X$的分布列、分布律或者概率分布,记作$X\sim p_{i}$,概率分布通常用表格或者矩阵形式表示.
+	$$P\{X = x_{i}\} = p_{i} (i = 1, 2, \cdots)$$
+	
+	上面的式子称为随机变量 $X$ 的分布列、分布律或者概率分布, 记作 $X\sim p_{i}$, 概率分布通常用表格或者矩阵形式表示
 	$$\begin{tblr}{
 		hline{1,2,Z},
 		vline{2},
@@ -158,79 +176,83 @@
 	}
 		X & x_{1} & x_{2} & \cdots\\
 		P & p_{1} & p_{2} & \cdots\\
-	\end{tblr}
-	\text{或}X\sim \left(
-	\begin{matrix}
-	x_{1}&x_{2}&\cdots\\
-	p_{1}&p_{2}&\cdots
-	\end{matrix}
-	\right) $$
-	
-	数列$\{p_{i}\}$是离散型随机变量的概率分布的充要条件为: $p_{i}\geq 0,\sum\limits_{i=1}^{n}p_{i}=1$
-	
-	我们假设离散型随机变量的概率分布为: $P(X=x_{i})=p_{1}$,我们得到离散型随机变量$X$的分布函数: 
-	$$F(x)=P(X\leq x)=\sum\limits_{x_{i}\leq x}P(X=x_{i})$$
-	
-	对实轴上任意集合$B$,我们有: 
-	$$P(X\in B)=\sum\limits_{x_{i}\in B}P(X=x_{i})$$
-	$$P(a<X\leq b)=P(x\leq b)-P(X\leq a	)=F(b)-F(a)$$
+	\end{tblr}$$
+	$$ X\sim
+	\begin{pmatrix}
+	x_{1} & x_{2} & \cdots\\
+	p_{1} & p_{2} & \cdots
+	\end{pmatrix}$$
 \end{definition}
+\begin{corollary}[离散型随机变量的性质]
+	\begin{itemize}
+		\item $P(X = x_{i})\geq 0, \sum\limits_{i = 1}^{n}P(X = x_{i}) = 1$
+		\item $P(X\leq x_{i}) = \sum\limits_{x_{j}\leq x_{i}}P(X = x_{j})$
+		\item $P(X\in B) = \sum\limits_{x_{i}\in B}P(X = x_{i})$
+		\item $P(a<X\leq b) = P(X\leq b) - P(X\leq a) = F(b) - F(a)$
+	\end{itemize}
+\end{corollary}
+
 \begin{definition}[常见离散型随机变量分布]
-	\mathcolorbox{yellow}{(1). $0-1$\text{分布}}
+	(1). $0-1$\textcolor{red}{分布}
 	
 	$X\sim B(1,p)$
-	$$P(X=1)=p,P(X=0)=1-p$$
+	$$P(X = 1) = p,P(X = 0) = 1-p$$
 	
-	\mathcolorbox{yellow}{(2). \text{二项分布}}
+	(2). \textcolor{red}{二项分布}
 	
-	$X\sim B(n,p)$,试验次数为$n$,成功概率为$p$,随机变量$X$为成功次数
-	$$P(X=k)=C_{k}^{n}p^k(1-p)^{n-k},(k=0,1,2,\cdots,n),0<p<1$$
+	$X\sim B(n,p)$, 试验次数为 $n$, 成功概率为 $p$, 随机变量 $X$ 为成功次数
+	$$P(X=k) = C_{k}^{n}p^k(1-p)^{n-k}(k = 0, 1, 2, \cdots, n), 0 < p < 1$$
 	
-	\mathcolorbox{yellow}{(3). \text{泊松分布}}
-	
+	(3). \textcolor{red}{泊松分布}
+
 	$X\sim P(\lambda)$
-	$$P(X=k)=\dfrac{\lambda^{k}}{k!}e^{-\lambda},(k=0,1,2,\cdots),0<p<1$$
+	$$P(X = k) = \dfrac{\lambda^{k}}{k!}e^{-\lambda}(k = 0, 1, 2, \cdots), 0 < p < 1$$
 	
-	\mathcolorbox{yellow}{(4). \text{几何分布}}
+	(4). \textcolor{red}{几何分布}
 	
 	$X\sim G(p)$
-	$$P(X=k)=(1-p)^{k-1}p,(k=1,2,\cdots),0<p<1$$
+	$$P(X = k) = (1-p)^{k-1}p(k = 1, 2, \cdots), 0 < p < 1$$
 	
-	\mathcolorbox{yellow}{(5). \text{超几何分布}}
+	(5). \textcolor{red}{超几何分布}
 	
 	$X\sim H(n,N,M)$
-	$$P(X=k)=\dfrac{C_{M}^{k}C_{N-M}^{n-k}}{C_{N}^{n}},(max\{0,n-M+N\}\leq k\leq min\{M,n\})$$
+	$$P(X = k) = \dfrac{C_{M}^{k}C_{N-M}^{n-k}}{C_{N}^{n}} (\max\{0,n-M+N\}\leq k\leq \min\{M,n\})$$
 \end{definition}
+
 \section{一维连续型随机变量}
+
 \begin{definition}[连续型随机变量分布函数和密度函数]
-	随机变量$X$的分布函数可以表示为: 
-	$$F(x)=\int_{-\infty}^{x}f(t)dt,t\in\mathbb{R}$$
+	随机变量 $X$ 的分布函数可以表示为: 
+	$$F(x) = \int_{-\infty}^{x}f(t)dt, t\in\mathbb{R}$$
 	
-	其中$f(x)$是非负可积函数,且$\int_{-\infty}^{+\infty}f(x)dx=1$,我们称$X$是连续型随机变量,$f(x)$是随机变量$X$的\textbf{概率密度函数},记作$X\sim f(x)$
+	其中 $f(x)$ 是非负可积函数, 且 $\int_{-\infty}^{+\infty}f(x)dx = 1$, 称 $X$ 是连续型随机变量, 
+	$f(x)$ 是随机变量 $X$ 的\textbf{概率密度函数}, 记作 $X\sim f(x)$
 	
-	对于连续型随机变量$X$,我们有: 
-	\begin{eqnarray*}
-		&&P(X=c)=0\\ 
-		&&P(a<X<b)=P(a\leq X<b)=P(a<X\leq b)=P(a\leq X\leq b)\\
-		&&P(a<X<b)=\int_{a}^{b}f(x)dx
-	\end{eqnarray*}
 \end{definition}
+\begin{corollary}[连续型随机变量分布函数性质]
+	\begin{itemize}
+		\item $\int_{-\infty}^{+\infty}f(x)dx = 1$
+		\item $P(a<X<b) = P(a\leq X < b)= P(a < X \leq b) = P(a\leq X\leq b) = \int_{a}^{b}f(x)dx$
+		\item $P(X = c) = 0$
+	\end{itemize}
+\end{corollary}
+
 \begin{definition}[常见连续型随机变量分布]
-	\mathcolorbox{yellow}{(1). \text{均匀分布}}
+	(1). \textcolor{red}{均匀分布}
 	
-	$X\sim U(a,b)$,$X$的概率密度函数$f(x)$和分布函数$F(x)$: 
-	$$f(x)=\left\lbrace 
-	\begin{array}{l}
-		\dfrac{1}{b-a},\ a<x<b\\
-		0,\ x\leq a\text{或}x\geq b
-	\end{array}
-	\right. ,\ F(x)=\left\lbrace 
-	\begin{array}{l}
-		0,\ x<a\\
-		\dfrac{x-a}{b-a},\ a\leq x<b \\
-		1,\ x\geq b
-	\end{array}
-	\right. $$
+	$X\sim U(a,b), X$ 的概率密度函数 $f(x)$ 和分布函数 $F(x)$ 
+	
+	$$f(x) = 
+	\begin{cases}
+		\dfrac{1}{b-a} & x\in (a,b)\\
+		0 & x\in (-\infty, a]\cup [b, +\infty)
+	\end{cases}\Rightarrow 
+	F(x) = 
+	\begin{cases}
+		0 &  x\in (-\infty, a)\\
+		\dfrac{x-a}{b-a} &  x\in [a,b) \\
+		1 & x\in [b, +\infty)
+	\end{cases}$$
 	\begin{figure}[H]
 		\centering  %图片全局居中
 		\subfigure[概率密度]{
@@ -259,21 +281,24 @@
 				\node at (-1,-0.2) {$a$};
 				\node at (1.5,-0.2) {$b$};
 			\end{tikzpicture}}
+		\caption{均匀分布概率密度和分布函数}
+		\label{figure: 均匀分布概率密度和分布函数}
 	\end{figure}
-	\mathcolorbox{yellow}{(2). \text{指数分布}}
 	
-	$X\sim E(\lambda)$$X$的概率密度函数$f(x)$和分布函数$F(x)$: 
-	$$f(x)=\left\lbrace 
-	\begin{array}{l}
-		\lambda e^{-\lambda x},\ x>0\\
-		0,\ x\leq 0
-	\end{array}
-	\right. ,\ F(x)=\left\lbrace 
-	\begin{array}{l}
-		1-e^{-\lambda x},\ x\geq 0\\
-		0,\ x<0
-	\end{array}
-	\right. (\lambda>0)$$
+	(2). \textcolor{red}{指数分布}
+	
+	$X\sim E(\lambda), X$ 的概率密度函数 $f(x)$ 和分布函数 $F(x)$: 
+	
+	$$f(x) = 
+	\begin{cases}
+		\lambda e^{-\lambda x} & x\in(0,+\infty) \\
+		0 & x\in(-\infty, 0]
+	\end{cases}\Rightarrow 
+	F(x) = 
+	\begin{cases}
+		1-e^{-\lambda x} & x\in(0,+\infty) \\
+		0 & x\in(-\infty, 0]
+	\end{cases}(\lambda>0)$$
 	\begin{figure}[H]
 		\centering  %图片全局居中
 		\subfigure[概率密度]{
@@ -295,21 +320,25 @@
 				\node at (-0.2,2) {$1$};
 			\end{tikzpicture}
 		}
+		\caption{指数分布概率密度和分布函数}
+		\label{figure: 指数分布概率密度和分布函数}
 	\end{figure}
-	\mathcolorbox{yellow}{(3). \text{正态分布}}
+
+	(3). \textcolor{red}{正态分布}
 	
-	$X\sim N(\mu,\sigma^2)$,$X$的概率密度$f(x)$: 
-	$$f(x)=\dfrac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2},(-\infty<x<+\infty) $$
-	特别的,当$\mu=0,\sigma=1$时,$X\sim f(x)$是标准正态分布: 
-	$$f(x)=\dfrac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}x^2},(-\infty<x<+\infty)$$
+	$X\sim N(\mu,\sigma^2),X$ 的概率密度 $f(x)$ 
 	
-	关于正态分布,我们有: 
-	$$F(x)=P(X\leq x)=\varPhi(\dfrac{x-\mu}{\sigma})$$
-	$$P(a\leq x\leq b)=\varPhi(\dfrac{b-u}{\sigma})-\varPhi(\dfrac{a-\mu}{\sigma})$$
-	$$F(\mu-x)+F(\mu+x)=1,\ aX+b\sim N(a\mu+b,a^2\sigma^2)$$
+	$$f(x) = \dfrac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2} (-\infty < x < +\infty)$$
+	
+	特别的,当 $\mu = 0,\sigma = 1$ 时, $X\sim f(x)$ 是标准正态分布 
+	
+	$$\begin{cases}
+		f(x) = \dfrac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}x^2} (x\in \mathbb{R})\\
+		\varPhi(x) = \int_{-\infty}^{x}f(t)dt
+	\end{cases}$$
 	\begin{figure}[H]
 		\centering  %图片全局居中
-		\subfigure[概率密度]{
+		\subfigure[一般正态分布概率密度]{
 			\begin{tikzpicture}
 				\draw[->] (-1,0) -- (5,0) node[right] {$x$};
 				\draw[->] (0,-0.5) -- (0,2) node[above] {$f(x)$};
@@ -325,7 +354,7 @@
 				\node at (-0.4,1.5) {\small{$\frac{1}{\sqrt{2\pi}\sigma}$}};
 			\end{tikzpicture}	
 		}
-		\subfigure[分布函数]{
+		\subfigure[标准正态分布概率密度]{
 			\begin{tikzpicture}
 				\draw[->] (-2.5,0) -- (2.5,0) node[right] {$x$};
 				\draw[->] (0,-0.5) -- (0,1.5) node[above] {$\varphi(x)$};
@@ -338,54 +367,93 @@
 				\node at (0.4,1.2) {\small{$\frac{1}{\sqrt{2\pi}}$}};
 			\end{tikzpicture}	
 		}
+		\caption{一般正态分布和标准正态分布概率密度函数}
+		\label{figure: 一般正态分布和标准正态分布概率密度函数}
 	\end{figure}
+	\begin{corollary}[正态分布函数性质]
+		\begin{itemize}
+			\item $F(x) = P(X\leq x) = \varPhi(\dfrac{x-\mu}{\sigma})$
+			\item $P(a\leq X\leq b) = \varPhi(\dfrac{b-\mu}{\sigma})-\varPhi(\dfrac{a-\mu}{\sigma})$
+			\item $F(\mu-x) + F(\mu+x) = 1, aX + b\sim N(a\mu+b,a^{2}\sigma^{2})$
+		\end{itemize}
+	\end{corollary}
 \end{definition}
+
 \section{一维随机变量函数的分布}
+
 \begin{definition}
-	设$X$是随机变量,函数$y=g(x)$,以随机变量$X$作为自变量的函数$Y=g(X)$也是随机变量,称为随机变量函数.
-	
-	我们一般有离散型$\to$离散型和连续型$\to$离散型两种随机变量函数.
+	设 $X$ 是随机变量, 函数 $y = g(x)$, 以随机变量 $X$ 作为自变量的函数 $Y = g(X)$ 也是随机变量, 称为随机变量函数
+	\begin{itemize}
+		\item 离散型 $\to$ 离散型
+		\item 连续型 $\to$ 连续型
+		\item 连续型 $\to$ 离散型
+	\end{itemize}
 \end{definition}
+
+
 \chapterimage{chap23.jpg}
 \chapter{多维随机变量及其分布}
-\section{基本概念}
+
+\section{$n$ 维随机变量及其分布函数}
+
 \begin{definition}[$n$维随机变量]
-	如果$X_{1},X_{2},\cdots,X_{n}$是定义在同一个样本空间$\Omega$上的$n$个随机变量,我们称$(X_{1},X_{2},\cdots,X_{n})$为$n$维随机向量.
+	如果 $X_{1}, X_{2}, \cdots, X_{n}$ 是定义在同一个样本空间 $\Omega$ 上的 $n$ 个随机变量, 称 $(X_{1}, X_{2}, \cdots, X_{n})$ 为 $n$ 维随机向量
+\end{definition}
+
+\begin{definition}[$n$维随机变量分布函数]
+
+	对于任意的 $n$ 个实数 $x_{1}, x_{2}, \cdots, x_{n}$, $n$ 元函数
+	$$F(x_{1}, x_{2}, \cdots, x_{n}) = P\{X_{1}\leq x_{1},X_{2}\leq x_{2},\cdots,X_{n}\leq x_{n}\}$$
 	
-	对于任意的$n$个实数$x_{1},x_{2},\cdots,x_{n}$,我们把$n$元函数
-	$$F(x_{1},x_{2},\cdots,x_{n})=P\{X_{1}\leq x_{1},X_{2}\leq x_{2},\cdots,X_{n}\leq x_{n}\}$$
+	称为 $n$ 维随机向量 $(X_{1},X_{2},\cdots,X_{n})$ 的\textbf{联合分布函数}
 	
-	称为$n$维随机向量$(X_{1},X_{2},\cdots,X_{n})$的\textbf{联合分布函数}
+	特别的,当 $n = 2$ 时, 记 $(X,Y)$ 为 \textbf{二维随机变量} 或者 \textbf{二维随机向量}, 称 $F(x,y) = P\{X\leq x,Y\leq y\}$ 为二维随机变量 $(X,Y)$ 的联合分布函数 
 	
-	特别的,当$n=2$时,记$(X,Y)$为\textbf{二维随机变量}或者\textbf{二维随机向量},我们称$F(x,y)=P\{X\leq x,Y\leq y\}$为二维随机变量$(X,Y)$的联合分布函数,记作: 
 	$$(X,Y)\sim F(x,y)\Leftrightarrow F(x,y)=P\{X\leq x,Y\leq y\}$$
+\end{definition}
+
+\begin{corollary}[二维随机变量联合分布性质]
+	(1). \textcolor{blue}{单调性 (单调不减)}
+	$$\forall x, y_{1}<y_{2}, F(x,y_{1})\leq F(x,y_{2})$$
+	$$\forall y, x_{1}<x_{2}, F(x_{1},y)\leq F(x_{1},y)$$
 	
-	随机变量$X$与$Y$的分布函数$F_{X}(x)$和$F_{Y}(y)$分别称为随机变量关于$(X,Y)$关于$X$和$Y$的边缘分布函数.
-	$$F_{X}(x)=P\{X\leq x\}=P\{X\leq x,Y< +\infty\}=F(x,+\infty)$$
-	$$F_{Y}(y)=P\{Y\leq y\}=P\{X<+\infty,Y\leq y\}=F(+\infty,y)$$
-	\begin{anymark}[注]
-		\mathcolorbox{yellow}{\text{二维随机变量联合分布性质}}
-		
-		(1).单调性(单调不减)
-		$$\forall x,\ \text{当}y_{1}<y_{2}\text{时},F(x,y_{1})\leq F(x,y_{2})$$
-		$$\forall y,\ \text{当}x_{1}<x_{2}\text{时},F(x_{1},y)\leq F(x_{1},y)$$
-		
-		(2). 右连续性
-		$$\lim\limits_{x\to x_{0}^{+}}F(x,y)=F(x_{0}+0,y)=F(x_{0},y)$$
-		$$\lim\limits_{y\to y_{0}^{+}}F(x,y)=F(x,y_{0}+0)=F(x,y_{0})$$
-		
-		(3).有界性
-		$$F(-\infty,y)=F(x,-\infty)=F(-\infty,-\infty)=0,\ F(+\infty,+\infty)=1$$
-		
-		(4).非负性
-		$\forall x_{1}<x_{2},y_{1}<y_{2},\text{我们有}$: 
-		$$F(x_{1}<x\leq x_{2},y_{1}<y\leq y_{2})=F(x_{2},y_{2})-F(x_{2},y_{1})-F(x_{1},y_{2})+F(x_{1},y_{1})\geq 0$$
-	\end{anymark}
+	(2). \textcolor{blue}{右连续性}
+	$$\begin{cases}
+		\lim\limits_{x\to x_{0}^{+}}F(x,y) = F(x_{0}+0,y) = F(x_{0},y)\\
+		\lim\limits_{y\to y_{0}^{+}}F(x,y) = F(x,y_{0}+0) = F(x,y_{0})
+	\end{cases}$$
 	
+	(3). \textcolor{blue}{有界性}
+	$$\begin{cases}
+		F(-\infty,y) = F(x,-\infty) = F(-\infty,-\infty) = 0\\ 
+		F(+\infty,+\infty) = 1
+	\end{cases}$$
+	
+	(4). \textcolor{blue}{非负性}
+	$\forall x_{1} < x_{2}, y_{1}<y_{2}$
+	$$F(x_{1} < x \leq x_{2}, y_{1} <y\leq y_{2}) = F(x_{2},y_{2}) - F(x_{2},y_{1}) - F(x_{1},y_{2}) + F(x_{1},y_{1})\geq 0$$
+\end{corollary}
+
+\begin{definition}[边缘分布函数]
+	设二维随机变量 $(X,Y)$ 的分布函数 $F(X,Y)$, 随机变量 $X$ 与 $Y$ 的分布函数 $F_{X}(x)$ 和 $F_{Y}(y)$ 分别称为随机变量关于 $(X,Y)$ 关于 $X$ 和 $Y$ 的\textbf{边缘分布函数}
+	$$\begin{cases}
+		F_{X}(x) = P\{X\leq x\} = P\{X\leq x,Y<+\infty\} = F(x,+\infty)\\
+		F_{Y}(y) = P\{Y\leq y\} = P\{X<+\infty,Y\leq y\} = F(+\infty,y)
+	\end{cases}$$
 \end{definition}
 
 \section{二维离散型随机变量}
-\begin{table}[ht]
+
+\begin{definition}[概率分布]
+	二维随机变量 $(X,Y)$ 只能取有限对值或可列无限对值 $(x_{1},y_{1}), (x_{2},y_{2}), \cdots, (x_{n},y_{n}), \cdots$, 称 $(X,Y)$ 为\textbf{二维离散型随机变量}, $(X,Y)$满足概率分布
+
+	$$p_{ij} = P\{X = x_{i}, Y = y_{j}\} (i,j = 1,2,\cdots)$$
+	
+	上面的式子称为 $(X,Y)$ 的联合分布律, 记作 $(X,Y)\sim p_{ij}$, 见 $\mathbf{table: }$ \ref{table: 离散型二维随机变量概率分布}所示
+
+	$$F(x,y)=P\{X\leq x,Y\leq y\}=\sum\limits_{i=1}^{\infty}\sum\limits_{j=1}^{\infty}p_{ij}$$
+\end{definition}
+\begin{table}[H]
 	\centering
 	\caption{离散型二维随机变量概率分布}
 	\label{table: 离散型二维随机变量概率分布}
@@ -396,146 +464,134 @@
 			cells = {$},
 			cell{1}{1} = {mode = text}
 	}
-		\diagbox{$X$}{$Y$}                     & y_{1}  & \cdots & y_{j}  & \cdots & P\left\lbrace X=x_{i}\right\rbrace \\
+		\diagbox{$X$}{$Y$}                     & y_{1}  & \cdots & y_{j}  & \cdots & P\{ X=x_{i}\} \\
 		x_{1}                                  & p_{11} & \cdots & p_{1j} & \cdots & p_{1*}                             \\
 		\vdots                                 & \vdots &        & \vdots &        & \vdots                             \\
 		x_{i}                                  & p_{i1} & \cdots & p_{ij} & \cdots & p_{i*}                             \\
 		\vdots                                 & \vdots &        & \vdots &        & \vdots                             \\
-		P\left\lbrace Y=y_{j}\right\rbrace     & p_{*1} & \cdots & p_{*j} & \cdots & 1                                  \\
+		P\{ Y=y_{j}\}                          & p_{*1} & \cdots & p_{*j} & \cdots & 1                                  \\
 	\end{tblr}
+	
 \end{table}
-\begin{definition}[二维离散型随机变量]
-	\mathcolorbox{yellow}{\text{1.概率分布}}
-	
-	二维随机变量$(X,Y)$只能取有限对值或可列对值$(x_{1},y_{1}),(x_{2},y_{2}),\cdots,(x_{n},y_{n}),\cdots$,则称$(X,Y)$为离散型随机变量,$(X,Y)$满足概率分布: 
-	$$p_{ij}=P\{X=x_{i},Y=y_{j}\},i,j=1,2,\cdots$$
-	
-	上面的式子称为$(X,Y)$的联合分布律,记作$(X,Y)\sim p_{ij}$,如 $\mathbf{table: }$ \ref{table: 离散型二维随机变量概率分布}所示
-	
-	$\text{数列}\{p_{ij}\},i,j=1,2,\cdots\text{是某一二维随机变量的概率分布的充要条件: }$
-	$$ p_{ij}\geq 0,\ \sum\limits_{i=1}^{\infty}\sum\limits_{j=1}^{\infty}p_{ij}=1$$
-	
-	\mathcolorbox{yellow}{\text{2. 联合分布函数、边缘分布、条件分布}}
-	
-	(1). 联合分布函数
-	$$F(x,y)=P\{X\leq x,Y\leq y\}=\sum\limits_{i=1}^{\infty}\sum\limits_{j=1}^{\infty}p_{ij}$$
-	
-	(2). 边缘分布
-	
-	$X$的边缘分布: 
-	$$p_{i*}=P\{X=x_{i}\}=\sum\limits_{j=1}^{\infty}P\{X=x_{i},Y=y_{j}\}=\sum\limits_{j=1}^{\infty}p_{ij},(i=1,2,\cdots)$$
-	$Y$的边缘分布: 
-	$$p_{*j}=P\{Y=y_{j}\}=\sum\limits_{i=1}^{\infty}P\{X=x_{i},Y=y_{j}\}=\sum\limits_{i=1}^{\infty}p_{ij},(j=1,2,\cdots)$$
-	
-	(3). 条件分布
-	
-	$X$在$Y=y_{j}$下的条件分布: 
-	$$P\{X=x_{i}|Y=y_{j}\}=\dfrac{P\{X=x_{i},Y=y_{j}\}}{P\{Y=y_{j}\}}=\dfrac{p_{ij}}{p_{*j}},i=1,2,\cdots$$
-	$Y$在$X=x_{i}$下的条件分布: 
-	$$P\{Y=y_{j}|X=x_{i}\}=\dfrac{P\{X=x_{i},Y=y_{j}\}}{P\{X=x_{i}\}}=\dfrac{p_{ij}}{p_{i*}},j=1,2,\cdots$$
-\end{definition}
-\section{二维连续型随机变量}
-\begin{definition}[二维连续型随机变量]
-	\mathcolorbox{yellow}{\text{1. 联合分布函数、概率密度}}
-	$$F(x,y)=\int_{-\infty}^{x}\int_{-\infty}^{y}f(u,v)dudv,(x,y)\in\mathbb{R}^2$$
-	
-	$F(x,y)$是二维随机变量$(X,Y)$的概率分布函数,$f(x)$是二维随机变量$(X,Y)$的概率密度函数.
-	
-	$$f(x,y)\geq 0,\ \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)dxdy$$
-	\begin{anymark}[注]
-		\begin{itemize}
-			\item $f(x,y)$在点$(x_{0},y_{0})$处连续,我们有: $\dfrac{\partial^2 F(x,y)}{\partial x\partial y}|_{(x_{0},y_{0})}=f(x_{0},y_{0})$
-			
-			\item $F(x,y)$连续且可导,$\dfrac{\partial^2 F(x,y)}{\partial x\partial y}=f(x,y)$
-		\end{itemize}
-	\end{anymark}
-	\mathcolorbox{yellow}{\text{2. 边缘分布函数、边缘概率密度}}
-	
-	$(X,Y)\sim f(x,y)$,$X$的边缘分布函数和边缘概率密度: 
-	
-	\mathcolorbox{orange}{\text{边缘分布函数}}
-	\begin{flalign*}
-		 F_{X}(x)=F(x,+\infty)=\int_{-\infty}^{x}\left[ \int_{-\infty}^{+\infty}f(u,v)dv\right] du
-	\end{flalign*}
-	
-	\mathcolorbox{orange}{\text{边缘概率密度}}
-	\begin{flalign*}
-		f_{X}(x)=\int_{-\infty}^{+\infty}f(x,y)dy
-	\end{flalign*}
-	
-	$(X,Y)\sim f(x,y)$,$Y$的边缘分布函数和边缘密度函数: 
-	
-	\mathcolorbox{orange}{\text{边缘分布函数}}
-	\begin{flalign*}
-		 F_{Y}(y)=F(+\infty,y)=\int_{-\infty}^{y}\left[ \int_{-\infty}^{+\infty}f(u,v)du\right] dv
-	\end{flalign*}
-	
-	\mathcolorbox{orange}{\text{边缘概率密度}}
-	\begin{flalign*}
-		f_{Y}(y)=\int_{-\infty}^{+\infty}f(x,y)dx
-	\end{flalign*}
-	
-	\mathcolorbox{orange}{\text{3. 条件分布函数、条件概率密度}}
-	
-	$(X,Y)\sim f(x,y)$,$X$在$Y=y$条件下的条件分布函数和条件概率密度: 
-	
-	\mathcolorbox{orange}{\text{条件概率密度}}
-	\begin{flalign*}
-	 f_{X|Y}(x|y)=\dfrac{f(x,y)}{f_{Y}(y)},(f_{Y}(y)>0)
-	\end{flalign*}
-	
-	\mathcolorbox{orange}{\text{条件分布函数}}
-	\begin{flalign*}
-	 F_{X|Y}(x|y)=\int_{-\infty}^{x}f_{X|Y}(x|y)dx=\int_{-\infty}^{x}\dfrac{f(x,y)}{f_{Y}(y)}dx
-	\end{flalign*}
 
-	$(X,Y)\sim f(x,y)$,$Y$在$X=x$条件下的条件分布函数和条件概率密度: 
+\begin{definition}[边缘分布]
+	$X$ \textbf{边缘分布}
 	
-	\mathcolorbox{orange}{\text{条件概率密度}}
-	\begin{flalign*}
-	 f_{Y|X}(y|x)=\dfrac{f(x,y)}{f_{X}(x)},(f_{X}(x)>0)
-	\end{flalign*}
+	$$p_{i*} = P\{X = x_{i}\} = \sum\limits_{j = 1}^{\infty}P\{X = x_{i}, Y = y_{j}\} = \sum\limits_{j = 1}^{\infty}p_{ij} (i = 1,2,\cdots)$$
 	
-	\mathcolorbox{orange}{\text{条件分布函数}}
-	\begin{flalign*}
-	 F_{Y|X}(y|x)=\int_{-\infty}^{y}f_{Y|X}(y|x)dy=\int_{-\infty}^{y}\dfrac{f(x,y)}{f_{X}(x)}dy
-	\end{flalign*}
+	$Y$ \textbf{边缘分布}
 	
+	$$p_{*j} = P\{Y = y_{j}\} = \sum\limits_{i = 1}^{\infty}P\{X = x_{i}, Y = y_{j}\} = \sum\limits_{i = 1}^{\infty}p_{ij} (j = 1,2,\cdots)$$
 \end{definition}
-\begin{definition}[常见二维分布]
-	\mathcolorbox{skyblue}{\text{(1).二维均匀分布}}
+
+\begin{definition}[条件分布]
+	$X$ 在 $Y = y_{j}$ 下的条件分布 
 	
-	$(X,Y)$在有界区域$D$服从均匀分布,$(X,Y)$的概率密度为: 
-	$$f(x,y)=\left\lbrace 
-	\begin{array}{l}
-		\dfrac{1}{S_{D}},\ (x,y)\in D\\
-		0,\text{其他}
-	\end{array}
-	\right. S_{D}\text{是区域的面积}$$
+	$$P\{X = x_{i}\big|Y = y_{j}\} = \dfrac{P\{X = x_{i}, Y = y_{j}\}}{P\{Y = y_{j}\}} = \dfrac{p_{ij}}{p_{*j}} (i = 1,2,\cdots)$$
 	
-	\mathcolorbox{skyblue}{\text{(2).二维正态分布}}
+	$Y$ 在 $X = x_{i}$ 下的条件分布
 	
-	$(X,Y)$概率密度为: 
-	$$f(x,y)=\dfrac{1}{2\pi\sigma_{1}\sigma_{2}\sqrt{1-\rho^2}}exp\left\lbrace -\dfrac{1}{2(1-\rho^2)}\left[ \left( \dfrac{x-\mu_{1}}{\sigma_{1}}\right)^2-2\rho\left( \dfrac{x-\mu_{1}}{\sigma_{1}}\right)\left( \dfrac{x-\mu_{2}}{\sigma_{2}}\right) +\left( \dfrac{x-\mu_{2}}{\sigma_{2}}\right)^2\right] \right\rbrace $$
-	
-	其中$\mu_{1},\mu_{2}\in\mathbb{R},\ \sigma_{1},\sigma_{2}>0,-1<\rho<1$,我们称$(X,Y)$服从参数为$\mu_{1},\mu_{2},\sigma_{1},\sigma_{2},\rho$的二维正态分布,记作$(X,Y)\sim N(\mu_{1},\mu_{2};\sigma_{1}^2,\sigma_{2}^2;\rho)$
-	
-	\begin{anymark}[注]
-		\begin{itemize}
-			\item  $X\sim N(\mu_{1},\sigma_{1}^2)$,$Y\sim N(\mu_{2},\sigma_{2}^2)$,$\rho$是$X$与$Y$的相关系数
-			$$\rho=\dfrac{Cov(X,Y)}{\sqrt{DX}\sqrt{DY}}=\dfrac{Cov(X,Y)}{\sigma_{1}\sigma_{2}}$$
-			\item $X$和$Y$的条件分布都是正态分布
-			\item $aX+bY(a\neq 0\text{或者}b\neq 0)$服从正态分布
-			\item $X,Y$相互独立的充要条件为$X,Y$不相关$\Leftrightarrow \rho=0$
-		\end{itemize}
-	\end{anymark}
+	$$P\{Y = y_{j}\big|X = x_{i}\} = \dfrac{P\{X = x_{i}, Y = y_{j}\}}{P\{X = x_{i}\}} = \dfrac{p_{ij}}{p_{i*}} (j = 1,2,\cdots)$$	
 \end{definition}
+
+
+\section{二维连续型随机变量}
+
+\begin{definition}[分布函数和概率密度]
+	二维随机变量 $(X,Y)$ 的分布函数 $F(X,Y)$ 可以表示为:
+
+	$$F(x,y) = \int_{-\infty}^{x}\int_{-\infty}^{y}f(u,v)dudv, (x,y)\in\mathbb{R}^2$$
+	
+	其中 $f(x,y)$ 是非负可积函数, 且 $\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)dxdy = 1$, 称 $(X,Y)$ 是\textbf{二维连续型随机变量}, 
+	$f(x,y)$ 是随机变量 $(X,Y)$ 的\textbf{概率密度函数}, 记作 $(X,Y)\sim f(x,y)$
+\end{definition}
+
+\begin{corollary}[分布函数和概率密度性质]
+	\begin{itemize}
+		\item $P\{(X,Y)\in G\} = \iint\limits_{G}f(x,y)dxdy$
+		\item $f(x,y)$ 在点 $(x_{0},y_{0})$ 处连续 $\Rightarrow \dfrac{\partial^2 F(x,y)}{\partial x\partial y}\big|_{(x_{0},y_{0})} = f(x_{0},y_{0})$
+		\item $F(x,y)$ 连续且可导, $\dfrac{\partial^{2} F(x,y)}{\partial x\partial y} = f(x,y)$
+	\end{itemize}
+\end{corollary}
+
+\begin{definition}[边缘分布函数和边缘概率密度]
+	
+	$(X,Y)\sim f(x,y)$, $X,Y$的边缘分布函数和边缘概率密度 
+	
+	\textcolor{red}{边缘分布函数}
+	
+	$$\begin{cases}
+		F_{X}(x) = F(x,+\infty) = \int_{-\infty}^{x}\left[ \int_{-\infty}^{+\infty}f(u,v)dv\right] du\\
+		F_{Y}(y) = F(+\infty,y) = \int_{-\infty}^{y}\left[ \int_{-\infty}^{+\infty}f(u,v)du\right] dv
+	\end{cases}$$
+	
+	\textcolor{blue}{边缘概率密度}
+	
+	$$\begin{cases}
+		f_{X}(x) = \int_{-\infty}^{+\infty}f(x,y)dy\\
+		f_{Y}(y) = \int_{-\infty}^{+\infty}f(x,y)dx
+	\end{cases}$$
+\end{definition}
+
+\begin{definition}[条件分布函数和条件概率密度]
+
+	$(X,Y)\sim f(x,y)$, $X$ 在 $Y = y$ 条件下的\textbf{条件概率密度}和 $Y$ 在 $X = x$ 条件下的\textbf{条件概率密度}
+	
+	$$\begin{cases}
+		f_{X\big|Y}(x\big|y) = \dfrac{f(x,y)}{f_{Y}(y)} = \dfrac{f(x,y)}{\int_{-\infty}^{+\infty}f(x,y)dx}\\
+		f_{Y\big|X}(y\big|x) = \dfrac{f(x,y)}{f_{X}(x)} = \dfrac{f(x,y)}{\int_{-\infty}^{+\infty}f(x,y)dy}
+	\end{cases}$$
+
+	$$f(x,y) = 
+	\begin{cases}
+		f_{X}(x)f_{Y\big|X}(y\big|x) \\
+		f_{Y}(y)f_{X\big|Y}(x\big|y) 
+	\end{cases}$$
+	
+	$(X,Y)\sim f(x,y)$, $X$ 在 $Y = y$ 条件下的\textbf{条件分布函数}和 $Y$ 在 $X = x$ 条件下的\textbf{条件分布函数}
+
+	$$\begin{cases}
+		F_{Y\big|X}(y\big|x) = \int_{-\infty}^{y}f_{Y\big|X}(y\big|x)dy = \int_{-\infty}^{y}\dfrac{f(x,y)}{f_{X}(x)}dy\\
+		F_{X\big|Y}(x\big|y) = \int_{-\infty}^{x}f_{X\big|Y}(x\big|y)dx = \int_{-\infty}^{x}\dfrac{f(x,y)}{f_{Y}(y)}dx
+	\end{cases}$$
+\end{definition}
+
+\subsection{常见二维连续型随机变量分布}
+
+\begin{definition}[二维均匀分布]
+	$(X,Y)$ 在有界区域 $D$ 服从\textbf{均匀分布}, $(X,Y)$ 的概率密度 
+	
+	$$f(x,y) = 
+	\begin{cases}
+		\dfrac{1}{S_{D}} & (x,y)\in D\\
+		0 & (x,y)\notin D
+	\end{cases}$$
+\end{definition}
+
+\begin{definition}[二维正态分布]
+	$(X,Y)$ 概率密度
+
+	$$f(x,y) = \dfrac{1}{2\pi\sigma_{1}\sigma_{2}\sqrt{1-\rho^2}}exp\left\{-\dfrac{1}{2(1-\rho^2)}\left[ \left( \dfrac{x-\mu_{1}}{\sigma_{1}}\right)^2-2\rho\left( \dfrac{x-\mu_{1}}{\sigma_{1}}\right)\left( \dfrac{x-\mu_{2}}{\sigma_{2}}\right) +\left( \dfrac{x-\mu_{2}}{\sigma_{2}}\right)^2\right] \right\} $$
+	
+	其中 $\mu_{1},\mu_{2}\in\mathbb{R}, \sigma_{1},\sigma_{2} > 0, -1 < \rho <1$, 称 $(X,Y)$ 服从参数为 $\mu_{1},\mu_{2},\sigma_{1},\sigma_{2},\rho$ 的二维正态分布,
+	记作 $(X,Y)\sim N(\mu_{1},\mu_{2};\sigma_{1}^2,\sigma_{2}^2;\rho)$
+\end{definition}
+
+\begin{corollary}[二维正态分布性质]
+	\begin{itemize}
+		\item 若 $(X_{1},X_{2}) \sim N(\mu_{1},\mu_{2};\sigma_{1}^{2},\sigma_{2}^{2};\rho)\Rightarrow X_{1}\sim N(\mu_{1},\sigma_{1}^{2}), X_{2}\sim N(\mu_{2},\sigma_{2}^{2})$  
+		\item $X_{1}\sim N(\mu_{1},\sigma_{1}^{2}), X_{2}\sim N(\mu_{2},\sigma_{2}^{2})$, 且 $X_{1}, X_{2}$ 相互独立, 则 $(X_{1},X_{2})\sim N(\mu_{1},\mu_{2};\sigma_{1}^{2},\sigma_{2}^{2};0)$
+		\item $(X_{1},X_{2})\sim N\Rightarrow k_{1}X_{1} + k_{2}X_{2}\sim N$
+	\end{itemize}
+\end{corollary}
+
 \section{独立性}
 \begin{definition}[独立性]
-	1.概念
+	设二维随机变量 $(X,Y)$ 的联合分布 $F(x,y)$, 边缘分布分别为 $F_{X}(x)$ 和 $F_{Y}(y)$, 如果任意实数对 $(x,y)$ 
 	
-	设二维随机变量$(X,Y)$的联合分布$F(x,y)$,边缘分布分别为$F_{X}(x)$和$F_{Y}(y)$,如果对任意实数$(x,y)$,我们都有: 
-	$$F(x,y)=F_{X}(x)F_{Y}(y)\Leftrightarrow X\text{和}Y\text{相互独立}$$
+	$$F(x,y) = F_{X}(x)F_{Y}(y)$$
+	
+	称 $X$ 和 $Y$\textbf{相互独立}
 	
 	\begin{itemize}
 		\item 随机变量$X_{1},X_{2},\cdots,X_{n}$相互独立$\Leftrightarrow F(x_{1},x_{1},\cdots,x_{n})=F(x_{1})\dots F(x_{2})\cdots F(x_{n})$
@@ -547,6 +603,9 @@
 		$$f_{X|Y}(x|y)=\dfrac{f(x,y)}{f_{Y}(y)}=f_{X}(x)(f_{Y}(y)>0),\ f_{Y|X}(y|x)=\dfrac{f(x,y)}{f_{X}(x)}=f_{Y}(y)(f_{X}(x)>0)$$
 	\end{itemize}
 \end{definition}
+
+\section{多维随机变量函数的分布}
+
 \begin{definition}[连续型多维随机变量函数的分布]
 	$(X,Y)\sim f(x,y)$
 	
