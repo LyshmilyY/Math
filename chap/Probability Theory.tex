@@ -586,25 +586,74 @@
 \end{corollary}
 
 \section{独立性}
-\begin{definition}[独立性]
+\begin{definition}[二维随机变量独立性]
 	设二维随机变量 $(X,Y)$ 的联合分布 $F(x,y)$, 边缘分布分别为 $F_{X}(x)$ 和 $F_{Y}(y)$, 如果任意实数对 $(x,y)$ 
 	
 	$$F(x,y) = F_{X}(x)F_{Y}(y)$$
 	
 	称 $X$ 和 $Y$\textbf{相互独立}
+\end{definition}
+\begin{definition}[$n$ 维随机变量独立性]
+	设 $n$ 维随机变量 $(X_{1},X_{2},\cdots,X_{n})$ 的联合分布 $F(x_{1},x_{2},\cdots,x_{n})$, 
+	边缘分布分别为 $F_{X_{1}}(x_{1}),F_{X_{2}}(x_{2}),\cdots,F_{X_{n}}(x_{n})$, 如果任意实数对 $(x_{1},x_{2},\cdots,x_{n})$
 	
-	\begin{itemize}
-		\item 随机变量$X_{1},X_{2},\cdots,X_{n}$相互独立$\Leftrightarrow F(x_{1},x_{1},\cdots,x_{n})=F(x_{1})\dots F(x_{2})\cdots F(x_{n})$
-		\item $X_{1},X_{2},\cdots,X_{n}$相互独立,则其中任意$k(2\leq k\leq n)$个随机变量也相互独立
-		\item 两个多维随机变量$(X_{1},X_{2},\cdots,X_{n})$与$(Y_{1},Y_{2},\cdots,Y_{m})$相互独立,我们有: 
-		$$F(x_{1},x_{2},\cdots,x_{n},y_{1},y_{2},\cdots,y_{m})=F_{1}(x_{1},x_{2},\cdots,x_{n})\dots F_{2}(y_{1},y_{2},\cdots,y_{m})$$
-		\item $(X,Y)$为独立的二维随机变量,边缘分布和条件分布相等,边缘概率密度与条件概率密度相等.$(P\{Y=y_{j}\}>0,\ P\{X=x_{i}\}>0)$
-		$$P\{X=x_{i}|Y=y_{j}\}=P\{X=x_{i}\},\ P\{Y=y_{j}|X=x_{i}\}=P\{Y=y_{j}\}$$
-		$$f_{X|Y}(x|y)=\dfrac{f(x,y)}{f_{Y}(y)}=f_{X}(x)(f_{Y}(y)>0),\ f_{Y|X}(y|x)=\dfrac{f(x,y)}{f_{X}(x)}=f_{Y}(y)(f_{X}(x)>0)$$
-	\end{itemize}
+	$$F(x_{1},x_{2},\cdots,x_{n}) = F_{X_{1}}(x_{1})F_{X_{2}}(x_{2})\cdots F_{X_{n}}(x_{n})$$
+	
+	称 $X_{1},X_{2},\cdots,X_{n}$ \textbf{相互独立}
 \end{definition}
 
+\begin{corollary}[独立性性质]
+	\begin{itemize}
+		\item $n$ 个随机变量 $X_{1}, X_{2}, \cdots, X_{n}$ 相互独立 $\Leftrightarrow \forall x_{i}\in \mathbb{R} (i = 1,2,\cdots,n)$, 
+		$n$ 个事件 $\{X_{1}\leq x_{1}\}, \{X_{2}\leq x_{2}\},\cdots,\{X_{n}\leq x_{n}\}$ 相互独立 
+		\item 离散型二维随机变量 $(X,Y)$ 相互独立 $\Leftrightarrow \forall x_{i},y_{j} (i,j = 1,2,\cdots), P\{X = x_{i},Y = y_{j}\} = P\{X = x_{i}\} \cdot P\{Y = y_{j}\}$
+		\item 连续型二维随机变量 $(X,Y)$ 相互独立 $\Leftrightarrow \forall x,y, f(x,y) = f_{X}(x)f_{Y}(y)$
+		\item $(X_{1}, X_{2}, \cdots, X_{n})$ 相互独立, 其中任意 $k(2\leq k\leq n)$ 个随机变量相互独立
+		\item $(X_{1}, X_{2}, \cdots, X_{n})$ 相互独立, $g_{1}(x), g_{2}(x), \cdots, g_{n}(x)$ 是一元连续函数, $g_{1}(X_{1}), g_{2}(X_{2}),\cdots,g_{n}(X_{n})$ 相互独立
+		\item 独立的二维随机变量, 边缘分布和条件分布相等, 边缘概率密度与条件概率密度相等
+	\end{itemize}
+\end{corollary}
+
+
 \section{多维随机变量函数的分布}
+\begin{definition}[二维随机变量函数]
+	设 $X,Y$ 为随机变量, $g(x,y)$ 是二元函数, 以随机变量 $X,Y$ 作为自变量的函数 $Z = g(X,Y)$ 也是随机变量, 称为\textbf{随机变量函数}
+\end{definition}
+\begin{theorem}[随机变量函数分布函数和概率密度]
+	设 $X,Y$ 是随机变量, $f(x,y)$ 是 $(X,Y)$ 的概率密度, 
+	$\begin{cases}
+		U = G(X,Y)\\
+		V = H(X,Y)
+	\end{cases}$, 求 $U = g(X,Y)$ 和 $V = h(X,Y)$ 的分布函数和概率密度
+
+	$$\begin{cases}
+		U = G(X,Y)\\
+		V = H(X,Y)
+	\end{cases}\Rightarrow 
+	\begin{cases}
+		X = P(U,V)\\
+		Y = Q(U,V)
+	\end{cases}\Rightarrow
+	\big|J\big| = 
+	\begin{Vmatrix}
+		\dfrac{\partial X}{\partial U} & \dfrac{\partial X}{\partial V}\\
+		\dfrac{\partial Y}{\partial U} & \dfrac{\partial Y}{\partial V}
+	\end{Vmatrix}$$
+
+	$$F(u,v) = P\{U(X,Y)\leq u, V(X,Y)\leq v\} = \iint\limits_{D_{xy}}f(x,y)dxdy$$
+	
+	\begin{eqnarray*}
+		F(u,v) & = & \iint\limits_{D_{xy}}f(x,y)dxdy\\
+			   & = & \iint\limits_{D_{uv}}f(P(u,v),Q(u,v))\big|J\big|dudv\\
+	\end{eqnarray*}
+
+	$$f(u,v) = \dfrac{\partial^{2}F(u,v)}{\partial u \partial v} = f(P(u,v),Q(u,v))\big|J\big|$$
+
+	$$\begin{cases}
+		F_{U}(u) = \int_{-\infty}^{+\infty}f(u,v)dv = \int_{-\infty}^{+\infty}f(P(u,v),Q(u,v))\big|J\big|dv\\
+		F_{V}(v) = \int_{-\infty}^{+\infty}f(u,v)du = \int_{-\infty}^{+\infty}f(P(u,v),Q(u,v))\big|J\big|du
+	\end{cases}$$
+\end{theorem}
 
 \begin{definition}[连续型多维随机变量函数的分布]
 	$(X,Y)\sim f(x,y)$
@@ -800,81 +849,134 @@
 \chapterimage{chap24.jpg}
 \chapter{随机变量的数字特征}
 \section{一维随机变量的数字特征}
+
 \begin{definition}[数学期望]
-		1. $X$是离散型随机变量,$X$的分布列为$p_{i}=P\{X=x_{i}\}(i=1,2,\cdots,n)$,如果级数$\sum\limits_{i=1}^{+\infty}x_{i}p_{i}$绝对收敛,我们称随机变量$X$的数学期望存在,并将其记作$E(X)$.
-	$$E(X)=\sum\limits_{i=1}^{+\infty}x_{i}p_{i}$$
+	\textcolor{red}{离散型随机变量}
+
+	$X$ 是离散型随机变量, $X$ 的分布列为 $p_{i} = P\{X = x_{i}\}(i = 1, 2, \cdots, n)$
 	
-	2. $X$是连续型随机变量,$X$的概率密度为$f(x)$,如果积分$\int_{-\infty}^{+\infty}xf(x)dx$绝对收敛,我们称随机变量$X$的数学期望存在,并将其记作$E(X)$.
-	$$E(X)=\int_{-\infty}^{+\infty}xf(x)dx$$
-	\begin{itemize}
-		\item  $a_{i}\text{为常数,}E\left(\sum\limits_{i=1}^{n}a_{i}X_{i} \right)=\sum\limits_{i=1}^{n}a_{i}E(X_{i}) $
-		\item $E(X\pm Y)=E(X)\pm E(Y),\ E(aX+bY)=aE(X)+bE(Y)$
-		\item $X\text{与}Y\text{相互独立}\Rightarrow E(XY)=E(X)E(Y),E\left[g_{1}(X)\dots g_{2}(Y) \right]=E\left[g_{1}(X)\right]\dots E\left[g_{2}(Y) \right] $
-		\item $X_{1},X_{2},\cdots,X_{n}$相互独立,我们有: 
-		$$E\left( \prod\limits_{i=1}^{n}X_{i}\right)=\prod\limits_{i=1}^{n}E(X_{i}),\ E\left[\prod\limits_{i=1}^{n}g_{i}(X_{i}) \right]=\prod\limits_{i=1}^{n}E\left[g_{i}(X_{i}) \right]   $$
-	\end{itemize}
+	如果级数 $\sum\limits_{i = 1}^{+\infty} x_{i}p_{i}$ \textbf{绝对收敛}, 称随机变量 $X$ 的\textbf{数学期望}存在, 将其记作 $E(X)$
+	
+	$$E(X) = \sum\limits_{i = 1}^{+\infty}x_{i}p_{i}$$
+	
+	\textcolor{red}{连续型随机变量}
+
+	$X$ 是连续型随机变量, $X$ 的概率密度为 $f(x)$
+	
+	如果积分 $\int_{-\infty}^{+\infty}xf(x)dx$ \textbf{绝对收敛}, 称随机变量 $X$ 的\textbf{数学期望}存在, 将其记作 $E(X)$
+	
+	$$E(X) = \int_{-\infty}^{+\infty}xf(x)dx$$
 \end{definition}
+\begin{corollary}[数学期望推论]
+	\begin{itemize}
+		\item $E(a) = a$, $E(E(X)) = E(X)$
+		\item $E(aX \pm bY) = aE(X) \pm bE(Y)$
+		\item $E\left(\sum\limits_{i = 1}^{n}a_{i}X_{i}\right) = \sum\limits_{i = 1}^{n}a_{i}E(X_{i})$
+		\item $X$ 与 $Y$相互独立 $\Rightarrow E(XY) = E(X)E(Y)$ 
+		\item $X_{1}, X_{2}, \cdots, X_{n}$ 相互独立
+		$$\begin{cases}
+			E\left(\prod\limits_{i = 1}^{n}X_{i}\right) = \prod\limits_{i = 1}^{n}E(X_{i})\\
+			E\left[\prod\limits_{i = 1}^{n}g_{i}(X_{i})\right] = \prod\limits_{i = 1}^{n}E\left[g_{i}(X_{i})\right]
+		\end{cases}$$
+	\end{itemize}
+\end{corollary}
+
+
 \begin{definition}[方差和标准差]
-	设$X$是随机变量,如果$E[(X-EX)^2]$存在,我们将$E[(X-EX)^2]$记作$X$的方差$D(X)(DX)$: 
-	$$D(X)=E[(X-EX)^2]=E(X^2)-[E(X)]^2$$
+	设 $X$ 是随机变量, 如果 $E[(X-E(X))^{2}]$ 存在, 将 $E[(X-E(X))^{2}]$ 记作 $X$ 的方差 $D(X)$ 
 	
-	我们将$\sqrt{D(X)}$称为随机变量的\textbf{标准差}或者\textbf{均方差},记作$\sigma(X)$.
+	$$D(X) = E[(X-E(X))^{2}] = E(X^{2})-[E(X)]^2$$
+	
+	将 $\sqrt{D(X)}$ 称为随机变量 $X$ 的\textbf{标准差}或者\textbf{均方差}, 记作 $\sigma(X)$
+
+	随机变量 $X^{*} = \dfrac{X - E(X)}{\sqrt{D(X)}}$ 是 $X$ 的\textbf{标准化随机变量}
+	$$\begin{cases}
+		E(X^{*}) = 0\\
+		D(X^{*}) = 1
+	\end{cases}$$
+	
+\end{definition}
+
+\begin{corollary}[方差和标准差推论]
 	\begin{itemize}
-		\item $DX\geq 0,\ E(X^2)=DX+(EX)^2$
-		\item $D(c)=0,\ c\text{为常数}$
-		\item $D(aX+b)=a^2D(X),\ D(X+b)=D(X)$ 
-		\item $D(X\pm Y)=D(X)+D(Y)\pm 2Cov(X,Y)$
-		\item $X^{*}=\dfrac{X-E(X)}{\sigma(X)}$是$X$的标准化随机变量,$E(X^{*})=0,D(X^{*})=1$
-		\item $\text{如果}X\text{和}Y\text{相互独立,我们得到}$
-		$$D(aX+bY)=a^2D(X)+b^2D(Y)$$
-		\item $X_{1},X_{2},\cdots,X_{n}$是相互独立,我们有: 
-		$$D\left( \sum\limits_{i=1}^{n}a_{i}X_{i}\right)=\sum\limits_{i=1}^{n}a_{i}^2D(X_{i})$$
-		$$D\left( \sum\limits_{i=1}^{n}g_{i}(X_{i})\right)=\sum\limits_{i=1}^{n}D\left[ g_{i}(X_{i})\right]  $$
+		\item $D(X)\geq 0$, $D(X) = E(X^2) - (E(X))^{2}$
+		\item $D(c)=0, c\in \mathbb{R}$
+		\item $D(aX + b) = a^{2}D(X), D(X + b) = D(X)$ 
+		\item $D(X\pm Y) = D(X) + D(Y) \pm 2Cov(X,Y)$
+		\item $D\left(\sum\limits_{i = 1}^{n}a_{i}X_{i}\right) = \sum\limits_{i = 1}^{n}a_{i}^{2}D(X_{i}) + 2 \sum\limits_{1 \leq i < j\leq n}a_{i}a_{j} Cov(X_{i},X_{j})$
+		\item $X$ 和 $Y$ 相互独立 
+		$$\begin{cases}
+			D(aX + bY) = a^{2}D(X) + b^{2}D(Y)\\
+			D(XY) = D(X)D(Y) + D(X)[E(Y)]^{2} + D(Y)[E(X)]^{2}\geq D(X)D(Y)
+		\end{cases}$$
+		\item $X_{1}, X_{2}, \cdots,X_{n}$ 相互独立 
+		$$\begin{cases}
+			D\left(\sum\limits_{i = 1}^{n}a_{i}X_{i}\right) = \sum\limits_{i = 1}^{n}a_{i}^{2}D(X_{i})\\
+			D\left(\sum\limits_{i = 1}^{n}g_{i}(X_{i})\right) = \sum\limits_{i = 1}^{n}D\left[g_{i}(X_{i})\right]
+		\end{cases}$$
+		\item $\forall c\in \mathbb{R}, D(X) \leq E\left[(X-c)^{2}\right]$
 	\end{itemize}
-\end{definition}
-\begin{definition}[切比雪夫不等式]
-	如果随机变量$X$的期望$E(X)$和方差$D(X)$都存在,对任意$\varepsilon>0$,我们都有: 
-	$$\mathcolorbox{purplea}{P\{|X-E(X)|\geq \varepsilon\}\leq \dfrac{D(X)}{\varepsilon^2}\text{或者}P\{|X-E(X)|< \varepsilon\}\geq 1-\dfrac{D(X)}{\varepsilon^2}}$$
-	\begin{anymark}[注]
-		
-	\end{anymark}
-\end{definition}
+\end{corollary}
+
 
 \section{二维随机变量的数字特征}
+
 \begin{definition}[数学期望]
-设 $X,Y$为随机变量,$g(X,Y)$为$X,Y$的函数($g$是连续函数)
+设 $X,Y$ 为随机变量, $g(X,Y)$ 为 $X,Y$ 的函数 ( $g$ 是连续函数)
 
-1. $(X,Y)$是离散型随机变量,联合分布为: 
-$$p_{ij}=P\{X=x_{i},Y=y_{j}\}(i,j=1,2,\cdots)$$
+\textcolor{red}{离散型随机变量}
 
-级数$\sum\limits_{i}\sum\limits_{j}g(x_{i},y_{j})p_{ij}$绝对收敛,我们定义: 
-$$E[g(X,Y)]=\sum\limits_{i}\sum\limits_{j}g(x_{i},y_{j})p_{ij}$$
+	$$p_{ij} = P\{X = x_{i},Y = y_{j}\}(i,j = 1,2,\cdots)$$
 
-2. $(X,Y)$是连续型随机变量,概率密度为$f(x,y)$,积分$\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)dxdy$绝对收敛,我们定义: 
-$$E[g(X,Y)]=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)dxdy$$
+	级数 $\sum\limits_{i}^{m}\sum\limits_{j}^{n}g(x_{i},y_{j})p_{ij}$ \textbf{绝对收敛} 
+
+	$$E[g(X,Y)] = \sum\limits_{i}^{m}\sum\limits_{j}^{n} g(x_{i},y_{j})p_{ij}$$
+
+\textcolor{red}{连续型随机变量}
+
+	$(X,Y)$ 概率密度为 $f(x,y)$, 积分 $\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)dxdy$ \textbf{绝对收敛}
+
+	$$E[g(X,Y)] = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)dxdy$$
 \end{definition}
+
+
 \begin{definition}[协方差与相关系数]
-如果随机变量$X$与$Y$的方差存在且$D(X)>0,D(Y)>0$,我们定义随机变量$X,Y$的协方差$Cov(X,Y)$: 
+	随机变量 $X$ 与 $Y$ 的方差存在且 $D(X) > 0, D(Y) > 0$, 定义随机变量 $X,Y$ 的协方差 $Cov(X,Y)$ 
 
-$$Cov(X,Y)=E[(X-E(X))(Y-E(Y))]=E(XY)-E(X)E(Y)$$
-
-其中$E(XY)$: 
-$$E(XY)=\left\lbrace 
-\begin{array}{l}
-\sum\limits_{i}\sum\limits_{j}x_{i}y_{i}p_{ij},\ (X,Y)\text{是离散型随机变量}\\
-\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}xyf(x,y)dxdy,\ (X,Y)\text{是连续型随机变量}
-\end{array}
-\right. $$
+	$$Cov(X,Y) = E[(X-E(X))(Y-E(Y))] = E(XY) - E(X)E(Y)$$
 	
-我们将$\rho_{XY}=\dfrac{Cov(X,Y)}{\sqrt{DX}\sqrt{DY}}$定义为随机变量$X,Y$的\textbf{相关系数}.
-\begin{itemize}
-	\item $\rho_{XY}=0\Rightarrow X,Y\text{不相关}$
-	\item $\rho_{XY}\neq0\Rightarrow X,Y\text{相关}$
-	\item $\text{对称性}\  Cov(X,Y)=Cov(Y,X),\ Cov(X,X)=D(X),\ \rho_{XX}=1$
-	\item $\text{线性} \ Cov(aX+b,Y)=aCov(X,Y),\ Cov(X_{1}+X_{2},Y)=Cov(X_{1},Y)+Cov(X_{2},Y)$
-\end{itemize}
+	$\rho_{XY} = \dfrac{Cov(X,Y)}{\sqrt{DX}\sqrt{DY}}$ 定义为随机变量 $X,Y$ 的\textbf{相关系数}
 \end{definition}
+\begin{corollary}[协方差和相关系数推论]
+	\begin{itemize}
+		\item $Cov(X,Y) = Cov(Y,X), Cov(X,X) = D(X), \rho_{XX} = 1$
+		\item $Cov(aX + b,Y) = aCov(X,Y), Cov(X_{1} + X_{2},Y) = Cov(X_{1},Y) + Cov(X_{2},Y)$
+		\item $\rho_{XY} = 0\Rightarrow X,Y$ \textbf{不相关}
+		\item $\rho_{XY}\neq 0\Rightarrow X,Y$ \textbf{相关}
+	\end{itemize}
+\end{corollary}
 
+\section{独立性与相关性判定、切比雪夫不等式}
+\begin{corollary}[独立性与相关性判定]
+	随机变量 $X,Y$ 相互独立充要条件
+	$$\begin{cases}
+		f(x,y) = f_{X}(x)\cdot f_{Y}(y)\\
+		P\{X = x_{i},Y = y_{i}\} = P\{X = x_{i}\}\cdot P\{Y = y_{i}\}
+	\end{cases}$$
+
+	随机变量 $X,Y$ 不相关充要条件 $\rho_{XY} = 0$
+
+	$$\rho_{XY} = 0\Leftrightarrow Cov(X,Y) = 0\Leftrightarrow E(XY) = E(X)\cdot E(Y)\Leftrightarrow D(X \pm Y) = D(X) + D(Y)$$
+\end{corollary}
+
+
+\begin{definition}[切比雪夫不等式]
+	随机变量 $X$ 的期望 $E(X)$ 和方差 $D(X)$ 都存在
+	$$\begin{cases}
+		\forall \varepsilon > 0, P\{|X - E(X)|\leq \varepsilon\} \geq \dfrac{D(X)}{\varepsilon^{2}}\\
+		\forall \varepsilon > 0, P\{|X - E(X)|\geq \varepsilon\} \leq 1- \dfrac{D(X)}{\varepsilon^{2}}
+	\end{cases}$$
+\end{definition}
 \begin{table}[ht]
 	\centering
 	\caption{常用分布表}
@@ -887,81 +989,101 @@ $$E(XY)=\left\lbrace
 	}
 		$\text{名称}$                                    & $\text{概率分布}$                                                                    & $\text{均值}$            & $\text{方差}$                      & $\text{参数范围}$                       \\
 		$\text{两点分布}$                                & {$P(X=k)=p^kq^{1-k}$\\ $(k=0,1)$}                                                   & $p$                      & $pq$                              & {$0<p<1$\\ $q=1-p$}                     \\
-		{$\text{二项分布}$\\ $B(n,p)$}                   & {$P(X=k)=C_{n}^{k}p^xq^{n-k}$ \\ $(x=0,1,\cdots,n)$}                                & $np$                     & $npq$                             & {$0<p<1$ \\ $q=1-p$\\ $n\in N$}         \\
+		{$\text{二项分布}$\\ $B(n,p)$}                   & {$P(X=k)=C_{n}^{k}p^kq^{n-k}$ \\ $(k=0,1,\cdots,n)$}                                & $np$                     & $npq$                             & {$0<p<1$ \\ $q=1-p$\\ $n\in N$}         \\
 		{$\text{泊松分布}$\\ $P(\lambda$)}               & {$P(X=k)=\dfrac{\lambda^k}{k!}e^{-\lambda}$ \\ $(k=0,1,2,\cdots)$}                  & $\lambda$                & $\lambda$                         & $\lambda>0$                             \\
-		{$\text{超几何分布}$\\ $H(n,N,M)$}               & {$P(X=k)=\dfrac{C_{N-M}^{n-k}C_{M}^{k}}{C_{N}^{n}}$\\ $(k=0,1,\cdots\,min\{M,n\})$} & $\dfrac{nM}{N}$          & $\dfrac{n(N-n)(N-M)M}{N^2(N-1)}$  & {$n,N,M\in N$\\ $n\leq N,M\leq N$}      \\
-		{$\text{几何分布}$\\ $G(p)$}                     & {$P(X=k)=(1-p)^{k-1}p$\\ $(k=0,1,\cdots)$}                                          & $\dfrac{1}{p}$           & $\dfrac{1-p}{p^2}$                & {$0<p<1$\\ $q=1-p$}                     \\
-		{$\text{均匀分布}$\\ $U(a,b)$}                   & $p(x)=\frac{1}{b-a}(a\leq x\leq b)$                                                 & $\dfrac{a+b}{2}$         & $\dfrac{(b-a)^3}{12}$             & {$0<p<1$\\ $q=1-p$\\ $r\in \mathbb{R}$} \\
-		{$\text{指数分布}$\\ $E(\lambda)$}               & $p(x)=\lambda e^{-\lambda x}(x>0)$                                                  & $\dfrac{1}{\lambda}$     & $\dfrac{1}{\lambda^2}$            & $\lambda>0$                             \\
-		{$\text{正态分布}$\\ $N(\mu,\sigma^2)$}          & $p(x)=\dfrac{1}{\sqrt{2\pi\sigma}}e^{-\dfrac{(x-\mu)^2}{2\sigma^2}}$                & $\mu$                    & $\sigma^2$                        & $\sigma>0$                              \\
-		{$\Gamma\text{分布}$ \\ $\Gamma(\alpha,\beta)$} & $p(x)=\dfrac{\beta^{\alpha}}{\Gamma(\alpha)}x^{\alpha-1}e^{-\beta x}(x>0)$           & $\dfrac{\alpha}{\beta}$ & $\dfrac{\alpha}{\beta^2}$          & {$\alpha>0$\\ $\beta>0$}                \\
+		{$\text{超几何分布}$\\ $H(n,N,M)$}               & {$P(X=k)=\dfrac{C_{N-M}^{n-k}C_{M}^{k}}{C_{N}^{n}}$\\ $(k=0,1,\cdots\,\min\{M,n\})$} & $\dfrac{nM}{N}$          & $\dfrac{n(N-n)(N-M)M}{N^2(N-1)}$  & {$n,N,M\in N$\\ $n\leq N,M\leq N$}      \\
+		{$\text{几何分布}$\\ $G(p)$}                     & {$P(X=k)=(1-p)^{k-1}p$\\ $(k=1,2,\cdots)$}                                          & $\dfrac{1}{p}$           & $\dfrac{1-p}{p^2}$                & {$0<p<1$\\ $q=1-p$}                     \\
+		{$\text{均匀分布}$\\ $U(a,b)$}                   & $f(x)=\dfrac{1}{b-a}(a\leq x\leq b)$                                                 & $\dfrac{a+b}{2}$         & $\dfrac{(b-a)^3}{12}$             & {$0<p<1$\\ $q=1-p$\\ $r\in \mathbb{R}$} \\
+		{$\text{指数分布}$\\ $E(\lambda)$}               & $f(x)=\lambda e^{-\lambda x}(x>0)$                                                  & $\dfrac{1}{\lambda}$     & $\dfrac{1}{\lambda^2}$            & $\lambda>0$                             \\
+		{$\text{正态分布}$\\ $N(\mu,\sigma^2)$}          & $f(x)=\dfrac{1}{\sqrt{2\pi\sigma}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$                & $\mu$                    & $\sigma^2$                        & $\sigma>0$                              \\
+		{$\Gamma\text{分布}$ \\ $\Gamma(\alpha,\beta)$} & $f(x)=\dfrac{\beta^{\alpha}}{\Gamma(\alpha)}x^{\alpha-1}e^{-\beta x}(x>0)$           & $\dfrac{\alpha}{\beta}$ & $\dfrac{\alpha}{\beta^2}$          & {$\alpha>0$\\ $\beta>0$}                \\
 	\end{tblr}
 \end{table}
 \chapterimage{chap25.jpg}
 \chapter{大数定理和中心极限定理}
+
 \section{依概率收敛}
+
 \begin{definition}[依概率收敛]
-	设随机变量$X$与随机变量序列$\{X_{n}\}(n=1,2,3,\cdots)$,如果对于任意$\varepsilon>0$,我们有: 
-	$$\lim\limits_{n\Rightarrow \infty}P\{|X_{n}-X|\geq \varepsilon\}=0\text{或者}\lim\limits_{n\Rightarrow \infty}P\{|X_{n}-X|<\varepsilon\}=1$$
+	设随机变量 $X$ 与随机变量序列 $\{X_{n}\}(n = 1,2,3,\cdots,n)$
 	
-	我们称随机变量序列$\{X_{n}\}$\textbf{依概率收敛于随机变量}$X$,记作: 
-	$$\lim\limits_{n\Rightarrow \infty}X_{n}=X(P)\text{或者}X_{n}\stackrel{P}{\longrightarrow}X(n\Rightarrow \infty)$$
+	$$\begin{cases}
+		\forall \varepsilon > 0, \lim\limits_{n\Rightarrow \infty}P\{|X_{n}-X|\geq \varepsilon\} = 0\\
+		\forall \varepsilon > 0, \lim\limits_{n\Rightarrow \infty}P\{|X_{n}-X|< \varepsilon\} = 1
+	\end{cases}$$
+	
+	称随机变量序列 $\{X_{n}\}$ \textbf{依概率收敛于随机变量} $X$, 记作 
+	$$\lim\limits_{n\Rightarrow \infty} X_{n} = X(P)\ or\ X_{n}\stackrel{P}{\longrightarrow}X(n\Rightarrow \infty)$$
 \end{definition}
+
 \section{大数定理}
+
 \begin{theorem}[切比雪夫大数定理]
-	假设$\{X_{n}\}(n=1,2,\cdots)$是相互独立的随机变量序列,如果方差$D(X_{i})$存在且一致有上界,即存在常数$C$,$\forall i\geq 1, s.t. D(X_{i})\leq C$,$\{X_{n}\}$服从大数定理.
-	$$\dfrac{1}{n}\sum\limits_{i=1}^{n}X_{i}\stackrel{P}{\longrightarrow}\dfrac{1}{n}\sum\limits_{i=1}^{n}E(X_{i})$$
+	假设 $\{X_{n}\}(n = 1,2,\cdots, n)$ 是相互独立的随机变量序列, 如果方差 $D(X_{i})$ 存在且一致有上界, $\forall i\geq 1,\ s.t.\ D(X_{i})\leq C, C\in \mathbb{R}$,
+	$\{X_{n}\}$ 服从大数定理
+	$$\dfrac{1}{n}\sum\limits_{i = 1}^{n}X_{i} \stackrel{P}{\longrightarrow} \dfrac{1}{n}\sum\limits_{i=1}^{n}E(X_{i})$$
 \end{theorem}
+
 \begin{theorem}[伯努利大数定理]
-	假设$\mu_{n}$是$n$重伯努利试验中事件$A$发生的次数,在每次试验中事件$A$发生的概率为$p(0<p<1)$,则$\dfrac{\mu_{n}}{n}\stackrel{P}{\longrightarrow}p$.
-	$$\forall \varepsilon>0,\lim\limits_{n\Rightarrow \infty}P\{|\dfrac{\mu_{n}}{n}-p|<\varepsilon\}=1$$
+	假设 $\mu_{n}$ 是 $n$ 重伯努利试验中事件 $A$ 发生的次数, 在每次试验中事件 $A$ 发生的概率为 $p(0<p<1)$, $\dfrac{\mu_{n}}{n}\stackrel{P}{\longrightarrow}p$
+	$$\forall \varepsilon > 0,\lim\limits_{n\Rightarrow \infty}P\{\big|\dfrac{\mu_{n}}{n} - p\big| < \varepsilon\} = 1$$
 \end{theorem}
+
 \begin{theorem}[辛钦大数定理]
-	假设$\{X_{n}\}$是独立同分布的随机变量序列,如果$E(X_{i})=\mu,(i=1,2,\cdots)$存在,则$\dfrac{1}{n}\sum\limits_{i=1}^{n}X_{i}\stackrel{P}{\longrightarrow}\mu$.
-	$$\forall \varepsilon>0,\lim\limits_{n\Rightarrow \infty}P\{|\dfrac{1}{n}\sum\limits_{i=1}^{n}X_{i}-\mu|<\varepsilon\}=1$$
+	假设 $\{X_{n}\}$ 是独立同分布的随机变量序列, 如果 $E(X_{i}) = \mu(i = 1,2,\cdots,n)$ 存在, $\dfrac{1}{n}\sum\limits_{i=1}^{n}X_{i}\stackrel{P}{\longrightarrow}\mu$
+	$$\forall \varepsilon > 0,\lim\limits_{n\Rightarrow \infty}P\{\big|\dfrac{1}{n}\sum\limits_{i=1}^{n}X_{i}-\mu\big| < \varepsilon\} = 1$$
 \end{theorem}
+
 \section{中心极限定理}
+
+\href{https://www.bilibili.com/video/BV1gh4y1W7ag/?spm_id_from=333.999.list.card_archive.click}{中心极限定理}
+
+\href{https://www.bilibili.com/video/BV1wu411W7uU/?spm_id_from=333.999.list.card_archive.click}{正态分布}
+
 \begin{theorem}[列维-林德伯格定理]
-	假设$\{X_{n}\}$是独立同分布的随机变量序列,如果$E(X_{i})=\mu,D(X_{i})=\sigma^2>0,(i=1,2,\cdots)$
-	存在,$\forall x\in \mathbb{R}$,我们有: 
-	$$\lim\limits_{n\Rightarrow \infty}P\{\dfrac{\sum\limits_{i=1}^{n}X_{i}-n\mu}{\sqrt{n\sigma}}<x\}=\dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}e^{-\frac{t^2}{2}}dt=\varPhi(x)$$
+	假设 $\{X_{n}\}$ 是独立同分布的随机变量序列, 如果 $E(X_{i}) = \mu, D(X_{i}) = \sigma^2 > 0(i = 1,2,\cdots,n)$
+	$$\forall x \in \mathbb{R}, \lim\limits_{n\Rightarrow \infty}P\{\dfrac{\sum\limits_{i=1}^{n}X_{i}-n\mu}{\sqrt{n\sigma}}<x\} = \dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}e^{-\frac{t^2}{2}}dt=\varPhi(x)$$
 \end{theorem}
-\begin{anymark}[注]
+\begin{corollary}[中心极限定理推论]
 	\begin{itemize}
-		\item $\text{定理满足}X_{n}\text{独立同分布、方差和期望存在}$
-		\item $\sum\limits_{i=1}^{n}X_{i}\sim N(n\mu,n\sigma^2)$
+		\item $\sum\limits_{i = 1}^{n}X_{i}\sim N(n\mu,n\sigma^2)$
 		\item $P\{a<\sum\limits_{i=1}^{n}X_{i}<b\}\approx\varPhi(\dfrac{b-n\mu}{\sqrt{n}\sigma})-\varPhi(\dfrac{a-n\mu}{\sqrt{n}\sigma})$
 	\end{itemize}
-\end{anymark}
+\end{corollary}
+
 \begin{theorem}[棣莫弗-拉普拉斯定理]
-	假设随机变量$Y_{n}\sim B(n,p),(0<p<1,n\geq 1)$,$\forall x\in \mathbb{R}$,我们有: 
-	$$\lim\limits_{n\Rightarrow \infty}P\{\dfrac{Y_{n}-np}{\sqrt{np(1-p)}}<x\}=\dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}e^{-\frac{t^2}{2}}dt=\varPhi(x)$$
+	假设随机变量 $Y_{n}\sim B(n,p)(0 < p < 1, n\geq 1)$
+	$$\forall x\in \mathbb{R}, \lim\limits_{n\Rightarrow \infty}P\{\dfrac{Y_{n}-np}{\sqrt{np(1-p)}}<x\}=\dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}e^{-\frac{t^2}{2}}dt = \varPhi(x)$$
 \end{theorem}
-这一部分的内容我推荐一个$B$站视频观看.
-\begin{itemize}
-	\item \href{https://www.bilibili.com/video/BV1gh4y1W7ag/?spm_id_from=333.999.list.card_archive.click}{中心极限定理}
-	\item \href{https://www.bilibili.com/video/BV1wu411W7uU/?spm_id_from=333.999.list.card_archive.click}{正态分布}
-\end{itemize}
+
 \chapterimage{chap26.jpg}
 \chapter{数理统计}
 \section{总体和样本}
 \begin{definition}[统计概念和统计量]
-	1. \textbf{总体}: 研究对象的全体称为总体
-	
-	2. \textbf{样本}: $n$个相互独立且与总体具有相同概率分布的随机变量$X_{1},X_{2},\cdots,X_{n}$所组成的整体$(X_{1},X_{2},\cdots,X_{n})$称为来自总体$X$,容量为$n$的一个\textbf{简单随机样本},一次抽样结果的具体的$n$个数值$(x_{1},x_{2},\cdots,x_{n})$称为样本$(X_{1},X_{2},\cdots,X_{n})$的一个观测值.
-	
-	3. \textbf{样本分布}
-	
-	假设总体的分布函数$F(x)$,概率密度函数$f(x)$,样本$(X_{1},X_{2},\cdots,X_{n})$的分布函数和概率密度: 
-	$$\text{离散型: }P\{X_{1}=x_{1},X_{2}=x_{2},\cdots,X_{n}=x_{n}\}=\prod\limits_{i=1}^{n}P\{X_{i}=x_{i}\}$$
-	$$\text{连续型分布函数: }F(x_{1},x_{2},\cdots,x_{n})=\prod\limits_{i=1}^{n}F(x_{i})$$
-	$$\text{连续型概率密度: }f(x_{1},x_{2},\cdots,x_{n})=\prod\limits_{i=1}^{n}f(x_{i})$$
+	\begin{itemize}
+		\item \textbf{总体}: 研究对象的全体称为总体
+		\item \textbf{样本}: $n$ 个相互独立且与总体具有相同概率分布的随机变量 $X_{1}, X_{2}, \cdots, X_{n}$ 所组成的整体 $(X_{1}, X_{2}, \cdots, X_{n})$ 
+		称为来自总体 $X$, 容量为 $n$ 的一个\textbf{简单随机样本}, 一次抽样结果的具体的 $n$ 个数值 $(x_{1},x_{2},\cdots,x_{n})$ 称为样本 $(X_{1},X_{2},\cdots,X_{n})$ 的一个观测值
+	\end{itemize}
 \end{definition}
+
+\begin{definition}[样本分布]
+	假设总体的分布函数 $F(x)$, 概率密度函数 $f(x)$, 样本 $(X_{1},X_{2},\cdots,X_{n})$ 的分布函数和概率密度
+	\begin{itemize}
+		\item 离散型 $P\{X_{1} = x_{1}, X_{2} = x_{2}, \cdots, X_{n} = x_{n}\} = \prod\limits_{i = 1}^{n}P\{X_{i} = x_{i}\}$
+		\item 连续型 
+		$$\begin{cases}
+			F(x_{1},x_{2},\cdots,x_{n}) = \prod\limits_{i = 1}^{n}F(x_{i})\\
+			f(x_{1},x_{2},\cdots,x_{n}) = \prod\limits_{i = 1}^{n}f(x_{i})
+		\end{cases}$$
+	\end{itemize}
+\end{definition}
+
 \section{统计量及其分布}
 \begin{definition}
-	设$X_{1},X_{2},\cdots,X_{n}$是来自总体$X$的一个样本,$g(x_{1},x_{2},\cdots,x_{n})$是$n$元函数,如果函数$g$中不含任何参数,我们称$g(X_{1},X_{2},\cdots,X_{n})$是样本$X_{1},X_{2},\cdots,X_{n}$的一个\textbf{统计量}.
+	设 $X_{1},X_{2},\cdots,X_{n}$ 是来自总体 $X$ 的一个样本,
+	$g(x_{1}, x_{2}, \cdots, x_{n})$ 是 $n$ 元函数, 如果函数 $g$ 中不含任何参数, 称 $g(X_{1},X_{2},\cdots,X_{n})$ 是样本 $X_{1},X_{2},\cdots,X_{n}$ 的一个\textbf{统计量}
 	
-	1. \textbf{常用统计量}
 	
 	(1).数字特征
 	\begin{itemize}
@@ -970,73 +1092,117 @@ $$E(XY)=\left\lbrace
 		\item \textbf{样本}k\text{阶原点矩}\ $A_{k}=\dfrac{1}{n}\sum\limits_{i=1}^{n}X_{i}^{k},(k=1,2,\cdots)$
 		\item \textbf{样本}k\text{阶中心矩}\ $B_{k}=\dfrac{1}{n}\sum\limits_{i=1}^{n}(X_{i}-\overline{X})^{k},(k=2,\cdots)$
 	\end{itemize}
-	
-	(2). 顺序统计量
-	
-	将样本$X_{1},X_{2},\cdots,X_{n}$的$n$个观测值从小到大顺序排序得到: 
-	$$X_{(1)}\leq X_{(2)}\leq \cdots\leq X_{(n)}\leq$$
-	
-	随机变量$X_{(k)}$称作第$k$顺序统计量,$X_{(1)}$为最小顺序统计量,$X_{(n)}$为最大顺序统计量.
-	\begin{anymark}[注]
-		假设总体期望$E(X)=\mu$,总体方差为$D(X)=\sigma^2$,$X_{1},X_{2},\cdots,X_{n}$是取自总体的一个样本,$\overline{X},S^2$分别为样本的均值和方差,我们有: 
-		
-		1.$E(X_{i})=\mu$
-		
-		2.$D(X_{i})=\sigma^2$
-		
-		3.$E(\overline{X})=E(\dfrac{X_{1}+X_{2}+\cdots+X_{n}}{n})=E(X)=\mu$
-		
-		4.$E(S^2)=D(X)=\sigma^2$
-		
-		5.$D(\overline{X})=\dfrac{1}{n}D(X)=\dfrac{\sigma^2}{n}$
-	\end{anymark}
 \end{definition}
-\begin{definition}[三大分布]
-	1. $\chi^2$分布
-	
-	随机变量$X_{1},X_{2},\cdots,X_{n}$相互独立,且都服从标准正态分布,则随机变量$X=\sum\limits_{i=1}^{n}X_{i}^2$服从自由度为$n$的卡方分布$\chi^2(n)$,记作$X\sim \chi^2(n)$.
-	
-	$\alpha$分位点: $\text{对于给定的}\alpha(0<\alpha<1),\text{满足}$
-	$$P\{\chi^2>\chi_{\alpha}^2(n)\}=\int_{\chi_{\alpha}^2(n)}^{+\infty}f(x)dx$$
-	的$\chi_{\alpha}^2(n)$为$\chi^2(n)$分布上的$\alpha$分位点.
+
+\begin{definition}[样本数字特征]
 	\begin{itemize}
-		\item $X_{1}\sim \chi^2(n_{1}),\ X_{2}\sim \chi^2(n_{2})$,$X_{1},X_{2}$相互独立,我们有: $X_{1}+X_{2}\sim \chi^2(n_{1}+n_{2})$
-		\item $X\sim \chi^2(n)\Rightarrow E(X)=n,D(X)=2n$
+		\item \textbf{样本均值} $\overline{X} = \dfrac{1}{n}\sum\limits_{i = 1}^{n}X_{i}$
+		\item \textbf{样本方差} $S^{2} =\dfrac{1}{n-1}\sum\limits_{i = 1}^{n}(X_{i}-\overline{X})^2$
+		\item \textbf{样本标准差} $S = \sqrt{\dfrac{1}{n-1}\sum\limits_{i = 1}^{n}(X_{i} - \overline{X})^{2}}$
+		\item \textbf{样本} $k$ \textbf{阶原点矩}  $A_{k} = \dfrac{1}{n}\sum\limits_{i = 1}^{n}X_{i}^{k} (k = 1,2,\cdots)$
+		\item \textbf{样本} $k$\textbf{阶中心矩} $B_{k} = \dfrac{1}{n}\sum\limits_{i = 1}^{n}(X_{i}-\overline{X})^{k} (k = 2, 3, \cdots)$
 	\end{itemize}
-	2. $t$分布
+\end{definition}
+
+\begin{definition}[顺序统计量]
+	将样本 $X_{1}, X_{2}, \cdots, X_{n}$ 的 $n$ 个观测值\textbf{从小到大}顺序排序 
+	$$X_{(1)} \leq X_{(2)} \leq \cdots \leq X_{(n)}\leq$$
 	
-	设随机变量$X\sim N(0,1)$,$Y\sim \chi^2(n)$,$X,Y$相互独立,记随机变量$t=\dfrac{X}{\sqrt{Y/n}}$服从自由度为$n$的$t$分布,记作$t\sim t(n)$
-	
+	随机变量 $X_{(k)}$ 称作第 $k$ 顺序统计量, $X_{(1)}$ 为最小顺序统计量, $X_{(n)}$为最大顺序统计量
+
+	$$\begin{cases}
+		X_{(1)} = \min\{X_{1},X_{2},\cdots,X_{n}\}\\
+		X_{(n)} = \max\{X_{1},X_{2},\cdots,X_{n}\}
+	\end{cases}$$
+\end{definition}
+\begin{corollary}[统计量(数字特征)性质]
+	假设总体期望 $E(X)=\mu$, 总体方差为 $D(X) = \sigma^{2}$, $X_{1},X_{2},\cdots,X_{n}$ 是取自总体的一个样本, $\overline{X},S^{2}$ 分别为样本的均值和方差 
 	\begin{itemize}
-		\item $t_{1-\alpha}(n)=-t_{\alpha}(n)$
-		\item $t$分布概率密度关于$x$轴对称
+		\item $E(X_{i}) = \mu$
+		\item $D(X_{i}) = \sigma^{2}$
+		\item $E(\overline{X}) = E(\dfrac{X_{1}+X_{2}+\cdots+X_{n}}{n}) = E(X) = \mu$
+		\item $D(\overline{X}) = D(\dfrac{X_{1}+X_{2}+\cdots+X_{n}}{n}) = \dfrac{1}{n}\sigma^{2}$
+		\item $E(S^{2}) = D(X) = \sigma^{2}$
 	\end{itemize}
+\end{corollary}
+\section{三大分布}
+\begin{definition}[$\chi^{2}$ 分布]
+
+	随机变量 $X_{1},X_{2},\cdots,X_{n}$ 相互独立, 且都服从标准正态分布, 随机变量 $X = \sum\limits_{i = 1}^{n}X_{i}^2$ 
+	服从自由度为 $n$ 的卡方分布 $\chi^2(n)$, 记作 $X\sim \chi^2(n)$
 	
-	3. $F$分布
+	上 $\alpha$ 分位数: 对于给定的 $\alpha (0 < \alpha < 1)$, 称满足
+
+	$$P\{\chi^{2} > \chi_{\alpha}^{2}(n)\} = \int_{\chi_{\alpha}^{2}(n)}^{+\infty}f(x)dx = \alpha$$
 	
-	设随机变量$X\sim \chi^2(n_{1}),Y\sim \chi^2(n_{2})$,且$X,Y$相互独立,则$F=\dfrac{X/n_{1}}{Y/n_{2}}$服从自由度为$(n_{1},n_{2})$的$F$分布,记作$F\sim F(n_{1},n_{2})$.
+	的 $\chi_{\alpha}^{2}(n)$ 为 $\chi^2(n)$ 分布的上 $\alpha$ 分位数
+	\begin{itemize}
+		\item $X_{1}\sim \chi^{2}(n_{1}), X_{2}\sim \chi^{2}(n_{2}), X_{1},X_{2}$ 相互独立, $X_{1} + X_{2}\sim \chi^{2}(n_{1}+n_{2})$
+		\item $X\sim \chi^2(n)\Rightarrow E(X) = n, D(X) = 2n$
+	\end{itemize}
+\end{definition}
+\begin{figure}[H]
+	\centering  %图片全局居中
+	\includegraphics[width=0.7\textwidth]{"figure/Note/卡方分布.png"}
+	\caption{卡方分布}
+	\label{fig:卡方分布}
+\end{figure}
+\begin{definition}[$t$ 分布]
+
+	随机变量 $X\sim N(0,1), Y\sim \chi^{2}(n), X, Y$ 相互独立, 随机变量 $t = \dfrac{X}{\sqrt{Y/n}}$ 服从自由度为 $n$ 的 $t$ 分布, 记作 $t\sim t(n)$
+	
+	上 $\alpha$ 分位数: 对于给定的 $\alpha (0 < \alpha < 1)$, 称满足
+
+	$$P\{t > t_{\alpha}(n)\} = \alpha$$
+	
+	的 $t_{\alpha}(n)$ 为 $t$ 分布的上 $\alpha$ 分位数
+	\begin{itemize}
+		\item $t$ 分布概率密度关于 $x = 0$ 对称 $\Rightarrow E(t) = 0$
+		\item $P\{t > - t_{\alpha}(n)\} = P\{t > t_{1-\alpha}(n)\} \Rightarrow t_{1-\alpha}(n) = -t_{\alpha}(n)$
+	\end{itemize}
+\end{definition}
+
+\begin{figure}[H]
+	\centering  %图片全局居中
+	\includegraphics[width=0.7\textwidth]{"figure/Note/t分布.png"}
+	\caption{ $t$ 分布}
+	\label{fig: $t$ 分布}
+\end{figure}
+
+\begin{definition}[$F$ 分布]
+
+	随机变量 $X\sim \chi^2(n_{1}), Y\sim \chi^2(n_{2})$, 且 $X,Y$ 相互独立,随机变量 $F = \dfrac{X/n_{1}}{Y/n_{2}}$ 
+	服从自由度为 $(n_{1},n_{2})$ 的 $F$ 分布, 记作 $F\sim F(n_{1},n_{2})$
 	
 	\begin{itemize}
 		\item $F\sim F(n_{1},n_{2})\Rightarrow \dfrac{1}{F}\sim F(n_{2},n_{1})$
 		\item $F_{1-\alpha}(n_{1},n_{2})=\dfrac{1}{F_{\alpha}(n_{2},n_{1})}$
+		\item $t\sim t(n)\Rightarrow t^{2}\sim F(1,n)$
 	\end{itemize}
 \end{definition}
-\begin{anymark}[注]
-	正态总体条件下常见结论: 
+
+\begin{figure}[H]
+	\centering  %图片全局居中
+	\includegraphics[width=0.7\textwidth]{"figure/Note/F分布.png"}
+	\caption{ $F$ 分布}
+	\label{fig: $F$ 分布}
+\end{figure}
+
+\begin{corollary}[正态总体推论]
 	
-	设$X_{1},X_{2},\cdots,X_{n}$是来自正态总体$N(\mu,\sigma^2)$的一个样本,$\overline{X},S^2$分别是样本的均值和方差.
-	
-	1. $\overline{X}\sim N(\mu,\dfrac{\sigma^2}{n})\Rightarrow \dfrac{\overline{X}-\mu}{\frac{\sigma}{\sqrt{n}}}=\dfrac{\sqrt{n}(\overline{X}-\mu)}{\sigma}\sim N(0,1)$
-	
-	2. $\dfrac{1}{\sigma^2}\sum\limits_{i=1}^{n}(X_{i}-\mu)^2\sim \chi^2(n)$
-	
-	3. $\dfrac{(n-1)S^2}{\sigma^2}=\sum\limits_{i=1}^{n}(\dfrac{X_{i}-\overline{X}}{\sigma})^2\sim \chi^2(n)$
-	
-	4. $\overline{X}$和$S^2$相互独立,$\dfrac{\sqrt{n}(\overline{X}-\mu)}{S}\sim t(n-1)$
-	
-	5. $\sigma\text{未知时}$: $\dfrac{n(\overline{X}-\mu)^2}{S^2}\sim F(1,n-1)$
-\end{anymark}
+	设 $X_{1}, X_{2}, \cdots, X_{n}$ 是来自正态总体 $N(\mu,\sigma^{2})$ 的一个样本, $\overline{X}, S^2$ 分别是样本的均值和方差
+	\begin{itemize}
+		\item $\overline{X}\sim N(\mu,\dfrac{\sigma^2}{n})\Rightarrow \dfrac{\overline{X}-\mu}{\dfrac{\sigma}{\sqrt{n}}}=\dfrac{\sqrt{n}(\overline{X}-\mu)}{\sigma}\sim N(0,1)$
+		\item $\dfrac{1}{\sigma^{2}}\sum\limits_{i=1}^{n}(X_{i}-\mu)^{2}\sim \chi^{2}(n)$
+		\item $\dfrac{(n-1)S^2}{\sigma^2}=\sum\limits_{i=1}^{n}(\dfrac{X_{i}-\overline{X}}{\sigma})^2\sim \chi^2(n)$
+		\item $\overline{X}$ 和 $S^{2}$ 相互独立 $\Rightarrow \dfrac{\sqrt{n}(\overline{X}-\mu)}{S}\sim t(n-1)$
+		\item $\sigma$ 未知时, $\dfrac{n(\overline{X}-\mu)^2}{S^2}\sim F(1,n-1)$
+	\end{itemize}
+\end{corollary}
+
+
 \section{参数的点估计}
+
 \begin{definition}[矩估计和最大似然估计]
 	1. 概念
 	
