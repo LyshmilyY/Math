@@ -26,7 +26,7 @@
 - [VividBooK 模板](https://www.latexstudio.net/index/details/index/mid/3485.html)
 - `main.tex` 内采用 `input{../xx.tex}` 联合编译
 - `mindmap` 思维导图推荐使用 [Obsidian](https://obsidian.md/) 查看，安装 `Enhancing Mindmap` 插件，使用 [Typora](https://typoraio.cn/) 中 `Rainbow` 主题导出 `pdf` 文件
-
+- `PDF` 文件夹中 `main.pdf` 是无答案的 `Notes`, 其余部分包括分模块的 `Notes` 和 `MindMap` 生成的 `PDF` 文件
 ## 2. 环境配置
 
 ### 2.1 `texlive` 安装和字体依赖
