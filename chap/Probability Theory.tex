@@ -650,15 +650,18 @@
 	$$f(u,v) = \dfrac{\partial^{2}F(u,v)}{\partial u \partial v} = f(P(u,v),Q(u,v))\big|J\big|$$
 
 	$$\begin{cases}
-		F_{U}(u) = \int_{-\infty}^{+\infty}f(u,v)dv = \int_{-\infty}^{+\infty}f(P(u,v),Q(u,v))\big|J\big|dv\\
-		F_{V}(v) = \int_{-\infty}^{+\infty}f(u,v)du = \int_{-\infty}^{+\infty}f(P(u,v),Q(u,v))\big|J\big|du
+		f_{U}(u) = \int_{-\infty}^{+\infty}f(u,v)dv = \int_{-\infty}^{+\infty}f(P(u,v),Q(u,v))\big|J\big|dv\\
+		f_{V}(v) = \int_{-\infty}^{+\infty}f(u,v)du = \int_{-\infty}^{+\infty}f(P(u,v),Q(u,v))\big|J\big|du
+	\end{cases}$$
+
+	$$\begin{cases}
+		F_{U}(u_{0}) = \int_{-\infty}^{u_{0}}du\int_{-\infty}^{+\infty}f(P(u,v),Q(u,v))\big|J\big|dv\\
+		F_{V}(v_{0}) = \int_{-\infty}^{v_{0}}dv\int_{-\infty}^{+\infty}f(P(u,v),Q(u,v))\big|J\big|du
 	\end{cases}$$
 \end{theorem}
 
-\begin{definition}[连续型多维随机变量函数的分布]
-	$(X,Y)\sim f(x,y)$
-	
-	\mathcolorbox{skyblue}{\text{(1).和的分布}}
+\begin{proposition}[和的分布]
+	$(X,Y)\sim f(x,y)$, $Z = X + Y$, 求 $Z$ 的分布函数和概率密度
 	\begin{figure}[H]
 		\centering  %图片全局居中
 		\subfigure[$X+Y$]{
@@ -674,26 +677,26 @@
 				}
 			\end{tikzpicture}
 		}
+		\caption{和的分布}
+		\label{figure: 和的分布}
 	\end{figure}
-	$Z=X+Y$
 	
-	分布函数: 
-	$$F_{Z}(z)=P\{X+Y\leq z\}=\iint\limits_{D_{z}:x+y\leq z}f(x,y)d\sigma=\left\lbrace 
-	\begin{array}{l}
-		\int_{-\infty}^{+\infty}dx\int_{-\infty}^{z-x}f(x,y)dy\\
-		\int_{-\infty}^{+\infty}dy\int_{-\infty}^{z-y}f(x,y)dx
-	\end{array}
-	\right. $$
-	
-	概率密度: 
-	$$f_{Z}(z)=F'_{Z}(z)=\left\lbrace 
-	\begin{array}{l}
-		\int_{-\infty}^{+\infty}f(z-y,y)dy\\
-		\int_{-\infty}^{+\infty}f(x,z-x)dx
-	\end{array}
-	\right. $$
-	
-	\mathcolorbox{skyblue}{\text{(2).差的分布}}
+	$$\begin{cases}
+		Z = X + Y\\
+		W = Y
+	\end{cases}\Rightarrow
+	\begin{cases}
+		X = Z - W\\
+		Y = W
+	\end{cases}\Rightarrow \big|J\big| = 1$$
+	\textbf{概率密度}
+	$$f_{Z}(z) = \int_{-\infty}^{+\infty}f(z-w,w)dw$$
+	\textbf{分布函数}
+	$$F_{Z}(z_{0}) = \int_{-\infty}^{z_{0}}dz\int_{-\infty}^{+\infty}f(z-w,w)dw$$
+\end{proposition}
+
+\begin{proposition}[差的分布]
+	$(X,Y)\sim f(x,y)$, $Z = X - Y$, 求 $Z$ 的分布函数和概率密度
 	\begin{figure}[H]
 		\centering  %图片全局居中
 		\subfigure[$X-Y$]{
@@ -709,26 +712,26 @@
 				}
 			\end{tikzpicture}	
 		}
+		\caption{差的分布}
+		\label{figure: 差的分布}
 	\end{figure}
-	$Z=X-Y$
-	
-	分布函数: 
-	$$F_{Z}(z)=P\{X-Y\leq z\}=\iint\limits_{D_{z}:x-y\leq z}f(x,y)d\sigma=\left\lbrace 
-	\begin{array}{l}
-		\int_{-\infty}^{+\infty}dx\int_{x-z}^{+\infty}f(x,y)dy\\
-		\int_{-\infty}^{+\infty}dy\int_{-\infty}^{y+z}f(x,y)dx
-	\end{array}
-	\right. $$
-	
-	概率密度: 
-	$$f_{Z}(z)=F'_{Z}(z)=\left\lbrace 
-	\begin{array}{l}
-		\int_{-\infty}^{+\infty}f(z+y,y)dy\\
-		\int_{-\infty}^{+\infty}f(x,x-z)dx
-	\end{array}
-	\right. $$
-	
-	\mathcolorbox{skyblue}{\text{(3).积的分布}}
+
+	$$\begin{cases}
+		Z = X - Y\\
+		W = Y
+	\end{cases}\Rightarrow
+	\begin{cases}
+		X = Z + W\\
+		Y = W
+	\end{cases}\Rightarrow \big|J\big| = 1$$
+	\textbf{概率密度}
+	$$f_{Z}(z) = \int_{-\infty}^{+\infty}f(z+w,w)dw$$
+	\textbf{分布函数}
+	$$F_{Z}(z_{0}) = \int_{-\infty}^{z_{0}}dz\int_{-\infty}^{+\infty}f(z+w,w)dw$$
+\end{proposition}
+
+\begin{proposition}[积的分布]
+	$(X,Y)\sim f(x,y)$, $Z = XY$, 求 $Z$ 的分布函数和概率密度
 	\begin{figure}[H]
 		\centering  %图片全局居中
 		\subfigure[$XY$]{
@@ -745,29 +748,26 @@
 				}
 			\end{tikzpicture}	
 		}
+		\caption{积的分布}
+		\label{figure: 积的分布}
 	\end{figure}
-	$Z=XY$
-	
-	分布函数: 
-	\begin{eqnarray*}
-		F_{Z}(z)&=&P\{XY\leq z\}=\iint\limits_{D_{z}:xy\leq z}f(x,y)d\sigma\\
-		&=&\left\lbrace 
-		\begin{array}{l}
-			\int_{-\infty}^{0}dy\int_{\frac{z}{y}}^{+\infty}f(x,y)dx+\int_{0}^{+\infty}dy\int_{-\infty}^{\frac{z}{y}}f(x,y)dx\\
-			\int_{-\infty}^{0}dx\int_{\frac{z}{x}}^{+\infty}f(x,y)dy+\int_{0}^{+\infty}dx\int_{-\infty}^{\frac{z}{x}}f(x,y)dy
-		\end{array}
-		\right.
-	\end{eqnarray*}
-	
-	概率密度: 
-	$$f_{Z}(z)=F'_{Z}(z)=\left\lbrace 
-	\begin{array}{l}
-		\int_{-\infty}^{0}(-\frac{1}{y})f(\frac{z}{y},y)dy+\int_{0}^{+\infty}\frac{1}{y}f(\frac{z}{y},y)dy=\int_{-\infty}^{+\infty}\frac{1}{|y|}f(\frac{z}{y},y)dy\\
-		\int_{-\infty}^{0}(-\frac{1}{x})f(x,\frac{z}{x})dx+\int_{0}^{+\infty}\frac{1}{x}f(x,\frac{z}{x})dx=\int_{-\infty}^{+\infty}\frac{1}{|x|}f(x,\frac{z}{x})dx
-	\end{array}
-	\right. $$
-	
-	\mathcolorbox{skyblue}{\text{(4).商的分布}}
+
+	$$\begin{cases}
+		Z = XY\\
+		W = Y
+	\end{cases}\Rightarrow
+	\begin{cases}
+		X = \dfrac{Z}{W}\\
+		Y = W
+	\end{cases}\Rightarrow \big|J\big| = \big|\dfrac{1}{w}\big|$$
+	\textbf{概率密度}
+	$$f_{Z}(z) = \int_{-\infty}^{+\infty}f(\frac{z}{w},w)\big|\dfrac{1}{w}\big|dw$$
+	\textbf{分布函数}
+	$$F_{Z}(z_{0}) = \int_{-\infty}^{z_{0}}dz\int_{-\infty}^{+\infty}f(z-w,w)\big|\dfrac{1}{w}\big|dw$$
+\end{proposition}
+\begin{proposition}[商的分布]
+	$(X,Y)\sim f(x,y)$, $Z = \dfrac{X}{Y}$, 求 $Z$ 的分布函数和概率密度
+
 	\begin{figure}[H]
 		\centering  %图片全局居中
 		\subfigure[$\dfrac{X}{Y}$]{
@@ -786,54 +786,56 @@
 				}
 			\end{tikzpicture}	
 		}
+		\caption{商的分布}
+		\label{figure: 商的分布}
 	\end{figure}
-	$Z=\dfrac{X}{Y}$
-	
-	分布函数: 
-	$$F_{Z}(z)=P\{\dfrac{X}{Y}\leq z\}=\iint\limits_{D_{z}:\frac{X}{Y}\leq z}f(x,y)d\sigma=\int_{-\infty}^{0}dy\int_{zy}^{+\infty}f(x,y)dx+\int_{0}^{+\infty}dy\int_{-\infty}^{zy}f(x,y)dx$$
-	
-	概率密度: 
-	$$f_{Z}(z)=F'_{Z}(z)=\int_{-\infty}^{0}(-y)f(zy,y)dy+\int_{0}^{+\infty}yf(zy,y)dy=\int_{-\infty}^{+\infty}|y|f(zy,y)dy$$
-	
-	\mathcolorbox{skyblue}{\text{(5).}max\{X,Y\}}
-	
-	$Z=max\{X,Y\}$
-	
-	分布函数: 
-	\begin{eqnarray*}
-		F_{Z}(z)=P\{Z\leq max\{X,Y\}\}&=&P\{X\leq z\}\cup P\{Y\leq z\}\\
-		&=&P\{X\leq z\}+P\{Y\leq z\}-P\{X\leq z,Y\leq z\}\\
-		&=&F_{X}(z)+F_{Y}(z)-F(z,z)
-	\end{eqnarray*}
+	$$\begin{cases}
+		Z = \dfrac{X}{Y}\\
+		W = Y
+	\end{cases}\Rightarrow
+	\begin{cases}
+		X = ZW\\
+		Y = W
+	\end{cases}\Rightarrow \big|J\big| = \big|w\big|$$
+	\textbf{概率密度}
+	$$f_{Z}(z) = \int_{-\infty}^{+\infty}f(\frac{z}{w},w)\big|w\big|dw$$
+	\textbf{分布函数}
+	$$F_{Z}(z_{0}) = \int_{-\infty}^{z_{0}}dz\int_{-\infty}^{+\infty}f(z-w,w)\big|w\big|dw$$
+\end{proposition}
 
 	
-	概率密度: 
-	$$f_{Z}=F'_{Z}(z)=f(z,z)$$
+\begin{proposition}[最大值和最小值的分布]
+	$(X,Y)\sim f(x,y)$, $Z_{1} = \max\{X,Y\}, Z_{2} = \min\{X,Y\}$, 求 $Z_{1}, Z_{2}$ 的分布函数和概率密度
 	
-	\mathcolorbox{skyblue}{\text{(6).}min\{X,Y\}}
-	
-	$Z=min\{X,Y\}$
-	
-	分布函数: 
-	$$F_{Z}(z)=P\{Z\leq min\{X,Y\}\}=P\{X\leq z,Y\leq z\}=F(z,z)\Rightarrow F_{max}(z)=F(z,z)$$
-	
-	概率密度: 
-	$$f_{Z}=F'_{Z}(z)=f_{X}(z)+f_{Y}(z)-f(z,z)$$
-	\begin{anymark}[注]
-		\begin{itemize}
-			\item  $n$个相互独立的随机变量$X_{1},X_{2},\cdots,X_{n}$,$Z_{1}=max\{X_{1},X_{2},\cdots,X_{n}\},\ Z_{2}=min\{X_{1},X_{2},\cdots,X_{n}\}$,$Z_{1},Z_{2}$的分布函数: 
-			$$F_{max}(z)=F_{X_{1}}(z)F_{X_{2}}(z)\cdots F_{X_{n}}(z)$$
-			$$F_{min}(z)=1-[1-F_{Z_{1}}(z)][1-F_{Z_{2}}(z)]\cdots[1-F_{Z_{n}}(z)]              $$
-			\item $X_{i}(i=1,2,\cdots,n)$独立同分布,我们有: 
-			$$F_{max}(x)=[F(x)]^n,\ f_{max}(x)=n[F(x)]^{n-1}f(x)$$
-			$$F_{min}(x)=1-[1-F(x)]^n,\ f_{min}(x)=nf(x)[1-F(x)]^{n-1}$$
-		\end{itemize}
-	\end{anymark}
-\end{definition}
+	$\max\{X,Y\}$ \textbf{分布函数}
+	$$F_{Z_{1}}(z) = P\{Z_{1}\leq \max\{X,Y\}\} = P\{X\leq z, Y\leq z\} = F(z,z)$$
+	$\max\{X,Y\}$ \textbf{概率密度}
+	$$f_{Z_{1}}(z) = F'_{Z_{1}}(z)$$
+
+	$\min\{X,Y\}$ \textbf{分布函数}
+	$$F_{Z_{2}}(z) = P\{Z_{2}\leq \min\{X,Y\}\} = P\{X\leq z\} \cup P\{Y\leq z\} = F_{X}(z) + F_{Y}(z) - F(z,z)$$
+	$\min\{X,Y\}$ \textbf{概率密度}
+	$$f_{Z_{2}}(z) = F'_{Z_{2}}(z)$$
+\end{proposition}	
+
+\begin{corollary}[独立同分布随机变量推论]
+	随机变量 $X_{1}, X_{2}, \cdots, X_{n}$ 相互独立, $Z_{1} = \max\{X_{1}, X_{2}, \cdots, X_{n}\}, Z_{2} = \min\{X_{1}, X_{2}, \cdots, X_{n}\}$, $Z_{1}, Z_{2}$ 的分布函数
+	$$\begin{cases}
+		F_{Z_{1}}(z) = F_{X_{1}}(z)F_{X_{2}}(z)\cdots F_{X_{n}}(z)\\
+		F_{Z_{2}}(z) = 1-[1-F_{X_{1}}(z)][1-F_{X_{2}}(z)]\cdots[1-F_{X_{n}}(z)]
+	\end{cases}$$
+
+	假设随机变量 $X_{i}(i = 1, 2, \cdots, n)$ 独立同分布
+	\begin{itemize}
+		\item $F_{Z_{1}}(x) = [F(x)]^{n}$, $f_{Z_{1}}(x) = n[F(x)]^{n-1}f(x)$
+		\item $F_{Z_{2}}(x) = 1-[1-F(x)]^{n}$, $f_{Z_{2}}(x) = nf(x)[1-F(x)]^{n-1}$
+	\end{itemize}
+\end{corollary}
+
 \begin{table}[ht]
 	\centering
-	\caption{常见分布可加性}
-	\label{table: 常见分布可加性}
+	\caption{常见独立分布可加性}
+	\label{table: 常见独立分布可加性}
 	\begin{tblr}{
 		hlines,
 		vline{2,3},
@@ -993,7 +995,7 @@
 		{$\text{泊松分布}$\\ $P(\lambda$)}               & {$P(X=k)=\dfrac{\lambda^k}{k!}e^{-\lambda}$ \\ $(k=0,1,2,\cdots)$}                  & $\lambda$                & $\lambda$                         & $\lambda>0$                             \\
 		{$\text{超几何分布}$\\ $H(n,N,M)$}               & {$P(X=k)=\dfrac{C_{N-M}^{n-k}C_{M}^{k}}{C_{N}^{n}}$\\ $(k=0,1,\cdots\,\min\{M,n\})$} & $\dfrac{nM}{N}$          & $\dfrac{n(N-n)(N-M)M}{N^2(N-1)}$  & {$n,N,M\in N$\\ $n\leq N,M\leq N$}      \\
 		{$\text{几何分布}$\\ $G(p)$}                     & {$P(X=k)=(1-p)^{k-1}p$\\ $(k=1,2,\cdots)$}                                          & $\dfrac{1}{p}$           & $\dfrac{1-p}{p^2}$                & {$0<p<1$\\ $q=1-p$}                     \\
-		{$\text{均匀分布}$\\ $U(a,b)$}                   & $f(x)=\dfrac{1}{b-a}(a\leq x\leq b)$                                                 & $\dfrac{a+b}{2}$         & $\dfrac{(b-a)^3}{12}$             & {$0<p<1$\\ $q=1-p$\\ $r\in \mathbb{R}$} \\
+		{$\text{均匀分布}$\\ $U(a,b)$}                   & $f(x)=\dfrac{1}{b-a}(a\leq x\leq b)$                                                 & $\dfrac{a+b}{2}$         & $\dfrac{(b-a)^3}{12}$             &  \\
 		{$\text{指数分布}$\\ $E(\lambda)$}               & $f(x)=\lambda e^{-\lambda x}(x>0)$                                                  & $\dfrac{1}{\lambda}$     & $\dfrac{1}{\lambda^2}$            & $\lambda>0$                             \\
 		{$\text{正态分布}$\\ $N(\mu,\sigma^2)$}          & $f(x)=\dfrac{1}{\sqrt{2\pi\sigma}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$                & $\mu$                    & $\sigma^2$                        & $\sigma>0$                              \\
 		{$\Gamma\text{分布}$ \\ $\Gamma(\alpha,\beta)$} & $f(x)=\dfrac{\beta^{\alpha}}{\Gamma(\alpha)}x^{\alpha-1}e^{-\beta x}(x>0)$           & $\dfrac{\alpha}{\beta}$ & $\dfrac{\alpha}{\beta^2}$          & {$\alpha>0$\\ $\beta>0$}                \\
@@ -1083,15 +1085,6 @@
 \begin{definition}
 	设 $X_{1},X_{2},\cdots,X_{n}$ 是来自总体 $X$ 的一个样本,
 	$g(x_{1}, x_{2}, \cdots, x_{n})$ 是 $n$ 元函数, 如果函数 $g$ 中不含任何参数, 称 $g(X_{1},X_{2},\cdots,X_{n})$ 是样本 $X_{1},X_{2},\cdots,X_{n}$ 的一个\textbf{统计量}
-	
-	
-	(1).数字特征
-	\begin{itemize}
-		\item \textbf{样本均值(一阶原点矩)}\ $\overline{X}=\dfrac{1}{n}\sum\limits_{i=1}^{n}X_{i}$
-		\item \textbf{样本方差(二阶中心矩)}\ $S^2=\dfrac{1}{n-1}\sum\limits_{i=1}^{n}(X_{1}-\overline{X})^2$
-		\item \textbf{样本}k\text{阶原点矩}\ $A_{k}=\dfrac{1}{n}\sum\limits_{i=1}^{n}X_{i}^{k},(k=1,2,\cdots)$
-		\item \textbf{样本}k\text{阶中心矩}\ $B_{k}=\dfrac{1}{n}\sum\limits_{i=1}^{n}(X_{i}-\overline{X})^{k},(k=2,\cdots)$
-	\end{itemize}
 \end{definition}
 
 \begin{definition}[样本数字特征]
@@ -1194,7 +1187,7 @@
 	\begin{itemize}
 		\item $\overline{X}\sim N(\mu,\dfrac{\sigma^2}{n})\Rightarrow \dfrac{\overline{X}-\mu}{\dfrac{\sigma}{\sqrt{n}}}=\dfrac{\sqrt{n}(\overline{X}-\mu)}{\sigma}\sim N(0,1)$
 		\item $\dfrac{1}{\sigma^{2}}\sum\limits_{i=1}^{n}(X_{i}-\mu)^{2}\sim \chi^{2}(n)$
-		\item $\dfrac{(n-1)S^2}{\sigma^2}=\sum\limits_{i=1}^{n}(\dfrac{X_{i}-\overline{X}}{\sigma})^2\sim \chi^2(n)$
+		\item $\dfrac{(n-1)S^2}{\sigma^2}=\sum\limits_{i=1}^{n}(\dfrac{X_{i}-\overline{X}}{\sigma})^2\sim \chi^2(n-1)$
 		\item $\overline{X}$ 和 $S^{2}$ 相互独立 $\Rightarrow \dfrac{\sqrt{n}(\overline{X}-\mu)}{S}\sim t(n-1)$
 		\item $\sigma$ 未知时, $\dfrac{n(\overline{X}-\mu)^2}{S^2}\sim F(1,n-1)$
 	\end{itemize}
@@ -1202,88 +1195,96 @@
 
 
 \section{参数的点估计}
+\begin{definition}[参数点估计]
+	设总体 $X$ 的分布函数 $F(x;\theta)$, 其中 $\theta$ 是一个未知参数, $X_{1},X_{2},\cdots,X_{n}$ 是来自总体的一个样本,
+	由样本构造一个适当的统计量 $\hat{\theta}(X_{1},X_{2},\cdots,X_{n})$ 作为参数 $\theta$ 的估计, 称统计量 $\hat{\theta}$ 为参数 $\theta$ 的估计量
+\end{definition}
 
-\begin{definition}[矩估计和最大似然估计]
-	1. 概念
-	
-	设总体$X$的分布函数$F(x,\theta)$,其中$\theta$是一个未知参数,$X_{1},X_{2},\cdots,X_{n}$是来自总体的一个样本,由样本构造一个适当的统计量$\hat{\theta}(X_{1},X_{2},\cdots,X_{n})$作为参数$\theta$的估计,称统计量为参数的估计量,$\theta=\hat{\theta}(X_{1},X_{2},\cdots,X_{n})$.
-	
-	2. 矩估计法
-	
-	设总体分布中有$k$个未知的参数$\theta_{1},\theta_{2},\cdots,\theta_{k}$,来自总体$X$的一组样本$X_{1},X_{2},\cdots,X_{n}$,如果$X$的原点矩$E(X^{l})(l=1,2,\cdots,k)$存在,我们令样本的原点矩=总体原点矩: 
-	$$\dfrac{1}{n}\sum\limits_{i=1}^{n}X_{i}^{l}=E(X^{l})=\left\lbrace 
-	\begin{array}{l}
-		\int_{-\infty}^{+\infty}x^{l}f(x;\theta_{1},\theta_{2},\cdots,\theta_{k})dx\\
-		\sum\limits_{i=1}^{n}x_{i}^{l}P\{X=x_{i};\theta_{1},\theta_{2},\cdots,\theta_{k}\}
-	\end{array}
-	\right. $$
-	
-	3. 最大似然估计法
-	对未知参数$\theta$进行估计,在该参数可能的取值范围$I$中选取,使用使样本观测值$x_{1},x_{2},\cdots,x_{n}$最大的参数$\hat{\theta}$作为参数$\theta$的估计值.
-	
-	(1).总体$X$是离散型分布,分布函数的参数为$\theta_{1},\theta_{2},\cdots,\theta_{k}$,样本$X_{1},X_{2},\cdots,X_{n}$出现取值$x_{1},x_{2},\cdots,x_{n}$的概率为: 
-	$$P\{X_{1}=x_{1},X_{2}=x_{2},\cdots,X_{n}=x_{n}\}=\prod\limits_{i=1}^{n}P(X_{i}=x_{i})=\prod\limits_{i=1}^{n}p(x_{i};\theta)$$
-	
-	我们得到似然函数: 
-	$$L(\theta)=L(x_{1},x_{2},\cdots,x_{n},\theta)$$
-	
-	$$\exists \hat{\theta}\in I,\ s.t. L(x_{1},x_{2},\cdots,x_{n},\hat{\theta})=max_{\theta\in I}L(x_{1},x_{2},\cdots,x_{n},\theta)$$
-	
-	(2).总体$X$是连续型分布,概率密度为$f(x;\theta),\theta\in I$,样本$X_{1},X_{2},\cdots,X_{n}$出现取值$x_{1},x_{2},\cdots,x_{n}$的概率为: 
-	$$L(\theta)=L(x_{1},x_{2},\cdots,x_{n},\theta)=\prod\limits_{i=1}^{n}f(x_{i},\theta)$$
-	
-	$$\exists \hat{\theta}\in I,\ s.t. L(x_{1},x_{2},\cdots,x_{n},\hat{\theta})=max_{\theta\in I}L(x_{1},x_{2},\cdots,x_{n},\theta)$$
-	
-	我们得到了参数的最大似然估计$\hat{\theta}=\hat{\theta}(x_{1},x_{2},\cdots,x_{n})$
-	\begin{anymark}[估计量的评判标准]
-		1. 无偏性
-		
-		2. 有效性(最小方差性)
-		
-		3. 一致性(相和性)
-	\end{anymark}
+\begin{definition}[矩估计]
+	设总体分布中有 $k$ 个未知的参数 $\theta_{1},\theta_{2},\cdots,\theta_{k}$, 来自总体 $X$ 的一组样本 $X_{1},X_{2},\cdots,X_{n}$, 
+	如果 $X$ 的原点矩 $E(X^{l})(l = 1, 2, \cdots, k)$ 存在, 样本原点矩 $\dfrac{1}{n}\sum\limits_{i=1}^{n}X_{i}^{l}$ 可作为 $E(X^{l})$ 的估计
 \end{definition}
+
+\begin{definition}[最大似然估计]
+	对未知参数 $\theta$ 进行估计, 在该参数可能的取值范围 $I$ 中选取, 使用使样本观测值 $x_{1},x_{2},\cdots,x_{n}$ 最大的参数 $\hat{\theta}$ 作为参数 $\theta$ 的估计值
+	
+	似然函数 
+	$$\begin{cases}
+		L(\theta) = L(x_{1},x_{2},\cdots,x_{n};\theta)\\
+		L(\theta) = \prod\limits_{i=1}^{n}f(x_{i};\theta)
+	\end{cases}$$
+	
+	$$\exists \hat{\theta}\in I,\ s.t.\ L(x_{1},x_{2},\cdots,x_{n},\hat{\theta}) = \max_{\theta\in I}L(x_{1},x_{2},\cdots,x_{n},\theta)$$
+\end{definition}
+
+\begin{corollary}[估计量评价标准]
+	\begin{itemize}
+		\item \textbf{无偏性}: $E(\hat{\theta}) = \theta$
+		\item \textbf{有效性}: $D(\hat{\theta})$ 最小
+		\item \textbf{一致性}: $\forall \varepsilon > 0, \lim\limits_{n\Rightarrow \infty}P\{|\hat{\theta}-\theta|<\varepsilon\} = 1$
+	\end{itemize}
+\end{corollary}
+
 \section{参数的区间估计}
-\begin{definition}[概念]
-	设$\theta$是总体$X$的一个未知参数,对于给定的$\alpha(0<\alpha<1)$,如果由样本$X_{1},X_{2},\cdots,X_{n}$确定的两个统计量$\hat{\theta_{1}}=\hat{\theta_{1}}(X_{1},X_{2},\cdots,X_{n})$和$\hat{\theta_{2}}=\hat{\theta_{2}}(X_{1},X_{2},\cdots,X_{n})$满足: 
-	$$P\{\hat{\theta_{1}}(X_{1},X_{2},\cdots,X_{n})<\theta<\hat{\theta_{2}}(X_{1},X_{2},\cdots,X_{n})\}=1-\alpha$$
+
+\begin{definition}[区间估计和置信区间]
+	设 $\theta$ 是总体 $X$ 的一个未知参数, 对于给定的 $\alpha(0 < \alpha < 1)$, 如果由样本 $X_{1},X_{2},\cdots,X_{n}$ 确定的两个统计量 
+	$\hat{\theta_{1}} = \hat{\theta_{1}}(X_{1},X_{2},\cdots,X_{n})$ 和 $\hat{\theta_{2}} = \hat{\theta_{2}}(X_{1},X_{2},\cdots,X_{n})$ 满足 
+	$$P\{\hat{\theta_{1}}(X_{1},X_{2},\cdots,X_{n}) < \theta < \hat{\theta_{2}}(X_{1},X_{2},\cdots,X_{n})\} = 1-\alpha$$
 	
-	则称随机区间$(\hat{\theta_{1}},\hat{\theta_{2}})$是$\theta$的置信度为$1-\alpha$的\textbf{置信区间},$\hat{\theta_{1}}$和$\hat{\theta_{2}}$分别称为\textbf{置信上限}和\textbf{置信下限},$1-\alpha$为置信水平,$\alpha$为显著性水平.
+	则称随机区间 $(\hat{\theta_{1}},\hat{\theta_{2}})$ 是 $\theta$ 的置信度为 $1-\alpha$ 的 \textbf{置信区间},
+	$\hat{\theta_{1}}$ 和 $\hat{\theta_{2}}$ 分别称为 \textbf{置信上限}和\textbf{置信下限}, $1-\alpha$ 为置信水平, $\alpha$ 为\textbf{显著性水平}
 \end{definition}
-\begin{table}[h]
+
+\begin{table}[ht]
 	\centering
-	\caption{正态总体均值的置信区间}
-	\label{table: 正态总体均值的置信区间}
+	\caption{正态总体的置信区间}
+	\label{table: 正态总体的置信区间}
 	\begin{tblr}{
 		hline{1,Z} = {2pt},
-		hline{2,Y} = {1pt},
+		hline{2-Y} = {1pt},
 		vline{2-Y} = {1pt},
 		cells = {c,$}
 	}
-		\text{待估参数} & \text{其他参数}     & \text{枢轴量分布}                                        & \text{置信区间}                                                                                                 \\
-		\mu            & \sigma^2\text{已知} & Z=\dfrac{\overline{X}-\mu}{\sigma/\sqrt{n}}\sim N(0,1) & \left( \overline{X}-\frac{\sigma}{\sqrt{n}}z_{\alpha/2},\overline{X}+\frac{\sigma}{\sqrt{n}}z_{\alpha/2}\right) \\
-		\mu            & \sigma^2\text{未知} & t=\dfrac{\overline{X}-\mu}{S/\sqrt{n}}\sim t(n-1)      & \left( \overline{X}-\frac{S}{\sqrt{n}}t_{\alpha/2}(n-1),\overline{X}+\frac{S}{\sqrt{n}}t_{\alpha/2}(n-1)\right) \\
+		\text{待估参数} & \text{其他参数}     & \text{枢轴量分布}                                                                  & \text{置信区间}                                                                                                 \\
+		\mu            & \sigma^2\text{已知} & Z=\dfrac{\overline{X}-\mu}{\sigma/\sqrt{n}}\sim N(0,1)                            & \left( \overline{X}-\dfrac{\sigma}{\sqrt{n}}z_{\alpha/2},\overline{X}+\dfrac{\sigma}{\sqrt{n}}z_{\alpha/2}\right) \\
+		\mu            & \sigma^2\text{未知} & t=\dfrac{\overline{X}-\mu}{S/\sqrt{n}}\sim t(n-1)                                 & \left( \overline{X}-\dfrac{S}{\sqrt{n}}t_{\alpha/2}(n-1),\overline{X}+\dfrac{S}{\sqrt{n}}t_{\alpha/2}(n-1)\right) \\
+		\sigma^{2}     & \mu\text{已知}      & \chi^{2}=\dfrac{\sum\limits_{i=1}^{n}(X_{i}-\mu)^{2}}{\sigma^{2}}\sim \chi^{2}(n) & \left( \dfrac{\sum\limits_{i=1}^{n}(X_{i}-\mu)^{2}}{\chi_{\alpha/2}(n)},\dfrac{\sum\limits_{i=1}^{n}(X_{i}-\mu)^{2}}{\chi_{1-\alpha/2}(n)}\right) \\
+		\sigma^{2}     & \mu\text{未知}      & \chi^{2}=\dfrac{(n-1)S^{2}}{\sigma^{2}}\sim \chi^{2}(n-1)                               & \left( \dfrac{(n-1)S^{2}}{\chi_{\alpha/2}^{2}(n)},\dfrac{(n-1)S^{2}}{\chi_{1-\alpha/2}^{2}(n)}\right) \\
 	\end{tblr}
 \end{table}
 \section{假设检验}
+
 \begin{definition}[统计性检验]
-	1. $H_{0}\text{: 虚无假设},\ H_{1}\text{: 备择假设}$
-	
-	2. 双边检验和单侧检验
-	
-	3. 正态总体下的六大检查和拒绝域
 	\begin{itemize}
-		\item $\sigma^2\text{已知},\mu\text{未知},H_{0}\text{: }\mu=\mu_{0},H_{1}\text{: }\mu\neq \mu_{0}$
-		$$\text{拒绝域: }(-\infty,\mu_{0}-\frac{\sigma}{\sqrt{n}}z_{\frac{\alpha}{2}})\cup (\mu_{0}+\frac{\sigma}{\sqrt{n}}z_{\frac{\alpha}{2}},+\infty)$$
-		\item $\sigma^2\text{未知},\mu\text{未知},H_{0}\text{: }\mu=\mu_{0},H_{1}\text{: }\mu\neq \mu_{0}$
-		$$\text{拒绝域: }(-\infty,\mu_{0}-\frac{S}{\sqrt{n}}t_{\frac{\alpha}{2}}(n-1))\cup (\mu_{0}+\frac{S}{\sqrt{n}}t_{\frac{\alpha}{2}}(n-1),+\infty)$$
-		\item $\sigma^2\text{已知},\mu\text{未知},H_{0}\text{: }\mu\leq \mu_{0},H_{1}\text{: }\mu> \mu_{0}$
-		$$\text{拒绝域: } (\mu_{0}+\frac{\sigma}{\sqrt{n}}z_{\frac{\alpha}{2}},+\infty)$$
-		\item $\sigma^2\text{已知},\mu\text{未知},H_{0}\text{: }\mu\geq \mu_{0},H_{1}\text{: }\mu< \mu_{0}$
-		$$\text{拒绝域: }(-\infty,\mu_{0}-\frac{\sigma}{\sqrt{n}}z_{\frac{\alpha}{2}})$$
-		\item $\sigma^2\text{未知},\mu\text{未知},H_{0}\text{: }\mu\leq \mu_{0},H_{1}\text{: }\mu> \mu_{0}$
-		$$\text{拒绝域: } (\mu_{0}+\frac{S}{\sqrt{n}}t_{\frac{\alpha}{2}}(n-1),+\infty)$$
-		\item $\sigma^2\text{未知},\mu\text{未知},H_{0}\text{: }\mu\geq \mu_{0},H_{1}\text{: }\mu< \mu_{0}$
-		$$\text{拒绝域: }(-\infty,\mu_{0}-\frac{S}{\sqrt{n}}t_{\frac{\alpha}{2}}(n-1))$$
+		\item $H_{0}$: 虚无假设
+		\item $H_{1}$: 备择假设
 	\end{itemize}
 \end{definition}
+\begin{definition}[两类错误]
+	\begin{itemize}
+		\item \textbf{第一类错误}: 虚无假设 $H_{0}$ 为真, 但拒绝了 $H_{0}$, 误认为备择假设 $H_{1}$ 为真, 犯第一类错误概率 $\alpha = P\{R(H_{0})\big| T(H_{0})\}$
+		\item \textbf{第二类错误}: 备择假设 $H_{1}$ 为真, 但接受了 $H_{0}$, 误认为虚无假设 $H_{0}$ 为真, 犯第二类错误概率 $\beta = P\{A(H_{0})\big| T(H_{1})\}$
+	\end{itemize}
+\end{definition}
+\begin{corollary}[正态总体下的六大检查和拒绝域]
+	\begin{itemize}
+		\item $\sigma^{2}$ 已知,$\mu$ 未知, $H_{0}:\ \mu = \mu_{0}, H_{1}:\ \mu \neq \mu_{0}$
+		$$\mu_{r}\in (-\infty,\mu_{0}-\frac{\sigma}{\sqrt{n}}z_{\frac{\alpha}{2}})\cup (\mu_{0}+\frac{\sigma}{\sqrt{n}}z_{\frac{\alpha}{2}},+\infty)$$
+		
+		\item $\sigma^{2}$ 未知, $\mu$ 未知, $H_{0}:\ \mu = \mu_{0}, H_{1}:\ \mu\neq \mu_{0}$
+		$$\mu_{r}\in (-\infty,\mu_{0}-\frac{S}{\sqrt{n}}t_{\frac{\alpha}{2}}(n-1))\cup (\mu_{0}+\frac{S}{\sqrt{n}}t_{\frac{\alpha}{2}}(n-1),+\infty)$$
+		
+		\item $\sigma^{2}$ 已知, $\mu$ 未知, $H_{0}:\ \mu\leq \mu_{0}, H_{1}:\ \mu > \mu_{0}$
+		$$\mu_{r}\in (\mu_{0} + \frac{\sigma}{\sqrt{n}}z_{\alpha},+\infty)$$
+
+		\item $\sigma^{2}$ 已知, $\mu$ 未知, $H_{0}:\ \mu\geq \mu_{0}, H_{1}:\ \mu < \mu_{0}$
+		$$\mu_{r}\in (-\infty,\mu_{0}-\frac{\sigma}{\sqrt{n}}z_{\alpha})$$
+
+		\item $\sigma^{2}$ 未知, $\mu$ 未知, $H_{0}:\ \mu\leq \mu_{0}, H_{1}:\ \mu> \mu_{0}$
+		$$\mu_{r}\in (\mu_{0} + \frac{S}{\sqrt{n}}t_{\alpha}(n-1),+\infty)$$
+
+		\item $\sigma^{2}$ 未知, $\mu$ 未知, $H_{0}:\ \mu\geq \mu_{0}, H_{1}:\ \mu< \mu_{0}$
+		$$\mu_{r}\in (-\infty,\mu_{0}-\frac{S}{\sqrt{n}}t_{\alpha}(n-1))$$
+	\end{itemize}
+\end{corollary}
